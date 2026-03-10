@@ -331,6 +331,27 @@ exports.Prisma.LegislativeVoteScalarFieldEnum = {
   createdAt: 'createdAt'
 };
 
+exports.Prisma.CongressionalTradeScalarFieldEnum = {
+  id: 'id',
+  entityId: 'entityId',
+  representative: 'representative',
+  ticker: 'ticker',
+  assetName: 'assetName',
+  txType: 'txType',
+  txDate: 'txDate',
+  disclosureDate: 'disclosureDate',
+  amount: 'amount',
+  amountLow: 'amountLow',
+  amountHigh: 'amountHigh',
+  owner: 'owner',
+  chamber: 'chamber',
+  district: 'district',
+  party: 'party',
+  sourceUrl: 'sourceUrl',
+  sourceId: 'sourceId',
+  createdAt: 'createdAt'
+};
+
 exports.Prisma.SyncLogScalarFieldEnum = {
   id: 'id',
   source: 'source',
@@ -431,6 +452,7 @@ exports.DataSource = exports.$Enums.DataSource = {
   SEC: 'SEC',
   OPENSECRETS: 'OPENSECRETS',
   PROPUBLICA: 'PROPUBLICA',
+  HOUSE_STOCK_WATCHER: 'HOUSE_STOCK_WATCHER',
   STATE_FILING: 'STATE_FILING',
   MANUAL: 'MANUAL'
 };
@@ -502,6 +524,7 @@ exports.Prisma.ModelName = {
   FederalAward: 'FederalAward',
   Legislation: 'Legislation',
   LegislativeVote: 'LegislativeVote',
+  CongressionalTrade: 'CongressionalTrade',
   SyncLog: 'SyncLog'
 };
 

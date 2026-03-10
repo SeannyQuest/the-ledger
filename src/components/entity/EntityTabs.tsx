@@ -81,6 +81,8 @@ export function EntityTabs({
 }: EntityTabsProps) {
   const [activeTab, setActiveTab] = useState("overview");
 
+  const isPolitician = entity.type === "POLITICIAN";
+
   const tabs = [
     { id: "overview", label: "Overview" },
     { id: "about", label: "About" },
@@ -90,6 +92,7 @@ export function EntityTabs({
       label: "Money Out",
       count: topRecipients.length || undefined,
     },
+    ...(isPolitician ? [{ id: "trading", label: "Trading" }] : []),
     {
       id: "connections",
       label: "Connections",
@@ -115,6 +118,9 @@ export function EntityTabs({
         {activeTab === "money-in" && <MoneyInTab donors={topDonors} />}
         {activeTab === "money-out" && (
           <MoneyOutTab recipients={topRecipients} />
+        )}
+        {activeTab === "trading" && isPolitician && (
+          <TradingTab entityId={entity.id} />
         )}
         {activeTab === "connections" && (
           <ConnectionsTab relationships={relationships} />
@@ -560,6 +566,140 @@ function ProfileTab({
           No additional profile data available.
         </p>
       )}
+    </div>
+  );
+}
+
+// ── Tab: Trading ──────────────────────────────────────
+
+function TradingTab({ entityId }: { entityId: string }) {
+  const [trades, setTrades] = useState<
+    Array<{
+      id: string;
+      ticker: string;
+      assetName: string;
+      txType: string;
+      txDate: string;
+      amount: string;
+      amountHigh: number;
+      owner: string;
+    }>
+  >([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetch(`/api/trades?entityId=${entityId}&limit=50`)
+      .then((r) => r.json())
+      .then((data) => setTrades(data.trades ?? []))
+      .catch(() => {})
+      .finally(() => setLoading(false));
+  }, [entityId]);
+
+  if (loading) {
+    return (
+      <div className="space-y-3">
+        {Array.from({ length: 5 }).map((_, i) => (
+          <div key={i} className="h-12 animate-pulse rounded-lg bg-border/30" />
+        ))}
+      </div>
+    );
+  }
+
+  if (trades.length === 0) {
+    return <EmptyState message="No stock trades disclosed by this member." />;
+  }
+
+  // Summary stats
+  const purchases = trades.filter((t) => t.txType === "purchase");
+  const sales = trades.filter((t) => t.txType === "sale");
+  const estVolume = trades.reduce((sum, t) => sum + t.amountHigh, 0);
+  const uniqueTickers = new Set(trades.map((t) => t.ticker)).size;
+
+  return (
+    <div>
+      <h3 className="font-headline text-lg font-bold text-ink">Stock Trades</h3>
+      <p className="mt-1 text-sm text-muted">
+        Financial transactions disclosed under the STOCK Act
+      </p>
+
+      {/* Quick stats */}
+      <div className="mt-6 flex flex-wrap gap-6">
+        <div>
+          <div className="font-mono text-xs uppercase text-muted">Trades</div>
+          <div className="font-mono text-xl font-bold text-ink">
+            {trades.length}
+          </div>
+        </div>
+        <div>
+          <div className="font-mono text-xs uppercase text-muted">
+            Est. Volume
+          </div>
+          <div className="font-mono text-xl font-bold text-ink">
+            {formatCompactMoney(estVolume)}
+          </div>
+        </div>
+        <div>
+          <div className="font-mono text-xs uppercase text-muted">Tickers</div>
+          <div className="font-mono text-xl font-bold text-ink">
+            {uniqueTickers}
+          </div>
+        </div>
+        <div>
+          <div className="font-mono text-xs uppercase text-muted">
+            Buy / Sell
+          </div>
+          <div className="font-mono text-xl font-bold">
+            <span className="text-money-in">{purchases.length}</span>
+            {" / "}
+            <span className="text-money-out">{sales.length}</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Trade list */}
+      <div className="mt-6 space-y-1.5">
+        {trades.map((trade) => (
+          <div
+            key={trade.id}
+            className="flex items-center justify-between rounded-lg border border-border bg-surface px-4 py-3"
+          >
+            <div className="flex items-center gap-3">
+              <span
+                className={`inline-flex rounded-full px-2 py-0.5 font-mono text-[10px] font-bold ${
+                  trade.txType === "purchase"
+                    ? "bg-money-in/10 text-money-in"
+                    : "bg-money-out/10 text-money-out"
+                }`}
+              >
+                {trade.txType}
+              </span>
+              <div>
+                <span className="font-mono text-sm font-bold text-ink">
+                  {trade.ticker}
+                </span>
+                <span className="ml-2 text-xs text-muted">
+                  {trade.assetName}
+                </span>
+              </div>
+            </div>
+            <div className="text-right">
+              <div className="font-mono text-sm text-ink">{trade.amount}</div>
+              <div className="font-mono text-[10px] text-muted">
+                {trade.txDate} · {trade.owner}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div className="mt-4">
+        <Link
+          href={`/trades?entityId=${entityId}`}
+          className="font-mono text-xs text-muted underline decoration-border underline-offset-4 hover:text-ink"
+        >
+          View all trades →
+        </Link>
+      </div>
     </div>
   );
 }

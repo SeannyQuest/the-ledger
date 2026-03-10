@@ -42,6 +42,7 @@ enum DataSource {
   SEC
   OPENSECRETS
   PROPUBLICA
+  HOUSE_STOCK_WATCHER
   STATE_FILING
   MANUAL
 }
@@ -209,6 +210,7 @@ model Entity {
 
   sponsoredLegislation Legislation[]
   legislativeVotes     LegislativeVote[]
+  congressionalTrades  CongressionalTrade[]
 
   @@index([type])
   @@index([state])
@@ -535,6 +537,40 @@ model LegislativeVote {
   @@index([voteDate])
   @@index([congress, session])
   @@map("legislative_votes")
+}
+
+// ═══════════════════════════════════════════════════════════════
+// CONGRESSIONAL STOCK TRADING
+// ═══════════════════════════════════════════════════════════════
+
+/// Congressional stock trades sourced from House Stock Watcher / Senate Stock Watcher.
+model CongressionalTrade {
+  id             String   @id @default(cuid())
+  entityId       String
+  entity         Entity   @relation(fields: [entityId], references: [id])
+  representative String // Raw name from disclosure
+  ticker         String // Stock ticker (e.g. "AAPL")
+  assetName      String // Full asset description
+  txType         String // purchase | sale | exchange | receive
+  txDate         DateTime
+  disclosureDate DateTime
+  amount         String // Original range string ("$1,001 - $15,000")
+  amountLow      Int // Parsed lower bound
+  amountHigh     Int // Parsed upper bound
+  owner          String // self | spouse | child | joint | dependent
+  chamber        String // house | senate
+  district       String? // State + district (e.g. "TX-10")
+  party          String?
+  sourceUrl      String?
+  sourceId       String?  @unique // Dedup key from source API
+
+  createdAt DateTime @default(now())
+
+  @@index([entityId])
+  @@index([ticker])
+  @@index([txDate])
+  @@index([chamber])
+  @@map("congressional_trades")
 }
 
 // ═══════════════════════════════════════════════════════════════

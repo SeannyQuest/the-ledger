@@ -74,6 +74,11 @@ export type Legislation = $Result.DefaultSelection<Prisma.$LegislationPayload>
  */
 export type LegislativeVote = $Result.DefaultSelection<Prisma.$LegislativeVotePayload>
 /**
+ * Model CongressionalTrade
+ * Congressional stock trades sourced from House Stock Watcher / Senate Stock Watcher.
+ */
+export type CongressionalTrade = $Result.DefaultSelection<Prisma.$CongressionalTradePayload>
+/**
  * Model SyncLog
  * Tracks data sync / ingestion jobs.
  */
@@ -109,6 +114,7 @@ export const DataSource: {
   SEC: 'SEC',
   OPENSECRETS: 'OPENSECRETS',
   PROPUBLICA: 'PROPUBLICA',
+  HOUSE_STOCK_WATCHER: 'HOUSE_STOCK_WATCHER',
   STATE_FILING: 'STATE_FILING',
   MANUAL: 'MANUAL'
 };
@@ -524,6 +530,16 @@ export class PrismaClient<
     * ```
     */
   get legislativeVote(): Prisma.LegislativeVoteDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.congressionalTrade`: Exposes CRUD operations for the **CongressionalTrade** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more CongressionalTrades
+    * const congressionalTrades = await prisma.congressionalTrade.findMany()
+    * ```
+    */
+  get congressionalTrade(): Prisma.CongressionalTradeDelegate<ExtArgs, ClientOptions>;
 
   /**
    * `prisma.syncLog`: Exposes CRUD operations for the **SyncLog** model.
@@ -987,6 +1003,7 @@ export namespace Prisma {
     FederalAward: 'FederalAward',
     Legislation: 'Legislation',
     LegislativeVote: 'LegislativeVote',
+    CongressionalTrade: 'CongressionalTrade',
     SyncLog: 'SyncLog'
   };
 
@@ -1006,7 +1023,7 @@ export namespace Prisma {
       omit: GlobalOmitOptions
     }
     meta: {
-      modelProps: "entity" | "entityAlias" | "entitySourceRecord" | "entityRelationship" | "moneyTransaction" | "aggregateMoneyFlow" | "fecCandidate" | "fecCommittee" | "lobbyingFiling" | "federalAward" | "legislation" | "legislativeVote" | "syncLog"
+      modelProps: "entity" | "entityAlias" | "entitySourceRecord" | "entityRelationship" | "moneyTransaction" | "aggregateMoneyFlow" | "fecCandidate" | "fecCommittee" | "lobbyingFiling" | "federalAward" | "legislation" | "legislativeVote" | "congressionalTrade" | "syncLog"
       txIsolationLevel: Prisma.TransactionIsolationLevel
     }
     model: {
@@ -1898,6 +1915,80 @@ export namespace Prisma {
           }
         }
       }
+      CongressionalTrade: {
+        payload: Prisma.$CongressionalTradePayload<ExtArgs>
+        fields: Prisma.CongressionalTradeFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.CongressionalTradeFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CongressionalTradePayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.CongressionalTradeFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CongressionalTradePayload>
+          }
+          findFirst: {
+            args: Prisma.CongressionalTradeFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CongressionalTradePayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.CongressionalTradeFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CongressionalTradePayload>
+          }
+          findMany: {
+            args: Prisma.CongressionalTradeFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CongressionalTradePayload>[]
+          }
+          create: {
+            args: Prisma.CongressionalTradeCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CongressionalTradePayload>
+          }
+          createMany: {
+            args: Prisma.CongressionalTradeCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.CongressionalTradeCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CongressionalTradePayload>[]
+          }
+          delete: {
+            args: Prisma.CongressionalTradeDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CongressionalTradePayload>
+          }
+          update: {
+            args: Prisma.CongressionalTradeUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CongressionalTradePayload>
+          }
+          deleteMany: {
+            args: Prisma.CongressionalTradeDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.CongressionalTradeUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.CongressionalTradeUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CongressionalTradePayload>[]
+          }
+          upsert: {
+            args: Prisma.CongressionalTradeUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CongressionalTradePayload>
+          }
+          aggregate: {
+            args: Prisma.CongressionalTradeAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateCongressionalTrade>
+          }
+          groupBy: {
+            args: Prisma.CongressionalTradeGroupByArgs<ExtArgs>
+            result: $Utils.Optional<CongressionalTradeGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.CongressionalTradeCountArgs<ExtArgs>
+            result: $Utils.Optional<CongressionalTradeCountAggregateOutputType> | number
+          }
+        }
+      }
       SyncLog: {
         payload: Prisma.$SyncLogPayload<ExtArgs>
         fields: Prisma.SyncLogFieldRefs
@@ -2080,6 +2171,7 @@ export namespace Prisma {
     federalAward?: FederalAwardOmit
     legislation?: LegislationOmit
     legislativeVote?: LegislativeVoteOmit
+    congressionalTrade?: CongressionalTradeOmit
     syncLog?: SyncLogOmit
   }
 
@@ -2176,6 +2268,7 @@ export namespace Prisma {
     federalAwardsAsAgency: number
     sponsoredLegislation: number
     legislativeVotes: number
+    congressionalTrades: number
   }
 
   export type EntityCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
@@ -2194,6 +2287,7 @@ export namespace Prisma {
     federalAwardsAsAgency?: boolean | EntityCountOutputTypeCountFederalAwardsAsAgencyArgs
     sponsoredLegislation?: boolean | EntityCountOutputTypeCountSponsoredLegislationArgs
     legislativeVotes?: boolean | EntityCountOutputTypeCountLegislativeVotesArgs
+    congressionalTrades?: boolean | EntityCountOutputTypeCountCongressionalTradesArgs
   }
 
   // Custom InputTypes
@@ -2310,6 +2404,13 @@ export namespace Prisma {
    */
   export type EntityCountOutputTypeCountLegislativeVotesArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     where?: LegislativeVoteWhereInput
+  }
+
+  /**
+   * EntityCountOutputType without action
+   */
+  export type EntityCountOutputTypeCountCongressionalTradesArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: CongressionalTradeWhereInput
   }
 
 
@@ -2756,6 +2857,7 @@ export namespace Prisma {
     federalAwardsAsAgency?: boolean | Entity$federalAwardsAsAgencyArgs<ExtArgs>
     sponsoredLegislation?: boolean | Entity$sponsoredLegislationArgs<ExtArgs>
     legislativeVotes?: boolean | Entity$legislativeVotesArgs<ExtArgs>
+    congressionalTrades?: boolean | Entity$congressionalTradesArgs<ExtArgs>
     _count?: boolean | EntityCountOutputTypeDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["entity"]>
 
@@ -2871,6 +2973,7 @@ export namespace Prisma {
     federalAwardsAsAgency?: boolean | Entity$federalAwardsAsAgencyArgs<ExtArgs>
     sponsoredLegislation?: boolean | Entity$sponsoredLegislationArgs<ExtArgs>
     legislativeVotes?: boolean | Entity$legislativeVotesArgs<ExtArgs>
+    congressionalTrades?: boolean | Entity$congressionalTradesArgs<ExtArgs>
     _count?: boolean | EntityCountOutputTypeDefaultArgs<ExtArgs>
   }
   export type EntityIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
@@ -2901,6 +3004,7 @@ export namespace Prisma {
       federalAwardsAsAgency: Prisma.$FederalAwardPayload<ExtArgs>[]
       sponsoredLegislation: Prisma.$LegislationPayload<ExtArgs>[]
       legislativeVotes: Prisma.$LegislativeVotePayload<ExtArgs>[]
+      congressionalTrades: Prisma.$CongressionalTradePayload<ExtArgs>[]
     }
     scalars: $Extensions.GetPayloadResult<{
       id: string
@@ -3342,6 +3446,7 @@ export namespace Prisma {
     federalAwardsAsAgency<T extends Entity$federalAwardsAsAgencyArgs<ExtArgs> = {}>(args?: Subset<T, Entity$federalAwardsAsAgencyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$FederalAwardPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     sponsoredLegislation<T extends Entity$sponsoredLegislationArgs<ExtArgs> = {}>(args?: Subset<T, Entity$sponsoredLegislationArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$LegislationPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     legislativeVotes<T extends Entity$legislativeVotesArgs<ExtArgs> = {}>(args?: Subset<T, Entity$legislativeVotesArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$LegislativeVotePayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    congressionalTrades<T extends Entity$congressionalTradesArgs<ExtArgs> = {}>(args?: Subset<T, Entity$congressionalTradesArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$CongressionalTradePayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -4208,6 +4313,30 @@ export namespace Prisma {
     take?: number
     skip?: number
     distinct?: LegislativeVoteScalarFieldEnum | LegislativeVoteScalarFieldEnum[]
+  }
+
+  /**
+   * Entity.congressionalTrades
+   */
+  export type Entity$congressionalTradesArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the CongressionalTrade
+     */
+    select?: CongressionalTradeSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the CongressionalTrade
+     */
+    omit?: CongressionalTradeOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CongressionalTradeInclude<ExtArgs> | null
+    where?: CongressionalTradeWhereInput
+    orderBy?: CongressionalTradeOrderByWithRelationInput | CongressionalTradeOrderByWithRelationInput[]
+    cursor?: CongressionalTradeWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: CongressionalTradeScalarFieldEnum | CongressionalTradeScalarFieldEnum[]
   }
 
   /**
@@ -17537,6 +17666,1271 @@ export namespace Prisma {
 
 
   /**
+   * Model CongressionalTrade
+   */
+
+  export type AggregateCongressionalTrade = {
+    _count: CongressionalTradeCountAggregateOutputType | null
+    _avg: CongressionalTradeAvgAggregateOutputType | null
+    _sum: CongressionalTradeSumAggregateOutputType | null
+    _min: CongressionalTradeMinAggregateOutputType | null
+    _max: CongressionalTradeMaxAggregateOutputType | null
+  }
+
+  export type CongressionalTradeAvgAggregateOutputType = {
+    amountLow: number | null
+    amountHigh: number | null
+  }
+
+  export type CongressionalTradeSumAggregateOutputType = {
+    amountLow: number | null
+    amountHigh: number | null
+  }
+
+  export type CongressionalTradeMinAggregateOutputType = {
+    id: string | null
+    entityId: string | null
+    representative: string | null
+    ticker: string | null
+    assetName: string | null
+    txType: string | null
+    txDate: Date | null
+    disclosureDate: Date | null
+    amount: string | null
+    amountLow: number | null
+    amountHigh: number | null
+    owner: string | null
+    chamber: string | null
+    district: string | null
+    party: string | null
+    sourceUrl: string | null
+    sourceId: string | null
+    createdAt: Date | null
+  }
+
+  export type CongressionalTradeMaxAggregateOutputType = {
+    id: string | null
+    entityId: string | null
+    representative: string | null
+    ticker: string | null
+    assetName: string | null
+    txType: string | null
+    txDate: Date | null
+    disclosureDate: Date | null
+    amount: string | null
+    amountLow: number | null
+    amountHigh: number | null
+    owner: string | null
+    chamber: string | null
+    district: string | null
+    party: string | null
+    sourceUrl: string | null
+    sourceId: string | null
+    createdAt: Date | null
+  }
+
+  export type CongressionalTradeCountAggregateOutputType = {
+    id: number
+    entityId: number
+    representative: number
+    ticker: number
+    assetName: number
+    txType: number
+    txDate: number
+    disclosureDate: number
+    amount: number
+    amountLow: number
+    amountHigh: number
+    owner: number
+    chamber: number
+    district: number
+    party: number
+    sourceUrl: number
+    sourceId: number
+    createdAt: number
+    _all: number
+  }
+
+
+  export type CongressionalTradeAvgAggregateInputType = {
+    amountLow?: true
+    amountHigh?: true
+  }
+
+  export type CongressionalTradeSumAggregateInputType = {
+    amountLow?: true
+    amountHigh?: true
+  }
+
+  export type CongressionalTradeMinAggregateInputType = {
+    id?: true
+    entityId?: true
+    representative?: true
+    ticker?: true
+    assetName?: true
+    txType?: true
+    txDate?: true
+    disclosureDate?: true
+    amount?: true
+    amountLow?: true
+    amountHigh?: true
+    owner?: true
+    chamber?: true
+    district?: true
+    party?: true
+    sourceUrl?: true
+    sourceId?: true
+    createdAt?: true
+  }
+
+  export type CongressionalTradeMaxAggregateInputType = {
+    id?: true
+    entityId?: true
+    representative?: true
+    ticker?: true
+    assetName?: true
+    txType?: true
+    txDate?: true
+    disclosureDate?: true
+    amount?: true
+    amountLow?: true
+    amountHigh?: true
+    owner?: true
+    chamber?: true
+    district?: true
+    party?: true
+    sourceUrl?: true
+    sourceId?: true
+    createdAt?: true
+  }
+
+  export type CongressionalTradeCountAggregateInputType = {
+    id?: true
+    entityId?: true
+    representative?: true
+    ticker?: true
+    assetName?: true
+    txType?: true
+    txDate?: true
+    disclosureDate?: true
+    amount?: true
+    amountLow?: true
+    amountHigh?: true
+    owner?: true
+    chamber?: true
+    district?: true
+    party?: true
+    sourceUrl?: true
+    sourceId?: true
+    createdAt?: true
+    _all?: true
+  }
+
+  export type CongressionalTradeAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which CongressionalTrade to aggregate.
+     */
+    where?: CongressionalTradeWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of CongressionalTrades to fetch.
+     */
+    orderBy?: CongressionalTradeOrderByWithRelationInput | CongressionalTradeOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: CongressionalTradeWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` CongressionalTrades from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` CongressionalTrades.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned CongressionalTrades
+    **/
+    _count?: true | CongressionalTradeCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to average
+    **/
+    _avg?: CongressionalTradeAvgAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to sum
+    **/
+    _sum?: CongressionalTradeSumAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: CongressionalTradeMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: CongressionalTradeMaxAggregateInputType
+  }
+
+  export type GetCongressionalTradeAggregateType<T extends CongressionalTradeAggregateArgs> = {
+        [P in keyof T & keyof AggregateCongressionalTrade]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateCongressionalTrade[P]>
+      : GetScalarType<T[P], AggregateCongressionalTrade[P]>
+  }
+
+
+
+
+  export type CongressionalTradeGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: CongressionalTradeWhereInput
+    orderBy?: CongressionalTradeOrderByWithAggregationInput | CongressionalTradeOrderByWithAggregationInput[]
+    by: CongressionalTradeScalarFieldEnum[] | CongressionalTradeScalarFieldEnum
+    having?: CongressionalTradeScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: CongressionalTradeCountAggregateInputType | true
+    _avg?: CongressionalTradeAvgAggregateInputType
+    _sum?: CongressionalTradeSumAggregateInputType
+    _min?: CongressionalTradeMinAggregateInputType
+    _max?: CongressionalTradeMaxAggregateInputType
+  }
+
+  export type CongressionalTradeGroupByOutputType = {
+    id: string
+    entityId: string
+    representative: string
+    ticker: string
+    assetName: string
+    txType: string
+    txDate: Date
+    disclosureDate: Date
+    amount: string
+    amountLow: number
+    amountHigh: number
+    owner: string
+    chamber: string
+    district: string | null
+    party: string | null
+    sourceUrl: string | null
+    sourceId: string | null
+    createdAt: Date
+    _count: CongressionalTradeCountAggregateOutputType | null
+    _avg: CongressionalTradeAvgAggregateOutputType | null
+    _sum: CongressionalTradeSumAggregateOutputType | null
+    _min: CongressionalTradeMinAggregateOutputType | null
+    _max: CongressionalTradeMaxAggregateOutputType | null
+  }
+
+  type GetCongressionalTradeGroupByPayload<T extends CongressionalTradeGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<CongressionalTradeGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof CongressionalTradeGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], CongressionalTradeGroupByOutputType[P]>
+            : GetScalarType<T[P], CongressionalTradeGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type CongressionalTradeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    entityId?: boolean
+    representative?: boolean
+    ticker?: boolean
+    assetName?: boolean
+    txType?: boolean
+    txDate?: boolean
+    disclosureDate?: boolean
+    amount?: boolean
+    amountLow?: boolean
+    amountHigh?: boolean
+    owner?: boolean
+    chamber?: boolean
+    district?: boolean
+    party?: boolean
+    sourceUrl?: boolean
+    sourceId?: boolean
+    createdAt?: boolean
+    entity?: boolean | EntityDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["congressionalTrade"]>
+
+  export type CongressionalTradeSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    entityId?: boolean
+    representative?: boolean
+    ticker?: boolean
+    assetName?: boolean
+    txType?: boolean
+    txDate?: boolean
+    disclosureDate?: boolean
+    amount?: boolean
+    amountLow?: boolean
+    amountHigh?: boolean
+    owner?: boolean
+    chamber?: boolean
+    district?: boolean
+    party?: boolean
+    sourceUrl?: boolean
+    sourceId?: boolean
+    createdAt?: boolean
+    entity?: boolean | EntityDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["congressionalTrade"]>
+
+  export type CongressionalTradeSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    entityId?: boolean
+    representative?: boolean
+    ticker?: boolean
+    assetName?: boolean
+    txType?: boolean
+    txDate?: boolean
+    disclosureDate?: boolean
+    amount?: boolean
+    amountLow?: boolean
+    amountHigh?: boolean
+    owner?: boolean
+    chamber?: boolean
+    district?: boolean
+    party?: boolean
+    sourceUrl?: boolean
+    sourceId?: boolean
+    createdAt?: boolean
+    entity?: boolean | EntityDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["congressionalTrade"]>
+
+  export type CongressionalTradeSelectScalar = {
+    id?: boolean
+    entityId?: boolean
+    representative?: boolean
+    ticker?: boolean
+    assetName?: boolean
+    txType?: boolean
+    txDate?: boolean
+    disclosureDate?: boolean
+    amount?: boolean
+    amountLow?: boolean
+    amountHigh?: boolean
+    owner?: boolean
+    chamber?: boolean
+    district?: boolean
+    party?: boolean
+    sourceUrl?: boolean
+    sourceId?: boolean
+    createdAt?: boolean
+  }
+
+  export type CongressionalTradeOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "entityId" | "representative" | "ticker" | "assetName" | "txType" | "txDate" | "disclosureDate" | "amount" | "amountLow" | "amountHigh" | "owner" | "chamber" | "district" | "party" | "sourceUrl" | "sourceId" | "createdAt", ExtArgs["result"]["congressionalTrade"]>
+  export type CongressionalTradeInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    entity?: boolean | EntityDefaultArgs<ExtArgs>
+  }
+  export type CongressionalTradeIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    entity?: boolean | EntityDefaultArgs<ExtArgs>
+  }
+  export type CongressionalTradeIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    entity?: boolean | EntityDefaultArgs<ExtArgs>
+  }
+
+  export type $CongressionalTradePayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "CongressionalTrade"
+    objects: {
+      entity: Prisma.$EntityPayload<ExtArgs>
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      entityId: string
+      representative: string
+      ticker: string
+      assetName: string
+      txType: string
+      txDate: Date
+      disclosureDate: Date
+      amount: string
+      amountLow: number
+      amountHigh: number
+      owner: string
+      chamber: string
+      district: string | null
+      party: string | null
+      sourceUrl: string | null
+      sourceId: string | null
+      createdAt: Date
+    }, ExtArgs["result"]["congressionalTrade"]>
+    composites: {}
+  }
+
+  type CongressionalTradeGetPayload<S extends boolean | null | undefined | CongressionalTradeDefaultArgs> = $Result.GetResult<Prisma.$CongressionalTradePayload, S>
+
+  type CongressionalTradeCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<CongressionalTradeFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: CongressionalTradeCountAggregateInputType | true
+    }
+
+  export interface CongressionalTradeDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['CongressionalTrade'], meta: { name: 'CongressionalTrade' } }
+    /**
+     * Find zero or one CongressionalTrade that matches the filter.
+     * @param {CongressionalTradeFindUniqueArgs} args - Arguments to find a CongressionalTrade
+     * @example
+     * // Get one CongressionalTrade
+     * const congressionalTrade = await prisma.congressionalTrade.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends CongressionalTradeFindUniqueArgs>(args: SelectSubset<T, CongressionalTradeFindUniqueArgs<ExtArgs>>): Prisma__CongressionalTradeClient<$Result.GetResult<Prisma.$CongressionalTradePayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one CongressionalTrade that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {CongressionalTradeFindUniqueOrThrowArgs} args - Arguments to find a CongressionalTrade
+     * @example
+     * // Get one CongressionalTrade
+     * const congressionalTrade = await prisma.congressionalTrade.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends CongressionalTradeFindUniqueOrThrowArgs>(args: SelectSubset<T, CongressionalTradeFindUniqueOrThrowArgs<ExtArgs>>): Prisma__CongressionalTradeClient<$Result.GetResult<Prisma.$CongressionalTradePayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first CongressionalTrade that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {CongressionalTradeFindFirstArgs} args - Arguments to find a CongressionalTrade
+     * @example
+     * // Get one CongressionalTrade
+     * const congressionalTrade = await prisma.congressionalTrade.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends CongressionalTradeFindFirstArgs>(args?: SelectSubset<T, CongressionalTradeFindFirstArgs<ExtArgs>>): Prisma__CongressionalTradeClient<$Result.GetResult<Prisma.$CongressionalTradePayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first CongressionalTrade that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {CongressionalTradeFindFirstOrThrowArgs} args - Arguments to find a CongressionalTrade
+     * @example
+     * // Get one CongressionalTrade
+     * const congressionalTrade = await prisma.congressionalTrade.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends CongressionalTradeFindFirstOrThrowArgs>(args?: SelectSubset<T, CongressionalTradeFindFirstOrThrowArgs<ExtArgs>>): Prisma__CongressionalTradeClient<$Result.GetResult<Prisma.$CongressionalTradePayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more CongressionalTrades that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {CongressionalTradeFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all CongressionalTrades
+     * const congressionalTrades = await prisma.congressionalTrade.findMany()
+     * 
+     * // Get first 10 CongressionalTrades
+     * const congressionalTrades = await prisma.congressionalTrade.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const congressionalTradeWithIdOnly = await prisma.congressionalTrade.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends CongressionalTradeFindManyArgs>(args?: SelectSubset<T, CongressionalTradeFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$CongressionalTradePayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a CongressionalTrade.
+     * @param {CongressionalTradeCreateArgs} args - Arguments to create a CongressionalTrade.
+     * @example
+     * // Create one CongressionalTrade
+     * const CongressionalTrade = await prisma.congressionalTrade.create({
+     *   data: {
+     *     // ... data to create a CongressionalTrade
+     *   }
+     * })
+     * 
+     */
+    create<T extends CongressionalTradeCreateArgs>(args: SelectSubset<T, CongressionalTradeCreateArgs<ExtArgs>>): Prisma__CongressionalTradeClient<$Result.GetResult<Prisma.$CongressionalTradePayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many CongressionalTrades.
+     * @param {CongressionalTradeCreateManyArgs} args - Arguments to create many CongressionalTrades.
+     * @example
+     * // Create many CongressionalTrades
+     * const congressionalTrade = await prisma.congressionalTrade.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends CongressionalTradeCreateManyArgs>(args?: SelectSubset<T, CongressionalTradeCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many CongressionalTrades and returns the data saved in the database.
+     * @param {CongressionalTradeCreateManyAndReturnArgs} args - Arguments to create many CongressionalTrades.
+     * @example
+     * // Create many CongressionalTrades
+     * const congressionalTrade = await prisma.congressionalTrade.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many CongressionalTrades and only return the `id`
+     * const congressionalTradeWithIdOnly = await prisma.congressionalTrade.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends CongressionalTradeCreateManyAndReturnArgs>(args?: SelectSubset<T, CongressionalTradeCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$CongressionalTradePayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a CongressionalTrade.
+     * @param {CongressionalTradeDeleteArgs} args - Arguments to delete one CongressionalTrade.
+     * @example
+     * // Delete one CongressionalTrade
+     * const CongressionalTrade = await prisma.congressionalTrade.delete({
+     *   where: {
+     *     // ... filter to delete one CongressionalTrade
+     *   }
+     * })
+     * 
+     */
+    delete<T extends CongressionalTradeDeleteArgs>(args: SelectSubset<T, CongressionalTradeDeleteArgs<ExtArgs>>): Prisma__CongressionalTradeClient<$Result.GetResult<Prisma.$CongressionalTradePayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one CongressionalTrade.
+     * @param {CongressionalTradeUpdateArgs} args - Arguments to update one CongressionalTrade.
+     * @example
+     * // Update one CongressionalTrade
+     * const congressionalTrade = await prisma.congressionalTrade.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends CongressionalTradeUpdateArgs>(args: SelectSubset<T, CongressionalTradeUpdateArgs<ExtArgs>>): Prisma__CongressionalTradeClient<$Result.GetResult<Prisma.$CongressionalTradePayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more CongressionalTrades.
+     * @param {CongressionalTradeDeleteManyArgs} args - Arguments to filter CongressionalTrades to delete.
+     * @example
+     * // Delete a few CongressionalTrades
+     * const { count } = await prisma.congressionalTrade.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends CongressionalTradeDeleteManyArgs>(args?: SelectSubset<T, CongressionalTradeDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more CongressionalTrades.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {CongressionalTradeUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many CongressionalTrades
+     * const congressionalTrade = await prisma.congressionalTrade.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends CongressionalTradeUpdateManyArgs>(args: SelectSubset<T, CongressionalTradeUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more CongressionalTrades and returns the data updated in the database.
+     * @param {CongressionalTradeUpdateManyAndReturnArgs} args - Arguments to update many CongressionalTrades.
+     * @example
+     * // Update many CongressionalTrades
+     * const congressionalTrade = await prisma.congressionalTrade.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more CongressionalTrades and only return the `id`
+     * const congressionalTradeWithIdOnly = await prisma.congressionalTrade.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends CongressionalTradeUpdateManyAndReturnArgs>(args: SelectSubset<T, CongressionalTradeUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$CongressionalTradePayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one CongressionalTrade.
+     * @param {CongressionalTradeUpsertArgs} args - Arguments to update or create a CongressionalTrade.
+     * @example
+     * // Update or create a CongressionalTrade
+     * const congressionalTrade = await prisma.congressionalTrade.upsert({
+     *   create: {
+     *     // ... data to create a CongressionalTrade
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the CongressionalTrade we want to update
+     *   }
+     * })
+     */
+    upsert<T extends CongressionalTradeUpsertArgs>(args: SelectSubset<T, CongressionalTradeUpsertArgs<ExtArgs>>): Prisma__CongressionalTradeClient<$Result.GetResult<Prisma.$CongressionalTradePayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of CongressionalTrades.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {CongressionalTradeCountArgs} args - Arguments to filter CongressionalTrades to count.
+     * @example
+     * // Count the number of CongressionalTrades
+     * const count = await prisma.congressionalTrade.count({
+     *   where: {
+     *     // ... the filter for the CongressionalTrades we want to count
+     *   }
+     * })
+    **/
+    count<T extends CongressionalTradeCountArgs>(
+      args?: Subset<T, CongressionalTradeCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], CongressionalTradeCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a CongressionalTrade.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {CongressionalTradeAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends CongressionalTradeAggregateArgs>(args: Subset<T, CongressionalTradeAggregateArgs>): Prisma.PrismaPromise<GetCongressionalTradeAggregateType<T>>
+
+    /**
+     * Group by CongressionalTrade.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {CongressionalTradeGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends CongressionalTradeGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: CongressionalTradeGroupByArgs['orderBy'] }
+        : { orderBy?: CongressionalTradeGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, CongressionalTradeGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetCongressionalTradeGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the CongressionalTrade model
+   */
+  readonly fields: CongressionalTradeFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for CongressionalTrade.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__CongressionalTradeClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    entity<T extends EntityDefaultArgs<ExtArgs> = {}>(args?: Subset<T, EntityDefaultArgs<ExtArgs>>): Prisma__EntityClient<$Result.GetResult<Prisma.$EntityPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the CongressionalTrade model
+   */
+  interface CongressionalTradeFieldRefs {
+    readonly id: FieldRef<"CongressionalTrade", 'String'>
+    readonly entityId: FieldRef<"CongressionalTrade", 'String'>
+    readonly representative: FieldRef<"CongressionalTrade", 'String'>
+    readonly ticker: FieldRef<"CongressionalTrade", 'String'>
+    readonly assetName: FieldRef<"CongressionalTrade", 'String'>
+    readonly txType: FieldRef<"CongressionalTrade", 'String'>
+    readonly txDate: FieldRef<"CongressionalTrade", 'DateTime'>
+    readonly disclosureDate: FieldRef<"CongressionalTrade", 'DateTime'>
+    readonly amount: FieldRef<"CongressionalTrade", 'String'>
+    readonly amountLow: FieldRef<"CongressionalTrade", 'Int'>
+    readonly amountHigh: FieldRef<"CongressionalTrade", 'Int'>
+    readonly owner: FieldRef<"CongressionalTrade", 'String'>
+    readonly chamber: FieldRef<"CongressionalTrade", 'String'>
+    readonly district: FieldRef<"CongressionalTrade", 'String'>
+    readonly party: FieldRef<"CongressionalTrade", 'String'>
+    readonly sourceUrl: FieldRef<"CongressionalTrade", 'String'>
+    readonly sourceId: FieldRef<"CongressionalTrade", 'String'>
+    readonly createdAt: FieldRef<"CongressionalTrade", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * CongressionalTrade findUnique
+   */
+  export type CongressionalTradeFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the CongressionalTrade
+     */
+    select?: CongressionalTradeSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the CongressionalTrade
+     */
+    omit?: CongressionalTradeOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CongressionalTradeInclude<ExtArgs> | null
+    /**
+     * Filter, which CongressionalTrade to fetch.
+     */
+    where: CongressionalTradeWhereUniqueInput
+  }
+
+  /**
+   * CongressionalTrade findUniqueOrThrow
+   */
+  export type CongressionalTradeFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the CongressionalTrade
+     */
+    select?: CongressionalTradeSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the CongressionalTrade
+     */
+    omit?: CongressionalTradeOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CongressionalTradeInclude<ExtArgs> | null
+    /**
+     * Filter, which CongressionalTrade to fetch.
+     */
+    where: CongressionalTradeWhereUniqueInput
+  }
+
+  /**
+   * CongressionalTrade findFirst
+   */
+  export type CongressionalTradeFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the CongressionalTrade
+     */
+    select?: CongressionalTradeSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the CongressionalTrade
+     */
+    omit?: CongressionalTradeOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CongressionalTradeInclude<ExtArgs> | null
+    /**
+     * Filter, which CongressionalTrade to fetch.
+     */
+    where?: CongressionalTradeWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of CongressionalTrades to fetch.
+     */
+    orderBy?: CongressionalTradeOrderByWithRelationInput | CongressionalTradeOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for CongressionalTrades.
+     */
+    cursor?: CongressionalTradeWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` CongressionalTrades from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` CongressionalTrades.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of CongressionalTrades.
+     */
+    distinct?: CongressionalTradeScalarFieldEnum | CongressionalTradeScalarFieldEnum[]
+  }
+
+  /**
+   * CongressionalTrade findFirstOrThrow
+   */
+  export type CongressionalTradeFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the CongressionalTrade
+     */
+    select?: CongressionalTradeSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the CongressionalTrade
+     */
+    omit?: CongressionalTradeOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CongressionalTradeInclude<ExtArgs> | null
+    /**
+     * Filter, which CongressionalTrade to fetch.
+     */
+    where?: CongressionalTradeWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of CongressionalTrades to fetch.
+     */
+    orderBy?: CongressionalTradeOrderByWithRelationInput | CongressionalTradeOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for CongressionalTrades.
+     */
+    cursor?: CongressionalTradeWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` CongressionalTrades from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` CongressionalTrades.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of CongressionalTrades.
+     */
+    distinct?: CongressionalTradeScalarFieldEnum | CongressionalTradeScalarFieldEnum[]
+  }
+
+  /**
+   * CongressionalTrade findMany
+   */
+  export type CongressionalTradeFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the CongressionalTrade
+     */
+    select?: CongressionalTradeSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the CongressionalTrade
+     */
+    omit?: CongressionalTradeOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CongressionalTradeInclude<ExtArgs> | null
+    /**
+     * Filter, which CongressionalTrades to fetch.
+     */
+    where?: CongressionalTradeWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of CongressionalTrades to fetch.
+     */
+    orderBy?: CongressionalTradeOrderByWithRelationInput | CongressionalTradeOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing CongressionalTrades.
+     */
+    cursor?: CongressionalTradeWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` CongressionalTrades from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` CongressionalTrades.
+     */
+    skip?: number
+    distinct?: CongressionalTradeScalarFieldEnum | CongressionalTradeScalarFieldEnum[]
+  }
+
+  /**
+   * CongressionalTrade create
+   */
+  export type CongressionalTradeCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the CongressionalTrade
+     */
+    select?: CongressionalTradeSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the CongressionalTrade
+     */
+    omit?: CongressionalTradeOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CongressionalTradeInclude<ExtArgs> | null
+    /**
+     * The data needed to create a CongressionalTrade.
+     */
+    data: XOR<CongressionalTradeCreateInput, CongressionalTradeUncheckedCreateInput>
+  }
+
+  /**
+   * CongressionalTrade createMany
+   */
+  export type CongressionalTradeCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many CongressionalTrades.
+     */
+    data: CongressionalTradeCreateManyInput | CongressionalTradeCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * CongressionalTrade createManyAndReturn
+   */
+  export type CongressionalTradeCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the CongressionalTrade
+     */
+    select?: CongressionalTradeSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the CongressionalTrade
+     */
+    omit?: CongressionalTradeOmit<ExtArgs> | null
+    /**
+     * The data used to create many CongressionalTrades.
+     */
+    data: CongressionalTradeCreateManyInput | CongressionalTradeCreateManyInput[]
+    skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CongressionalTradeIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * CongressionalTrade update
+   */
+  export type CongressionalTradeUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the CongressionalTrade
+     */
+    select?: CongressionalTradeSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the CongressionalTrade
+     */
+    omit?: CongressionalTradeOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CongressionalTradeInclude<ExtArgs> | null
+    /**
+     * The data needed to update a CongressionalTrade.
+     */
+    data: XOR<CongressionalTradeUpdateInput, CongressionalTradeUncheckedUpdateInput>
+    /**
+     * Choose, which CongressionalTrade to update.
+     */
+    where: CongressionalTradeWhereUniqueInput
+  }
+
+  /**
+   * CongressionalTrade updateMany
+   */
+  export type CongressionalTradeUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update CongressionalTrades.
+     */
+    data: XOR<CongressionalTradeUpdateManyMutationInput, CongressionalTradeUncheckedUpdateManyInput>
+    /**
+     * Filter which CongressionalTrades to update
+     */
+    where?: CongressionalTradeWhereInput
+    /**
+     * Limit how many CongressionalTrades to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * CongressionalTrade updateManyAndReturn
+   */
+  export type CongressionalTradeUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the CongressionalTrade
+     */
+    select?: CongressionalTradeSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the CongressionalTrade
+     */
+    omit?: CongressionalTradeOmit<ExtArgs> | null
+    /**
+     * The data used to update CongressionalTrades.
+     */
+    data: XOR<CongressionalTradeUpdateManyMutationInput, CongressionalTradeUncheckedUpdateManyInput>
+    /**
+     * Filter which CongressionalTrades to update
+     */
+    where?: CongressionalTradeWhereInput
+    /**
+     * Limit how many CongressionalTrades to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CongressionalTradeIncludeUpdateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * CongressionalTrade upsert
+   */
+  export type CongressionalTradeUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the CongressionalTrade
+     */
+    select?: CongressionalTradeSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the CongressionalTrade
+     */
+    omit?: CongressionalTradeOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CongressionalTradeInclude<ExtArgs> | null
+    /**
+     * The filter to search for the CongressionalTrade to update in case it exists.
+     */
+    where: CongressionalTradeWhereUniqueInput
+    /**
+     * In case the CongressionalTrade found by the `where` argument doesn't exist, create a new CongressionalTrade with this data.
+     */
+    create: XOR<CongressionalTradeCreateInput, CongressionalTradeUncheckedCreateInput>
+    /**
+     * In case the CongressionalTrade was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<CongressionalTradeUpdateInput, CongressionalTradeUncheckedUpdateInput>
+  }
+
+  /**
+   * CongressionalTrade delete
+   */
+  export type CongressionalTradeDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the CongressionalTrade
+     */
+    select?: CongressionalTradeSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the CongressionalTrade
+     */
+    omit?: CongressionalTradeOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CongressionalTradeInclude<ExtArgs> | null
+    /**
+     * Filter which CongressionalTrade to delete.
+     */
+    where: CongressionalTradeWhereUniqueInput
+  }
+
+  /**
+   * CongressionalTrade deleteMany
+   */
+  export type CongressionalTradeDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which CongressionalTrades to delete
+     */
+    where?: CongressionalTradeWhereInput
+    /**
+     * Limit how many CongressionalTrades to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * CongressionalTrade without action
+   */
+  export type CongressionalTradeDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the CongressionalTrade
+     */
+    select?: CongressionalTradeSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the CongressionalTrade
+     */
+    omit?: CongressionalTradeOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CongressionalTradeInclude<ExtArgs> | null
+  }
+
+
+  /**
    * Model SyncLog
    */
 
@@ -18907,6 +20301,30 @@ export namespace Prisma {
   export type LegislativeVoteScalarFieldEnum = (typeof LegislativeVoteScalarFieldEnum)[keyof typeof LegislativeVoteScalarFieldEnum]
 
 
+  export const CongressionalTradeScalarFieldEnum: {
+    id: 'id',
+    entityId: 'entityId',
+    representative: 'representative',
+    ticker: 'ticker',
+    assetName: 'assetName',
+    txType: 'txType',
+    txDate: 'txDate',
+    disclosureDate: 'disclosureDate',
+    amount: 'amount',
+    amountLow: 'amountLow',
+    amountHigh: 'amountHigh',
+    owner: 'owner',
+    chamber: 'chamber',
+    district: 'district',
+    party: 'party',
+    sourceUrl: 'sourceUrl',
+    sourceId: 'sourceId',
+    createdAt: 'createdAt'
+  };
+
+  export type CongressionalTradeScalarFieldEnum = (typeof CongressionalTradeScalarFieldEnum)[keyof typeof CongressionalTradeScalarFieldEnum]
+
+
   export const SyncLogScalarFieldEnum: {
     id: 'id',
     source: 'source',
@@ -19281,6 +20699,7 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardListRelationFilter
     sponsoredLegislation?: LegislationListRelationFilter
     legislativeVotes?: LegislativeVoteListRelationFilter
+    congressionalTrades?: CongressionalTradeListRelationFilter
   }
 
   export type EntityOrderByWithRelationInput = {
@@ -19329,6 +20748,7 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardOrderByRelationAggregateInput
     sponsoredLegislation?: LegislationOrderByRelationAggregateInput
     legislativeVotes?: LegislativeVoteOrderByRelationAggregateInput
+    congressionalTrades?: CongressionalTradeOrderByRelationAggregateInput
   }
 
   export type EntityWhereUniqueInput = Prisma.AtLeast<{
@@ -19380,6 +20800,7 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardListRelationFilter
     sponsoredLegislation?: LegislationListRelationFilter
     legislativeVotes?: LegislativeVoteListRelationFilter
+    congressionalTrades?: CongressionalTradeListRelationFilter
   }, "id">
 
   export type EntityOrderByWithAggregationInput = {
@@ -20555,6 +21976,128 @@ export namespace Prisma {
     createdAt?: DateTimeWithAggregatesFilter<"LegislativeVote"> | Date | string
   }
 
+  export type CongressionalTradeWhereInput = {
+    AND?: CongressionalTradeWhereInput | CongressionalTradeWhereInput[]
+    OR?: CongressionalTradeWhereInput[]
+    NOT?: CongressionalTradeWhereInput | CongressionalTradeWhereInput[]
+    id?: StringFilter<"CongressionalTrade"> | string
+    entityId?: StringFilter<"CongressionalTrade"> | string
+    representative?: StringFilter<"CongressionalTrade"> | string
+    ticker?: StringFilter<"CongressionalTrade"> | string
+    assetName?: StringFilter<"CongressionalTrade"> | string
+    txType?: StringFilter<"CongressionalTrade"> | string
+    txDate?: DateTimeFilter<"CongressionalTrade"> | Date | string
+    disclosureDate?: DateTimeFilter<"CongressionalTrade"> | Date | string
+    amount?: StringFilter<"CongressionalTrade"> | string
+    amountLow?: IntFilter<"CongressionalTrade"> | number
+    amountHigh?: IntFilter<"CongressionalTrade"> | number
+    owner?: StringFilter<"CongressionalTrade"> | string
+    chamber?: StringFilter<"CongressionalTrade"> | string
+    district?: StringNullableFilter<"CongressionalTrade"> | string | null
+    party?: StringNullableFilter<"CongressionalTrade"> | string | null
+    sourceUrl?: StringNullableFilter<"CongressionalTrade"> | string | null
+    sourceId?: StringNullableFilter<"CongressionalTrade"> | string | null
+    createdAt?: DateTimeFilter<"CongressionalTrade"> | Date | string
+    entity?: XOR<EntityScalarRelationFilter, EntityWhereInput>
+  }
+
+  export type CongressionalTradeOrderByWithRelationInput = {
+    id?: SortOrder
+    entityId?: SortOrder
+    representative?: SortOrder
+    ticker?: SortOrder
+    assetName?: SortOrder
+    txType?: SortOrder
+    txDate?: SortOrder
+    disclosureDate?: SortOrder
+    amount?: SortOrder
+    amountLow?: SortOrder
+    amountHigh?: SortOrder
+    owner?: SortOrder
+    chamber?: SortOrder
+    district?: SortOrderInput | SortOrder
+    party?: SortOrderInput | SortOrder
+    sourceUrl?: SortOrderInput | SortOrder
+    sourceId?: SortOrderInput | SortOrder
+    createdAt?: SortOrder
+    entity?: EntityOrderByWithRelationInput
+  }
+
+  export type CongressionalTradeWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    sourceId?: string
+    AND?: CongressionalTradeWhereInput | CongressionalTradeWhereInput[]
+    OR?: CongressionalTradeWhereInput[]
+    NOT?: CongressionalTradeWhereInput | CongressionalTradeWhereInput[]
+    entityId?: StringFilter<"CongressionalTrade"> | string
+    representative?: StringFilter<"CongressionalTrade"> | string
+    ticker?: StringFilter<"CongressionalTrade"> | string
+    assetName?: StringFilter<"CongressionalTrade"> | string
+    txType?: StringFilter<"CongressionalTrade"> | string
+    txDate?: DateTimeFilter<"CongressionalTrade"> | Date | string
+    disclosureDate?: DateTimeFilter<"CongressionalTrade"> | Date | string
+    amount?: StringFilter<"CongressionalTrade"> | string
+    amountLow?: IntFilter<"CongressionalTrade"> | number
+    amountHigh?: IntFilter<"CongressionalTrade"> | number
+    owner?: StringFilter<"CongressionalTrade"> | string
+    chamber?: StringFilter<"CongressionalTrade"> | string
+    district?: StringNullableFilter<"CongressionalTrade"> | string | null
+    party?: StringNullableFilter<"CongressionalTrade"> | string | null
+    sourceUrl?: StringNullableFilter<"CongressionalTrade"> | string | null
+    createdAt?: DateTimeFilter<"CongressionalTrade"> | Date | string
+    entity?: XOR<EntityScalarRelationFilter, EntityWhereInput>
+  }, "id" | "sourceId">
+
+  export type CongressionalTradeOrderByWithAggregationInput = {
+    id?: SortOrder
+    entityId?: SortOrder
+    representative?: SortOrder
+    ticker?: SortOrder
+    assetName?: SortOrder
+    txType?: SortOrder
+    txDate?: SortOrder
+    disclosureDate?: SortOrder
+    amount?: SortOrder
+    amountLow?: SortOrder
+    amountHigh?: SortOrder
+    owner?: SortOrder
+    chamber?: SortOrder
+    district?: SortOrderInput | SortOrder
+    party?: SortOrderInput | SortOrder
+    sourceUrl?: SortOrderInput | SortOrder
+    sourceId?: SortOrderInput | SortOrder
+    createdAt?: SortOrder
+    _count?: CongressionalTradeCountOrderByAggregateInput
+    _avg?: CongressionalTradeAvgOrderByAggregateInput
+    _max?: CongressionalTradeMaxOrderByAggregateInput
+    _min?: CongressionalTradeMinOrderByAggregateInput
+    _sum?: CongressionalTradeSumOrderByAggregateInput
+  }
+
+  export type CongressionalTradeScalarWhereWithAggregatesInput = {
+    AND?: CongressionalTradeScalarWhereWithAggregatesInput | CongressionalTradeScalarWhereWithAggregatesInput[]
+    OR?: CongressionalTradeScalarWhereWithAggregatesInput[]
+    NOT?: CongressionalTradeScalarWhereWithAggregatesInput | CongressionalTradeScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"CongressionalTrade"> | string
+    entityId?: StringWithAggregatesFilter<"CongressionalTrade"> | string
+    representative?: StringWithAggregatesFilter<"CongressionalTrade"> | string
+    ticker?: StringWithAggregatesFilter<"CongressionalTrade"> | string
+    assetName?: StringWithAggregatesFilter<"CongressionalTrade"> | string
+    txType?: StringWithAggregatesFilter<"CongressionalTrade"> | string
+    txDate?: DateTimeWithAggregatesFilter<"CongressionalTrade"> | Date | string
+    disclosureDate?: DateTimeWithAggregatesFilter<"CongressionalTrade"> | Date | string
+    amount?: StringWithAggregatesFilter<"CongressionalTrade"> | string
+    amountLow?: IntWithAggregatesFilter<"CongressionalTrade"> | number
+    amountHigh?: IntWithAggregatesFilter<"CongressionalTrade"> | number
+    owner?: StringWithAggregatesFilter<"CongressionalTrade"> | string
+    chamber?: StringWithAggregatesFilter<"CongressionalTrade"> | string
+    district?: StringNullableWithAggregatesFilter<"CongressionalTrade"> | string | null
+    party?: StringNullableWithAggregatesFilter<"CongressionalTrade"> | string | null
+    sourceUrl?: StringNullableWithAggregatesFilter<"CongressionalTrade"> | string | null
+    sourceId?: StringNullableWithAggregatesFilter<"CongressionalTrade"> | string | null
+    createdAt?: DateTimeWithAggregatesFilter<"CongressionalTrade"> | Date | string
+  }
+
   export type SyncLogWhereInput = {
     AND?: SyncLogWhereInput | SyncLogWhereInput[]
     OR?: SyncLogWhereInput[]
@@ -20684,6 +22227,7 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardCreateNestedManyWithoutAgencyEntityInput
     sponsoredLegislation?: LegislationCreateNestedManyWithoutSponsorEntityInput
     legislativeVotes?: LegislativeVoteCreateNestedManyWithoutEntityInput
+    congressionalTrades?: CongressionalTradeCreateNestedManyWithoutEntityInput
   }
 
   export type EntityUncheckedCreateInput = {
@@ -20731,6 +22275,7 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardUncheckedCreateNestedManyWithoutAgencyEntityInput
     sponsoredLegislation?: LegislationUncheckedCreateNestedManyWithoutSponsorEntityInput
     legislativeVotes?: LegislativeVoteUncheckedCreateNestedManyWithoutEntityInput
+    congressionalTrades?: CongressionalTradeUncheckedCreateNestedManyWithoutEntityInput
   }
 
   export type EntityUpdateInput = {
@@ -20778,6 +22323,7 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardUpdateManyWithoutAgencyEntityNestedInput
     sponsoredLegislation?: LegislationUpdateManyWithoutSponsorEntityNestedInput
     legislativeVotes?: LegislativeVoteUpdateManyWithoutEntityNestedInput
+    congressionalTrades?: CongressionalTradeUpdateManyWithoutEntityNestedInput
   }
 
   export type EntityUncheckedUpdateInput = {
@@ -20825,6 +22371,7 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardUncheckedUpdateManyWithoutAgencyEntityNestedInput
     sponsoredLegislation?: LegislationUncheckedUpdateManyWithoutSponsorEntityNestedInput
     legislativeVotes?: LegislativeVoteUncheckedUpdateManyWithoutEntityNestedInput
+    congressionalTrades?: CongressionalTradeUncheckedUpdateManyWithoutEntityNestedInput
   }
 
   export type EntityCreateManyInput = {
@@ -22163,6 +23710,152 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
+  export type CongressionalTradeCreateInput = {
+    id?: string
+    representative: string
+    ticker: string
+    assetName: string
+    txType: string
+    txDate: Date | string
+    disclosureDate: Date | string
+    amount: string
+    amountLow: number
+    amountHigh: number
+    owner: string
+    chamber: string
+    district?: string | null
+    party?: string | null
+    sourceUrl?: string | null
+    sourceId?: string | null
+    createdAt?: Date | string
+    entity: EntityCreateNestedOneWithoutCongressionalTradesInput
+  }
+
+  export type CongressionalTradeUncheckedCreateInput = {
+    id?: string
+    entityId: string
+    representative: string
+    ticker: string
+    assetName: string
+    txType: string
+    txDate: Date | string
+    disclosureDate: Date | string
+    amount: string
+    amountLow: number
+    amountHigh: number
+    owner: string
+    chamber: string
+    district?: string | null
+    party?: string | null
+    sourceUrl?: string | null
+    sourceId?: string | null
+    createdAt?: Date | string
+  }
+
+  export type CongressionalTradeUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    representative?: StringFieldUpdateOperationsInput | string
+    ticker?: StringFieldUpdateOperationsInput | string
+    assetName?: StringFieldUpdateOperationsInput | string
+    txType?: StringFieldUpdateOperationsInput | string
+    txDate?: DateTimeFieldUpdateOperationsInput | Date | string
+    disclosureDate?: DateTimeFieldUpdateOperationsInput | Date | string
+    amount?: StringFieldUpdateOperationsInput | string
+    amountLow?: IntFieldUpdateOperationsInput | number
+    amountHigh?: IntFieldUpdateOperationsInput | number
+    owner?: StringFieldUpdateOperationsInput | string
+    chamber?: StringFieldUpdateOperationsInput | string
+    district?: NullableStringFieldUpdateOperationsInput | string | null
+    party?: NullableStringFieldUpdateOperationsInput | string | null
+    sourceUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    sourceId?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    entity?: EntityUpdateOneRequiredWithoutCongressionalTradesNestedInput
+  }
+
+  export type CongressionalTradeUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    entityId?: StringFieldUpdateOperationsInput | string
+    representative?: StringFieldUpdateOperationsInput | string
+    ticker?: StringFieldUpdateOperationsInput | string
+    assetName?: StringFieldUpdateOperationsInput | string
+    txType?: StringFieldUpdateOperationsInput | string
+    txDate?: DateTimeFieldUpdateOperationsInput | Date | string
+    disclosureDate?: DateTimeFieldUpdateOperationsInput | Date | string
+    amount?: StringFieldUpdateOperationsInput | string
+    amountLow?: IntFieldUpdateOperationsInput | number
+    amountHigh?: IntFieldUpdateOperationsInput | number
+    owner?: StringFieldUpdateOperationsInput | string
+    chamber?: StringFieldUpdateOperationsInput | string
+    district?: NullableStringFieldUpdateOperationsInput | string | null
+    party?: NullableStringFieldUpdateOperationsInput | string | null
+    sourceUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    sourceId?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type CongressionalTradeCreateManyInput = {
+    id?: string
+    entityId: string
+    representative: string
+    ticker: string
+    assetName: string
+    txType: string
+    txDate: Date | string
+    disclosureDate: Date | string
+    amount: string
+    amountLow: number
+    amountHigh: number
+    owner: string
+    chamber: string
+    district?: string | null
+    party?: string | null
+    sourceUrl?: string | null
+    sourceId?: string | null
+    createdAt?: Date | string
+  }
+
+  export type CongressionalTradeUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    representative?: StringFieldUpdateOperationsInput | string
+    ticker?: StringFieldUpdateOperationsInput | string
+    assetName?: StringFieldUpdateOperationsInput | string
+    txType?: StringFieldUpdateOperationsInput | string
+    txDate?: DateTimeFieldUpdateOperationsInput | Date | string
+    disclosureDate?: DateTimeFieldUpdateOperationsInput | Date | string
+    amount?: StringFieldUpdateOperationsInput | string
+    amountLow?: IntFieldUpdateOperationsInput | number
+    amountHigh?: IntFieldUpdateOperationsInput | number
+    owner?: StringFieldUpdateOperationsInput | string
+    chamber?: StringFieldUpdateOperationsInput | string
+    district?: NullableStringFieldUpdateOperationsInput | string | null
+    party?: NullableStringFieldUpdateOperationsInput | string | null
+    sourceUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    sourceId?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type CongressionalTradeUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    entityId?: StringFieldUpdateOperationsInput | string
+    representative?: StringFieldUpdateOperationsInput | string
+    ticker?: StringFieldUpdateOperationsInput | string
+    assetName?: StringFieldUpdateOperationsInput | string
+    txType?: StringFieldUpdateOperationsInput | string
+    txDate?: DateTimeFieldUpdateOperationsInput | Date | string
+    disclosureDate?: DateTimeFieldUpdateOperationsInput | Date | string
+    amount?: StringFieldUpdateOperationsInput | string
+    amountLow?: IntFieldUpdateOperationsInput | number
+    amountHigh?: IntFieldUpdateOperationsInput | number
+    owner?: StringFieldUpdateOperationsInput | string
+    chamber?: StringFieldUpdateOperationsInput | string
+    district?: NullableStringFieldUpdateOperationsInput | string | null
+    party?: NullableStringFieldUpdateOperationsInput | string | null
+    sourceUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    sourceId?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
   export type SyncLogCreateInput = {
     id?: string
     source: $Enums.DataSource
@@ -22433,6 +24126,12 @@ export namespace Prisma {
     none?: LegislativeVoteWhereInput
   }
 
+  export type CongressionalTradeListRelationFilter = {
+    every?: CongressionalTradeWhereInput
+    some?: CongressionalTradeWhereInput
+    none?: CongressionalTradeWhereInput
+  }
+
   export type SortOrderInput = {
     sort: SortOrder
     nulls?: NullsOrder
@@ -22475,6 +24174,10 @@ export namespace Prisma {
   }
 
   export type LegislativeVoteOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
+  export type CongressionalTradeOrderByRelationAggregateInput = {
     _count?: SortOrder
   }
 
@@ -23635,6 +25338,79 @@ export namespace Prisma {
     _max?: NestedEnumVotePositionFilter<$PrismaModel>
   }
 
+  export type CongressionalTradeCountOrderByAggregateInput = {
+    id?: SortOrder
+    entityId?: SortOrder
+    representative?: SortOrder
+    ticker?: SortOrder
+    assetName?: SortOrder
+    txType?: SortOrder
+    txDate?: SortOrder
+    disclosureDate?: SortOrder
+    amount?: SortOrder
+    amountLow?: SortOrder
+    amountHigh?: SortOrder
+    owner?: SortOrder
+    chamber?: SortOrder
+    district?: SortOrder
+    party?: SortOrder
+    sourceUrl?: SortOrder
+    sourceId?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type CongressionalTradeAvgOrderByAggregateInput = {
+    amountLow?: SortOrder
+    amountHigh?: SortOrder
+  }
+
+  export type CongressionalTradeMaxOrderByAggregateInput = {
+    id?: SortOrder
+    entityId?: SortOrder
+    representative?: SortOrder
+    ticker?: SortOrder
+    assetName?: SortOrder
+    txType?: SortOrder
+    txDate?: SortOrder
+    disclosureDate?: SortOrder
+    amount?: SortOrder
+    amountLow?: SortOrder
+    amountHigh?: SortOrder
+    owner?: SortOrder
+    chamber?: SortOrder
+    district?: SortOrder
+    party?: SortOrder
+    sourceUrl?: SortOrder
+    sourceId?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type CongressionalTradeMinOrderByAggregateInput = {
+    id?: SortOrder
+    entityId?: SortOrder
+    representative?: SortOrder
+    ticker?: SortOrder
+    assetName?: SortOrder
+    txType?: SortOrder
+    txDate?: SortOrder
+    disclosureDate?: SortOrder
+    amount?: SortOrder
+    amountLow?: SortOrder
+    amountHigh?: SortOrder
+    owner?: SortOrder
+    chamber?: SortOrder
+    district?: SortOrder
+    party?: SortOrder
+    sourceUrl?: SortOrder
+    sourceId?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type CongressionalTradeSumOrderByAggregateInput = {
+    amountLow?: SortOrder
+    amountHigh?: SortOrder
+  }
+
   export type EnumSyncStatusFilter<$PrismaModel = never> = {
     equals?: $Enums.SyncStatus | EnumSyncStatusFieldRefInput<$PrismaModel>
     in?: $Enums.SyncStatus[] | ListEnumSyncStatusFieldRefInput<$PrismaModel>
@@ -23827,6 +25603,13 @@ export namespace Prisma {
     connect?: LegislativeVoteWhereUniqueInput | LegislativeVoteWhereUniqueInput[]
   }
 
+  export type CongressionalTradeCreateNestedManyWithoutEntityInput = {
+    create?: XOR<CongressionalTradeCreateWithoutEntityInput, CongressionalTradeUncheckedCreateWithoutEntityInput> | CongressionalTradeCreateWithoutEntityInput[] | CongressionalTradeUncheckedCreateWithoutEntityInput[]
+    connectOrCreate?: CongressionalTradeCreateOrConnectWithoutEntityInput | CongressionalTradeCreateOrConnectWithoutEntityInput[]
+    createMany?: CongressionalTradeCreateManyEntityInputEnvelope
+    connect?: CongressionalTradeWhereUniqueInput | CongressionalTradeWhereUniqueInput[]
+  }
+
   export type EntityUncheckedCreateNestedManyWithoutMergedIntoInput = {
     create?: XOR<EntityCreateWithoutMergedIntoInput, EntityUncheckedCreateWithoutMergedIntoInput> | EntityCreateWithoutMergedIntoInput[] | EntityUncheckedCreateWithoutMergedIntoInput[]
     connectOrCreate?: EntityCreateOrConnectWithoutMergedIntoInput | EntityCreateOrConnectWithoutMergedIntoInput[]
@@ -23942,6 +25725,13 @@ export namespace Prisma {
     connectOrCreate?: LegislativeVoteCreateOrConnectWithoutEntityInput | LegislativeVoteCreateOrConnectWithoutEntityInput[]
     createMany?: LegislativeVoteCreateManyEntityInputEnvelope
     connect?: LegislativeVoteWhereUniqueInput | LegislativeVoteWhereUniqueInput[]
+  }
+
+  export type CongressionalTradeUncheckedCreateNestedManyWithoutEntityInput = {
+    create?: XOR<CongressionalTradeCreateWithoutEntityInput, CongressionalTradeUncheckedCreateWithoutEntityInput> | CongressionalTradeCreateWithoutEntityInput[] | CongressionalTradeUncheckedCreateWithoutEntityInput[]
+    connectOrCreate?: CongressionalTradeCreateOrConnectWithoutEntityInput | CongressionalTradeCreateOrConnectWithoutEntityInput[]
+    createMany?: CongressionalTradeCreateManyEntityInputEnvelope
+    connect?: CongressionalTradeWhereUniqueInput | CongressionalTradeWhereUniqueInput[]
   }
 
   export type StringFieldUpdateOperationsInput = {
@@ -24232,6 +26022,20 @@ export namespace Prisma {
     deleteMany?: LegislativeVoteScalarWhereInput | LegislativeVoteScalarWhereInput[]
   }
 
+  export type CongressionalTradeUpdateManyWithoutEntityNestedInput = {
+    create?: XOR<CongressionalTradeCreateWithoutEntityInput, CongressionalTradeUncheckedCreateWithoutEntityInput> | CongressionalTradeCreateWithoutEntityInput[] | CongressionalTradeUncheckedCreateWithoutEntityInput[]
+    connectOrCreate?: CongressionalTradeCreateOrConnectWithoutEntityInput | CongressionalTradeCreateOrConnectWithoutEntityInput[]
+    upsert?: CongressionalTradeUpsertWithWhereUniqueWithoutEntityInput | CongressionalTradeUpsertWithWhereUniqueWithoutEntityInput[]
+    createMany?: CongressionalTradeCreateManyEntityInputEnvelope
+    set?: CongressionalTradeWhereUniqueInput | CongressionalTradeWhereUniqueInput[]
+    disconnect?: CongressionalTradeWhereUniqueInput | CongressionalTradeWhereUniqueInput[]
+    delete?: CongressionalTradeWhereUniqueInput | CongressionalTradeWhereUniqueInput[]
+    connect?: CongressionalTradeWhereUniqueInput | CongressionalTradeWhereUniqueInput[]
+    update?: CongressionalTradeUpdateWithWhereUniqueWithoutEntityInput | CongressionalTradeUpdateWithWhereUniqueWithoutEntityInput[]
+    updateMany?: CongressionalTradeUpdateManyWithWhereWithoutEntityInput | CongressionalTradeUpdateManyWithWhereWithoutEntityInput[]
+    deleteMany?: CongressionalTradeScalarWhereInput | CongressionalTradeScalarWhereInput[]
+  }
+
   export type EntityUncheckedUpdateManyWithoutMergedIntoNestedInput = {
     create?: XOR<EntityCreateWithoutMergedIntoInput, EntityUncheckedCreateWithoutMergedIntoInput> | EntityCreateWithoutMergedIntoInput[] | EntityUncheckedCreateWithoutMergedIntoInput[]
     connectOrCreate?: EntityCreateOrConnectWithoutMergedIntoInput | EntityCreateOrConnectWithoutMergedIntoInput[]
@@ -24460,6 +26264,20 @@ export namespace Prisma {
     update?: LegislativeVoteUpdateWithWhereUniqueWithoutEntityInput | LegislativeVoteUpdateWithWhereUniqueWithoutEntityInput[]
     updateMany?: LegislativeVoteUpdateManyWithWhereWithoutEntityInput | LegislativeVoteUpdateManyWithWhereWithoutEntityInput[]
     deleteMany?: LegislativeVoteScalarWhereInput | LegislativeVoteScalarWhereInput[]
+  }
+
+  export type CongressionalTradeUncheckedUpdateManyWithoutEntityNestedInput = {
+    create?: XOR<CongressionalTradeCreateWithoutEntityInput, CongressionalTradeUncheckedCreateWithoutEntityInput> | CongressionalTradeCreateWithoutEntityInput[] | CongressionalTradeUncheckedCreateWithoutEntityInput[]
+    connectOrCreate?: CongressionalTradeCreateOrConnectWithoutEntityInput | CongressionalTradeCreateOrConnectWithoutEntityInput[]
+    upsert?: CongressionalTradeUpsertWithWhereUniqueWithoutEntityInput | CongressionalTradeUpsertWithWhereUniqueWithoutEntityInput[]
+    createMany?: CongressionalTradeCreateManyEntityInputEnvelope
+    set?: CongressionalTradeWhereUniqueInput | CongressionalTradeWhereUniqueInput[]
+    disconnect?: CongressionalTradeWhereUniqueInput | CongressionalTradeWhereUniqueInput[]
+    delete?: CongressionalTradeWhereUniqueInput | CongressionalTradeWhereUniqueInput[]
+    connect?: CongressionalTradeWhereUniqueInput | CongressionalTradeWhereUniqueInput[]
+    update?: CongressionalTradeUpdateWithWhereUniqueWithoutEntityInput | CongressionalTradeUpdateWithWhereUniqueWithoutEntityInput[]
+    updateMany?: CongressionalTradeUpdateManyWithWhereWithoutEntityInput | CongressionalTradeUpdateManyWithWhereWithoutEntityInput[]
+    deleteMany?: CongressionalTradeScalarWhereInput | CongressionalTradeScalarWhereInput[]
   }
 
   export type EntityCreateNestedOneWithoutAliasesInput = {
@@ -24829,6 +26647,20 @@ export namespace Prisma {
     upsert?: LegislationUpsertWithoutVotesInput
     connect?: LegislationWhereUniqueInput
     update?: XOR<XOR<LegislationUpdateToOneWithWhereWithoutVotesInput, LegislationUpdateWithoutVotesInput>, LegislationUncheckedUpdateWithoutVotesInput>
+  }
+
+  export type EntityCreateNestedOneWithoutCongressionalTradesInput = {
+    create?: XOR<EntityCreateWithoutCongressionalTradesInput, EntityUncheckedCreateWithoutCongressionalTradesInput>
+    connectOrCreate?: EntityCreateOrConnectWithoutCongressionalTradesInput
+    connect?: EntityWhereUniqueInput
+  }
+
+  export type EntityUpdateOneRequiredWithoutCongressionalTradesNestedInput = {
+    create?: XOR<EntityCreateWithoutCongressionalTradesInput, EntityUncheckedCreateWithoutCongressionalTradesInput>
+    connectOrCreate?: EntityCreateOrConnectWithoutCongressionalTradesInput
+    upsert?: EntityUpsertWithoutCongressionalTradesInput
+    connect?: EntityWhereUniqueInput
+    update?: XOR<XOR<EntityUpdateToOneWithWhereWithoutCongressionalTradesInput, EntityUpdateWithoutCongressionalTradesInput>, EntityUncheckedUpdateWithoutCongressionalTradesInput>
   }
 
   export type EnumSyncStatusFieldUpdateOperationsInput = {
@@ -25374,6 +27206,7 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardCreateNestedManyWithoutAgencyEntityInput
     sponsoredLegislation?: LegislationCreateNestedManyWithoutSponsorEntityInput
     legislativeVotes?: LegislativeVoteCreateNestedManyWithoutEntityInput
+    congressionalTrades?: CongressionalTradeCreateNestedManyWithoutEntityInput
   }
 
   export type EntityUncheckedCreateWithoutMergedFromInput = {
@@ -25420,6 +27253,7 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardUncheckedCreateNestedManyWithoutAgencyEntityInput
     sponsoredLegislation?: LegislationUncheckedCreateNestedManyWithoutSponsorEntityInput
     legislativeVotes?: LegislativeVoteUncheckedCreateNestedManyWithoutEntityInput
+    congressionalTrades?: CongressionalTradeUncheckedCreateNestedManyWithoutEntityInput
   }
 
   export type EntityCreateOrConnectWithoutMergedFromInput = {
@@ -25471,6 +27305,7 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardCreateNestedManyWithoutAgencyEntityInput
     sponsoredLegislation?: LegislationCreateNestedManyWithoutSponsorEntityInput
     legislativeVotes?: LegislativeVoteCreateNestedManyWithoutEntityInput
+    congressionalTrades?: CongressionalTradeCreateNestedManyWithoutEntityInput
   }
 
   export type EntityUncheckedCreateWithoutMergedIntoInput = {
@@ -25517,6 +27352,7 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardUncheckedCreateNestedManyWithoutAgencyEntityInput
     sponsoredLegislation?: LegislationUncheckedCreateNestedManyWithoutSponsorEntityInput
     legislativeVotes?: LegislativeVoteUncheckedCreateNestedManyWithoutEntityInput
+    congressionalTrades?: CongressionalTradeUncheckedCreateNestedManyWithoutEntityInput
   }
 
   export type EntityCreateOrConnectWithoutMergedIntoInput = {
@@ -26193,6 +28029,56 @@ export namespace Prisma {
     skipDuplicates?: boolean
   }
 
+  export type CongressionalTradeCreateWithoutEntityInput = {
+    id?: string
+    representative: string
+    ticker: string
+    assetName: string
+    txType: string
+    txDate: Date | string
+    disclosureDate: Date | string
+    amount: string
+    amountLow: number
+    amountHigh: number
+    owner: string
+    chamber: string
+    district?: string | null
+    party?: string | null
+    sourceUrl?: string | null
+    sourceId?: string | null
+    createdAt?: Date | string
+  }
+
+  export type CongressionalTradeUncheckedCreateWithoutEntityInput = {
+    id?: string
+    representative: string
+    ticker: string
+    assetName: string
+    txType: string
+    txDate: Date | string
+    disclosureDate: Date | string
+    amount: string
+    amountLow: number
+    amountHigh: number
+    owner: string
+    chamber: string
+    district?: string | null
+    party?: string | null
+    sourceUrl?: string | null
+    sourceId?: string | null
+    createdAt?: Date | string
+  }
+
+  export type CongressionalTradeCreateOrConnectWithoutEntityInput = {
+    where: CongressionalTradeWhereUniqueInput
+    create: XOR<CongressionalTradeCreateWithoutEntityInput, CongressionalTradeUncheckedCreateWithoutEntityInput>
+  }
+
+  export type CongressionalTradeCreateManyEntityInputEnvelope = {
+    data: CongressionalTradeCreateManyEntityInput | CongressionalTradeCreateManyEntityInput[]
+    skipDuplicates?: boolean
+  }
+
   export type EntityUpsertWithoutMergedFromInput = {
     update: XOR<EntityUpdateWithoutMergedFromInput, EntityUncheckedUpdateWithoutMergedFromInput>
     create: XOR<EntityCreateWithoutMergedFromInput, EntityUncheckedCreateWithoutMergedFromInput>
@@ -26248,6 +28134,7 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardUpdateManyWithoutAgencyEntityNestedInput
     sponsoredLegislation?: LegislationUpdateManyWithoutSponsorEntityNestedInput
     legislativeVotes?: LegislativeVoteUpdateManyWithoutEntityNestedInput
+    congressionalTrades?: CongressionalTradeUpdateManyWithoutEntityNestedInput
   }
 
   export type EntityUncheckedUpdateWithoutMergedFromInput = {
@@ -26294,6 +28181,7 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardUncheckedUpdateManyWithoutAgencyEntityNestedInput
     sponsoredLegislation?: LegislationUncheckedUpdateManyWithoutSponsorEntityNestedInput
     legislativeVotes?: LegislativeVoteUncheckedUpdateManyWithoutEntityNestedInput
+    congressionalTrades?: CongressionalTradeUncheckedUpdateManyWithoutEntityNestedInput
   }
 
   export type EntityUpsertWithWhereUniqueWithoutMergedIntoInput = {
@@ -26828,6 +28716,46 @@ export namespace Prisma {
     createdAt?: DateTimeFilter<"LegislativeVote"> | Date | string
   }
 
+  export type CongressionalTradeUpsertWithWhereUniqueWithoutEntityInput = {
+    where: CongressionalTradeWhereUniqueInput
+    update: XOR<CongressionalTradeUpdateWithoutEntityInput, CongressionalTradeUncheckedUpdateWithoutEntityInput>
+    create: XOR<CongressionalTradeCreateWithoutEntityInput, CongressionalTradeUncheckedCreateWithoutEntityInput>
+  }
+
+  export type CongressionalTradeUpdateWithWhereUniqueWithoutEntityInput = {
+    where: CongressionalTradeWhereUniqueInput
+    data: XOR<CongressionalTradeUpdateWithoutEntityInput, CongressionalTradeUncheckedUpdateWithoutEntityInput>
+  }
+
+  export type CongressionalTradeUpdateManyWithWhereWithoutEntityInput = {
+    where: CongressionalTradeScalarWhereInput
+    data: XOR<CongressionalTradeUpdateManyMutationInput, CongressionalTradeUncheckedUpdateManyWithoutEntityInput>
+  }
+
+  export type CongressionalTradeScalarWhereInput = {
+    AND?: CongressionalTradeScalarWhereInput | CongressionalTradeScalarWhereInput[]
+    OR?: CongressionalTradeScalarWhereInput[]
+    NOT?: CongressionalTradeScalarWhereInput | CongressionalTradeScalarWhereInput[]
+    id?: StringFilter<"CongressionalTrade"> | string
+    entityId?: StringFilter<"CongressionalTrade"> | string
+    representative?: StringFilter<"CongressionalTrade"> | string
+    ticker?: StringFilter<"CongressionalTrade"> | string
+    assetName?: StringFilter<"CongressionalTrade"> | string
+    txType?: StringFilter<"CongressionalTrade"> | string
+    txDate?: DateTimeFilter<"CongressionalTrade"> | Date | string
+    disclosureDate?: DateTimeFilter<"CongressionalTrade"> | Date | string
+    amount?: StringFilter<"CongressionalTrade"> | string
+    amountLow?: IntFilter<"CongressionalTrade"> | number
+    amountHigh?: IntFilter<"CongressionalTrade"> | number
+    owner?: StringFilter<"CongressionalTrade"> | string
+    chamber?: StringFilter<"CongressionalTrade"> | string
+    district?: StringNullableFilter<"CongressionalTrade"> | string | null
+    party?: StringNullableFilter<"CongressionalTrade"> | string | null
+    sourceUrl?: StringNullableFilter<"CongressionalTrade"> | string | null
+    sourceId?: StringNullableFilter<"CongressionalTrade"> | string | null
+    createdAt?: DateTimeFilter<"CongressionalTrade"> | Date | string
+  }
+
   export type EntityCreateWithoutAliasesInput = {
     id?: string
     type: $Enums.EntityType
@@ -26872,6 +28800,7 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardCreateNestedManyWithoutAgencyEntityInput
     sponsoredLegislation?: LegislationCreateNestedManyWithoutSponsorEntityInput
     legislativeVotes?: LegislativeVoteCreateNestedManyWithoutEntityInput
+    congressionalTrades?: CongressionalTradeCreateNestedManyWithoutEntityInput
   }
 
   export type EntityUncheckedCreateWithoutAliasesInput = {
@@ -26918,6 +28847,7 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardUncheckedCreateNestedManyWithoutAgencyEntityInput
     sponsoredLegislation?: LegislationUncheckedCreateNestedManyWithoutSponsorEntityInput
     legislativeVotes?: LegislativeVoteUncheckedCreateNestedManyWithoutEntityInput
+    congressionalTrades?: CongressionalTradeUncheckedCreateNestedManyWithoutEntityInput
   }
 
   export type EntityCreateOrConnectWithoutAliasesInput = {
@@ -26980,6 +28910,7 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardUpdateManyWithoutAgencyEntityNestedInput
     sponsoredLegislation?: LegislationUpdateManyWithoutSponsorEntityNestedInput
     legislativeVotes?: LegislativeVoteUpdateManyWithoutEntityNestedInput
+    congressionalTrades?: CongressionalTradeUpdateManyWithoutEntityNestedInput
   }
 
   export type EntityUncheckedUpdateWithoutAliasesInput = {
@@ -27026,6 +28957,7 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardUncheckedUpdateManyWithoutAgencyEntityNestedInput
     sponsoredLegislation?: LegislationUncheckedUpdateManyWithoutSponsorEntityNestedInput
     legislativeVotes?: LegislativeVoteUncheckedUpdateManyWithoutEntityNestedInput
+    congressionalTrades?: CongressionalTradeUncheckedUpdateManyWithoutEntityNestedInput
   }
 
   export type EntityCreateWithoutSourceRecordsInput = {
@@ -27072,6 +29004,7 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardCreateNestedManyWithoutAgencyEntityInput
     sponsoredLegislation?: LegislationCreateNestedManyWithoutSponsorEntityInput
     legislativeVotes?: LegislativeVoteCreateNestedManyWithoutEntityInput
+    congressionalTrades?: CongressionalTradeCreateNestedManyWithoutEntityInput
   }
 
   export type EntityUncheckedCreateWithoutSourceRecordsInput = {
@@ -27118,6 +29051,7 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardUncheckedCreateNestedManyWithoutAgencyEntityInput
     sponsoredLegislation?: LegislationUncheckedCreateNestedManyWithoutSponsorEntityInput
     legislativeVotes?: LegislativeVoteUncheckedCreateNestedManyWithoutEntityInput
+    congressionalTrades?: CongressionalTradeUncheckedCreateNestedManyWithoutEntityInput
   }
 
   export type EntityCreateOrConnectWithoutSourceRecordsInput = {
@@ -27180,6 +29114,7 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardUpdateManyWithoutAgencyEntityNestedInput
     sponsoredLegislation?: LegislationUpdateManyWithoutSponsorEntityNestedInput
     legislativeVotes?: LegislativeVoteUpdateManyWithoutEntityNestedInput
+    congressionalTrades?: CongressionalTradeUpdateManyWithoutEntityNestedInput
   }
 
   export type EntityUncheckedUpdateWithoutSourceRecordsInput = {
@@ -27226,6 +29161,7 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardUncheckedUpdateManyWithoutAgencyEntityNestedInput
     sponsoredLegislation?: LegislationUncheckedUpdateManyWithoutSponsorEntityNestedInput
     legislativeVotes?: LegislativeVoteUncheckedUpdateManyWithoutEntityNestedInput
+    congressionalTrades?: CongressionalTradeUncheckedUpdateManyWithoutEntityNestedInput
   }
 
   export type EntityCreateWithoutRelationshipsFromInput = {
@@ -27272,6 +29208,7 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardCreateNestedManyWithoutAgencyEntityInput
     sponsoredLegislation?: LegislationCreateNestedManyWithoutSponsorEntityInput
     legislativeVotes?: LegislativeVoteCreateNestedManyWithoutEntityInput
+    congressionalTrades?: CongressionalTradeCreateNestedManyWithoutEntityInput
   }
 
   export type EntityUncheckedCreateWithoutRelationshipsFromInput = {
@@ -27318,6 +29255,7 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardUncheckedCreateNestedManyWithoutAgencyEntityInput
     sponsoredLegislation?: LegislationUncheckedCreateNestedManyWithoutSponsorEntityInput
     legislativeVotes?: LegislativeVoteUncheckedCreateNestedManyWithoutEntityInput
+    congressionalTrades?: CongressionalTradeUncheckedCreateNestedManyWithoutEntityInput
   }
 
   export type EntityCreateOrConnectWithoutRelationshipsFromInput = {
@@ -27369,6 +29307,7 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardCreateNestedManyWithoutAgencyEntityInput
     sponsoredLegislation?: LegislationCreateNestedManyWithoutSponsorEntityInput
     legislativeVotes?: LegislativeVoteCreateNestedManyWithoutEntityInput
+    congressionalTrades?: CongressionalTradeCreateNestedManyWithoutEntityInput
   }
 
   export type EntityUncheckedCreateWithoutRelationshipsToInput = {
@@ -27415,6 +29354,7 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardUncheckedCreateNestedManyWithoutAgencyEntityInput
     sponsoredLegislation?: LegislationUncheckedCreateNestedManyWithoutSponsorEntityInput
     legislativeVotes?: LegislativeVoteUncheckedCreateNestedManyWithoutEntityInput
+    congressionalTrades?: CongressionalTradeUncheckedCreateNestedManyWithoutEntityInput
   }
 
   export type EntityCreateOrConnectWithoutRelationshipsToInput = {
@@ -27477,6 +29417,7 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardUpdateManyWithoutAgencyEntityNestedInput
     sponsoredLegislation?: LegislationUpdateManyWithoutSponsorEntityNestedInput
     legislativeVotes?: LegislativeVoteUpdateManyWithoutEntityNestedInput
+    congressionalTrades?: CongressionalTradeUpdateManyWithoutEntityNestedInput
   }
 
   export type EntityUncheckedUpdateWithoutRelationshipsFromInput = {
@@ -27523,6 +29464,7 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardUncheckedUpdateManyWithoutAgencyEntityNestedInput
     sponsoredLegislation?: LegislationUncheckedUpdateManyWithoutSponsorEntityNestedInput
     legislativeVotes?: LegislativeVoteUncheckedUpdateManyWithoutEntityNestedInput
+    congressionalTrades?: CongressionalTradeUncheckedUpdateManyWithoutEntityNestedInput
   }
 
   export type EntityUpsertWithoutRelationshipsToInput = {
@@ -27580,6 +29522,7 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardUpdateManyWithoutAgencyEntityNestedInput
     sponsoredLegislation?: LegislationUpdateManyWithoutSponsorEntityNestedInput
     legislativeVotes?: LegislativeVoteUpdateManyWithoutEntityNestedInput
+    congressionalTrades?: CongressionalTradeUpdateManyWithoutEntityNestedInput
   }
 
   export type EntityUncheckedUpdateWithoutRelationshipsToInput = {
@@ -27626,6 +29569,7 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardUncheckedUpdateManyWithoutAgencyEntityNestedInput
     sponsoredLegislation?: LegislationUncheckedUpdateManyWithoutSponsorEntityNestedInput
     legislativeVotes?: LegislativeVoteUncheckedUpdateManyWithoutEntityNestedInput
+    congressionalTrades?: CongressionalTradeUncheckedUpdateManyWithoutEntityNestedInput
   }
 
   export type EntityCreateWithoutTransactionsAsSourceInput = {
@@ -27672,6 +29616,7 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardCreateNestedManyWithoutAgencyEntityInput
     sponsoredLegislation?: LegislationCreateNestedManyWithoutSponsorEntityInput
     legislativeVotes?: LegislativeVoteCreateNestedManyWithoutEntityInput
+    congressionalTrades?: CongressionalTradeCreateNestedManyWithoutEntityInput
   }
 
   export type EntityUncheckedCreateWithoutTransactionsAsSourceInput = {
@@ -27718,6 +29663,7 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardUncheckedCreateNestedManyWithoutAgencyEntityInput
     sponsoredLegislation?: LegislationUncheckedCreateNestedManyWithoutSponsorEntityInput
     legislativeVotes?: LegislativeVoteUncheckedCreateNestedManyWithoutEntityInput
+    congressionalTrades?: CongressionalTradeUncheckedCreateNestedManyWithoutEntityInput
   }
 
   export type EntityCreateOrConnectWithoutTransactionsAsSourceInput = {
@@ -27769,6 +29715,7 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardCreateNestedManyWithoutAgencyEntityInput
     sponsoredLegislation?: LegislationCreateNestedManyWithoutSponsorEntityInput
     legislativeVotes?: LegislativeVoteCreateNestedManyWithoutEntityInput
+    congressionalTrades?: CongressionalTradeCreateNestedManyWithoutEntityInput
   }
 
   export type EntityUncheckedCreateWithoutTransactionsAsTargetInput = {
@@ -27815,6 +29762,7 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardUncheckedCreateNestedManyWithoutAgencyEntityInput
     sponsoredLegislation?: LegislationUncheckedCreateNestedManyWithoutSponsorEntityInput
     legislativeVotes?: LegislativeVoteUncheckedCreateNestedManyWithoutEntityInput
+    congressionalTrades?: CongressionalTradeUncheckedCreateNestedManyWithoutEntityInput
   }
 
   export type EntityCreateOrConnectWithoutTransactionsAsTargetInput = {
@@ -27877,6 +29825,7 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardUpdateManyWithoutAgencyEntityNestedInput
     sponsoredLegislation?: LegislationUpdateManyWithoutSponsorEntityNestedInput
     legislativeVotes?: LegislativeVoteUpdateManyWithoutEntityNestedInput
+    congressionalTrades?: CongressionalTradeUpdateManyWithoutEntityNestedInput
   }
 
   export type EntityUncheckedUpdateWithoutTransactionsAsSourceInput = {
@@ -27923,6 +29872,7 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardUncheckedUpdateManyWithoutAgencyEntityNestedInput
     sponsoredLegislation?: LegislationUncheckedUpdateManyWithoutSponsorEntityNestedInput
     legislativeVotes?: LegislativeVoteUncheckedUpdateManyWithoutEntityNestedInput
+    congressionalTrades?: CongressionalTradeUncheckedUpdateManyWithoutEntityNestedInput
   }
 
   export type EntityUpsertWithoutTransactionsAsTargetInput = {
@@ -27980,6 +29930,7 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardUpdateManyWithoutAgencyEntityNestedInput
     sponsoredLegislation?: LegislationUpdateManyWithoutSponsorEntityNestedInput
     legislativeVotes?: LegislativeVoteUpdateManyWithoutEntityNestedInput
+    congressionalTrades?: CongressionalTradeUpdateManyWithoutEntityNestedInput
   }
 
   export type EntityUncheckedUpdateWithoutTransactionsAsTargetInput = {
@@ -28026,6 +29977,7 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardUncheckedUpdateManyWithoutAgencyEntityNestedInput
     sponsoredLegislation?: LegislationUncheckedUpdateManyWithoutSponsorEntityNestedInput
     legislativeVotes?: LegislativeVoteUncheckedUpdateManyWithoutEntityNestedInput
+    congressionalTrades?: CongressionalTradeUncheckedUpdateManyWithoutEntityNestedInput
   }
 
   export type EntityCreateWithoutAggregateFlowsAsSourceInput = {
@@ -28072,6 +30024,7 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardCreateNestedManyWithoutAgencyEntityInput
     sponsoredLegislation?: LegislationCreateNestedManyWithoutSponsorEntityInput
     legislativeVotes?: LegislativeVoteCreateNestedManyWithoutEntityInput
+    congressionalTrades?: CongressionalTradeCreateNestedManyWithoutEntityInput
   }
 
   export type EntityUncheckedCreateWithoutAggregateFlowsAsSourceInput = {
@@ -28118,6 +30071,7 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardUncheckedCreateNestedManyWithoutAgencyEntityInput
     sponsoredLegislation?: LegislationUncheckedCreateNestedManyWithoutSponsorEntityInput
     legislativeVotes?: LegislativeVoteUncheckedCreateNestedManyWithoutEntityInput
+    congressionalTrades?: CongressionalTradeUncheckedCreateNestedManyWithoutEntityInput
   }
 
   export type EntityCreateOrConnectWithoutAggregateFlowsAsSourceInput = {
@@ -28169,6 +30123,7 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardCreateNestedManyWithoutAgencyEntityInput
     sponsoredLegislation?: LegislationCreateNestedManyWithoutSponsorEntityInput
     legislativeVotes?: LegislativeVoteCreateNestedManyWithoutEntityInput
+    congressionalTrades?: CongressionalTradeCreateNestedManyWithoutEntityInput
   }
 
   export type EntityUncheckedCreateWithoutAggregateFlowsAsTargetInput = {
@@ -28215,6 +30170,7 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardUncheckedCreateNestedManyWithoutAgencyEntityInput
     sponsoredLegislation?: LegislationUncheckedCreateNestedManyWithoutSponsorEntityInput
     legislativeVotes?: LegislativeVoteUncheckedCreateNestedManyWithoutEntityInput
+    congressionalTrades?: CongressionalTradeUncheckedCreateNestedManyWithoutEntityInput
   }
 
   export type EntityCreateOrConnectWithoutAggregateFlowsAsTargetInput = {
@@ -28277,6 +30233,7 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardUpdateManyWithoutAgencyEntityNestedInput
     sponsoredLegislation?: LegislationUpdateManyWithoutSponsorEntityNestedInput
     legislativeVotes?: LegislativeVoteUpdateManyWithoutEntityNestedInput
+    congressionalTrades?: CongressionalTradeUpdateManyWithoutEntityNestedInput
   }
 
   export type EntityUncheckedUpdateWithoutAggregateFlowsAsSourceInput = {
@@ -28323,6 +30280,7 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardUncheckedUpdateManyWithoutAgencyEntityNestedInput
     sponsoredLegislation?: LegislationUncheckedUpdateManyWithoutSponsorEntityNestedInput
     legislativeVotes?: LegislativeVoteUncheckedUpdateManyWithoutEntityNestedInput
+    congressionalTrades?: CongressionalTradeUncheckedUpdateManyWithoutEntityNestedInput
   }
 
   export type EntityUpsertWithoutAggregateFlowsAsTargetInput = {
@@ -28380,6 +30338,7 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardUpdateManyWithoutAgencyEntityNestedInput
     sponsoredLegislation?: LegislationUpdateManyWithoutSponsorEntityNestedInput
     legislativeVotes?: LegislativeVoteUpdateManyWithoutEntityNestedInput
+    congressionalTrades?: CongressionalTradeUpdateManyWithoutEntityNestedInput
   }
 
   export type EntityUncheckedUpdateWithoutAggregateFlowsAsTargetInput = {
@@ -28426,6 +30385,7 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardUncheckedUpdateManyWithoutAgencyEntityNestedInput
     sponsoredLegislation?: LegislationUncheckedUpdateManyWithoutSponsorEntityNestedInput
     legislativeVotes?: LegislativeVoteUncheckedUpdateManyWithoutEntityNestedInput
+    congressionalTrades?: CongressionalTradeUncheckedUpdateManyWithoutEntityNestedInput
   }
 
   export type EntityCreateWithoutFecCandidateInput = {
@@ -28472,6 +30432,7 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardCreateNestedManyWithoutAgencyEntityInput
     sponsoredLegislation?: LegislationCreateNestedManyWithoutSponsorEntityInput
     legislativeVotes?: LegislativeVoteCreateNestedManyWithoutEntityInput
+    congressionalTrades?: CongressionalTradeCreateNestedManyWithoutEntityInput
   }
 
   export type EntityUncheckedCreateWithoutFecCandidateInput = {
@@ -28518,6 +30479,7 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardUncheckedCreateNestedManyWithoutAgencyEntityInput
     sponsoredLegislation?: LegislationUncheckedCreateNestedManyWithoutSponsorEntityInput
     legislativeVotes?: LegislativeVoteUncheckedCreateNestedManyWithoutEntityInput
+    congressionalTrades?: CongressionalTradeUncheckedCreateNestedManyWithoutEntityInput
   }
 
   export type EntityCreateOrConnectWithoutFecCandidateInput = {
@@ -28580,6 +30542,7 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardUpdateManyWithoutAgencyEntityNestedInput
     sponsoredLegislation?: LegislationUpdateManyWithoutSponsorEntityNestedInput
     legislativeVotes?: LegislativeVoteUpdateManyWithoutEntityNestedInput
+    congressionalTrades?: CongressionalTradeUpdateManyWithoutEntityNestedInput
   }
 
   export type EntityUncheckedUpdateWithoutFecCandidateInput = {
@@ -28626,6 +30589,7 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardUncheckedUpdateManyWithoutAgencyEntityNestedInput
     sponsoredLegislation?: LegislationUncheckedUpdateManyWithoutSponsorEntityNestedInput
     legislativeVotes?: LegislativeVoteUncheckedUpdateManyWithoutEntityNestedInput
+    congressionalTrades?: CongressionalTradeUncheckedUpdateManyWithoutEntityNestedInput
   }
 
   export type EntityCreateWithoutFecCommitteeInput = {
@@ -28672,6 +30636,7 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardCreateNestedManyWithoutAgencyEntityInput
     sponsoredLegislation?: LegislationCreateNestedManyWithoutSponsorEntityInput
     legislativeVotes?: LegislativeVoteCreateNestedManyWithoutEntityInput
+    congressionalTrades?: CongressionalTradeCreateNestedManyWithoutEntityInput
   }
 
   export type EntityUncheckedCreateWithoutFecCommitteeInput = {
@@ -28718,6 +30683,7 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardUncheckedCreateNestedManyWithoutAgencyEntityInput
     sponsoredLegislation?: LegislationUncheckedCreateNestedManyWithoutSponsorEntityInput
     legislativeVotes?: LegislativeVoteUncheckedCreateNestedManyWithoutEntityInput
+    congressionalTrades?: CongressionalTradeUncheckedCreateNestedManyWithoutEntityInput
   }
 
   export type EntityCreateOrConnectWithoutFecCommitteeInput = {
@@ -28780,6 +30746,7 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardUpdateManyWithoutAgencyEntityNestedInput
     sponsoredLegislation?: LegislationUpdateManyWithoutSponsorEntityNestedInput
     legislativeVotes?: LegislativeVoteUpdateManyWithoutEntityNestedInput
+    congressionalTrades?: CongressionalTradeUpdateManyWithoutEntityNestedInput
   }
 
   export type EntityUncheckedUpdateWithoutFecCommitteeInput = {
@@ -28826,6 +30793,7 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardUncheckedUpdateManyWithoutAgencyEntityNestedInput
     sponsoredLegislation?: LegislationUncheckedUpdateManyWithoutSponsorEntityNestedInput
     legislativeVotes?: LegislativeVoteUncheckedUpdateManyWithoutEntityNestedInput
+    congressionalTrades?: CongressionalTradeUncheckedUpdateManyWithoutEntityNestedInput
   }
 
   export type EntityCreateWithoutLobbyingFilingsAsRegistrantInput = {
@@ -28872,6 +30840,7 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardCreateNestedManyWithoutAgencyEntityInput
     sponsoredLegislation?: LegislationCreateNestedManyWithoutSponsorEntityInput
     legislativeVotes?: LegislativeVoteCreateNestedManyWithoutEntityInput
+    congressionalTrades?: CongressionalTradeCreateNestedManyWithoutEntityInput
   }
 
   export type EntityUncheckedCreateWithoutLobbyingFilingsAsRegistrantInput = {
@@ -28918,6 +30887,7 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardUncheckedCreateNestedManyWithoutAgencyEntityInput
     sponsoredLegislation?: LegislationUncheckedCreateNestedManyWithoutSponsorEntityInput
     legislativeVotes?: LegislativeVoteUncheckedCreateNestedManyWithoutEntityInput
+    congressionalTrades?: CongressionalTradeUncheckedCreateNestedManyWithoutEntityInput
   }
 
   export type EntityCreateOrConnectWithoutLobbyingFilingsAsRegistrantInput = {
@@ -28969,6 +30939,7 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardCreateNestedManyWithoutAgencyEntityInput
     sponsoredLegislation?: LegislationCreateNestedManyWithoutSponsorEntityInput
     legislativeVotes?: LegislativeVoteCreateNestedManyWithoutEntityInput
+    congressionalTrades?: CongressionalTradeCreateNestedManyWithoutEntityInput
   }
 
   export type EntityUncheckedCreateWithoutLobbyingFilingsAsClientInput = {
@@ -29015,6 +30986,7 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardUncheckedCreateNestedManyWithoutAgencyEntityInput
     sponsoredLegislation?: LegislationUncheckedCreateNestedManyWithoutSponsorEntityInput
     legislativeVotes?: LegislativeVoteUncheckedCreateNestedManyWithoutEntityInput
+    congressionalTrades?: CongressionalTradeUncheckedCreateNestedManyWithoutEntityInput
   }
 
   export type EntityCreateOrConnectWithoutLobbyingFilingsAsClientInput = {
@@ -29077,6 +31049,7 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardUpdateManyWithoutAgencyEntityNestedInput
     sponsoredLegislation?: LegislationUpdateManyWithoutSponsorEntityNestedInput
     legislativeVotes?: LegislativeVoteUpdateManyWithoutEntityNestedInput
+    congressionalTrades?: CongressionalTradeUpdateManyWithoutEntityNestedInput
   }
 
   export type EntityUncheckedUpdateWithoutLobbyingFilingsAsRegistrantInput = {
@@ -29123,6 +31096,7 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardUncheckedUpdateManyWithoutAgencyEntityNestedInput
     sponsoredLegislation?: LegislationUncheckedUpdateManyWithoutSponsorEntityNestedInput
     legislativeVotes?: LegislativeVoteUncheckedUpdateManyWithoutEntityNestedInput
+    congressionalTrades?: CongressionalTradeUncheckedUpdateManyWithoutEntityNestedInput
   }
 
   export type EntityUpsertWithoutLobbyingFilingsAsClientInput = {
@@ -29180,6 +31154,7 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardUpdateManyWithoutAgencyEntityNestedInput
     sponsoredLegislation?: LegislationUpdateManyWithoutSponsorEntityNestedInput
     legislativeVotes?: LegislativeVoteUpdateManyWithoutEntityNestedInput
+    congressionalTrades?: CongressionalTradeUpdateManyWithoutEntityNestedInput
   }
 
   export type EntityUncheckedUpdateWithoutLobbyingFilingsAsClientInput = {
@@ -29226,6 +31201,7 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardUncheckedUpdateManyWithoutAgencyEntityNestedInput
     sponsoredLegislation?: LegislationUncheckedUpdateManyWithoutSponsorEntityNestedInput
     legislativeVotes?: LegislativeVoteUncheckedUpdateManyWithoutEntityNestedInput
+    congressionalTrades?: CongressionalTradeUncheckedUpdateManyWithoutEntityNestedInput
   }
 
   export type EntityCreateWithoutFederalAwardsAsRecipientInput = {
@@ -29272,6 +31248,7 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardCreateNestedManyWithoutAgencyEntityInput
     sponsoredLegislation?: LegislationCreateNestedManyWithoutSponsorEntityInput
     legislativeVotes?: LegislativeVoteCreateNestedManyWithoutEntityInput
+    congressionalTrades?: CongressionalTradeCreateNestedManyWithoutEntityInput
   }
 
   export type EntityUncheckedCreateWithoutFederalAwardsAsRecipientInput = {
@@ -29318,6 +31295,7 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardUncheckedCreateNestedManyWithoutAgencyEntityInput
     sponsoredLegislation?: LegislationUncheckedCreateNestedManyWithoutSponsorEntityInput
     legislativeVotes?: LegislativeVoteUncheckedCreateNestedManyWithoutEntityInput
+    congressionalTrades?: CongressionalTradeUncheckedCreateNestedManyWithoutEntityInput
   }
 
   export type EntityCreateOrConnectWithoutFederalAwardsAsRecipientInput = {
@@ -29369,6 +31347,7 @@ export namespace Prisma {
     federalAwardsAsRecipient?: FederalAwardCreateNestedManyWithoutRecipientEntityInput
     sponsoredLegislation?: LegislationCreateNestedManyWithoutSponsorEntityInput
     legislativeVotes?: LegislativeVoteCreateNestedManyWithoutEntityInput
+    congressionalTrades?: CongressionalTradeCreateNestedManyWithoutEntityInput
   }
 
   export type EntityUncheckedCreateWithoutFederalAwardsAsAgencyInput = {
@@ -29415,6 +31394,7 @@ export namespace Prisma {
     federalAwardsAsRecipient?: FederalAwardUncheckedCreateNestedManyWithoutRecipientEntityInput
     sponsoredLegislation?: LegislationUncheckedCreateNestedManyWithoutSponsorEntityInput
     legislativeVotes?: LegislativeVoteUncheckedCreateNestedManyWithoutEntityInput
+    congressionalTrades?: CongressionalTradeUncheckedCreateNestedManyWithoutEntityInput
   }
 
   export type EntityCreateOrConnectWithoutFederalAwardsAsAgencyInput = {
@@ -29477,6 +31457,7 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardUpdateManyWithoutAgencyEntityNestedInput
     sponsoredLegislation?: LegislationUpdateManyWithoutSponsorEntityNestedInput
     legislativeVotes?: LegislativeVoteUpdateManyWithoutEntityNestedInput
+    congressionalTrades?: CongressionalTradeUpdateManyWithoutEntityNestedInput
   }
 
   export type EntityUncheckedUpdateWithoutFederalAwardsAsRecipientInput = {
@@ -29523,6 +31504,7 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardUncheckedUpdateManyWithoutAgencyEntityNestedInput
     sponsoredLegislation?: LegislationUncheckedUpdateManyWithoutSponsorEntityNestedInput
     legislativeVotes?: LegislativeVoteUncheckedUpdateManyWithoutEntityNestedInput
+    congressionalTrades?: CongressionalTradeUncheckedUpdateManyWithoutEntityNestedInput
   }
 
   export type EntityUpsertWithoutFederalAwardsAsAgencyInput = {
@@ -29580,6 +31562,7 @@ export namespace Prisma {
     federalAwardsAsRecipient?: FederalAwardUpdateManyWithoutRecipientEntityNestedInput
     sponsoredLegislation?: LegislationUpdateManyWithoutSponsorEntityNestedInput
     legislativeVotes?: LegislativeVoteUpdateManyWithoutEntityNestedInput
+    congressionalTrades?: CongressionalTradeUpdateManyWithoutEntityNestedInput
   }
 
   export type EntityUncheckedUpdateWithoutFederalAwardsAsAgencyInput = {
@@ -29626,6 +31609,7 @@ export namespace Prisma {
     federalAwardsAsRecipient?: FederalAwardUncheckedUpdateManyWithoutRecipientEntityNestedInput
     sponsoredLegislation?: LegislationUncheckedUpdateManyWithoutSponsorEntityNestedInput
     legislativeVotes?: LegislativeVoteUncheckedUpdateManyWithoutEntityNestedInput
+    congressionalTrades?: CongressionalTradeUncheckedUpdateManyWithoutEntityNestedInput
   }
 
   export type EntityCreateWithoutSponsoredLegislationInput = {
@@ -29672,6 +31656,7 @@ export namespace Prisma {
     federalAwardsAsRecipient?: FederalAwardCreateNestedManyWithoutRecipientEntityInput
     federalAwardsAsAgency?: FederalAwardCreateNestedManyWithoutAgencyEntityInput
     legislativeVotes?: LegislativeVoteCreateNestedManyWithoutEntityInput
+    congressionalTrades?: CongressionalTradeCreateNestedManyWithoutEntityInput
   }
 
   export type EntityUncheckedCreateWithoutSponsoredLegislationInput = {
@@ -29718,6 +31703,7 @@ export namespace Prisma {
     federalAwardsAsRecipient?: FederalAwardUncheckedCreateNestedManyWithoutRecipientEntityInput
     federalAwardsAsAgency?: FederalAwardUncheckedCreateNestedManyWithoutAgencyEntityInput
     legislativeVotes?: LegislativeVoteUncheckedCreateNestedManyWithoutEntityInput
+    congressionalTrades?: CongressionalTradeUncheckedCreateNestedManyWithoutEntityInput
   }
 
   export type EntityCreateOrConnectWithoutSponsoredLegislationInput = {
@@ -29816,6 +31802,7 @@ export namespace Prisma {
     federalAwardsAsRecipient?: FederalAwardUpdateManyWithoutRecipientEntityNestedInput
     federalAwardsAsAgency?: FederalAwardUpdateManyWithoutAgencyEntityNestedInput
     legislativeVotes?: LegislativeVoteUpdateManyWithoutEntityNestedInput
+    congressionalTrades?: CongressionalTradeUpdateManyWithoutEntityNestedInput
   }
 
   export type EntityUncheckedUpdateWithoutSponsoredLegislationInput = {
@@ -29862,6 +31849,7 @@ export namespace Prisma {
     federalAwardsAsRecipient?: FederalAwardUncheckedUpdateManyWithoutRecipientEntityNestedInput
     federalAwardsAsAgency?: FederalAwardUncheckedUpdateManyWithoutAgencyEntityNestedInput
     legislativeVotes?: LegislativeVoteUncheckedUpdateManyWithoutEntityNestedInput
+    congressionalTrades?: CongressionalTradeUncheckedUpdateManyWithoutEntityNestedInput
   }
 
   export type LegislativeVoteUpsertWithWhereUniqueWithoutLegislationInput = {
@@ -29924,6 +31912,7 @@ export namespace Prisma {
     federalAwardsAsRecipient?: FederalAwardCreateNestedManyWithoutRecipientEntityInput
     federalAwardsAsAgency?: FederalAwardCreateNestedManyWithoutAgencyEntityInput
     sponsoredLegislation?: LegislationCreateNestedManyWithoutSponsorEntityInput
+    congressionalTrades?: CongressionalTradeCreateNestedManyWithoutEntityInput
   }
 
   export type EntityUncheckedCreateWithoutLegislativeVotesInput = {
@@ -29970,6 +31959,7 @@ export namespace Prisma {
     federalAwardsAsRecipient?: FederalAwardUncheckedCreateNestedManyWithoutRecipientEntityInput
     federalAwardsAsAgency?: FederalAwardUncheckedCreateNestedManyWithoutAgencyEntityInput
     sponsoredLegislation?: LegislationUncheckedCreateNestedManyWithoutSponsorEntityInput
+    congressionalTrades?: CongressionalTradeUncheckedCreateNestedManyWithoutEntityInput
   }
 
   export type EntityCreateOrConnectWithoutLegislativeVotesInput = {
@@ -30073,6 +32063,7 @@ export namespace Prisma {
     federalAwardsAsRecipient?: FederalAwardUpdateManyWithoutRecipientEntityNestedInput
     federalAwardsAsAgency?: FederalAwardUpdateManyWithoutAgencyEntityNestedInput
     sponsoredLegislation?: LegislationUpdateManyWithoutSponsorEntityNestedInput
+    congressionalTrades?: CongressionalTradeUpdateManyWithoutEntityNestedInput
   }
 
   export type EntityUncheckedUpdateWithoutLegislativeVotesInput = {
@@ -30119,6 +32110,7 @@ export namespace Prisma {
     federalAwardsAsRecipient?: FederalAwardUncheckedUpdateManyWithoutRecipientEntityNestedInput
     federalAwardsAsAgency?: FederalAwardUncheckedUpdateManyWithoutAgencyEntityNestedInput
     sponsoredLegislation?: LegislationUncheckedUpdateManyWithoutSponsorEntityNestedInput
+    congressionalTrades?: CongressionalTradeUncheckedUpdateManyWithoutEntityNestedInput
   }
 
   export type LegislationUpsertWithoutVotesInput = {
@@ -30166,6 +32158,210 @@ export namespace Prisma {
     subjects?: LegislationUpdatesubjectsInput | string[]
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type EntityCreateWithoutCongressionalTradesInput = {
+    id?: string
+    type: $Enums.EntityType
+    canonicalName: string
+    shortName?: string | null
+    description?: string | null
+    photoUrl?: string | null
+    websiteUrl?: string | null
+    party?: $Enums.Party | null
+    state?: string | null
+    district?: string | null
+    office?: $Enums.Office | null
+    officeLevel?: $Enums.OfficeLevel | null
+    inOffice?: boolean | null
+    ticker?: string | null
+    industry?: string | null
+    naicsCode?: string | null
+    sicCode?: string | null
+    committeeType?: $Enums.CommitteeType | null
+    totalReceived?: Decimal | DecimalJsLike | number | string
+    totalSpent?: Decimal | DecimalJsLike | number | string
+    totalContributed?: Decimal | DecimalJsLike | number | string
+    totalLobbying?: Decimal | DecimalJsLike | number | string
+    totalContracts?: Decimal | DecimalJsLike | number | string
+    isVerified?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    mergedInto?: EntityCreateNestedOneWithoutMergedFromInput
+    mergedFrom?: EntityCreateNestedManyWithoutMergedIntoInput
+    aliases?: EntityAliasCreateNestedManyWithoutEntityInput
+    sourceRecords?: EntitySourceRecordCreateNestedManyWithoutEntityInput
+    relationshipsFrom?: EntityRelationshipCreateNestedManyWithoutFromEntityInput
+    relationshipsTo?: EntityRelationshipCreateNestedManyWithoutToEntityInput
+    transactionsAsSource?: MoneyTransactionCreateNestedManyWithoutSourceEntityInput
+    transactionsAsTarget?: MoneyTransactionCreateNestedManyWithoutTargetEntityInput
+    aggregateFlowsAsSource?: AggregateMoneyFlowCreateNestedManyWithoutSourceEntityInput
+    aggregateFlowsAsTarget?: AggregateMoneyFlowCreateNestedManyWithoutTargetEntityInput
+    fecCandidate?: FecCandidateCreateNestedOneWithoutEntityInput
+    fecCommittee?: FecCommitteeCreateNestedOneWithoutEntityInput
+    lobbyingFilingsAsRegistrant?: LobbyingFilingCreateNestedManyWithoutRegistrantEntityInput
+    lobbyingFilingsAsClient?: LobbyingFilingCreateNestedManyWithoutClientEntityInput
+    federalAwardsAsRecipient?: FederalAwardCreateNestedManyWithoutRecipientEntityInput
+    federalAwardsAsAgency?: FederalAwardCreateNestedManyWithoutAgencyEntityInput
+    sponsoredLegislation?: LegislationCreateNestedManyWithoutSponsorEntityInput
+    legislativeVotes?: LegislativeVoteCreateNestedManyWithoutEntityInput
+  }
+
+  export type EntityUncheckedCreateWithoutCongressionalTradesInput = {
+    id?: string
+    type: $Enums.EntityType
+    canonicalName: string
+    shortName?: string | null
+    description?: string | null
+    photoUrl?: string | null
+    websiteUrl?: string | null
+    party?: $Enums.Party | null
+    state?: string | null
+    district?: string | null
+    office?: $Enums.Office | null
+    officeLevel?: $Enums.OfficeLevel | null
+    inOffice?: boolean | null
+    ticker?: string | null
+    industry?: string | null
+    naicsCode?: string | null
+    sicCode?: string | null
+    committeeType?: $Enums.CommitteeType | null
+    totalReceived?: Decimal | DecimalJsLike | number | string
+    totalSpent?: Decimal | DecimalJsLike | number | string
+    totalContributed?: Decimal | DecimalJsLike | number | string
+    totalLobbying?: Decimal | DecimalJsLike | number | string
+    totalContracts?: Decimal | DecimalJsLike | number | string
+    isVerified?: boolean
+    mergedIntoId?: string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    mergedFrom?: EntityUncheckedCreateNestedManyWithoutMergedIntoInput
+    aliases?: EntityAliasUncheckedCreateNestedManyWithoutEntityInput
+    sourceRecords?: EntitySourceRecordUncheckedCreateNestedManyWithoutEntityInput
+    relationshipsFrom?: EntityRelationshipUncheckedCreateNestedManyWithoutFromEntityInput
+    relationshipsTo?: EntityRelationshipUncheckedCreateNestedManyWithoutToEntityInput
+    transactionsAsSource?: MoneyTransactionUncheckedCreateNestedManyWithoutSourceEntityInput
+    transactionsAsTarget?: MoneyTransactionUncheckedCreateNestedManyWithoutTargetEntityInput
+    aggregateFlowsAsSource?: AggregateMoneyFlowUncheckedCreateNestedManyWithoutSourceEntityInput
+    aggregateFlowsAsTarget?: AggregateMoneyFlowUncheckedCreateNestedManyWithoutTargetEntityInput
+    fecCandidate?: FecCandidateUncheckedCreateNestedOneWithoutEntityInput
+    fecCommittee?: FecCommitteeUncheckedCreateNestedOneWithoutEntityInput
+    lobbyingFilingsAsRegistrant?: LobbyingFilingUncheckedCreateNestedManyWithoutRegistrantEntityInput
+    lobbyingFilingsAsClient?: LobbyingFilingUncheckedCreateNestedManyWithoutClientEntityInput
+    federalAwardsAsRecipient?: FederalAwardUncheckedCreateNestedManyWithoutRecipientEntityInput
+    federalAwardsAsAgency?: FederalAwardUncheckedCreateNestedManyWithoutAgencyEntityInput
+    sponsoredLegislation?: LegislationUncheckedCreateNestedManyWithoutSponsorEntityInput
+    legislativeVotes?: LegislativeVoteUncheckedCreateNestedManyWithoutEntityInput
+  }
+
+  export type EntityCreateOrConnectWithoutCongressionalTradesInput = {
+    where: EntityWhereUniqueInput
+    create: XOR<EntityCreateWithoutCongressionalTradesInput, EntityUncheckedCreateWithoutCongressionalTradesInput>
+  }
+
+  export type EntityUpsertWithoutCongressionalTradesInput = {
+    update: XOR<EntityUpdateWithoutCongressionalTradesInput, EntityUncheckedUpdateWithoutCongressionalTradesInput>
+    create: XOR<EntityCreateWithoutCongressionalTradesInput, EntityUncheckedCreateWithoutCongressionalTradesInput>
+    where?: EntityWhereInput
+  }
+
+  export type EntityUpdateToOneWithWhereWithoutCongressionalTradesInput = {
+    where?: EntityWhereInput
+    data: XOR<EntityUpdateWithoutCongressionalTradesInput, EntityUncheckedUpdateWithoutCongressionalTradesInput>
+  }
+
+  export type EntityUpdateWithoutCongressionalTradesInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    type?: EnumEntityTypeFieldUpdateOperationsInput | $Enums.EntityType
+    canonicalName?: StringFieldUpdateOperationsInput | string
+    shortName?: NullableStringFieldUpdateOperationsInput | string | null
+    description?: NullableStringFieldUpdateOperationsInput | string | null
+    photoUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    websiteUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    party?: NullableEnumPartyFieldUpdateOperationsInput | $Enums.Party | null
+    state?: NullableStringFieldUpdateOperationsInput | string | null
+    district?: NullableStringFieldUpdateOperationsInput | string | null
+    office?: NullableEnumOfficeFieldUpdateOperationsInput | $Enums.Office | null
+    officeLevel?: NullableEnumOfficeLevelFieldUpdateOperationsInput | $Enums.OfficeLevel | null
+    inOffice?: NullableBoolFieldUpdateOperationsInput | boolean | null
+    ticker?: NullableStringFieldUpdateOperationsInput | string | null
+    industry?: NullableStringFieldUpdateOperationsInput | string | null
+    naicsCode?: NullableStringFieldUpdateOperationsInput | string | null
+    sicCode?: NullableStringFieldUpdateOperationsInput | string | null
+    committeeType?: NullableEnumCommitteeTypeFieldUpdateOperationsInput | $Enums.CommitteeType | null
+    totalReceived?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    totalSpent?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    totalContributed?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    totalLobbying?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    totalContracts?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    isVerified?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    mergedInto?: EntityUpdateOneWithoutMergedFromNestedInput
+    mergedFrom?: EntityUpdateManyWithoutMergedIntoNestedInput
+    aliases?: EntityAliasUpdateManyWithoutEntityNestedInput
+    sourceRecords?: EntitySourceRecordUpdateManyWithoutEntityNestedInput
+    relationshipsFrom?: EntityRelationshipUpdateManyWithoutFromEntityNestedInput
+    relationshipsTo?: EntityRelationshipUpdateManyWithoutToEntityNestedInput
+    transactionsAsSource?: MoneyTransactionUpdateManyWithoutSourceEntityNestedInput
+    transactionsAsTarget?: MoneyTransactionUpdateManyWithoutTargetEntityNestedInput
+    aggregateFlowsAsSource?: AggregateMoneyFlowUpdateManyWithoutSourceEntityNestedInput
+    aggregateFlowsAsTarget?: AggregateMoneyFlowUpdateManyWithoutTargetEntityNestedInput
+    fecCandidate?: FecCandidateUpdateOneWithoutEntityNestedInput
+    fecCommittee?: FecCommitteeUpdateOneWithoutEntityNestedInput
+    lobbyingFilingsAsRegistrant?: LobbyingFilingUpdateManyWithoutRegistrantEntityNestedInput
+    lobbyingFilingsAsClient?: LobbyingFilingUpdateManyWithoutClientEntityNestedInput
+    federalAwardsAsRecipient?: FederalAwardUpdateManyWithoutRecipientEntityNestedInput
+    federalAwardsAsAgency?: FederalAwardUpdateManyWithoutAgencyEntityNestedInput
+    sponsoredLegislation?: LegislationUpdateManyWithoutSponsorEntityNestedInput
+    legislativeVotes?: LegislativeVoteUpdateManyWithoutEntityNestedInput
+  }
+
+  export type EntityUncheckedUpdateWithoutCongressionalTradesInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    type?: EnumEntityTypeFieldUpdateOperationsInput | $Enums.EntityType
+    canonicalName?: StringFieldUpdateOperationsInput | string
+    shortName?: NullableStringFieldUpdateOperationsInput | string | null
+    description?: NullableStringFieldUpdateOperationsInput | string | null
+    photoUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    websiteUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    party?: NullableEnumPartyFieldUpdateOperationsInput | $Enums.Party | null
+    state?: NullableStringFieldUpdateOperationsInput | string | null
+    district?: NullableStringFieldUpdateOperationsInput | string | null
+    office?: NullableEnumOfficeFieldUpdateOperationsInput | $Enums.Office | null
+    officeLevel?: NullableEnumOfficeLevelFieldUpdateOperationsInput | $Enums.OfficeLevel | null
+    inOffice?: NullableBoolFieldUpdateOperationsInput | boolean | null
+    ticker?: NullableStringFieldUpdateOperationsInput | string | null
+    industry?: NullableStringFieldUpdateOperationsInput | string | null
+    naicsCode?: NullableStringFieldUpdateOperationsInput | string | null
+    sicCode?: NullableStringFieldUpdateOperationsInput | string | null
+    committeeType?: NullableEnumCommitteeTypeFieldUpdateOperationsInput | $Enums.CommitteeType | null
+    totalReceived?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    totalSpent?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    totalContributed?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    totalLobbying?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    totalContracts?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    isVerified?: BoolFieldUpdateOperationsInput | boolean
+    mergedIntoId?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    mergedFrom?: EntityUncheckedUpdateManyWithoutMergedIntoNestedInput
+    aliases?: EntityAliasUncheckedUpdateManyWithoutEntityNestedInput
+    sourceRecords?: EntitySourceRecordUncheckedUpdateManyWithoutEntityNestedInput
+    relationshipsFrom?: EntityRelationshipUncheckedUpdateManyWithoutFromEntityNestedInput
+    relationshipsTo?: EntityRelationshipUncheckedUpdateManyWithoutToEntityNestedInput
+    transactionsAsSource?: MoneyTransactionUncheckedUpdateManyWithoutSourceEntityNestedInput
+    transactionsAsTarget?: MoneyTransactionUncheckedUpdateManyWithoutTargetEntityNestedInput
+    aggregateFlowsAsSource?: AggregateMoneyFlowUncheckedUpdateManyWithoutSourceEntityNestedInput
+    aggregateFlowsAsTarget?: AggregateMoneyFlowUncheckedUpdateManyWithoutTargetEntityNestedInput
+    fecCandidate?: FecCandidateUncheckedUpdateOneWithoutEntityNestedInput
+    fecCommittee?: FecCommitteeUncheckedUpdateOneWithoutEntityNestedInput
+    lobbyingFilingsAsRegistrant?: LobbyingFilingUncheckedUpdateManyWithoutRegistrantEntityNestedInput
+    lobbyingFilingsAsClient?: LobbyingFilingUncheckedUpdateManyWithoutClientEntityNestedInput
+    federalAwardsAsRecipient?: FederalAwardUncheckedUpdateManyWithoutRecipientEntityNestedInput
+    federalAwardsAsAgency?: FederalAwardUncheckedUpdateManyWithoutAgencyEntityNestedInput
+    sponsoredLegislation?: LegislationUncheckedUpdateManyWithoutSponsorEntityNestedInput
+    legislativeVotes?: LegislativeVoteUncheckedUpdateManyWithoutEntityNestedInput
   }
 
   export type EntityCreateManyMergedIntoInput = {
@@ -30421,6 +32617,26 @@ export namespace Prisma {
     createdAt?: Date | string
   }
 
+  export type CongressionalTradeCreateManyEntityInput = {
+    id?: string
+    representative: string
+    ticker: string
+    assetName: string
+    txType: string
+    txDate: Date | string
+    disclosureDate: Date | string
+    amount: string
+    amountLow: number
+    amountHigh: number
+    owner: string
+    chamber: string
+    district?: string | null
+    party?: string | null
+    sourceUrl?: string | null
+    sourceId?: string | null
+    createdAt?: Date | string
+  }
+
   export type EntityUpdateWithoutMergedIntoInput = {
     id?: StringFieldUpdateOperationsInput | string
     type?: EnumEntityTypeFieldUpdateOperationsInput | $Enums.EntityType
@@ -30465,6 +32681,7 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardUpdateManyWithoutAgencyEntityNestedInput
     sponsoredLegislation?: LegislationUpdateManyWithoutSponsorEntityNestedInput
     legislativeVotes?: LegislativeVoteUpdateManyWithoutEntityNestedInput
+    congressionalTrades?: CongressionalTradeUpdateManyWithoutEntityNestedInput
   }
 
   export type EntityUncheckedUpdateWithoutMergedIntoInput = {
@@ -30511,6 +32728,7 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardUncheckedUpdateManyWithoutAgencyEntityNestedInput
     sponsoredLegislation?: LegislationUncheckedUpdateManyWithoutSponsorEntityNestedInput
     legislativeVotes?: LegislativeVoteUncheckedUpdateManyWithoutEntityNestedInput
+    congressionalTrades?: CongressionalTradeUncheckedUpdateManyWithoutEntityNestedInput
   }
 
   export type EntityUncheckedUpdateManyWithoutMergedIntoInput = {
@@ -31213,6 +33431,66 @@ export namespace Prisma {
     congress?: IntFieldUpdateOperationsInput | number
     session?: IntFieldUpdateOperationsInput | number
     rollNumber?: IntFieldUpdateOperationsInput | number
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type CongressionalTradeUpdateWithoutEntityInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    representative?: StringFieldUpdateOperationsInput | string
+    ticker?: StringFieldUpdateOperationsInput | string
+    assetName?: StringFieldUpdateOperationsInput | string
+    txType?: StringFieldUpdateOperationsInput | string
+    txDate?: DateTimeFieldUpdateOperationsInput | Date | string
+    disclosureDate?: DateTimeFieldUpdateOperationsInput | Date | string
+    amount?: StringFieldUpdateOperationsInput | string
+    amountLow?: IntFieldUpdateOperationsInput | number
+    amountHigh?: IntFieldUpdateOperationsInput | number
+    owner?: StringFieldUpdateOperationsInput | string
+    chamber?: StringFieldUpdateOperationsInput | string
+    district?: NullableStringFieldUpdateOperationsInput | string | null
+    party?: NullableStringFieldUpdateOperationsInput | string | null
+    sourceUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    sourceId?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type CongressionalTradeUncheckedUpdateWithoutEntityInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    representative?: StringFieldUpdateOperationsInput | string
+    ticker?: StringFieldUpdateOperationsInput | string
+    assetName?: StringFieldUpdateOperationsInput | string
+    txType?: StringFieldUpdateOperationsInput | string
+    txDate?: DateTimeFieldUpdateOperationsInput | Date | string
+    disclosureDate?: DateTimeFieldUpdateOperationsInput | Date | string
+    amount?: StringFieldUpdateOperationsInput | string
+    amountLow?: IntFieldUpdateOperationsInput | number
+    amountHigh?: IntFieldUpdateOperationsInput | number
+    owner?: StringFieldUpdateOperationsInput | string
+    chamber?: StringFieldUpdateOperationsInput | string
+    district?: NullableStringFieldUpdateOperationsInput | string | null
+    party?: NullableStringFieldUpdateOperationsInput | string | null
+    sourceUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    sourceId?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type CongressionalTradeUncheckedUpdateManyWithoutEntityInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    representative?: StringFieldUpdateOperationsInput | string
+    ticker?: StringFieldUpdateOperationsInput | string
+    assetName?: StringFieldUpdateOperationsInput | string
+    txType?: StringFieldUpdateOperationsInput | string
+    txDate?: DateTimeFieldUpdateOperationsInput | Date | string
+    disclosureDate?: DateTimeFieldUpdateOperationsInput | Date | string
+    amount?: StringFieldUpdateOperationsInput | string
+    amountLow?: IntFieldUpdateOperationsInput | number
+    amountHigh?: IntFieldUpdateOperationsInput | number
+    owner?: StringFieldUpdateOperationsInput | string
+    chamber?: StringFieldUpdateOperationsInput | string
+    district?: NullableStringFieldUpdateOperationsInput | string | null
+    party?: NullableStringFieldUpdateOperationsInput | string | null
+    sourceUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    sourceId?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 

@@ -12,6 +12,8 @@ import {
   X,
   Columns2,
   BookOpen,
+  TrendingUp,
+  Trophy,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useMode } from "@/context/ModeContext";
@@ -21,6 +23,7 @@ import { SearchBar } from "./SearchBar";
 const NAV_ITEMS = {
   explore: [
     { label: "Money Map", href: "/money-flow", icon: BarChart3 },
+    { label: "Trades", href: "/trades", icon: TrendingUp },
     { label: "Contracts", href: "/contracts", icon: Building2 },
     { label: "Network", href: "/network", icon: Network },
     { label: "Stories", href: "/stories", icon: BookOpen },
@@ -28,6 +31,8 @@ const NAV_ITEMS = {
   ],
   research: [
     { label: "Money Flow", href: "/money-flow", icon: BarChart3 },
+    { label: "Trades", href: "/trades", icon: TrendingUp },
+    { label: "Leaderboards", href: "/leaderboards", icon: Trophy },
     { label: "Contracts", href: "/contracts", icon: Building2 },
     { label: "Network", href: "/network", icon: Network },
     { label: "Compare", href: "/compare", icon: Columns2 },
