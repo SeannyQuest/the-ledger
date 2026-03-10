@@ -1,0 +1,562 @@
+// ─────────────────────────────────────────────────────────────
+// The Ledger — Campaign Finance Tracking Platform
+// Prisma Schema for Neon PostgreSQL
+// ─────────────────────────────────────────────────────────────
+
+generator client {
+  provider      = "prisma-client-js"
+  output        = "../src/generated/prisma"
+  binaryTargets = ["native", "rhel-openssl-3.0.x"]
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+// ═══════════════════════════════════════════════════════════════
+// ENUMS
+// ═══════════════════════════════════════════════════════════════
+
+enum EntityType {
+  POLITICIAN
+  CORPORATION
+  PAC
+  SUPER_PAC
+  LOBBYING_FIRM
+  LOBBYIST
+  GOVERNMENT_AGENCY
+  INDIVIDUAL
+  UNION
+  NONPROFIT
+  PARTY_COMMITTEE
+  UNKNOWN
+}
+
+enum DataSource {
+  FEC
+  SENATE_LDA
+  USASPENDING
+  CONGRESS_GOV
+  SEC
+  OPENSECRETS
+  PROPUBLICA
+  STATE_FILING
+  MANUAL
+}
+
+enum TransactionType {
+  INDIVIDUAL_CONTRIBUTION
+  PAC_CONTRIBUTION
+  PARTY_CONTRIBUTION
+  CANDIDATE_CONTRIBUTION
+  CORPORATE_CONTRIBUTION
+  INDEPENDENT_EXPENDITURE
+  OPERATING_EXPENDITURE
+  LOAN
+  LOAN_REPAYMENT
+  REFUND
+  TRANSFER
+  LOBBYING_PAYMENT
+  FEDERAL_CONTRACT
+  FEDERAL_GRANT
+  OTHER
+}
+
+enum TransactionDirection {
+  INFLOW
+  OUTFLOW
+}
+
+enum ElectionType {
+  PRIMARY
+  GENERAL
+  RUNOFF
+  SPECIAL
+  CONVENTION
+}
+
+enum OfficeLevel {
+  FEDERAL
+  STATE
+  LOCAL
+}
+
+enum Office {
+  PRESIDENT
+  SENATE
+  HOUSE
+  GOVERNOR
+  STATE_SENATE
+  STATE_HOUSE
+  MAYOR
+  OTHER
+}
+
+enum Party {
+  DEMOCRAT
+  REPUBLICAN
+  INDEPENDENT
+  LIBERTARIAN
+  GREEN
+  OTHER
+}
+
+enum CommitteeType {
+  AUTHORIZED
+  JOINT_FUNDRAISING
+  LEADERSHIP
+  NATIONAL_PARTY
+  STATE_PARTY
+  SUPER_PAC
+  HYBRID_PAC
+  CAREY_COMMITTEE
+  OTHER
+}
+
+enum VotePosition {
+  YEA
+  NAY
+  PRESENT
+  NOT_VOTING
+}
+
+enum EntityMatchConfidence {
+  EXACT
+  HIGH
+  MEDIUM
+  LOW
+  MANUAL
+}
+
+enum SyncStatus {
+  PENDING
+  RUNNING
+  COMPLETED
+  FAILED
+  CANCELLED
+}
+
+// ═══════════════════════════════════════════════════════════════
+// CORE MODELS
+// ═══════════════════════════════════════════════════════════════
+
+/// Unified entity model — politicians, corporations, PACs, agencies, etc.
+model Entity {
+  id            String     @id @default(cuid())
+  type          EntityType
+  canonicalName String
+  shortName     String?
+  description   String?
+  photoUrl      String?
+  websiteUrl    String?
+
+  // ── Politician fields ──
+  party       Party?
+  state       String?
+  district    String?
+  office      Office?
+  officeLevel OfficeLevel?
+  inOffice    Boolean?
+
+  // ── Corporation fields ──
+  ticker    String?
+  industry  String?
+  naicsCode String?
+  sicCode   String?
+
+  // ── Committee fields ──
+  committeeType CommitteeType?
+
+  // ── Aggregate financials (Decimal 15,2) ──
+  totalReceived    Decimal @default(0) @db.Decimal(15, 2)
+  totalSpent       Decimal @default(0) @db.Decimal(15, 2)
+  totalContributed Decimal @default(0) @db.Decimal(15, 2)
+  totalLobbying    Decimal @default(0) @db.Decimal(15, 2)
+  totalContracts   Decimal @default(0) @db.Decimal(15, 2)
+
+  // ── Verification / dedup ──
+  isVerified   Boolean  @default(false)
+  mergedIntoId String?
+  mergedInto   Entity?  @relation("EntityMerge", fields: [mergedIntoId], references: [id])
+  mergedFrom   Entity[] @relation("EntityMerge")
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // ── Relations ──
+  aliases       EntityAlias[]
+  sourceRecords EntitySourceRecord[]
+
+  relationshipsFrom EntityRelationship[] @relation("RelationshipFrom")
+  relationshipsTo   EntityRelationship[] @relation("RelationshipTo")
+
+  transactionsAsSource MoneyTransaction[] @relation("TransactionSource")
+  transactionsAsTarget MoneyTransaction[] @relation("TransactionTarget")
+
+  aggregateFlowsAsSource AggregateMoneyFlow[] @relation("AggFlowSource")
+  aggregateFlowsAsTarget AggregateMoneyFlow[] @relation("AggFlowTarget")
+
+  fecCandidate FecCandidate?
+  fecCommittee FecCommittee?
+
+  lobbyingFilingsAsRegistrant LobbyingFiling[] @relation("LobbyingRegistrant")
+  lobbyingFilingsAsClient     LobbyingFiling[] @relation("LobbyingClient")
+
+  federalAwardsAsRecipient FederalAward[] @relation("AwardRecipient")
+  federalAwardsAsAgency    FederalAward[] @relation("AwardAgency")
+
+  sponsoredLegislation Legislation[]
+  legislativeVotes     LegislativeVote[]
+
+  @@index([type])
+  @@index([state])
+  @@index([party])
+  @@index([canonicalName])
+  @@index([ticker])
+  @@map("entities")
+}
+
+/// Maps variant names / aliases to a canonical Entity.
+model EntityAlias {
+  id         String                @id @default(cuid())
+  entityId   String
+  entity     Entity                @relation(fields: [entityId], references: [id], onDelete: Cascade)
+  alias      String
+  aliasNorm  String
+  source     DataSource
+  confidence EntityMatchConfidence
+
+  createdAt DateTime @default(now())
+
+  @@unique([alias, source])
+  @@index([aliasNorm])
+  @@index([entityId])
+  @@map("entity_aliases")
+}
+
+/// Links an Entity to source-system IDs (FEC candidate_id, committee_id, UEI, CIK, etc.).
+model EntitySourceRecord {
+  id           String     @id @default(cuid())
+  entityId     String
+  entity       Entity     @relation(fields: [entityId], references: [id], onDelete: Cascade)
+  source       DataSource
+  sourceId     String
+  sourceIdType String
+  sourceData   Json?
+  lastSynced   DateTime?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([source, sourceId, sourceIdType])
+  @@index([entityId])
+  @@index([sourceId])
+  @@map("entity_source_records")
+}
+
+/// Relationships between entities — board seats, employment, subsidiaries, PAC affiliations, etc.
+model EntityRelationship {
+  id               String     @id @default(cuid())
+  fromEntityId     String
+  fromEntity       Entity     @relation("RelationshipFrom", fields: [fromEntityId], references: [id], onDelete: Cascade)
+  toEntityId       String
+  toEntity         Entity     @relation("RelationshipTo", fields: [toEntityId], references: [id], onDelete: Cascade)
+  relationshipType String
+  title            String?
+  startDate        DateTime?
+  endDate          DateTime?
+  isActive         Boolean    @default(true)
+  source           DataSource
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([fromEntityId])
+  @@index([toEntityId])
+  @@index([relationshipType])
+  @@map("entity_relationships")
+}
+
+// ═══════════════════════════════════════════════════════════════
+// MONEY FLOW
+// ═══════════════════════════════════════════════════════════════
+
+/// Every tracked money flow — contributions, expenditures, contracts, lobbying payments.
+model MoneyTransaction {
+  id              String               @id @default(cuid())
+  sourceEntityId  String?
+  sourceEntity    Entity?              @relation("TransactionSource", fields: [sourceEntityId], references: [id])
+  targetEntityId  String?
+  targetEntity    Entity?              @relation("TransactionTarget", fields: [targetEntityId], references: [id])
+  transactionType TransactionType
+  direction       TransactionDirection
+  amount          Decimal              @db.Decimal(15, 2)
+  transactionDate DateTime
+
+  // ── Election context ──
+  electionYear Int?
+  electionType ElectionType?
+
+  // ── Source references ──
+  dataSource          DataSource
+  sourceTransactionId String?
+  filingId            String?
+
+  // ── Denormalized for fast display ──
+  sourceName  String?
+  targetName  String?
+  sourceState String?
+  targetState String?
+
+  // ── FEC-specific ──
+  fecReportType         String?
+  contributorEmployer   String?
+  contributorOccupation String?
+
+  // ── Schedule E (independent expenditures) ──
+  supportOppose String?
+  candidateId   String?
+
+  // ── State / jurisdiction ──
+  stateCode         String?
+  jurisdictionLevel OfficeLevel?
+
+  createdAt DateTime @default(now())
+
+  @@index([sourceEntityId])
+  @@index([targetEntityId])
+  @@index([transactionType])
+  @@index([transactionDate])
+  @@index([dataSource])
+  @@index([electionYear])
+  @@index([sourceTransactionId])
+  @@index([stateCode])
+  @@map("money_transactions")
+}
+
+/// Pre-computed aggregate money flows for Sankey diagrams and overview visualizations.
+model AggregateMoneyFlow {
+  id               String          @id @default(cuid())
+  sourceEntityId   String
+  sourceEntity     Entity          @relation("AggFlowSource", fields: [sourceEntityId], references: [id])
+  targetEntityId   String
+  targetEntity     Entity          @relation("AggFlowTarget", fields: [targetEntityId], references: [id])
+  transactionType  TransactionType
+  electionCycle    Int
+  totalAmount      Decimal         @db.Decimal(15, 2)
+  transactionCount Int             @default(0)
+  avgAmount        Decimal         @db.Decimal(15, 2)
+  minAmount        Decimal         @db.Decimal(15, 2)
+  maxAmount        Decimal         @db.Decimal(15, 2)
+  firstTransaction DateTime
+  lastTransaction  DateTime
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([sourceEntityId, targetEntityId, transactionType, electionCycle])
+  @@index([sourceEntityId])
+  @@index([targetEntityId])
+  @@index([electionCycle])
+  @@map("aggregate_money_flows")
+}
+
+// ═══════════════════════════════════════════════════════════════
+// FEC RAW DATA
+// ═══════════════════════════════════════════════════════════════
+
+/// Raw FEC candidate records.
+model FecCandidate {
+  candidateId        String  @unique
+  name               String
+  party              String?
+  office             String?
+  state              String?
+  district           String?
+  incumbentChallenge String?
+  electionYears      Int[]
+  totalReceipts      Decimal @default(0) @db.Decimal(15, 2)
+  totalDisbursements Decimal @default(0) @db.Decimal(15, 2)
+  cashOnHand         Decimal @default(0) @db.Decimal(15, 2)
+
+  entityId String? @unique
+  entity   Entity? @relation(fields: [entityId], references: [id])
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([state])
+  @@index([party])
+  @@map("fec_candidates")
+}
+
+/// Raw FEC committee records.
+model FecCommittee {
+  committeeId        String   @unique
+  name               String
+  designation        String?
+  committeeType      String?
+  organizationType   String?
+  party              String?
+  state              String?
+  treasurerName      String?
+  candidateIds       String[]
+  totalReceipts      Decimal  @default(0) @db.Decimal(15, 2)
+  totalDisbursements Decimal  @default(0) @db.Decimal(15, 2)
+
+  entityId String? @unique
+  entity   Entity? @relation(fields: [entityId], references: [id])
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([state])
+  @@index([party])
+  @@map("fec_committees")
+}
+
+// ═══════════════════════════════════════════════════════════════
+// LOBBYING
+// ═══════════════════════════════════════════════════════════════
+
+/// Senate Lobbying Disclosure Act (LDA) filings.
+model LobbyingFiling {
+  id                 String   @id @default(cuid())
+  filingId           String   @unique
+  filingType         String
+  registrantEntityId String
+  registrantEntity   Entity   @relation("LobbyingRegistrant", fields: [registrantEntityId], references: [id])
+  clientEntityId     String
+  clientEntity       Entity   @relation("LobbyingClient", fields: [clientEntityId], references: [id])
+  amount             Decimal? @db.Decimal(15, 2)
+  filingDate         DateTime
+  filingYear         Int
+  filingPeriod       String?
+  lobbyists          Json?
+  issues             Json?
+  specificIssues     String?
+
+  createdAt DateTime @default(now())
+
+  @@index([registrantEntityId])
+  @@index([clientEntityId])
+  @@index([filingYear])
+  @@index([filingDate])
+  @@map("lobbying_filings")
+}
+
+// ═══════════════════════════════════════════════════════════════
+// FEDERAL AWARDS (USASpending)
+// ═══════════════════════════════════════════════════════════════
+
+/// USASpending contracts and grants.
+model FederalAward {
+  id                      String    @id @default(cuid())
+  awardId                 String    @unique
+  awardType               String
+  recipientEntityId       String
+  recipientEntity         Entity    @relation("AwardRecipient", fields: [recipientEntityId], references: [id])
+  agencyEntityId          String
+  agencyEntity            Entity    @relation("AwardAgency", fields: [agencyEntityId], references: [id])
+  amount                  Decimal   @db.Decimal(15, 2)
+  description             String?
+  dateAwarded             DateTime
+  dateCompleted           DateTime?
+  naicsCode               String?
+  naicsDescription        String?
+  pscCode                 String?
+  status                  String?
+  placeOfPerformanceState String?
+
+  createdAt DateTime @default(now())
+
+  @@index([recipientEntityId])
+  @@index([agencyEntityId])
+  @@index([dateAwarded])
+  @@index([awardType])
+  @@index([naicsCode])
+  @@map("federal_awards")
+}
+
+// ═══════════════════════════════════════════════════════════════
+// LEGISLATION
+// ═══════════════════════════════════════════════════════════════
+
+/// Congress.gov bill records.
+model Legislation {
+  id              String    @id @default(cuid())
+  billId          String    @unique
+  billType        String
+  billNumber      String
+  congress        Int
+  title           String
+  summary         String?
+  introducedDate  DateTime
+  lastActionDate  DateTime?
+  status          String?
+  sponsorEntityId String?
+  sponsorEntity   Entity?   @relation(fields: [sponsorEntityId], references: [id])
+  policyArea      String?
+  subjects        String[]
+
+  votes LegislativeVote[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([congress])
+  @@index([sponsorEntityId])
+  @@index([policyArea])
+  @@index([status])
+  @@map("legislation")
+}
+
+/// Individual legislator votes on bills.
+model LegislativeVote {
+  id            String       @id @default(cuid())
+  voteId        String       @unique
+  entityId      String
+  entity        Entity       @relation(fields: [entityId], references: [id])
+  legislationId String
+  legislation   Legislation  @relation(fields: [legislationId], references: [id])
+  chamber       String
+  voteDate      DateTime
+  position      VotePosition
+  congress      Int
+  session       Int
+  rollNumber    Int
+
+  createdAt DateTime @default(now())
+
+  @@index([entityId])
+  @@index([legislationId])
+  @@index([voteDate])
+  @@index([congress, session])
+  @@map("legislative_votes")
+}
+
+// ═══════════════════════════════════════════════════════════════
+// SYNC / OPERATIONS
+// ═══════════════════════════════════════════════════════════════
+
+/// Tracks data sync / ingestion jobs.
+model SyncLog {
+  id               String     @id @default(cuid())
+  source           DataSource
+  syncType         String
+  status           SyncStatus @default(PENDING)
+  startedAt        DateTime   @default(now())
+  completedAt      DateTime?
+  recordsProcessed Int        @default(0)
+  recordsCreated   Int        @default(0)
+  recordsUpdated   Int        @default(0)
+  errorMessage     String?
+  metadata         Json?
+
+  @@index([source])
+  @@index([status])
+  @@index([startedAt])
+  @@map("sync_logs")
+}

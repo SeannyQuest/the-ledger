@@ -1,0 +1,180 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* Primary — "ink" and "paper" */
+  --color-ink: #0a0a0a;
+  --color-paper: #f7f5f0;
+  --color-paper-dark: #eae6dd;
+
+  /* Accent — the editorial "red pen" */
+  --color-accent: #c41d1d;
+  --color-accent-dark: #9a1515;
+  --color-accent-light: #e85454;
+
+  /* Money flow — directional */
+  --color-money-in: #1a7a3a;
+  --color-money-out: #c41d1d;
+  --color-money-neutral: #4a6fa5;
+
+  /* Entity type colors */
+  --color-entity-politician: #2563eb;
+  --color-entity-corporation: #0a0a0a;
+  --color-entity-pac: #9333ea;
+  --color-entity-lobbyist: #d97706;
+  --color-entity-agency: #059669;
+
+  /* Surfaces */
+  --color-surface: #ffffff;
+  --color-surface-elevated: #ffffff;
+  --color-border: #d4d0c8;
+  --color-border-light: #eae6dd;
+  --color-muted: #8a8478;
+
+  /* Typography */
+  --font-headline: var(--font-playfair-display), Georgia, serif;
+  --font-body: var(--font-inter), system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), "Fira Code", monospace;
+}
+
+/* Base styles */
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Editorial horizontal rules */
+hr {
+  border: none;
+  border-top: 4px solid var(--color-ink);
+  margin: 3rem 0;
+}
+
+hr.thin {
+  border-top-width: 1px;
+  border-color: var(--color-border);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-paper-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-muted);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-ink);
+}
+
+/* Selection highlight */
+::selection {
+  background: var(--color-accent);
+  color: white;
+}
+
+/* Tabular numbers for money amounts */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* D3 visualization containers */
+.viz-container svg {
+  overflow: visible;
+}
+
+.viz-container .node:hover {
+  cursor: pointer;
+  filter: brightness(1.1);
+}
+
+.viz-container .link:hover {
+  cursor: pointer;
+  stroke-opacity: 0.6;
+}
+
+/* Sankey specific */
+.sankey-node rect {
+  transition: opacity 0.2s ease;
+}
+
+.sankey-node:hover rect {
+  opacity: 0.85;
+}
+
+.sankey-link path {
+  transition: stroke-opacity 0.2s ease;
+}
+
+.sankey-link:hover path {
+  stroke-opacity: 0.5;
+}
+
+/* Force graph specific */
+.force-graph .node circle {
+  transition: r 0.3s ease, stroke-width 0.2s ease;
+}
+
+.force-graph .node:hover circle {
+  stroke-width: 3px;
+}
+
+.force-graph .link line {
+  transition: stroke-opacity 0.2s ease;
+}
+
+/* Tooltip base */
+.chart-tooltip {
+  position: absolute;
+  pointer-events: none;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 13px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 50;
+  max-width: 300px;
+}
+
+/* Drop cap for editorial text */
+.drop-cap::first-letter {
+  float: left;
+  font-family: var(--font-headline);
+  font-size: 4.5em;
+  line-height: 0.8;
+  padding-right: 0.1em;
+  font-weight: 900;
+  color: var(--color-ink);
+}
+
+/* Animate entrance */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Stat counter animation */
+@keyframes countUp {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
