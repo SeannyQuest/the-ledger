@@ -4,7 +4,7 @@ import { fetchEntityAbout } from "@/lib/wikipedia";
 
 export async function GET(
   _request: NextRequest,
-  { params }: { params: Promise<{ id: string }> },
+  { params }: { params: Promise<{ type: string; id: string }> },
 ) {
   const { id } = await params;
 

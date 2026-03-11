@@ -166,7 +166,7 @@ function useAbout(entity: EntityMeta) {
     if (entity.description) return;
     let cancelled = false;
 
-    fetch(`/api/entity/${entity.id}/about`)
+    fetch(`/api/entity/${entity.type.toLowerCase()}/${entity.id}/about`)
       .then((r) => r.json())
       .then((data) => {
         if (!cancelled) {
