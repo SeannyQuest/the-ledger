@@ -1,5 +1,15 @@
 import Link from "next/link";
-import { ArrowRight, Shield, Pill, Cpu, EyeOff, Mail } from "lucide-react";
+import {
+  ArrowRight,
+  Shield,
+  Pill,
+  Cpu,
+  EyeOff,
+  Mail,
+  TrendingUp,
+  RefreshCw,
+  DollarSign,
+} from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -23,44 +33,68 @@ const STORIES: StoryCard[] = [
     slug: "defense-contractors",
     title: "The Defense Contractor Pipeline",
     description:
-      "How the top five defense contractors spent $67M on lobbying and PAC donations — then received $178B in government contracts. For every $1 spent, $850 came back.",
+      "How the top five defense contractors spent $67M on lobbying and PAC donations \u2014 then received $178B in government contracts. For every $1 spent, $850 came back.",
     tag: "Defense",
     icon: Shield,
     stat: "$178B in contracts",
     live: true,
   },
   {
-    slug: "big-pharma",
-    title: "Big Pharma\u2019s Revolving Door",
+    slug: "congress-trades",
+    title: "Congress Trades on Insider Info",
     description:
-      "Former FDA regulators now lobby for the companies they once oversaw. We trace the career paths, the payments, and the policy changes that followed.",
-    tag: "Healthcare",
-    icon: Pill,
-    live: false,
+      "95% of Congress owns stocks. Their leaders outperform the market by up to 47%. The STOCK Act penalty? $200. Zero members have ever been charged.",
+    tag: "Stock Trading",
+    icon: TrendingUp,
+    stat: "47% outperformance",
+    live: true,
   },
   {
-    slug: "tech-lobby",
-    title: "The Tech Lobby Surge",
+    slug: "dark-money-shadows",
+    title: "$4.3 Billion in the Shadows",
     description:
-      "Silicon Valley\u2019s lobbying spending tripled since 2016. From antitrust battles to AI regulation, the industry is buying a seat at every table.",
-    tag: "Technology",
-    icon: Cpu,
-    live: false,
-  },
-  {
-    slug: "dark-money",
-    title: "Dark Money in State Politics",
-    description:
-      "Untraceable donations flooding state-level races in battleground states. How 501(c)(4) organizations became the preferred vehicle for anonymous political spending.",
+      "$4.3 billion in dark money has flowed through 501(c)(4) nonprofits since Citizens United. In 2024 alone, shell companies funneled $1.3B to Super PACs.",
     tag: "Dark Money",
     icon: EyeOff,
-    live: false,
+    stat: "$4.3B dark money",
+    live: true,
+  },
+  {
+    slug: "pharma-bet",
+    title: "Pharma\u2019s $452 Million Bet",
+    description:
+      "The pharmaceutical industry is the #1 lobbying sector at $452M/year. They blocked Medicare price negotiation for two decades. Americans pay 2\u20133x more for drugs.",
+    tag: "Pharmaceuticals",
+    icon: Pill,
+    stat: "$452M/year lobbying",
+    live: true,
+  },
+  {
+    slug: "revolving-door-story",
+    title: "The Revolving Door",
+    description:
+      "65% of departing members of Congress become lobbyists. The cooling-off period is routinely bypassed through \u201cstrategic consulting.\u201d The line between government and industry has vanished.",
+    tag: "Revolving Door",
+    icon: RefreshCw,
+    stat: "65% of Congress",
+    live: true,
+  },
+  {
+    slug: "defense-dollar",
+    title: "The Defense Dollar",
+    description:
+      "Trace $1 of lobbying spend through the iron triangle. Top 5 defense contractors spent $1.1B on lobbying and received $2.02 trillion in contracts \u2014 an 1,800:1 return.",
+    tag: "Defense ROI",
+    icon: DollarSign,
+    stat: "1,800:1 ROI",
+    live: true,
   },
 ];
 
 export default function StoriesPage() {
   const featured = STORIES[0];
-  const upcoming = STORIES.slice(1);
+  const liveStories = STORIES.filter((s) => s.live && s.slug !== featured.slug);
+  const upcoming = STORIES.filter((s) => !s.live);
   const FeaturedIcon = featured.icon;
 
   return (
@@ -75,8 +109,9 @@ export default function StoriesPage() {
             Stories
           </h1>
           <p className="mt-4 max-w-xl text-lg text-muted">
-            Curated investigations that trace the money and expose the connections
-            between political donations, lobbying, and government contracts.
+            Curated investigations that trace the money and expose the
+            connections between political donations, lobbying, and government
+            contracts.
           </p>
         </div>
       </section>
@@ -140,33 +175,30 @@ export default function StoriesPage() {
         </div>
       </section>
 
-      {/* Upcoming stories grid */}
+      {/* Published investigations grid */}
       <section className="bg-paper">
         <div className="mx-auto max-w-7xl px-4 py-16 lg:px-8">
           <div className="font-mono text-xs font-bold uppercase tracking-widest text-muted">
-            Coming Soon
+            Published
           </div>
           <h2 className="mt-4 font-headline text-3xl font-black tracking-tight text-ink lg:text-4xl">
-            Investigations in Progress
+            All Investigations
           </h2>
           <p className="mt-3 max-w-lg text-base text-muted">
-            These stories are being researched and written. Sign up below to be notified when they publish.
+            Deep-dive investigations tracing money, influence, and corruption in
+            American politics.
           </p>
 
           <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {upcoming.map((story) => {
+            {liveStories.map((story) => {
               const Icon = story.icon;
               return (
-                <div
+                <Link
                   key={story.slug}
-                  className="group relative rounded-xl border border-border bg-surface p-8 transition-all"
+                  href={`/stories/${story.slug}`}
+                  className="group relative rounded-xl border border-border bg-surface p-8 transition-all hover:-translate-y-1 hover:border-ink/30 hover:shadow-lg"
                 >
-                  {/* Coming soon badge */}
-                  <div className="absolute right-4 top-4 rounded-full border border-border bg-paper px-3 py-1 font-mono text-[10px] font-bold uppercase tracking-widest text-muted">
-                    Coming Soon
-                  </div>
-
-                  <div className="inline-flex rounded-lg bg-paper p-3 text-muted">
+                  <div className="inline-flex rounded-lg bg-paper p-3 text-ink">
                     <Icon className="h-6 w-6" />
                   </div>
                   <div className="mt-4 font-mono text-xs font-bold uppercase tracking-widest text-accent">
@@ -178,12 +210,62 @@ export default function StoriesPage() {
                   <p className="mt-3 text-sm leading-relaxed text-muted">
                     {story.description}
                   </p>
-                </div>
+                  {story.stat && (
+                    <div className="mt-4 font-mono text-sm font-bold text-accent">
+                      {story.stat}
+                    </div>
+                  )}
+                  <div className="mt-4 flex items-center gap-1 text-xs font-bold uppercase tracking-wider text-ink opacity-0 transition-opacity group-hover:opacity-100">
+                    Read Investigation <ArrowRight className="h-3 w-3" />
+                  </div>
+                </Link>
               );
             })}
           </div>
         </div>
       </section>
+
+      {/* Upcoming stories */}
+      {upcoming.length > 0 && (
+        <section className="border-t border-border bg-surface">
+          <div className="mx-auto max-w-7xl px-4 py-16 lg:px-8">
+            <div className="font-mono text-xs font-bold uppercase tracking-widest text-muted">
+              Coming Soon
+            </div>
+            <h2 className="mt-4 font-headline text-3xl font-black tracking-tight text-ink lg:text-4xl">
+              Investigations in Progress
+            </h2>
+
+            <div className="mt-10 grid gap-6 md:grid-cols-3">
+              {upcoming.map((story) => {
+                const Icon = story.icon;
+                return (
+                  <div
+                    key={story.slug}
+                    className="group relative rounded-xl border border-border bg-paper p-8"
+                  >
+                    <div className="absolute right-4 top-4 rounded-full border border-border bg-surface px-3 py-1 font-mono text-[10px] font-bold uppercase tracking-widest text-muted">
+                      Coming Soon
+                    </div>
+                    <div className="inline-flex rounded-lg bg-surface p-3 text-muted">
+                      <Icon className="h-6 w-6" />
+                    </div>
+                    <div className="mt-4 font-mono text-xs font-bold uppercase tracking-widest text-accent">
+                      {story.tag}
+                    </div>
+                    <h3 className="mt-2 font-headline text-xl font-bold text-ink">
+                      {story.title}
+                    </h3>
+                    <p className="mt-3 text-sm leading-relaxed text-muted">
+                      {story.description}
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Newsletter CTA */}
       <section className="border-t-4 border-ink bg-ink text-white">
@@ -193,8 +275,8 @@ export default function StoriesPage() {
             Stay Informed
           </h2>
           <p className="mx-auto mt-4 max-w-lg text-lg text-white/60">
-            Get notified when new investigations are published. No spam.
-            Just follow the money.
+            Get notified when new investigations are published. No spam. Just
+            follow the money.
           </p>
           <div className="mx-auto mt-8 flex max-w-md flex-col gap-3 sm:flex-row">
             <input

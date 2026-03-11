@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Loader2, Scale, Filter } from "lucide-react";
+import { Loader2, Scale, Filter, ArrowRight } from "lucide-react";
 import { VoteBreakdown } from "@/components/legislation/VoteBreakdown";
 import { PARTY_COLORS } from "@/lib/constants";
 import { cn } from "@/lib/utils";
@@ -85,8 +85,8 @@ export default function LegislationPage() {
             Legislation
           </h1>
           <p className="mt-4 max-w-xl text-lg text-muted">
-            Bills introduced in Congress with roll-call vote breakdowns.
-            See how your representatives voted and who sponsored what.
+            Bills introduced in Congress with roll-call vote breakdowns. See how
+            your representatives voted and who sponsored what.
           </p>
         </div>
 
@@ -178,9 +178,7 @@ export default function LegislationPage() {
           <div className="flex h-96 items-center justify-center">
             <div className="flex items-center gap-3 text-muted">
               <Loader2 className="h-5 w-5 animate-spin" />
-              <span className="font-mono text-sm">
-                Loading legislation...
-              </span>
+              <span className="font-mono text-sm">Loading legislation...</span>
             </div>
           </div>
         )}
@@ -211,9 +209,9 @@ export default function LegislationPage() {
       {/* Methodology */}
       <div className="mt-12 rounded-lg border border-border bg-surface/50 px-4 py-3">
         <p className="font-mono text-xs text-muted">
-          Data sourced from Congress.gov API. Vote breakdowns show Yea/Nay/Present/Not
-          Voting counts from official roll-call records. Bills are listed by
-          introduction date.
+          Data sourced from Congress.gov API. Vote breakdowns show
+          Yea/Nay/Present/Not Voting counts from official roll-call records.
+          Bills are listed by introduction date.
         </p>
       </div>
     </div>
@@ -244,9 +242,14 @@ function BillCard({ bill }: { bill: Bill }) {
             )}
           </div>
 
-          <h3 className="mt-2 text-sm font-medium leading-snug text-ink line-clamp-2">
-            {bill.title}
-          </h3>
+          <Link
+            href={`/legislation/${encodeURIComponent(bill.billId)}`}
+            className="group"
+          >
+            <h3 className="mt-2 text-sm font-medium leading-snug text-ink line-clamp-2 group-hover:text-accent">
+              {bill.title}
+            </h3>
+          </Link>
 
           {bill.summary && (
             <p className="mt-2 text-xs leading-relaxed text-muted line-clamp-2">
@@ -264,8 +267,8 @@ function BillCard({ bill }: { bill: Bill }) {
                   className="h-2 w-2 rounded-full"
                   style={{
                     backgroundColor: bill.sponsor.party
-                      ? PARTY_COLORS[bill.sponsor.party.toLowerCase()] ??
-                        "#6b7280"
+                      ? (PARTY_COLORS[bill.sponsor.party.toLowerCase()] ??
+                        "#6b7280")
                       : "#6b7280",
                   }}
                 />
@@ -283,6 +286,13 @@ function BillCard({ bill }: { bill: Bill }) {
                 {bill.status}
               </span>
             )}
+            <Link
+              href={`/legislation/${encodeURIComponent(bill.billId)}`}
+              className="flex items-center gap-1 font-mono text-[10px] font-bold text-accent hover:text-ink"
+            >
+              Who bought this?
+              <ArrowRight className="h-3 w-3" />
+            </Link>
           </div>
         </div>
 

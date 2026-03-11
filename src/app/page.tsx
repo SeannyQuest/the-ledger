@@ -1,5 +1,15 @@
 import Link from "next/link";
-import { ArrowRight, BarChart3, Building2, Network, Search } from "lucide-react";
+import {
+  ArrowRight,
+  BarChart3,
+  Building2,
+  Network,
+  Search,
+  Calculator,
+  Factory,
+  EyeOff,
+  BookOpen,
+} from "lucide-react";
 import { StatCard } from "@/components/shared/StatCard";
 import { prisma } from "@/lib/prisma";
 import { formatCompactMoney, formatCompactNumber } from "@/lib/utils";
@@ -7,32 +17,37 @@ import { formatCompactMoney, formatCompactNumber } from "@/lib/utils";
 export const revalidate = 3600; // Revalidate stats every hour
 
 async function getStats() {
-  const [entityCount, flowCount, totalContracts, totalLobbying, totalContributions] =
-    await Promise.all([
-      prisma.entity.count({ where: { mergedIntoId: null } }),
-      prisma.aggregateMoneyFlow.count(),
-      prisma.aggregateMoneyFlow.aggregate({
-        where: { transactionType: "FEDERAL_CONTRACT" },
-        _sum: { totalAmount: true },
-      }),
-      prisma.aggregateMoneyFlow.aggregate({
-        where: { transactionType: "LOBBYING_PAYMENT" },
-        _sum: { totalAmount: true },
-      }),
-      prisma.aggregateMoneyFlow.aggregate({
-        where: {
-          transactionType: {
-            in: [
-              "CORPORATE_CONTRIBUTION",
-              "PAC_CONTRIBUTION",
-              "INDIVIDUAL_CONTRIBUTION",
-              "PARTY_CONTRIBUTION",
-            ],
-          },
+  const [
+    entityCount,
+    flowCount,
+    totalContracts,
+    totalLobbying,
+    totalContributions,
+  ] = await Promise.all([
+    prisma.entity.count({ where: { mergedIntoId: null } }),
+    prisma.aggregateMoneyFlow.count(),
+    prisma.aggregateMoneyFlow.aggregate({
+      where: { transactionType: "FEDERAL_CONTRACT" },
+      _sum: { totalAmount: true },
+    }),
+    prisma.aggregateMoneyFlow.aggregate({
+      where: { transactionType: "LOBBYING_PAYMENT" },
+      _sum: { totalAmount: true },
+    }),
+    prisma.aggregateMoneyFlow.aggregate({
+      where: {
+        transactionType: {
+          in: [
+            "CORPORATE_CONTRIBUTION",
+            "PAC_CONTRIBUTION",
+            "INDIVIDUAL_CONTRIBUTION",
+            "PARTY_CONTRIBUTION",
+          ],
         },
-        _sum: { totalAmount: true },
-      }),
-    ]);
+      },
+      _sum: { totalAmount: true },
+    }),
+  ]);
 
   return {
     entityCount,
@@ -64,7 +79,8 @@ export default async function HomePage() {
           {/* Subhead */}
           <p className="mt-6 max-w-2xl text-xl leading-relaxed text-ink/70 lg:text-2xl">
             Corporations donate millions to PACs. PACs fund politicians.
-            Politicians award billions in contracts. <span className="font-semibold text-ink">See the full circle.</span>
+            Politicians award billions in contracts.{" "}
+            <span className="font-semibold text-ink">See the full circle.</span>
           </p>
 
           {/* CTA */}
@@ -88,13 +104,16 @@ export default async function HomePage() {
         </div>
 
         {/* Decorative grid lines */}
-        <div className="absolute inset-0 -z-10 opacity-[0.03]" style={{
-          backgroundImage: `
+        <div
+          className="absolute inset-0 -z-10 opacity-[0.03]"
+          style={{
+            backgroundImage: `
             linear-gradient(to right, #0a0a0a 1px, transparent 1px),
             linear-gradient(to bottom, #0a0a0a 1px, transparent 1px)
           `,
-          backgroundSize: "60px 60px",
-        }} />
+            backgroundSize: "60px 60px",
+          }}
+        />
       </section>
 
       {/* Topline Stats — now dynamic */}
@@ -148,18 +167,42 @@ export default async function HomePage() {
               color="accent"
             />
             <FeatureCard
-              icon={<Search className="h-6 w-6" />}
-              title="Entity Profiles"
-              description="Search any politician, corporation, or PAC. See their full financial profile — who funds them, who they fund, and what contracts they got."
-              href="/search"
-              color="money-neutral"
+              icon={<Calculator className="h-6 w-6" />}
+              title="ROI Calculator"
+              description="How much do corporations spend on politics, and how much do they get back? Search any entity to calculate their return on political investment."
+              href="/roi"
+              color="money-in"
             />
+            <FeatureCard
+              icon={<Factory className="h-6 w-6" />}
+              title="Industry Dashboard"
+              description="See how entire industries — defense, pharma, tech, oil & gas — leverage political spending. Compare lobbying vs contracts by sector."
+              href="/industry"
+              color="money-out"
+            />
+            <FeatureCard
+              icon={<EyeOff className="h-6 w-6" />}
+              title="Dark Money Tracer"
+              description="Trace anonymous political spending from 501(c)(4) nonprofits through Super PACs to attack ads. See the full chain of dark money."
+              href="/dark-money/trace"
+              color="entity-pac"
+            />
+          </div>
+
+          <div className="mt-8 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             <FeatureCard
               icon={<Building2 className="h-6 w-6" />}
               title="Contract Tracker"
               description="Which companies get the biggest federal contracts? Cross-reference with their political donations to see the ROI of lobbying."
               href="/contracts"
-              color="money-in"
+              color="money-neutral"
+            />
+            <FeatureCard
+              icon={<Search className="h-6 w-6" />}
+              title="Entity Profiles"
+              description="Search any politician, corporation, or PAC. See their full financial profile — who funds them, who they fund, and what contracts they got."
+              href="/search"
+              color="accent"
             />
             <FeatureCard
               icon={<Network className="h-6 w-6" />}
@@ -167,6 +210,13 @@ export default async function HomePage() {
               description="Interactive network graphs show corporate structures, board overlaps, PAC connections, and the revolving door between industry and government."
               href="/network"
               color="entity-pac"
+            />
+            <FeatureCard
+              icon={<BookOpen className="h-6 w-6" />}
+              title="Investigations"
+              description="Long-form investigations into the defense pipeline, pharma lobbying, congressional insider trading, dark money, and the revolving door."
+              href="/stories"
+              color="money-in"
             />
           </div>
         </div>
@@ -228,8 +278,8 @@ export default async function HomePage() {
               Every Dollar is a Public Record
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-lg text-muted">
-              All data comes from official government sources. Updated in real-time.
-              No paywalls. No editorializing. Just the numbers.
+              All data comes from official government sources. Updated in
+              real-time. No paywalls. No editorializing. Just the numbers.
             </p>
           </div>
 
@@ -300,7 +350,9 @@ function CorruptionStep({
         {step}
       </div>
       <h3 className="mt-4 font-headline text-2xl font-bold">{title}</h3>
-      <p className="mt-2 text-sm leading-relaxed text-white/60">{description}</p>
+      <p className="mt-2 text-sm leading-relaxed text-white/60">
+        {description}
+      </p>
       {step < 4 && (
         <div className="absolute -right-3 top-1/2 hidden -translate-y-1/2 text-white/30 md:block">
           <ArrowRight className="h-5 w-5" />

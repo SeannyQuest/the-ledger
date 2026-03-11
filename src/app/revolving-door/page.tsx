@@ -1,13 +1,19 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Loader2, ArrowRight, RefreshCw } from "lucide-react";
+import {
+  Loader2,
+  ArrowRight,
+  RefreshCw,
+  Clock,
+  Briefcase,
+} from "lucide-react";
 import { ENTITY_COLORS } from "@/lib/constants";
-import { cn } from "@/lib/utils";
+import { cn, formatNumber } from "@/lib/utils";
 import Link from "next/link";
 import type { EntityType } from "@/types";
 
-/* ── Types ──────────────────────────────────────── */
+/* -- Types ------------------------------------------------ */
 
 interface EntityRef {
   id: string;
@@ -41,8 +47,35 @@ interface RelationshipEntry {
   isActive: boolean;
 }
 
+interface TimelinePosition {
+  organization: {
+    id: string;
+    name: string;
+    type: string;
+    industry: string | null;
+  };
+  role: string | null;
+  relationshipType: string;
+  startDate: string | null;
+  endDate: string | null;
+  isActive: boolean;
+  sector: "government" | "private" | "other";
+}
+
+interface PersonTimeline {
+  person: EntityRef;
+  positions: TimelinePosition[];
+  totalMoves: number;
+}
+
+interface IndustryCount {
+  industry: string;
+  count: number;
+}
+
 interface RevolvingDoorData {
   transitions: PersonTransition[];
+  timelines: PersonTimeline[];
   allRelationships: RelationshipEntry[];
   stats: {
     totalTransitions: number;
@@ -50,12 +83,40 @@ interface RevolvingDoorData {
     govtToPrivate: number;
     privateToGovt: number;
     totalRelationships: number;
+    topIndustries: IndustryCount[];
+    avgGovtTenureYears: number;
   };
 }
 
-type ViewMode = "transitions" | "all";
+type ViewMode = "transitions" | "timeline" | "all";
 
-/* ── Page ───────────────────────────────────────── */
+/* -- Sector colors ---------------------------------------- */
+
+const SECTOR_STYLES: Record<
+  string,
+  { bg: string; border: string; dot: string; label: string }
+> = {
+  government: {
+    bg: "bg-blue-50",
+    border: "border-blue-300",
+    dot: "bg-blue-600",
+    label: "Government",
+  },
+  private: {
+    bg: "bg-gray-50",
+    border: "border-gray-400",
+    dot: "bg-ink",
+    label: "Private Sector",
+  },
+  other: {
+    bg: "bg-gray-50",
+    border: "border-gray-200",
+    dot: "bg-gray-400",
+    label: "Other",
+  },
+};
+
+/* -- Page ------------------------------------------------- */
 
 export default function RevolvingDoorPage() {
   const [data, setData] = useState<RevolvingDoorData | null>(null);
@@ -103,6 +164,18 @@ export default function RevolvingDoorPage() {
             Cross-Sector
           </button>
           <button
+            onClick={() => setView("timeline")}
+            className={cn(
+              "flex items-center gap-2 rounded-md px-3 py-1.5 font-mono text-xs font-medium transition-colors",
+              view === "timeline"
+                ? "bg-ink text-white"
+                : "text-muted hover:text-ink",
+            )}
+          >
+            <Clock className="h-3.5 w-3.5" />
+            Timelines
+          </button>
+          <button
             onClick={() => setView("all")}
             className={cn(
               "flex items-center gap-2 rounded-md px-3 py-1.5 font-mono text-xs font-medium transition-colors",
@@ -141,7 +214,7 @@ export default function RevolvingDoorPage() {
               <div className="h-8 w-px bg-border" />
               <div>
                 <div className="font-mono text-xs uppercase text-muted">
-                  Govt → Private
+                  Govt &rarr; Private
                 </div>
                 <div className="font-mono text-2xl font-bold text-money-out">
                   {data.stats.govtToPrivate}
@@ -154,10 +227,23 @@ export default function RevolvingDoorPage() {
               <div className="h-8 w-px bg-border" />
               <div>
                 <div className="font-mono text-xs uppercase text-muted">
-                  Private → Govt
+                  Private &rarr; Govt
                 </div>
                 <div className="font-mono text-2xl font-bold text-money-in">
                   {data.stats.privateToGovt}
+                </div>
+              </div>
+            </>
+          )}
+          {data.stats.avgGovtTenureYears > 0 && (
+            <>
+              <div className="h-8 w-px bg-border" />
+              <div>
+                <div className="font-mono text-xs uppercase text-muted">
+                  Avg Govt Tenure
+                </div>
+                <div className="font-mono text-2xl font-bold text-ink">
+                  {data.stats.avgGovtTenureYears}y
                 </div>
               </div>
             </>
@@ -184,6 +270,7 @@ export default function RevolvingDoorPage() {
           </div>
         )}
 
+        {/* ── Cross-Sector View ─────────────────── */}
         {!loading && data && view === "transitions" && (
           <div className="space-y-6">
             {data.transitions.length === 0 && (
@@ -249,6 +336,72 @@ export default function RevolvingDoorPage() {
           </div>
         )}
 
+        {/* ── Timeline View ─────────────────────── */}
+        {!loading && data && view === "timeline" && (
+          <div className="space-y-10">
+            {/* Top Industries sidebar */}
+            {data.stats.topIndustries && data.stats.topIndustries.length > 0 && (
+              <div className="rounded-lg border border-border bg-surface p-5">
+                <h3 className="font-headline text-lg font-bold text-ink">
+                  Top Destination Industries
+                </h3>
+                <p className="mt-1 text-xs text-muted">
+                  Where government officials go when they leave public service
+                </p>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {data.stats.topIndustries.map((ind) => (
+                    <div
+                      key={ind.industry}
+                      className="flex items-center gap-2 rounded-md border border-border bg-paper px-3 py-1.5"
+                    >
+                      <Briefcase className="h-3 w-3 text-muted" />
+                      <span className="text-xs font-medium text-ink">
+                        {ind.industry}
+                      </span>
+                      <span className="font-mono text-[10px] font-bold text-accent">
+                        {formatNumber(ind.count)}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Timeline legend */}
+            <div className="flex items-center gap-6">
+              <div className="flex items-center gap-2">
+                <div className="h-3 w-8 rounded-sm border border-blue-300 bg-blue-50" />
+                <span className="font-mono text-[10px] uppercase text-muted">
+                  Government
+                </span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="h-3 w-8 rounded-sm border border-gray-400 bg-gray-50" />
+                <span className="font-mono text-[10px] uppercase text-muted">
+                  Private Sector
+                </span>
+              </div>
+            </div>
+
+            {/* Person timelines */}
+            {data.timelines.length === 0 && (
+              <div className="flex h-64 items-center justify-center rounded-lg border border-dashed border-border">
+                <div className="text-center">
+                  <Clock className="mx-auto h-8 w-8 text-muted/30" />
+                  <p className="mt-3 font-mono text-sm text-muted">
+                    No career timelines available yet.
+                  </p>
+                </div>
+              </div>
+            )}
+
+            {data.timelines.map((timeline) => (
+              <CareerTimeline key={timeline.person.id} timeline={timeline} />
+            ))}
+          </div>
+        )}
+
+        {/* ── All Connections View ──────────────── */}
         {!loading && data && view === "all" && (
           <div className="space-y-2">
             {data.allRelationships.map((r) => (
@@ -301,14 +454,135 @@ export default function RevolvingDoorPage() {
           Revolving door data is derived from entity relationship records in The
           Ledger. Cross-sector transitions are identified when employment or board
           membership links connect government entities (politicians, agencies)
-          with private entities (corporations, lobbying firms).
+          with private entities (corporations, lobbying firms). Timelines show
+          the full career path of individuals who have moved between sectors.
         </p>
       </div>
     </div>
   );
 }
 
-/* ── Entity Badge ──────────────────────────────── */
+/* -- Career Timeline Component ---------------------------- */
+
+function CareerTimeline({ timeline }: { timeline: PersonTimeline }) {
+  return (
+    <div className="rounded-lg border border-border bg-surface p-5">
+      {/* Person header */}
+      <Link
+        href={`/entity/${timeline.person.type}/${timeline.person.id}`}
+        className="flex items-center gap-2 hover:text-accent"
+      >
+        <div
+          className="h-3 w-3 rounded-full"
+          style={{
+            backgroundColor:
+              ENTITY_COLORS[timeline.person.type as EntityType] ?? "#6b7280",
+          }}
+        />
+        <span className="font-headline text-lg font-bold text-ink">
+          {timeline.person.name}
+        </span>
+        <span className="font-mono text-[10px] text-muted">
+          {timeline.totalMoves} position{timeline.totalMoves !== 1 ? "s" : ""}
+        </span>
+      </Link>
+
+      {/* Horizontal timeline bar */}
+      <div className="mt-5 overflow-x-auto">
+        <div className="flex items-stretch gap-0 min-w-0">
+          {timeline.positions.map((pos, i) => {
+            const style = SECTOR_STYLES[pos.sector] ?? SECTOR_STYLES.other;
+            const isLast = i === timeline.positions.length - 1;
+
+            return (
+              <div key={i} className="flex items-stretch min-w-0">
+                {/* Position block */}
+                <div
+                  className={cn(
+                    "relative flex flex-col justify-center rounded-md border px-4 py-3 min-w-[180px] max-w-[280px]",
+                    style.bg,
+                    style.border,
+                  )}
+                >
+                  {/* Sector dot */}
+                  <div className="flex items-center gap-2">
+                    <div
+                      className={cn("h-2 w-2 shrink-0 rounded-full", style.dot)}
+                    />
+                    <span className="font-mono text-[10px] font-bold uppercase text-muted">
+                      {style.label}
+                    </span>
+                  </div>
+
+                  {/* Organization */}
+                  <Link
+                    href={`/entity/${pos.organization.type}/${pos.organization.id}`}
+                    className="mt-1.5 text-sm font-medium text-ink hover:text-accent"
+                  >
+                    {pos.organization.name}
+                  </Link>
+
+                  {/* Role */}
+                  {pos.role && (
+                    <span className="mt-0.5 text-xs text-muted">{pos.role}</span>
+                  )}
+
+                  {/* Industry */}
+                  {pos.organization.industry && (
+                    <span className="mt-0.5 font-mono text-[10px] text-muted/60">
+                      {pos.organization.industry}
+                    </span>
+                  )}
+
+                  {/* Dates */}
+                  <div className="mt-2 flex items-center gap-1">
+                    {pos.startDate && (
+                      <span className="font-mono text-[10px] text-muted/80">
+                        {pos.startDate}
+                      </span>
+                    )}
+                    {pos.startDate && (pos.endDate || pos.isActive) && (
+                      <span className="font-mono text-[10px] text-muted/40">
+                        &mdash;
+                      </span>
+                    )}
+                    {pos.isActive ? (
+                      <span className="rounded bg-money-in/10 px-1 font-mono text-[10px] font-bold text-money-in">
+                        Present
+                      </span>
+                    ) : (
+                      pos.endDate && (
+                        <span className="font-mono text-[10px] text-muted/80">
+                          {pos.endDate}
+                        </span>
+                      )
+                    )}
+                  </div>
+
+                  {/* Relationship type badge */}
+                  <span className="mt-1.5 self-start rounded bg-border/30 px-1.5 py-0.5 font-mono text-[9px] font-bold uppercase text-muted/60">
+                    {pos.relationshipType.replace(/_/g, " ")}
+                  </span>
+                </div>
+
+                {/* Arrow connector */}
+                {!isLast && (
+                  <div className="flex items-center px-1">
+                    <div className="h-px w-4 bg-border" />
+                    <ArrowRight className="h-3 w-3 shrink-0 text-muted/40" />
+                    <div className="h-px w-4 bg-border" />
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* -- Entity Badge ----------------------------------------- */
 
 function EntityBadge({ entity }: { entity: EntityRef }) {
   return (

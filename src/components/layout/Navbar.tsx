@@ -20,6 +20,8 @@ import {
   Globe,
   EyeOff,
   RefreshCw,
+  Calculator,
+  Factory,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useMode } from "@/context/ModeContext";
@@ -32,15 +34,18 @@ const NAV_ITEMS = {
     { label: "Trades", href: "/trades", icon: TrendingUp },
     { label: "Legislation", href: "/legislation", icon: Scale },
     { label: "Contracts", href: "/contracts", icon: Building2 },
+    { label: "ROI", href: "/roi", icon: Calculator },
+    { label: "Industries", href: "/industry", icon: Factory },
     { label: "Network", href: "/network", icon: Network },
     { label: "Stories", href: "/stories", icon: BookOpen },
-    { label: "Global", href: "/global-comparison", icon: Globe },
     { label: "Search", href: "/search", icon: Search },
   ],
   research: [
     { label: "Money Flow", href: "/money-flow", icon: BarChart3 },
     { label: "Trades", href: "/trades", icon: TrendingUp },
     { label: "Legislation", href: "/legislation", icon: Scale },
+    { label: "ROI", href: "/roi", icon: Calculator },
+    { label: "Industries", href: "/industry", icon: Factory },
     { label: "Power Map", href: "/power-map", icon: Waypoints },
     { label: "Regulations", href: "/regulations", icon: FileText },
     { label: "Foreign Influence", href: "/foreign-influence", icon: Globe },
