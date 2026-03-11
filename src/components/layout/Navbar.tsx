@@ -34,6 +34,7 @@ const NAV_ITEMS = {
     { label: "Contracts", href: "/contracts", icon: Building2 },
     { label: "Network", href: "/network", icon: Network },
     { label: "Stories", href: "/stories", icon: BookOpen },
+    { label: "Global", href: "/global-comparison", icon: Globe },
     { label: "Search", href: "/search", icon: Search },
   ],
   research: [
@@ -49,6 +50,7 @@ const NAV_ITEMS = {
     { label: "Contracts", href: "/contracts", icon: Building2 },
     { label: "Network", href: "/network", icon: Network },
     { label: "Compare", href: "/compare", icon: Columns2 },
+    { label: "Global", href: "/global-comparison", icon: Globe },
     { label: "Search", href: "/search", icon: Search },
   ],
 };
