@@ -79,6 +79,26 @@ export type LegislativeVote = $Result.DefaultSelection<Prisma.$LegislativeVotePa
  */
 export type CongressionalTrade = $Result.DefaultSelection<Prisma.$CongressionalTradePayload>
 /**
+ * Model FederalRegisterEntry
+ * Federal Register entries — rules, proposed rules, notices, presidential documents.
+ */
+export type FederalRegisterEntry = $Result.DefaultSelection<Prisma.$FederalRegisterEntryPayload>
+/**
+ * Model FaraRegistration
+ * FARA foreign agent registrations.
+ */
+export type FaraRegistration = $Result.DefaultSelection<Prisma.$FaraRegistrationPayload>
+/**
+ * Model FaraActivity
+ * FARA foreign agent activities — lobbying, PR, political activities.
+ */
+export type FaraActivity = $Result.DefaultSelection<Prisma.$FaraActivityPayload>
+/**
+ * Model NonprofitFiling
+ * IRS 990 filings from ProPublica Nonprofit Explorer — 501(c)(4) dark money tracking.
+ */
+export type NonprofitFiling = $Result.DefaultSelection<Prisma.$NonprofitFilingPayload>
+/**
  * Model SyncLog
  * Tracks data sync / ingestion jobs.
  */
@@ -115,6 +135,8 @@ export const DataSource: {
   OPENSECRETS: 'OPENSECRETS',
   PROPUBLICA: 'PROPUBLICA',
   HOUSE_STOCK_WATCHER: 'HOUSE_STOCK_WATCHER',
+  FEDERAL_REGISTER: 'FEDERAL_REGISTER',
+  FARA: 'FARA',
   STATE_FILING: 'STATE_FILING',
   MANUAL: 'MANUAL'
 };
@@ -540,6 +562,46 @@ export class PrismaClient<
     * ```
     */
   get congressionalTrade(): Prisma.CongressionalTradeDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.federalRegisterEntry`: Exposes CRUD operations for the **FederalRegisterEntry** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more FederalRegisterEntries
+    * const federalRegisterEntries = await prisma.federalRegisterEntry.findMany()
+    * ```
+    */
+  get federalRegisterEntry(): Prisma.FederalRegisterEntryDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.faraRegistration`: Exposes CRUD operations for the **FaraRegistration** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more FaraRegistrations
+    * const faraRegistrations = await prisma.faraRegistration.findMany()
+    * ```
+    */
+  get faraRegistration(): Prisma.FaraRegistrationDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.faraActivity`: Exposes CRUD operations for the **FaraActivity** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more FaraActivities
+    * const faraActivities = await prisma.faraActivity.findMany()
+    * ```
+    */
+  get faraActivity(): Prisma.FaraActivityDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.nonprofitFiling`: Exposes CRUD operations for the **NonprofitFiling** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more NonprofitFilings
+    * const nonprofitFilings = await prisma.nonprofitFiling.findMany()
+    * ```
+    */
+  get nonprofitFiling(): Prisma.NonprofitFilingDelegate<ExtArgs, ClientOptions>;
 
   /**
    * `prisma.syncLog`: Exposes CRUD operations for the **SyncLog** model.
@@ -1004,6 +1066,10 @@ export namespace Prisma {
     Legislation: 'Legislation',
     LegislativeVote: 'LegislativeVote',
     CongressionalTrade: 'CongressionalTrade',
+    FederalRegisterEntry: 'FederalRegisterEntry',
+    FaraRegistration: 'FaraRegistration',
+    FaraActivity: 'FaraActivity',
+    NonprofitFiling: 'NonprofitFiling',
     SyncLog: 'SyncLog'
   };
 
@@ -1023,7 +1089,7 @@ export namespace Prisma {
       omit: GlobalOmitOptions
     }
     meta: {
-      modelProps: "entity" | "entityAlias" | "entitySourceRecord" | "entityRelationship" | "moneyTransaction" | "aggregateMoneyFlow" | "fecCandidate" | "fecCommittee" | "lobbyingFiling" | "federalAward" | "legislation" | "legislativeVote" | "congressionalTrade" | "syncLog"
+      modelProps: "entity" | "entityAlias" | "entitySourceRecord" | "entityRelationship" | "moneyTransaction" | "aggregateMoneyFlow" | "fecCandidate" | "fecCommittee" | "lobbyingFiling" | "federalAward" | "legislation" | "legislativeVote" | "congressionalTrade" | "federalRegisterEntry" | "faraRegistration" | "faraActivity" | "nonprofitFiling" | "syncLog"
       txIsolationLevel: Prisma.TransactionIsolationLevel
     }
     model: {
@@ -1989,6 +2055,302 @@ export namespace Prisma {
           }
         }
       }
+      FederalRegisterEntry: {
+        payload: Prisma.$FederalRegisterEntryPayload<ExtArgs>
+        fields: Prisma.FederalRegisterEntryFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.FederalRegisterEntryFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$FederalRegisterEntryPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.FederalRegisterEntryFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$FederalRegisterEntryPayload>
+          }
+          findFirst: {
+            args: Prisma.FederalRegisterEntryFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$FederalRegisterEntryPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.FederalRegisterEntryFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$FederalRegisterEntryPayload>
+          }
+          findMany: {
+            args: Prisma.FederalRegisterEntryFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$FederalRegisterEntryPayload>[]
+          }
+          create: {
+            args: Prisma.FederalRegisterEntryCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$FederalRegisterEntryPayload>
+          }
+          createMany: {
+            args: Prisma.FederalRegisterEntryCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.FederalRegisterEntryCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$FederalRegisterEntryPayload>[]
+          }
+          delete: {
+            args: Prisma.FederalRegisterEntryDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$FederalRegisterEntryPayload>
+          }
+          update: {
+            args: Prisma.FederalRegisterEntryUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$FederalRegisterEntryPayload>
+          }
+          deleteMany: {
+            args: Prisma.FederalRegisterEntryDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.FederalRegisterEntryUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.FederalRegisterEntryUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$FederalRegisterEntryPayload>[]
+          }
+          upsert: {
+            args: Prisma.FederalRegisterEntryUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$FederalRegisterEntryPayload>
+          }
+          aggregate: {
+            args: Prisma.FederalRegisterEntryAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateFederalRegisterEntry>
+          }
+          groupBy: {
+            args: Prisma.FederalRegisterEntryGroupByArgs<ExtArgs>
+            result: $Utils.Optional<FederalRegisterEntryGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.FederalRegisterEntryCountArgs<ExtArgs>
+            result: $Utils.Optional<FederalRegisterEntryCountAggregateOutputType> | number
+          }
+        }
+      }
+      FaraRegistration: {
+        payload: Prisma.$FaraRegistrationPayload<ExtArgs>
+        fields: Prisma.FaraRegistrationFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.FaraRegistrationFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$FaraRegistrationPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.FaraRegistrationFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$FaraRegistrationPayload>
+          }
+          findFirst: {
+            args: Prisma.FaraRegistrationFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$FaraRegistrationPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.FaraRegistrationFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$FaraRegistrationPayload>
+          }
+          findMany: {
+            args: Prisma.FaraRegistrationFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$FaraRegistrationPayload>[]
+          }
+          create: {
+            args: Prisma.FaraRegistrationCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$FaraRegistrationPayload>
+          }
+          createMany: {
+            args: Prisma.FaraRegistrationCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.FaraRegistrationCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$FaraRegistrationPayload>[]
+          }
+          delete: {
+            args: Prisma.FaraRegistrationDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$FaraRegistrationPayload>
+          }
+          update: {
+            args: Prisma.FaraRegistrationUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$FaraRegistrationPayload>
+          }
+          deleteMany: {
+            args: Prisma.FaraRegistrationDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.FaraRegistrationUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.FaraRegistrationUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$FaraRegistrationPayload>[]
+          }
+          upsert: {
+            args: Prisma.FaraRegistrationUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$FaraRegistrationPayload>
+          }
+          aggregate: {
+            args: Prisma.FaraRegistrationAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateFaraRegistration>
+          }
+          groupBy: {
+            args: Prisma.FaraRegistrationGroupByArgs<ExtArgs>
+            result: $Utils.Optional<FaraRegistrationGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.FaraRegistrationCountArgs<ExtArgs>
+            result: $Utils.Optional<FaraRegistrationCountAggregateOutputType> | number
+          }
+        }
+      }
+      FaraActivity: {
+        payload: Prisma.$FaraActivityPayload<ExtArgs>
+        fields: Prisma.FaraActivityFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.FaraActivityFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$FaraActivityPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.FaraActivityFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$FaraActivityPayload>
+          }
+          findFirst: {
+            args: Prisma.FaraActivityFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$FaraActivityPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.FaraActivityFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$FaraActivityPayload>
+          }
+          findMany: {
+            args: Prisma.FaraActivityFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$FaraActivityPayload>[]
+          }
+          create: {
+            args: Prisma.FaraActivityCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$FaraActivityPayload>
+          }
+          createMany: {
+            args: Prisma.FaraActivityCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.FaraActivityCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$FaraActivityPayload>[]
+          }
+          delete: {
+            args: Prisma.FaraActivityDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$FaraActivityPayload>
+          }
+          update: {
+            args: Prisma.FaraActivityUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$FaraActivityPayload>
+          }
+          deleteMany: {
+            args: Prisma.FaraActivityDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.FaraActivityUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.FaraActivityUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$FaraActivityPayload>[]
+          }
+          upsert: {
+            args: Prisma.FaraActivityUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$FaraActivityPayload>
+          }
+          aggregate: {
+            args: Prisma.FaraActivityAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateFaraActivity>
+          }
+          groupBy: {
+            args: Prisma.FaraActivityGroupByArgs<ExtArgs>
+            result: $Utils.Optional<FaraActivityGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.FaraActivityCountArgs<ExtArgs>
+            result: $Utils.Optional<FaraActivityCountAggregateOutputType> | number
+          }
+        }
+      }
+      NonprofitFiling: {
+        payload: Prisma.$NonprofitFilingPayload<ExtArgs>
+        fields: Prisma.NonprofitFilingFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.NonprofitFilingFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$NonprofitFilingPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.NonprofitFilingFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$NonprofitFilingPayload>
+          }
+          findFirst: {
+            args: Prisma.NonprofitFilingFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$NonprofitFilingPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.NonprofitFilingFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$NonprofitFilingPayload>
+          }
+          findMany: {
+            args: Prisma.NonprofitFilingFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$NonprofitFilingPayload>[]
+          }
+          create: {
+            args: Prisma.NonprofitFilingCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$NonprofitFilingPayload>
+          }
+          createMany: {
+            args: Prisma.NonprofitFilingCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.NonprofitFilingCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$NonprofitFilingPayload>[]
+          }
+          delete: {
+            args: Prisma.NonprofitFilingDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$NonprofitFilingPayload>
+          }
+          update: {
+            args: Prisma.NonprofitFilingUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$NonprofitFilingPayload>
+          }
+          deleteMany: {
+            args: Prisma.NonprofitFilingDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.NonprofitFilingUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.NonprofitFilingUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$NonprofitFilingPayload>[]
+          }
+          upsert: {
+            args: Prisma.NonprofitFilingUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$NonprofitFilingPayload>
+          }
+          aggregate: {
+            args: Prisma.NonprofitFilingAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateNonprofitFiling>
+          }
+          groupBy: {
+            args: Prisma.NonprofitFilingGroupByArgs<ExtArgs>
+            result: $Utils.Optional<NonprofitFilingGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.NonprofitFilingCountArgs<ExtArgs>
+            result: $Utils.Optional<NonprofitFilingCountAggregateOutputType> | number
+          }
+        }
+      }
       SyncLog: {
         payload: Prisma.$SyncLogPayload<ExtArgs>
         fields: Prisma.SyncLogFieldRefs
@@ -2172,6 +2534,10 @@ export namespace Prisma {
     legislation?: LegislationOmit
     legislativeVote?: LegislativeVoteOmit
     congressionalTrade?: CongressionalTradeOmit
+    federalRegisterEntry?: FederalRegisterEntryOmit
+    faraRegistration?: FaraRegistrationOmit
+    faraActivity?: FaraActivityOmit
+    nonprofitFiling?: NonprofitFilingOmit
     syncLog?: SyncLogOmit
   }
 
@@ -2269,6 +2635,8 @@ export namespace Prisma {
     sponsoredLegislation: number
     legislativeVotes: number
     congressionalTrades: number
+    faraRegistrations: number
+    faraContacts: number
   }
 
   export type EntityCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
@@ -2288,6 +2656,8 @@ export namespace Prisma {
     sponsoredLegislation?: boolean | EntityCountOutputTypeCountSponsoredLegislationArgs
     legislativeVotes?: boolean | EntityCountOutputTypeCountLegislativeVotesArgs
     congressionalTrades?: boolean | EntityCountOutputTypeCountCongressionalTradesArgs
+    faraRegistrations?: boolean | EntityCountOutputTypeCountFaraRegistrationsArgs
+    faraContacts?: boolean | EntityCountOutputTypeCountFaraContactsArgs
   }
 
   // Custom InputTypes
@@ -2413,6 +2783,20 @@ export namespace Prisma {
     where?: CongressionalTradeWhereInput
   }
 
+  /**
+   * EntityCountOutputType without action
+   */
+  export type EntityCountOutputTypeCountFaraRegistrationsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: FaraRegistrationWhereInput
+  }
+
+  /**
+   * EntityCountOutputType without action
+   */
+  export type EntityCountOutputTypeCountFaraContactsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: FaraActivityWhereInput
+  }
+
 
   /**
    * Count Type LegislationCountOutputType
@@ -2442,6 +2826,37 @@ export namespace Prisma {
    */
   export type LegislationCountOutputTypeCountVotesArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     where?: LegislativeVoteWhereInput
+  }
+
+
+  /**
+   * Count Type FaraRegistrationCountOutputType
+   */
+
+  export type FaraRegistrationCountOutputType = {
+    activities: number
+  }
+
+  export type FaraRegistrationCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    activities?: boolean | FaraRegistrationCountOutputTypeCountActivitiesArgs
+  }
+
+  // Custom InputTypes
+  /**
+   * FaraRegistrationCountOutputType without action
+   */
+  export type FaraRegistrationCountOutputTypeDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FaraRegistrationCountOutputType
+     */
+    select?: FaraRegistrationCountOutputTypeSelect<ExtArgs> | null
+  }
+
+  /**
+   * FaraRegistrationCountOutputType without action
+   */
+  export type FaraRegistrationCountOutputTypeCountActivitiesArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: FaraActivityWhereInput
   }
 
 
@@ -2858,6 +3273,8 @@ export namespace Prisma {
     sponsoredLegislation?: boolean | Entity$sponsoredLegislationArgs<ExtArgs>
     legislativeVotes?: boolean | Entity$legislativeVotesArgs<ExtArgs>
     congressionalTrades?: boolean | Entity$congressionalTradesArgs<ExtArgs>
+    faraRegistrations?: boolean | Entity$faraRegistrationsArgs<ExtArgs>
+    faraContacts?: boolean | Entity$faraContactsArgs<ExtArgs>
     _count?: boolean | EntityCountOutputTypeDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["entity"]>
 
@@ -2974,6 +3391,8 @@ export namespace Prisma {
     sponsoredLegislation?: boolean | Entity$sponsoredLegislationArgs<ExtArgs>
     legislativeVotes?: boolean | Entity$legislativeVotesArgs<ExtArgs>
     congressionalTrades?: boolean | Entity$congressionalTradesArgs<ExtArgs>
+    faraRegistrations?: boolean | Entity$faraRegistrationsArgs<ExtArgs>
+    faraContacts?: boolean | Entity$faraContactsArgs<ExtArgs>
     _count?: boolean | EntityCountOutputTypeDefaultArgs<ExtArgs>
   }
   export type EntityIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
@@ -3005,6 +3424,8 @@ export namespace Prisma {
       sponsoredLegislation: Prisma.$LegislationPayload<ExtArgs>[]
       legislativeVotes: Prisma.$LegislativeVotePayload<ExtArgs>[]
       congressionalTrades: Prisma.$CongressionalTradePayload<ExtArgs>[]
+      faraRegistrations: Prisma.$FaraRegistrationPayload<ExtArgs>[]
+      faraContacts: Prisma.$FaraActivityPayload<ExtArgs>[]
     }
     scalars: $Extensions.GetPayloadResult<{
       id: string
@@ -3447,6 +3868,8 @@ export namespace Prisma {
     sponsoredLegislation<T extends Entity$sponsoredLegislationArgs<ExtArgs> = {}>(args?: Subset<T, Entity$sponsoredLegislationArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$LegislationPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     legislativeVotes<T extends Entity$legislativeVotesArgs<ExtArgs> = {}>(args?: Subset<T, Entity$legislativeVotesArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$LegislativeVotePayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     congressionalTrades<T extends Entity$congressionalTradesArgs<ExtArgs> = {}>(args?: Subset<T, Entity$congressionalTradesArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$CongressionalTradePayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    faraRegistrations<T extends Entity$faraRegistrationsArgs<ExtArgs> = {}>(args?: Subset<T, Entity$faraRegistrationsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$FaraRegistrationPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    faraContacts<T extends Entity$faraContactsArgs<ExtArgs> = {}>(args?: Subset<T, Entity$faraContactsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$FaraActivityPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -4337,6 +4760,54 @@ export namespace Prisma {
     take?: number
     skip?: number
     distinct?: CongressionalTradeScalarFieldEnum | CongressionalTradeScalarFieldEnum[]
+  }
+
+  /**
+   * Entity.faraRegistrations
+   */
+  export type Entity$faraRegistrationsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FaraRegistration
+     */
+    select?: FaraRegistrationSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FaraRegistration
+     */
+    omit?: FaraRegistrationOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FaraRegistrationInclude<ExtArgs> | null
+    where?: FaraRegistrationWhereInput
+    orderBy?: FaraRegistrationOrderByWithRelationInput | FaraRegistrationOrderByWithRelationInput[]
+    cursor?: FaraRegistrationWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: FaraRegistrationScalarFieldEnum | FaraRegistrationScalarFieldEnum[]
+  }
+
+  /**
+   * Entity.faraContacts
+   */
+  export type Entity$faraContactsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FaraActivity
+     */
+    select?: FaraActivitySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FaraActivity
+     */
+    omit?: FaraActivityOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FaraActivityInclude<ExtArgs> | null
+    where?: FaraActivityWhereInput
+    orderBy?: FaraActivityOrderByWithRelationInput | FaraActivityOrderByWithRelationInput[]
+    cursor?: FaraActivityWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: FaraActivityScalarFieldEnum | FaraActivityScalarFieldEnum[]
   }
 
   /**
@@ -18931,6 +19402,4645 @@ export namespace Prisma {
 
 
   /**
+   * Model FederalRegisterEntry
+   */
+
+  export type AggregateFederalRegisterEntry = {
+    _count: FederalRegisterEntryCountAggregateOutputType | null
+    _avg: FederalRegisterEntryAvgAggregateOutputType | null
+    _sum: FederalRegisterEntrySumAggregateOutputType | null
+    _min: FederalRegisterEntryMinAggregateOutputType | null
+    _max: FederalRegisterEntryMaxAggregateOutputType | null
+  }
+
+  export type FederalRegisterEntryAvgAggregateOutputType = {
+    commentCount: number | null
+  }
+
+  export type FederalRegisterEntrySumAggregateOutputType = {
+    commentCount: number | null
+  }
+
+  export type FederalRegisterEntryMinAggregateOutputType = {
+    id: string | null
+    documentNumber: string | null
+    title: string | null
+    type: string | null
+    publicationDate: Date | null
+    significantRule: boolean | null
+    abstractText: string | null
+    htmlUrl: string | null
+    pdfUrl: string | null
+    commentCount: number | null
+    createdAt: Date | null
+  }
+
+  export type FederalRegisterEntryMaxAggregateOutputType = {
+    id: string | null
+    documentNumber: string | null
+    title: string | null
+    type: string | null
+    publicationDate: Date | null
+    significantRule: boolean | null
+    abstractText: string | null
+    htmlUrl: string | null
+    pdfUrl: string | null
+    commentCount: number | null
+    createdAt: Date | null
+  }
+
+  export type FederalRegisterEntryCountAggregateOutputType = {
+    id: number
+    documentNumber: number
+    title: number
+    type: number
+    agencyNames: number
+    agencyEntityIds: number
+    publicationDate: number
+    significantRule: number
+    abstractText: number
+    htmlUrl: number
+    pdfUrl: number
+    commentCount: number
+    createdAt: number
+    _all: number
+  }
+
+
+  export type FederalRegisterEntryAvgAggregateInputType = {
+    commentCount?: true
+  }
+
+  export type FederalRegisterEntrySumAggregateInputType = {
+    commentCount?: true
+  }
+
+  export type FederalRegisterEntryMinAggregateInputType = {
+    id?: true
+    documentNumber?: true
+    title?: true
+    type?: true
+    publicationDate?: true
+    significantRule?: true
+    abstractText?: true
+    htmlUrl?: true
+    pdfUrl?: true
+    commentCount?: true
+    createdAt?: true
+  }
+
+  export type FederalRegisterEntryMaxAggregateInputType = {
+    id?: true
+    documentNumber?: true
+    title?: true
+    type?: true
+    publicationDate?: true
+    significantRule?: true
+    abstractText?: true
+    htmlUrl?: true
+    pdfUrl?: true
+    commentCount?: true
+    createdAt?: true
+  }
+
+  export type FederalRegisterEntryCountAggregateInputType = {
+    id?: true
+    documentNumber?: true
+    title?: true
+    type?: true
+    agencyNames?: true
+    agencyEntityIds?: true
+    publicationDate?: true
+    significantRule?: true
+    abstractText?: true
+    htmlUrl?: true
+    pdfUrl?: true
+    commentCount?: true
+    createdAt?: true
+    _all?: true
+  }
+
+  export type FederalRegisterEntryAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which FederalRegisterEntry to aggregate.
+     */
+    where?: FederalRegisterEntryWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of FederalRegisterEntries to fetch.
+     */
+    orderBy?: FederalRegisterEntryOrderByWithRelationInput | FederalRegisterEntryOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: FederalRegisterEntryWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` FederalRegisterEntries from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` FederalRegisterEntries.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned FederalRegisterEntries
+    **/
+    _count?: true | FederalRegisterEntryCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to average
+    **/
+    _avg?: FederalRegisterEntryAvgAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to sum
+    **/
+    _sum?: FederalRegisterEntrySumAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: FederalRegisterEntryMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: FederalRegisterEntryMaxAggregateInputType
+  }
+
+  export type GetFederalRegisterEntryAggregateType<T extends FederalRegisterEntryAggregateArgs> = {
+        [P in keyof T & keyof AggregateFederalRegisterEntry]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateFederalRegisterEntry[P]>
+      : GetScalarType<T[P], AggregateFederalRegisterEntry[P]>
+  }
+
+
+
+
+  export type FederalRegisterEntryGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: FederalRegisterEntryWhereInput
+    orderBy?: FederalRegisterEntryOrderByWithAggregationInput | FederalRegisterEntryOrderByWithAggregationInput[]
+    by: FederalRegisterEntryScalarFieldEnum[] | FederalRegisterEntryScalarFieldEnum
+    having?: FederalRegisterEntryScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: FederalRegisterEntryCountAggregateInputType | true
+    _avg?: FederalRegisterEntryAvgAggregateInputType
+    _sum?: FederalRegisterEntrySumAggregateInputType
+    _min?: FederalRegisterEntryMinAggregateInputType
+    _max?: FederalRegisterEntryMaxAggregateInputType
+  }
+
+  export type FederalRegisterEntryGroupByOutputType = {
+    id: string
+    documentNumber: string
+    title: string
+    type: string
+    agencyNames: string[]
+    agencyEntityIds: string[]
+    publicationDate: Date
+    significantRule: boolean
+    abstractText: string | null
+    htmlUrl: string
+    pdfUrl: string | null
+    commentCount: number
+    createdAt: Date
+    _count: FederalRegisterEntryCountAggregateOutputType | null
+    _avg: FederalRegisterEntryAvgAggregateOutputType | null
+    _sum: FederalRegisterEntrySumAggregateOutputType | null
+    _min: FederalRegisterEntryMinAggregateOutputType | null
+    _max: FederalRegisterEntryMaxAggregateOutputType | null
+  }
+
+  type GetFederalRegisterEntryGroupByPayload<T extends FederalRegisterEntryGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<FederalRegisterEntryGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof FederalRegisterEntryGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], FederalRegisterEntryGroupByOutputType[P]>
+            : GetScalarType<T[P], FederalRegisterEntryGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type FederalRegisterEntrySelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    documentNumber?: boolean
+    title?: boolean
+    type?: boolean
+    agencyNames?: boolean
+    agencyEntityIds?: boolean
+    publicationDate?: boolean
+    significantRule?: boolean
+    abstractText?: boolean
+    htmlUrl?: boolean
+    pdfUrl?: boolean
+    commentCount?: boolean
+    createdAt?: boolean
+  }, ExtArgs["result"]["federalRegisterEntry"]>
+
+  export type FederalRegisterEntrySelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    documentNumber?: boolean
+    title?: boolean
+    type?: boolean
+    agencyNames?: boolean
+    agencyEntityIds?: boolean
+    publicationDate?: boolean
+    significantRule?: boolean
+    abstractText?: boolean
+    htmlUrl?: boolean
+    pdfUrl?: boolean
+    commentCount?: boolean
+    createdAt?: boolean
+  }, ExtArgs["result"]["federalRegisterEntry"]>
+
+  export type FederalRegisterEntrySelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    documentNumber?: boolean
+    title?: boolean
+    type?: boolean
+    agencyNames?: boolean
+    agencyEntityIds?: boolean
+    publicationDate?: boolean
+    significantRule?: boolean
+    abstractText?: boolean
+    htmlUrl?: boolean
+    pdfUrl?: boolean
+    commentCount?: boolean
+    createdAt?: boolean
+  }, ExtArgs["result"]["federalRegisterEntry"]>
+
+  export type FederalRegisterEntrySelectScalar = {
+    id?: boolean
+    documentNumber?: boolean
+    title?: boolean
+    type?: boolean
+    agencyNames?: boolean
+    agencyEntityIds?: boolean
+    publicationDate?: boolean
+    significantRule?: boolean
+    abstractText?: boolean
+    htmlUrl?: boolean
+    pdfUrl?: boolean
+    commentCount?: boolean
+    createdAt?: boolean
+  }
+
+  export type FederalRegisterEntryOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "documentNumber" | "title" | "type" | "agencyNames" | "agencyEntityIds" | "publicationDate" | "significantRule" | "abstractText" | "htmlUrl" | "pdfUrl" | "commentCount" | "createdAt", ExtArgs["result"]["federalRegisterEntry"]>
+
+  export type $FederalRegisterEntryPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "FederalRegisterEntry"
+    objects: {}
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      documentNumber: string
+      title: string
+      type: string
+      agencyNames: string[]
+      agencyEntityIds: string[]
+      publicationDate: Date
+      significantRule: boolean
+      abstractText: string | null
+      htmlUrl: string
+      pdfUrl: string | null
+      commentCount: number
+      createdAt: Date
+    }, ExtArgs["result"]["federalRegisterEntry"]>
+    composites: {}
+  }
+
+  type FederalRegisterEntryGetPayload<S extends boolean | null | undefined | FederalRegisterEntryDefaultArgs> = $Result.GetResult<Prisma.$FederalRegisterEntryPayload, S>
+
+  type FederalRegisterEntryCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<FederalRegisterEntryFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: FederalRegisterEntryCountAggregateInputType | true
+    }
+
+  export interface FederalRegisterEntryDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['FederalRegisterEntry'], meta: { name: 'FederalRegisterEntry' } }
+    /**
+     * Find zero or one FederalRegisterEntry that matches the filter.
+     * @param {FederalRegisterEntryFindUniqueArgs} args - Arguments to find a FederalRegisterEntry
+     * @example
+     * // Get one FederalRegisterEntry
+     * const federalRegisterEntry = await prisma.federalRegisterEntry.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends FederalRegisterEntryFindUniqueArgs>(args: SelectSubset<T, FederalRegisterEntryFindUniqueArgs<ExtArgs>>): Prisma__FederalRegisterEntryClient<$Result.GetResult<Prisma.$FederalRegisterEntryPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one FederalRegisterEntry that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {FederalRegisterEntryFindUniqueOrThrowArgs} args - Arguments to find a FederalRegisterEntry
+     * @example
+     * // Get one FederalRegisterEntry
+     * const federalRegisterEntry = await prisma.federalRegisterEntry.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends FederalRegisterEntryFindUniqueOrThrowArgs>(args: SelectSubset<T, FederalRegisterEntryFindUniqueOrThrowArgs<ExtArgs>>): Prisma__FederalRegisterEntryClient<$Result.GetResult<Prisma.$FederalRegisterEntryPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first FederalRegisterEntry that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {FederalRegisterEntryFindFirstArgs} args - Arguments to find a FederalRegisterEntry
+     * @example
+     * // Get one FederalRegisterEntry
+     * const federalRegisterEntry = await prisma.federalRegisterEntry.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends FederalRegisterEntryFindFirstArgs>(args?: SelectSubset<T, FederalRegisterEntryFindFirstArgs<ExtArgs>>): Prisma__FederalRegisterEntryClient<$Result.GetResult<Prisma.$FederalRegisterEntryPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first FederalRegisterEntry that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {FederalRegisterEntryFindFirstOrThrowArgs} args - Arguments to find a FederalRegisterEntry
+     * @example
+     * // Get one FederalRegisterEntry
+     * const federalRegisterEntry = await prisma.federalRegisterEntry.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends FederalRegisterEntryFindFirstOrThrowArgs>(args?: SelectSubset<T, FederalRegisterEntryFindFirstOrThrowArgs<ExtArgs>>): Prisma__FederalRegisterEntryClient<$Result.GetResult<Prisma.$FederalRegisterEntryPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more FederalRegisterEntries that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {FederalRegisterEntryFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all FederalRegisterEntries
+     * const federalRegisterEntries = await prisma.federalRegisterEntry.findMany()
+     * 
+     * // Get first 10 FederalRegisterEntries
+     * const federalRegisterEntries = await prisma.federalRegisterEntry.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const federalRegisterEntryWithIdOnly = await prisma.federalRegisterEntry.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends FederalRegisterEntryFindManyArgs>(args?: SelectSubset<T, FederalRegisterEntryFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$FederalRegisterEntryPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a FederalRegisterEntry.
+     * @param {FederalRegisterEntryCreateArgs} args - Arguments to create a FederalRegisterEntry.
+     * @example
+     * // Create one FederalRegisterEntry
+     * const FederalRegisterEntry = await prisma.federalRegisterEntry.create({
+     *   data: {
+     *     // ... data to create a FederalRegisterEntry
+     *   }
+     * })
+     * 
+     */
+    create<T extends FederalRegisterEntryCreateArgs>(args: SelectSubset<T, FederalRegisterEntryCreateArgs<ExtArgs>>): Prisma__FederalRegisterEntryClient<$Result.GetResult<Prisma.$FederalRegisterEntryPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many FederalRegisterEntries.
+     * @param {FederalRegisterEntryCreateManyArgs} args - Arguments to create many FederalRegisterEntries.
+     * @example
+     * // Create many FederalRegisterEntries
+     * const federalRegisterEntry = await prisma.federalRegisterEntry.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends FederalRegisterEntryCreateManyArgs>(args?: SelectSubset<T, FederalRegisterEntryCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many FederalRegisterEntries and returns the data saved in the database.
+     * @param {FederalRegisterEntryCreateManyAndReturnArgs} args - Arguments to create many FederalRegisterEntries.
+     * @example
+     * // Create many FederalRegisterEntries
+     * const federalRegisterEntry = await prisma.federalRegisterEntry.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many FederalRegisterEntries and only return the `id`
+     * const federalRegisterEntryWithIdOnly = await prisma.federalRegisterEntry.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends FederalRegisterEntryCreateManyAndReturnArgs>(args?: SelectSubset<T, FederalRegisterEntryCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$FederalRegisterEntryPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a FederalRegisterEntry.
+     * @param {FederalRegisterEntryDeleteArgs} args - Arguments to delete one FederalRegisterEntry.
+     * @example
+     * // Delete one FederalRegisterEntry
+     * const FederalRegisterEntry = await prisma.federalRegisterEntry.delete({
+     *   where: {
+     *     // ... filter to delete one FederalRegisterEntry
+     *   }
+     * })
+     * 
+     */
+    delete<T extends FederalRegisterEntryDeleteArgs>(args: SelectSubset<T, FederalRegisterEntryDeleteArgs<ExtArgs>>): Prisma__FederalRegisterEntryClient<$Result.GetResult<Prisma.$FederalRegisterEntryPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one FederalRegisterEntry.
+     * @param {FederalRegisterEntryUpdateArgs} args - Arguments to update one FederalRegisterEntry.
+     * @example
+     * // Update one FederalRegisterEntry
+     * const federalRegisterEntry = await prisma.federalRegisterEntry.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends FederalRegisterEntryUpdateArgs>(args: SelectSubset<T, FederalRegisterEntryUpdateArgs<ExtArgs>>): Prisma__FederalRegisterEntryClient<$Result.GetResult<Prisma.$FederalRegisterEntryPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more FederalRegisterEntries.
+     * @param {FederalRegisterEntryDeleteManyArgs} args - Arguments to filter FederalRegisterEntries to delete.
+     * @example
+     * // Delete a few FederalRegisterEntries
+     * const { count } = await prisma.federalRegisterEntry.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends FederalRegisterEntryDeleteManyArgs>(args?: SelectSubset<T, FederalRegisterEntryDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more FederalRegisterEntries.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {FederalRegisterEntryUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many FederalRegisterEntries
+     * const federalRegisterEntry = await prisma.federalRegisterEntry.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends FederalRegisterEntryUpdateManyArgs>(args: SelectSubset<T, FederalRegisterEntryUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more FederalRegisterEntries and returns the data updated in the database.
+     * @param {FederalRegisterEntryUpdateManyAndReturnArgs} args - Arguments to update many FederalRegisterEntries.
+     * @example
+     * // Update many FederalRegisterEntries
+     * const federalRegisterEntry = await prisma.federalRegisterEntry.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more FederalRegisterEntries and only return the `id`
+     * const federalRegisterEntryWithIdOnly = await prisma.federalRegisterEntry.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends FederalRegisterEntryUpdateManyAndReturnArgs>(args: SelectSubset<T, FederalRegisterEntryUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$FederalRegisterEntryPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one FederalRegisterEntry.
+     * @param {FederalRegisterEntryUpsertArgs} args - Arguments to update or create a FederalRegisterEntry.
+     * @example
+     * // Update or create a FederalRegisterEntry
+     * const federalRegisterEntry = await prisma.federalRegisterEntry.upsert({
+     *   create: {
+     *     // ... data to create a FederalRegisterEntry
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the FederalRegisterEntry we want to update
+     *   }
+     * })
+     */
+    upsert<T extends FederalRegisterEntryUpsertArgs>(args: SelectSubset<T, FederalRegisterEntryUpsertArgs<ExtArgs>>): Prisma__FederalRegisterEntryClient<$Result.GetResult<Prisma.$FederalRegisterEntryPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of FederalRegisterEntries.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {FederalRegisterEntryCountArgs} args - Arguments to filter FederalRegisterEntries to count.
+     * @example
+     * // Count the number of FederalRegisterEntries
+     * const count = await prisma.federalRegisterEntry.count({
+     *   where: {
+     *     // ... the filter for the FederalRegisterEntries we want to count
+     *   }
+     * })
+    **/
+    count<T extends FederalRegisterEntryCountArgs>(
+      args?: Subset<T, FederalRegisterEntryCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], FederalRegisterEntryCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a FederalRegisterEntry.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {FederalRegisterEntryAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends FederalRegisterEntryAggregateArgs>(args: Subset<T, FederalRegisterEntryAggregateArgs>): Prisma.PrismaPromise<GetFederalRegisterEntryAggregateType<T>>
+
+    /**
+     * Group by FederalRegisterEntry.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {FederalRegisterEntryGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends FederalRegisterEntryGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: FederalRegisterEntryGroupByArgs['orderBy'] }
+        : { orderBy?: FederalRegisterEntryGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, FederalRegisterEntryGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetFederalRegisterEntryGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the FederalRegisterEntry model
+   */
+  readonly fields: FederalRegisterEntryFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for FederalRegisterEntry.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__FederalRegisterEntryClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the FederalRegisterEntry model
+   */
+  interface FederalRegisterEntryFieldRefs {
+    readonly id: FieldRef<"FederalRegisterEntry", 'String'>
+    readonly documentNumber: FieldRef<"FederalRegisterEntry", 'String'>
+    readonly title: FieldRef<"FederalRegisterEntry", 'String'>
+    readonly type: FieldRef<"FederalRegisterEntry", 'String'>
+    readonly agencyNames: FieldRef<"FederalRegisterEntry", 'String[]'>
+    readonly agencyEntityIds: FieldRef<"FederalRegisterEntry", 'String[]'>
+    readonly publicationDate: FieldRef<"FederalRegisterEntry", 'DateTime'>
+    readonly significantRule: FieldRef<"FederalRegisterEntry", 'Boolean'>
+    readonly abstractText: FieldRef<"FederalRegisterEntry", 'String'>
+    readonly htmlUrl: FieldRef<"FederalRegisterEntry", 'String'>
+    readonly pdfUrl: FieldRef<"FederalRegisterEntry", 'String'>
+    readonly commentCount: FieldRef<"FederalRegisterEntry", 'Int'>
+    readonly createdAt: FieldRef<"FederalRegisterEntry", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * FederalRegisterEntry findUnique
+   */
+  export type FederalRegisterEntryFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FederalRegisterEntry
+     */
+    select?: FederalRegisterEntrySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FederalRegisterEntry
+     */
+    omit?: FederalRegisterEntryOmit<ExtArgs> | null
+    /**
+     * Filter, which FederalRegisterEntry to fetch.
+     */
+    where: FederalRegisterEntryWhereUniqueInput
+  }
+
+  /**
+   * FederalRegisterEntry findUniqueOrThrow
+   */
+  export type FederalRegisterEntryFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FederalRegisterEntry
+     */
+    select?: FederalRegisterEntrySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FederalRegisterEntry
+     */
+    omit?: FederalRegisterEntryOmit<ExtArgs> | null
+    /**
+     * Filter, which FederalRegisterEntry to fetch.
+     */
+    where: FederalRegisterEntryWhereUniqueInput
+  }
+
+  /**
+   * FederalRegisterEntry findFirst
+   */
+  export type FederalRegisterEntryFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FederalRegisterEntry
+     */
+    select?: FederalRegisterEntrySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FederalRegisterEntry
+     */
+    omit?: FederalRegisterEntryOmit<ExtArgs> | null
+    /**
+     * Filter, which FederalRegisterEntry to fetch.
+     */
+    where?: FederalRegisterEntryWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of FederalRegisterEntries to fetch.
+     */
+    orderBy?: FederalRegisterEntryOrderByWithRelationInput | FederalRegisterEntryOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for FederalRegisterEntries.
+     */
+    cursor?: FederalRegisterEntryWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` FederalRegisterEntries from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` FederalRegisterEntries.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of FederalRegisterEntries.
+     */
+    distinct?: FederalRegisterEntryScalarFieldEnum | FederalRegisterEntryScalarFieldEnum[]
+  }
+
+  /**
+   * FederalRegisterEntry findFirstOrThrow
+   */
+  export type FederalRegisterEntryFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FederalRegisterEntry
+     */
+    select?: FederalRegisterEntrySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FederalRegisterEntry
+     */
+    omit?: FederalRegisterEntryOmit<ExtArgs> | null
+    /**
+     * Filter, which FederalRegisterEntry to fetch.
+     */
+    where?: FederalRegisterEntryWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of FederalRegisterEntries to fetch.
+     */
+    orderBy?: FederalRegisterEntryOrderByWithRelationInput | FederalRegisterEntryOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for FederalRegisterEntries.
+     */
+    cursor?: FederalRegisterEntryWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` FederalRegisterEntries from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` FederalRegisterEntries.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of FederalRegisterEntries.
+     */
+    distinct?: FederalRegisterEntryScalarFieldEnum | FederalRegisterEntryScalarFieldEnum[]
+  }
+
+  /**
+   * FederalRegisterEntry findMany
+   */
+  export type FederalRegisterEntryFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FederalRegisterEntry
+     */
+    select?: FederalRegisterEntrySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FederalRegisterEntry
+     */
+    omit?: FederalRegisterEntryOmit<ExtArgs> | null
+    /**
+     * Filter, which FederalRegisterEntries to fetch.
+     */
+    where?: FederalRegisterEntryWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of FederalRegisterEntries to fetch.
+     */
+    orderBy?: FederalRegisterEntryOrderByWithRelationInput | FederalRegisterEntryOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing FederalRegisterEntries.
+     */
+    cursor?: FederalRegisterEntryWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` FederalRegisterEntries from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` FederalRegisterEntries.
+     */
+    skip?: number
+    distinct?: FederalRegisterEntryScalarFieldEnum | FederalRegisterEntryScalarFieldEnum[]
+  }
+
+  /**
+   * FederalRegisterEntry create
+   */
+  export type FederalRegisterEntryCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FederalRegisterEntry
+     */
+    select?: FederalRegisterEntrySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FederalRegisterEntry
+     */
+    omit?: FederalRegisterEntryOmit<ExtArgs> | null
+    /**
+     * The data needed to create a FederalRegisterEntry.
+     */
+    data: XOR<FederalRegisterEntryCreateInput, FederalRegisterEntryUncheckedCreateInput>
+  }
+
+  /**
+   * FederalRegisterEntry createMany
+   */
+  export type FederalRegisterEntryCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many FederalRegisterEntries.
+     */
+    data: FederalRegisterEntryCreateManyInput | FederalRegisterEntryCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * FederalRegisterEntry createManyAndReturn
+   */
+  export type FederalRegisterEntryCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FederalRegisterEntry
+     */
+    select?: FederalRegisterEntrySelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the FederalRegisterEntry
+     */
+    omit?: FederalRegisterEntryOmit<ExtArgs> | null
+    /**
+     * The data used to create many FederalRegisterEntries.
+     */
+    data: FederalRegisterEntryCreateManyInput | FederalRegisterEntryCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * FederalRegisterEntry update
+   */
+  export type FederalRegisterEntryUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FederalRegisterEntry
+     */
+    select?: FederalRegisterEntrySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FederalRegisterEntry
+     */
+    omit?: FederalRegisterEntryOmit<ExtArgs> | null
+    /**
+     * The data needed to update a FederalRegisterEntry.
+     */
+    data: XOR<FederalRegisterEntryUpdateInput, FederalRegisterEntryUncheckedUpdateInput>
+    /**
+     * Choose, which FederalRegisterEntry to update.
+     */
+    where: FederalRegisterEntryWhereUniqueInput
+  }
+
+  /**
+   * FederalRegisterEntry updateMany
+   */
+  export type FederalRegisterEntryUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update FederalRegisterEntries.
+     */
+    data: XOR<FederalRegisterEntryUpdateManyMutationInput, FederalRegisterEntryUncheckedUpdateManyInput>
+    /**
+     * Filter which FederalRegisterEntries to update
+     */
+    where?: FederalRegisterEntryWhereInput
+    /**
+     * Limit how many FederalRegisterEntries to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * FederalRegisterEntry updateManyAndReturn
+   */
+  export type FederalRegisterEntryUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FederalRegisterEntry
+     */
+    select?: FederalRegisterEntrySelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the FederalRegisterEntry
+     */
+    omit?: FederalRegisterEntryOmit<ExtArgs> | null
+    /**
+     * The data used to update FederalRegisterEntries.
+     */
+    data: XOR<FederalRegisterEntryUpdateManyMutationInput, FederalRegisterEntryUncheckedUpdateManyInput>
+    /**
+     * Filter which FederalRegisterEntries to update
+     */
+    where?: FederalRegisterEntryWhereInput
+    /**
+     * Limit how many FederalRegisterEntries to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * FederalRegisterEntry upsert
+   */
+  export type FederalRegisterEntryUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FederalRegisterEntry
+     */
+    select?: FederalRegisterEntrySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FederalRegisterEntry
+     */
+    omit?: FederalRegisterEntryOmit<ExtArgs> | null
+    /**
+     * The filter to search for the FederalRegisterEntry to update in case it exists.
+     */
+    where: FederalRegisterEntryWhereUniqueInput
+    /**
+     * In case the FederalRegisterEntry found by the `where` argument doesn't exist, create a new FederalRegisterEntry with this data.
+     */
+    create: XOR<FederalRegisterEntryCreateInput, FederalRegisterEntryUncheckedCreateInput>
+    /**
+     * In case the FederalRegisterEntry was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<FederalRegisterEntryUpdateInput, FederalRegisterEntryUncheckedUpdateInput>
+  }
+
+  /**
+   * FederalRegisterEntry delete
+   */
+  export type FederalRegisterEntryDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FederalRegisterEntry
+     */
+    select?: FederalRegisterEntrySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FederalRegisterEntry
+     */
+    omit?: FederalRegisterEntryOmit<ExtArgs> | null
+    /**
+     * Filter which FederalRegisterEntry to delete.
+     */
+    where: FederalRegisterEntryWhereUniqueInput
+  }
+
+  /**
+   * FederalRegisterEntry deleteMany
+   */
+  export type FederalRegisterEntryDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which FederalRegisterEntries to delete
+     */
+    where?: FederalRegisterEntryWhereInput
+    /**
+     * Limit how many FederalRegisterEntries to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * FederalRegisterEntry without action
+   */
+  export type FederalRegisterEntryDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FederalRegisterEntry
+     */
+    select?: FederalRegisterEntrySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FederalRegisterEntry
+     */
+    omit?: FederalRegisterEntryOmit<ExtArgs> | null
+  }
+
+
+  /**
+   * Model FaraRegistration
+   */
+
+  export type AggregateFaraRegistration = {
+    _count: FaraRegistrationCountAggregateOutputType | null
+    _min: FaraRegistrationMinAggregateOutputType | null
+    _max: FaraRegistrationMaxAggregateOutputType | null
+  }
+
+  export type FaraRegistrationMinAggregateOutputType = {
+    id: string | null
+    registrationNum: string | null
+    foreignPrincipal: string | null
+    country: string | null
+    registrantName: string | null
+    registrantEntityId: string | null
+    registrationDate: Date | null
+    terminationDate: Date | null
+    active: boolean | null
+    createdAt: Date | null
+  }
+
+  export type FaraRegistrationMaxAggregateOutputType = {
+    id: string | null
+    registrationNum: string | null
+    foreignPrincipal: string | null
+    country: string | null
+    registrantName: string | null
+    registrantEntityId: string | null
+    registrationDate: Date | null
+    terminationDate: Date | null
+    active: boolean | null
+    createdAt: Date | null
+  }
+
+  export type FaraRegistrationCountAggregateOutputType = {
+    id: number
+    registrationNum: number
+    foreignPrincipal: number
+    country: number
+    registrantName: number
+    registrantEntityId: number
+    registrationDate: number
+    terminationDate: number
+    active: number
+    createdAt: number
+    _all: number
+  }
+
+
+  export type FaraRegistrationMinAggregateInputType = {
+    id?: true
+    registrationNum?: true
+    foreignPrincipal?: true
+    country?: true
+    registrantName?: true
+    registrantEntityId?: true
+    registrationDate?: true
+    terminationDate?: true
+    active?: true
+    createdAt?: true
+  }
+
+  export type FaraRegistrationMaxAggregateInputType = {
+    id?: true
+    registrationNum?: true
+    foreignPrincipal?: true
+    country?: true
+    registrantName?: true
+    registrantEntityId?: true
+    registrationDate?: true
+    terminationDate?: true
+    active?: true
+    createdAt?: true
+  }
+
+  export type FaraRegistrationCountAggregateInputType = {
+    id?: true
+    registrationNum?: true
+    foreignPrincipal?: true
+    country?: true
+    registrantName?: true
+    registrantEntityId?: true
+    registrationDate?: true
+    terminationDate?: true
+    active?: true
+    createdAt?: true
+    _all?: true
+  }
+
+  export type FaraRegistrationAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which FaraRegistration to aggregate.
+     */
+    where?: FaraRegistrationWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of FaraRegistrations to fetch.
+     */
+    orderBy?: FaraRegistrationOrderByWithRelationInput | FaraRegistrationOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: FaraRegistrationWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` FaraRegistrations from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` FaraRegistrations.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned FaraRegistrations
+    **/
+    _count?: true | FaraRegistrationCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: FaraRegistrationMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: FaraRegistrationMaxAggregateInputType
+  }
+
+  export type GetFaraRegistrationAggregateType<T extends FaraRegistrationAggregateArgs> = {
+        [P in keyof T & keyof AggregateFaraRegistration]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateFaraRegistration[P]>
+      : GetScalarType<T[P], AggregateFaraRegistration[P]>
+  }
+
+
+
+
+  export type FaraRegistrationGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: FaraRegistrationWhereInput
+    orderBy?: FaraRegistrationOrderByWithAggregationInput | FaraRegistrationOrderByWithAggregationInput[]
+    by: FaraRegistrationScalarFieldEnum[] | FaraRegistrationScalarFieldEnum
+    having?: FaraRegistrationScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: FaraRegistrationCountAggregateInputType | true
+    _min?: FaraRegistrationMinAggregateInputType
+    _max?: FaraRegistrationMaxAggregateInputType
+  }
+
+  export type FaraRegistrationGroupByOutputType = {
+    id: string
+    registrationNum: string
+    foreignPrincipal: string
+    country: string
+    registrantName: string
+    registrantEntityId: string | null
+    registrationDate: Date
+    terminationDate: Date | null
+    active: boolean
+    createdAt: Date
+    _count: FaraRegistrationCountAggregateOutputType | null
+    _min: FaraRegistrationMinAggregateOutputType | null
+    _max: FaraRegistrationMaxAggregateOutputType | null
+  }
+
+  type GetFaraRegistrationGroupByPayload<T extends FaraRegistrationGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<FaraRegistrationGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof FaraRegistrationGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], FaraRegistrationGroupByOutputType[P]>
+            : GetScalarType<T[P], FaraRegistrationGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type FaraRegistrationSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    registrationNum?: boolean
+    foreignPrincipal?: boolean
+    country?: boolean
+    registrantName?: boolean
+    registrantEntityId?: boolean
+    registrationDate?: boolean
+    terminationDate?: boolean
+    active?: boolean
+    createdAt?: boolean
+    registrantEntity?: boolean | FaraRegistration$registrantEntityArgs<ExtArgs>
+    activities?: boolean | FaraRegistration$activitiesArgs<ExtArgs>
+    _count?: boolean | FaraRegistrationCountOutputTypeDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["faraRegistration"]>
+
+  export type FaraRegistrationSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    registrationNum?: boolean
+    foreignPrincipal?: boolean
+    country?: boolean
+    registrantName?: boolean
+    registrantEntityId?: boolean
+    registrationDate?: boolean
+    terminationDate?: boolean
+    active?: boolean
+    createdAt?: boolean
+    registrantEntity?: boolean | FaraRegistration$registrantEntityArgs<ExtArgs>
+  }, ExtArgs["result"]["faraRegistration"]>
+
+  export type FaraRegistrationSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    registrationNum?: boolean
+    foreignPrincipal?: boolean
+    country?: boolean
+    registrantName?: boolean
+    registrantEntityId?: boolean
+    registrationDate?: boolean
+    terminationDate?: boolean
+    active?: boolean
+    createdAt?: boolean
+    registrantEntity?: boolean | FaraRegistration$registrantEntityArgs<ExtArgs>
+  }, ExtArgs["result"]["faraRegistration"]>
+
+  export type FaraRegistrationSelectScalar = {
+    id?: boolean
+    registrationNum?: boolean
+    foreignPrincipal?: boolean
+    country?: boolean
+    registrantName?: boolean
+    registrantEntityId?: boolean
+    registrationDate?: boolean
+    terminationDate?: boolean
+    active?: boolean
+    createdAt?: boolean
+  }
+
+  export type FaraRegistrationOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "registrationNum" | "foreignPrincipal" | "country" | "registrantName" | "registrantEntityId" | "registrationDate" | "terminationDate" | "active" | "createdAt", ExtArgs["result"]["faraRegistration"]>
+  export type FaraRegistrationInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    registrantEntity?: boolean | FaraRegistration$registrantEntityArgs<ExtArgs>
+    activities?: boolean | FaraRegistration$activitiesArgs<ExtArgs>
+    _count?: boolean | FaraRegistrationCountOutputTypeDefaultArgs<ExtArgs>
+  }
+  export type FaraRegistrationIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    registrantEntity?: boolean | FaraRegistration$registrantEntityArgs<ExtArgs>
+  }
+  export type FaraRegistrationIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    registrantEntity?: boolean | FaraRegistration$registrantEntityArgs<ExtArgs>
+  }
+
+  export type $FaraRegistrationPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "FaraRegistration"
+    objects: {
+      registrantEntity: Prisma.$EntityPayload<ExtArgs> | null
+      activities: Prisma.$FaraActivityPayload<ExtArgs>[]
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      registrationNum: string
+      foreignPrincipal: string
+      country: string
+      registrantName: string
+      registrantEntityId: string | null
+      registrationDate: Date
+      terminationDate: Date | null
+      active: boolean
+      createdAt: Date
+    }, ExtArgs["result"]["faraRegistration"]>
+    composites: {}
+  }
+
+  type FaraRegistrationGetPayload<S extends boolean | null | undefined | FaraRegistrationDefaultArgs> = $Result.GetResult<Prisma.$FaraRegistrationPayload, S>
+
+  type FaraRegistrationCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<FaraRegistrationFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: FaraRegistrationCountAggregateInputType | true
+    }
+
+  export interface FaraRegistrationDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['FaraRegistration'], meta: { name: 'FaraRegistration' } }
+    /**
+     * Find zero or one FaraRegistration that matches the filter.
+     * @param {FaraRegistrationFindUniqueArgs} args - Arguments to find a FaraRegistration
+     * @example
+     * // Get one FaraRegistration
+     * const faraRegistration = await prisma.faraRegistration.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends FaraRegistrationFindUniqueArgs>(args: SelectSubset<T, FaraRegistrationFindUniqueArgs<ExtArgs>>): Prisma__FaraRegistrationClient<$Result.GetResult<Prisma.$FaraRegistrationPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one FaraRegistration that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {FaraRegistrationFindUniqueOrThrowArgs} args - Arguments to find a FaraRegistration
+     * @example
+     * // Get one FaraRegistration
+     * const faraRegistration = await prisma.faraRegistration.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends FaraRegistrationFindUniqueOrThrowArgs>(args: SelectSubset<T, FaraRegistrationFindUniqueOrThrowArgs<ExtArgs>>): Prisma__FaraRegistrationClient<$Result.GetResult<Prisma.$FaraRegistrationPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first FaraRegistration that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {FaraRegistrationFindFirstArgs} args - Arguments to find a FaraRegistration
+     * @example
+     * // Get one FaraRegistration
+     * const faraRegistration = await prisma.faraRegistration.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends FaraRegistrationFindFirstArgs>(args?: SelectSubset<T, FaraRegistrationFindFirstArgs<ExtArgs>>): Prisma__FaraRegistrationClient<$Result.GetResult<Prisma.$FaraRegistrationPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first FaraRegistration that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {FaraRegistrationFindFirstOrThrowArgs} args - Arguments to find a FaraRegistration
+     * @example
+     * // Get one FaraRegistration
+     * const faraRegistration = await prisma.faraRegistration.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends FaraRegistrationFindFirstOrThrowArgs>(args?: SelectSubset<T, FaraRegistrationFindFirstOrThrowArgs<ExtArgs>>): Prisma__FaraRegistrationClient<$Result.GetResult<Prisma.$FaraRegistrationPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more FaraRegistrations that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {FaraRegistrationFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all FaraRegistrations
+     * const faraRegistrations = await prisma.faraRegistration.findMany()
+     * 
+     * // Get first 10 FaraRegistrations
+     * const faraRegistrations = await prisma.faraRegistration.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const faraRegistrationWithIdOnly = await prisma.faraRegistration.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends FaraRegistrationFindManyArgs>(args?: SelectSubset<T, FaraRegistrationFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$FaraRegistrationPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a FaraRegistration.
+     * @param {FaraRegistrationCreateArgs} args - Arguments to create a FaraRegistration.
+     * @example
+     * // Create one FaraRegistration
+     * const FaraRegistration = await prisma.faraRegistration.create({
+     *   data: {
+     *     // ... data to create a FaraRegistration
+     *   }
+     * })
+     * 
+     */
+    create<T extends FaraRegistrationCreateArgs>(args: SelectSubset<T, FaraRegistrationCreateArgs<ExtArgs>>): Prisma__FaraRegistrationClient<$Result.GetResult<Prisma.$FaraRegistrationPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many FaraRegistrations.
+     * @param {FaraRegistrationCreateManyArgs} args - Arguments to create many FaraRegistrations.
+     * @example
+     * // Create many FaraRegistrations
+     * const faraRegistration = await prisma.faraRegistration.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends FaraRegistrationCreateManyArgs>(args?: SelectSubset<T, FaraRegistrationCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many FaraRegistrations and returns the data saved in the database.
+     * @param {FaraRegistrationCreateManyAndReturnArgs} args - Arguments to create many FaraRegistrations.
+     * @example
+     * // Create many FaraRegistrations
+     * const faraRegistration = await prisma.faraRegistration.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many FaraRegistrations and only return the `id`
+     * const faraRegistrationWithIdOnly = await prisma.faraRegistration.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends FaraRegistrationCreateManyAndReturnArgs>(args?: SelectSubset<T, FaraRegistrationCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$FaraRegistrationPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a FaraRegistration.
+     * @param {FaraRegistrationDeleteArgs} args - Arguments to delete one FaraRegistration.
+     * @example
+     * // Delete one FaraRegistration
+     * const FaraRegistration = await prisma.faraRegistration.delete({
+     *   where: {
+     *     // ... filter to delete one FaraRegistration
+     *   }
+     * })
+     * 
+     */
+    delete<T extends FaraRegistrationDeleteArgs>(args: SelectSubset<T, FaraRegistrationDeleteArgs<ExtArgs>>): Prisma__FaraRegistrationClient<$Result.GetResult<Prisma.$FaraRegistrationPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one FaraRegistration.
+     * @param {FaraRegistrationUpdateArgs} args - Arguments to update one FaraRegistration.
+     * @example
+     * // Update one FaraRegistration
+     * const faraRegistration = await prisma.faraRegistration.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends FaraRegistrationUpdateArgs>(args: SelectSubset<T, FaraRegistrationUpdateArgs<ExtArgs>>): Prisma__FaraRegistrationClient<$Result.GetResult<Prisma.$FaraRegistrationPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more FaraRegistrations.
+     * @param {FaraRegistrationDeleteManyArgs} args - Arguments to filter FaraRegistrations to delete.
+     * @example
+     * // Delete a few FaraRegistrations
+     * const { count } = await prisma.faraRegistration.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends FaraRegistrationDeleteManyArgs>(args?: SelectSubset<T, FaraRegistrationDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more FaraRegistrations.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {FaraRegistrationUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many FaraRegistrations
+     * const faraRegistration = await prisma.faraRegistration.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends FaraRegistrationUpdateManyArgs>(args: SelectSubset<T, FaraRegistrationUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more FaraRegistrations and returns the data updated in the database.
+     * @param {FaraRegistrationUpdateManyAndReturnArgs} args - Arguments to update many FaraRegistrations.
+     * @example
+     * // Update many FaraRegistrations
+     * const faraRegistration = await prisma.faraRegistration.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more FaraRegistrations and only return the `id`
+     * const faraRegistrationWithIdOnly = await prisma.faraRegistration.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends FaraRegistrationUpdateManyAndReturnArgs>(args: SelectSubset<T, FaraRegistrationUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$FaraRegistrationPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one FaraRegistration.
+     * @param {FaraRegistrationUpsertArgs} args - Arguments to update or create a FaraRegistration.
+     * @example
+     * // Update or create a FaraRegistration
+     * const faraRegistration = await prisma.faraRegistration.upsert({
+     *   create: {
+     *     // ... data to create a FaraRegistration
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the FaraRegistration we want to update
+     *   }
+     * })
+     */
+    upsert<T extends FaraRegistrationUpsertArgs>(args: SelectSubset<T, FaraRegistrationUpsertArgs<ExtArgs>>): Prisma__FaraRegistrationClient<$Result.GetResult<Prisma.$FaraRegistrationPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of FaraRegistrations.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {FaraRegistrationCountArgs} args - Arguments to filter FaraRegistrations to count.
+     * @example
+     * // Count the number of FaraRegistrations
+     * const count = await prisma.faraRegistration.count({
+     *   where: {
+     *     // ... the filter for the FaraRegistrations we want to count
+     *   }
+     * })
+    **/
+    count<T extends FaraRegistrationCountArgs>(
+      args?: Subset<T, FaraRegistrationCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], FaraRegistrationCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a FaraRegistration.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {FaraRegistrationAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends FaraRegistrationAggregateArgs>(args: Subset<T, FaraRegistrationAggregateArgs>): Prisma.PrismaPromise<GetFaraRegistrationAggregateType<T>>
+
+    /**
+     * Group by FaraRegistration.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {FaraRegistrationGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends FaraRegistrationGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: FaraRegistrationGroupByArgs['orderBy'] }
+        : { orderBy?: FaraRegistrationGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, FaraRegistrationGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetFaraRegistrationGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the FaraRegistration model
+   */
+  readonly fields: FaraRegistrationFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for FaraRegistration.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__FaraRegistrationClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    registrantEntity<T extends FaraRegistration$registrantEntityArgs<ExtArgs> = {}>(args?: Subset<T, FaraRegistration$registrantEntityArgs<ExtArgs>>): Prisma__EntityClient<$Result.GetResult<Prisma.$EntityPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    activities<T extends FaraRegistration$activitiesArgs<ExtArgs> = {}>(args?: Subset<T, FaraRegistration$activitiesArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$FaraActivityPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the FaraRegistration model
+   */
+  interface FaraRegistrationFieldRefs {
+    readonly id: FieldRef<"FaraRegistration", 'String'>
+    readonly registrationNum: FieldRef<"FaraRegistration", 'String'>
+    readonly foreignPrincipal: FieldRef<"FaraRegistration", 'String'>
+    readonly country: FieldRef<"FaraRegistration", 'String'>
+    readonly registrantName: FieldRef<"FaraRegistration", 'String'>
+    readonly registrantEntityId: FieldRef<"FaraRegistration", 'String'>
+    readonly registrationDate: FieldRef<"FaraRegistration", 'DateTime'>
+    readonly terminationDate: FieldRef<"FaraRegistration", 'DateTime'>
+    readonly active: FieldRef<"FaraRegistration", 'Boolean'>
+    readonly createdAt: FieldRef<"FaraRegistration", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * FaraRegistration findUnique
+   */
+  export type FaraRegistrationFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FaraRegistration
+     */
+    select?: FaraRegistrationSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FaraRegistration
+     */
+    omit?: FaraRegistrationOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FaraRegistrationInclude<ExtArgs> | null
+    /**
+     * Filter, which FaraRegistration to fetch.
+     */
+    where: FaraRegistrationWhereUniqueInput
+  }
+
+  /**
+   * FaraRegistration findUniqueOrThrow
+   */
+  export type FaraRegistrationFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FaraRegistration
+     */
+    select?: FaraRegistrationSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FaraRegistration
+     */
+    omit?: FaraRegistrationOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FaraRegistrationInclude<ExtArgs> | null
+    /**
+     * Filter, which FaraRegistration to fetch.
+     */
+    where: FaraRegistrationWhereUniqueInput
+  }
+
+  /**
+   * FaraRegistration findFirst
+   */
+  export type FaraRegistrationFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FaraRegistration
+     */
+    select?: FaraRegistrationSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FaraRegistration
+     */
+    omit?: FaraRegistrationOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FaraRegistrationInclude<ExtArgs> | null
+    /**
+     * Filter, which FaraRegistration to fetch.
+     */
+    where?: FaraRegistrationWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of FaraRegistrations to fetch.
+     */
+    orderBy?: FaraRegistrationOrderByWithRelationInput | FaraRegistrationOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for FaraRegistrations.
+     */
+    cursor?: FaraRegistrationWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` FaraRegistrations from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` FaraRegistrations.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of FaraRegistrations.
+     */
+    distinct?: FaraRegistrationScalarFieldEnum | FaraRegistrationScalarFieldEnum[]
+  }
+
+  /**
+   * FaraRegistration findFirstOrThrow
+   */
+  export type FaraRegistrationFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FaraRegistration
+     */
+    select?: FaraRegistrationSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FaraRegistration
+     */
+    omit?: FaraRegistrationOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FaraRegistrationInclude<ExtArgs> | null
+    /**
+     * Filter, which FaraRegistration to fetch.
+     */
+    where?: FaraRegistrationWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of FaraRegistrations to fetch.
+     */
+    orderBy?: FaraRegistrationOrderByWithRelationInput | FaraRegistrationOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for FaraRegistrations.
+     */
+    cursor?: FaraRegistrationWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` FaraRegistrations from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` FaraRegistrations.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of FaraRegistrations.
+     */
+    distinct?: FaraRegistrationScalarFieldEnum | FaraRegistrationScalarFieldEnum[]
+  }
+
+  /**
+   * FaraRegistration findMany
+   */
+  export type FaraRegistrationFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FaraRegistration
+     */
+    select?: FaraRegistrationSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FaraRegistration
+     */
+    omit?: FaraRegistrationOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FaraRegistrationInclude<ExtArgs> | null
+    /**
+     * Filter, which FaraRegistrations to fetch.
+     */
+    where?: FaraRegistrationWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of FaraRegistrations to fetch.
+     */
+    orderBy?: FaraRegistrationOrderByWithRelationInput | FaraRegistrationOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing FaraRegistrations.
+     */
+    cursor?: FaraRegistrationWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` FaraRegistrations from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` FaraRegistrations.
+     */
+    skip?: number
+    distinct?: FaraRegistrationScalarFieldEnum | FaraRegistrationScalarFieldEnum[]
+  }
+
+  /**
+   * FaraRegistration create
+   */
+  export type FaraRegistrationCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FaraRegistration
+     */
+    select?: FaraRegistrationSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FaraRegistration
+     */
+    omit?: FaraRegistrationOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FaraRegistrationInclude<ExtArgs> | null
+    /**
+     * The data needed to create a FaraRegistration.
+     */
+    data: XOR<FaraRegistrationCreateInput, FaraRegistrationUncheckedCreateInput>
+  }
+
+  /**
+   * FaraRegistration createMany
+   */
+  export type FaraRegistrationCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many FaraRegistrations.
+     */
+    data: FaraRegistrationCreateManyInput | FaraRegistrationCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * FaraRegistration createManyAndReturn
+   */
+  export type FaraRegistrationCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FaraRegistration
+     */
+    select?: FaraRegistrationSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the FaraRegistration
+     */
+    omit?: FaraRegistrationOmit<ExtArgs> | null
+    /**
+     * The data used to create many FaraRegistrations.
+     */
+    data: FaraRegistrationCreateManyInput | FaraRegistrationCreateManyInput[]
+    skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FaraRegistrationIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * FaraRegistration update
+   */
+  export type FaraRegistrationUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FaraRegistration
+     */
+    select?: FaraRegistrationSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FaraRegistration
+     */
+    omit?: FaraRegistrationOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FaraRegistrationInclude<ExtArgs> | null
+    /**
+     * The data needed to update a FaraRegistration.
+     */
+    data: XOR<FaraRegistrationUpdateInput, FaraRegistrationUncheckedUpdateInput>
+    /**
+     * Choose, which FaraRegistration to update.
+     */
+    where: FaraRegistrationWhereUniqueInput
+  }
+
+  /**
+   * FaraRegistration updateMany
+   */
+  export type FaraRegistrationUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update FaraRegistrations.
+     */
+    data: XOR<FaraRegistrationUpdateManyMutationInput, FaraRegistrationUncheckedUpdateManyInput>
+    /**
+     * Filter which FaraRegistrations to update
+     */
+    where?: FaraRegistrationWhereInput
+    /**
+     * Limit how many FaraRegistrations to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * FaraRegistration updateManyAndReturn
+   */
+  export type FaraRegistrationUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FaraRegistration
+     */
+    select?: FaraRegistrationSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the FaraRegistration
+     */
+    omit?: FaraRegistrationOmit<ExtArgs> | null
+    /**
+     * The data used to update FaraRegistrations.
+     */
+    data: XOR<FaraRegistrationUpdateManyMutationInput, FaraRegistrationUncheckedUpdateManyInput>
+    /**
+     * Filter which FaraRegistrations to update
+     */
+    where?: FaraRegistrationWhereInput
+    /**
+     * Limit how many FaraRegistrations to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FaraRegistrationIncludeUpdateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * FaraRegistration upsert
+   */
+  export type FaraRegistrationUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FaraRegistration
+     */
+    select?: FaraRegistrationSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FaraRegistration
+     */
+    omit?: FaraRegistrationOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FaraRegistrationInclude<ExtArgs> | null
+    /**
+     * The filter to search for the FaraRegistration to update in case it exists.
+     */
+    where: FaraRegistrationWhereUniqueInput
+    /**
+     * In case the FaraRegistration found by the `where` argument doesn't exist, create a new FaraRegistration with this data.
+     */
+    create: XOR<FaraRegistrationCreateInput, FaraRegistrationUncheckedCreateInput>
+    /**
+     * In case the FaraRegistration was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<FaraRegistrationUpdateInput, FaraRegistrationUncheckedUpdateInput>
+  }
+
+  /**
+   * FaraRegistration delete
+   */
+  export type FaraRegistrationDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FaraRegistration
+     */
+    select?: FaraRegistrationSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FaraRegistration
+     */
+    omit?: FaraRegistrationOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FaraRegistrationInclude<ExtArgs> | null
+    /**
+     * Filter which FaraRegistration to delete.
+     */
+    where: FaraRegistrationWhereUniqueInput
+  }
+
+  /**
+   * FaraRegistration deleteMany
+   */
+  export type FaraRegistrationDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which FaraRegistrations to delete
+     */
+    where?: FaraRegistrationWhereInput
+    /**
+     * Limit how many FaraRegistrations to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * FaraRegistration.registrantEntity
+   */
+  export type FaraRegistration$registrantEntityArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Entity
+     */
+    select?: EntitySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Entity
+     */
+    omit?: EntityOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: EntityInclude<ExtArgs> | null
+    where?: EntityWhereInput
+  }
+
+  /**
+   * FaraRegistration.activities
+   */
+  export type FaraRegistration$activitiesArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FaraActivity
+     */
+    select?: FaraActivitySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FaraActivity
+     */
+    omit?: FaraActivityOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FaraActivityInclude<ExtArgs> | null
+    where?: FaraActivityWhereInput
+    orderBy?: FaraActivityOrderByWithRelationInput | FaraActivityOrderByWithRelationInput[]
+    cursor?: FaraActivityWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: FaraActivityScalarFieldEnum | FaraActivityScalarFieldEnum[]
+  }
+
+  /**
+   * FaraRegistration without action
+   */
+  export type FaraRegistrationDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FaraRegistration
+     */
+    select?: FaraRegistrationSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FaraRegistration
+     */
+    omit?: FaraRegistrationOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FaraRegistrationInclude<ExtArgs> | null
+  }
+
+
+  /**
+   * Model FaraActivity
+   */
+
+  export type AggregateFaraActivity = {
+    _count: FaraActivityCountAggregateOutputType | null
+    _avg: FaraActivityAvgAggregateOutputType | null
+    _sum: FaraActivitySumAggregateOutputType | null
+    _min: FaraActivityMinAggregateOutputType | null
+    _max: FaraActivityMaxAggregateOutputType | null
+  }
+
+  export type FaraActivityAvgAggregateOutputType = {
+    amount: Decimal | null
+  }
+
+  export type FaraActivitySumAggregateOutputType = {
+    amount: Decimal | null
+  }
+
+  export type FaraActivityMinAggregateOutputType = {
+    id: string | null
+    registrationId: string | null
+    activityType: string | null
+    description: string | null
+    amount: Decimal | null
+    periodStart: Date | null
+    periodEnd: Date | null
+    contactedOfficial: string | null
+    contactedEntityId: string | null
+    createdAt: Date | null
+  }
+
+  export type FaraActivityMaxAggregateOutputType = {
+    id: string | null
+    registrationId: string | null
+    activityType: string | null
+    description: string | null
+    amount: Decimal | null
+    periodStart: Date | null
+    periodEnd: Date | null
+    contactedOfficial: string | null
+    contactedEntityId: string | null
+    createdAt: Date | null
+  }
+
+  export type FaraActivityCountAggregateOutputType = {
+    id: number
+    registrationId: number
+    activityType: number
+    description: number
+    amount: number
+    periodStart: number
+    periodEnd: number
+    contactedOfficial: number
+    contactedEntityId: number
+    createdAt: number
+    _all: number
+  }
+
+
+  export type FaraActivityAvgAggregateInputType = {
+    amount?: true
+  }
+
+  export type FaraActivitySumAggregateInputType = {
+    amount?: true
+  }
+
+  export type FaraActivityMinAggregateInputType = {
+    id?: true
+    registrationId?: true
+    activityType?: true
+    description?: true
+    amount?: true
+    periodStart?: true
+    periodEnd?: true
+    contactedOfficial?: true
+    contactedEntityId?: true
+    createdAt?: true
+  }
+
+  export type FaraActivityMaxAggregateInputType = {
+    id?: true
+    registrationId?: true
+    activityType?: true
+    description?: true
+    amount?: true
+    periodStart?: true
+    periodEnd?: true
+    contactedOfficial?: true
+    contactedEntityId?: true
+    createdAt?: true
+  }
+
+  export type FaraActivityCountAggregateInputType = {
+    id?: true
+    registrationId?: true
+    activityType?: true
+    description?: true
+    amount?: true
+    periodStart?: true
+    periodEnd?: true
+    contactedOfficial?: true
+    contactedEntityId?: true
+    createdAt?: true
+    _all?: true
+  }
+
+  export type FaraActivityAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which FaraActivity to aggregate.
+     */
+    where?: FaraActivityWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of FaraActivities to fetch.
+     */
+    orderBy?: FaraActivityOrderByWithRelationInput | FaraActivityOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: FaraActivityWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` FaraActivities from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` FaraActivities.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned FaraActivities
+    **/
+    _count?: true | FaraActivityCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to average
+    **/
+    _avg?: FaraActivityAvgAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to sum
+    **/
+    _sum?: FaraActivitySumAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: FaraActivityMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: FaraActivityMaxAggregateInputType
+  }
+
+  export type GetFaraActivityAggregateType<T extends FaraActivityAggregateArgs> = {
+        [P in keyof T & keyof AggregateFaraActivity]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateFaraActivity[P]>
+      : GetScalarType<T[P], AggregateFaraActivity[P]>
+  }
+
+
+
+
+  export type FaraActivityGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: FaraActivityWhereInput
+    orderBy?: FaraActivityOrderByWithAggregationInput | FaraActivityOrderByWithAggregationInput[]
+    by: FaraActivityScalarFieldEnum[] | FaraActivityScalarFieldEnum
+    having?: FaraActivityScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: FaraActivityCountAggregateInputType | true
+    _avg?: FaraActivityAvgAggregateInputType
+    _sum?: FaraActivitySumAggregateInputType
+    _min?: FaraActivityMinAggregateInputType
+    _max?: FaraActivityMaxAggregateInputType
+  }
+
+  export type FaraActivityGroupByOutputType = {
+    id: string
+    registrationId: string
+    activityType: string
+    description: string | null
+    amount: Decimal | null
+    periodStart: Date
+    periodEnd: Date
+    contactedOfficial: string | null
+    contactedEntityId: string | null
+    createdAt: Date
+    _count: FaraActivityCountAggregateOutputType | null
+    _avg: FaraActivityAvgAggregateOutputType | null
+    _sum: FaraActivitySumAggregateOutputType | null
+    _min: FaraActivityMinAggregateOutputType | null
+    _max: FaraActivityMaxAggregateOutputType | null
+  }
+
+  type GetFaraActivityGroupByPayload<T extends FaraActivityGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<FaraActivityGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof FaraActivityGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], FaraActivityGroupByOutputType[P]>
+            : GetScalarType<T[P], FaraActivityGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type FaraActivitySelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    registrationId?: boolean
+    activityType?: boolean
+    description?: boolean
+    amount?: boolean
+    periodStart?: boolean
+    periodEnd?: boolean
+    contactedOfficial?: boolean
+    contactedEntityId?: boolean
+    createdAt?: boolean
+    registration?: boolean | FaraRegistrationDefaultArgs<ExtArgs>
+    contactedEntity?: boolean | FaraActivity$contactedEntityArgs<ExtArgs>
+  }, ExtArgs["result"]["faraActivity"]>
+
+  export type FaraActivitySelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    registrationId?: boolean
+    activityType?: boolean
+    description?: boolean
+    amount?: boolean
+    periodStart?: boolean
+    periodEnd?: boolean
+    contactedOfficial?: boolean
+    contactedEntityId?: boolean
+    createdAt?: boolean
+    registration?: boolean | FaraRegistrationDefaultArgs<ExtArgs>
+    contactedEntity?: boolean | FaraActivity$contactedEntityArgs<ExtArgs>
+  }, ExtArgs["result"]["faraActivity"]>
+
+  export type FaraActivitySelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    registrationId?: boolean
+    activityType?: boolean
+    description?: boolean
+    amount?: boolean
+    periodStart?: boolean
+    periodEnd?: boolean
+    contactedOfficial?: boolean
+    contactedEntityId?: boolean
+    createdAt?: boolean
+    registration?: boolean | FaraRegistrationDefaultArgs<ExtArgs>
+    contactedEntity?: boolean | FaraActivity$contactedEntityArgs<ExtArgs>
+  }, ExtArgs["result"]["faraActivity"]>
+
+  export type FaraActivitySelectScalar = {
+    id?: boolean
+    registrationId?: boolean
+    activityType?: boolean
+    description?: boolean
+    amount?: boolean
+    periodStart?: boolean
+    periodEnd?: boolean
+    contactedOfficial?: boolean
+    contactedEntityId?: boolean
+    createdAt?: boolean
+  }
+
+  export type FaraActivityOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "registrationId" | "activityType" | "description" | "amount" | "periodStart" | "periodEnd" | "contactedOfficial" | "contactedEntityId" | "createdAt", ExtArgs["result"]["faraActivity"]>
+  export type FaraActivityInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    registration?: boolean | FaraRegistrationDefaultArgs<ExtArgs>
+    contactedEntity?: boolean | FaraActivity$contactedEntityArgs<ExtArgs>
+  }
+  export type FaraActivityIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    registration?: boolean | FaraRegistrationDefaultArgs<ExtArgs>
+    contactedEntity?: boolean | FaraActivity$contactedEntityArgs<ExtArgs>
+  }
+  export type FaraActivityIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    registration?: boolean | FaraRegistrationDefaultArgs<ExtArgs>
+    contactedEntity?: boolean | FaraActivity$contactedEntityArgs<ExtArgs>
+  }
+
+  export type $FaraActivityPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "FaraActivity"
+    objects: {
+      registration: Prisma.$FaraRegistrationPayload<ExtArgs>
+      contactedEntity: Prisma.$EntityPayload<ExtArgs> | null
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      registrationId: string
+      activityType: string
+      description: string | null
+      amount: Prisma.Decimal | null
+      periodStart: Date
+      periodEnd: Date
+      contactedOfficial: string | null
+      contactedEntityId: string | null
+      createdAt: Date
+    }, ExtArgs["result"]["faraActivity"]>
+    composites: {}
+  }
+
+  type FaraActivityGetPayload<S extends boolean | null | undefined | FaraActivityDefaultArgs> = $Result.GetResult<Prisma.$FaraActivityPayload, S>
+
+  type FaraActivityCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<FaraActivityFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: FaraActivityCountAggregateInputType | true
+    }
+
+  export interface FaraActivityDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['FaraActivity'], meta: { name: 'FaraActivity' } }
+    /**
+     * Find zero or one FaraActivity that matches the filter.
+     * @param {FaraActivityFindUniqueArgs} args - Arguments to find a FaraActivity
+     * @example
+     * // Get one FaraActivity
+     * const faraActivity = await prisma.faraActivity.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends FaraActivityFindUniqueArgs>(args: SelectSubset<T, FaraActivityFindUniqueArgs<ExtArgs>>): Prisma__FaraActivityClient<$Result.GetResult<Prisma.$FaraActivityPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one FaraActivity that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {FaraActivityFindUniqueOrThrowArgs} args - Arguments to find a FaraActivity
+     * @example
+     * // Get one FaraActivity
+     * const faraActivity = await prisma.faraActivity.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends FaraActivityFindUniqueOrThrowArgs>(args: SelectSubset<T, FaraActivityFindUniqueOrThrowArgs<ExtArgs>>): Prisma__FaraActivityClient<$Result.GetResult<Prisma.$FaraActivityPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first FaraActivity that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {FaraActivityFindFirstArgs} args - Arguments to find a FaraActivity
+     * @example
+     * // Get one FaraActivity
+     * const faraActivity = await prisma.faraActivity.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends FaraActivityFindFirstArgs>(args?: SelectSubset<T, FaraActivityFindFirstArgs<ExtArgs>>): Prisma__FaraActivityClient<$Result.GetResult<Prisma.$FaraActivityPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first FaraActivity that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {FaraActivityFindFirstOrThrowArgs} args - Arguments to find a FaraActivity
+     * @example
+     * // Get one FaraActivity
+     * const faraActivity = await prisma.faraActivity.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends FaraActivityFindFirstOrThrowArgs>(args?: SelectSubset<T, FaraActivityFindFirstOrThrowArgs<ExtArgs>>): Prisma__FaraActivityClient<$Result.GetResult<Prisma.$FaraActivityPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more FaraActivities that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {FaraActivityFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all FaraActivities
+     * const faraActivities = await prisma.faraActivity.findMany()
+     * 
+     * // Get first 10 FaraActivities
+     * const faraActivities = await prisma.faraActivity.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const faraActivityWithIdOnly = await prisma.faraActivity.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends FaraActivityFindManyArgs>(args?: SelectSubset<T, FaraActivityFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$FaraActivityPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a FaraActivity.
+     * @param {FaraActivityCreateArgs} args - Arguments to create a FaraActivity.
+     * @example
+     * // Create one FaraActivity
+     * const FaraActivity = await prisma.faraActivity.create({
+     *   data: {
+     *     // ... data to create a FaraActivity
+     *   }
+     * })
+     * 
+     */
+    create<T extends FaraActivityCreateArgs>(args: SelectSubset<T, FaraActivityCreateArgs<ExtArgs>>): Prisma__FaraActivityClient<$Result.GetResult<Prisma.$FaraActivityPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many FaraActivities.
+     * @param {FaraActivityCreateManyArgs} args - Arguments to create many FaraActivities.
+     * @example
+     * // Create many FaraActivities
+     * const faraActivity = await prisma.faraActivity.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends FaraActivityCreateManyArgs>(args?: SelectSubset<T, FaraActivityCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many FaraActivities and returns the data saved in the database.
+     * @param {FaraActivityCreateManyAndReturnArgs} args - Arguments to create many FaraActivities.
+     * @example
+     * // Create many FaraActivities
+     * const faraActivity = await prisma.faraActivity.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many FaraActivities and only return the `id`
+     * const faraActivityWithIdOnly = await prisma.faraActivity.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends FaraActivityCreateManyAndReturnArgs>(args?: SelectSubset<T, FaraActivityCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$FaraActivityPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a FaraActivity.
+     * @param {FaraActivityDeleteArgs} args - Arguments to delete one FaraActivity.
+     * @example
+     * // Delete one FaraActivity
+     * const FaraActivity = await prisma.faraActivity.delete({
+     *   where: {
+     *     // ... filter to delete one FaraActivity
+     *   }
+     * })
+     * 
+     */
+    delete<T extends FaraActivityDeleteArgs>(args: SelectSubset<T, FaraActivityDeleteArgs<ExtArgs>>): Prisma__FaraActivityClient<$Result.GetResult<Prisma.$FaraActivityPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one FaraActivity.
+     * @param {FaraActivityUpdateArgs} args - Arguments to update one FaraActivity.
+     * @example
+     * // Update one FaraActivity
+     * const faraActivity = await prisma.faraActivity.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends FaraActivityUpdateArgs>(args: SelectSubset<T, FaraActivityUpdateArgs<ExtArgs>>): Prisma__FaraActivityClient<$Result.GetResult<Prisma.$FaraActivityPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more FaraActivities.
+     * @param {FaraActivityDeleteManyArgs} args - Arguments to filter FaraActivities to delete.
+     * @example
+     * // Delete a few FaraActivities
+     * const { count } = await prisma.faraActivity.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends FaraActivityDeleteManyArgs>(args?: SelectSubset<T, FaraActivityDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more FaraActivities.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {FaraActivityUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many FaraActivities
+     * const faraActivity = await prisma.faraActivity.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends FaraActivityUpdateManyArgs>(args: SelectSubset<T, FaraActivityUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more FaraActivities and returns the data updated in the database.
+     * @param {FaraActivityUpdateManyAndReturnArgs} args - Arguments to update many FaraActivities.
+     * @example
+     * // Update many FaraActivities
+     * const faraActivity = await prisma.faraActivity.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more FaraActivities and only return the `id`
+     * const faraActivityWithIdOnly = await prisma.faraActivity.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends FaraActivityUpdateManyAndReturnArgs>(args: SelectSubset<T, FaraActivityUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$FaraActivityPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one FaraActivity.
+     * @param {FaraActivityUpsertArgs} args - Arguments to update or create a FaraActivity.
+     * @example
+     * // Update or create a FaraActivity
+     * const faraActivity = await prisma.faraActivity.upsert({
+     *   create: {
+     *     // ... data to create a FaraActivity
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the FaraActivity we want to update
+     *   }
+     * })
+     */
+    upsert<T extends FaraActivityUpsertArgs>(args: SelectSubset<T, FaraActivityUpsertArgs<ExtArgs>>): Prisma__FaraActivityClient<$Result.GetResult<Prisma.$FaraActivityPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of FaraActivities.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {FaraActivityCountArgs} args - Arguments to filter FaraActivities to count.
+     * @example
+     * // Count the number of FaraActivities
+     * const count = await prisma.faraActivity.count({
+     *   where: {
+     *     // ... the filter for the FaraActivities we want to count
+     *   }
+     * })
+    **/
+    count<T extends FaraActivityCountArgs>(
+      args?: Subset<T, FaraActivityCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], FaraActivityCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a FaraActivity.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {FaraActivityAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends FaraActivityAggregateArgs>(args: Subset<T, FaraActivityAggregateArgs>): Prisma.PrismaPromise<GetFaraActivityAggregateType<T>>
+
+    /**
+     * Group by FaraActivity.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {FaraActivityGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends FaraActivityGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: FaraActivityGroupByArgs['orderBy'] }
+        : { orderBy?: FaraActivityGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, FaraActivityGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetFaraActivityGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the FaraActivity model
+   */
+  readonly fields: FaraActivityFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for FaraActivity.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__FaraActivityClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    registration<T extends FaraRegistrationDefaultArgs<ExtArgs> = {}>(args?: Subset<T, FaraRegistrationDefaultArgs<ExtArgs>>): Prisma__FaraRegistrationClient<$Result.GetResult<Prisma.$FaraRegistrationPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    contactedEntity<T extends FaraActivity$contactedEntityArgs<ExtArgs> = {}>(args?: Subset<T, FaraActivity$contactedEntityArgs<ExtArgs>>): Prisma__EntityClient<$Result.GetResult<Prisma.$EntityPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the FaraActivity model
+   */
+  interface FaraActivityFieldRefs {
+    readonly id: FieldRef<"FaraActivity", 'String'>
+    readonly registrationId: FieldRef<"FaraActivity", 'String'>
+    readonly activityType: FieldRef<"FaraActivity", 'String'>
+    readonly description: FieldRef<"FaraActivity", 'String'>
+    readonly amount: FieldRef<"FaraActivity", 'Decimal'>
+    readonly periodStart: FieldRef<"FaraActivity", 'DateTime'>
+    readonly periodEnd: FieldRef<"FaraActivity", 'DateTime'>
+    readonly contactedOfficial: FieldRef<"FaraActivity", 'String'>
+    readonly contactedEntityId: FieldRef<"FaraActivity", 'String'>
+    readonly createdAt: FieldRef<"FaraActivity", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * FaraActivity findUnique
+   */
+  export type FaraActivityFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FaraActivity
+     */
+    select?: FaraActivitySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FaraActivity
+     */
+    omit?: FaraActivityOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FaraActivityInclude<ExtArgs> | null
+    /**
+     * Filter, which FaraActivity to fetch.
+     */
+    where: FaraActivityWhereUniqueInput
+  }
+
+  /**
+   * FaraActivity findUniqueOrThrow
+   */
+  export type FaraActivityFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FaraActivity
+     */
+    select?: FaraActivitySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FaraActivity
+     */
+    omit?: FaraActivityOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FaraActivityInclude<ExtArgs> | null
+    /**
+     * Filter, which FaraActivity to fetch.
+     */
+    where: FaraActivityWhereUniqueInput
+  }
+
+  /**
+   * FaraActivity findFirst
+   */
+  export type FaraActivityFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FaraActivity
+     */
+    select?: FaraActivitySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FaraActivity
+     */
+    omit?: FaraActivityOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FaraActivityInclude<ExtArgs> | null
+    /**
+     * Filter, which FaraActivity to fetch.
+     */
+    where?: FaraActivityWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of FaraActivities to fetch.
+     */
+    orderBy?: FaraActivityOrderByWithRelationInput | FaraActivityOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for FaraActivities.
+     */
+    cursor?: FaraActivityWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` FaraActivities from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` FaraActivities.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of FaraActivities.
+     */
+    distinct?: FaraActivityScalarFieldEnum | FaraActivityScalarFieldEnum[]
+  }
+
+  /**
+   * FaraActivity findFirstOrThrow
+   */
+  export type FaraActivityFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FaraActivity
+     */
+    select?: FaraActivitySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FaraActivity
+     */
+    omit?: FaraActivityOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FaraActivityInclude<ExtArgs> | null
+    /**
+     * Filter, which FaraActivity to fetch.
+     */
+    where?: FaraActivityWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of FaraActivities to fetch.
+     */
+    orderBy?: FaraActivityOrderByWithRelationInput | FaraActivityOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for FaraActivities.
+     */
+    cursor?: FaraActivityWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` FaraActivities from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` FaraActivities.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of FaraActivities.
+     */
+    distinct?: FaraActivityScalarFieldEnum | FaraActivityScalarFieldEnum[]
+  }
+
+  /**
+   * FaraActivity findMany
+   */
+  export type FaraActivityFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FaraActivity
+     */
+    select?: FaraActivitySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FaraActivity
+     */
+    omit?: FaraActivityOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FaraActivityInclude<ExtArgs> | null
+    /**
+     * Filter, which FaraActivities to fetch.
+     */
+    where?: FaraActivityWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of FaraActivities to fetch.
+     */
+    orderBy?: FaraActivityOrderByWithRelationInput | FaraActivityOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing FaraActivities.
+     */
+    cursor?: FaraActivityWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` FaraActivities from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` FaraActivities.
+     */
+    skip?: number
+    distinct?: FaraActivityScalarFieldEnum | FaraActivityScalarFieldEnum[]
+  }
+
+  /**
+   * FaraActivity create
+   */
+  export type FaraActivityCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FaraActivity
+     */
+    select?: FaraActivitySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FaraActivity
+     */
+    omit?: FaraActivityOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FaraActivityInclude<ExtArgs> | null
+    /**
+     * The data needed to create a FaraActivity.
+     */
+    data: XOR<FaraActivityCreateInput, FaraActivityUncheckedCreateInput>
+  }
+
+  /**
+   * FaraActivity createMany
+   */
+  export type FaraActivityCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many FaraActivities.
+     */
+    data: FaraActivityCreateManyInput | FaraActivityCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * FaraActivity createManyAndReturn
+   */
+  export type FaraActivityCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FaraActivity
+     */
+    select?: FaraActivitySelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the FaraActivity
+     */
+    omit?: FaraActivityOmit<ExtArgs> | null
+    /**
+     * The data used to create many FaraActivities.
+     */
+    data: FaraActivityCreateManyInput | FaraActivityCreateManyInput[]
+    skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FaraActivityIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * FaraActivity update
+   */
+  export type FaraActivityUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FaraActivity
+     */
+    select?: FaraActivitySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FaraActivity
+     */
+    omit?: FaraActivityOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FaraActivityInclude<ExtArgs> | null
+    /**
+     * The data needed to update a FaraActivity.
+     */
+    data: XOR<FaraActivityUpdateInput, FaraActivityUncheckedUpdateInput>
+    /**
+     * Choose, which FaraActivity to update.
+     */
+    where: FaraActivityWhereUniqueInput
+  }
+
+  /**
+   * FaraActivity updateMany
+   */
+  export type FaraActivityUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update FaraActivities.
+     */
+    data: XOR<FaraActivityUpdateManyMutationInput, FaraActivityUncheckedUpdateManyInput>
+    /**
+     * Filter which FaraActivities to update
+     */
+    where?: FaraActivityWhereInput
+    /**
+     * Limit how many FaraActivities to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * FaraActivity updateManyAndReturn
+   */
+  export type FaraActivityUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FaraActivity
+     */
+    select?: FaraActivitySelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the FaraActivity
+     */
+    omit?: FaraActivityOmit<ExtArgs> | null
+    /**
+     * The data used to update FaraActivities.
+     */
+    data: XOR<FaraActivityUpdateManyMutationInput, FaraActivityUncheckedUpdateManyInput>
+    /**
+     * Filter which FaraActivities to update
+     */
+    where?: FaraActivityWhereInput
+    /**
+     * Limit how many FaraActivities to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FaraActivityIncludeUpdateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * FaraActivity upsert
+   */
+  export type FaraActivityUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FaraActivity
+     */
+    select?: FaraActivitySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FaraActivity
+     */
+    omit?: FaraActivityOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FaraActivityInclude<ExtArgs> | null
+    /**
+     * The filter to search for the FaraActivity to update in case it exists.
+     */
+    where: FaraActivityWhereUniqueInput
+    /**
+     * In case the FaraActivity found by the `where` argument doesn't exist, create a new FaraActivity with this data.
+     */
+    create: XOR<FaraActivityCreateInput, FaraActivityUncheckedCreateInput>
+    /**
+     * In case the FaraActivity was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<FaraActivityUpdateInput, FaraActivityUncheckedUpdateInput>
+  }
+
+  /**
+   * FaraActivity delete
+   */
+  export type FaraActivityDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FaraActivity
+     */
+    select?: FaraActivitySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FaraActivity
+     */
+    omit?: FaraActivityOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FaraActivityInclude<ExtArgs> | null
+    /**
+     * Filter which FaraActivity to delete.
+     */
+    where: FaraActivityWhereUniqueInput
+  }
+
+  /**
+   * FaraActivity deleteMany
+   */
+  export type FaraActivityDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which FaraActivities to delete
+     */
+    where?: FaraActivityWhereInput
+    /**
+     * Limit how many FaraActivities to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * FaraActivity.contactedEntity
+   */
+  export type FaraActivity$contactedEntityArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Entity
+     */
+    select?: EntitySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Entity
+     */
+    omit?: EntityOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: EntityInclude<ExtArgs> | null
+    where?: EntityWhereInput
+  }
+
+  /**
+   * FaraActivity without action
+   */
+  export type FaraActivityDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FaraActivity
+     */
+    select?: FaraActivitySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FaraActivity
+     */
+    omit?: FaraActivityOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FaraActivityInclude<ExtArgs> | null
+  }
+
+
+  /**
+   * Model NonprofitFiling
+   */
+
+  export type AggregateNonprofitFiling = {
+    _count: NonprofitFilingCountAggregateOutputType | null
+    _avg: NonprofitFilingAvgAggregateOutputType | null
+    _sum: NonprofitFilingSumAggregateOutputType | null
+    _min: NonprofitFilingMinAggregateOutputType | null
+    _max: NonprofitFilingMaxAggregateOutputType | null
+  }
+
+  export type NonprofitFilingAvgAggregateOutputType = {
+    totalRevenue: Decimal | null
+    totalExpenses: Decimal | null
+    totalAssets: Decimal | null
+    politicalExpenses: Decimal | null
+    filingYear: number | null
+  }
+
+  export type NonprofitFilingSumAggregateOutputType = {
+    totalRevenue: Decimal | null
+    totalExpenses: Decimal | null
+    totalAssets: Decimal | null
+    politicalExpenses: Decimal | null
+    filingYear: number | null
+  }
+
+  export type NonprofitFilingMinAggregateOutputType = {
+    id: string | null
+    ein: string | null
+    entityId: string | null
+    organizationName: string | null
+    taxPeriod: string | null
+    totalRevenue: Decimal | null
+    totalExpenses: Decimal | null
+    totalAssets: Decimal | null
+    politicalExpenses: Decimal | null
+    formType: string | null
+    filingYear: number | null
+    pdfUrl: string | null
+    createdAt: Date | null
+  }
+
+  export type NonprofitFilingMaxAggregateOutputType = {
+    id: string | null
+    ein: string | null
+    entityId: string | null
+    organizationName: string | null
+    taxPeriod: string | null
+    totalRevenue: Decimal | null
+    totalExpenses: Decimal | null
+    totalAssets: Decimal | null
+    politicalExpenses: Decimal | null
+    formType: string | null
+    filingYear: number | null
+    pdfUrl: string | null
+    createdAt: Date | null
+  }
+
+  export type NonprofitFilingCountAggregateOutputType = {
+    id: number
+    ein: number
+    entityId: number
+    organizationName: number
+    taxPeriod: number
+    totalRevenue: number
+    totalExpenses: number
+    totalAssets: number
+    politicalExpenses: number
+    grantRecipients: number
+    formType: number
+    filingYear: number
+    pdfUrl: number
+    createdAt: number
+    _all: number
+  }
+
+
+  export type NonprofitFilingAvgAggregateInputType = {
+    totalRevenue?: true
+    totalExpenses?: true
+    totalAssets?: true
+    politicalExpenses?: true
+    filingYear?: true
+  }
+
+  export type NonprofitFilingSumAggregateInputType = {
+    totalRevenue?: true
+    totalExpenses?: true
+    totalAssets?: true
+    politicalExpenses?: true
+    filingYear?: true
+  }
+
+  export type NonprofitFilingMinAggregateInputType = {
+    id?: true
+    ein?: true
+    entityId?: true
+    organizationName?: true
+    taxPeriod?: true
+    totalRevenue?: true
+    totalExpenses?: true
+    totalAssets?: true
+    politicalExpenses?: true
+    formType?: true
+    filingYear?: true
+    pdfUrl?: true
+    createdAt?: true
+  }
+
+  export type NonprofitFilingMaxAggregateInputType = {
+    id?: true
+    ein?: true
+    entityId?: true
+    organizationName?: true
+    taxPeriod?: true
+    totalRevenue?: true
+    totalExpenses?: true
+    totalAssets?: true
+    politicalExpenses?: true
+    formType?: true
+    filingYear?: true
+    pdfUrl?: true
+    createdAt?: true
+  }
+
+  export type NonprofitFilingCountAggregateInputType = {
+    id?: true
+    ein?: true
+    entityId?: true
+    organizationName?: true
+    taxPeriod?: true
+    totalRevenue?: true
+    totalExpenses?: true
+    totalAssets?: true
+    politicalExpenses?: true
+    grantRecipients?: true
+    formType?: true
+    filingYear?: true
+    pdfUrl?: true
+    createdAt?: true
+    _all?: true
+  }
+
+  export type NonprofitFilingAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which NonprofitFiling to aggregate.
+     */
+    where?: NonprofitFilingWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of NonprofitFilings to fetch.
+     */
+    orderBy?: NonprofitFilingOrderByWithRelationInput | NonprofitFilingOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: NonprofitFilingWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` NonprofitFilings from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` NonprofitFilings.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned NonprofitFilings
+    **/
+    _count?: true | NonprofitFilingCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to average
+    **/
+    _avg?: NonprofitFilingAvgAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to sum
+    **/
+    _sum?: NonprofitFilingSumAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: NonprofitFilingMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: NonprofitFilingMaxAggregateInputType
+  }
+
+  export type GetNonprofitFilingAggregateType<T extends NonprofitFilingAggregateArgs> = {
+        [P in keyof T & keyof AggregateNonprofitFiling]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateNonprofitFiling[P]>
+      : GetScalarType<T[P], AggregateNonprofitFiling[P]>
+  }
+
+
+
+
+  export type NonprofitFilingGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: NonprofitFilingWhereInput
+    orderBy?: NonprofitFilingOrderByWithAggregationInput | NonprofitFilingOrderByWithAggregationInput[]
+    by: NonprofitFilingScalarFieldEnum[] | NonprofitFilingScalarFieldEnum
+    having?: NonprofitFilingScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: NonprofitFilingCountAggregateInputType | true
+    _avg?: NonprofitFilingAvgAggregateInputType
+    _sum?: NonprofitFilingSumAggregateInputType
+    _min?: NonprofitFilingMinAggregateInputType
+    _max?: NonprofitFilingMaxAggregateInputType
+  }
+
+  export type NonprofitFilingGroupByOutputType = {
+    id: string
+    ein: string
+    entityId: string | null
+    organizationName: string
+    taxPeriod: string
+    totalRevenue: Decimal | null
+    totalExpenses: Decimal | null
+    totalAssets: Decimal | null
+    politicalExpenses: Decimal | null
+    grantRecipients: JsonValue | null
+    formType: string
+    filingYear: number
+    pdfUrl: string | null
+    createdAt: Date
+    _count: NonprofitFilingCountAggregateOutputType | null
+    _avg: NonprofitFilingAvgAggregateOutputType | null
+    _sum: NonprofitFilingSumAggregateOutputType | null
+    _min: NonprofitFilingMinAggregateOutputType | null
+    _max: NonprofitFilingMaxAggregateOutputType | null
+  }
+
+  type GetNonprofitFilingGroupByPayload<T extends NonprofitFilingGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<NonprofitFilingGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof NonprofitFilingGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], NonprofitFilingGroupByOutputType[P]>
+            : GetScalarType<T[P], NonprofitFilingGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type NonprofitFilingSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    ein?: boolean
+    entityId?: boolean
+    organizationName?: boolean
+    taxPeriod?: boolean
+    totalRevenue?: boolean
+    totalExpenses?: boolean
+    totalAssets?: boolean
+    politicalExpenses?: boolean
+    grantRecipients?: boolean
+    formType?: boolean
+    filingYear?: boolean
+    pdfUrl?: boolean
+    createdAt?: boolean
+  }, ExtArgs["result"]["nonprofitFiling"]>
+
+  export type NonprofitFilingSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    ein?: boolean
+    entityId?: boolean
+    organizationName?: boolean
+    taxPeriod?: boolean
+    totalRevenue?: boolean
+    totalExpenses?: boolean
+    totalAssets?: boolean
+    politicalExpenses?: boolean
+    grantRecipients?: boolean
+    formType?: boolean
+    filingYear?: boolean
+    pdfUrl?: boolean
+    createdAt?: boolean
+  }, ExtArgs["result"]["nonprofitFiling"]>
+
+  export type NonprofitFilingSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    ein?: boolean
+    entityId?: boolean
+    organizationName?: boolean
+    taxPeriod?: boolean
+    totalRevenue?: boolean
+    totalExpenses?: boolean
+    totalAssets?: boolean
+    politicalExpenses?: boolean
+    grantRecipients?: boolean
+    formType?: boolean
+    filingYear?: boolean
+    pdfUrl?: boolean
+    createdAt?: boolean
+  }, ExtArgs["result"]["nonprofitFiling"]>
+
+  export type NonprofitFilingSelectScalar = {
+    id?: boolean
+    ein?: boolean
+    entityId?: boolean
+    organizationName?: boolean
+    taxPeriod?: boolean
+    totalRevenue?: boolean
+    totalExpenses?: boolean
+    totalAssets?: boolean
+    politicalExpenses?: boolean
+    grantRecipients?: boolean
+    formType?: boolean
+    filingYear?: boolean
+    pdfUrl?: boolean
+    createdAt?: boolean
+  }
+
+  export type NonprofitFilingOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "ein" | "entityId" | "organizationName" | "taxPeriod" | "totalRevenue" | "totalExpenses" | "totalAssets" | "politicalExpenses" | "grantRecipients" | "formType" | "filingYear" | "pdfUrl" | "createdAt", ExtArgs["result"]["nonprofitFiling"]>
+
+  export type $NonprofitFilingPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "NonprofitFiling"
+    objects: {}
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      ein: string
+      entityId: string | null
+      organizationName: string
+      taxPeriod: string
+      totalRevenue: Prisma.Decimal | null
+      totalExpenses: Prisma.Decimal | null
+      totalAssets: Prisma.Decimal | null
+      politicalExpenses: Prisma.Decimal | null
+      grantRecipients: Prisma.JsonValue | null
+      formType: string
+      filingYear: number
+      pdfUrl: string | null
+      createdAt: Date
+    }, ExtArgs["result"]["nonprofitFiling"]>
+    composites: {}
+  }
+
+  type NonprofitFilingGetPayload<S extends boolean | null | undefined | NonprofitFilingDefaultArgs> = $Result.GetResult<Prisma.$NonprofitFilingPayload, S>
+
+  type NonprofitFilingCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<NonprofitFilingFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: NonprofitFilingCountAggregateInputType | true
+    }
+
+  export interface NonprofitFilingDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['NonprofitFiling'], meta: { name: 'NonprofitFiling' } }
+    /**
+     * Find zero or one NonprofitFiling that matches the filter.
+     * @param {NonprofitFilingFindUniqueArgs} args - Arguments to find a NonprofitFiling
+     * @example
+     * // Get one NonprofitFiling
+     * const nonprofitFiling = await prisma.nonprofitFiling.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends NonprofitFilingFindUniqueArgs>(args: SelectSubset<T, NonprofitFilingFindUniqueArgs<ExtArgs>>): Prisma__NonprofitFilingClient<$Result.GetResult<Prisma.$NonprofitFilingPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one NonprofitFiling that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {NonprofitFilingFindUniqueOrThrowArgs} args - Arguments to find a NonprofitFiling
+     * @example
+     * // Get one NonprofitFiling
+     * const nonprofitFiling = await prisma.nonprofitFiling.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends NonprofitFilingFindUniqueOrThrowArgs>(args: SelectSubset<T, NonprofitFilingFindUniqueOrThrowArgs<ExtArgs>>): Prisma__NonprofitFilingClient<$Result.GetResult<Prisma.$NonprofitFilingPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first NonprofitFiling that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {NonprofitFilingFindFirstArgs} args - Arguments to find a NonprofitFiling
+     * @example
+     * // Get one NonprofitFiling
+     * const nonprofitFiling = await prisma.nonprofitFiling.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends NonprofitFilingFindFirstArgs>(args?: SelectSubset<T, NonprofitFilingFindFirstArgs<ExtArgs>>): Prisma__NonprofitFilingClient<$Result.GetResult<Prisma.$NonprofitFilingPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first NonprofitFiling that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {NonprofitFilingFindFirstOrThrowArgs} args - Arguments to find a NonprofitFiling
+     * @example
+     * // Get one NonprofitFiling
+     * const nonprofitFiling = await prisma.nonprofitFiling.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends NonprofitFilingFindFirstOrThrowArgs>(args?: SelectSubset<T, NonprofitFilingFindFirstOrThrowArgs<ExtArgs>>): Prisma__NonprofitFilingClient<$Result.GetResult<Prisma.$NonprofitFilingPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more NonprofitFilings that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {NonprofitFilingFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all NonprofitFilings
+     * const nonprofitFilings = await prisma.nonprofitFiling.findMany()
+     * 
+     * // Get first 10 NonprofitFilings
+     * const nonprofitFilings = await prisma.nonprofitFiling.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const nonprofitFilingWithIdOnly = await prisma.nonprofitFiling.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends NonprofitFilingFindManyArgs>(args?: SelectSubset<T, NonprofitFilingFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$NonprofitFilingPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a NonprofitFiling.
+     * @param {NonprofitFilingCreateArgs} args - Arguments to create a NonprofitFiling.
+     * @example
+     * // Create one NonprofitFiling
+     * const NonprofitFiling = await prisma.nonprofitFiling.create({
+     *   data: {
+     *     // ... data to create a NonprofitFiling
+     *   }
+     * })
+     * 
+     */
+    create<T extends NonprofitFilingCreateArgs>(args: SelectSubset<T, NonprofitFilingCreateArgs<ExtArgs>>): Prisma__NonprofitFilingClient<$Result.GetResult<Prisma.$NonprofitFilingPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many NonprofitFilings.
+     * @param {NonprofitFilingCreateManyArgs} args - Arguments to create many NonprofitFilings.
+     * @example
+     * // Create many NonprofitFilings
+     * const nonprofitFiling = await prisma.nonprofitFiling.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends NonprofitFilingCreateManyArgs>(args?: SelectSubset<T, NonprofitFilingCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many NonprofitFilings and returns the data saved in the database.
+     * @param {NonprofitFilingCreateManyAndReturnArgs} args - Arguments to create many NonprofitFilings.
+     * @example
+     * // Create many NonprofitFilings
+     * const nonprofitFiling = await prisma.nonprofitFiling.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many NonprofitFilings and only return the `id`
+     * const nonprofitFilingWithIdOnly = await prisma.nonprofitFiling.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends NonprofitFilingCreateManyAndReturnArgs>(args?: SelectSubset<T, NonprofitFilingCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$NonprofitFilingPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a NonprofitFiling.
+     * @param {NonprofitFilingDeleteArgs} args - Arguments to delete one NonprofitFiling.
+     * @example
+     * // Delete one NonprofitFiling
+     * const NonprofitFiling = await prisma.nonprofitFiling.delete({
+     *   where: {
+     *     // ... filter to delete one NonprofitFiling
+     *   }
+     * })
+     * 
+     */
+    delete<T extends NonprofitFilingDeleteArgs>(args: SelectSubset<T, NonprofitFilingDeleteArgs<ExtArgs>>): Prisma__NonprofitFilingClient<$Result.GetResult<Prisma.$NonprofitFilingPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one NonprofitFiling.
+     * @param {NonprofitFilingUpdateArgs} args - Arguments to update one NonprofitFiling.
+     * @example
+     * // Update one NonprofitFiling
+     * const nonprofitFiling = await prisma.nonprofitFiling.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends NonprofitFilingUpdateArgs>(args: SelectSubset<T, NonprofitFilingUpdateArgs<ExtArgs>>): Prisma__NonprofitFilingClient<$Result.GetResult<Prisma.$NonprofitFilingPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more NonprofitFilings.
+     * @param {NonprofitFilingDeleteManyArgs} args - Arguments to filter NonprofitFilings to delete.
+     * @example
+     * // Delete a few NonprofitFilings
+     * const { count } = await prisma.nonprofitFiling.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends NonprofitFilingDeleteManyArgs>(args?: SelectSubset<T, NonprofitFilingDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more NonprofitFilings.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {NonprofitFilingUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many NonprofitFilings
+     * const nonprofitFiling = await prisma.nonprofitFiling.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends NonprofitFilingUpdateManyArgs>(args: SelectSubset<T, NonprofitFilingUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more NonprofitFilings and returns the data updated in the database.
+     * @param {NonprofitFilingUpdateManyAndReturnArgs} args - Arguments to update many NonprofitFilings.
+     * @example
+     * // Update many NonprofitFilings
+     * const nonprofitFiling = await prisma.nonprofitFiling.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more NonprofitFilings and only return the `id`
+     * const nonprofitFilingWithIdOnly = await prisma.nonprofitFiling.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends NonprofitFilingUpdateManyAndReturnArgs>(args: SelectSubset<T, NonprofitFilingUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$NonprofitFilingPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one NonprofitFiling.
+     * @param {NonprofitFilingUpsertArgs} args - Arguments to update or create a NonprofitFiling.
+     * @example
+     * // Update or create a NonprofitFiling
+     * const nonprofitFiling = await prisma.nonprofitFiling.upsert({
+     *   create: {
+     *     // ... data to create a NonprofitFiling
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the NonprofitFiling we want to update
+     *   }
+     * })
+     */
+    upsert<T extends NonprofitFilingUpsertArgs>(args: SelectSubset<T, NonprofitFilingUpsertArgs<ExtArgs>>): Prisma__NonprofitFilingClient<$Result.GetResult<Prisma.$NonprofitFilingPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of NonprofitFilings.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {NonprofitFilingCountArgs} args - Arguments to filter NonprofitFilings to count.
+     * @example
+     * // Count the number of NonprofitFilings
+     * const count = await prisma.nonprofitFiling.count({
+     *   where: {
+     *     // ... the filter for the NonprofitFilings we want to count
+     *   }
+     * })
+    **/
+    count<T extends NonprofitFilingCountArgs>(
+      args?: Subset<T, NonprofitFilingCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], NonprofitFilingCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a NonprofitFiling.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {NonprofitFilingAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends NonprofitFilingAggregateArgs>(args: Subset<T, NonprofitFilingAggregateArgs>): Prisma.PrismaPromise<GetNonprofitFilingAggregateType<T>>
+
+    /**
+     * Group by NonprofitFiling.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {NonprofitFilingGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends NonprofitFilingGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: NonprofitFilingGroupByArgs['orderBy'] }
+        : { orderBy?: NonprofitFilingGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, NonprofitFilingGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetNonprofitFilingGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the NonprofitFiling model
+   */
+  readonly fields: NonprofitFilingFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for NonprofitFiling.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__NonprofitFilingClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the NonprofitFiling model
+   */
+  interface NonprofitFilingFieldRefs {
+    readonly id: FieldRef<"NonprofitFiling", 'String'>
+    readonly ein: FieldRef<"NonprofitFiling", 'String'>
+    readonly entityId: FieldRef<"NonprofitFiling", 'String'>
+    readonly organizationName: FieldRef<"NonprofitFiling", 'String'>
+    readonly taxPeriod: FieldRef<"NonprofitFiling", 'String'>
+    readonly totalRevenue: FieldRef<"NonprofitFiling", 'Decimal'>
+    readonly totalExpenses: FieldRef<"NonprofitFiling", 'Decimal'>
+    readonly totalAssets: FieldRef<"NonprofitFiling", 'Decimal'>
+    readonly politicalExpenses: FieldRef<"NonprofitFiling", 'Decimal'>
+    readonly grantRecipients: FieldRef<"NonprofitFiling", 'Json'>
+    readonly formType: FieldRef<"NonprofitFiling", 'String'>
+    readonly filingYear: FieldRef<"NonprofitFiling", 'Int'>
+    readonly pdfUrl: FieldRef<"NonprofitFiling", 'String'>
+    readonly createdAt: FieldRef<"NonprofitFiling", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * NonprofitFiling findUnique
+   */
+  export type NonprofitFilingFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the NonprofitFiling
+     */
+    select?: NonprofitFilingSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the NonprofitFiling
+     */
+    omit?: NonprofitFilingOmit<ExtArgs> | null
+    /**
+     * Filter, which NonprofitFiling to fetch.
+     */
+    where: NonprofitFilingWhereUniqueInput
+  }
+
+  /**
+   * NonprofitFiling findUniqueOrThrow
+   */
+  export type NonprofitFilingFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the NonprofitFiling
+     */
+    select?: NonprofitFilingSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the NonprofitFiling
+     */
+    omit?: NonprofitFilingOmit<ExtArgs> | null
+    /**
+     * Filter, which NonprofitFiling to fetch.
+     */
+    where: NonprofitFilingWhereUniqueInput
+  }
+
+  /**
+   * NonprofitFiling findFirst
+   */
+  export type NonprofitFilingFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the NonprofitFiling
+     */
+    select?: NonprofitFilingSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the NonprofitFiling
+     */
+    omit?: NonprofitFilingOmit<ExtArgs> | null
+    /**
+     * Filter, which NonprofitFiling to fetch.
+     */
+    where?: NonprofitFilingWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of NonprofitFilings to fetch.
+     */
+    orderBy?: NonprofitFilingOrderByWithRelationInput | NonprofitFilingOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for NonprofitFilings.
+     */
+    cursor?: NonprofitFilingWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` NonprofitFilings from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` NonprofitFilings.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of NonprofitFilings.
+     */
+    distinct?: NonprofitFilingScalarFieldEnum | NonprofitFilingScalarFieldEnum[]
+  }
+
+  /**
+   * NonprofitFiling findFirstOrThrow
+   */
+  export type NonprofitFilingFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the NonprofitFiling
+     */
+    select?: NonprofitFilingSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the NonprofitFiling
+     */
+    omit?: NonprofitFilingOmit<ExtArgs> | null
+    /**
+     * Filter, which NonprofitFiling to fetch.
+     */
+    where?: NonprofitFilingWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of NonprofitFilings to fetch.
+     */
+    orderBy?: NonprofitFilingOrderByWithRelationInput | NonprofitFilingOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for NonprofitFilings.
+     */
+    cursor?: NonprofitFilingWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` NonprofitFilings from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` NonprofitFilings.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of NonprofitFilings.
+     */
+    distinct?: NonprofitFilingScalarFieldEnum | NonprofitFilingScalarFieldEnum[]
+  }
+
+  /**
+   * NonprofitFiling findMany
+   */
+  export type NonprofitFilingFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the NonprofitFiling
+     */
+    select?: NonprofitFilingSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the NonprofitFiling
+     */
+    omit?: NonprofitFilingOmit<ExtArgs> | null
+    /**
+     * Filter, which NonprofitFilings to fetch.
+     */
+    where?: NonprofitFilingWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of NonprofitFilings to fetch.
+     */
+    orderBy?: NonprofitFilingOrderByWithRelationInput | NonprofitFilingOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing NonprofitFilings.
+     */
+    cursor?: NonprofitFilingWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` NonprofitFilings from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` NonprofitFilings.
+     */
+    skip?: number
+    distinct?: NonprofitFilingScalarFieldEnum | NonprofitFilingScalarFieldEnum[]
+  }
+
+  /**
+   * NonprofitFiling create
+   */
+  export type NonprofitFilingCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the NonprofitFiling
+     */
+    select?: NonprofitFilingSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the NonprofitFiling
+     */
+    omit?: NonprofitFilingOmit<ExtArgs> | null
+    /**
+     * The data needed to create a NonprofitFiling.
+     */
+    data: XOR<NonprofitFilingCreateInput, NonprofitFilingUncheckedCreateInput>
+  }
+
+  /**
+   * NonprofitFiling createMany
+   */
+  export type NonprofitFilingCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many NonprofitFilings.
+     */
+    data: NonprofitFilingCreateManyInput | NonprofitFilingCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * NonprofitFiling createManyAndReturn
+   */
+  export type NonprofitFilingCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the NonprofitFiling
+     */
+    select?: NonprofitFilingSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the NonprofitFiling
+     */
+    omit?: NonprofitFilingOmit<ExtArgs> | null
+    /**
+     * The data used to create many NonprofitFilings.
+     */
+    data: NonprofitFilingCreateManyInput | NonprofitFilingCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * NonprofitFiling update
+   */
+  export type NonprofitFilingUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the NonprofitFiling
+     */
+    select?: NonprofitFilingSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the NonprofitFiling
+     */
+    omit?: NonprofitFilingOmit<ExtArgs> | null
+    /**
+     * The data needed to update a NonprofitFiling.
+     */
+    data: XOR<NonprofitFilingUpdateInput, NonprofitFilingUncheckedUpdateInput>
+    /**
+     * Choose, which NonprofitFiling to update.
+     */
+    where: NonprofitFilingWhereUniqueInput
+  }
+
+  /**
+   * NonprofitFiling updateMany
+   */
+  export type NonprofitFilingUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update NonprofitFilings.
+     */
+    data: XOR<NonprofitFilingUpdateManyMutationInput, NonprofitFilingUncheckedUpdateManyInput>
+    /**
+     * Filter which NonprofitFilings to update
+     */
+    where?: NonprofitFilingWhereInput
+    /**
+     * Limit how many NonprofitFilings to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * NonprofitFiling updateManyAndReturn
+   */
+  export type NonprofitFilingUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the NonprofitFiling
+     */
+    select?: NonprofitFilingSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the NonprofitFiling
+     */
+    omit?: NonprofitFilingOmit<ExtArgs> | null
+    /**
+     * The data used to update NonprofitFilings.
+     */
+    data: XOR<NonprofitFilingUpdateManyMutationInput, NonprofitFilingUncheckedUpdateManyInput>
+    /**
+     * Filter which NonprofitFilings to update
+     */
+    where?: NonprofitFilingWhereInput
+    /**
+     * Limit how many NonprofitFilings to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * NonprofitFiling upsert
+   */
+  export type NonprofitFilingUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the NonprofitFiling
+     */
+    select?: NonprofitFilingSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the NonprofitFiling
+     */
+    omit?: NonprofitFilingOmit<ExtArgs> | null
+    /**
+     * The filter to search for the NonprofitFiling to update in case it exists.
+     */
+    where: NonprofitFilingWhereUniqueInput
+    /**
+     * In case the NonprofitFiling found by the `where` argument doesn't exist, create a new NonprofitFiling with this data.
+     */
+    create: XOR<NonprofitFilingCreateInput, NonprofitFilingUncheckedCreateInput>
+    /**
+     * In case the NonprofitFiling was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<NonprofitFilingUpdateInput, NonprofitFilingUncheckedUpdateInput>
+  }
+
+  /**
+   * NonprofitFiling delete
+   */
+  export type NonprofitFilingDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the NonprofitFiling
+     */
+    select?: NonprofitFilingSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the NonprofitFiling
+     */
+    omit?: NonprofitFilingOmit<ExtArgs> | null
+    /**
+     * Filter which NonprofitFiling to delete.
+     */
+    where: NonprofitFilingWhereUniqueInput
+  }
+
+  /**
+   * NonprofitFiling deleteMany
+   */
+  export type NonprofitFilingDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which NonprofitFilings to delete
+     */
+    where?: NonprofitFilingWhereInput
+    /**
+     * Limit how many NonprofitFilings to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * NonprofitFiling without action
+   */
+  export type NonprofitFilingDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the NonprofitFiling
+     */
+    select?: NonprofitFilingSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the NonprofitFiling
+     */
+    omit?: NonprofitFilingOmit<ExtArgs> | null
+  }
+
+
+  /**
    * Model SyncLog
    */
 
@@ -20325,6 +25435,77 @@ export namespace Prisma {
   export type CongressionalTradeScalarFieldEnum = (typeof CongressionalTradeScalarFieldEnum)[keyof typeof CongressionalTradeScalarFieldEnum]
 
 
+  export const FederalRegisterEntryScalarFieldEnum: {
+    id: 'id',
+    documentNumber: 'documentNumber',
+    title: 'title',
+    type: 'type',
+    agencyNames: 'agencyNames',
+    agencyEntityIds: 'agencyEntityIds',
+    publicationDate: 'publicationDate',
+    significantRule: 'significantRule',
+    abstractText: 'abstractText',
+    htmlUrl: 'htmlUrl',
+    pdfUrl: 'pdfUrl',
+    commentCount: 'commentCount',
+    createdAt: 'createdAt'
+  };
+
+  export type FederalRegisterEntryScalarFieldEnum = (typeof FederalRegisterEntryScalarFieldEnum)[keyof typeof FederalRegisterEntryScalarFieldEnum]
+
+
+  export const FaraRegistrationScalarFieldEnum: {
+    id: 'id',
+    registrationNum: 'registrationNum',
+    foreignPrincipal: 'foreignPrincipal',
+    country: 'country',
+    registrantName: 'registrantName',
+    registrantEntityId: 'registrantEntityId',
+    registrationDate: 'registrationDate',
+    terminationDate: 'terminationDate',
+    active: 'active',
+    createdAt: 'createdAt'
+  };
+
+  export type FaraRegistrationScalarFieldEnum = (typeof FaraRegistrationScalarFieldEnum)[keyof typeof FaraRegistrationScalarFieldEnum]
+
+
+  export const FaraActivityScalarFieldEnum: {
+    id: 'id',
+    registrationId: 'registrationId',
+    activityType: 'activityType',
+    description: 'description',
+    amount: 'amount',
+    periodStart: 'periodStart',
+    periodEnd: 'periodEnd',
+    contactedOfficial: 'contactedOfficial',
+    contactedEntityId: 'contactedEntityId',
+    createdAt: 'createdAt'
+  };
+
+  export type FaraActivityScalarFieldEnum = (typeof FaraActivityScalarFieldEnum)[keyof typeof FaraActivityScalarFieldEnum]
+
+
+  export const NonprofitFilingScalarFieldEnum: {
+    id: 'id',
+    ein: 'ein',
+    entityId: 'entityId',
+    organizationName: 'organizationName',
+    taxPeriod: 'taxPeriod',
+    totalRevenue: 'totalRevenue',
+    totalExpenses: 'totalExpenses',
+    totalAssets: 'totalAssets',
+    politicalExpenses: 'politicalExpenses',
+    grantRecipients: 'grantRecipients',
+    formType: 'formType',
+    filingYear: 'filingYear',
+    pdfUrl: 'pdfUrl',
+    createdAt: 'createdAt'
+  };
+
+  export type NonprofitFilingScalarFieldEnum = (typeof NonprofitFilingScalarFieldEnum)[keyof typeof NonprofitFilingScalarFieldEnum]
+
+
   export const SyncLogScalarFieldEnum: {
     id: 'id',
     source: 'source',
@@ -20700,6 +25881,8 @@ export namespace Prisma {
     sponsoredLegislation?: LegislationListRelationFilter
     legislativeVotes?: LegislativeVoteListRelationFilter
     congressionalTrades?: CongressionalTradeListRelationFilter
+    faraRegistrations?: FaraRegistrationListRelationFilter
+    faraContacts?: FaraActivityListRelationFilter
   }
 
   export type EntityOrderByWithRelationInput = {
@@ -20749,6 +25932,8 @@ export namespace Prisma {
     sponsoredLegislation?: LegislationOrderByRelationAggregateInput
     legislativeVotes?: LegislativeVoteOrderByRelationAggregateInput
     congressionalTrades?: CongressionalTradeOrderByRelationAggregateInput
+    faraRegistrations?: FaraRegistrationOrderByRelationAggregateInput
+    faraContacts?: FaraActivityOrderByRelationAggregateInput
   }
 
   export type EntityWhereUniqueInput = Prisma.AtLeast<{
@@ -20801,6 +25986,8 @@ export namespace Prisma {
     sponsoredLegislation?: LegislationListRelationFilter
     legislativeVotes?: LegislativeVoteListRelationFilter
     congressionalTrades?: CongressionalTradeListRelationFilter
+    faraRegistrations?: FaraRegistrationListRelationFilter
+    faraContacts?: FaraActivityListRelationFilter
   }, "id">
 
   export type EntityOrderByWithAggregationInput = {
@@ -22098,6 +27285,368 @@ export namespace Prisma {
     createdAt?: DateTimeWithAggregatesFilter<"CongressionalTrade"> | Date | string
   }
 
+  export type FederalRegisterEntryWhereInput = {
+    AND?: FederalRegisterEntryWhereInput | FederalRegisterEntryWhereInput[]
+    OR?: FederalRegisterEntryWhereInput[]
+    NOT?: FederalRegisterEntryWhereInput | FederalRegisterEntryWhereInput[]
+    id?: StringFilter<"FederalRegisterEntry"> | string
+    documentNumber?: StringFilter<"FederalRegisterEntry"> | string
+    title?: StringFilter<"FederalRegisterEntry"> | string
+    type?: StringFilter<"FederalRegisterEntry"> | string
+    agencyNames?: StringNullableListFilter<"FederalRegisterEntry">
+    agencyEntityIds?: StringNullableListFilter<"FederalRegisterEntry">
+    publicationDate?: DateTimeFilter<"FederalRegisterEntry"> | Date | string
+    significantRule?: BoolFilter<"FederalRegisterEntry"> | boolean
+    abstractText?: StringNullableFilter<"FederalRegisterEntry"> | string | null
+    htmlUrl?: StringFilter<"FederalRegisterEntry"> | string
+    pdfUrl?: StringNullableFilter<"FederalRegisterEntry"> | string | null
+    commentCount?: IntFilter<"FederalRegisterEntry"> | number
+    createdAt?: DateTimeFilter<"FederalRegisterEntry"> | Date | string
+  }
+
+  export type FederalRegisterEntryOrderByWithRelationInput = {
+    id?: SortOrder
+    documentNumber?: SortOrder
+    title?: SortOrder
+    type?: SortOrder
+    agencyNames?: SortOrder
+    agencyEntityIds?: SortOrder
+    publicationDate?: SortOrder
+    significantRule?: SortOrder
+    abstractText?: SortOrderInput | SortOrder
+    htmlUrl?: SortOrder
+    pdfUrl?: SortOrderInput | SortOrder
+    commentCount?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type FederalRegisterEntryWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    documentNumber?: string
+    AND?: FederalRegisterEntryWhereInput | FederalRegisterEntryWhereInput[]
+    OR?: FederalRegisterEntryWhereInput[]
+    NOT?: FederalRegisterEntryWhereInput | FederalRegisterEntryWhereInput[]
+    title?: StringFilter<"FederalRegisterEntry"> | string
+    type?: StringFilter<"FederalRegisterEntry"> | string
+    agencyNames?: StringNullableListFilter<"FederalRegisterEntry">
+    agencyEntityIds?: StringNullableListFilter<"FederalRegisterEntry">
+    publicationDate?: DateTimeFilter<"FederalRegisterEntry"> | Date | string
+    significantRule?: BoolFilter<"FederalRegisterEntry"> | boolean
+    abstractText?: StringNullableFilter<"FederalRegisterEntry"> | string | null
+    htmlUrl?: StringFilter<"FederalRegisterEntry"> | string
+    pdfUrl?: StringNullableFilter<"FederalRegisterEntry"> | string | null
+    commentCount?: IntFilter<"FederalRegisterEntry"> | number
+    createdAt?: DateTimeFilter<"FederalRegisterEntry"> | Date | string
+  }, "id" | "documentNumber">
+
+  export type FederalRegisterEntryOrderByWithAggregationInput = {
+    id?: SortOrder
+    documentNumber?: SortOrder
+    title?: SortOrder
+    type?: SortOrder
+    agencyNames?: SortOrder
+    agencyEntityIds?: SortOrder
+    publicationDate?: SortOrder
+    significantRule?: SortOrder
+    abstractText?: SortOrderInput | SortOrder
+    htmlUrl?: SortOrder
+    pdfUrl?: SortOrderInput | SortOrder
+    commentCount?: SortOrder
+    createdAt?: SortOrder
+    _count?: FederalRegisterEntryCountOrderByAggregateInput
+    _avg?: FederalRegisterEntryAvgOrderByAggregateInput
+    _max?: FederalRegisterEntryMaxOrderByAggregateInput
+    _min?: FederalRegisterEntryMinOrderByAggregateInput
+    _sum?: FederalRegisterEntrySumOrderByAggregateInput
+  }
+
+  export type FederalRegisterEntryScalarWhereWithAggregatesInput = {
+    AND?: FederalRegisterEntryScalarWhereWithAggregatesInput | FederalRegisterEntryScalarWhereWithAggregatesInput[]
+    OR?: FederalRegisterEntryScalarWhereWithAggregatesInput[]
+    NOT?: FederalRegisterEntryScalarWhereWithAggregatesInput | FederalRegisterEntryScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"FederalRegisterEntry"> | string
+    documentNumber?: StringWithAggregatesFilter<"FederalRegisterEntry"> | string
+    title?: StringWithAggregatesFilter<"FederalRegisterEntry"> | string
+    type?: StringWithAggregatesFilter<"FederalRegisterEntry"> | string
+    agencyNames?: StringNullableListFilter<"FederalRegisterEntry">
+    agencyEntityIds?: StringNullableListFilter<"FederalRegisterEntry">
+    publicationDate?: DateTimeWithAggregatesFilter<"FederalRegisterEntry"> | Date | string
+    significantRule?: BoolWithAggregatesFilter<"FederalRegisterEntry"> | boolean
+    abstractText?: StringNullableWithAggregatesFilter<"FederalRegisterEntry"> | string | null
+    htmlUrl?: StringWithAggregatesFilter<"FederalRegisterEntry"> | string
+    pdfUrl?: StringNullableWithAggregatesFilter<"FederalRegisterEntry"> | string | null
+    commentCount?: IntWithAggregatesFilter<"FederalRegisterEntry"> | number
+    createdAt?: DateTimeWithAggregatesFilter<"FederalRegisterEntry"> | Date | string
+  }
+
+  export type FaraRegistrationWhereInput = {
+    AND?: FaraRegistrationWhereInput | FaraRegistrationWhereInput[]
+    OR?: FaraRegistrationWhereInput[]
+    NOT?: FaraRegistrationWhereInput | FaraRegistrationWhereInput[]
+    id?: StringFilter<"FaraRegistration"> | string
+    registrationNum?: StringFilter<"FaraRegistration"> | string
+    foreignPrincipal?: StringFilter<"FaraRegistration"> | string
+    country?: StringFilter<"FaraRegistration"> | string
+    registrantName?: StringFilter<"FaraRegistration"> | string
+    registrantEntityId?: StringNullableFilter<"FaraRegistration"> | string | null
+    registrationDate?: DateTimeFilter<"FaraRegistration"> | Date | string
+    terminationDate?: DateTimeNullableFilter<"FaraRegistration"> | Date | string | null
+    active?: BoolFilter<"FaraRegistration"> | boolean
+    createdAt?: DateTimeFilter<"FaraRegistration"> | Date | string
+    registrantEntity?: XOR<EntityNullableScalarRelationFilter, EntityWhereInput> | null
+    activities?: FaraActivityListRelationFilter
+  }
+
+  export type FaraRegistrationOrderByWithRelationInput = {
+    id?: SortOrder
+    registrationNum?: SortOrder
+    foreignPrincipal?: SortOrder
+    country?: SortOrder
+    registrantName?: SortOrder
+    registrantEntityId?: SortOrderInput | SortOrder
+    registrationDate?: SortOrder
+    terminationDate?: SortOrderInput | SortOrder
+    active?: SortOrder
+    createdAt?: SortOrder
+    registrantEntity?: EntityOrderByWithRelationInput
+    activities?: FaraActivityOrderByRelationAggregateInput
+  }
+
+  export type FaraRegistrationWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    registrationNum?: string
+    AND?: FaraRegistrationWhereInput | FaraRegistrationWhereInput[]
+    OR?: FaraRegistrationWhereInput[]
+    NOT?: FaraRegistrationWhereInput | FaraRegistrationWhereInput[]
+    foreignPrincipal?: StringFilter<"FaraRegistration"> | string
+    country?: StringFilter<"FaraRegistration"> | string
+    registrantName?: StringFilter<"FaraRegistration"> | string
+    registrantEntityId?: StringNullableFilter<"FaraRegistration"> | string | null
+    registrationDate?: DateTimeFilter<"FaraRegistration"> | Date | string
+    terminationDate?: DateTimeNullableFilter<"FaraRegistration"> | Date | string | null
+    active?: BoolFilter<"FaraRegistration"> | boolean
+    createdAt?: DateTimeFilter<"FaraRegistration"> | Date | string
+    registrantEntity?: XOR<EntityNullableScalarRelationFilter, EntityWhereInput> | null
+    activities?: FaraActivityListRelationFilter
+  }, "id" | "registrationNum">
+
+  export type FaraRegistrationOrderByWithAggregationInput = {
+    id?: SortOrder
+    registrationNum?: SortOrder
+    foreignPrincipal?: SortOrder
+    country?: SortOrder
+    registrantName?: SortOrder
+    registrantEntityId?: SortOrderInput | SortOrder
+    registrationDate?: SortOrder
+    terminationDate?: SortOrderInput | SortOrder
+    active?: SortOrder
+    createdAt?: SortOrder
+    _count?: FaraRegistrationCountOrderByAggregateInput
+    _max?: FaraRegistrationMaxOrderByAggregateInput
+    _min?: FaraRegistrationMinOrderByAggregateInput
+  }
+
+  export type FaraRegistrationScalarWhereWithAggregatesInput = {
+    AND?: FaraRegistrationScalarWhereWithAggregatesInput | FaraRegistrationScalarWhereWithAggregatesInput[]
+    OR?: FaraRegistrationScalarWhereWithAggregatesInput[]
+    NOT?: FaraRegistrationScalarWhereWithAggregatesInput | FaraRegistrationScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"FaraRegistration"> | string
+    registrationNum?: StringWithAggregatesFilter<"FaraRegistration"> | string
+    foreignPrincipal?: StringWithAggregatesFilter<"FaraRegistration"> | string
+    country?: StringWithAggregatesFilter<"FaraRegistration"> | string
+    registrantName?: StringWithAggregatesFilter<"FaraRegistration"> | string
+    registrantEntityId?: StringNullableWithAggregatesFilter<"FaraRegistration"> | string | null
+    registrationDate?: DateTimeWithAggregatesFilter<"FaraRegistration"> | Date | string
+    terminationDate?: DateTimeNullableWithAggregatesFilter<"FaraRegistration"> | Date | string | null
+    active?: BoolWithAggregatesFilter<"FaraRegistration"> | boolean
+    createdAt?: DateTimeWithAggregatesFilter<"FaraRegistration"> | Date | string
+  }
+
+  export type FaraActivityWhereInput = {
+    AND?: FaraActivityWhereInput | FaraActivityWhereInput[]
+    OR?: FaraActivityWhereInput[]
+    NOT?: FaraActivityWhereInput | FaraActivityWhereInput[]
+    id?: StringFilter<"FaraActivity"> | string
+    registrationId?: StringFilter<"FaraActivity"> | string
+    activityType?: StringFilter<"FaraActivity"> | string
+    description?: StringNullableFilter<"FaraActivity"> | string | null
+    amount?: DecimalNullableFilter<"FaraActivity"> | Decimal | DecimalJsLike | number | string | null
+    periodStart?: DateTimeFilter<"FaraActivity"> | Date | string
+    periodEnd?: DateTimeFilter<"FaraActivity"> | Date | string
+    contactedOfficial?: StringNullableFilter<"FaraActivity"> | string | null
+    contactedEntityId?: StringNullableFilter<"FaraActivity"> | string | null
+    createdAt?: DateTimeFilter<"FaraActivity"> | Date | string
+    registration?: XOR<FaraRegistrationScalarRelationFilter, FaraRegistrationWhereInput>
+    contactedEntity?: XOR<EntityNullableScalarRelationFilter, EntityWhereInput> | null
+  }
+
+  export type FaraActivityOrderByWithRelationInput = {
+    id?: SortOrder
+    registrationId?: SortOrder
+    activityType?: SortOrder
+    description?: SortOrderInput | SortOrder
+    amount?: SortOrderInput | SortOrder
+    periodStart?: SortOrder
+    periodEnd?: SortOrder
+    contactedOfficial?: SortOrderInput | SortOrder
+    contactedEntityId?: SortOrderInput | SortOrder
+    createdAt?: SortOrder
+    registration?: FaraRegistrationOrderByWithRelationInput
+    contactedEntity?: EntityOrderByWithRelationInput
+  }
+
+  export type FaraActivityWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    AND?: FaraActivityWhereInput | FaraActivityWhereInput[]
+    OR?: FaraActivityWhereInput[]
+    NOT?: FaraActivityWhereInput | FaraActivityWhereInput[]
+    registrationId?: StringFilter<"FaraActivity"> | string
+    activityType?: StringFilter<"FaraActivity"> | string
+    description?: StringNullableFilter<"FaraActivity"> | string | null
+    amount?: DecimalNullableFilter<"FaraActivity"> | Decimal | DecimalJsLike | number | string | null
+    periodStart?: DateTimeFilter<"FaraActivity"> | Date | string
+    periodEnd?: DateTimeFilter<"FaraActivity"> | Date | string
+    contactedOfficial?: StringNullableFilter<"FaraActivity"> | string | null
+    contactedEntityId?: StringNullableFilter<"FaraActivity"> | string | null
+    createdAt?: DateTimeFilter<"FaraActivity"> | Date | string
+    registration?: XOR<FaraRegistrationScalarRelationFilter, FaraRegistrationWhereInput>
+    contactedEntity?: XOR<EntityNullableScalarRelationFilter, EntityWhereInput> | null
+  }, "id">
+
+  export type FaraActivityOrderByWithAggregationInput = {
+    id?: SortOrder
+    registrationId?: SortOrder
+    activityType?: SortOrder
+    description?: SortOrderInput | SortOrder
+    amount?: SortOrderInput | SortOrder
+    periodStart?: SortOrder
+    periodEnd?: SortOrder
+    contactedOfficial?: SortOrderInput | SortOrder
+    contactedEntityId?: SortOrderInput | SortOrder
+    createdAt?: SortOrder
+    _count?: FaraActivityCountOrderByAggregateInput
+    _avg?: FaraActivityAvgOrderByAggregateInput
+    _max?: FaraActivityMaxOrderByAggregateInput
+    _min?: FaraActivityMinOrderByAggregateInput
+    _sum?: FaraActivitySumOrderByAggregateInput
+  }
+
+  export type FaraActivityScalarWhereWithAggregatesInput = {
+    AND?: FaraActivityScalarWhereWithAggregatesInput | FaraActivityScalarWhereWithAggregatesInput[]
+    OR?: FaraActivityScalarWhereWithAggregatesInput[]
+    NOT?: FaraActivityScalarWhereWithAggregatesInput | FaraActivityScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"FaraActivity"> | string
+    registrationId?: StringWithAggregatesFilter<"FaraActivity"> | string
+    activityType?: StringWithAggregatesFilter<"FaraActivity"> | string
+    description?: StringNullableWithAggregatesFilter<"FaraActivity"> | string | null
+    amount?: DecimalNullableWithAggregatesFilter<"FaraActivity"> | Decimal | DecimalJsLike | number | string | null
+    periodStart?: DateTimeWithAggregatesFilter<"FaraActivity"> | Date | string
+    periodEnd?: DateTimeWithAggregatesFilter<"FaraActivity"> | Date | string
+    contactedOfficial?: StringNullableWithAggregatesFilter<"FaraActivity"> | string | null
+    contactedEntityId?: StringNullableWithAggregatesFilter<"FaraActivity"> | string | null
+    createdAt?: DateTimeWithAggregatesFilter<"FaraActivity"> | Date | string
+  }
+
+  export type NonprofitFilingWhereInput = {
+    AND?: NonprofitFilingWhereInput | NonprofitFilingWhereInput[]
+    OR?: NonprofitFilingWhereInput[]
+    NOT?: NonprofitFilingWhereInput | NonprofitFilingWhereInput[]
+    id?: StringFilter<"NonprofitFiling"> | string
+    ein?: StringFilter<"NonprofitFiling"> | string
+    entityId?: StringNullableFilter<"NonprofitFiling"> | string | null
+    organizationName?: StringFilter<"NonprofitFiling"> | string
+    taxPeriod?: StringFilter<"NonprofitFiling"> | string
+    totalRevenue?: DecimalNullableFilter<"NonprofitFiling"> | Decimal | DecimalJsLike | number | string | null
+    totalExpenses?: DecimalNullableFilter<"NonprofitFiling"> | Decimal | DecimalJsLike | number | string | null
+    totalAssets?: DecimalNullableFilter<"NonprofitFiling"> | Decimal | DecimalJsLike | number | string | null
+    politicalExpenses?: DecimalNullableFilter<"NonprofitFiling"> | Decimal | DecimalJsLike | number | string | null
+    grantRecipients?: JsonNullableFilter<"NonprofitFiling">
+    formType?: StringFilter<"NonprofitFiling"> | string
+    filingYear?: IntFilter<"NonprofitFiling"> | number
+    pdfUrl?: StringNullableFilter<"NonprofitFiling"> | string | null
+    createdAt?: DateTimeFilter<"NonprofitFiling"> | Date | string
+  }
+
+  export type NonprofitFilingOrderByWithRelationInput = {
+    id?: SortOrder
+    ein?: SortOrder
+    entityId?: SortOrderInput | SortOrder
+    organizationName?: SortOrder
+    taxPeriod?: SortOrder
+    totalRevenue?: SortOrderInput | SortOrder
+    totalExpenses?: SortOrderInput | SortOrder
+    totalAssets?: SortOrderInput | SortOrder
+    politicalExpenses?: SortOrderInput | SortOrder
+    grantRecipients?: SortOrderInput | SortOrder
+    formType?: SortOrder
+    filingYear?: SortOrder
+    pdfUrl?: SortOrderInput | SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type NonprofitFilingWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    ein_taxPeriod?: NonprofitFilingEinTaxPeriodCompoundUniqueInput
+    AND?: NonprofitFilingWhereInput | NonprofitFilingWhereInput[]
+    OR?: NonprofitFilingWhereInput[]
+    NOT?: NonprofitFilingWhereInput | NonprofitFilingWhereInput[]
+    ein?: StringFilter<"NonprofitFiling"> | string
+    entityId?: StringNullableFilter<"NonprofitFiling"> | string | null
+    organizationName?: StringFilter<"NonprofitFiling"> | string
+    taxPeriod?: StringFilter<"NonprofitFiling"> | string
+    totalRevenue?: DecimalNullableFilter<"NonprofitFiling"> | Decimal | DecimalJsLike | number | string | null
+    totalExpenses?: DecimalNullableFilter<"NonprofitFiling"> | Decimal | DecimalJsLike | number | string | null
+    totalAssets?: DecimalNullableFilter<"NonprofitFiling"> | Decimal | DecimalJsLike | number | string | null
+    politicalExpenses?: DecimalNullableFilter<"NonprofitFiling"> | Decimal | DecimalJsLike | number | string | null
+    grantRecipients?: JsonNullableFilter<"NonprofitFiling">
+    formType?: StringFilter<"NonprofitFiling"> | string
+    filingYear?: IntFilter<"NonprofitFiling"> | number
+    pdfUrl?: StringNullableFilter<"NonprofitFiling"> | string | null
+    createdAt?: DateTimeFilter<"NonprofitFiling"> | Date | string
+  }, "id" | "ein_taxPeriod">
+
+  export type NonprofitFilingOrderByWithAggregationInput = {
+    id?: SortOrder
+    ein?: SortOrder
+    entityId?: SortOrderInput | SortOrder
+    organizationName?: SortOrder
+    taxPeriod?: SortOrder
+    totalRevenue?: SortOrderInput | SortOrder
+    totalExpenses?: SortOrderInput | SortOrder
+    totalAssets?: SortOrderInput | SortOrder
+    politicalExpenses?: SortOrderInput | SortOrder
+    grantRecipients?: SortOrderInput | SortOrder
+    formType?: SortOrder
+    filingYear?: SortOrder
+    pdfUrl?: SortOrderInput | SortOrder
+    createdAt?: SortOrder
+    _count?: NonprofitFilingCountOrderByAggregateInput
+    _avg?: NonprofitFilingAvgOrderByAggregateInput
+    _max?: NonprofitFilingMaxOrderByAggregateInput
+    _min?: NonprofitFilingMinOrderByAggregateInput
+    _sum?: NonprofitFilingSumOrderByAggregateInput
+  }
+
+  export type NonprofitFilingScalarWhereWithAggregatesInput = {
+    AND?: NonprofitFilingScalarWhereWithAggregatesInput | NonprofitFilingScalarWhereWithAggregatesInput[]
+    OR?: NonprofitFilingScalarWhereWithAggregatesInput[]
+    NOT?: NonprofitFilingScalarWhereWithAggregatesInput | NonprofitFilingScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"NonprofitFiling"> | string
+    ein?: StringWithAggregatesFilter<"NonprofitFiling"> | string
+    entityId?: StringNullableWithAggregatesFilter<"NonprofitFiling"> | string | null
+    organizationName?: StringWithAggregatesFilter<"NonprofitFiling"> | string
+    taxPeriod?: StringWithAggregatesFilter<"NonprofitFiling"> | string
+    totalRevenue?: DecimalNullableWithAggregatesFilter<"NonprofitFiling"> | Decimal | DecimalJsLike | number | string | null
+    totalExpenses?: DecimalNullableWithAggregatesFilter<"NonprofitFiling"> | Decimal | DecimalJsLike | number | string | null
+    totalAssets?: DecimalNullableWithAggregatesFilter<"NonprofitFiling"> | Decimal | DecimalJsLike | number | string | null
+    politicalExpenses?: DecimalNullableWithAggregatesFilter<"NonprofitFiling"> | Decimal | DecimalJsLike | number | string | null
+    grantRecipients?: JsonNullableWithAggregatesFilter<"NonprofitFiling">
+    formType?: StringWithAggregatesFilter<"NonprofitFiling"> | string
+    filingYear?: IntWithAggregatesFilter<"NonprofitFiling"> | number
+    pdfUrl?: StringNullableWithAggregatesFilter<"NonprofitFiling"> | string | null
+    createdAt?: DateTimeWithAggregatesFilter<"NonprofitFiling"> | Date | string
+  }
+
   export type SyncLogWhereInput = {
     AND?: SyncLogWhereInput | SyncLogWhereInput[]
     OR?: SyncLogWhereInput[]
@@ -22228,6 +27777,8 @@ export namespace Prisma {
     sponsoredLegislation?: LegislationCreateNestedManyWithoutSponsorEntityInput
     legislativeVotes?: LegislativeVoteCreateNestedManyWithoutEntityInput
     congressionalTrades?: CongressionalTradeCreateNestedManyWithoutEntityInput
+    faraRegistrations?: FaraRegistrationCreateNestedManyWithoutRegistrantEntityInput
+    faraContacts?: FaraActivityCreateNestedManyWithoutContactedEntityInput
   }
 
   export type EntityUncheckedCreateInput = {
@@ -22276,6 +27827,8 @@ export namespace Prisma {
     sponsoredLegislation?: LegislationUncheckedCreateNestedManyWithoutSponsorEntityInput
     legislativeVotes?: LegislativeVoteUncheckedCreateNestedManyWithoutEntityInput
     congressionalTrades?: CongressionalTradeUncheckedCreateNestedManyWithoutEntityInput
+    faraRegistrations?: FaraRegistrationUncheckedCreateNestedManyWithoutRegistrantEntityInput
+    faraContacts?: FaraActivityUncheckedCreateNestedManyWithoutContactedEntityInput
   }
 
   export type EntityUpdateInput = {
@@ -22324,6 +27877,8 @@ export namespace Prisma {
     sponsoredLegislation?: LegislationUpdateManyWithoutSponsorEntityNestedInput
     legislativeVotes?: LegislativeVoteUpdateManyWithoutEntityNestedInput
     congressionalTrades?: CongressionalTradeUpdateManyWithoutEntityNestedInput
+    faraRegistrations?: FaraRegistrationUpdateManyWithoutRegistrantEntityNestedInput
+    faraContacts?: FaraActivityUpdateManyWithoutContactedEntityNestedInput
   }
 
   export type EntityUncheckedUpdateInput = {
@@ -22372,6 +27927,8 @@ export namespace Prisma {
     sponsoredLegislation?: LegislationUncheckedUpdateManyWithoutSponsorEntityNestedInput
     legislativeVotes?: LegislativeVoteUncheckedUpdateManyWithoutEntityNestedInput
     congressionalTrades?: CongressionalTradeUncheckedUpdateManyWithoutEntityNestedInput
+    faraRegistrations?: FaraRegistrationUncheckedUpdateManyWithoutRegistrantEntityNestedInput
+    faraContacts?: FaraActivityUncheckedUpdateManyWithoutContactedEntityNestedInput
   }
 
   export type EntityCreateManyInput = {
@@ -23856,6 +29413,420 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
+  export type FederalRegisterEntryCreateInput = {
+    id?: string
+    documentNumber: string
+    title: string
+    type: string
+    agencyNames?: FederalRegisterEntryCreateagencyNamesInput | string[]
+    agencyEntityIds?: FederalRegisterEntryCreateagencyEntityIdsInput | string[]
+    publicationDate: Date | string
+    significantRule?: boolean
+    abstractText?: string | null
+    htmlUrl: string
+    pdfUrl?: string | null
+    commentCount?: number
+    createdAt?: Date | string
+  }
+
+  export type FederalRegisterEntryUncheckedCreateInput = {
+    id?: string
+    documentNumber: string
+    title: string
+    type: string
+    agencyNames?: FederalRegisterEntryCreateagencyNamesInput | string[]
+    agencyEntityIds?: FederalRegisterEntryCreateagencyEntityIdsInput | string[]
+    publicationDate: Date | string
+    significantRule?: boolean
+    abstractText?: string | null
+    htmlUrl: string
+    pdfUrl?: string | null
+    commentCount?: number
+    createdAt?: Date | string
+  }
+
+  export type FederalRegisterEntryUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    documentNumber?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    type?: StringFieldUpdateOperationsInput | string
+    agencyNames?: FederalRegisterEntryUpdateagencyNamesInput | string[]
+    agencyEntityIds?: FederalRegisterEntryUpdateagencyEntityIdsInput | string[]
+    publicationDate?: DateTimeFieldUpdateOperationsInput | Date | string
+    significantRule?: BoolFieldUpdateOperationsInput | boolean
+    abstractText?: NullableStringFieldUpdateOperationsInput | string | null
+    htmlUrl?: StringFieldUpdateOperationsInput | string
+    pdfUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    commentCount?: IntFieldUpdateOperationsInput | number
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type FederalRegisterEntryUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    documentNumber?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    type?: StringFieldUpdateOperationsInput | string
+    agencyNames?: FederalRegisterEntryUpdateagencyNamesInput | string[]
+    agencyEntityIds?: FederalRegisterEntryUpdateagencyEntityIdsInput | string[]
+    publicationDate?: DateTimeFieldUpdateOperationsInput | Date | string
+    significantRule?: BoolFieldUpdateOperationsInput | boolean
+    abstractText?: NullableStringFieldUpdateOperationsInput | string | null
+    htmlUrl?: StringFieldUpdateOperationsInput | string
+    pdfUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    commentCount?: IntFieldUpdateOperationsInput | number
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type FederalRegisterEntryCreateManyInput = {
+    id?: string
+    documentNumber: string
+    title: string
+    type: string
+    agencyNames?: FederalRegisterEntryCreateagencyNamesInput | string[]
+    agencyEntityIds?: FederalRegisterEntryCreateagencyEntityIdsInput | string[]
+    publicationDate: Date | string
+    significantRule?: boolean
+    abstractText?: string | null
+    htmlUrl: string
+    pdfUrl?: string | null
+    commentCount?: number
+    createdAt?: Date | string
+  }
+
+  export type FederalRegisterEntryUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    documentNumber?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    type?: StringFieldUpdateOperationsInput | string
+    agencyNames?: FederalRegisterEntryUpdateagencyNamesInput | string[]
+    agencyEntityIds?: FederalRegisterEntryUpdateagencyEntityIdsInput | string[]
+    publicationDate?: DateTimeFieldUpdateOperationsInput | Date | string
+    significantRule?: BoolFieldUpdateOperationsInput | boolean
+    abstractText?: NullableStringFieldUpdateOperationsInput | string | null
+    htmlUrl?: StringFieldUpdateOperationsInput | string
+    pdfUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    commentCount?: IntFieldUpdateOperationsInput | number
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type FederalRegisterEntryUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    documentNumber?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    type?: StringFieldUpdateOperationsInput | string
+    agencyNames?: FederalRegisterEntryUpdateagencyNamesInput | string[]
+    agencyEntityIds?: FederalRegisterEntryUpdateagencyEntityIdsInput | string[]
+    publicationDate?: DateTimeFieldUpdateOperationsInput | Date | string
+    significantRule?: BoolFieldUpdateOperationsInput | boolean
+    abstractText?: NullableStringFieldUpdateOperationsInput | string | null
+    htmlUrl?: StringFieldUpdateOperationsInput | string
+    pdfUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    commentCount?: IntFieldUpdateOperationsInput | number
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type FaraRegistrationCreateInput = {
+    id?: string
+    registrationNum: string
+    foreignPrincipal: string
+    country: string
+    registrantName: string
+    registrationDate: Date | string
+    terminationDate?: Date | string | null
+    active?: boolean
+    createdAt?: Date | string
+    registrantEntity?: EntityCreateNestedOneWithoutFaraRegistrationsInput
+    activities?: FaraActivityCreateNestedManyWithoutRegistrationInput
+  }
+
+  export type FaraRegistrationUncheckedCreateInput = {
+    id?: string
+    registrationNum: string
+    foreignPrincipal: string
+    country: string
+    registrantName: string
+    registrantEntityId?: string | null
+    registrationDate: Date | string
+    terminationDate?: Date | string | null
+    active?: boolean
+    createdAt?: Date | string
+    activities?: FaraActivityUncheckedCreateNestedManyWithoutRegistrationInput
+  }
+
+  export type FaraRegistrationUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    registrationNum?: StringFieldUpdateOperationsInput | string
+    foreignPrincipal?: StringFieldUpdateOperationsInput | string
+    country?: StringFieldUpdateOperationsInput | string
+    registrantName?: StringFieldUpdateOperationsInput | string
+    registrationDate?: DateTimeFieldUpdateOperationsInput | Date | string
+    terminationDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    active?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    registrantEntity?: EntityUpdateOneWithoutFaraRegistrationsNestedInput
+    activities?: FaraActivityUpdateManyWithoutRegistrationNestedInput
+  }
+
+  export type FaraRegistrationUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    registrationNum?: StringFieldUpdateOperationsInput | string
+    foreignPrincipal?: StringFieldUpdateOperationsInput | string
+    country?: StringFieldUpdateOperationsInput | string
+    registrantName?: StringFieldUpdateOperationsInput | string
+    registrantEntityId?: NullableStringFieldUpdateOperationsInput | string | null
+    registrationDate?: DateTimeFieldUpdateOperationsInput | Date | string
+    terminationDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    active?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    activities?: FaraActivityUncheckedUpdateManyWithoutRegistrationNestedInput
+  }
+
+  export type FaraRegistrationCreateManyInput = {
+    id?: string
+    registrationNum: string
+    foreignPrincipal: string
+    country: string
+    registrantName: string
+    registrantEntityId?: string | null
+    registrationDate: Date | string
+    terminationDate?: Date | string | null
+    active?: boolean
+    createdAt?: Date | string
+  }
+
+  export type FaraRegistrationUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    registrationNum?: StringFieldUpdateOperationsInput | string
+    foreignPrincipal?: StringFieldUpdateOperationsInput | string
+    country?: StringFieldUpdateOperationsInput | string
+    registrantName?: StringFieldUpdateOperationsInput | string
+    registrationDate?: DateTimeFieldUpdateOperationsInput | Date | string
+    terminationDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    active?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type FaraRegistrationUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    registrationNum?: StringFieldUpdateOperationsInput | string
+    foreignPrincipal?: StringFieldUpdateOperationsInput | string
+    country?: StringFieldUpdateOperationsInput | string
+    registrantName?: StringFieldUpdateOperationsInput | string
+    registrantEntityId?: NullableStringFieldUpdateOperationsInput | string | null
+    registrationDate?: DateTimeFieldUpdateOperationsInput | Date | string
+    terminationDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    active?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type FaraActivityCreateInput = {
+    id?: string
+    activityType: string
+    description?: string | null
+    amount?: Decimal | DecimalJsLike | number | string | null
+    periodStart: Date | string
+    periodEnd: Date | string
+    contactedOfficial?: string | null
+    createdAt?: Date | string
+    registration: FaraRegistrationCreateNestedOneWithoutActivitiesInput
+    contactedEntity?: EntityCreateNestedOneWithoutFaraContactsInput
+  }
+
+  export type FaraActivityUncheckedCreateInput = {
+    id?: string
+    registrationId: string
+    activityType: string
+    description?: string | null
+    amount?: Decimal | DecimalJsLike | number | string | null
+    periodStart: Date | string
+    periodEnd: Date | string
+    contactedOfficial?: string | null
+    contactedEntityId?: string | null
+    createdAt?: Date | string
+  }
+
+  export type FaraActivityUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    activityType?: StringFieldUpdateOperationsInput | string
+    description?: NullableStringFieldUpdateOperationsInput | string | null
+    amount?: NullableDecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string | null
+    periodStart?: DateTimeFieldUpdateOperationsInput | Date | string
+    periodEnd?: DateTimeFieldUpdateOperationsInput | Date | string
+    contactedOfficial?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    registration?: FaraRegistrationUpdateOneRequiredWithoutActivitiesNestedInput
+    contactedEntity?: EntityUpdateOneWithoutFaraContactsNestedInput
+  }
+
+  export type FaraActivityUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    registrationId?: StringFieldUpdateOperationsInput | string
+    activityType?: StringFieldUpdateOperationsInput | string
+    description?: NullableStringFieldUpdateOperationsInput | string | null
+    amount?: NullableDecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string | null
+    periodStart?: DateTimeFieldUpdateOperationsInput | Date | string
+    periodEnd?: DateTimeFieldUpdateOperationsInput | Date | string
+    contactedOfficial?: NullableStringFieldUpdateOperationsInput | string | null
+    contactedEntityId?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type FaraActivityCreateManyInput = {
+    id?: string
+    registrationId: string
+    activityType: string
+    description?: string | null
+    amount?: Decimal | DecimalJsLike | number | string | null
+    periodStart: Date | string
+    periodEnd: Date | string
+    contactedOfficial?: string | null
+    contactedEntityId?: string | null
+    createdAt?: Date | string
+  }
+
+  export type FaraActivityUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    activityType?: StringFieldUpdateOperationsInput | string
+    description?: NullableStringFieldUpdateOperationsInput | string | null
+    amount?: NullableDecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string | null
+    periodStart?: DateTimeFieldUpdateOperationsInput | Date | string
+    periodEnd?: DateTimeFieldUpdateOperationsInput | Date | string
+    contactedOfficial?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type FaraActivityUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    registrationId?: StringFieldUpdateOperationsInput | string
+    activityType?: StringFieldUpdateOperationsInput | string
+    description?: NullableStringFieldUpdateOperationsInput | string | null
+    amount?: NullableDecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string | null
+    periodStart?: DateTimeFieldUpdateOperationsInput | Date | string
+    periodEnd?: DateTimeFieldUpdateOperationsInput | Date | string
+    contactedOfficial?: NullableStringFieldUpdateOperationsInput | string | null
+    contactedEntityId?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type NonprofitFilingCreateInput = {
+    id?: string
+    ein: string
+    entityId?: string | null
+    organizationName: string
+    taxPeriod: string
+    totalRevenue?: Decimal | DecimalJsLike | number | string | null
+    totalExpenses?: Decimal | DecimalJsLike | number | string | null
+    totalAssets?: Decimal | DecimalJsLike | number | string | null
+    politicalExpenses?: Decimal | DecimalJsLike | number | string | null
+    grantRecipients?: NullableJsonNullValueInput | InputJsonValue
+    formType: string
+    filingYear: number
+    pdfUrl?: string | null
+    createdAt?: Date | string
+  }
+
+  export type NonprofitFilingUncheckedCreateInput = {
+    id?: string
+    ein: string
+    entityId?: string | null
+    organizationName: string
+    taxPeriod: string
+    totalRevenue?: Decimal | DecimalJsLike | number | string | null
+    totalExpenses?: Decimal | DecimalJsLike | number | string | null
+    totalAssets?: Decimal | DecimalJsLike | number | string | null
+    politicalExpenses?: Decimal | DecimalJsLike | number | string | null
+    grantRecipients?: NullableJsonNullValueInput | InputJsonValue
+    formType: string
+    filingYear: number
+    pdfUrl?: string | null
+    createdAt?: Date | string
+  }
+
+  export type NonprofitFilingUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    ein?: StringFieldUpdateOperationsInput | string
+    entityId?: NullableStringFieldUpdateOperationsInput | string | null
+    organizationName?: StringFieldUpdateOperationsInput | string
+    taxPeriod?: StringFieldUpdateOperationsInput | string
+    totalRevenue?: NullableDecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string | null
+    totalExpenses?: NullableDecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string | null
+    totalAssets?: NullableDecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string | null
+    politicalExpenses?: NullableDecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string | null
+    grantRecipients?: NullableJsonNullValueInput | InputJsonValue
+    formType?: StringFieldUpdateOperationsInput | string
+    filingYear?: IntFieldUpdateOperationsInput | number
+    pdfUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type NonprofitFilingUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    ein?: StringFieldUpdateOperationsInput | string
+    entityId?: NullableStringFieldUpdateOperationsInput | string | null
+    organizationName?: StringFieldUpdateOperationsInput | string
+    taxPeriod?: StringFieldUpdateOperationsInput | string
+    totalRevenue?: NullableDecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string | null
+    totalExpenses?: NullableDecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string | null
+    totalAssets?: NullableDecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string | null
+    politicalExpenses?: NullableDecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string | null
+    grantRecipients?: NullableJsonNullValueInput | InputJsonValue
+    formType?: StringFieldUpdateOperationsInput | string
+    filingYear?: IntFieldUpdateOperationsInput | number
+    pdfUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type NonprofitFilingCreateManyInput = {
+    id?: string
+    ein: string
+    entityId?: string | null
+    organizationName: string
+    taxPeriod: string
+    totalRevenue?: Decimal | DecimalJsLike | number | string | null
+    totalExpenses?: Decimal | DecimalJsLike | number | string | null
+    totalAssets?: Decimal | DecimalJsLike | number | string | null
+    politicalExpenses?: Decimal | DecimalJsLike | number | string | null
+    grantRecipients?: NullableJsonNullValueInput | InputJsonValue
+    formType: string
+    filingYear: number
+    pdfUrl?: string | null
+    createdAt?: Date | string
+  }
+
+  export type NonprofitFilingUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    ein?: StringFieldUpdateOperationsInput | string
+    entityId?: NullableStringFieldUpdateOperationsInput | string | null
+    organizationName?: StringFieldUpdateOperationsInput | string
+    taxPeriod?: StringFieldUpdateOperationsInput | string
+    totalRevenue?: NullableDecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string | null
+    totalExpenses?: NullableDecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string | null
+    totalAssets?: NullableDecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string | null
+    politicalExpenses?: NullableDecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string | null
+    grantRecipients?: NullableJsonNullValueInput | InputJsonValue
+    formType?: StringFieldUpdateOperationsInput | string
+    filingYear?: IntFieldUpdateOperationsInput | number
+    pdfUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type NonprofitFilingUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    ein?: StringFieldUpdateOperationsInput | string
+    entityId?: NullableStringFieldUpdateOperationsInput | string | null
+    organizationName?: StringFieldUpdateOperationsInput | string
+    taxPeriod?: StringFieldUpdateOperationsInput | string
+    totalRevenue?: NullableDecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string | null
+    totalExpenses?: NullableDecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string | null
+    totalAssets?: NullableDecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string | null
+    politicalExpenses?: NullableDecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string | null
+    grantRecipients?: NullableJsonNullValueInput | InputJsonValue
+    formType?: StringFieldUpdateOperationsInput | string
+    filingYear?: IntFieldUpdateOperationsInput | number
+    pdfUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
   export type SyncLogCreateInput = {
     id?: string
     source: $Enums.DataSource
@@ -24132,6 +30103,18 @@ export namespace Prisma {
     none?: CongressionalTradeWhereInput
   }
 
+  export type FaraRegistrationListRelationFilter = {
+    every?: FaraRegistrationWhereInput
+    some?: FaraRegistrationWhereInput
+    none?: FaraRegistrationWhereInput
+  }
+
+  export type FaraActivityListRelationFilter = {
+    every?: FaraActivityWhereInput
+    some?: FaraActivityWhereInput
+    none?: FaraActivityWhereInput
+  }
+
   export type SortOrderInput = {
     sort: SortOrder
     nulls?: NullsOrder
@@ -24178,6 +30161,14 @@ export namespace Prisma {
   }
 
   export type CongressionalTradeOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
+  export type FaraRegistrationOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
+  export type FaraActivityOrderByRelationAggregateInput = {
     _count?: SortOrder
   }
 
@@ -25411,6 +31402,219 @@ export namespace Prisma {
     amountHigh?: SortOrder
   }
 
+  export type FederalRegisterEntryCountOrderByAggregateInput = {
+    id?: SortOrder
+    documentNumber?: SortOrder
+    title?: SortOrder
+    type?: SortOrder
+    agencyNames?: SortOrder
+    agencyEntityIds?: SortOrder
+    publicationDate?: SortOrder
+    significantRule?: SortOrder
+    abstractText?: SortOrder
+    htmlUrl?: SortOrder
+    pdfUrl?: SortOrder
+    commentCount?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type FederalRegisterEntryAvgOrderByAggregateInput = {
+    commentCount?: SortOrder
+  }
+
+  export type FederalRegisterEntryMaxOrderByAggregateInput = {
+    id?: SortOrder
+    documentNumber?: SortOrder
+    title?: SortOrder
+    type?: SortOrder
+    publicationDate?: SortOrder
+    significantRule?: SortOrder
+    abstractText?: SortOrder
+    htmlUrl?: SortOrder
+    pdfUrl?: SortOrder
+    commentCount?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type FederalRegisterEntryMinOrderByAggregateInput = {
+    id?: SortOrder
+    documentNumber?: SortOrder
+    title?: SortOrder
+    type?: SortOrder
+    publicationDate?: SortOrder
+    significantRule?: SortOrder
+    abstractText?: SortOrder
+    htmlUrl?: SortOrder
+    pdfUrl?: SortOrder
+    commentCount?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type FederalRegisterEntrySumOrderByAggregateInput = {
+    commentCount?: SortOrder
+  }
+
+  export type FaraRegistrationCountOrderByAggregateInput = {
+    id?: SortOrder
+    registrationNum?: SortOrder
+    foreignPrincipal?: SortOrder
+    country?: SortOrder
+    registrantName?: SortOrder
+    registrantEntityId?: SortOrder
+    registrationDate?: SortOrder
+    terminationDate?: SortOrder
+    active?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type FaraRegistrationMaxOrderByAggregateInput = {
+    id?: SortOrder
+    registrationNum?: SortOrder
+    foreignPrincipal?: SortOrder
+    country?: SortOrder
+    registrantName?: SortOrder
+    registrantEntityId?: SortOrder
+    registrationDate?: SortOrder
+    terminationDate?: SortOrder
+    active?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type FaraRegistrationMinOrderByAggregateInput = {
+    id?: SortOrder
+    registrationNum?: SortOrder
+    foreignPrincipal?: SortOrder
+    country?: SortOrder
+    registrantName?: SortOrder
+    registrantEntityId?: SortOrder
+    registrationDate?: SortOrder
+    terminationDate?: SortOrder
+    active?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type FaraRegistrationScalarRelationFilter = {
+    is?: FaraRegistrationWhereInput
+    isNot?: FaraRegistrationWhereInput
+  }
+
+  export type FaraActivityCountOrderByAggregateInput = {
+    id?: SortOrder
+    registrationId?: SortOrder
+    activityType?: SortOrder
+    description?: SortOrder
+    amount?: SortOrder
+    periodStart?: SortOrder
+    periodEnd?: SortOrder
+    contactedOfficial?: SortOrder
+    contactedEntityId?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type FaraActivityAvgOrderByAggregateInput = {
+    amount?: SortOrder
+  }
+
+  export type FaraActivityMaxOrderByAggregateInput = {
+    id?: SortOrder
+    registrationId?: SortOrder
+    activityType?: SortOrder
+    description?: SortOrder
+    amount?: SortOrder
+    periodStart?: SortOrder
+    periodEnd?: SortOrder
+    contactedOfficial?: SortOrder
+    contactedEntityId?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type FaraActivityMinOrderByAggregateInput = {
+    id?: SortOrder
+    registrationId?: SortOrder
+    activityType?: SortOrder
+    description?: SortOrder
+    amount?: SortOrder
+    periodStart?: SortOrder
+    periodEnd?: SortOrder
+    contactedOfficial?: SortOrder
+    contactedEntityId?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type FaraActivitySumOrderByAggregateInput = {
+    amount?: SortOrder
+  }
+
+  export type NonprofitFilingEinTaxPeriodCompoundUniqueInput = {
+    ein: string
+    taxPeriod: string
+  }
+
+  export type NonprofitFilingCountOrderByAggregateInput = {
+    id?: SortOrder
+    ein?: SortOrder
+    entityId?: SortOrder
+    organizationName?: SortOrder
+    taxPeriod?: SortOrder
+    totalRevenue?: SortOrder
+    totalExpenses?: SortOrder
+    totalAssets?: SortOrder
+    politicalExpenses?: SortOrder
+    grantRecipients?: SortOrder
+    formType?: SortOrder
+    filingYear?: SortOrder
+    pdfUrl?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type NonprofitFilingAvgOrderByAggregateInput = {
+    totalRevenue?: SortOrder
+    totalExpenses?: SortOrder
+    totalAssets?: SortOrder
+    politicalExpenses?: SortOrder
+    filingYear?: SortOrder
+  }
+
+  export type NonprofitFilingMaxOrderByAggregateInput = {
+    id?: SortOrder
+    ein?: SortOrder
+    entityId?: SortOrder
+    organizationName?: SortOrder
+    taxPeriod?: SortOrder
+    totalRevenue?: SortOrder
+    totalExpenses?: SortOrder
+    totalAssets?: SortOrder
+    politicalExpenses?: SortOrder
+    formType?: SortOrder
+    filingYear?: SortOrder
+    pdfUrl?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type NonprofitFilingMinOrderByAggregateInput = {
+    id?: SortOrder
+    ein?: SortOrder
+    entityId?: SortOrder
+    organizationName?: SortOrder
+    taxPeriod?: SortOrder
+    totalRevenue?: SortOrder
+    totalExpenses?: SortOrder
+    totalAssets?: SortOrder
+    politicalExpenses?: SortOrder
+    formType?: SortOrder
+    filingYear?: SortOrder
+    pdfUrl?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type NonprofitFilingSumOrderByAggregateInput = {
+    totalRevenue?: SortOrder
+    totalExpenses?: SortOrder
+    totalAssets?: SortOrder
+    politicalExpenses?: SortOrder
+    filingYear?: SortOrder
+  }
+
   export type EnumSyncStatusFilter<$PrismaModel = never> = {
     equals?: $Enums.SyncStatus | EnumSyncStatusFieldRefInput<$PrismaModel>
     in?: $Enums.SyncStatus[] | ListEnumSyncStatusFieldRefInput<$PrismaModel>
@@ -25610,6 +31814,20 @@ export namespace Prisma {
     connect?: CongressionalTradeWhereUniqueInput | CongressionalTradeWhereUniqueInput[]
   }
 
+  export type FaraRegistrationCreateNestedManyWithoutRegistrantEntityInput = {
+    create?: XOR<FaraRegistrationCreateWithoutRegistrantEntityInput, FaraRegistrationUncheckedCreateWithoutRegistrantEntityInput> | FaraRegistrationCreateWithoutRegistrantEntityInput[] | FaraRegistrationUncheckedCreateWithoutRegistrantEntityInput[]
+    connectOrCreate?: FaraRegistrationCreateOrConnectWithoutRegistrantEntityInput | FaraRegistrationCreateOrConnectWithoutRegistrantEntityInput[]
+    createMany?: FaraRegistrationCreateManyRegistrantEntityInputEnvelope
+    connect?: FaraRegistrationWhereUniqueInput | FaraRegistrationWhereUniqueInput[]
+  }
+
+  export type FaraActivityCreateNestedManyWithoutContactedEntityInput = {
+    create?: XOR<FaraActivityCreateWithoutContactedEntityInput, FaraActivityUncheckedCreateWithoutContactedEntityInput> | FaraActivityCreateWithoutContactedEntityInput[] | FaraActivityUncheckedCreateWithoutContactedEntityInput[]
+    connectOrCreate?: FaraActivityCreateOrConnectWithoutContactedEntityInput | FaraActivityCreateOrConnectWithoutContactedEntityInput[]
+    createMany?: FaraActivityCreateManyContactedEntityInputEnvelope
+    connect?: FaraActivityWhereUniqueInput | FaraActivityWhereUniqueInput[]
+  }
+
   export type EntityUncheckedCreateNestedManyWithoutMergedIntoInput = {
     create?: XOR<EntityCreateWithoutMergedIntoInput, EntityUncheckedCreateWithoutMergedIntoInput> | EntityCreateWithoutMergedIntoInput[] | EntityUncheckedCreateWithoutMergedIntoInput[]
     connectOrCreate?: EntityCreateOrConnectWithoutMergedIntoInput | EntityCreateOrConnectWithoutMergedIntoInput[]
@@ -25732,6 +31950,20 @@ export namespace Prisma {
     connectOrCreate?: CongressionalTradeCreateOrConnectWithoutEntityInput | CongressionalTradeCreateOrConnectWithoutEntityInput[]
     createMany?: CongressionalTradeCreateManyEntityInputEnvelope
     connect?: CongressionalTradeWhereUniqueInput | CongressionalTradeWhereUniqueInput[]
+  }
+
+  export type FaraRegistrationUncheckedCreateNestedManyWithoutRegistrantEntityInput = {
+    create?: XOR<FaraRegistrationCreateWithoutRegistrantEntityInput, FaraRegistrationUncheckedCreateWithoutRegistrantEntityInput> | FaraRegistrationCreateWithoutRegistrantEntityInput[] | FaraRegistrationUncheckedCreateWithoutRegistrantEntityInput[]
+    connectOrCreate?: FaraRegistrationCreateOrConnectWithoutRegistrantEntityInput | FaraRegistrationCreateOrConnectWithoutRegistrantEntityInput[]
+    createMany?: FaraRegistrationCreateManyRegistrantEntityInputEnvelope
+    connect?: FaraRegistrationWhereUniqueInput | FaraRegistrationWhereUniqueInput[]
+  }
+
+  export type FaraActivityUncheckedCreateNestedManyWithoutContactedEntityInput = {
+    create?: XOR<FaraActivityCreateWithoutContactedEntityInput, FaraActivityUncheckedCreateWithoutContactedEntityInput> | FaraActivityCreateWithoutContactedEntityInput[] | FaraActivityUncheckedCreateWithoutContactedEntityInput[]
+    connectOrCreate?: FaraActivityCreateOrConnectWithoutContactedEntityInput | FaraActivityCreateOrConnectWithoutContactedEntityInput[]
+    createMany?: FaraActivityCreateManyContactedEntityInputEnvelope
+    connect?: FaraActivityWhereUniqueInput | FaraActivityWhereUniqueInput[]
   }
 
   export type StringFieldUpdateOperationsInput = {
@@ -26036,6 +32268,34 @@ export namespace Prisma {
     deleteMany?: CongressionalTradeScalarWhereInput | CongressionalTradeScalarWhereInput[]
   }
 
+  export type FaraRegistrationUpdateManyWithoutRegistrantEntityNestedInput = {
+    create?: XOR<FaraRegistrationCreateWithoutRegistrantEntityInput, FaraRegistrationUncheckedCreateWithoutRegistrantEntityInput> | FaraRegistrationCreateWithoutRegistrantEntityInput[] | FaraRegistrationUncheckedCreateWithoutRegistrantEntityInput[]
+    connectOrCreate?: FaraRegistrationCreateOrConnectWithoutRegistrantEntityInput | FaraRegistrationCreateOrConnectWithoutRegistrantEntityInput[]
+    upsert?: FaraRegistrationUpsertWithWhereUniqueWithoutRegistrantEntityInput | FaraRegistrationUpsertWithWhereUniqueWithoutRegistrantEntityInput[]
+    createMany?: FaraRegistrationCreateManyRegistrantEntityInputEnvelope
+    set?: FaraRegistrationWhereUniqueInput | FaraRegistrationWhereUniqueInput[]
+    disconnect?: FaraRegistrationWhereUniqueInput | FaraRegistrationWhereUniqueInput[]
+    delete?: FaraRegistrationWhereUniqueInput | FaraRegistrationWhereUniqueInput[]
+    connect?: FaraRegistrationWhereUniqueInput | FaraRegistrationWhereUniqueInput[]
+    update?: FaraRegistrationUpdateWithWhereUniqueWithoutRegistrantEntityInput | FaraRegistrationUpdateWithWhereUniqueWithoutRegistrantEntityInput[]
+    updateMany?: FaraRegistrationUpdateManyWithWhereWithoutRegistrantEntityInput | FaraRegistrationUpdateManyWithWhereWithoutRegistrantEntityInput[]
+    deleteMany?: FaraRegistrationScalarWhereInput | FaraRegistrationScalarWhereInput[]
+  }
+
+  export type FaraActivityUpdateManyWithoutContactedEntityNestedInput = {
+    create?: XOR<FaraActivityCreateWithoutContactedEntityInput, FaraActivityUncheckedCreateWithoutContactedEntityInput> | FaraActivityCreateWithoutContactedEntityInput[] | FaraActivityUncheckedCreateWithoutContactedEntityInput[]
+    connectOrCreate?: FaraActivityCreateOrConnectWithoutContactedEntityInput | FaraActivityCreateOrConnectWithoutContactedEntityInput[]
+    upsert?: FaraActivityUpsertWithWhereUniqueWithoutContactedEntityInput | FaraActivityUpsertWithWhereUniqueWithoutContactedEntityInput[]
+    createMany?: FaraActivityCreateManyContactedEntityInputEnvelope
+    set?: FaraActivityWhereUniqueInput | FaraActivityWhereUniqueInput[]
+    disconnect?: FaraActivityWhereUniqueInput | FaraActivityWhereUniqueInput[]
+    delete?: FaraActivityWhereUniqueInput | FaraActivityWhereUniqueInput[]
+    connect?: FaraActivityWhereUniqueInput | FaraActivityWhereUniqueInput[]
+    update?: FaraActivityUpdateWithWhereUniqueWithoutContactedEntityInput | FaraActivityUpdateWithWhereUniqueWithoutContactedEntityInput[]
+    updateMany?: FaraActivityUpdateManyWithWhereWithoutContactedEntityInput | FaraActivityUpdateManyWithWhereWithoutContactedEntityInput[]
+    deleteMany?: FaraActivityScalarWhereInput | FaraActivityScalarWhereInput[]
+  }
+
   export type EntityUncheckedUpdateManyWithoutMergedIntoNestedInput = {
     create?: XOR<EntityCreateWithoutMergedIntoInput, EntityUncheckedCreateWithoutMergedIntoInput> | EntityCreateWithoutMergedIntoInput[] | EntityUncheckedCreateWithoutMergedIntoInput[]
     connectOrCreate?: EntityCreateOrConnectWithoutMergedIntoInput | EntityCreateOrConnectWithoutMergedIntoInput[]
@@ -26278,6 +32538,34 @@ export namespace Prisma {
     update?: CongressionalTradeUpdateWithWhereUniqueWithoutEntityInput | CongressionalTradeUpdateWithWhereUniqueWithoutEntityInput[]
     updateMany?: CongressionalTradeUpdateManyWithWhereWithoutEntityInput | CongressionalTradeUpdateManyWithWhereWithoutEntityInput[]
     deleteMany?: CongressionalTradeScalarWhereInput | CongressionalTradeScalarWhereInput[]
+  }
+
+  export type FaraRegistrationUncheckedUpdateManyWithoutRegistrantEntityNestedInput = {
+    create?: XOR<FaraRegistrationCreateWithoutRegistrantEntityInput, FaraRegistrationUncheckedCreateWithoutRegistrantEntityInput> | FaraRegistrationCreateWithoutRegistrantEntityInput[] | FaraRegistrationUncheckedCreateWithoutRegistrantEntityInput[]
+    connectOrCreate?: FaraRegistrationCreateOrConnectWithoutRegistrantEntityInput | FaraRegistrationCreateOrConnectWithoutRegistrantEntityInput[]
+    upsert?: FaraRegistrationUpsertWithWhereUniqueWithoutRegistrantEntityInput | FaraRegistrationUpsertWithWhereUniqueWithoutRegistrantEntityInput[]
+    createMany?: FaraRegistrationCreateManyRegistrantEntityInputEnvelope
+    set?: FaraRegistrationWhereUniqueInput | FaraRegistrationWhereUniqueInput[]
+    disconnect?: FaraRegistrationWhereUniqueInput | FaraRegistrationWhereUniqueInput[]
+    delete?: FaraRegistrationWhereUniqueInput | FaraRegistrationWhereUniqueInput[]
+    connect?: FaraRegistrationWhereUniqueInput | FaraRegistrationWhereUniqueInput[]
+    update?: FaraRegistrationUpdateWithWhereUniqueWithoutRegistrantEntityInput | FaraRegistrationUpdateWithWhereUniqueWithoutRegistrantEntityInput[]
+    updateMany?: FaraRegistrationUpdateManyWithWhereWithoutRegistrantEntityInput | FaraRegistrationUpdateManyWithWhereWithoutRegistrantEntityInput[]
+    deleteMany?: FaraRegistrationScalarWhereInput | FaraRegistrationScalarWhereInput[]
+  }
+
+  export type FaraActivityUncheckedUpdateManyWithoutContactedEntityNestedInput = {
+    create?: XOR<FaraActivityCreateWithoutContactedEntityInput, FaraActivityUncheckedCreateWithoutContactedEntityInput> | FaraActivityCreateWithoutContactedEntityInput[] | FaraActivityUncheckedCreateWithoutContactedEntityInput[]
+    connectOrCreate?: FaraActivityCreateOrConnectWithoutContactedEntityInput | FaraActivityCreateOrConnectWithoutContactedEntityInput[]
+    upsert?: FaraActivityUpsertWithWhereUniqueWithoutContactedEntityInput | FaraActivityUpsertWithWhereUniqueWithoutContactedEntityInput[]
+    createMany?: FaraActivityCreateManyContactedEntityInputEnvelope
+    set?: FaraActivityWhereUniqueInput | FaraActivityWhereUniqueInput[]
+    disconnect?: FaraActivityWhereUniqueInput | FaraActivityWhereUniqueInput[]
+    delete?: FaraActivityWhereUniqueInput | FaraActivityWhereUniqueInput[]
+    connect?: FaraActivityWhereUniqueInput | FaraActivityWhereUniqueInput[]
+    update?: FaraActivityUpdateWithWhereUniqueWithoutContactedEntityInput | FaraActivityUpdateWithWhereUniqueWithoutContactedEntityInput[]
+    updateMany?: FaraActivityUpdateManyWithWhereWithoutContactedEntityInput | FaraActivityUpdateManyWithWhereWithoutContactedEntityInput[]
+    deleteMany?: FaraActivityScalarWhereInput | FaraActivityScalarWhereInput[]
   }
 
   export type EntityCreateNestedOneWithoutAliasesInput = {
@@ -26661,6 +32949,112 @@ export namespace Prisma {
     upsert?: EntityUpsertWithoutCongressionalTradesInput
     connect?: EntityWhereUniqueInput
     update?: XOR<XOR<EntityUpdateToOneWithWhereWithoutCongressionalTradesInput, EntityUpdateWithoutCongressionalTradesInput>, EntityUncheckedUpdateWithoutCongressionalTradesInput>
+  }
+
+  export type FederalRegisterEntryCreateagencyNamesInput = {
+    set: string[]
+  }
+
+  export type FederalRegisterEntryCreateagencyEntityIdsInput = {
+    set: string[]
+  }
+
+  export type FederalRegisterEntryUpdateagencyNamesInput = {
+    set?: string[]
+    push?: string | string[]
+  }
+
+  export type FederalRegisterEntryUpdateagencyEntityIdsInput = {
+    set?: string[]
+    push?: string | string[]
+  }
+
+  export type EntityCreateNestedOneWithoutFaraRegistrationsInput = {
+    create?: XOR<EntityCreateWithoutFaraRegistrationsInput, EntityUncheckedCreateWithoutFaraRegistrationsInput>
+    connectOrCreate?: EntityCreateOrConnectWithoutFaraRegistrationsInput
+    connect?: EntityWhereUniqueInput
+  }
+
+  export type FaraActivityCreateNestedManyWithoutRegistrationInput = {
+    create?: XOR<FaraActivityCreateWithoutRegistrationInput, FaraActivityUncheckedCreateWithoutRegistrationInput> | FaraActivityCreateWithoutRegistrationInput[] | FaraActivityUncheckedCreateWithoutRegistrationInput[]
+    connectOrCreate?: FaraActivityCreateOrConnectWithoutRegistrationInput | FaraActivityCreateOrConnectWithoutRegistrationInput[]
+    createMany?: FaraActivityCreateManyRegistrationInputEnvelope
+    connect?: FaraActivityWhereUniqueInput | FaraActivityWhereUniqueInput[]
+  }
+
+  export type FaraActivityUncheckedCreateNestedManyWithoutRegistrationInput = {
+    create?: XOR<FaraActivityCreateWithoutRegistrationInput, FaraActivityUncheckedCreateWithoutRegistrationInput> | FaraActivityCreateWithoutRegistrationInput[] | FaraActivityUncheckedCreateWithoutRegistrationInput[]
+    connectOrCreate?: FaraActivityCreateOrConnectWithoutRegistrationInput | FaraActivityCreateOrConnectWithoutRegistrationInput[]
+    createMany?: FaraActivityCreateManyRegistrationInputEnvelope
+    connect?: FaraActivityWhereUniqueInput | FaraActivityWhereUniqueInput[]
+  }
+
+  export type EntityUpdateOneWithoutFaraRegistrationsNestedInput = {
+    create?: XOR<EntityCreateWithoutFaraRegistrationsInput, EntityUncheckedCreateWithoutFaraRegistrationsInput>
+    connectOrCreate?: EntityCreateOrConnectWithoutFaraRegistrationsInput
+    upsert?: EntityUpsertWithoutFaraRegistrationsInput
+    disconnect?: EntityWhereInput | boolean
+    delete?: EntityWhereInput | boolean
+    connect?: EntityWhereUniqueInput
+    update?: XOR<XOR<EntityUpdateToOneWithWhereWithoutFaraRegistrationsInput, EntityUpdateWithoutFaraRegistrationsInput>, EntityUncheckedUpdateWithoutFaraRegistrationsInput>
+  }
+
+  export type FaraActivityUpdateManyWithoutRegistrationNestedInput = {
+    create?: XOR<FaraActivityCreateWithoutRegistrationInput, FaraActivityUncheckedCreateWithoutRegistrationInput> | FaraActivityCreateWithoutRegistrationInput[] | FaraActivityUncheckedCreateWithoutRegistrationInput[]
+    connectOrCreate?: FaraActivityCreateOrConnectWithoutRegistrationInput | FaraActivityCreateOrConnectWithoutRegistrationInput[]
+    upsert?: FaraActivityUpsertWithWhereUniqueWithoutRegistrationInput | FaraActivityUpsertWithWhereUniqueWithoutRegistrationInput[]
+    createMany?: FaraActivityCreateManyRegistrationInputEnvelope
+    set?: FaraActivityWhereUniqueInput | FaraActivityWhereUniqueInput[]
+    disconnect?: FaraActivityWhereUniqueInput | FaraActivityWhereUniqueInput[]
+    delete?: FaraActivityWhereUniqueInput | FaraActivityWhereUniqueInput[]
+    connect?: FaraActivityWhereUniqueInput | FaraActivityWhereUniqueInput[]
+    update?: FaraActivityUpdateWithWhereUniqueWithoutRegistrationInput | FaraActivityUpdateWithWhereUniqueWithoutRegistrationInput[]
+    updateMany?: FaraActivityUpdateManyWithWhereWithoutRegistrationInput | FaraActivityUpdateManyWithWhereWithoutRegistrationInput[]
+    deleteMany?: FaraActivityScalarWhereInput | FaraActivityScalarWhereInput[]
+  }
+
+  export type FaraActivityUncheckedUpdateManyWithoutRegistrationNestedInput = {
+    create?: XOR<FaraActivityCreateWithoutRegistrationInput, FaraActivityUncheckedCreateWithoutRegistrationInput> | FaraActivityCreateWithoutRegistrationInput[] | FaraActivityUncheckedCreateWithoutRegistrationInput[]
+    connectOrCreate?: FaraActivityCreateOrConnectWithoutRegistrationInput | FaraActivityCreateOrConnectWithoutRegistrationInput[]
+    upsert?: FaraActivityUpsertWithWhereUniqueWithoutRegistrationInput | FaraActivityUpsertWithWhereUniqueWithoutRegistrationInput[]
+    createMany?: FaraActivityCreateManyRegistrationInputEnvelope
+    set?: FaraActivityWhereUniqueInput | FaraActivityWhereUniqueInput[]
+    disconnect?: FaraActivityWhereUniqueInput | FaraActivityWhereUniqueInput[]
+    delete?: FaraActivityWhereUniqueInput | FaraActivityWhereUniqueInput[]
+    connect?: FaraActivityWhereUniqueInput | FaraActivityWhereUniqueInput[]
+    update?: FaraActivityUpdateWithWhereUniqueWithoutRegistrationInput | FaraActivityUpdateWithWhereUniqueWithoutRegistrationInput[]
+    updateMany?: FaraActivityUpdateManyWithWhereWithoutRegistrationInput | FaraActivityUpdateManyWithWhereWithoutRegistrationInput[]
+    deleteMany?: FaraActivityScalarWhereInput | FaraActivityScalarWhereInput[]
+  }
+
+  export type FaraRegistrationCreateNestedOneWithoutActivitiesInput = {
+    create?: XOR<FaraRegistrationCreateWithoutActivitiesInput, FaraRegistrationUncheckedCreateWithoutActivitiesInput>
+    connectOrCreate?: FaraRegistrationCreateOrConnectWithoutActivitiesInput
+    connect?: FaraRegistrationWhereUniqueInput
+  }
+
+  export type EntityCreateNestedOneWithoutFaraContactsInput = {
+    create?: XOR<EntityCreateWithoutFaraContactsInput, EntityUncheckedCreateWithoutFaraContactsInput>
+    connectOrCreate?: EntityCreateOrConnectWithoutFaraContactsInput
+    connect?: EntityWhereUniqueInput
+  }
+
+  export type FaraRegistrationUpdateOneRequiredWithoutActivitiesNestedInput = {
+    create?: XOR<FaraRegistrationCreateWithoutActivitiesInput, FaraRegistrationUncheckedCreateWithoutActivitiesInput>
+    connectOrCreate?: FaraRegistrationCreateOrConnectWithoutActivitiesInput
+    upsert?: FaraRegistrationUpsertWithoutActivitiesInput
+    connect?: FaraRegistrationWhereUniqueInput
+    update?: XOR<XOR<FaraRegistrationUpdateToOneWithWhereWithoutActivitiesInput, FaraRegistrationUpdateWithoutActivitiesInput>, FaraRegistrationUncheckedUpdateWithoutActivitiesInput>
+  }
+
+  export type EntityUpdateOneWithoutFaraContactsNestedInput = {
+    create?: XOR<EntityCreateWithoutFaraContactsInput, EntityUncheckedCreateWithoutFaraContactsInput>
+    connectOrCreate?: EntityCreateOrConnectWithoutFaraContactsInput
+    upsert?: EntityUpsertWithoutFaraContactsInput
+    disconnect?: EntityWhereInput | boolean
+    delete?: EntityWhereInput | boolean
+    connect?: EntityWhereUniqueInput
+    update?: XOR<XOR<EntityUpdateToOneWithWhereWithoutFaraContactsInput, EntityUpdateWithoutFaraContactsInput>, EntityUncheckedUpdateWithoutFaraContactsInput>
   }
 
   export type EnumSyncStatusFieldUpdateOperationsInput = {
@@ -27207,6 +33601,8 @@ export namespace Prisma {
     sponsoredLegislation?: LegislationCreateNestedManyWithoutSponsorEntityInput
     legislativeVotes?: LegislativeVoteCreateNestedManyWithoutEntityInput
     congressionalTrades?: CongressionalTradeCreateNestedManyWithoutEntityInput
+    faraRegistrations?: FaraRegistrationCreateNestedManyWithoutRegistrantEntityInput
+    faraContacts?: FaraActivityCreateNestedManyWithoutContactedEntityInput
   }
 
   export type EntityUncheckedCreateWithoutMergedFromInput = {
@@ -27254,6 +33650,8 @@ export namespace Prisma {
     sponsoredLegislation?: LegislationUncheckedCreateNestedManyWithoutSponsorEntityInput
     legislativeVotes?: LegislativeVoteUncheckedCreateNestedManyWithoutEntityInput
     congressionalTrades?: CongressionalTradeUncheckedCreateNestedManyWithoutEntityInput
+    faraRegistrations?: FaraRegistrationUncheckedCreateNestedManyWithoutRegistrantEntityInput
+    faraContacts?: FaraActivityUncheckedCreateNestedManyWithoutContactedEntityInput
   }
 
   export type EntityCreateOrConnectWithoutMergedFromInput = {
@@ -27306,6 +33704,8 @@ export namespace Prisma {
     sponsoredLegislation?: LegislationCreateNestedManyWithoutSponsorEntityInput
     legislativeVotes?: LegislativeVoteCreateNestedManyWithoutEntityInput
     congressionalTrades?: CongressionalTradeCreateNestedManyWithoutEntityInput
+    faraRegistrations?: FaraRegistrationCreateNestedManyWithoutRegistrantEntityInput
+    faraContacts?: FaraActivityCreateNestedManyWithoutContactedEntityInput
   }
 
   export type EntityUncheckedCreateWithoutMergedIntoInput = {
@@ -27353,6 +33753,8 @@ export namespace Prisma {
     sponsoredLegislation?: LegislationUncheckedCreateNestedManyWithoutSponsorEntityInput
     legislativeVotes?: LegislativeVoteUncheckedCreateNestedManyWithoutEntityInput
     congressionalTrades?: CongressionalTradeUncheckedCreateNestedManyWithoutEntityInput
+    faraRegistrations?: FaraRegistrationUncheckedCreateNestedManyWithoutRegistrantEntityInput
+    faraContacts?: FaraActivityUncheckedCreateNestedManyWithoutContactedEntityInput
   }
 
   export type EntityCreateOrConnectWithoutMergedIntoInput = {
@@ -28079,6 +34481,76 @@ export namespace Prisma {
     skipDuplicates?: boolean
   }
 
+  export type FaraRegistrationCreateWithoutRegistrantEntityInput = {
+    id?: string
+    registrationNum: string
+    foreignPrincipal: string
+    country: string
+    registrantName: string
+    registrationDate: Date | string
+    terminationDate?: Date | string | null
+    active?: boolean
+    createdAt?: Date | string
+    activities?: FaraActivityCreateNestedManyWithoutRegistrationInput
+  }
+
+  export type FaraRegistrationUncheckedCreateWithoutRegistrantEntityInput = {
+    id?: string
+    registrationNum: string
+    foreignPrincipal: string
+    country: string
+    registrantName: string
+    registrationDate: Date | string
+    terminationDate?: Date | string | null
+    active?: boolean
+    createdAt?: Date | string
+    activities?: FaraActivityUncheckedCreateNestedManyWithoutRegistrationInput
+  }
+
+  export type FaraRegistrationCreateOrConnectWithoutRegistrantEntityInput = {
+    where: FaraRegistrationWhereUniqueInput
+    create: XOR<FaraRegistrationCreateWithoutRegistrantEntityInput, FaraRegistrationUncheckedCreateWithoutRegistrantEntityInput>
+  }
+
+  export type FaraRegistrationCreateManyRegistrantEntityInputEnvelope = {
+    data: FaraRegistrationCreateManyRegistrantEntityInput | FaraRegistrationCreateManyRegistrantEntityInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type FaraActivityCreateWithoutContactedEntityInput = {
+    id?: string
+    activityType: string
+    description?: string | null
+    amount?: Decimal | DecimalJsLike | number | string | null
+    periodStart: Date | string
+    periodEnd: Date | string
+    contactedOfficial?: string | null
+    createdAt?: Date | string
+    registration: FaraRegistrationCreateNestedOneWithoutActivitiesInput
+  }
+
+  export type FaraActivityUncheckedCreateWithoutContactedEntityInput = {
+    id?: string
+    registrationId: string
+    activityType: string
+    description?: string | null
+    amount?: Decimal | DecimalJsLike | number | string | null
+    periodStart: Date | string
+    periodEnd: Date | string
+    contactedOfficial?: string | null
+    createdAt?: Date | string
+  }
+
+  export type FaraActivityCreateOrConnectWithoutContactedEntityInput = {
+    where: FaraActivityWhereUniqueInput
+    create: XOR<FaraActivityCreateWithoutContactedEntityInput, FaraActivityUncheckedCreateWithoutContactedEntityInput>
+  }
+
+  export type FaraActivityCreateManyContactedEntityInputEnvelope = {
+    data: FaraActivityCreateManyContactedEntityInput | FaraActivityCreateManyContactedEntityInput[]
+    skipDuplicates?: boolean
+  }
+
   export type EntityUpsertWithoutMergedFromInput = {
     update: XOR<EntityUpdateWithoutMergedFromInput, EntityUncheckedUpdateWithoutMergedFromInput>
     create: XOR<EntityCreateWithoutMergedFromInput, EntityUncheckedCreateWithoutMergedFromInput>
@@ -28135,6 +34607,8 @@ export namespace Prisma {
     sponsoredLegislation?: LegislationUpdateManyWithoutSponsorEntityNestedInput
     legislativeVotes?: LegislativeVoteUpdateManyWithoutEntityNestedInput
     congressionalTrades?: CongressionalTradeUpdateManyWithoutEntityNestedInput
+    faraRegistrations?: FaraRegistrationUpdateManyWithoutRegistrantEntityNestedInput
+    faraContacts?: FaraActivityUpdateManyWithoutContactedEntityNestedInput
   }
 
   export type EntityUncheckedUpdateWithoutMergedFromInput = {
@@ -28182,6 +34656,8 @@ export namespace Prisma {
     sponsoredLegislation?: LegislationUncheckedUpdateManyWithoutSponsorEntityNestedInput
     legislativeVotes?: LegislativeVoteUncheckedUpdateManyWithoutEntityNestedInput
     congressionalTrades?: CongressionalTradeUncheckedUpdateManyWithoutEntityNestedInput
+    faraRegistrations?: FaraRegistrationUncheckedUpdateManyWithoutRegistrantEntityNestedInput
+    faraContacts?: FaraActivityUncheckedUpdateManyWithoutContactedEntityNestedInput
   }
 
   export type EntityUpsertWithWhereUniqueWithoutMergedIntoInput = {
@@ -28756,6 +35232,70 @@ export namespace Prisma {
     createdAt?: DateTimeFilter<"CongressionalTrade"> | Date | string
   }
 
+  export type FaraRegistrationUpsertWithWhereUniqueWithoutRegistrantEntityInput = {
+    where: FaraRegistrationWhereUniqueInput
+    update: XOR<FaraRegistrationUpdateWithoutRegistrantEntityInput, FaraRegistrationUncheckedUpdateWithoutRegistrantEntityInput>
+    create: XOR<FaraRegistrationCreateWithoutRegistrantEntityInput, FaraRegistrationUncheckedCreateWithoutRegistrantEntityInput>
+  }
+
+  export type FaraRegistrationUpdateWithWhereUniqueWithoutRegistrantEntityInput = {
+    where: FaraRegistrationWhereUniqueInput
+    data: XOR<FaraRegistrationUpdateWithoutRegistrantEntityInput, FaraRegistrationUncheckedUpdateWithoutRegistrantEntityInput>
+  }
+
+  export type FaraRegistrationUpdateManyWithWhereWithoutRegistrantEntityInput = {
+    where: FaraRegistrationScalarWhereInput
+    data: XOR<FaraRegistrationUpdateManyMutationInput, FaraRegistrationUncheckedUpdateManyWithoutRegistrantEntityInput>
+  }
+
+  export type FaraRegistrationScalarWhereInput = {
+    AND?: FaraRegistrationScalarWhereInput | FaraRegistrationScalarWhereInput[]
+    OR?: FaraRegistrationScalarWhereInput[]
+    NOT?: FaraRegistrationScalarWhereInput | FaraRegistrationScalarWhereInput[]
+    id?: StringFilter<"FaraRegistration"> | string
+    registrationNum?: StringFilter<"FaraRegistration"> | string
+    foreignPrincipal?: StringFilter<"FaraRegistration"> | string
+    country?: StringFilter<"FaraRegistration"> | string
+    registrantName?: StringFilter<"FaraRegistration"> | string
+    registrantEntityId?: StringNullableFilter<"FaraRegistration"> | string | null
+    registrationDate?: DateTimeFilter<"FaraRegistration"> | Date | string
+    terminationDate?: DateTimeNullableFilter<"FaraRegistration"> | Date | string | null
+    active?: BoolFilter<"FaraRegistration"> | boolean
+    createdAt?: DateTimeFilter<"FaraRegistration"> | Date | string
+  }
+
+  export type FaraActivityUpsertWithWhereUniqueWithoutContactedEntityInput = {
+    where: FaraActivityWhereUniqueInput
+    update: XOR<FaraActivityUpdateWithoutContactedEntityInput, FaraActivityUncheckedUpdateWithoutContactedEntityInput>
+    create: XOR<FaraActivityCreateWithoutContactedEntityInput, FaraActivityUncheckedCreateWithoutContactedEntityInput>
+  }
+
+  export type FaraActivityUpdateWithWhereUniqueWithoutContactedEntityInput = {
+    where: FaraActivityWhereUniqueInput
+    data: XOR<FaraActivityUpdateWithoutContactedEntityInput, FaraActivityUncheckedUpdateWithoutContactedEntityInput>
+  }
+
+  export type FaraActivityUpdateManyWithWhereWithoutContactedEntityInput = {
+    where: FaraActivityScalarWhereInput
+    data: XOR<FaraActivityUpdateManyMutationInput, FaraActivityUncheckedUpdateManyWithoutContactedEntityInput>
+  }
+
+  export type FaraActivityScalarWhereInput = {
+    AND?: FaraActivityScalarWhereInput | FaraActivityScalarWhereInput[]
+    OR?: FaraActivityScalarWhereInput[]
+    NOT?: FaraActivityScalarWhereInput | FaraActivityScalarWhereInput[]
+    id?: StringFilter<"FaraActivity"> | string
+    registrationId?: StringFilter<"FaraActivity"> | string
+    activityType?: StringFilter<"FaraActivity"> | string
+    description?: StringNullableFilter<"FaraActivity"> | string | null
+    amount?: DecimalNullableFilter<"FaraActivity"> | Decimal | DecimalJsLike | number | string | null
+    periodStart?: DateTimeFilter<"FaraActivity"> | Date | string
+    periodEnd?: DateTimeFilter<"FaraActivity"> | Date | string
+    contactedOfficial?: StringNullableFilter<"FaraActivity"> | string | null
+    contactedEntityId?: StringNullableFilter<"FaraActivity"> | string | null
+    createdAt?: DateTimeFilter<"FaraActivity"> | Date | string
+  }
+
   export type EntityCreateWithoutAliasesInput = {
     id?: string
     type: $Enums.EntityType
@@ -28801,6 +35341,8 @@ export namespace Prisma {
     sponsoredLegislation?: LegislationCreateNestedManyWithoutSponsorEntityInput
     legislativeVotes?: LegislativeVoteCreateNestedManyWithoutEntityInput
     congressionalTrades?: CongressionalTradeCreateNestedManyWithoutEntityInput
+    faraRegistrations?: FaraRegistrationCreateNestedManyWithoutRegistrantEntityInput
+    faraContacts?: FaraActivityCreateNestedManyWithoutContactedEntityInput
   }
 
   export type EntityUncheckedCreateWithoutAliasesInput = {
@@ -28848,6 +35390,8 @@ export namespace Prisma {
     sponsoredLegislation?: LegislationUncheckedCreateNestedManyWithoutSponsorEntityInput
     legislativeVotes?: LegislativeVoteUncheckedCreateNestedManyWithoutEntityInput
     congressionalTrades?: CongressionalTradeUncheckedCreateNestedManyWithoutEntityInput
+    faraRegistrations?: FaraRegistrationUncheckedCreateNestedManyWithoutRegistrantEntityInput
+    faraContacts?: FaraActivityUncheckedCreateNestedManyWithoutContactedEntityInput
   }
 
   export type EntityCreateOrConnectWithoutAliasesInput = {
@@ -28911,6 +35455,8 @@ export namespace Prisma {
     sponsoredLegislation?: LegislationUpdateManyWithoutSponsorEntityNestedInput
     legislativeVotes?: LegislativeVoteUpdateManyWithoutEntityNestedInput
     congressionalTrades?: CongressionalTradeUpdateManyWithoutEntityNestedInput
+    faraRegistrations?: FaraRegistrationUpdateManyWithoutRegistrantEntityNestedInput
+    faraContacts?: FaraActivityUpdateManyWithoutContactedEntityNestedInput
   }
 
   export type EntityUncheckedUpdateWithoutAliasesInput = {
@@ -28958,6 +35504,8 @@ export namespace Prisma {
     sponsoredLegislation?: LegislationUncheckedUpdateManyWithoutSponsorEntityNestedInput
     legislativeVotes?: LegislativeVoteUncheckedUpdateManyWithoutEntityNestedInput
     congressionalTrades?: CongressionalTradeUncheckedUpdateManyWithoutEntityNestedInput
+    faraRegistrations?: FaraRegistrationUncheckedUpdateManyWithoutRegistrantEntityNestedInput
+    faraContacts?: FaraActivityUncheckedUpdateManyWithoutContactedEntityNestedInput
   }
 
   export type EntityCreateWithoutSourceRecordsInput = {
@@ -29005,6 +35553,8 @@ export namespace Prisma {
     sponsoredLegislation?: LegislationCreateNestedManyWithoutSponsorEntityInput
     legislativeVotes?: LegislativeVoteCreateNestedManyWithoutEntityInput
     congressionalTrades?: CongressionalTradeCreateNestedManyWithoutEntityInput
+    faraRegistrations?: FaraRegistrationCreateNestedManyWithoutRegistrantEntityInput
+    faraContacts?: FaraActivityCreateNestedManyWithoutContactedEntityInput
   }
 
   export type EntityUncheckedCreateWithoutSourceRecordsInput = {
@@ -29052,6 +35602,8 @@ export namespace Prisma {
     sponsoredLegislation?: LegislationUncheckedCreateNestedManyWithoutSponsorEntityInput
     legislativeVotes?: LegislativeVoteUncheckedCreateNestedManyWithoutEntityInput
     congressionalTrades?: CongressionalTradeUncheckedCreateNestedManyWithoutEntityInput
+    faraRegistrations?: FaraRegistrationUncheckedCreateNestedManyWithoutRegistrantEntityInput
+    faraContacts?: FaraActivityUncheckedCreateNestedManyWithoutContactedEntityInput
   }
 
   export type EntityCreateOrConnectWithoutSourceRecordsInput = {
@@ -29115,6 +35667,8 @@ export namespace Prisma {
     sponsoredLegislation?: LegislationUpdateManyWithoutSponsorEntityNestedInput
     legislativeVotes?: LegislativeVoteUpdateManyWithoutEntityNestedInput
     congressionalTrades?: CongressionalTradeUpdateManyWithoutEntityNestedInput
+    faraRegistrations?: FaraRegistrationUpdateManyWithoutRegistrantEntityNestedInput
+    faraContacts?: FaraActivityUpdateManyWithoutContactedEntityNestedInput
   }
 
   export type EntityUncheckedUpdateWithoutSourceRecordsInput = {
@@ -29162,6 +35716,8 @@ export namespace Prisma {
     sponsoredLegislation?: LegislationUncheckedUpdateManyWithoutSponsorEntityNestedInput
     legislativeVotes?: LegislativeVoteUncheckedUpdateManyWithoutEntityNestedInput
     congressionalTrades?: CongressionalTradeUncheckedUpdateManyWithoutEntityNestedInput
+    faraRegistrations?: FaraRegistrationUncheckedUpdateManyWithoutRegistrantEntityNestedInput
+    faraContacts?: FaraActivityUncheckedUpdateManyWithoutContactedEntityNestedInput
   }
 
   export type EntityCreateWithoutRelationshipsFromInput = {
@@ -29209,6 +35765,8 @@ export namespace Prisma {
     sponsoredLegislation?: LegislationCreateNestedManyWithoutSponsorEntityInput
     legislativeVotes?: LegislativeVoteCreateNestedManyWithoutEntityInput
     congressionalTrades?: CongressionalTradeCreateNestedManyWithoutEntityInput
+    faraRegistrations?: FaraRegistrationCreateNestedManyWithoutRegistrantEntityInput
+    faraContacts?: FaraActivityCreateNestedManyWithoutContactedEntityInput
   }
 
   export type EntityUncheckedCreateWithoutRelationshipsFromInput = {
@@ -29256,6 +35814,8 @@ export namespace Prisma {
     sponsoredLegislation?: LegislationUncheckedCreateNestedManyWithoutSponsorEntityInput
     legislativeVotes?: LegislativeVoteUncheckedCreateNestedManyWithoutEntityInput
     congressionalTrades?: CongressionalTradeUncheckedCreateNestedManyWithoutEntityInput
+    faraRegistrations?: FaraRegistrationUncheckedCreateNestedManyWithoutRegistrantEntityInput
+    faraContacts?: FaraActivityUncheckedCreateNestedManyWithoutContactedEntityInput
   }
 
   export type EntityCreateOrConnectWithoutRelationshipsFromInput = {
@@ -29308,6 +35868,8 @@ export namespace Prisma {
     sponsoredLegislation?: LegislationCreateNestedManyWithoutSponsorEntityInput
     legislativeVotes?: LegislativeVoteCreateNestedManyWithoutEntityInput
     congressionalTrades?: CongressionalTradeCreateNestedManyWithoutEntityInput
+    faraRegistrations?: FaraRegistrationCreateNestedManyWithoutRegistrantEntityInput
+    faraContacts?: FaraActivityCreateNestedManyWithoutContactedEntityInput
   }
 
   export type EntityUncheckedCreateWithoutRelationshipsToInput = {
@@ -29355,6 +35917,8 @@ export namespace Prisma {
     sponsoredLegislation?: LegislationUncheckedCreateNestedManyWithoutSponsorEntityInput
     legislativeVotes?: LegislativeVoteUncheckedCreateNestedManyWithoutEntityInput
     congressionalTrades?: CongressionalTradeUncheckedCreateNestedManyWithoutEntityInput
+    faraRegistrations?: FaraRegistrationUncheckedCreateNestedManyWithoutRegistrantEntityInput
+    faraContacts?: FaraActivityUncheckedCreateNestedManyWithoutContactedEntityInput
   }
 
   export type EntityCreateOrConnectWithoutRelationshipsToInput = {
@@ -29418,6 +35982,8 @@ export namespace Prisma {
     sponsoredLegislation?: LegislationUpdateManyWithoutSponsorEntityNestedInput
     legislativeVotes?: LegislativeVoteUpdateManyWithoutEntityNestedInput
     congressionalTrades?: CongressionalTradeUpdateManyWithoutEntityNestedInput
+    faraRegistrations?: FaraRegistrationUpdateManyWithoutRegistrantEntityNestedInput
+    faraContacts?: FaraActivityUpdateManyWithoutContactedEntityNestedInput
   }
 
   export type EntityUncheckedUpdateWithoutRelationshipsFromInput = {
@@ -29465,6 +36031,8 @@ export namespace Prisma {
     sponsoredLegislation?: LegislationUncheckedUpdateManyWithoutSponsorEntityNestedInput
     legislativeVotes?: LegislativeVoteUncheckedUpdateManyWithoutEntityNestedInput
     congressionalTrades?: CongressionalTradeUncheckedUpdateManyWithoutEntityNestedInput
+    faraRegistrations?: FaraRegistrationUncheckedUpdateManyWithoutRegistrantEntityNestedInput
+    faraContacts?: FaraActivityUncheckedUpdateManyWithoutContactedEntityNestedInput
   }
 
   export type EntityUpsertWithoutRelationshipsToInput = {
@@ -29523,6 +36091,8 @@ export namespace Prisma {
     sponsoredLegislation?: LegislationUpdateManyWithoutSponsorEntityNestedInput
     legislativeVotes?: LegislativeVoteUpdateManyWithoutEntityNestedInput
     congressionalTrades?: CongressionalTradeUpdateManyWithoutEntityNestedInput
+    faraRegistrations?: FaraRegistrationUpdateManyWithoutRegistrantEntityNestedInput
+    faraContacts?: FaraActivityUpdateManyWithoutContactedEntityNestedInput
   }
 
   export type EntityUncheckedUpdateWithoutRelationshipsToInput = {
@@ -29570,6 +36140,8 @@ export namespace Prisma {
     sponsoredLegislation?: LegislationUncheckedUpdateManyWithoutSponsorEntityNestedInput
     legislativeVotes?: LegislativeVoteUncheckedUpdateManyWithoutEntityNestedInput
     congressionalTrades?: CongressionalTradeUncheckedUpdateManyWithoutEntityNestedInput
+    faraRegistrations?: FaraRegistrationUncheckedUpdateManyWithoutRegistrantEntityNestedInput
+    faraContacts?: FaraActivityUncheckedUpdateManyWithoutContactedEntityNestedInput
   }
 
   export type EntityCreateWithoutTransactionsAsSourceInput = {
@@ -29617,6 +36189,8 @@ export namespace Prisma {
     sponsoredLegislation?: LegislationCreateNestedManyWithoutSponsorEntityInput
     legislativeVotes?: LegislativeVoteCreateNestedManyWithoutEntityInput
     congressionalTrades?: CongressionalTradeCreateNestedManyWithoutEntityInput
+    faraRegistrations?: FaraRegistrationCreateNestedManyWithoutRegistrantEntityInput
+    faraContacts?: FaraActivityCreateNestedManyWithoutContactedEntityInput
   }
 
   export type EntityUncheckedCreateWithoutTransactionsAsSourceInput = {
@@ -29664,6 +36238,8 @@ export namespace Prisma {
     sponsoredLegislation?: LegislationUncheckedCreateNestedManyWithoutSponsorEntityInput
     legislativeVotes?: LegislativeVoteUncheckedCreateNestedManyWithoutEntityInput
     congressionalTrades?: CongressionalTradeUncheckedCreateNestedManyWithoutEntityInput
+    faraRegistrations?: FaraRegistrationUncheckedCreateNestedManyWithoutRegistrantEntityInput
+    faraContacts?: FaraActivityUncheckedCreateNestedManyWithoutContactedEntityInput
   }
 
   export type EntityCreateOrConnectWithoutTransactionsAsSourceInput = {
@@ -29716,6 +36292,8 @@ export namespace Prisma {
     sponsoredLegislation?: LegislationCreateNestedManyWithoutSponsorEntityInput
     legislativeVotes?: LegislativeVoteCreateNestedManyWithoutEntityInput
     congressionalTrades?: CongressionalTradeCreateNestedManyWithoutEntityInput
+    faraRegistrations?: FaraRegistrationCreateNestedManyWithoutRegistrantEntityInput
+    faraContacts?: FaraActivityCreateNestedManyWithoutContactedEntityInput
   }
 
   export type EntityUncheckedCreateWithoutTransactionsAsTargetInput = {
@@ -29763,6 +36341,8 @@ export namespace Prisma {
     sponsoredLegislation?: LegislationUncheckedCreateNestedManyWithoutSponsorEntityInput
     legislativeVotes?: LegislativeVoteUncheckedCreateNestedManyWithoutEntityInput
     congressionalTrades?: CongressionalTradeUncheckedCreateNestedManyWithoutEntityInput
+    faraRegistrations?: FaraRegistrationUncheckedCreateNestedManyWithoutRegistrantEntityInput
+    faraContacts?: FaraActivityUncheckedCreateNestedManyWithoutContactedEntityInput
   }
 
   export type EntityCreateOrConnectWithoutTransactionsAsTargetInput = {
@@ -29826,6 +36406,8 @@ export namespace Prisma {
     sponsoredLegislation?: LegislationUpdateManyWithoutSponsorEntityNestedInput
     legislativeVotes?: LegislativeVoteUpdateManyWithoutEntityNestedInput
     congressionalTrades?: CongressionalTradeUpdateManyWithoutEntityNestedInput
+    faraRegistrations?: FaraRegistrationUpdateManyWithoutRegistrantEntityNestedInput
+    faraContacts?: FaraActivityUpdateManyWithoutContactedEntityNestedInput
   }
 
   export type EntityUncheckedUpdateWithoutTransactionsAsSourceInput = {
@@ -29873,6 +36455,8 @@ export namespace Prisma {
     sponsoredLegislation?: LegislationUncheckedUpdateManyWithoutSponsorEntityNestedInput
     legislativeVotes?: LegislativeVoteUncheckedUpdateManyWithoutEntityNestedInput
     congressionalTrades?: CongressionalTradeUncheckedUpdateManyWithoutEntityNestedInput
+    faraRegistrations?: FaraRegistrationUncheckedUpdateManyWithoutRegistrantEntityNestedInput
+    faraContacts?: FaraActivityUncheckedUpdateManyWithoutContactedEntityNestedInput
   }
 
   export type EntityUpsertWithoutTransactionsAsTargetInput = {
@@ -29931,6 +36515,8 @@ export namespace Prisma {
     sponsoredLegislation?: LegislationUpdateManyWithoutSponsorEntityNestedInput
     legislativeVotes?: LegislativeVoteUpdateManyWithoutEntityNestedInput
     congressionalTrades?: CongressionalTradeUpdateManyWithoutEntityNestedInput
+    faraRegistrations?: FaraRegistrationUpdateManyWithoutRegistrantEntityNestedInput
+    faraContacts?: FaraActivityUpdateManyWithoutContactedEntityNestedInput
   }
 
   export type EntityUncheckedUpdateWithoutTransactionsAsTargetInput = {
@@ -29978,6 +36564,8 @@ export namespace Prisma {
     sponsoredLegislation?: LegislationUncheckedUpdateManyWithoutSponsorEntityNestedInput
     legislativeVotes?: LegislativeVoteUncheckedUpdateManyWithoutEntityNestedInput
     congressionalTrades?: CongressionalTradeUncheckedUpdateManyWithoutEntityNestedInput
+    faraRegistrations?: FaraRegistrationUncheckedUpdateManyWithoutRegistrantEntityNestedInput
+    faraContacts?: FaraActivityUncheckedUpdateManyWithoutContactedEntityNestedInput
   }
 
   export type EntityCreateWithoutAggregateFlowsAsSourceInput = {
@@ -30025,6 +36613,8 @@ export namespace Prisma {
     sponsoredLegislation?: LegislationCreateNestedManyWithoutSponsorEntityInput
     legislativeVotes?: LegislativeVoteCreateNestedManyWithoutEntityInput
     congressionalTrades?: CongressionalTradeCreateNestedManyWithoutEntityInput
+    faraRegistrations?: FaraRegistrationCreateNestedManyWithoutRegistrantEntityInput
+    faraContacts?: FaraActivityCreateNestedManyWithoutContactedEntityInput
   }
 
   export type EntityUncheckedCreateWithoutAggregateFlowsAsSourceInput = {
@@ -30072,6 +36662,8 @@ export namespace Prisma {
     sponsoredLegislation?: LegislationUncheckedCreateNestedManyWithoutSponsorEntityInput
     legislativeVotes?: LegislativeVoteUncheckedCreateNestedManyWithoutEntityInput
     congressionalTrades?: CongressionalTradeUncheckedCreateNestedManyWithoutEntityInput
+    faraRegistrations?: FaraRegistrationUncheckedCreateNestedManyWithoutRegistrantEntityInput
+    faraContacts?: FaraActivityUncheckedCreateNestedManyWithoutContactedEntityInput
   }
 
   export type EntityCreateOrConnectWithoutAggregateFlowsAsSourceInput = {
@@ -30124,6 +36716,8 @@ export namespace Prisma {
     sponsoredLegislation?: LegislationCreateNestedManyWithoutSponsorEntityInput
     legislativeVotes?: LegislativeVoteCreateNestedManyWithoutEntityInput
     congressionalTrades?: CongressionalTradeCreateNestedManyWithoutEntityInput
+    faraRegistrations?: FaraRegistrationCreateNestedManyWithoutRegistrantEntityInput
+    faraContacts?: FaraActivityCreateNestedManyWithoutContactedEntityInput
   }
 
   export type EntityUncheckedCreateWithoutAggregateFlowsAsTargetInput = {
@@ -30171,6 +36765,8 @@ export namespace Prisma {
     sponsoredLegislation?: LegislationUncheckedCreateNestedManyWithoutSponsorEntityInput
     legislativeVotes?: LegislativeVoteUncheckedCreateNestedManyWithoutEntityInput
     congressionalTrades?: CongressionalTradeUncheckedCreateNestedManyWithoutEntityInput
+    faraRegistrations?: FaraRegistrationUncheckedCreateNestedManyWithoutRegistrantEntityInput
+    faraContacts?: FaraActivityUncheckedCreateNestedManyWithoutContactedEntityInput
   }
 
   export type EntityCreateOrConnectWithoutAggregateFlowsAsTargetInput = {
@@ -30234,6 +36830,8 @@ export namespace Prisma {
     sponsoredLegislation?: LegislationUpdateManyWithoutSponsorEntityNestedInput
     legislativeVotes?: LegislativeVoteUpdateManyWithoutEntityNestedInput
     congressionalTrades?: CongressionalTradeUpdateManyWithoutEntityNestedInput
+    faraRegistrations?: FaraRegistrationUpdateManyWithoutRegistrantEntityNestedInput
+    faraContacts?: FaraActivityUpdateManyWithoutContactedEntityNestedInput
   }
 
   export type EntityUncheckedUpdateWithoutAggregateFlowsAsSourceInput = {
@@ -30281,6 +36879,8 @@ export namespace Prisma {
     sponsoredLegislation?: LegislationUncheckedUpdateManyWithoutSponsorEntityNestedInput
     legislativeVotes?: LegislativeVoteUncheckedUpdateManyWithoutEntityNestedInput
     congressionalTrades?: CongressionalTradeUncheckedUpdateManyWithoutEntityNestedInput
+    faraRegistrations?: FaraRegistrationUncheckedUpdateManyWithoutRegistrantEntityNestedInput
+    faraContacts?: FaraActivityUncheckedUpdateManyWithoutContactedEntityNestedInput
   }
 
   export type EntityUpsertWithoutAggregateFlowsAsTargetInput = {
@@ -30339,6 +36939,8 @@ export namespace Prisma {
     sponsoredLegislation?: LegislationUpdateManyWithoutSponsorEntityNestedInput
     legislativeVotes?: LegislativeVoteUpdateManyWithoutEntityNestedInput
     congressionalTrades?: CongressionalTradeUpdateManyWithoutEntityNestedInput
+    faraRegistrations?: FaraRegistrationUpdateManyWithoutRegistrantEntityNestedInput
+    faraContacts?: FaraActivityUpdateManyWithoutContactedEntityNestedInput
   }
 
   export type EntityUncheckedUpdateWithoutAggregateFlowsAsTargetInput = {
@@ -30386,6 +36988,8 @@ export namespace Prisma {
     sponsoredLegislation?: LegislationUncheckedUpdateManyWithoutSponsorEntityNestedInput
     legislativeVotes?: LegislativeVoteUncheckedUpdateManyWithoutEntityNestedInput
     congressionalTrades?: CongressionalTradeUncheckedUpdateManyWithoutEntityNestedInput
+    faraRegistrations?: FaraRegistrationUncheckedUpdateManyWithoutRegistrantEntityNestedInput
+    faraContacts?: FaraActivityUncheckedUpdateManyWithoutContactedEntityNestedInput
   }
 
   export type EntityCreateWithoutFecCandidateInput = {
@@ -30433,6 +37037,8 @@ export namespace Prisma {
     sponsoredLegislation?: LegislationCreateNestedManyWithoutSponsorEntityInput
     legislativeVotes?: LegislativeVoteCreateNestedManyWithoutEntityInput
     congressionalTrades?: CongressionalTradeCreateNestedManyWithoutEntityInput
+    faraRegistrations?: FaraRegistrationCreateNestedManyWithoutRegistrantEntityInput
+    faraContacts?: FaraActivityCreateNestedManyWithoutContactedEntityInput
   }
 
   export type EntityUncheckedCreateWithoutFecCandidateInput = {
@@ -30480,6 +37086,8 @@ export namespace Prisma {
     sponsoredLegislation?: LegislationUncheckedCreateNestedManyWithoutSponsorEntityInput
     legislativeVotes?: LegislativeVoteUncheckedCreateNestedManyWithoutEntityInput
     congressionalTrades?: CongressionalTradeUncheckedCreateNestedManyWithoutEntityInput
+    faraRegistrations?: FaraRegistrationUncheckedCreateNestedManyWithoutRegistrantEntityInput
+    faraContacts?: FaraActivityUncheckedCreateNestedManyWithoutContactedEntityInput
   }
 
   export type EntityCreateOrConnectWithoutFecCandidateInput = {
@@ -30543,6 +37151,8 @@ export namespace Prisma {
     sponsoredLegislation?: LegislationUpdateManyWithoutSponsorEntityNestedInput
     legislativeVotes?: LegislativeVoteUpdateManyWithoutEntityNestedInput
     congressionalTrades?: CongressionalTradeUpdateManyWithoutEntityNestedInput
+    faraRegistrations?: FaraRegistrationUpdateManyWithoutRegistrantEntityNestedInput
+    faraContacts?: FaraActivityUpdateManyWithoutContactedEntityNestedInput
   }
 
   export type EntityUncheckedUpdateWithoutFecCandidateInput = {
@@ -30590,6 +37200,8 @@ export namespace Prisma {
     sponsoredLegislation?: LegislationUncheckedUpdateManyWithoutSponsorEntityNestedInput
     legislativeVotes?: LegislativeVoteUncheckedUpdateManyWithoutEntityNestedInput
     congressionalTrades?: CongressionalTradeUncheckedUpdateManyWithoutEntityNestedInput
+    faraRegistrations?: FaraRegistrationUncheckedUpdateManyWithoutRegistrantEntityNestedInput
+    faraContacts?: FaraActivityUncheckedUpdateManyWithoutContactedEntityNestedInput
   }
 
   export type EntityCreateWithoutFecCommitteeInput = {
@@ -30637,6 +37249,8 @@ export namespace Prisma {
     sponsoredLegislation?: LegislationCreateNestedManyWithoutSponsorEntityInput
     legislativeVotes?: LegislativeVoteCreateNestedManyWithoutEntityInput
     congressionalTrades?: CongressionalTradeCreateNestedManyWithoutEntityInput
+    faraRegistrations?: FaraRegistrationCreateNestedManyWithoutRegistrantEntityInput
+    faraContacts?: FaraActivityCreateNestedManyWithoutContactedEntityInput
   }
 
   export type EntityUncheckedCreateWithoutFecCommitteeInput = {
@@ -30684,6 +37298,8 @@ export namespace Prisma {
     sponsoredLegislation?: LegislationUncheckedCreateNestedManyWithoutSponsorEntityInput
     legislativeVotes?: LegislativeVoteUncheckedCreateNestedManyWithoutEntityInput
     congressionalTrades?: CongressionalTradeUncheckedCreateNestedManyWithoutEntityInput
+    faraRegistrations?: FaraRegistrationUncheckedCreateNestedManyWithoutRegistrantEntityInput
+    faraContacts?: FaraActivityUncheckedCreateNestedManyWithoutContactedEntityInput
   }
 
   export type EntityCreateOrConnectWithoutFecCommitteeInput = {
@@ -30747,6 +37363,8 @@ export namespace Prisma {
     sponsoredLegislation?: LegislationUpdateManyWithoutSponsorEntityNestedInput
     legislativeVotes?: LegislativeVoteUpdateManyWithoutEntityNestedInput
     congressionalTrades?: CongressionalTradeUpdateManyWithoutEntityNestedInput
+    faraRegistrations?: FaraRegistrationUpdateManyWithoutRegistrantEntityNestedInput
+    faraContacts?: FaraActivityUpdateManyWithoutContactedEntityNestedInput
   }
 
   export type EntityUncheckedUpdateWithoutFecCommitteeInput = {
@@ -30794,6 +37412,8 @@ export namespace Prisma {
     sponsoredLegislation?: LegislationUncheckedUpdateManyWithoutSponsorEntityNestedInput
     legislativeVotes?: LegislativeVoteUncheckedUpdateManyWithoutEntityNestedInput
     congressionalTrades?: CongressionalTradeUncheckedUpdateManyWithoutEntityNestedInput
+    faraRegistrations?: FaraRegistrationUncheckedUpdateManyWithoutRegistrantEntityNestedInput
+    faraContacts?: FaraActivityUncheckedUpdateManyWithoutContactedEntityNestedInput
   }
 
   export type EntityCreateWithoutLobbyingFilingsAsRegistrantInput = {
@@ -30841,6 +37461,8 @@ export namespace Prisma {
     sponsoredLegislation?: LegislationCreateNestedManyWithoutSponsorEntityInput
     legislativeVotes?: LegislativeVoteCreateNestedManyWithoutEntityInput
     congressionalTrades?: CongressionalTradeCreateNestedManyWithoutEntityInput
+    faraRegistrations?: FaraRegistrationCreateNestedManyWithoutRegistrantEntityInput
+    faraContacts?: FaraActivityCreateNestedManyWithoutContactedEntityInput
   }
 
   export type EntityUncheckedCreateWithoutLobbyingFilingsAsRegistrantInput = {
@@ -30888,6 +37510,8 @@ export namespace Prisma {
     sponsoredLegislation?: LegislationUncheckedCreateNestedManyWithoutSponsorEntityInput
     legislativeVotes?: LegislativeVoteUncheckedCreateNestedManyWithoutEntityInput
     congressionalTrades?: CongressionalTradeUncheckedCreateNestedManyWithoutEntityInput
+    faraRegistrations?: FaraRegistrationUncheckedCreateNestedManyWithoutRegistrantEntityInput
+    faraContacts?: FaraActivityUncheckedCreateNestedManyWithoutContactedEntityInput
   }
 
   export type EntityCreateOrConnectWithoutLobbyingFilingsAsRegistrantInput = {
@@ -30940,6 +37564,8 @@ export namespace Prisma {
     sponsoredLegislation?: LegislationCreateNestedManyWithoutSponsorEntityInput
     legislativeVotes?: LegislativeVoteCreateNestedManyWithoutEntityInput
     congressionalTrades?: CongressionalTradeCreateNestedManyWithoutEntityInput
+    faraRegistrations?: FaraRegistrationCreateNestedManyWithoutRegistrantEntityInput
+    faraContacts?: FaraActivityCreateNestedManyWithoutContactedEntityInput
   }
 
   export type EntityUncheckedCreateWithoutLobbyingFilingsAsClientInput = {
@@ -30987,6 +37613,8 @@ export namespace Prisma {
     sponsoredLegislation?: LegislationUncheckedCreateNestedManyWithoutSponsorEntityInput
     legislativeVotes?: LegislativeVoteUncheckedCreateNestedManyWithoutEntityInput
     congressionalTrades?: CongressionalTradeUncheckedCreateNestedManyWithoutEntityInput
+    faraRegistrations?: FaraRegistrationUncheckedCreateNestedManyWithoutRegistrantEntityInput
+    faraContacts?: FaraActivityUncheckedCreateNestedManyWithoutContactedEntityInput
   }
 
   export type EntityCreateOrConnectWithoutLobbyingFilingsAsClientInput = {
@@ -31050,6 +37678,8 @@ export namespace Prisma {
     sponsoredLegislation?: LegislationUpdateManyWithoutSponsorEntityNestedInput
     legislativeVotes?: LegislativeVoteUpdateManyWithoutEntityNestedInput
     congressionalTrades?: CongressionalTradeUpdateManyWithoutEntityNestedInput
+    faraRegistrations?: FaraRegistrationUpdateManyWithoutRegistrantEntityNestedInput
+    faraContacts?: FaraActivityUpdateManyWithoutContactedEntityNestedInput
   }
 
   export type EntityUncheckedUpdateWithoutLobbyingFilingsAsRegistrantInput = {
@@ -31097,6 +37727,8 @@ export namespace Prisma {
     sponsoredLegislation?: LegislationUncheckedUpdateManyWithoutSponsorEntityNestedInput
     legislativeVotes?: LegislativeVoteUncheckedUpdateManyWithoutEntityNestedInput
     congressionalTrades?: CongressionalTradeUncheckedUpdateManyWithoutEntityNestedInput
+    faraRegistrations?: FaraRegistrationUncheckedUpdateManyWithoutRegistrantEntityNestedInput
+    faraContacts?: FaraActivityUncheckedUpdateManyWithoutContactedEntityNestedInput
   }
 
   export type EntityUpsertWithoutLobbyingFilingsAsClientInput = {
@@ -31155,6 +37787,8 @@ export namespace Prisma {
     sponsoredLegislation?: LegislationUpdateManyWithoutSponsorEntityNestedInput
     legislativeVotes?: LegislativeVoteUpdateManyWithoutEntityNestedInput
     congressionalTrades?: CongressionalTradeUpdateManyWithoutEntityNestedInput
+    faraRegistrations?: FaraRegistrationUpdateManyWithoutRegistrantEntityNestedInput
+    faraContacts?: FaraActivityUpdateManyWithoutContactedEntityNestedInput
   }
 
   export type EntityUncheckedUpdateWithoutLobbyingFilingsAsClientInput = {
@@ -31202,6 +37836,8 @@ export namespace Prisma {
     sponsoredLegislation?: LegislationUncheckedUpdateManyWithoutSponsorEntityNestedInput
     legislativeVotes?: LegislativeVoteUncheckedUpdateManyWithoutEntityNestedInput
     congressionalTrades?: CongressionalTradeUncheckedUpdateManyWithoutEntityNestedInput
+    faraRegistrations?: FaraRegistrationUncheckedUpdateManyWithoutRegistrantEntityNestedInput
+    faraContacts?: FaraActivityUncheckedUpdateManyWithoutContactedEntityNestedInput
   }
 
   export type EntityCreateWithoutFederalAwardsAsRecipientInput = {
@@ -31249,6 +37885,8 @@ export namespace Prisma {
     sponsoredLegislation?: LegislationCreateNestedManyWithoutSponsorEntityInput
     legislativeVotes?: LegislativeVoteCreateNestedManyWithoutEntityInput
     congressionalTrades?: CongressionalTradeCreateNestedManyWithoutEntityInput
+    faraRegistrations?: FaraRegistrationCreateNestedManyWithoutRegistrantEntityInput
+    faraContacts?: FaraActivityCreateNestedManyWithoutContactedEntityInput
   }
 
   export type EntityUncheckedCreateWithoutFederalAwardsAsRecipientInput = {
@@ -31296,6 +37934,8 @@ export namespace Prisma {
     sponsoredLegislation?: LegislationUncheckedCreateNestedManyWithoutSponsorEntityInput
     legislativeVotes?: LegislativeVoteUncheckedCreateNestedManyWithoutEntityInput
     congressionalTrades?: CongressionalTradeUncheckedCreateNestedManyWithoutEntityInput
+    faraRegistrations?: FaraRegistrationUncheckedCreateNestedManyWithoutRegistrantEntityInput
+    faraContacts?: FaraActivityUncheckedCreateNestedManyWithoutContactedEntityInput
   }
 
   export type EntityCreateOrConnectWithoutFederalAwardsAsRecipientInput = {
@@ -31348,6 +37988,8 @@ export namespace Prisma {
     sponsoredLegislation?: LegislationCreateNestedManyWithoutSponsorEntityInput
     legislativeVotes?: LegislativeVoteCreateNestedManyWithoutEntityInput
     congressionalTrades?: CongressionalTradeCreateNestedManyWithoutEntityInput
+    faraRegistrations?: FaraRegistrationCreateNestedManyWithoutRegistrantEntityInput
+    faraContacts?: FaraActivityCreateNestedManyWithoutContactedEntityInput
   }
 
   export type EntityUncheckedCreateWithoutFederalAwardsAsAgencyInput = {
@@ -31395,6 +38037,8 @@ export namespace Prisma {
     sponsoredLegislation?: LegislationUncheckedCreateNestedManyWithoutSponsorEntityInput
     legislativeVotes?: LegislativeVoteUncheckedCreateNestedManyWithoutEntityInput
     congressionalTrades?: CongressionalTradeUncheckedCreateNestedManyWithoutEntityInput
+    faraRegistrations?: FaraRegistrationUncheckedCreateNestedManyWithoutRegistrantEntityInput
+    faraContacts?: FaraActivityUncheckedCreateNestedManyWithoutContactedEntityInput
   }
 
   export type EntityCreateOrConnectWithoutFederalAwardsAsAgencyInput = {
@@ -31458,6 +38102,8 @@ export namespace Prisma {
     sponsoredLegislation?: LegislationUpdateManyWithoutSponsorEntityNestedInput
     legislativeVotes?: LegislativeVoteUpdateManyWithoutEntityNestedInput
     congressionalTrades?: CongressionalTradeUpdateManyWithoutEntityNestedInput
+    faraRegistrations?: FaraRegistrationUpdateManyWithoutRegistrantEntityNestedInput
+    faraContacts?: FaraActivityUpdateManyWithoutContactedEntityNestedInput
   }
 
   export type EntityUncheckedUpdateWithoutFederalAwardsAsRecipientInput = {
@@ -31505,6 +38151,8 @@ export namespace Prisma {
     sponsoredLegislation?: LegislationUncheckedUpdateManyWithoutSponsorEntityNestedInput
     legislativeVotes?: LegislativeVoteUncheckedUpdateManyWithoutEntityNestedInput
     congressionalTrades?: CongressionalTradeUncheckedUpdateManyWithoutEntityNestedInput
+    faraRegistrations?: FaraRegistrationUncheckedUpdateManyWithoutRegistrantEntityNestedInput
+    faraContacts?: FaraActivityUncheckedUpdateManyWithoutContactedEntityNestedInput
   }
 
   export type EntityUpsertWithoutFederalAwardsAsAgencyInput = {
@@ -31563,6 +38211,8 @@ export namespace Prisma {
     sponsoredLegislation?: LegislationUpdateManyWithoutSponsorEntityNestedInput
     legislativeVotes?: LegislativeVoteUpdateManyWithoutEntityNestedInput
     congressionalTrades?: CongressionalTradeUpdateManyWithoutEntityNestedInput
+    faraRegistrations?: FaraRegistrationUpdateManyWithoutRegistrantEntityNestedInput
+    faraContacts?: FaraActivityUpdateManyWithoutContactedEntityNestedInput
   }
 
   export type EntityUncheckedUpdateWithoutFederalAwardsAsAgencyInput = {
@@ -31610,6 +38260,8 @@ export namespace Prisma {
     sponsoredLegislation?: LegislationUncheckedUpdateManyWithoutSponsorEntityNestedInput
     legislativeVotes?: LegislativeVoteUncheckedUpdateManyWithoutEntityNestedInput
     congressionalTrades?: CongressionalTradeUncheckedUpdateManyWithoutEntityNestedInput
+    faraRegistrations?: FaraRegistrationUncheckedUpdateManyWithoutRegistrantEntityNestedInput
+    faraContacts?: FaraActivityUncheckedUpdateManyWithoutContactedEntityNestedInput
   }
 
   export type EntityCreateWithoutSponsoredLegislationInput = {
@@ -31657,6 +38309,8 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardCreateNestedManyWithoutAgencyEntityInput
     legislativeVotes?: LegislativeVoteCreateNestedManyWithoutEntityInput
     congressionalTrades?: CongressionalTradeCreateNestedManyWithoutEntityInput
+    faraRegistrations?: FaraRegistrationCreateNestedManyWithoutRegistrantEntityInput
+    faraContacts?: FaraActivityCreateNestedManyWithoutContactedEntityInput
   }
 
   export type EntityUncheckedCreateWithoutSponsoredLegislationInput = {
@@ -31704,6 +38358,8 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardUncheckedCreateNestedManyWithoutAgencyEntityInput
     legislativeVotes?: LegislativeVoteUncheckedCreateNestedManyWithoutEntityInput
     congressionalTrades?: CongressionalTradeUncheckedCreateNestedManyWithoutEntityInput
+    faraRegistrations?: FaraRegistrationUncheckedCreateNestedManyWithoutRegistrantEntityInput
+    faraContacts?: FaraActivityUncheckedCreateNestedManyWithoutContactedEntityInput
   }
 
   export type EntityCreateOrConnectWithoutSponsoredLegislationInput = {
@@ -31803,6 +38459,8 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardUpdateManyWithoutAgencyEntityNestedInput
     legislativeVotes?: LegislativeVoteUpdateManyWithoutEntityNestedInput
     congressionalTrades?: CongressionalTradeUpdateManyWithoutEntityNestedInput
+    faraRegistrations?: FaraRegistrationUpdateManyWithoutRegistrantEntityNestedInput
+    faraContacts?: FaraActivityUpdateManyWithoutContactedEntityNestedInput
   }
 
   export type EntityUncheckedUpdateWithoutSponsoredLegislationInput = {
@@ -31850,6 +38508,8 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardUncheckedUpdateManyWithoutAgencyEntityNestedInput
     legislativeVotes?: LegislativeVoteUncheckedUpdateManyWithoutEntityNestedInput
     congressionalTrades?: CongressionalTradeUncheckedUpdateManyWithoutEntityNestedInput
+    faraRegistrations?: FaraRegistrationUncheckedUpdateManyWithoutRegistrantEntityNestedInput
+    faraContacts?: FaraActivityUncheckedUpdateManyWithoutContactedEntityNestedInput
   }
 
   export type LegislativeVoteUpsertWithWhereUniqueWithoutLegislationInput = {
@@ -31913,6 +38573,8 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardCreateNestedManyWithoutAgencyEntityInput
     sponsoredLegislation?: LegislationCreateNestedManyWithoutSponsorEntityInput
     congressionalTrades?: CongressionalTradeCreateNestedManyWithoutEntityInput
+    faraRegistrations?: FaraRegistrationCreateNestedManyWithoutRegistrantEntityInput
+    faraContacts?: FaraActivityCreateNestedManyWithoutContactedEntityInput
   }
 
   export type EntityUncheckedCreateWithoutLegislativeVotesInput = {
@@ -31960,6 +38622,8 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardUncheckedCreateNestedManyWithoutAgencyEntityInput
     sponsoredLegislation?: LegislationUncheckedCreateNestedManyWithoutSponsorEntityInput
     congressionalTrades?: CongressionalTradeUncheckedCreateNestedManyWithoutEntityInput
+    faraRegistrations?: FaraRegistrationUncheckedCreateNestedManyWithoutRegistrantEntityInput
+    faraContacts?: FaraActivityUncheckedCreateNestedManyWithoutContactedEntityInput
   }
 
   export type EntityCreateOrConnectWithoutLegislativeVotesInput = {
@@ -32064,6 +38728,8 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardUpdateManyWithoutAgencyEntityNestedInput
     sponsoredLegislation?: LegislationUpdateManyWithoutSponsorEntityNestedInput
     congressionalTrades?: CongressionalTradeUpdateManyWithoutEntityNestedInput
+    faraRegistrations?: FaraRegistrationUpdateManyWithoutRegistrantEntityNestedInput
+    faraContacts?: FaraActivityUpdateManyWithoutContactedEntityNestedInput
   }
 
   export type EntityUncheckedUpdateWithoutLegislativeVotesInput = {
@@ -32111,6 +38777,8 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardUncheckedUpdateManyWithoutAgencyEntityNestedInput
     sponsoredLegislation?: LegislationUncheckedUpdateManyWithoutSponsorEntityNestedInput
     congressionalTrades?: CongressionalTradeUncheckedUpdateManyWithoutEntityNestedInput
+    faraRegistrations?: FaraRegistrationUncheckedUpdateManyWithoutRegistrantEntityNestedInput
+    faraContacts?: FaraActivityUncheckedUpdateManyWithoutContactedEntityNestedInput
   }
 
   export type LegislationUpsertWithoutVotesInput = {
@@ -32205,6 +38873,8 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardCreateNestedManyWithoutAgencyEntityInput
     sponsoredLegislation?: LegislationCreateNestedManyWithoutSponsorEntityInput
     legislativeVotes?: LegislativeVoteCreateNestedManyWithoutEntityInput
+    faraRegistrations?: FaraRegistrationCreateNestedManyWithoutRegistrantEntityInput
+    faraContacts?: FaraActivityCreateNestedManyWithoutContactedEntityInput
   }
 
   export type EntityUncheckedCreateWithoutCongressionalTradesInput = {
@@ -32252,6 +38922,8 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardUncheckedCreateNestedManyWithoutAgencyEntityInput
     sponsoredLegislation?: LegislationUncheckedCreateNestedManyWithoutSponsorEntityInput
     legislativeVotes?: LegislativeVoteUncheckedCreateNestedManyWithoutEntityInput
+    faraRegistrations?: FaraRegistrationUncheckedCreateNestedManyWithoutRegistrantEntityInput
+    faraContacts?: FaraActivityUncheckedCreateNestedManyWithoutContactedEntityInput
   }
 
   export type EntityCreateOrConnectWithoutCongressionalTradesInput = {
@@ -32315,6 +38987,8 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardUpdateManyWithoutAgencyEntityNestedInput
     sponsoredLegislation?: LegislationUpdateManyWithoutSponsorEntityNestedInput
     legislativeVotes?: LegislativeVoteUpdateManyWithoutEntityNestedInput
+    faraRegistrations?: FaraRegistrationUpdateManyWithoutRegistrantEntityNestedInput
+    faraContacts?: FaraActivityUpdateManyWithoutContactedEntityNestedInput
   }
 
   export type EntityUncheckedUpdateWithoutCongressionalTradesInput = {
@@ -32362,6 +39036,550 @@ export namespace Prisma {
     federalAwardsAsAgency?: FederalAwardUncheckedUpdateManyWithoutAgencyEntityNestedInput
     sponsoredLegislation?: LegislationUncheckedUpdateManyWithoutSponsorEntityNestedInput
     legislativeVotes?: LegislativeVoteUncheckedUpdateManyWithoutEntityNestedInput
+    faraRegistrations?: FaraRegistrationUncheckedUpdateManyWithoutRegistrantEntityNestedInput
+    faraContacts?: FaraActivityUncheckedUpdateManyWithoutContactedEntityNestedInput
+  }
+
+  export type EntityCreateWithoutFaraRegistrationsInput = {
+    id?: string
+    type: $Enums.EntityType
+    canonicalName: string
+    shortName?: string | null
+    description?: string | null
+    photoUrl?: string | null
+    websiteUrl?: string | null
+    party?: $Enums.Party | null
+    state?: string | null
+    district?: string | null
+    office?: $Enums.Office | null
+    officeLevel?: $Enums.OfficeLevel | null
+    inOffice?: boolean | null
+    ticker?: string | null
+    industry?: string | null
+    naicsCode?: string | null
+    sicCode?: string | null
+    committeeType?: $Enums.CommitteeType | null
+    totalReceived?: Decimal | DecimalJsLike | number | string
+    totalSpent?: Decimal | DecimalJsLike | number | string
+    totalContributed?: Decimal | DecimalJsLike | number | string
+    totalLobbying?: Decimal | DecimalJsLike | number | string
+    totalContracts?: Decimal | DecimalJsLike | number | string
+    isVerified?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    mergedInto?: EntityCreateNestedOneWithoutMergedFromInput
+    mergedFrom?: EntityCreateNestedManyWithoutMergedIntoInput
+    aliases?: EntityAliasCreateNestedManyWithoutEntityInput
+    sourceRecords?: EntitySourceRecordCreateNestedManyWithoutEntityInput
+    relationshipsFrom?: EntityRelationshipCreateNestedManyWithoutFromEntityInput
+    relationshipsTo?: EntityRelationshipCreateNestedManyWithoutToEntityInput
+    transactionsAsSource?: MoneyTransactionCreateNestedManyWithoutSourceEntityInput
+    transactionsAsTarget?: MoneyTransactionCreateNestedManyWithoutTargetEntityInput
+    aggregateFlowsAsSource?: AggregateMoneyFlowCreateNestedManyWithoutSourceEntityInput
+    aggregateFlowsAsTarget?: AggregateMoneyFlowCreateNestedManyWithoutTargetEntityInput
+    fecCandidate?: FecCandidateCreateNestedOneWithoutEntityInput
+    fecCommittee?: FecCommitteeCreateNestedOneWithoutEntityInput
+    lobbyingFilingsAsRegistrant?: LobbyingFilingCreateNestedManyWithoutRegistrantEntityInput
+    lobbyingFilingsAsClient?: LobbyingFilingCreateNestedManyWithoutClientEntityInput
+    federalAwardsAsRecipient?: FederalAwardCreateNestedManyWithoutRecipientEntityInput
+    federalAwardsAsAgency?: FederalAwardCreateNestedManyWithoutAgencyEntityInput
+    sponsoredLegislation?: LegislationCreateNestedManyWithoutSponsorEntityInput
+    legislativeVotes?: LegislativeVoteCreateNestedManyWithoutEntityInput
+    congressionalTrades?: CongressionalTradeCreateNestedManyWithoutEntityInput
+    faraContacts?: FaraActivityCreateNestedManyWithoutContactedEntityInput
+  }
+
+  export type EntityUncheckedCreateWithoutFaraRegistrationsInput = {
+    id?: string
+    type: $Enums.EntityType
+    canonicalName: string
+    shortName?: string | null
+    description?: string | null
+    photoUrl?: string | null
+    websiteUrl?: string | null
+    party?: $Enums.Party | null
+    state?: string | null
+    district?: string | null
+    office?: $Enums.Office | null
+    officeLevel?: $Enums.OfficeLevel | null
+    inOffice?: boolean | null
+    ticker?: string | null
+    industry?: string | null
+    naicsCode?: string | null
+    sicCode?: string | null
+    committeeType?: $Enums.CommitteeType | null
+    totalReceived?: Decimal | DecimalJsLike | number | string
+    totalSpent?: Decimal | DecimalJsLike | number | string
+    totalContributed?: Decimal | DecimalJsLike | number | string
+    totalLobbying?: Decimal | DecimalJsLike | number | string
+    totalContracts?: Decimal | DecimalJsLike | number | string
+    isVerified?: boolean
+    mergedIntoId?: string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    mergedFrom?: EntityUncheckedCreateNestedManyWithoutMergedIntoInput
+    aliases?: EntityAliasUncheckedCreateNestedManyWithoutEntityInput
+    sourceRecords?: EntitySourceRecordUncheckedCreateNestedManyWithoutEntityInput
+    relationshipsFrom?: EntityRelationshipUncheckedCreateNestedManyWithoutFromEntityInput
+    relationshipsTo?: EntityRelationshipUncheckedCreateNestedManyWithoutToEntityInput
+    transactionsAsSource?: MoneyTransactionUncheckedCreateNestedManyWithoutSourceEntityInput
+    transactionsAsTarget?: MoneyTransactionUncheckedCreateNestedManyWithoutTargetEntityInput
+    aggregateFlowsAsSource?: AggregateMoneyFlowUncheckedCreateNestedManyWithoutSourceEntityInput
+    aggregateFlowsAsTarget?: AggregateMoneyFlowUncheckedCreateNestedManyWithoutTargetEntityInput
+    fecCandidate?: FecCandidateUncheckedCreateNestedOneWithoutEntityInput
+    fecCommittee?: FecCommitteeUncheckedCreateNestedOneWithoutEntityInput
+    lobbyingFilingsAsRegistrant?: LobbyingFilingUncheckedCreateNestedManyWithoutRegistrantEntityInput
+    lobbyingFilingsAsClient?: LobbyingFilingUncheckedCreateNestedManyWithoutClientEntityInput
+    federalAwardsAsRecipient?: FederalAwardUncheckedCreateNestedManyWithoutRecipientEntityInput
+    federalAwardsAsAgency?: FederalAwardUncheckedCreateNestedManyWithoutAgencyEntityInput
+    sponsoredLegislation?: LegislationUncheckedCreateNestedManyWithoutSponsorEntityInput
+    legislativeVotes?: LegislativeVoteUncheckedCreateNestedManyWithoutEntityInput
+    congressionalTrades?: CongressionalTradeUncheckedCreateNestedManyWithoutEntityInput
+    faraContacts?: FaraActivityUncheckedCreateNestedManyWithoutContactedEntityInput
+  }
+
+  export type EntityCreateOrConnectWithoutFaraRegistrationsInput = {
+    where: EntityWhereUniqueInput
+    create: XOR<EntityCreateWithoutFaraRegistrationsInput, EntityUncheckedCreateWithoutFaraRegistrationsInput>
+  }
+
+  export type FaraActivityCreateWithoutRegistrationInput = {
+    id?: string
+    activityType: string
+    description?: string | null
+    amount?: Decimal | DecimalJsLike | number | string | null
+    periodStart: Date | string
+    periodEnd: Date | string
+    contactedOfficial?: string | null
+    createdAt?: Date | string
+    contactedEntity?: EntityCreateNestedOneWithoutFaraContactsInput
+  }
+
+  export type FaraActivityUncheckedCreateWithoutRegistrationInput = {
+    id?: string
+    activityType: string
+    description?: string | null
+    amount?: Decimal | DecimalJsLike | number | string | null
+    periodStart: Date | string
+    periodEnd: Date | string
+    contactedOfficial?: string | null
+    contactedEntityId?: string | null
+    createdAt?: Date | string
+  }
+
+  export type FaraActivityCreateOrConnectWithoutRegistrationInput = {
+    where: FaraActivityWhereUniqueInput
+    create: XOR<FaraActivityCreateWithoutRegistrationInput, FaraActivityUncheckedCreateWithoutRegistrationInput>
+  }
+
+  export type FaraActivityCreateManyRegistrationInputEnvelope = {
+    data: FaraActivityCreateManyRegistrationInput | FaraActivityCreateManyRegistrationInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type EntityUpsertWithoutFaraRegistrationsInput = {
+    update: XOR<EntityUpdateWithoutFaraRegistrationsInput, EntityUncheckedUpdateWithoutFaraRegistrationsInput>
+    create: XOR<EntityCreateWithoutFaraRegistrationsInput, EntityUncheckedCreateWithoutFaraRegistrationsInput>
+    where?: EntityWhereInput
+  }
+
+  export type EntityUpdateToOneWithWhereWithoutFaraRegistrationsInput = {
+    where?: EntityWhereInput
+    data: XOR<EntityUpdateWithoutFaraRegistrationsInput, EntityUncheckedUpdateWithoutFaraRegistrationsInput>
+  }
+
+  export type EntityUpdateWithoutFaraRegistrationsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    type?: EnumEntityTypeFieldUpdateOperationsInput | $Enums.EntityType
+    canonicalName?: StringFieldUpdateOperationsInput | string
+    shortName?: NullableStringFieldUpdateOperationsInput | string | null
+    description?: NullableStringFieldUpdateOperationsInput | string | null
+    photoUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    websiteUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    party?: NullableEnumPartyFieldUpdateOperationsInput | $Enums.Party | null
+    state?: NullableStringFieldUpdateOperationsInput | string | null
+    district?: NullableStringFieldUpdateOperationsInput | string | null
+    office?: NullableEnumOfficeFieldUpdateOperationsInput | $Enums.Office | null
+    officeLevel?: NullableEnumOfficeLevelFieldUpdateOperationsInput | $Enums.OfficeLevel | null
+    inOffice?: NullableBoolFieldUpdateOperationsInput | boolean | null
+    ticker?: NullableStringFieldUpdateOperationsInput | string | null
+    industry?: NullableStringFieldUpdateOperationsInput | string | null
+    naicsCode?: NullableStringFieldUpdateOperationsInput | string | null
+    sicCode?: NullableStringFieldUpdateOperationsInput | string | null
+    committeeType?: NullableEnumCommitteeTypeFieldUpdateOperationsInput | $Enums.CommitteeType | null
+    totalReceived?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    totalSpent?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    totalContributed?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    totalLobbying?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    totalContracts?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    isVerified?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    mergedInto?: EntityUpdateOneWithoutMergedFromNestedInput
+    mergedFrom?: EntityUpdateManyWithoutMergedIntoNestedInput
+    aliases?: EntityAliasUpdateManyWithoutEntityNestedInput
+    sourceRecords?: EntitySourceRecordUpdateManyWithoutEntityNestedInput
+    relationshipsFrom?: EntityRelationshipUpdateManyWithoutFromEntityNestedInput
+    relationshipsTo?: EntityRelationshipUpdateManyWithoutToEntityNestedInput
+    transactionsAsSource?: MoneyTransactionUpdateManyWithoutSourceEntityNestedInput
+    transactionsAsTarget?: MoneyTransactionUpdateManyWithoutTargetEntityNestedInput
+    aggregateFlowsAsSource?: AggregateMoneyFlowUpdateManyWithoutSourceEntityNestedInput
+    aggregateFlowsAsTarget?: AggregateMoneyFlowUpdateManyWithoutTargetEntityNestedInput
+    fecCandidate?: FecCandidateUpdateOneWithoutEntityNestedInput
+    fecCommittee?: FecCommitteeUpdateOneWithoutEntityNestedInput
+    lobbyingFilingsAsRegistrant?: LobbyingFilingUpdateManyWithoutRegistrantEntityNestedInput
+    lobbyingFilingsAsClient?: LobbyingFilingUpdateManyWithoutClientEntityNestedInput
+    federalAwardsAsRecipient?: FederalAwardUpdateManyWithoutRecipientEntityNestedInput
+    federalAwardsAsAgency?: FederalAwardUpdateManyWithoutAgencyEntityNestedInput
+    sponsoredLegislation?: LegislationUpdateManyWithoutSponsorEntityNestedInput
+    legislativeVotes?: LegislativeVoteUpdateManyWithoutEntityNestedInput
+    congressionalTrades?: CongressionalTradeUpdateManyWithoutEntityNestedInput
+    faraContacts?: FaraActivityUpdateManyWithoutContactedEntityNestedInput
+  }
+
+  export type EntityUncheckedUpdateWithoutFaraRegistrationsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    type?: EnumEntityTypeFieldUpdateOperationsInput | $Enums.EntityType
+    canonicalName?: StringFieldUpdateOperationsInput | string
+    shortName?: NullableStringFieldUpdateOperationsInput | string | null
+    description?: NullableStringFieldUpdateOperationsInput | string | null
+    photoUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    websiteUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    party?: NullableEnumPartyFieldUpdateOperationsInput | $Enums.Party | null
+    state?: NullableStringFieldUpdateOperationsInput | string | null
+    district?: NullableStringFieldUpdateOperationsInput | string | null
+    office?: NullableEnumOfficeFieldUpdateOperationsInput | $Enums.Office | null
+    officeLevel?: NullableEnumOfficeLevelFieldUpdateOperationsInput | $Enums.OfficeLevel | null
+    inOffice?: NullableBoolFieldUpdateOperationsInput | boolean | null
+    ticker?: NullableStringFieldUpdateOperationsInput | string | null
+    industry?: NullableStringFieldUpdateOperationsInput | string | null
+    naicsCode?: NullableStringFieldUpdateOperationsInput | string | null
+    sicCode?: NullableStringFieldUpdateOperationsInput | string | null
+    committeeType?: NullableEnumCommitteeTypeFieldUpdateOperationsInput | $Enums.CommitteeType | null
+    totalReceived?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    totalSpent?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    totalContributed?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    totalLobbying?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    totalContracts?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    isVerified?: BoolFieldUpdateOperationsInput | boolean
+    mergedIntoId?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    mergedFrom?: EntityUncheckedUpdateManyWithoutMergedIntoNestedInput
+    aliases?: EntityAliasUncheckedUpdateManyWithoutEntityNestedInput
+    sourceRecords?: EntitySourceRecordUncheckedUpdateManyWithoutEntityNestedInput
+    relationshipsFrom?: EntityRelationshipUncheckedUpdateManyWithoutFromEntityNestedInput
+    relationshipsTo?: EntityRelationshipUncheckedUpdateManyWithoutToEntityNestedInput
+    transactionsAsSource?: MoneyTransactionUncheckedUpdateManyWithoutSourceEntityNestedInput
+    transactionsAsTarget?: MoneyTransactionUncheckedUpdateManyWithoutTargetEntityNestedInput
+    aggregateFlowsAsSource?: AggregateMoneyFlowUncheckedUpdateManyWithoutSourceEntityNestedInput
+    aggregateFlowsAsTarget?: AggregateMoneyFlowUncheckedUpdateManyWithoutTargetEntityNestedInput
+    fecCandidate?: FecCandidateUncheckedUpdateOneWithoutEntityNestedInput
+    fecCommittee?: FecCommitteeUncheckedUpdateOneWithoutEntityNestedInput
+    lobbyingFilingsAsRegistrant?: LobbyingFilingUncheckedUpdateManyWithoutRegistrantEntityNestedInput
+    lobbyingFilingsAsClient?: LobbyingFilingUncheckedUpdateManyWithoutClientEntityNestedInput
+    federalAwardsAsRecipient?: FederalAwardUncheckedUpdateManyWithoutRecipientEntityNestedInput
+    federalAwardsAsAgency?: FederalAwardUncheckedUpdateManyWithoutAgencyEntityNestedInput
+    sponsoredLegislation?: LegislationUncheckedUpdateManyWithoutSponsorEntityNestedInput
+    legislativeVotes?: LegislativeVoteUncheckedUpdateManyWithoutEntityNestedInput
+    congressionalTrades?: CongressionalTradeUncheckedUpdateManyWithoutEntityNestedInput
+    faraContacts?: FaraActivityUncheckedUpdateManyWithoutContactedEntityNestedInput
+  }
+
+  export type FaraActivityUpsertWithWhereUniqueWithoutRegistrationInput = {
+    where: FaraActivityWhereUniqueInput
+    update: XOR<FaraActivityUpdateWithoutRegistrationInput, FaraActivityUncheckedUpdateWithoutRegistrationInput>
+    create: XOR<FaraActivityCreateWithoutRegistrationInput, FaraActivityUncheckedCreateWithoutRegistrationInput>
+  }
+
+  export type FaraActivityUpdateWithWhereUniqueWithoutRegistrationInput = {
+    where: FaraActivityWhereUniqueInput
+    data: XOR<FaraActivityUpdateWithoutRegistrationInput, FaraActivityUncheckedUpdateWithoutRegistrationInput>
+  }
+
+  export type FaraActivityUpdateManyWithWhereWithoutRegistrationInput = {
+    where: FaraActivityScalarWhereInput
+    data: XOR<FaraActivityUpdateManyMutationInput, FaraActivityUncheckedUpdateManyWithoutRegistrationInput>
+  }
+
+  export type FaraRegistrationCreateWithoutActivitiesInput = {
+    id?: string
+    registrationNum: string
+    foreignPrincipal: string
+    country: string
+    registrantName: string
+    registrationDate: Date | string
+    terminationDate?: Date | string | null
+    active?: boolean
+    createdAt?: Date | string
+    registrantEntity?: EntityCreateNestedOneWithoutFaraRegistrationsInput
+  }
+
+  export type FaraRegistrationUncheckedCreateWithoutActivitiesInput = {
+    id?: string
+    registrationNum: string
+    foreignPrincipal: string
+    country: string
+    registrantName: string
+    registrantEntityId?: string | null
+    registrationDate: Date | string
+    terminationDate?: Date | string | null
+    active?: boolean
+    createdAt?: Date | string
+  }
+
+  export type FaraRegistrationCreateOrConnectWithoutActivitiesInput = {
+    where: FaraRegistrationWhereUniqueInput
+    create: XOR<FaraRegistrationCreateWithoutActivitiesInput, FaraRegistrationUncheckedCreateWithoutActivitiesInput>
+  }
+
+  export type EntityCreateWithoutFaraContactsInput = {
+    id?: string
+    type: $Enums.EntityType
+    canonicalName: string
+    shortName?: string | null
+    description?: string | null
+    photoUrl?: string | null
+    websiteUrl?: string | null
+    party?: $Enums.Party | null
+    state?: string | null
+    district?: string | null
+    office?: $Enums.Office | null
+    officeLevel?: $Enums.OfficeLevel | null
+    inOffice?: boolean | null
+    ticker?: string | null
+    industry?: string | null
+    naicsCode?: string | null
+    sicCode?: string | null
+    committeeType?: $Enums.CommitteeType | null
+    totalReceived?: Decimal | DecimalJsLike | number | string
+    totalSpent?: Decimal | DecimalJsLike | number | string
+    totalContributed?: Decimal | DecimalJsLike | number | string
+    totalLobbying?: Decimal | DecimalJsLike | number | string
+    totalContracts?: Decimal | DecimalJsLike | number | string
+    isVerified?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    mergedInto?: EntityCreateNestedOneWithoutMergedFromInput
+    mergedFrom?: EntityCreateNestedManyWithoutMergedIntoInput
+    aliases?: EntityAliasCreateNestedManyWithoutEntityInput
+    sourceRecords?: EntitySourceRecordCreateNestedManyWithoutEntityInput
+    relationshipsFrom?: EntityRelationshipCreateNestedManyWithoutFromEntityInput
+    relationshipsTo?: EntityRelationshipCreateNestedManyWithoutToEntityInput
+    transactionsAsSource?: MoneyTransactionCreateNestedManyWithoutSourceEntityInput
+    transactionsAsTarget?: MoneyTransactionCreateNestedManyWithoutTargetEntityInput
+    aggregateFlowsAsSource?: AggregateMoneyFlowCreateNestedManyWithoutSourceEntityInput
+    aggregateFlowsAsTarget?: AggregateMoneyFlowCreateNestedManyWithoutTargetEntityInput
+    fecCandidate?: FecCandidateCreateNestedOneWithoutEntityInput
+    fecCommittee?: FecCommitteeCreateNestedOneWithoutEntityInput
+    lobbyingFilingsAsRegistrant?: LobbyingFilingCreateNestedManyWithoutRegistrantEntityInput
+    lobbyingFilingsAsClient?: LobbyingFilingCreateNestedManyWithoutClientEntityInput
+    federalAwardsAsRecipient?: FederalAwardCreateNestedManyWithoutRecipientEntityInput
+    federalAwardsAsAgency?: FederalAwardCreateNestedManyWithoutAgencyEntityInput
+    sponsoredLegislation?: LegislationCreateNestedManyWithoutSponsorEntityInput
+    legislativeVotes?: LegislativeVoteCreateNestedManyWithoutEntityInput
+    congressionalTrades?: CongressionalTradeCreateNestedManyWithoutEntityInput
+    faraRegistrations?: FaraRegistrationCreateNestedManyWithoutRegistrantEntityInput
+  }
+
+  export type EntityUncheckedCreateWithoutFaraContactsInput = {
+    id?: string
+    type: $Enums.EntityType
+    canonicalName: string
+    shortName?: string | null
+    description?: string | null
+    photoUrl?: string | null
+    websiteUrl?: string | null
+    party?: $Enums.Party | null
+    state?: string | null
+    district?: string | null
+    office?: $Enums.Office | null
+    officeLevel?: $Enums.OfficeLevel | null
+    inOffice?: boolean | null
+    ticker?: string | null
+    industry?: string | null
+    naicsCode?: string | null
+    sicCode?: string | null
+    committeeType?: $Enums.CommitteeType | null
+    totalReceived?: Decimal | DecimalJsLike | number | string
+    totalSpent?: Decimal | DecimalJsLike | number | string
+    totalContributed?: Decimal | DecimalJsLike | number | string
+    totalLobbying?: Decimal | DecimalJsLike | number | string
+    totalContracts?: Decimal | DecimalJsLike | number | string
+    isVerified?: boolean
+    mergedIntoId?: string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    mergedFrom?: EntityUncheckedCreateNestedManyWithoutMergedIntoInput
+    aliases?: EntityAliasUncheckedCreateNestedManyWithoutEntityInput
+    sourceRecords?: EntitySourceRecordUncheckedCreateNestedManyWithoutEntityInput
+    relationshipsFrom?: EntityRelationshipUncheckedCreateNestedManyWithoutFromEntityInput
+    relationshipsTo?: EntityRelationshipUncheckedCreateNestedManyWithoutToEntityInput
+    transactionsAsSource?: MoneyTransactionUncheckedCreateNestedManyWithoutSourceEntityInput
+    transactionsAsTarget?: MoneyTransactionUncheckedCreateNestedManyWithoutTargetEntityInput
+    aggregateFlowsAsSource?: AggregateMoneyFlowUncheckedCreateNestedManyWithoutSourceEntityInput
+    aggregateFlowsAsTarget?: AggregateMoneyFlowUncheckedCreateNestedManyWithoutTargetEntityInput
+    fecCandidate?: FecCandidateUncheckedCreateNestedOneWithoutEntityInput
+    fecCommittee?: FecCommitteeUncheckedCreateNestedOneWithoutEntityInput
+    lobbyingFilingsAsRegistrant?: LobbyingFilingUncheckedCreateNestedManyWithoutRegistrantEntityInput
+    lobbyingFilingsAsClient?: LobbyingFilingUncheckedCreateNestedManyWithoutClientEntityInput
+    federalAwardsAsRecipient?: FederalAwardUncheckedCreateNestedManyWithoutRecipientEntityInput
+    federalAwardsAsAgency?: FederalAwardUncheckedCreateNestedManyWithoutAgencyEntityInput
+    sponsoredLegislation?: LegislationUncheckedCreateNestedManyWithoutSponsorEntityInput
+    legislativeVotes?: LegislativeVoteUncheckedCreateNestedManyWithoutEntityInput
+    congressionalTrades?: CongressionalTradeUncheckedCreateNestedManyWithoutEntityInput
+    faraRegistrations?: FaraRegistrationUncheckedCreateNestedManyWithoutRegistrantEntityInput
+  }
+
+  export type EntityCreateOrConnectWithoutFaraContactsInput = {
+    where: EntityWhereUniqueInput
+    create: XOR<EntityCreateWithoutFaraContactsInput, EntityUncheckedCreateWithoutFaraContactsInput>
+  }
+
+  export type FaraRegistrationUpsertWithoutActivitiesInput = {
+    update: XOR<FaraRegistrationUpdateWithoutActivitiesInput, FaraRegistrationUncheckedUpdateWithoutActivitiesInput>
+    create: XOR<FaraRegistrationCreateWithoutActivitiesInput, FaraRegistrationUncheckedCreateWithoutActivitiesInput>
+    where?: FaraRegistrationWhereInput
+  }
+
+  export type FaraRegistrationUpdateToOneWithWhereWithoutActivitiesInput = {
+    where?: FaraRegistrationWhereInput
+    data: XOR<FaraRegistrationUpdateWithoutActivitiesInput, FaraRegistrationUncheckedUpdateWithoutActivitiesInput>
+  }
+
+  export type FaraRegistrationUpdateWithoutActivitiesInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    registrationNum?: StringFieldUpdateOperationsInput | string
+    foreignPrincipal?: StringFieldUpdateOperationsInput | string
+    country?: StringFieldUpdateOperationsInput | string
+    registrantName?: StringFieldUpdateOperationsInput | string
+    registrationDate?: DateTimeFieldUpdateOperationsInput | Date | string
+    terminationDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    active?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    registrantEntity?: EntityUpdateOneWithoutFaraRegistrationsNestedInput
+  }
+
+  export type FaraRegistrationUncheckedUpdateWithoutActivitiesInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    registrationNum?: StringFieldUpdateOperationsInput | string
+    foreignPrincipal?: StringFieldUpdateOperationsInput | string
+    country?: StringFieldUpdateOperationsInput | string
+    registrantName?: StringFieldUpdateOperationsInput | string
+    registrantEntityId?: NullableStringFieldUpdateOperationsInput | string | null
+    registrationDate?: DateTimeFieldUpdateOperationsInput | Date | string
+    terminationDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    active?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type EntityUpsertWithoutFaraContactsInput = {
+    update: XOR<EntityUpdateWithoutFaraContactsInput, EntityUncheckedUpdateWithoutFaraContactsInput>
+    create: XOR<EntityCreateWithoutFaraContactsInput, EntityUncheckedCreateWithoutFaraContactsInput>
+    where?: EntityWhereInput
+  }
+
+  export type EntityUpdateToOneWithWhereWithoutFaraContactsInput = {
+    where?: EntityWhereInput
+    data: XOR<EntityUpdateWithoutFaraContactsInput, EntityUncheckedUpdateWithoutFaraContactsInput>
+  }
+
+  export type EntityUpdateWithoutFaraContactsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    type?: EnumEntityTypeFieldUpdateOperationsInput | $Enums.EntityType
+    canonicalName?: StringFieldUpdateOperationsInput | string
+    shortName?: NullableStringFieldUpdateOperationsInput | string | null
+    description?: NullableStringFieldUpdateOperationsInput | string | null
+    photoUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    websiteUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    party?: NullableEnumPartyFieldUpdateOperationsInput | $Enums.Party | null
+    state?: NullableStringFieldUpdateOperationsInput | string | null
+    district?: NullableStringFieldUpdateOperationsInput | string | null
+    office?: NullableEnumOfficeFieldUpdateOperationsInput | $Enums.Office | null
+    officeLevel?: NullableEnumOfficeLevelFieldUpdateOperationsInput | $Enums.OfficeLevel | null
+    inOffice?: NullableBoolFieldUpdateOperationsInput | boolean | null
+    ticker?: NullableStringFieldUpdateOperationsInput | string | null
+    industry?: NullableStringFieldUpdateOperationsInput | string | null
+    naicsCode?: NullableStringFieldUpdateOperationsInput | string | null
+    sicCode?: NullableStringFieldUpdateOperationsInput | string | null
+    committeeType?: NullableEnumCommitteeTypeFieldUpdateOperationsInput | $Enums.CommitteeType | null
+    totalReceived?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    totalSpent?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    totalContributed?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    totalLobbying?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    totalContracts?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    isVerified?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    mergedInto?: EntityUpdateOneWithoutMergedFromNestedInput
+    mergedFrom?: EntityUpdateManyWithoutMergedIntoNestedInput
+    aliases?: EntityAliasUpdateManyWithoutEntityNestedInput
+    sourceRecords?: EntitySourceRecordUpdateManyWithoutEntityNestedInput
+    relationshipsFrom?: EntityRelationshipUpdateManyWithoutFromEntityNestedInput
+    relationshipsTo?: EntityRelationshipUpdateManyWithoutToEntityNestedInput
+    transactionsAsSource?: MoneyTransactionUpdateManyWithoutSourceEntityNestedInput
+    transactionsAsTarget?: MoneyTransactionUpdateManyWithoutTargetEntityNestedInput
+    aggregateFlowsAsSource?: AggregateMoneyFlowUpdateManyWithoutSourceEntityNestedInput
+    aggregateFlowsAsTarget?: AggregateMoneyFlowUpdateManyWithoutTargetEntityNestedInput
+    fecCandidate?: FecCandidateUpdateOneWithoutEntityNestedInput
+    fecCommittee?: FecCommitteeUpdateOneWithoutEntityNestedInput
+    lobbyingFilingsAsRegistrant?: LobbyingFilingUpdateManyWithoutRegistrantEntityNestedInput
+    lobbyingFilingsAsClient?: LobbyingFilingUpdateManyWithoutClientEntityNestedInput
+    federalAwardsAsRecipient?: FederalAwardUpdateManyWithoutRecipientEntityNestedInput
+    federalAwardsAsAgency?: FederalAwardUpdateManyWithoutAgencyEntityNestedInput
+    sponsoredLegislation?: LegislationUpdateManyWithoutSponsorEntityNestedInput
+    legislativeVotes?: LegislativeVoteUpdateManyWithoutEntityNestedInput
+    congressionalTrades?: CongressionalTradeUpdateManyWithoutEntityNestedInput
+    faraRegistrations?: FaraRegistrationUpdateManyWithoutRegistrantEntityNestedInput
+  }
+
+  export type EntityUncheckedUpdateWithoutFaraContactsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    type?: EnumEntityTypeFieldUpdateOperationsInput | $Enums.EntityType
+    canonicalName?: StringFieldUpdateOperationsInput | string
+    shortName?: NullableStringFieldUpdateOperationsInput | string | null
+    description?: NullableStringFieldUpdateOperationsInput | string | null
+    photoUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    websiteUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    party?: NullableEnumPartyFieldUpdateOperationsInput | $Enums.Party | null
+    state?: NullableStringFieldUpdateOperationsInput | string | null
+    district?: NullableStringFieldUpdateOperationsInput | string | null
+    office?: NullableEnumOfficeFieldUpdateOperationsInput | $Enums.Office | null
+    officeLevel?: NullableEnumOfficeLevelFieldUpdateOperationsInput | $Enums.OfficeLevel | null
+    inOffice?: NullableBoolFieldUpdateOperationsInput | boolean | null
+    ticker?: NullableStringFieldUpdateOperationsInput | string | null
+    industry?: NullableStringFieldUpdateOperationsInput | string | null
+    naicsCode?: NullableStringFieldUpdateOperationsInput | string | null
+    sicCode?: NullableStringFieldUpdateOperationsInput | string | null
+    committeeType?: NullableEnumCommitteeTypeFieldUpdateOperationsInput | $Enums.CommitteeType | null
+    totalReceived?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    totalSpent?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    totalContributed?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    totalLobbying?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    totalContracts?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    isVerified?: BoolFieldUpdateOperationsInput | boolean
+    mergedIntoId?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    mergedFrom?: EntityUncheckedUpdateManyWithoutMergedIntoNestedInput
+    aliases?: EntityAliasUncheckedUpdateManyWithoutEntityNestedInput
+    sourceRecords?: EntitySourceRecordUncheckedUpdateManyWithoutEntityNestedInput
+    relationshipsFrom?: EntityRelationshipUncheckedUpdateManyWithoutFromEntityNestedInput
+    relationshipsTo?: EntityRelationshipUncheckedUpdateManyWithoutToEntityNestedInput
+    transactionsAsSource?: MoneyTransactionUncheckedUpdateManyWithoutSourceEntityNestedInput
+    transactionsAsTarget?: MoneyTransactionUncheckedUpdateManyWithoutTargetEntityNestedInput
+    aggregateFlowsAsSource?: AggregateMoneyFlowUncheckedUpdateManyWithoutSourceEntityNestedInput
+    aggregateFlowsAsTarget?: AggregateMoneyFlowUncheckedUpdateManyWithoutTargetEntityNestedInput
+    fecCandidate?: FecCandidateUncheckedUpdateOneWithoutEntityNestedInput
+    fecCommittee?: FecCommitteeUncheckedUpdateOneWithoutEntityNestedInput
+    lobbyingFilingsAsRegistrant?: LobbyingFilingUncheckedUpdateManyWithoutRegistrantEntityNestedInput
+    lobbyingFilingsAsClient?: LobbyingFilingUncheckedUpdateManyWithoutClientEntityNestedInput
+    federalAwardsAsRecipient?: FederalAwardUncheckedUpdateManyWithoutRecipientEntityNestedInput
+    federalAwardsAsAgency?: FederalAwardUncheckedUpdateManyWithoutAgencyEntityNestedInput
+    sponsoredLegislation?: LegislationUncheckedUpdateManyWithoutSponsorEntityNestedInput
+    legislativeVotes?: LegislativeVoteUncheckedUpdateManyWithoutEntityNestedInput
+    congressionalTrades?: CongressionalTradeUncheckedUpdateManyWithoutEntityNestedInput
+    faraRegistrations?: FaraRegistrationUncheckedUpdateManyWithoutRegistrantEntityNestedInput
   }
 
   export type EntityCreateManyMergedIntoInput = {
@@ -32637,6 +39855,30 @@ export namespace Prisma {
     createdAt?: Date | string
   }
 
+  export type FaraRegistrationCreateManyRegistrantEntityInput = {
+    id?: string
+    registrationNum: string
+    foreignPrincipal: string
+    country: string
+    registrantName: string
+    registrationDate: Date | string
+    terminationDate?: Date | string | null
+    active?: boolean
+    createdAt?: Date | string
+  }
+
+  export type FaraActivityCreateManyContactedEntityInput = {
+    id?: string
+    registrationId: string
+    activityType: string
+    description?: string | null
+    amount?: Decimal | DecimalJsLike | number | string | null
+    periodStart: Date | string
+    periodEnd: Date | string
+    contactedOfficial?: string | null
+    createdAt?: Date | string
+  }
+
   export type EntityUpdateWithoutMergedIntoInput = {
     id?: StringFieldUpdateOperationsInput | string
     type?: EnumEntityTypeFieldUpdateOperationsInput | $Enums.EntityType
@@ -32682,6 +39924,8 @@ export namespace Prisma {
     sponsoredLegislation?: LegislationUpdateManyWithoutSponsorEntityNestedInput
     legislativeVotes?: LegislativeVoteUpdateManyWithoutEntityNestedInput
     congressionalTrades?: CongressionalTradeUpdateManyWithoutEntityNestedInput
+    faraRegistrations?: FaraRegistrationUpdateManyWithoutRegistrantEntityNestedInput
+    faraContacts?: FaraActivityUpdateManyWithoutContactedEntityNestedInput
   }
 
   export type EntityUncheckedUpdateWithoutMergedIntoInput = {
@@ -32729,6 +39973,8 @@ export namespace Prisma {
     sponsoredLegislation?: LegislationUncheckedUpdateManyWithoutSponsorEntityNestedInput
     legislativeVotes?: LegislativeVoteUncheckedUpdateManyWithoutEntityNestedInput
     congressionalTrades?: CongressionalTradeUncheckedUpdateManyWithoutEntityNestedInput
+    faraRegistrations?: FaraRegistrationUncheckedUpdateManyWithoutRegistrantEntityNestedInput
+    faraContacts?: FaraActivityUncheckedUpdateManyWithoutContactedEntityNestedInput
   }
 
   export type EntityUncheckedUpdateManyWithoutMergedIntoInput = {
@@ -33494,6 +40740,80 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
+  export type FaraRegistrationUpdateWithoutRegistrantEntityInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    registrationNum?: StringFieldUpdateOperationsInput | string
+    foreignPrincipal?: StringFieldUpdateOperationsInput | string
+    country?: StringFieldUpdateOperationsInput | string
+    registrantName?: StringFieldUpdateOperationsInput | string
+    registrationDate?: DateTimeFieldUpdateOperationsInput | Date | string
+    terminationDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    active?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    activities?: FaraActivityUpdateManyWithoutRegistrationNestedInput
+  }
+
+  export type FaraRegistrationUncheckedUpdateWithoutRegistrantEntityInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    registrationNum?: StringFieldUpdateOperationsInput | string
+    foreignPrincipal?: StringFieldUpdateOperationsInput | string
+    country?: StringFieldUpdateOperationsInput | string
+    registrantName?: StringFieldUpdateOperationsInput | string
+    registrationDate?: DateTimeFieldUpdateOperationsInput | Date | string
+    terminationDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    active?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    activities?: FaraActivityUncheckedUpdateManyWithoutRegistrationNestedInput
+  }
+
+  export type FaraRegistrationUncheckedUpdateManyWithoutRegistrantEntityInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    registrationNum?: StringFieldUpdateOperationsInput | string
+    foreignPrincipal?: StringFieldUpdateOperationsInput | string
+    country?: StringFieldUpdateOperationsInput | string
+    registrantName?: StringFieldUpdateOperationsInput | string
+    registrationDate?: DateTimeFieldUpdateOperationsInput | Date | string
+    terminationDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    active?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type FaraActivityUpdateWithoutContactedEntityInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    activityType?: StringFieldUpdateOperationsInput | string
+    description?: NullableStringFieldUpdateOperationsInput | string | null
+    amount?: NullableDecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string | null
+    periodStart?: DateTimeFieldUpdateOperationsInput | Date | string
+    periodEnd?: DateTimeFieldUpdateOperationsInput | Date | string
+    contactedOfficial?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    registration?: FaraRegistrationUpdateOneRequiredWithoutActivitiesNestedInput
+  }
+
+  export type FaraActivityUncheckedUpdateWithoutContactedEntityInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    registrationId?: StringFieldUpdateOperationsInput | string
+    activityType?: StringFieldUpdateOperationsInput | string
+    description?: NullableStringFieldUpdateOperationsInput | string | null
+    amount?: NullableDecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string | null
+    periodStart?: DateTimeFieldUpdateOperationsInput | Date | string
+    periodEnd?: DateTimeFieldUpdateOperationsInput | Date | string
+    contactedOfficial?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type FaraActivityUncheckedUpdateManyWithoutContactedEntityInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    registrationId?: StringFieldUpdateOperationsInput | string
+    activityType?: StringFieldUpdateOperationsInput | string
+    description?: NullableStringFieldUpdateOperationsInput | string | null
+    amount?: NullableDecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string | null
+    periodStart?: DateTimeFieldUpdateOperationsInput | Date | string
+    periodEnd?: DateTimeFieldUpdateOperationsInput | Date | string
+    contactedOfficial?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
   export type LegislativeVoteCreateManyLegislationInput = {
     id?: string
     voteId: string
@@ -33543,6 +40863,54 @@ export namespace Prisma {
     congress?: IntFieldUpdateOperationsInput | number
     session?: IntFieldUpdateOperationsInput | number
     rollNumber?: IntFieldUpdateOperationsInput | number
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type FaraActivityCreateManyRegistrationInput = {
+    id?: string
+    activityType: string
+    description?: string | null
+    amount?: Decimal | DecimalJsLike | number | string | null
+    periodStart: Date | string
+    periodEnd: Date | string
+    contactedOfficial?: string | null
+    contactedEntityId?: string | null
+    createdAt?: Date | string
+  }
+
+  export type FaraActivityUpdateWithoutRegistrationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    activityType?: StringFieldUpdateOperationsInput | string
+    description?: NullableStringFieldUpdateOperationsInput | string | null
+    amount?: NullableDecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string | null
+    periodStart?: DateTimeFieldUpdateOperationsInput | Date | string
+    periodEnd?: DateTimeFieldUpdateOperationsInput | Date | string
+    contactedOfficial?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    contactedEntity?: EntityUpdateOneWithoutFaraContactsNestedInput
+  }
+
+  export type FaraActivityUncheckedUpdateWithoutRegistrationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    activityType?: StringFieldUpdateOperationsInput | string
+    description?: NullableStringFieldUpdateOperationsInput | string | null
+    amount?: NullableDecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string | null
+    periodStart?: DateTimeFieldUpdateOperationsInput | Date | string
+    periodEnd?: DateTimeFieldUpdateOperationsInput | Date | string
+    contactedOfficial?: NullableStringFieldUpdateOperationsInput | string | null
+    contactedEntityId?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type FaraActivityUncheckedUpdateManyWithoutRegistrationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    activityType?: StringFieldUpdateOperationsInput | string
+    description?: NullableStringFieldUpdateOperationsInput | string | null
+    amount?: NullableDecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string | null
+    periodStart?: DateTimeFieldUpdateOperationsInput | Date | string
+    periodEnd?: DateTimeFieldUpdateOperationsInput | Date | string
+    contactedOfficial?: NullableStringFieldUpdateOperationsInput | string | null
+    contactedEntityId?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 

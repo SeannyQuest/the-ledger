@@ -352,6 +352,65 @@ exports.Prisma.CongressionalTradeScalarFieldEnum = {
   createdAt: 'createdAt'
 };
 
+exports.Prisma.FederalRegisterEntryScalarFieldEnum = {
+  id: 'id',
+  documentNumber: 'documentNumber',
+  title: 'title',
+  type: 'type',
+  agencyNames: 'agencyNames',
+  agencyEntityIds: 'agencyEntityIds',
+  publicationDate: 'publicationDate',
+  significantRule: 'significantRule',
+  abstractText: 'abstractText',
+  htmlUrl: 'htmlUrl',
+  pdfUrl: 'pdfUrl',
+  commentCount: 'commentCount',
+  createdAt: 'createdAt'
+};
+
+exports.Prisma.FaraRegistrationScalarFieldEnum = {
+  id: 'id',
+  registrationNum: 'registrationNum',
+  foreignPrincipal: 'foreignPrincipal',
+  country: 'country',
+  registrantName: 'registrantName',
+  registrantEntityId: 'registrantEntityId',
+  registrationDate: 'registrationDate',
+  terminationDate: 'terminationDate',
+  active: 'active',
+  createdAt: 'createdAt'
+};
+
+exports.Prisma.FaraActivityScalarFieldEnum = {
+  id: 'id',
+  registrationId: 'registrationId',
+  activityType: 'activityType',
+  description: 'description',
+  amount: 'amount',
+  periodStart: 'periodStart',
+  periodEnd: 'periodEnd',
+  contactedOfficial: 'contactedOfficial',
+  contactedEntityId: 'contactedEntityId',
+  createdAt: 'createdAt'
+};
+
+exports.Prisma.NonprofitFilingScalarFieldEnum = {
+  id: 'id',
+  ein: 'ein',
+  entityId: 'entityId',
+  organizationName: 'organizationName',
+  taxPeriod: 'taxPeriod',
+  totalRevenue: 'totalRevenue',
+  totalExpenses: 'totalExpenses',
+  totalAssets: 'totalAssets',
+  politicalExpenses: 'politicalExpenses',
+  grantRecipients: 'grantRecipients',
+  formType: 'formType',
+  filingYear: 'filingYear',
+  pdfUrl: 'pdfUrl',
+  createdAt: 'createdAt'
+};
+
 exports.Prisma.SyncLogScalarFieldEnum = {
   id: 'id',
   source: 'source',
@@ -453,6 +512,8 @@ exports.DataSource = exports.$Enums.DataSource = {
   OPENSECRETS: 'OPENSECRETS',
   PROPUBLICA: 'PROPUBLICA',
   HOUSE_STOCK_WATCHER: 'HOUSE_STOCK_WATCHER',
+  FEDERAL_REGISTER: 'FEDERAL_REGISTER',
+  FARA: 'FARA',
   STATE_FILING: 'STATE_FILING',
   MANUAL: 'MANUAL'
 };
@@ -525,6 +586,10 @@ exports.Prisma.ModelName = {
   Legislation: 'Legislation',
   LegislativeVote: 'LegislativeVote',
   CongressionalTrade: 'CongressionalTrade',
+  FederalRegisterEntry: 'FederalRegisterEntry',
+  FaraRegistration: 'FaraRegistration',
+  FaraActivity: 'FaraActivity',
+  NonprofitFiling: 'NonprofitFiling',
   SyncLog: 'SyncLog'
 };
 
