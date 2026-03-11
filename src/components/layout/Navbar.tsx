@@ -14,6 +14,8 @@ import {
   BookOpen,
   TrendingUp,
   Trophy,
+  Scale,
+  Waypoints,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useMode } from "@/context/ModeContext";
@@ -24,6 +26,7 @@ const NAV_ITEMS = {
   explore: [
     { label: "Money Map", href: "/money-flow", icon: BarChart3 },
     { label: "Trades", href: "/trades", icon: TrendingUp },
+    { label: "Legislation", href: "/legislation", icon: Scale },
     { label: "Contracts", href: "/contracts", icon: Building2 },
     { label: "Network", href: "/network", icon: Network },
     { label: "Stories", href: "/stories", icon: BookOpen },
@@ -32,6 +35,8 @@ const NAV_ITEMS = {
   research: [
     { label: "Money Flow", href: "/money-flow", icon: BarChart3 },
     { label: "Trades", href: "/trades", icon: TrendingUp },
+    { label: "Legislation", href: "/legislation", icon: Scale },
+    { label: "Power Map", href: "/power-map", icon: Waypoints },
     { label: "Leaderboards", href: "/leaderboards", icon: Trophy },
     { label: "Contracts", href: "/contracts", icon: Building2 },
     { label: "Network", href: "/network", icon: Network },

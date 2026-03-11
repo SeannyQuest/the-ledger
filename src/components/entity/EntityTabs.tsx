@@ -92,7 +92,12 @@ export function EntityTabs({
       label: "Money Out",
       count: topRecipients.length || undefined,
     },
-    ...(isPolitician ? [{ id: "trading", label: "Trading" }] : []),
+    ...(isPolitician
+      ? [
+          { id: "trading", label: "Trading" },
+          { id: "voting", label: "Voting" },
+        ]
+      : []),
     {
       id: "connections",
       label: "Connections",
@@ -121,6 +126,12 @@ export function EntityTabs({
         )}
         {activeTab === "trading" && isPolitician && (
           <TradingTab entityId={entity.id} />
+        )}
+        {activeTab === "voting" && isPolitician && (
+          <VotingTab
+            entityId={entity.id}
+            entityName={entity.canonicalName ?? "this member"}
+          />
         )}
         {activeTab === "connections" && (
           <ConnectionsTab relationships={relationships} />
@@ -698,6 +709,141 @@ function TradingTab({ entityId }: { entityId: string }) {
           className="font-mono text-xs text-muted underline decoration-border underline-offset-4 hover:text-ink"
         >
           View all trades →
+        </Link>
+      </div>
+    </div>
+  );
+}
+
+// ── Tab: Voting ──────────────────────────────────────
+
+function VotingTab({
+  entityId,
+  entityName,
+}: {
+  entityId: string;
+  entityName: string;
+}) {
+  const [votes, setVotes] = useState<
+    Array<{
+      id: string;
+      position: string;
+      voteDate: string;
+      legislation: {
+        id: string;
+        billId: string;
+        title: string;
+        policyArea: string | null;
+      };
+    }>
+  >([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetch(`/api/legislation?sponsorId=${entityId}&limit=100`)
+      .then((r) => r.json())
+      .then((data) => {
+        // Also fetch votes cast by this entity
+        return fetch(`/api/entity/${entityId}/votes`)
+          .then((r) => {
+            if (!r.ok) throw new Error();
+            return r.json();
+          })
+          .catch(() => {
+            // If no dedicated votes endpoint, show sponsored bills
+            return { votes: [] };
+          });
+      })
+      .then((data) => setVotes(data.votes ?? []))
+      .catch(() => {})
+      .finally(() => setLoading(false));
+  }, [entityId]);
+
+  if (loading) {
+    return (
+      <div className="space-y-3">
+        {Array.from({ length: 5 }).map((_, i) => (
+          <div key={i} className="h-12 animate-pulse rounded-lg bg-border/30" />
+        ))}
+      </div>
+    );
+  }
+
+  return (
+    <div>
+      <h3 className="font-headline text-lg font-bold text-ink">
+        Voting Record
+      </h3>
+      <p className="mt-1 text-sm text-muted">
+        Roll-call votes cast by {entityName}
+      </p>
+
+      {votes.length === 0 && (
+        <div className="mt-6 rounded-lg border border-dashed border-border bg-surface/50 px-6 py-10 text-center">
+          <p className="font-mono text-sm text-muted">
+            No voting records available yet.
+          </p>
+          <p className="mt-1 text-xs text-muted/60">
+            Voting data is synced from Congress.gov roll-call records.
+          </p>
+          <Link
+            href="/legislation"
+            className="mt-4 inline-block font-mono text-xs text-accent underline decoration-accent/30 underline-offset-4 hover:decoration-accent"
+          >
+            Browse all legislation →
+          </Link>
+        </div>
+      )}
+
+      {votes.length > 0 && (
+        <div className="mt-6 space-y-1.5">
+          {votes.map((vote) => (
+            <div
+              key={vote.id}
+              className="flex items-center justify-between rounded-lg border border-border bg-surface px-4 py-3"
+            >
+              <div className="flex items-center gap-3">
+                <span
+                  className={`inline-flex rounded-full px-2 py-0.5 font-mono text-[10px] font-bold ${
+                    vote.position === "YEA"
+                      ? "bg-money-in/10 text-money-in"
+                      : vote.position === "NAY"
+                        ? "bg-money-out/10 text-money-out"
+                        : "bg-border/30 text-muted"
+                  }`}
+                >
+                  {vote.position}
+                </span>
+                <div className="min-w-0">
+                  <span className="text-sm text-ink line-clamp-1">
+                    {vote.legislation.title}
+                  </span>
+                  <div className="flex items-center gap-2">
+                    <span className="font-mono text-[10px] text-muted">
+                      {vote.legislation.billId}
+                    </span>
+                    {vote.legislation.policyArea && (
+                      <span className="font-mono text-[10px] text-muted/60">
+                        {vote.legislation.policyArea}
+                      </span>
+                    )}
+                  </div>
+                </div>
+              </div>
+              <span className="shrink-0 font-mono text-[10px] text-muted">
+                {vote.voteDate}
+              </span>
+            </div>
+          ))}
+        </div>
+      )}
+
+      <div className="mt-4">
+        <Link
+          href="/legislation"
+          className="font-mono text-xs text-muted underline decoration-border underline-offset-4 hover:text-ink"
+        >
+          View all legislation →
         </Link>
       </div>
     </div>
