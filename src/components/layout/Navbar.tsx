@@ -16,6 +16,8 @@ import {
   Trophy,
   Scale,
   Waypoints,
+  FileText,
+  Globe,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useMode } from "@/context/ModeContext";
@@ -37,6 +39,8 @@ const NAV_ITEMS = {
     { label: "Trades", href: "/trades", icon: TrendingUp },
     { label: "Legislation", href: "/legislation", icon: Scale },
     { label: "Power Map", href: "/power-map", icon: Waypoints },
+    { label: "Regulations", href: "/regulations", icon: FileText },
+    { label: "Foreign Influence", href: "/foreign-influence", icon: Globe },
     { label: "Leaderboards", href: "/leaderboards", icon: Trophy },
     { label: "Contracts", href: "/contracts", icon: Building2 },
     { label: "Network", href: "/network", icon: Network },

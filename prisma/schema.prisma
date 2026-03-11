@@ -43,6 +43,8 @@ enum DataSource {
   OPENSECRETS
   PROPUBLICA
   HOUSE_STOCK_WATCHER
+  FEDERAL_REGISTER
+  FARA
   STATE_FILING
   MANUAL
 }
@@ -211,6 +213,8 @@ model Entity {
   sponsoredLegislation Legislation[]
   legislativeVotes     LegislativeVote[]
   congressionalTrades  CongressionalTrade[]
+  faraRegistrations    FaraRegistration[]    @relation("FaraRegistrant")
+  faraContacts         FaraActivity[]        @relation("FaraContact")
 
   @@index([type])
   @@index([state])
@@ -571,6 +575,78 @@ model CongressionalTrade {
   @@index([txDate])
   @@index([chamber])
   @@map("congressional_trades")
+}
+
+// ═══════════════════════════════════════════════════════════════
+// FEDERAL REGISTER
+// ═══════════════════════════════════════════════════════════════
+
+/// Federal Register entries — rules, proposed rules, notices, presidential documents.
+model FederalRegisterEntry {
+  id              String   @id @default(cuid())
+  documentNumber  String   @unique
+  title           String
+  type            String   // rule | proposed_rule | notice | presidential_document
+  agencyNames     String[] // agencies involved
+  agencyEntityIds String[] // → Entity IDs (resolved)
+  publicationDate DateTime
+  significantRule Boolean  @default(false)
+  abstractText    String?
+  htmlUrl         String
+  pdfUrl          String?
+  commentCount    Int      @default(0)
+
+  createdAt DateTime @default(now())
+
+  @@index([publicationDate])
+  @@index([type])
+  @@map("federal_register_entries")
+}
+
+// ═══════════════════════════════════════════════════════════════
+// FARA — FOREIGN AGENTS REGISTRATION ACT
+// ═══════════════════════════════════════════════════════════════
+
+/// FARA foreign agent registrations.
+model FaraRegistration {
+  id                 String    @id @default(cuid())
+  registrationNum    String    @unique
+  foreignPrincipal   String
+  country            String
+  registrantName     String
+  registrantEntityId String?
+  registrantEntity   Entity?   @relation("FaraRegistrant", fields: [registrantEntityId], references: [id])
+  registrationDate   DateTime
+  terminationDate    DateTime?
+  active             Boolean   @default(true)
+
+  createdAt  DateTime       @default(now())
+  activities FaraActivity[]
+
+  @@index([country])
+  @@index([registrantEntityId])
+  @@map("fara_registrations")
+}
+
+/// FARA foreign agent activities — lobbying, PR, political activities.
+model FaraActivity {
+  id                String           @id @default(cuid())
+  registrationId    String
+  registration      FaraRegistration @relation(fields: [registrationId], references: [id])
+  activityType      String           // political_activities | public_relations | lobbying
+  description       String?
+  amount            Decimal?         @db.Decimal(15, 2)
+  periodStart       DateTime
+  periodEnd         DateTime
+  contactedOfficial String?
+  contactedEntityId String?
+  contactedEntity   Entity?          @relation("FaraContact", fields: [contactedEntityId], references: [id])
+
+  createdAt DateTime @default(now())
+
+  @@index([registrationId])
+  @@index([contactedEntityId])
+  @@map("fara_activities")
 }
 
 // ═══════════════════════════════════════════════════════════════
