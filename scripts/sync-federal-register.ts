@@ -100,7 +100,9 @@ async function seedFederalRegisterData() {
 
     // Try to match agency to entity
     const matchedAgency = agencies.find((a) =>
-      a.canonicalName.toLowerCase().includes(agency.split(" ").slice(-1)[0].toLowerCase()),
+      a.canonicalName
+        .toLowerCase()
+        .includes(agency.split(" ").slice(-1)[0].toLowerCase()),
     );
 
     try {
@@ -117,7 +119,8 @@ async function seedFederalRegisterData() {
           significantRule: significant,
           abstractText: `This ${type.replace("_", " ")} by the ${agency} addresses regulatory requirements related to ${REG_TITLES[i].toLowerCase()}.`,
           htmlUrl: `https://www.federalregister.gov/documents/2024/${String(pubDate.getMonth() + 1).padStart(2, "0")}/${String(pubDate.getDate()).padStart(2, "0")}/${docNum}`,
-          commentCount: type === "proposed_rule" ? Math.floor(Math.random() * 50000) : 0,
+          commentCount:
+            type === "proposed_rule" ? Math.floor(Math.random() * 50000) : 0,
         },
       });
       created++;
@@ -138,7 +141,11 @@ async function syncFromFederalRegister() {
   console.log("=== Syncing Federal Register Data ===\n");
 
   const syncLog = await prisma.syncLog.create({
-    data: { source: "FEDERAL_REGISTER", syncType: "entries", status: "RUNNING" },
+    data: {
+      source: "FEDERAL_REGISTER",
+      syncType: "entries",
+      status: "RUNNING",
+    },
   });
 
   let processed = 0;
@@ -150,8 +157,12 @@ async function syncFromFederalRegister() {
     oneYearAgo.setFullYear(oneYearAgo.getFullYear() - 1);
     const fromDate = oneYearAgo.toISOString().split("T")[0];
 
+    const typeMap: Record<string, string> = {
+      rule: "RULE",
+      proposed_rule: "PROPOSED+RULE",
+    };
     for (const docType of ["rule", "proposed_rule"]) {
-      const url = `${FR_API}/documents.json?conditions[type]=${docType}&conditions[publication_date][gte]=${fromDate}&conditions[significant]=1&per_page=50&order=newest`;
+      const url = `${FR_API}/documents?per_page=50&order=newest&conditions%5Btype%5D%5B%5D=${typeMap[docType]}&conditions%5Bpublication_date%5D%5Bgte%5D=${fromDate}`;
 
       await sleep(500);
       const res = await fetch(url);
@@ -177,11 +188,18 @@ async function syncFromFederalRegister() {
               documentNumber: docNum,
               title: doc.title ?? "Untitled",
               type: docType,
-              agencyNames: doc.agencies?.map((a: any) => a.name) ?? [],
+              agencyNames:
+                doc.agencies
+                  ?.map((a: any) => a.name ?? a.raw_name)
+                  .filter(Boolean) ?? [],
               agencyEntityIds: [],
               publicationDate: new Date(doc.publication_date),
-              significantRule: doc.significant ?? false,
-              abstractText: doc.abstract?.slice(0, 2000) ?? null,
+              significantRule:
+                doc.significant === true || doc.significant === 1,
+              abstractText:
+                doc.abstract?.slice(0, 2000) ??
+                doc.excerpts?.slice(0, 2000) ??
+                null,
               htmlUrl: doc.html_url ?? "",
               pdfUrl: doc.pdf_url ?? null,
               commentCount: doc.comment_count ?? 0,

@@ -26,7 +26,10 @@ const prisma = new PrismaClient();
 // ─────────────────────────────────────────────────────────────
 
 const API_BASE = "https://api.congress.gov/v3";
-const API_KEY = process.env.CONGRESS_API_KEY ?? "DEMO_KEY";
+const API_KEY =
+  process.env.CONGRESS_GOV_API_KEY ??
+  process.env.CONGRESS_API_KEY ??
+  "DEMO_KEY";
 const RATE_LIMIT_MS = 1000; // Congress.gov is strict on rate limits
 const HOUSE_CLERK_BASE = "https://clerk.house.gov/evs";
 
