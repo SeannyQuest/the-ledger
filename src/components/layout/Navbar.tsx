@@ -18,6 +18,8 @@ import {
   Waypoints,
   FileText,
   Globe,
+  EyeOff,
+  RefreshCw,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useMode } from "@/context/ModeContext";
@@ -41,6 +43,8 @@ const NAV_ITEMS = {
     { label: "Power Map", href: "/power-map", icon: Waypoints },
     { label: "Regulations", href: "/regulations", icon: FileText },
     { label: "Foreign Influence", href: "/foreign-influence", icon: Globe },
+    { label: "Dark Money", href: "/dark-money", icon: EyeOff },
+    { label: "Revolving Door", href: "/revolving-door", icon: RefreshCw },
     { label: "Leaderboards", href: "/leaderboards", icon: Trophy },
     { label: "Contracts", href: "/contracts", icon: Building2 },
     { label: "Network", href: "/network", icon: Network },

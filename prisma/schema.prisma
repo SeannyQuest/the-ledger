@@ -650,6 +650,34 @@ model FaraActivity {
 }
 
 // ═══════════════════════════════════════════════════════════════
+// NONPROFIT / DARK MONEY
+// ═══════════════════════════════════════════════════════════════
+
+/// IRS 990 filings from ProPublica Nonprofit Explorer — 501(c)(4) dark money tracking.
+model NonprofitFiling {
+  id                String   @id @default(cuid())
+  ein               String
+  entityId          String?
+  organizationName  String
+  taxPeriod         String
+  totalRevenue      Decimal? @db.Decimal(15, 2)
+  totalExpenses     Decimal? @db.Decimal(15, 2)
+  totalAssets       Decimal? @db.Decimal(15, 2)
+  politicalExpenses Decimal? @db.Decimal(15, 2)
+  grantRecipients   Json?    // [{name, amount, purpose}]
+  formType          String   // 990 | 990-EZ | 990-PF
+  filingYear        Int
+  pdfUrl            String?
+
+  createdAt DateTime @default(now())
+
+  @@unique([ein, taxPeriod])
+  @@index([entityId])
+  @@index([filingYear])
+  @@map("nonprofit_filings")
+}
+
+// ═══════════════════════════════════════════════════════════════
 // SYNC / OPERATIONS
 // ═══════════════════════════════════════════════════════════════
 
