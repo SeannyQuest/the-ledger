@@ -1,0 +1,369 @@
+{
+  "title": "Telecommunications, Media, and Net Neutrality: Political Spending and Influence",
+  "category": "campaign-finance-research",
+  "number": 25,
+  "sections": {
+    "telecom_lobbying_totals": {
+      "sector_overview": {
+        "total_since_1998": "$1.84B in telecom services lobbying (OpenSecrets, 12th biggest industry)",
+        "2023_sector_total": "$117,563,186",
+        "2024_sector_total": "$108,120,330",
+        "communications_electronics_sector_2024": "$585.7M (broader sector including tech)",
+        "daily_rate": "$320,000/day during 116th Congress (Common Cause/CWA report)",
+        "116th_congress_total": "$234M by top 15 ISPs and trade associations (2019-2020)"
+      },
+      "comcast": {
+        "2019": "$13,400,000",
+        "2020": "$14,430,000",
+        "2021": "$13,380,000",
+        "2022": "$14,420,000",
+        "2023": "$13,690,000",
+        "2024": "$13,931,000",
+        "116th_congress": "$43M+ (largest single ISP spender)",
+        "pac_contributions_2024_cycle": "$1,917,900 to federal candidates",
+        "pac_raised_2024_cycle": "$3,784,569"
+      },
+      "att": {
+        "2020": "$11,450,000",
+        "2021": "$11,480,000",
+        "2022": "$12,470,000",
+        "2023": "$12,060,000",
+        "2024": "$12,050,000",
+        "116th_congress": "$36M+ (second largest ISP spender)",
+        "pac_contributions_2024_cycle": "$2,050,000 to federal candidates"
+      },
+      "verizon": {
+        "2020": "$10,954,000",
+        "2022": "$11,797,000",
+        "2023": "$12,482,060",
+        "2024": "$11,380,000",
+        "pac_contributions_2024_cycle": "$1,461,600 to federal candidates",
+        "pac_raised_2024_cycle": "$2,296,056"
+      },
+      "t_mobile": {
+        "2022": "$9,049,000",
+        "sprint_merger_lobbying": "$17.2M from Q2 2018 to Q1 2020",
+        "junk_fee_lobbying": "$6.8M since Q3 2023 lobbying against Junk Fee Prevention Act",
+        "pac_contributions_2024_cycle": "$958,000 to federal candidates",
+        "pac_raised_2024_cycle": "$1,336,169"
+      },
+      "charter_spectrum": {
+        "2022": "$11,420,000",
+        "2023": "$10,420,000",
+        "2024": "$8,010,000",
+        "trend": "Declining — down 30% from 2022 to 2024"
+      },
+      "trade_associations": {
+        "ctia": {
+          "2023": "$17,180,000",
+          "2024": "$17,330,000",
+          "rank": "9th overall among all lobbying spenders in 2023",
+          "new_ceo": "Ajit Pai became CEO April 1, 2025",
+          "previous_ceo": "Meredith Attwell Baker (June 2014 - April 2025)"
+        },
+        "ncta": {
+          "2021": "$14,000,000",
+          "2022": "$13,720,000",
+          "ceo": "Michael Powell (former FCC Chairman, CEO since April 2011)"
+        },
+        "ustelecom": {
+          "pac_raised_2024_cycle": "$180,652",
+          "position_on_acp": "Publicly supported extension of Affordable Connectivity Program",
+          "bead_stance": "Engaged with NTIA and state broadband leaders on infrastructure law implementation"
+        }
+      },
+      "combined_big_four_2023": "$117M in federal lobbying (AT&T, Comcast, Charter, Verizon combined) plus $25M+ in state-level lobbying"
+    },
+    "net_neutrality_battles": {
+      "timeline": {
+        "2010_open_internet_order": "FCC adopted limited net neutrality rules; struck down by DC Circuit in Verizon v. FCC (January 2014)",
+        "2015_open_internet_order": "FCC voted February 26, 2015 to reclassify broadband as Title II telecommunications service; released March 12, 2015",
+        "2017_pai_repeal": "FCC voted December 14, 2017 to reverse 2015 rules via 'Restoring Internet Freedom' order; NPRM began May 18, 2017",
+        "2024_fcc_restoration": "FCC issued Safeguarding and Securing the Open Internet order May 7, 2024; effective July 22, 2024",
+        "2024_sixth_circuit_stay": "Administrative stay July 12, 2024; full stay August 1, 2024 citing Loper Bright",
+        "2025_sixth_circuit_ruling": "January 2, 2025 — unanimous decision striking down 2024 order entirely in Ohio Telecom Ass'n v. FCC",
+        "legal_basis": "Court held broadband is 'information service' not 'telecommunications service' and FCC exceeded statutory authority"
+      },
+      "lobbying_spending": {
+        "2008_to_2017_total": "$572M by Comcast, AT&T, Verizon, and NCTA to influence FCC and other agencies",
+        "2014_telecom_industry": "$99.3M on lobbying (NCTA $17.5M, Comcast $16.9M, CTIA $9.54M)",
+        "2017_repeal_support": "$110M by telecom industry supporting net neutrality repeal",
+        "2017_preservation_support": "$39M by net neutrality proponents",
+        "per_comment_ratio": "For every 1 public comment on net neutrality, ISPs spent $100 on lobbying (MapLight analysis)"
+      },
+      "loper_bright_impact": "Supreme Court's June 2024 Loper Bright decision (overturning Chevron deference) became basis for striking down FCC net neutrality rules — first major application of the ruling"
+    },
+    "fcc_regulatory_capture": {
+      "revolving_door_examples": {
+        "tom_wheeler": {
+          "pre_fcc": "President/CEO of NCTA (1979-1984); CEO of CTIA (1992-2004)",
+          "fcc_role": "31st FCC Chairman (November 4, 2013 - January 20, 2017)",
+          "appointed_by": "Obama (bundled $700,000+ for Obama campaigns in 2007 and 2012)",
+          "notable": "Despite industry background, championed net neutrality (February 2015 Title II reclassification)",
+          "post_fcc": "Brookings Institution fellow; venture capital"
+        },
+        "ajit_pai": {
+          "pre_fcc": "Attorney at Jenner & Block (represented Securus prison phone company); DOJ and FCC staff",
+          "fcc_role": "FCC Chairman (January 23, 2017 - January 20, 2021)",
+          "appointed_by": "Trump",
+          "key_action": "Repealed net neutrality December 14, 2017; dropped prison phone rate limits benefiting former client Securus",
+          "post_fcc": "Partner at Searchlight Capital Partners (private equity, April 2021); CEO/President of CTIA (April 1, 2025)",
+          "revolving_door": "From regulator to private equity to top wireless industry lobbyist"
+        },
+        "brendan_carr": {
+          "pre_fcc": "Attorney at Wiley Rein LLP (clients included Viacom, AOL Time Warner, Bell telephone companies)",
+          "fcc_role": "Commissioner (August 2017 - January 2025); FCC Chairman (designated January 20, 2025)",
+          "appointed_by": "Trump (nominated 2017, renominated by Biden 2023, designated chair by Trump 2025)",
+          "project_2025": "Authored FCC chapter calling for regulating tech companies, transparency rules, and ending Section 230",
+          "notable": "First FCC chair to have written a Project 2025 chapter on the agency he leads"
+        },
+        "michael_powell": {
+          "fcc_role": "24th FCC Chairman (2001-2005)",
+          "appointed_by": "George W. Bush (originally nominated by Clinton to FCC in 1997)",
+          "post_fcc": "President/CEO of NCTA (cable industry trade association) since April 25, 2011",
+          "revolving_door": "Now lobbies for the same companies he once regulated; NCTA represents 90%+ of cable households",
+          "notable": "Holds the same position (NCTA CEO) that Tom Wheeler held before becoming FCC Chair"
+        },
+        "meredith_attwell_baker": {
+          "fcc_role": "FCC Commissioner (2009-2011)",
+          "appointed_by": "Obama",
+          "key_vote": "Voted to approve Comcast-NBCUniversal merger January 2011",
+          "post_fcc": "Hired by Comcast as SVP of Government Affairs (June 2011) — just 4 months after approving merger",
+          "later": "President/CEO of CTIA (June 2014 - April 2025)",
+          "revolving_door": "Textbook case — approved mega-merger then immediately joined the merged company"
+        }
+      },
+      "spectrum_auctions": {
+        "c_band_auction_107": {
+          "dates": "December 8, 2020 to February 17, 2021",
+          "spectrum": "3.7-3.98 GHz (280 MHz of mid-band spectrum for 5G)",
+          "total_winning_bids": "$81B+ across 5,684 licenses",
+          "status": "Most successful spectrum auction in FCC history"
+        },
+        "current_battle": {
+          "cable_vs_wireless": "CTIA launched 'End the Cableopoly' campaign accusing cable of starving wireless providers of spectrum",
+          "fcc_authority_restored": "One Big Beautiful Bill restores FCC auction authority; sets $85B minimum target",
+          "upper_c_band": "FCC voted unanimously on rules for 100MHz+ upper C-band auction; deadline July 2027"
+        }
+      },
+      "merger_approvals": {
+        "comcast_nbcuniversal_2011": {
+          "deal_value": "$30B (Comcast acquired 51% initially)",
+          "conditions": "150+ behavioral conditions imposed by FCC/DOJ",
+          "internet_essentials": "Required to offer $9.95/month broadband to low-income families",
+          "controversy": "Commissioner Baker approved merger then joined Comcast 4 months later"
+        },
+        "att_time_warner_2018": {
+          "deal_value": "$108.7B ($85.4B cash/stock + $23.3B debt)",
+          "doj_challenge": "Filed antitrust suit November 20, 2017",
+          "ruling": "AT&T won — no restrictions; decided by Judge Richard Leon (March-June 2018)",
+          "political": "Trump opposed deal publicly citing CNN coverage; Wall Street suspected political motivation"
+        },
+        "disney_fox_2019": {
+          "deal_value": "$71.3B in cash and stock",
+          "announced": "December 14, 2017",
+          "completed": "March 20, 2019",
+          "doj_condition": "Required divestiture of 22 regional sports networks",
+          "political": "Trump congratulated Murdoch while attacking AT&T-Time Warner over CNN"
+        },
+        "t_mobile_sprint_2020": {
+          "deal_value": "$26.5B",
+          "completed": "April 1, 2020",
+          "lobbying": "$17.2M from Q2 2018 to Q1 2020",
+          "trump_hotel": "T-Mobile executives spent $195,000 at Trump's DC hotel during merger review"
+        }
+      }
+    },
+    "media_consolidation": {
+      "telecommunications_act_1996": {
+        "signed": "February 8, 1996 by President Clinton",
+        "stated_goal": "Let anyone enter any communications business to compete in any market",
+        "actual_effect": "Massive consolidation across radio, TV, and telecom",
+        "radio_impact": {
+          "ownership_cap": "Eliminated national ownership cap on commercial radio stations",
+          "clear_channel_growth": "From 40 stations to 1,240 stations — 30x more than previously allowed",
+          "industry_consolidation": "Radio station owners dropped from 5,100 to 3,800 within 5 years",
+          "lobbyist": "Clear Channel founder Lowry Mays lobbied Senator Bob Dole to get ownership deregulation into the Act"
+        }
+      },
+      "sinclair_broadcasting": {
+        "stations": "Second largest TV station owner in US",
+        "political_lean": "97% of executive contributions went to Republicans (2004); 80% of PAC money to Republicans (2017-2018)",
+        "contributions_2024_cycle": "$167,118 in contributions",
+        "lobbying_2024": "$1,130,000",
+        "lobbying_2025": "$800,000 (4x 2023 level focused on FCC ownership rules)",
+        "hostile_takeover": "Announced pursuit of hostile takeover of Scripps (November 2025)",
+        "political_controversy": "Forced local anchors to read scripted 'must-run' segments; FCC under Trump relaxed ownership rules benefiting Sinclair"
+      },
+      "nexstar": {
+        "status": "Largest TV station owner in US",
+        "lobbying_2025": "$3.2M (10x its 2018-2023 annual average)",
+        "tegna_deal": "Announced $6.2B acquisition of Tegna (August 2025)",
+        "lobbyist_hired": "Jeff Miller — Trump's second inaugural committee finance chair — paid $510,000 in 2025",
+        "ownership_issue": "Combined reach would exceed 39% national audience cap"
+      },
+      "iheart_media": {
+        "formerly": "Clear Channel Communications",
+        "contributions_2024_cycle": "$1,083,997",
+        "lobbying_2024": "$4,470,000",
+        "conservative_programming": "Carries Glenn Beck, Sean Hannity, Mark Levin, Clay Travis & Buck Sexton via Premiere Networks",
+        "ted_cruz_controversy": "Investigated for in-kind marketing 'gift potentially worth millions' to Cruz; Super PAC received hundreds of thousands from iHeart"
+      },
+      "local_news_deserts": {
+        "news_desert_counties_2025": "213 (up from 206 in 2024)",
+        "single_source_counties": "1,524 counties with only one remaining news source",
+        "americans_affected": "50M Americans with limited or no access to local news",
+        "newspapers_closed_2025": "136 in most recent year (2+ per week)",
+        "total_newspapers_lost": "Almost 40% of all local US newspapers have vanished",
+        "jobs_lost_since_2005": "270,000+ newspaper jobs eliminated (75%+ decline)",
+        "digital_startups": "300+ local news startups in past 5 years (80% digital-only); less than 10% in rural counties"
+      }
+    },
+    "broadband_subsidies": {
+      "bead_program": {
+        "funding": "$42.45B (Infrastructure Investment and Jobs Act, late 2021)",
+        "purpose": "Grants to 56 states/territories to bridge digital divide",
+        "all_funds_obligated": "December 23, 2024 — NTIA obligated all $42.45B",
+        "all_proposals_approved": "November 19, 2024 — all 56 states/territories had initial proposals approved",
+        "2025_rule_change": "June 2025 — NTIA rescinded previous guidance; gave states 90 days to integrate new requirements",
+        "industry_lobbying": {
+          "fiber_vs_alternatives": "Industry lobbied against NTIA's prioritization of fiber; pushed for satellite and fixed wireless eligibility",
+          "price_caps_opposition": "AT&T, Comcast, Charter, Verizon lobbied against rules requiring lower prices for low-income customers in exchange for BEAD funding",
+          "combined_lobbying": "$117M in federal + $25M+ in state-level lobbying (2023) to influence infrastructure law implementation",
+          "ustelecom_position": "Opposed rate regulation; called it 'a formula that will not allow flexibility'"
+        }
+      },
+      "affordable_connectivity_program": {
+        "funding": "$14.2B (launched December 2021)",
+        "ended": "June 1, 2024 — no additional funding from Congress",
+        "peak_enrollment": "23M+ households receiving $30/month discount ($75 on tribal lands)",
+        "industry_position": "USTelecom and AT&T publicly supported extension; industry pointed to ACP as preferred solution for digital divide",
+        "political_failure": "Congress unable to pass extension despite bipartisan support",
+        "impact": "23M households lost broadband subsidy overnight"
+      },
+      "e_rate": {
+        "annual_cap": "$3.9B (adjusted for inflation)",
+        "annual_spend": "~$2B typically; $3.26B in discounts to schools in 2024",
+        "purpose": "Discounts (20-90%) on broadband for K-12 schools and public libraries",
+        "controversy": "Mobile carriers opposed expansion; smaller carriers opposed subsidized competition"
+      },
+      "broadband_definition_lobbying": {
+        "2015_standard": "25 Mbps download / 3 Mbps upload (set by FCC)",
+        "2024_update": "100 Mbps download / 20 Mbps upload (FCC Chairwoman Rosenworcel)",
+        "cable_industry_influence": "Upload speed of 20 Mbps was political compromise — cable industry lobbied hard against higher upload requirement",
+        "significance": "Definition determines which areas qualify for federal funding; lower definition = fewer eligible areas = less competition for incumbents"
+      }
+    },
+    "campaign_contributions": {
+      "sector_overview": {
+        "communications_electronics_pacs_2024": "$23,700,208 total to federal candidates",
+        "historical_party_split": "Roughly 51% to Democrats since 1990 cycle (slight Democratic lean)",
+        "big_three_pac_total_2024_cycle": "$5,429,500 combined (AT&T $2,050,000 + Comcast $1,917,900 + Verizon $1,461,600)"
+      },
+      "individual_company_contributions_2024_cycle": {
+        "att": "$2,050,000 to federal candidates",
+        "comcast": "$1,917,900 to federal candidates",
+        "verizon": "$1,461,600 to federal candidates",
+        "t_mobile": "$958,000 to federal candidates",
+        "charter": "49% of PAC donations went to Democrats (among highest D-lean in telecom)",
+        "sinclair": "$167,118 (80%+ to Republicans historically)",
+        "iheart_media": "$1,083,997"
+      },
+      "donation_pauses": {
+        "january_6_response": "AT&T, Verizon, and Comcast temporarily halted donations to lawmakers who opposed certifying Biden's 2020 election results",
+        "duration": "Most resumed donations within 6-12 months"
+      },
+      "lobbying_vs_contributions": {
+        "lobbying_dwarfs_pacs": "Industry spends ~10x more on lobbying ($108M+) than direct campaign contributions ($10-15M)",
+        "state_level": "$25M+ annually in state-level lobbying (not captured in federal figures)"
+      }
+    },
+    "section_230_lobbying": {
+      "current_status": {
+        "bipartisan_sunset_bill": "Graham-Durbin bill would sunset Section 230 on January 1, 2027 unless Congress enacts replacement",
+        "house_version": "Energy and Commerce Committee draft to sunset by December 1, 2025",
+        "late_2025_bill": "Graham, Durbin, Hawley, Klobuchar, Blackburn, and AG Ashley Moody unveiled bill (December 2025)",
+        "none_passed": "No Section 230 reform bill has become law despite dozens introduced"
+      },
+      "big_tech_lobbying_to_preserve": {
+        "2024_total": "$85.6M in tech lobbying (up from $68M in 2023)",
+        "meta_2024": "$24.4M (record — 27% increase over 2023's $19.3M)",
+        "amazon_2024": "$17.6M",
+        "google_2024": "$12.1M",
+        "bytedance_2024": "$10.4M (record — 19% increase)",
+        "microsoft_2024": "$9.5M",
+        "apple_2024": "$7.7M",
+        "five_year_total": "$260M from 2020-2024 (Meta, Alphabet, Microsoft, ByteDance, X, Snap combined)",
+        "tactic": "Public claims of supporting reform while lobbyists fight behind the scenes"
+      },
+      "telecom_vs_tech_positions": {
+        "telecom_position": "Generally supports Section 230 reform; Brendan Carr's Project 2025 chapter called for ending Section 230",
+        "tech_position": "Lobbies to preserve Section 230 protections while publicly expressing openness to reform",
+        "divergence": "Telecoms want tech platforms held to similar regulatory standards they face; tech companies resist being treated like common carriers"
+      }
+    },
+    "state_level_preemption": {
+      "municipal_broadband_restrictions": {
+        "states_with_bans_2024": "16 states still ban or restrict community-owned broadband networks",
+        "peak": "19 states at peak (as recently as 2021)",
+        "recent_rollbacks": {
+          "arkansas_2021": "Rolled back legislative barriers on publicly owned broadband",
+          "washington_2021": "Rolled back legislative barriers on publicly owned broadband",
+          "colorado_2023": "Repealed referendum requirement — 120+ communities had already voted to opt out",
+          "minnesota_2024": "Rolled back preemption laws (May 2024)"
+        }
+      },
+      "alec_model_legislation": {
+        "bill_name": "Municipal Telecommunications Private Industry Safeguards Act",
+        "purpose": "Model bill for states to block local governments from building public broadband",
+        "impact": "Iterations passed in 19 states",
+        "north_carolina": "6 provisions in NC law nearly identical to ALEC model",
+        "wilson_nc": "Town's municipal fiber network specifically targeted by ALEC-backed legislation"
+      },
+      "types_of_restrictions": {
+        "population_limits": "Nevada — only municipalities under 25,000 and counties under 55,000 can offer telecom services",
+        "utility_requirements": "Arkansas, Tennessee — bar municipalities without electric utilities from providing internet",
+        "service_limits": "Missouri, Texas — municipal networks limited to internet only, no other telecom services",
+        "unserved_only": "Montana, Pennsylvania — permit municipal networks only in unserved communities",
+        "cost_imputation": "Virginia, Florida, South Carolina — require imputing private sector costs, paying additional taxes, setting excessively high prices"
+      },
+      "fcc_preemption_attempt": {
+        "year": "2015",
+        "action": "FCC attempted to preempt state laws restricting municipal broadband",
+        "outcome": "Failed — courts ruled FCC lacks authority to reallocate power between states and municipalities",
+        "alec_response": "Celebrated ruling as victory for 'federalism'"
+      },
+      "bead_interference": {
+        "issue": "State preemption laws interfere with BEAD program deployment — municipalities in restricted states cannot apply for federal broadband grants",
+        "chilling_effect": "Even in states without outright bans, threat of preemption discourages municipal broadband planning"
+      }
+    },
+    "key_statistics": {
+      "industry_scale": {
+        "comcast_revenue_2024": "$121.6B",
+        "att_revenue_2024": "$122.3B",
+        "verizon_revenue_2024": "$134.0B",
+        "combined_lobbying_vs_revenue": "Top 4 ISPs spend ~$50M on federal lobbying — roughly 0.01% of revenue; generates billions in regulatory advantages"
+      },
+      "regulatory_asymmetry": {
+        "fcc_budget_fy2024": "~$390M",
+        "industry_lobbying_2024": "$108M+ (telecom services alone)",
+        "ratio": "Industry spends roughly 28 cents in lobbying for every $1 of FCC budget"
+      },
+      "consumer_impact": {
+        "us_broadband_prices": "Among highest in developed world",
+        "average_monthly_cost": "$75-85/month for broadband (varies by market)",
+        "competition": "Most Americans have 1-2 choices for high-speed broadband; ~50M have 0-1 options",
+        "acp_loss_impact": "23M households lost $30/month subsidy when ACP ended June 2024"
+      }
+    },
+    "historical_context": {
+      "telecom_act_1996_lobbying": "Telecom companies spent heavily to shape the Telecommunications Act of 1996; Clear Channel founder lobbied Senator Dole directly",
+      "net_neutrality_decade": "2008-2017: $572M spent by top ISPs lobbying FCC on broadband regulation",
+      "broadband_gatekeepers_report": "Common Cause/CWA 2021 report found ISPs used political spending to block Save the Internet Act, Accessible Affordable Internet for All Act, and RESILIENT Networks Act",
+      "trump_era_1": "Pai FCC: repealed net neutrality, relaxed media ownership rules, approved T-Mobile-Sprint merger",
+      "biden_era": "Rosenworcel FCC: attempted net neutrality restoration (struck down), updated broadband definition, launched ACP and BEAD",
+      "trump_era_2": "Carr FCC: net neutrality dead after Sixth Circuit ruling; E-Rate rollback; media ownership deregulation expected; BEAD rules rescinded and rewritten"
+    }
+  }
+}

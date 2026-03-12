@@ -1,0 +1,385 @@
+{
+  "title": "Agriculture & Food Industry Political Spending, Lobbying, and Influence",
+  "category": "campaign-finance-research",
+  "number": 27,
+  "sections": {
+    "farm_bill_lobbying": {
+      "overview": "The Farm Bill is the single largest piece of recurring legislation governing U.S. agriculture, nutrition, and food policy. Reauthorized roughly every 5 years, it drives massive lobbying spending.",
+      "total_lobbying_2019_2023": {
+        "amount": "$523M+",
+        "detail": "Giant agribusinesses, food/agriculture industry associations, and interest groups reported $523M+ in federal lobby expenditures on disclosure reports listing 'farm bill' among lobbying issues between 2019-2023",
+        "source": "Union of Concerned Scientists / OpenSecrets"
+      },
+      "annual_agribusiness_lobbying": {
+        "2019": "$145M",
+        "2020": "$153M",
+        "2021": "$155M",
+        "2022": "$165M (record at time)",
+        "2023": "$178M (new record; 1,300+ lobbyists)",
+        "2024_election_cycle_campaigns": "$124M in campaign contributions",
+        "growth": "22% increase from 2019 to 2023"
+      },
+      "top_farm_bill_lobbyists_2019_2023": {
+        "us_chamber_of_commerce": "$67M+",
+        "biotechnology_innovation_organization": "$35M+",
+        "bayer_corporation": "$23M+",
+        "american_farm_bureau_and_affiliates": "$15.7M"
+      },
+      "public_vs_industry": {
+        "industry_spending": "$400M+ from pharmaceutical, manufacturing, and big agriculture",
+        "public_sector_spending": "$95M from nonprofits, labor unions, state/local governments, and tribal nations",
+        "ratio": "Industry outspent public interest 4:1"
+      },
+      "snap_food_stamps": {
+        "percentage_of_farm_bill": "~81% of Farm Bill mandatory spending goes to the Nutrition title (CBO June 2024 estimate for FY2025-FY2034)",
+        "snap_cost_2024": "~$100B total ($94B in benefit payments)",
+        "snap_as_usda_share": "~50% of entire USDA budget; 70% of all federal food assistance spending in FY2024",
+        "2025_cuts": "FY2025 budget reconciliation (P.L. 119-21) reduced federal nutrition spending by $186.5B over 10 years (CBO estimate)",
+        "work_requirements_expanded": "Adults up to age 64 must meet work requirements (up from age 54)",
+        "state_cost_sharing": "States responsible for 5% of benefit costs starting October 1, 2027"
+      },
+      "crop_insurance_lobbying": {
+        "federal_costs_2022": "$17.3B — ~$12B subsidizing premiums, rest for insurance company admin costs",
+        "premium_subsidy_rate": "Government pays ~61% of premiums on average (crop year 2023)",
+        "lobbying_push": "Both Democratic and Republican farm bill proposals included language to increase crop insurance for the biggest agricultural operations",
+        "beneficiaries": "Private approved insurance providers receive admin/operating subsidies from FCIC on top of premium subsidies"
+      }
+    },
+    "agricultural_monopoly_consolidation": {
+      "beef_industry": {
+        "big_four": ["JBS", "Tyson Foods", "Cargill", "National Beef Packing"],
+        "market_share": "~80-85% of U.S. beef market",
+        "price_fixing_settlements": {
+          "jbs": {
+            "amount": "$52.5M",
+            "year": 2022
+          },
+          "tyson": {
+            "amount": "$55M",
+            "year": 2025,
+            "note": "Part of $87.5M joint settlement with Cargill; preliminary approval December 17, 2025"
+          },
+          "cargill": {
+            "amount": "$32.5M",
+            "year": 2025,
+            "note": "Part of $87.5M joint settlement with Tyson"
+          },
+          "total_settlements_to_date": "$140M+",
+          "estimated_total_consumer_damages": "$1.9B (plaintiff expert estimate)",
+          "remaining_defendants": "JBS USA and National Beef Packing — litigation ongoing"
+        },
+        "mcdonalds_lawsuit": {
+          "filed": "October 2024",
+          "defendants": "Tyson, JBS, Cargill, National Beef",
+          "allegation": "Price-fixing beef prices since 2015"
+        }
+      },
+      "seed_chemical_consolidation": {
+        "bayer_monsanto": {
+          "deal_value": "$66B",
+          "completed": 2018,
+          "result": "Created world's largest seed and crop chemicals company; controls 25%+ of global seed and pesticides market"
+        },
+        "chemchina_syngenta": {
+          "deal_value": "$43B",
+          "completed": 2017
+        },
+        "dow_dupont": {
+          "result": "Merged then split into Corteva Agriscience (agriculture), Dow (materials), DuPont (specialty)",
+          "completed": "2017 merger; 2019 split"
+        },
+        "market_concentration": {
+          "before": "6 companies controlled 2/3+ of global pesticide and seed markets (2016)",
+          "after": "3-4 companies now control ~2/3 of global pesticide and seed markets",
+          "agrochemicals": "3 companies control ~70% of agrochemicals",
+          "seeds": "3 companies control ~60% of commercial seeds"
+        }
+      },
+      "ftc_antitrust_actions": {
+        "syngenta_corteva_lawsuit": {
+          "filed": "September 2022 by FTC + 12 state AGs",
+          "allegation": "Illegal pay-to-block scheme — loyalty programs requiring distributors to source 85-99% of products from Syngenta/Corteva to block generic competitors",
+          "syngenta_monopoly_products": "Azoxystrobin (fungicide), mesotrione and metolachlor (herbicides)",
+          "corteva_monopoly_products": "Rimsulfuron (herbicide), oxamyl (insecticide/nematicide)",
+          "status": "Discovery throughout 2025; Trump administration and 12 states seeking October trial date"
+        },
+        "john_deere_ftc_investigation": {
+          "issue": "Right-to-repair restrictions",
+          "investigation_opened": "October 2024",
+          "background": "Deere signed 2023 MOU with American Farm Bureau promising repair access, but provided 'impaired tools and inadequate disclosures'",
+          "epa_ruling_2026": "EPA ruled against Deere's attempt to use Clean Air Act to block independent repair"
+        }
+      }
+    },
+    "agribusiness_lobbying_by_company": {
+      "bayer_monsanto": {
+        "2023_lobbying": "$7.45M",
+        "2024_lobbying": "$8.47M",
+        "2025_lobbying": "$9.19M+",
+        "registered_lobbyists_2025": "49+ lobbyists across 13+ lobby firms",
+        "farm_bill_lobbying_goal": "Seeking federal preemption to block Roundup/glyphosate lawsuits via Farm Bill language",
+        "state_lobbying": "Lobbied in Idaho, Iowa, Missouri for pesticide immunity laws in 2024; paid $123,250 in Iowa alone in 2025"
+      },
+      "corteva_agriscience": {
+        "2025_lobbying": "$3.36M",
+        "note": "Spun off from DowDuPont in 2019; defendant in FTC antitrust suit"
+      },
+      "cargill": {
+        "2023_lobbying": "$1.3M",
+        "2024_lobbying": "$1.4M",
+        "20_year_increase": "106% increase in lobbying spending over past two decades"
+      },
+      "archer_daniels_midland": {
+        "2025_lobbying_ytd": "$1.98M",
+        "note": "Ingredients found in products from soft drinks to toothpaste"
+      },
+      "tyson_foods": {
+        "2023_lobbying": "$2.05M",
+        "2024_contributions": "$316,500 to federal candidates",
+        "trend": "Doubled annual lobbying spending in past two decades"
+      },
+      "deere_and_co": {
+        "2023_lobbying": "$1.92M",
+        "2024_lobbying": "$1.58M"
+      },
+      "american_farm_bureau_federation": {
+        "2023_lobbying": "$1.455M",
+        "2024_lobbying": "$1.31M",
+        "5_year_total_with_affiliates": "$15.7M (2019-2023)",
+        "role": "Nation's largest general farm organization; key ally of pesticide/chemical industry in legislative fights"
+      },
+      "national_pork_producers_council": {
+        "2023_lobbying": "$2.81M",
+        "2024_lobbying": "$2.69M",
+        "2024_contributions": "$571,288",
+        "revolving_door": "12 of 18 lobbyists in 2023 previously held government jobs"
+      },
+      "croplife_america": {
+        "role": "Trade association for pesticide/crop protection industry",
+        "activities": "Runs frequent ad campaigns targeting D.C. policymakers; lobbies against state pesticide regulation"
+      }
+    },
+    "subsidy_politics": {
+      "total_farm_subsidies": {
+        "2024_commodity_payments": "$9.3B",
+        "three_year_total_2021_2023": "$55.2B across three types of taxpayer-funded farm support programs",
+        "trump_trade_war_bailout": {
+          "program": "Market Facilitation Program (MFP)",
+          "total_2018_2020": "$23-28B in direct payments to farmers",
+          "justification": "Compensate for lost exports from China tariff retaliation",
+          "distribution": "Top 1% received 13% of payments (~$177K avg); bottom 80% received $5,136 avg; top half collected 95% of total",
+          "subsidy_explosion": "Farm subsidy payments ballooned from $4B (2017) to $20B+ (2020)"
+        },
+        "2025_tariff_bailout": {
+          "announced": "December 2025",
+          "amount": "$12B in 'one-time bridge payments' to American farmers"
+        }
+      },
+      "distribution_inequality": {
+        "top_10_percent": "Collect ~74% of all commodity subsidy payments (2023)",
+        "farms_receiving_nothing": "69% of U.S. farms did not collect any subsidy payments",
+        "repeat_recipients": "10,249 recipients got farm subsidies every year for 39 consecutive years (1985-2023), collecting $11.18B total ($1.09M avg each)",
+        "top_repeat_recipients": "Top 10 individuals collected $9-20M each over 39 years"
+      },
+      "top_subsidized_crops_2024": {
+        "corn": "$3.2B (30.5% of all subsidies)",
+        "soybeans": "Second largest",
+        "cotton": "Third largest",
+        "subsidies_as_share_of_earnings": "5.9% of total farm earnings in 2024"
+      },
+      "sugar_program": {
+        "overview": "One of the most politically protected subsidy programs in U.S. agriculture. Zero-cost to taxpayers on paper (loan program), but costs consumers $3.5B+ annually through artificially inflated prices",
+        "key_players": {
+          "fanjul_brothers": "Alfonso and Jose 'Pepe' Fanjul — billionaire brothers; own world's largest cane sugar refiner/marketer (Domino, Florida Crystals brands); Pepe is close Trump ally",
+          "american_crystal_sugar": "Major beet sugar cooperative"
+        },
+        "political_spending_2024": {
+          "combined_pac_spending": "$7.5M+ from American Crystal Sugar, Florida Crystals, American Sugar Cane League, and US Sugar PACs",
+          "lobbying": {
+            "us_beet_sugar_association": "$3M+",
+            "american_crystal_sugar": "$3M+",
+            "american_sugar_alliance": "$2M+",
+            "us_sugar_corp": "$800K (2023)"
+          }
+        },
+        "lobbying_tactics": "Sugar industry paid for House members' trips; deployed former House Ag Committee Chair Rep. Collin Peterson as lobbyist",
+        "political_evolution": "Republican Study Committee called for elimination of sugar protections (2016), softened to 'phasing out' (2019), then endorsed industry-backed alternative plan (2024)"
+      }
+    },
+    "pesticide_chemical_regulation": {
+      "glyphosate_roundup_litigation": {
+        "total_settlement_costs": "$11B+ paid to ~100,000 plaintiffs",
+        "pending_lawsuits": "63,000+ additional lawsuits pending",
+        "proposed_class_settlement": "$7.25B to address remaining lawsuits",
+        "major_verdicts": {
+          "georgia_march_2025": "$2.1B jury verdict",
+          "philadelphia_october_2024": "$78M jury verdict"
+        },
+        "legislative_immunity_efforts": {
+          "federal": "Bayer lobbying for Farm Bill provision to preempt state failure-to-warn lawsuits",
+          "state_laws_passed": "North Dakota and Georgia signed pesticide immunity laws",
+          "trump_executive_action": "Invoked Defense Production Act to promote domestic glyphosate production, potentially granting manufacturer immunity",
+          "2026_status": "Farm bill and Trump's glyphosate order described as 'watershed moment' for pesticides"
+        }
+      },
+      "pfas_forever_chemicals": {
+        "overview": "PFAS exposure linked to cancer, heart damage, hormone disruption, liver/thyroid problems, immune suppression, reproductive issues, and abnormal fetal development",
+        "industry_lobbying": {
+          "american_chemistry_council": "$600K on PFAS lobbying (2024)",
+          "regulatory_capture": "EPA chemical regulation office headed by two former American Chemistry Council lobbyists and one former American Soybean Association lobbyist under Trump"
+        },
+        "epa_actions_under_trump": {
+          "pesticide_approvals": "5 PFAS-based pesticides proposed for registration in less than a year; 2 finalized",
+          "crops_affected": "Tomatoes, peas, lettuce, and other food crops",
+          "drinking_water": "Retained PFOA/PFOS limits but rescinded standards for 4 other PFAS; compliance deadline extended to 2031"
+        },
+        "lobbying_documents": "500+ pages of FOIA emails, internal presentations, and talking points detail industry efforts to gut federal PFAS regulations"
+      },
+      "farmworker_protections": {
+        "regulatory_gap": "Farmworkers' toxic chemical exposure does NOT fall under OSHA jurisdiction like virtually all other U.S. workers",
+        "heat_safety": "OSHA proposed heat protection rule in August 2024; several states developing independent rules",
+        "industry_opposition": "CropLife America, American Farm Bureau, and allied agricultural organizations lobby against enhanced pesticide and worker safety regulations",
+        "farm_bill_2024": "Included provisions making it harder for states to regulate pesticides and blocking individuals from seeking compensation for chemical harm"
+      }
+    },
+    "meat_industry": {
+      "political_spending_overview": {
+        "total_lobbying_since_1998": "$97M+",
+        "total_contributions_since_1990": "$27M+",
+        "2023_combined": "$10M+ on political contributions and lobbying (some at all-time highs)",
+        "partisan_split": "~75% to Republicans, ~25% to Democrats"
+      },
+      "jbs_political_influence": {
+        "inaugural_donation": "$5M to Trump's 2025 Inaugural Committee via subsidiary Pilgrim's Pride (single largest donation — 5x Meta/Amazon contributions)",
+        "nyse_listing": "JBS began trading on NYSE June 13, 2025 — 6 months after inaugural donation; SEC listing approved within 2 days of Trump appointee Paul Atkins becoming SEC Chair",
+        "brazil_bribery": "Batista brothers (JBS founders) confessed in 2017 to bribing 1,900 Brazilian politicians; paid $27M U.S. anti-corruption settlement in 2020",
+        "lobbying_trend": "Doubled lobbying spending; followed by Tyson and Cargill pouring millions into campaign contributions"
+      },
+      "usda_regulatory_capture": {
+        "packers_and_stockyards_act": "Rep. Andy Harris introduced appropriations bill to nix all enforcement of USDA's new poultry transparency ruling",
+        "meat_institute_deregulation": "Meat Institute president penned letter to Trump White House seeking rollback of Clean Water Act enforcement, salmonella inspections, and equity provisions in Packers and Stockyards Act",
+        "trump_meatpacker_investigation": "DOJ announced investigation into meatpacking companies in late 2025"
+      },
+      "ag_gag_laws": {
+        "definition": "State laws criminalizing undercover filming or photography of activity on farms without owner consent",
+        "states_with_laws": "Multiple states including Iowa, Utah, North Carolina, Kansas, Montana, North Dakota, and others",
+        "recent_legislation": {
+          "kentucky_2024": "Passed new ag-gag law",
+          "south_dakota_2025": "S.B. 114 — prohibits 'deception to gain access to or employment at an agricultural facility' with intent to cause harm"
+        },
+        "court_rulings": {
+          "iowa": "Federal appeals court reversed lower courts (Jan 2024) allowing enforcement, then U.S. District Court ruled latest Iowa ag-gag law unconstitutional under First Amendment",
+          "north_carolina": "Fourth Circuit ruled undercover investigations are protected newsgathering under First Amendment"
+        }
+      }
+    },
+    "food_industry_lobbying": {
+      "major_company_spending_2024": {
+        "coca_cola": "$4.93M",
+        "national_restaurant_association": "$3.49M",
+        "mcdonalds": "$2.95M",
+        "american_beverage_association": "$1.53M (doubled to $1.7M in first half of 2025)",
+        "kraft_heinz": "$1.35M (first 9 months of 2025)"
+      },
+      "maha_opposition": {
+        "overview": "Food industry lobbying surged to record levels in 2025 in response to RFK Jr.'s Make America Healthy Again (MAHA) movement targeting ultra-processed foods, synthetic dyes, and food additives",
+        "industry_front_group": "Americans for Ingredient Transparency — backed by Coca-Cola, Kraft Heinz, Nestlé; pushing for national labeling preemption laws",
+        "argument": "Companies claim MAHA regulations will raise food prices, betting affordability concerns resonate with voters",
+        "state_lawsuits": "Major food/beverage lobbying groups have sued states over food safety regulations"
+      },
+      "soda_tax_opposition": {
+        "historical_spending": "Coca-Cola averaged $6M/year, PepsiCo $3M/year, American Beverage Association $1M/year on lobbying (2011-2015) during soda tax fights",
+        "2018_total": "$22.3M in food/beverage lobbying including $5.4M Coca-Cola, $2.8M PepsiCo",
+        "tactics": "Industry uses lawsuits and preemption laws to block local soda tax and warning label efforts",
+        "snap_soda_ban": "Big Sugar ramped up lobbying as SNAP soda purchase ban proposals spread in states"
+      },
+      "fda_nutrition_labeling": {
+        "added_sugar_labels": "FDA delayed front-of-package labeling implementation, attributed to industry pressure",
+        "school_meals": {
+          "2024_standards": "USDA announced new standards: first-ever added sugar limits in school meals (breakfast cereals ≤6g/dry oz, yogurt ≤2g/oz, flavored milk ≤10g/8 fl oz)",
+          "industry_opposition": "Food companies claimed standards too severe, would cause food waste, spent millions lobbying",
+          "implementation": "Gradual rollout Fall 2025 through Fall 2027"
+        }
+      }
+    },
+    "ethanol_biofuel": {
+      "renewable_fuel_standard": {
+        "established": 2005,
+        "mandate": "~15B gallons of biofuels (mostly corn ethanol) blended into gasoline annually",
+        "annual_tax_credit_value": "$6B+/year (when active)"
+      },
+      "lobbying_spending": {
+        "renewable_fuels_association_2024": "$1.12M",
+        "renewable_energy_sector_total_2024": "$64.9M (681 lobbyists)",
+        "2012_cycle_pac_donations": "$2.2M from corn ethanol interests (large jump from 2008/2010)"
+      },
+      "iowa_caucus_influence": {
+        "dynamic": "Iowa's first-in-the-nation caucus status gave ethanol outsized influence — presidential candidates routinely visited ethanol factories and pledged RFS support",
+        "example": "9+ presidential candidates including Trump visited Iowa ethanol factories in 2016",
+        "declining_influence": "Democrats moved first primary to South Carolina; Iowa Renewable Fuels Association acknowledged they 'can't sugarcoat' the concern about declining political leverage",
+        "ted_cruz_effect": "Industry feared Cruz's 2016 Iowa win (despite questioning RFS) would 'open the floodgate' for candidates to oppose ethanol mandates"
+      }
+    },
+    "trade_policy": {
+      "china_trade_war_impact": {
+        "soybean_exports": {
+          "total_2024": "$24B+ in soybean exports",
+          "china_share_decline": "U.S. share of Chinese soybean imports fell from 49% (2012) to 27% (2024)",
+          "projected_losses": "$3.6-5.9B annually in soybean production value"
+        },
+        "beef_exports": {
+          "china_ban_march_2025": "China let export licenses for hundreds of U.S. beef facilities expire",
+          "impact": "Monthly U.S. beef exports to China fell 90%+"
+        },
+        "almonds": "China hiked tariffs to 45% (March 2025)",
+        "corn_losses": "$0.9-1.4B annually in corn production value",
+        "total_ag_trade_with_china": "Chinese imports of U.S. agriculture fell from $42.8B (2022) to $29.25B (2024)"
+      },
+      "farm_bailouts": {
+        "first_trump_term": {
+          "program": "Market Facilitation Program (MFP)",
+          "total": "$23-28B (2018-2020)",
+          "distribution": "Top 1% received ~$177K avg; bottom 80% received $5,136 avg; top half collected 95% of total payments"
+        },
+        "second_trump_term": {
+          "announced": "December 2025",
+          "amount": "$12B in 'one-time bridge payments'",
+          "farmer_sentiment": "48% of farmers surveyed (Dec 2024) said U.S. agriculture 'likely' or 'very likely' at risk of trade war significantly decreasing exports"
+        }
+      }
+    },
+    "key_statistics": {
+      "total_agribusiness_lobbying_2023": "$178M (record; 1,300+ lobbyists)",
+      "farm_bill_lobbying_5yr": "$523M+ (2019-2023)",
+      "campaign_contributions_2024_cycle": "$124M from agribusiness sector",
+      "beef_price_fixing_settlements": "$140M+ (JBS $52.5M, Tyson $55M, Cargill $32.5M)",
+      "roundup_settlements": "$11B+ to 100,000 plaintiffs; 63,000+ lawsuits pending",
+      "seed_chemical_merger_value": "$109B+ (Bayer-Monsanto $66B + ChemChina-Syngenta $43B)",
+      "snap_spending_2024": "$100B (~81% of Farm Bill spending)",
+      "trade_war_bailout_total": "$35-40B (MFP $23-28B + 2025 bridge payments $12B)",
+      "sugar_industry_pac_spending_2024": "$7.5M+",
+      "jbs_inaugural_donation": "$5M (single largest to Trump 2025 inauguration)",
+      "crop_insurance_federal_cost_2022": "$17.3B",
+      "meat_industry_lobbying_since_1998": "$97M+"
+    },
+    "sources": [
+      "OpenSecrets (opensecrets.org) — federal lobbying and campaign finance data",
+      "Union of Concerned Scientists — 'Cultivating Control' report on farm bill lobbying",
+      "Environmental Working Group (EWG) — Farm Subsidy Database and analysis",
+      "Investigate Midwest — agribusiness spending investigations",
+      "Agriculture Dive / Food Dive — industry reporting",
+      "Federal Trade Commission — Syngenta/Corteva antitrust litigation",
+      "Congressional Research Service — Farm Bill primers and SNAP analysis",
+      "USDA Economic Research Service — farm bill spending data",
+      "U.S. Government Accountability Office — crop insurance reports",
+      "The Hill — farm bill lobbying analysis",
+      "Civil Eats — PFAS pesticide and food policy reporting",
+      "NOTUS — PFAS lobbying FOIA documents",
+      "Farm Policy News (University of Illinois) — trade war and lobbying coverage",
+      "Sentient Media — meat industry political influence analysis",
+      "Mighty Earth — JBS inaugural donation reporting",
+      "NPR / PBS — ethanol and Iowa caucus coverage",
+      "USAFacts — federal farm subsidy data"
+    ]
+  }
+}

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import {
   ArrowLeft,
+  ArrowRight,
   Flag,
   Globe,
   Vote,
@@ -888,18 +889,18 @@ export default function CorruptionAndReformPage() {
               </div>
             </Link>
             <Link
-              href="/guide"
+              href="/guide/industries-that-shape-daily-life"
               className="group flex items-center justify-end gap-4 rounded-xl border border-border bg-paper p-6 text-right transition-all hover:-translate-y-0.5 hover:border-ink/30 hover:shadow-lg"
             >
               <div>
                 <div className="font-mono text-[10px] font-bold uppercase tracking-widest text-muted">
-                  Back to Guide
+                  Next: Chapter 8
                 </div>
                 <div className="mt-1 font-headline text-lg font-bold text-ink">
-                  Table of Contents
+                  Industries That Shape Daily Life
                 </div>
               </div>
-              <BookOpen className="h-5 w-5 shrink-0 text-muted transition-colors group-hover:text-ink" />
+              <ArrowRight className="h-5 w-5 shrink-0 text-muted transition-colors group-hover:text-ink" />
             </Link>
           </div>
         </div>
@@ -913,13 +914,13 @@ export default function CorruptionAndReformPage() {
             Transparency Is the First Step
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-white/60">
-            You&apos;ve read the full guide. You know how the money moves, who
-            it buys, and why reform keeps failing. The Ledger exists to make
-            this information impossible to ignore. Explore our interactive tools
-            to trace the connections yourself — follow the money flows,
-            calculate the return on lobbying investments, and track the trades
-            your representatives make while writing the laws that govern your
-            life.
+            The corruption described in this chapter is bipartisan and systemic.
+            But so is the resistance. From New York City&apos;s 8:1 small-donor
+            matching to state-level disclosure laws, reformers are proving that
+            alternatives exist. The Ledger&apos;s interactive tools let you
+            trace the connections yourself — follow the money flows, calculate
+            the return on lobbying investments, and track the trades your
+            representatives make while writing the laws that govern your life.
           </p>
           <p className="mx-auto mt-4 max-w-xl text-base text-white/40">
             The system survives on complexity and opacity. Accountability begins

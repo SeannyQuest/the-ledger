@@ -1,0 +1,392 @@
+{
+  "title": "Real Estate & Housing Industry: Lobbying, Political Spending, and Influence",
+  "category": "campaign-finance-research",
+  "number": 26,
+  "sections": {
+    "national_association_of_realtors": {
+      "overview": "The National Association of Realtors is the single largest lobbying organization in America. With 1.5M+ members, $360.8M in 2024 revenue ($303.5M from dues), and $1.07B in total assets, NAR operates the most powerful political machine in the real estate industry.",
+      "lobbying_by_year": {
+        "2024": "$86,385,941 — #1 lobbying spender in America",
+        "2023": "$52,100,000 — #2 behind US Chamber of Commerce",
+        "2022": "$81,700,000 — #1 lobbying spender",
+        "2021": "$18M+ in first half alone",
+        "2020": "$84,000,000+ — #1 lobbying spender; highest single-year total at the time",
+        "cumulative_since_1998": "$850,000,000+",
+        "source": "OpenSecrets federal lobbying disclosures"
+      },
+      "pac_spending_2024_cycle": {
+        "rpac_raised": "$19,775,633 (2023-2024 cycle)",
+        "congressional_fund_raised": "$20,077,754 (2023-2024 cycle)",
+        "direct_contributions": "$17,535,376",
+        "outside_spending": "$18,765,169",
+        "total_political_spending_2024": "$122,686,486 (lobbying + contributions + outside spending)",
+        "rpac_structure": "70% stays in state for state/local races; 30% goes to national RPAC for federal races",
+        "rpac_status": "One of the largest trade association PACs in the country; founded 1969 as REPEC, renamed RPAC 1974"
+      },
+      "dues_funding_political_activity": {
+        "annual_dues_2024": "$156 per member",
+        "nondeductible_portion": "35% ($55 per member) classified as nondeductible due to lobbying/political activity",
+        "total_nondeductible_dues": "$86,100,000 reported as lobbying/political expenses in 2024 — up from $52.1M in 2023",
+        "note": "Members' mandatory dues directly fund the largest lobbying operation in America without opt-out"
+      },
+      "antitrust_settlement": {
+        "amount": "$418,000,000 over approximately four years",
+        "date": "March 2024 — final approval November 2024",
+        "cause": "Class-action lawsuits by home sellers alleging NAR conspired to inflate broker commissions",
+        "key_changes": [
+          "Prohibited offers of broker compensation on the MLS",
+          "Buyers must sign written agreements with agents outlining services and compensation",
+          "Compensation can still be negotiated off-MLS"
+        ],
+        "doj_involvement": "April 2024 appellate court ruled in favor of DOJ reopening investigation into NAR; DOJ reserved right to take future action",
+        "lobbying_surge": "Q3 2024 lobbying (post-settlement, pre-ruling) was $47.9M — nearly matching some full-year totals",
+        "political_significance": "Settlement triggered massive lobbying spike as NAR fought to shape implementation rules"
+      },
+      "key_lobbying_victories_2024": [
+        "Defeated proposed real estate transfer tax in Chicago",
+        "Helped pass zoning reform in Oregon",
+        "Defeated vacancy tax ballot measure in California",
+        "Stopped rent control efforts in Iowa and Delaware"
+      ],
+      "executive_compensation_note": "NAR spent more than $76M on compensation in 2024 from $360.8M revenue"
+    },
+    "homebuilder_lobbying": {
+      "overview": "The National Association of Home Builders (NAHB) represents the homebuilding industry with significant but more modest political spending compared to NAR.",
+      "nahb_spending_2024": {
+        "lobbying": "$3,450,000",
+        "pac_contributions": "$3,320,075",
+        "outside_spending": "$700,000",
+        "total": "$7,470,075",
+        "source": "OpenSecrets 2024 cycle data"
+      },
+      "nahb_advocacy_focus": {
+        "congressional_testimony": "12 times before Congress in 2024 alone",
+        "key_issues": [
+          "Tariff impacts on housing costs (top priority under Trump)",
+          "Regulatory reform and permitting streamlining",
+          "Housing finance policy",
+          "LIHTC expansion — supported bipartisan bill with 114 cosponsors"
+        ],
+        "position_on_zoning": "NAHB actually SUPPORTS zoning reform — advocates for higher-density developments, statewide pre-emption of exclusionary local zoning, flexible land use frameworks",
+        "additional_lobbying": "Invested $80,000 in Cornerstone Government Affairs in Q4 2025 for housing affordability lobbying"
+      }
+    },
+    "private_equity_in_housing": {
+      "blackstone_invitation_homes": {
+        "origin": "Blackstone founded Invitation Homes in 2012, buying ~50,000 foreclosed single-family homes for ~$10B during post-2008 crisis",
+        "renovation_investment": "Average $25,000 per home in renovations after acquisition",
+        "government_backing": "2017: Received 10-year $1B loan from Wells Fargo guaranteed by Fannie Mae — first government-backed securitization for institutional single-family rentals",
+        "blackstone_exit": "November 2019 — divested Invitation Homes stake; earned ~$7B profit (2x+ investment)",
+        "blackstone_reentry": "Acquiring Tricon Residential (61,964 homes) to become 3rd-largest SFR operator",
+        "invitation_homes_current": "85,000+ rental homes in 16 markets — largest single-family rental REIT",
+        "ftc_enforcement": "FTC action for hidden fees and unjustly withholding security deposits"
+      },
+      "blackstone_political_spending": {
+        "total_contributions_2024_cycle": "$48,609,890",
+        "lobbying_2024": "$3,846,000",
+        "rent_control_opposition": "$7M+ to defeat California Prop 10 (2018) and Prop 21 (2020) via California Business Roundtable Issues PAC",
+        "funding_mechanism": "Contributions came from pools of investor capital, including California public employee pension funds and University of California endowments — not corporate PAC or executive personal funds",
+        "un_criticism": "UN Special Rapporteur wrote to Blackstone CEO stating the company uses 'significant resources and political leverage to undermine domestic laws and policies that would improve access to adequate housing'"
+      },
+      "institutional_investor_market_share": {
+        "national_share": "Firms owning 100+ homes control ~1.4% of occupied single-family housing (2024 GAO)",
+        "sun_belt_concentration": {
+          "atlanta": "25% of single-family homes",
+          "jacksonville": "21%",
+          "charlotte": "18%",
+          "tampa": "15%"
+        },
+        "purchase_share_trend": "~3% of home purchases in 2022 peak → ~1% in 2024 (higher interest rates cooled demand)",
+        "projection": "Hedge fund share of SFR projected to grow from 5% (2022) to 40% by 2030"
+      },
+      "national_rental_home_council": {
+        "founded": "2014 by Starwood Waypoint (later merged with Invitation Homes)",
+        "purpose": "Primary lobbying and advocacy group for institutional single-family rental industry",
+        "lobbying_2021": "$200,000",
+        "lobbying_2024_q1": "$120,000 (including lobbying on investor ownership ban proposals)",
+        "record_annual_lobbying": "$310,000 — largest single-year expenditure in NRHC history",
+        "member_companies": "~80 members, but leadership dominated by 4 companies: Invitation Homes, Progress Residential, American Homes 4 Rent, Tricon Residential",
+        "observation": "'The more they own, the more they'll lobby' — proportional to portfolio growth"
+      },
+      "trump_executive_order_2026": {
+        "date": "January 2026",
+        "title": "Stopping Wall Street from Competing with Main Street Homebuyers",
+        "action": "Directed agencies to prevent federal programs from approving, insuring, guaranteeing, securitizing, or facilitating sales of single-family homes to large institutional investors",
+        "implementation": "Treasury Secretary given 30 days to define 'large institutional investor'; HUD Secretary given 60 days to issue guidance",
+        "market_response": "Blackstone and Invitation Homes shares dropped immediately",
+        "expert_skepticism": "Realtor.com senior economist: 'The affordability crisis is fundamentally a supply problem... Large corporate ownership is a red herring'",
+        "bipartisan_interest": "Senate Democrats also introduced competing legislation to curb corporate homebuyers"
+      }
+    },
+    "rent_control_opposition": {
+      "california_three_cycles": {
+        "overview": "The real estate industry spent $280M+ across three California ballot cycles (2018, 2020, 2024) to defeat rent control — all three measures failed with ~59% opposition",
+        "proposition_10_2018": {
+          "purpose": "Repeal Costa-Hawkins Rental Housing Act to allow local rent control on all housing types",
+          "result": "Defeated 59% to 41%",
+          "total_campaign_spending": "$100M+",
+          "opposition_spending": "$77,300,000",
+          "supporter_spending": "$26,200,000",
+          "top_opposition_funders": "Blackstone Group, Essex Property Trust, Equity Residential"
+        },
+        "proposition_21_2020": {
+          "purpose": "Allow local governments to enact rent control on housing 15+ years old",
+          "result": "Defeated ~60% opposition",
+          "total_campaign_spending": "$124,420,000",
+          "opposition_spending": "$83,570,000",
+          "supporter_spending": "$40,850,000"
+        },
+        "proposition_33_2024": {
+          "purpose": "Prohibit state limitations on local rent control",
+          "result": "Defeated 59% opposition",
+          "total_campaign_spending": "$150M+",
+          "opposition_spending": "$125,000,000",
+          "supporter_spending": "$48,000,000 (led by AIDS Healthcare Foundation)",
+          "top_opposition_funders": "California Apartment Association and California Association of Realtors contributed $100M of the $125M",
+          "invitation_homes_contribution": "$500,000 to No on Prop 33"
+        },
+        "california_apartment_association_cumulative": {
+          "total_across_four_measures": "$226,000,000 defending Costa-Hawkins since 2018",
+          "2024_cycle_alone": "$131,000,000 (including No on Prop 33 and Yes on Prop 34)",
+          "corporate_landlord_contributions": "355 corporate and smaller landlords contributed $135,875,365 to CAA Issues Committee in 2023-2024"
+        }
+      },
+      "national_rent_control_opposition": {
+        "nar_activities": "Stopped rent control efforts in Iowa and Delaware in 2024",
+        "oregon": "Landlord lobby launched multimillion-dollar super PAC 'More Housing Now!' to oppose rent control bill",
+        "industry_posture": "Corporate landlords, developers and real estate lobbying groups spend hundreds of millions to defeat rent control movements anywhere in the country"
+      }
+    },
+    "mortgage_industry_lobbying": {
+      "pre_crisis_predatory_lending": {
+        "countrywide_financial": {
+          "lobbying_spending": "$8,700,000 in political donations, contributions, and lobbying (2002-2006)",
+          "peak_lobbying_year": "$1,500,000 (2005)",
+          "final_year_lobbying": "$796,000 (2008)",
+          "vip_loan_program": {
+            "name": "Friends of Angelo (CEO Angelo Mozilo)",
+            "duration": "1991-2008",
+            "total_loans_processed": "~17,979",
+            "benefits": "0.5 percentage point rate reductions, waived 'junk fees' averaging $350-$400, expedited processing, underwriting exceptions",
+            "recipients": [
+              "Senator Christopher Dodd (Chairman, Senate Banking Committee)",
+              "Senator Kent Conrad (Chairman, Senate Budget Committee)",
+              "HUD Secretary Alphonso Jackson",
+              "HHS Secretary Donna Shalala",
+              "Fannie Mae CEO Franklin Raines",
+              "Fannie Mae Chairman James Johnson",
+              "Ambassador Richard Holbrooke"
+            ],
+            "congressional_finding": "March 2009 report: 'Friends of Angelo: Countrywide's Systematic and Successful Effort to Buy Influence and Block Reform'"
+          },
+          "mozilo_personal_donations": "$120,000 to federal candidates/committees (1989-2008)"
+        },
+        "ameriquest_mortgage": {
+          "lobbying_spending": "$20,500,000 in political donations, contributions, and lobbying (2002-2006)",
+          "purpose": "Defeat anti-predatory lending legislation per Wall Street Journal",
+          "arnall_personal_donations": "$12,000,000 generated for Bush campaigns and political efforts",
+          "california_donations": "$1,500,000 to Governor Schwarzenegger; $271,200 to AG Lockyer",
+          "predatory_lending_settlement": "$325,000,000 settlement with 49 state attorneys general"
+        },
+        "combined_impact": "16 pieces of federal anti-predatory lending legislation introduced 2000-2006 — NONE became law",
+        "crisis_correlation": "IMF study found: lenders who lobbied on mortgage/securitization issues adopted significantly riskier lending strategies; delinquency rates in 2008 were significantly higher in areas where lobbying lenders had expanded fastest"
+      },
+      "mortgage_bankers_association": {
+        "lobbying_2024": "$3,000,000",
+        "pac_spending_2024_cycle": "$2,100,000 (MORPAC)",
+        "federal_candidate_contributions": "$949,000 (55% to Republicans)",
+        "key_positions": [
+          "Oppose merging Fannie Mae and Freddie Mac into single entity",
+          "Support FHFA reduction of low-income finance goals for GSEs",
+          "Advocate for transparent GSE policies with fair access for all lender sizes"
+        ]
+      },
+      "post_crisis_dodd_frank_lobbying": {
+        "industry_spending_to_defeat": "$1B+ by financial industry in months leading up to Dodd-Frank passage",
+        "industry_spending_to_weaken": "$1B+ in three years after passage to 'chip away' at provisions",
+        "lobbyists_engaged": "1,172 clients listed Dodd-Frank or related issues on lobbying disclosures",
+        "average_per_quarter": "577 clients lobbying on Dodd-Frank issues per quarter",
+        "american_bankers_association": "$17M in 2009-2010; $2M in Q1 2011 alone",
+        "finance_insurance_real_estate_cumulative": "$4.3B in lobbying since 1999 Glass-Steagall repeal through ~2012"
+      },
+      "gse_lobbying_fannie_freddie": {
+        "combined_contributions_since_1990": "$19,500,000 (53% to Republicans)",
+        "freddie_mac_alone": "$10,200,000 — ranks among top 100 all-time donors across all industries",
+        "first_half_2008": "$7,400,000 combined ($2.9M Fannie, $4.5M Freddie)",
+        "strategic_targeting": "15 of top 25 recipient lawmakers sat on House Financial Services, Senate Banking, or Senate Finance committees",
+        "post_conservatorship_2024": "Fannie Mae contributions: $332,604; lobbying: $0 (under conservatorship since 2008)"
+      }
+    },
+    "affordable_housing_obstruction": {
+      "nimby_lobbying": {
+        "characteristics": "Typically more affluent, white homeowners opposing denser/affordable housing near their properties",
+        "legal_concerns": "NIMBY activism expressed through exclusionary zoning can violate the Fair Housing Act",
+        "impact": "Community opposition in permitting stages frequently increases costs and delays affordable housing projects",
+        "michigan_example": "1,300 local government officials representing 6.2M residents signed letter opposing statewide density-focused zoning reform",
+        "local_government_lobbying": "Local governments themselves spend millions annually through taxpayer-funded lobbying to defeat property tax and zoning reforms"
+      },
+      "section_8_and_inclusionary_zoning": {
+        "nimby_opposition": "Single-family-exclusive zoning benefits long-term homeowners; mayors and city councils face stiff opposition from constituents when proposing zoning reform",
+        "inclusionary_zoning_tension": "Requires percentage of new units be affordable — opposed by developers who argue it reduces profitability and housing supply",
+        "voucher_discrimination": "Despite federal protections, source-of-income discrimination against Section 8 voucher holders remains common in states without additional protections"
+      },
+      "lihtc_politics": {
+        "program_scale": "Largest national affordable housing program; financed ~87,000 units/year (2012-2021 average)",
+        "bipartisan_support": "Structured as tax credit (not direct spending) — appeals to both parties",
+        "advocacy_coalition": "ACTION Campaign: 2,500+ business and nonprofit organizations lobbying for LIHTC",
+        "2025_legislation": "Bipartisan bill introduced by Rep. LaHood (R) and Rep. DelBene (D) with 114 cosponsors — NAHB-supported",
+        "criticism": "Described as 'an outdated, costly, and ineffective program that has primarily enriched politically-connected developers and banks'",
+        "developer_lobbying": "Affordable housing developers lobby cities to opt in to inclusionary programs while market-rate developers push back"
+      },
+      "covid_eviction_moratorium_battle": {
+        "nar_spending_2020": "$84M+ on lobbying (highest single-year total at the time)",
+        "industry_total": "$100M+ spent by housing and real estate industry groups in 18 months fighting moratorium extension",
+        "nar_lawsuit": "Georgia and Alabama REALTOR associations (with NAR support) challenged CDC eviction moratorium authority in fall 2020",
+        "supreme_court_ruling": "5 justices agreed CDC lacked authority to impose blanket eviction ban without specific Congressional authorization",
+        "moratorium_timeline": "September 2020 → multiple extensions → expired July 31, 2021"
+      }
+    },
+    "commercial_real_estate_tax_provisions": {
+      "1031_like_kind_exchanges": {
+        "what_it_is": "Allows indefinite deferral of capital gains taxes when swapping one investment property for another",
+        "revenue_cost": "White House estimated $19B in recoverable revenue by closing the loophole",
+        "biden_proposal": "Cap 1031 exchange deferrals at $500,000 per transaction — proposed in every Biden budget",
+        "industry_counter_claims": "Ernst & Young 2021 study: eliminating 1031 would shrink GDP by $9.3B/year; projected revenue from capping exchanges only $1.97B/year",
+        "lobbying_defense": "Real estate industry's powerful lobby argues it mostly helps small-business owners, farmers, and families while spurring construction jobs",
+        "2025_outcome": "1031 exchanges remained intact in the One Big Beautiful Bill Act — no changes",
+        "political_dynamics": "Industry lobbyists educated new congressional members on importance; bipartisan opposition to elimination"
+      },
+      "opportunity_zones": {
+        "origin": "Created in 2018 Tax Cuts and Jobs Act",
+        "2025_action": "One Big Beautiful Bill Act made OZ program PERMANENT",
+        "new_terms": "Capital gains can be reinvested into QOFs until December 31, 2033; taxes deferred to earlier of 5 years after investment or sale",
+        "lobbying_effort": "Surmount CEO Glen Kunofsky met with entire Senate Finance Committee to lobby for OZ permanence",
+        "next_steps": "Starting July 2026, states submit tracts for OZ 2.0 program — 90-day window",
+        "source": "Brookings Institution, NAIOP"
+      },
+      "bonus_depreciation": {
+        "residential_schedule": "27.5 years",
+        "commercial_schedule": "39 years",
+        "2025_restoration": "Senate reconciliation bill permanently restored 100% bonus depreciation for real estate assets acquired after January 19, 2025",
+        "political_significance": "Major commercial real estate lobbying win — industry had been pushing for restoration since TCJA bonus depreciation began phasing down"
+      },
+      "real_estate_roundtable": {
+        "lobbying_2024": "$5,237,295",
+        "contributions_2024_cycle": "$603,500",
+        "pac_raised_2024_cycle": "$705,171",
+        "firpta_repeal": "Ultimate policy goal is full repeal of FIRPTA (Foreign Investment in Real Property Tax Act); submitted 4 letters to Treasury/Congress including March 2025",
+        "role": "Primary voice for commercial real estate industry tax priorities in Washington"
+      }
+    },
+    "property_tax_and_zoning_lobbying": {
+      "nar_local_engagement": {
+        "examples": [
+          "Defeated proposed real estate transfer tax in Chicago (2024)",
+          "Helped pass zoning reform in Oregon (2024)",
+          "Defeated vacancy tax ballot in California (2024)",
+          "Stopped rent control in Iowa and Delaware (2024)"
+        ],
+        "spending_mechanism": "NAR's $86M+ annual lobbying covers federal, state, and local advocacy; RPAC distributes 70% of contributions to state/local races"
+      },
+      "local_government_opposition_to_reform": {
+        "michigan_example": "1,300 local officials representing 6.2M residents opposed statewide density zoning bills, arguing state mandates strip local planning control",
+        "homeowner_resistance": "Single-family-exclusive zoning benefits long-term homeowners who resist densification",
+        "local_government_self_lobbying": "Local governments spend millions annually through taxpayer-funded lobbying to defeat reforms that would limit their spending or tax authority"
+      },
+      "finance_insurance_real_estate_sector_total": {
+        "2024_federal_lobbying": "$636,400,000 (increased $33.8M over prior year)",
+        "context": "Part of record-breaking $4.4B total federal lobbying in 2024"
+      }
+    },
+    "foreign_investment_and_transparency": {
+      "eb5_visa_program": {
+        "created": "1990",
+        "investment_requirement": "Substantial capital investment in U.S. business creating 10+ full-time jobs",
+        "economic_impact": "$350B and 1.5M+ American jobs created — at no cost to taxpayers (industry claim)",
+        "2014_2015_capital": "$11B in capital investment through Regional Center Program (2% of U.S. FDI)",
+        "2022_reform": "EB-5 Reform and Integrity Act — requires third-party fund administrators, increased transparency, severe penalties for non-compliance",
+        "nar_role": "NAR coalition successfully lobbied for reauthorization and reform of Regional Center program",
+        "real_estate_connection": "Many EB-5 investments target commercial real estate projects for job creation through construction"
+      },
+      "firpta_repeal_lobbying": {
+        "real_estate_roundtable_position": "Full repeal of FIRPTA is 'ultimate policy goal'",
+        "nar_position": "Does NOT support full FIRPTA repeal; supports improved reporting/disclosure requirements",
+        "legislative_effort": "Invest in America Act (H.R. 2210) introduced in 116th Congress with bipartisan Ways and Means Committee cosponsors",
+        "roundtable_engagement": "4 formal submissions to Treasury/Congress (most recent March 2025)"
+      },
+      "corporate_transparency_act": {
+        "original_purpose": "Require beneficial ownership reporting to combat shell company purchases of real estate",
+        "trump_administration_reversal": "March 2025: FinCEN eliminated beneficial ownership reporting requirements for U.S. companies and U.S. persons",
+        "current_scope": "Narrowed to foreign reporting companies only",
+        "real_estate_industry_interest": "Real Estate Roundtable tracks CTA developments closely; shell company real estate purchases remain a transparency concern"
+      },
+      "foreign_buyer_concerns": {
+        "shell_company_purchases": "Some foreign residential real estate purchases made through shell companies or trusts, raising transparency concerns",
+        "congressional_proposals": "Foreign Property Ownership Transparency Act (S.2573, 119th Congress) introduced to address gaps",
+        "trump_executive_order": "January 2026 institutional investor ban also addresses some foreign investment concerns"
+      }
+    },
+    "industry_totals_and_context": {
+      "real_estate_industry_lobbying_2024": {
+        "total": "$91,217,038",
+        "nar_share": "$86,385,941 (94.7% of industry total)"
+      },
+      "real_estate_industry_pac_contributions_2024": {
+        "total_to_federal_candidates": "$13,643,331"
+      },
+      "broader_sector_2024": {
+        "finance_insurance_real_estate_lobbying": "$636,400,000",
+        "increase_over_prior_year": "$33,800,000"
+      },
+      "historical_peak_contributions": {
+        "2012_cycle": "$162,000,000+ (highest total ever for real estate industry campaign contributions)",
+        "2014_midterm": "$114,500,000"
+      },
+      "nar_vs_other_top_spenders": {
+        "nar_2024": "$86.4M (lobbying alone)",
+        "us_chamber_2024": "$76.3M",
+        "pharmaceutical_industry": "Top federal lobbying spender for 20+ consecutive years ($6.1B cumulative 1999-2024)",
+        "note": "NAR surpassed all organizations including US Chamber in 2020, 2022, and 2024"
+      }
+    },
+    "key_findings": [
+      "NAR has spent $850M+ on lobbying since 1998, making it the single largest lobbying organization in America in multiple recent years",
+      "The real estate industry spent $280M+ across three California ballot cycles (2018-2024) to defeat rent control — all three measures failed",
+      "Blackstone contributed $48.6M in political contributions in the 2024 cycle while simultaneously operating the nation's third-largest single-family rental portfolio",
+      "Pre-crisis predatory lenders Ameriquest ($20.5M) and Countrywide ($8.7M) spent $29.2M combined on political influence from 2002-2006 while 16 anti-predatory lending bills died",
+      "The financial industry spent $2B+ fighting Dodd-Frank — $1B+ to defeat it, $1B+ to weaken it after passage",
+      "NAR members' mandatory dues fund $86M+ in annual lobbying without opt-out — 35% of each member's $156 dues classified as nondeductible lobbying expenses",
+      "The California Apartment Association alone has spent $226M defending Costa-Hawkins (anti-rent-control law) since 2018",
+      "Countrywide's 'Friends of Angelo' VIP loan program processed ~17,979 preferential loans to politicians and officials who regulated the mortgage industry",
+      "Institutional investors own 25% of Atlanta's single-family homes but only 1.4% nationally — concentration creates outsized local political power",
+      "The One Big Beautiful Bill Act (2025) made Opportunity Zones permanent and restored 100% bonus depreciation — major lobbying victories for commercial real estate"
+    ],
+    "sources": [
+      "OpenSecrets — National Association of Realtors profile (opensecrets.org/orgs/national-assn-of-realtors)",
+      "OpenSecrets — Federal Lobbying Data 2024 (opensecrets.org/federal-lobbying)",
+      "OpenSecrets — Blackstone Group profile (opensecrets.org/orgs/blackstone-group)",
+      "OpenSecrets — National Association of Home Builders profile (opensecrets.org/orgs/national-assn-of-home-builders)",
+      "OpenSecrets — Real Estate Industry Summary (opensecrets.org/industries/indus?ind=F10)",
+      "OpenSecrets — Mortgage Bankers Association (opensecrets.org/federal-lobbying/clients/summary?id=D000000309)",
+      "Real Estate News — 'NAR spent more on lobbying than any other group in 2024' (Feb 2025)",
+      "Real Estate News — 'How NAR spent its money in 2024' (Dec 2025)",
+      "Ballotpedia — California Propositions 10 (2018), 21 (2020), 33 (2024)",
+      "Housing Is A Human Right — California Apartment Association spending analysis",
+      "LA Public Press — 'Landlords have spent more than $150M to block CA rent control propositions' (Oct 2024)",
+      "GAO Report GAO-24-106643 — Institutional Investment in Single-Family Homes (2024)",
+      "U.S. House Oversight Committee — 'Friends of Angelo: Countrywide's Systematic and Successful Effort to Buy Influence and Block Reform' (March 2009)",
+      "IMF Working Paper — 'A Fistful of Dollars: Lobbying and the Financial Crisis' (Igan et al.)",
+      "Center for Public Integrity — Subprime 25 analysis",
+      "ACRE/PESP — 'National Rental Home Council: How America's Largest Single-Family Landlords Put Profit Over People'",
+      "Invitation Tenants — Political Influence documentation (invitationtenants.com/political-influence)",
+      "White House — 'Stopping Wall Street from Competing with Main Street Homebuyers' Executive Order (Jan 2026)",
+      "Brookings Institution — Opportunity Zones reconciliation bill analysis (2025-2026)",
+      "Commercial Observer — CRE bonus depreciation in Senate megabill (July 2025)",
+      "The Real Estate Roundtable — FIRPTA and Beneficial Ownership policy positions",
+      "OpenSecrets — 'Real estate industry groups spent millions to halt national eviction moratorium' (Aug 2021)",
+      "The Nation — 'How Wall Street Defanged Dodd-Frank'",
+      "Sunlight Foundation — Dodd-Frank lobbying analysis (2011)",
+      "NOTUS — 'Realtors Partied, Spent Big and Lobbied Hard. Then It All Came Crashing Down.'"
+    ]
+  }
+}

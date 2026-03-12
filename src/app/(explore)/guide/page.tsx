@@ -9,13 +9,16 @@ import {
   Gavel,
   Flag,
   BookOpen,
+  Wheat,
+  Receipt,
+  Network,
 } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "The Field Guide to American Corruption — The Ledger",
   description:
-    "A comprehensive, navigable encyclopedia of political money, corporate capture, and systemic corruption in American democracy. 24 dimensions of influence, from dark money to antitrust.",
+    "A comprehensive, navigable encyclopedia of political money, corporate capture, and systemic corruption in American democracy. 30 dimensions of influence, from dark money to antitrust.",
 };
 
 interface Chapter {
@@ -141,6 +144,56 @@ const CHAPTERS: Chapter[] = [
       "Reform landscape",
     ],
   },
+  {
+    number: 8,
+    slug: "industries-that-shape-daily-life",
+    title: "Industries That Shape Daily Life",
+    subtitle:
+      "Telecom giants capture the FCC, real estate lobbies kill rent control, and agribusiness monopolies fix beef prices — the industries that control what you eat, where you live, and what you pay for internet.",
+    icon: Wheat,
+    stat: "$572M",
+    statLabel: "ISP lobbying since 2017",
+    topics: [
+      "Telecom & net neutrality",
+      "Real estate & housing lobbying",
+      "Agriculture & food industry",
+      "Media consolidation",
+    ],
+  },
+  {
+    number: 9,
+    slug: "the-tax-code-and-education",
+    title: "The Tax Code & Education",
+    subtitle:
+      "91 Fortune 500 companies paid zero federal tax while Intuit spent $93 million killing free filing — and billionaire families spent over $1 billion reshaping American schools in their image.",
+    icon: Receipt,
+    stat: "$1.456T",
+    statLabel: "TCJA cost over a decade",
+    topics: [
+      "Corporate tax avoidance",
+      "Carried interest loophole",
+      "IRS defunding",
+      "Student debt & for-profit colleges",
+      "School choice & voucher lobbying",
+    ],
+  },
+  {
+    number: 10,
+    slug: "the-influence-machine",
+    title: "The Influence Machine",
+    subtitle:
+      "From Heritage Foundation\u2019s $134 million budget to Arabella\u2019s $1.51 billion network, the think tanks, dark money conduits, and model-bill factories that manufacture the ideas politicians pretend are their own.",
+    icon: Network,
+    stat: "$1.6B",
+    statLabel: "Largest single political donation ever",
+    topics: [
+      "Conservative & liberal think tanks",
+      "Koch & Arabella dark money networks",
+      "ALEC model legislation",
+      "Federalist Society & judicial pipeline",
+      "Partisan media infrastructure",
+    ],
+  },
 ];
 
 export default function GuidePage() {
@@ -167,9 +220,9 @@ export default function GuidePage() {
           </p>
 
           <div className="mt-8 flex items-center gap-6 text-sm text-white/50">
-            <span>24 dimensions of influence</span>
+            <span>30 dimensions of influence</span>
             <span className="h-1 w-1 rounded-full bg-white/30" />
-            <span>7 chapters</span>
+            <span>10 chapters</span>
             <span className="h-1 w-1 rounded-full bg-white/30" />
             <span>Continuously updated</span>
           </div>
@@ -222,7 +275,7 @@ export default function GuidePage() {
             Table of Contents
           </div>
           <h2 className="mt-4 font-headline text-3xl font-black tracking-tight text-ink lg:text-4xl">
-            Seven Chapters
+            Ten Chapters
           </h2>
           <p className="mt-4 max-w-xl text-lg text-muted">
             Each chapter covers a distinct dimension of how money distorts
