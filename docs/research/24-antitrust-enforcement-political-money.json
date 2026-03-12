@@ -1,0 +1,181 @@
+{
+  "title": "Antitrust Enforcement, Lawsuits, and Political Money",
+  "category": "campaign-finance-research",
+  "number": 24,
+  "sections": {
+    "major_lawsuits": {
+      "google_search": {
+        "filed": "October 2020",
+        "ruling": "August 5, 2024 — illegal monopoly in search",
+        "remedies": "December 2025 — behavioral framework; barred from exclusive distribution contracts; data sharing required",
+        "rejected": "Chrome/Android divestiture rejected — 'only with great caution'",
+        "key_stat": "Google paid $26.3B in 2021 alone to be default search engine",
+        "status": "Google appealing"
+      },
+      "google_ad_tech": {
+        "filed": "January 2023",
+        "ruling": "April 17, 2025 — liable on 2 of 3 counts (publisher ad server + ad exchange)",
+        "remedies_sought": "Forced sale of AdX exchange — would be first forced tech divestiture",
+        "status": "Remedies proceedings ongoing"
+      },
+      "apple": {
+        "filed": "March 2024 by DOJ + 16 states + DC",
+        "allegation": "Unlawful smartphone market monopoly",
+        "status": "Motion to dismiss denied June 2025; proceeding to trial",
+        "epic_games": "Judge ruled Apple 'willfully' violated injunctions; referred for criminal contempt"
+      },
+      "amazon": {
+        "filed": "September 2023 by FTC + 17 states",
+        "allegations": "Anti-discounting algorithms, forced fulfillment, degraded search with ads",
+        "trial": "March 29, 2027",
+        "separate": "$2.5B settlement for Prime dark patterns"
+      },
+      "meta_facebook": {
+        "filed": "December 2020 by FTC + 46 state AGs",
+        "ruling": "November 18, 2025 — FTC LOST; Meta not required to spin off Instagram/WhatsApp",
+        "reason": "Court found TikTok and YouTube now compete directly; market definition 'unduly narrow'"
+      },
+      "microsoft_activision": {
+        "deal": "$68.7B",
+        "ruling": "FTC lost; case dismissed May 2025; deal closed October 2023"
+      },
+      "live_nation_ticketmaster": {
+        "filed": "May 2024 by DOJ + DC + 39 states",
+        "settlement": "March 2026 — fees capped 15%, $280M settlement fund",
+        "pushback": "26 states + DC rejected settlement, pursuing independent litigation"
+      },
+      "kroger_albertsons": {
+        "deal": "$24.6B (largest supermarket merger ever)",
+        "ruling": "December 10, 2024 — blocked by federal judge",
+        "outcome": "Merger terminated; Albertsons sued Kroger"
+      },
+      "unitedhealth_change": {
+        "deal": "$13B (completed October 2022 despite DOJ challenge)",
+        "current": "DOJ criminal + civil investigations (July 2025) into Medicare billing; antitrust complaint to block Amedisys acquisition"
+      }
+    },
+    "corporate_lobbying_against_antitrust": {
+      "big_tech_combined": {
+        "2021": "~$65M",
+        "2022": "~$69M",
+        "2023": "~$68M",
+        "2024": "$61.5M (Meta $24.4M record, Alphabet $14.8M, Microsoft $10.4M, ByteDance $10.4M record)"
+      },
+      "big_pharma": {
+        "2022": "$372M (top spending industry)",
+        "2024": "$293.7M",
+        "streak": "Top federal lobbying spender for 20+ consecutive years"
+      },
+      "us_chamber": {
+        "two_decade_total": "~$1.4B (3x next largest)",
+        "2024": "$76.26M",
+        "stance": "Called FTC 'rogue'; opposed enforcement actions",
+        "members_fines": "111 members violated laws 15,896+ times, paying $156B+ in penalties"
+      },
+      "antitrust_reform_killed": {
+        "bills": ["American Innovation and Choice Online Act", "Open App Markets Act"],
+        "tech_lobbying": "$277M over 2 years (6x more than supporters)",
+        "amazon_alone": "$16M in first 9 months of 2022 (record pace)"
+      }
+    },
+    "ftc_doj_funding": {
+      "ftc": {
+        "fy2020": "$330M",
+        "fy2023": "$430M",
+        "fy2024_request": "$590M (37% increase, 1,690 FTEs requested)",
+        "fy2025": "$428M (actual)",
+        "fy2026_trump": "$385M (10% cut; Bureau of Competition -$23M, -51 FTEs; staff 1,235→1,100)"
+      },
+      "doj_antitrust": {
+        "fy2020": "$166.8M",
+        "fy2025": "~$233M",
+        "fy2026": "$245M minimum but staff 802→733"
+      },
+      "underfunding": {
+        "historical_comparison": "About 1/3 of 20th century levels",
+        "1941_equivalent": "Would require 10x current budgets",
+        "asymmetry": "Combined FTC+DOJ ~$660M vs Big 5 tech profits $400B+ in 2024",
+        "merger_fee_act_2022": "HSR fees up to $2.25M for $5B+ deals; $1.4B additional fees over 2023-27"
+      }
+    },
+    "lina_khan_ftc": {
+      "tenure": "June 2021 — January 31, 2025 (youngest FTC chair at 32)",
+      "mergers_challenged": "38+",
+      "wins": ["Nvidia-Arm ($40B blocked)", "Lockheed-Aerojet blocked", "Kroger-Albertsons ($24.6B blocked)"],
+      "losses": ["Microsoft-Activision ($68.7B)", "Meta-Within", "Illumina-GRAIL (partial)"],
+      "key_actions": ["Click-to-cancel rule", "New merger guidelines (Dec 2023)", "PBM investigation", "PE roll-up inquiry"],
+      "pbm_findings": "Top 3 PBMs process 80% of 6.6B prescriptions; marked up specialty generics by thousands of %; $7.3B excess revenue (2017-2022)",
+      "express_scripts_settlement": "Feb 2026 — expected to save patients up to $7B over 10 years"
+    },
+    "jonathan_kanter_doj": {
+      "tenure": "November 2021 — December 20, 2024",
+      "major_cases": ["Google ad tech", "Apple antitrust", "Live Nation/Ticketmaster", "RealPage algorithmic pricing"],
+      "achievement": "First criminal monopoly conviction in 40+ years",
+      "farewell": "'Plutocracy is its own kind of dictatorship'",
+      "reform": "Hired from government rather than BigLaw to address revolving door"
+    },
+    "healthcare_antitrust": {
+      "hospital_mergers": "1,000+ mergers (2002-2020); FTC challenged only 13; 238 should have been flagged; led to 5%+ price increases",
+      "pbm_concentration": "Top 3 = 80% of prescriptions; top 6 = 90%+",
+      "unitedhealth": "Criminal + civil DOJ investigation; 'Patients Over Profits Act' proposed (Sept 2025)"
+    },
+    "agricultural_antitrust": {
+      "meatpacking": "4 companies control 80% of beef processing",
+      "price_fixing_settlements": {
+        "jbs": "$52.5M (2022)",
+        "tyson": "$55M (2025)",
+        "cargill": "$32.5M (2025)",
+        "tyson_cargill_combined": "$87.5M (largest beef price-fixing settlement ever)"
+      },
+      "seed_chemical_mergers": {
+        "bayer_monsanto": "$66B",
+        "dow_dupont": "Merger then three-way split",
+        "chemchina_syngenta": "$43B",
+        "result": "3 companies control 70% of agrochemicals + 60% of commercial seeds"
+      },
+      "trump_eo_dec_2025": "DOJ/FTC task forces investigating food supply chain anticompetitive behavior"
+    },
+    "private_equity_antitrust": {
+      "ftc_doj_inquiry": "May 2024 — joint inquiry into serial acquisitions across all sectors",
+      "welsh_carson_settlement": "Jan 2025 — landmark PE roll-up case (anesthesiology practices)",
+      "veterinary": "$51.6B PE investment; 30%+ of practices now corporate (up from 8%); 75%+ of specialty care corporate",
+      "funeral_homes": "SCI charges 42% more than independents; owns ~2,000 locations",
+      "realpage_rent_pricing": {
+        "filed": "August 2024 by DOJ",
+        "settlement": "November 2025 — banned real-time competitor data; 3-year monitor",
+        "greystar": "$50M class action + $7M state settlement"
+      }
+    },
+    "revolving_door": {
+      "scale": "60%+ of FTC/DOJ Antitrust staff (2014-2021) went to BigLaw, corporations, or consulting firms",
+      "economists": "17 of 20 most recent deputy AAGs for economic analysis went to corporate consulting firms (85%)",
+      "billing_rates": "Former DOJ official Dennis Carlton charged $1,350/hour for corporate expert witness work"
+    },
+    "state_ag_enforcement": {
+      "venue_act_2023": "State AGs can pursue federal antitrust cases in chosen venues without consolidation",
+      "tech_coalitions": "16+ states in Apple case; 17-18 in Amazon; 39 in Live Nation",
+      "opioid_settlements": "$54B+ total including McKesson/Cardinal/ABC ($21B), J&J ($5B), Purdue/Sacklers ($7.4B)",
+      "nar_settlement": "$418M; eliminated automatic buyer agent commission; final approval Nov 2024",
+      "generic_drug_price_fixing": "$49M+ in settlements (Apotex $39.1M)"
+    },
+    "consumer_harm": {
+      "worker_income_loss": "$1.25T deprived from workers (Philippon estimate)",
+      "median_household_gain": "$5,000 if competition restored",
+      "concentration_increase": "75%+ of US industries; 90% average increase",
+      "public_firms_lost": "~50% fewer publicly traded firms than early 1970s",
+      "nber_2023": "Antitrust enforcement increases economic activity — contradicts Chicago School"
+    },
+    "historical_context": {
+      "chicago_school": "Bork's 1978 'Antitrust Paradox' introduced consumer welfare standard",
+      "reagan_implementation": "'Consumer welfare' in 11 cases (1960-80) → 218 cases (1980-2000)",
+      "new_brandeis": "Khan's 2017 'Amazon's Antitrust Paradox' challenged Chicago School framework"
+    },
+    "2025_2026_developments": {
+      "trump_continuity": "Continued all major tech cases inherited from Biden and Trump 1.0",
+      "budget_cuts": "FTC -10%; DOJ Antitrust staff 802→733",
+      "ftc_commissioners_fired": "Slaughter and Bedoya fired March 18, 2025",
+      "trump_v_slaughter": "SCOTUS case challenging Humphrey's Executor (1935); oral arguments Dec 2025; may affect all independent agencies",
+      "live_nation_settlement": "March 2026 — $280M fund + 15% fee cap; 26 states rejected"
+    }
+  }
+}

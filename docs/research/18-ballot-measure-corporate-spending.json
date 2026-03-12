@@ -1,0 +1,80 @@
+{
+  "title": "Corporate & Special Interest Spending on State Ballot Measures",
+  "category": "campaign-finance-research",
+  "number": 18,
+  "sections": {
+    "annual_totals": {
+      "2016": "$1.01B (162 measures; $500M CA alone)",
+      "2018": "$1.19B (dialysis fights dominated)",
+      "2020": "$1.24B (Prop 22 gig economy)",
+      "2022": "$1.10B (CA sports betting $463M)",
+      "2024": "$1.32B (record; abortion + marijuana)"
+    },
+    "most_expensive_measures": [
+      { "measure": "CA Prop 27 (Online Sports Betting)", "year": 2022, "total": "$407M", "funders": "DraftKings, FanDuel, BetMGM", "result": "Defeated 82.3%" },
+      { "measure": "CA Prop 22 (Gig Workers)", "year": 2020, "total": "$225M", "funders": "Uber $59.5M, DoorDash $52M, Lyft $49M, Instacart $31.6M", "result": "Passed 58.6%" },
+      { "measure": "FL Amendment 3 (Marijuana)", "year": 2024, "total": "$187M", "funders": "Trulieve $144.6M (94% of funding)", "result": "Defeated (56%, needed 60%)" },
+      { "measure": "CA Prop 33 (Rent Control)", "year": 2024, "total": "$175M+", "funders": "CA Apt Assoc $122M vs AHF $47M", "result": "Defeated 62%" },
+      { "measure": "CA Prop 61 (Drug Prices)", "year": 2016, "total": "$131M", "funders": "PhRMA + 27 companies $109M+", "result": "Defeated (despite 57% initial support)" },
+      { "measure": "CA Prop 8 (Dialysis)", "year": 2018, "total": "$130M", "funders": "DaVita $67M, Fresenius $30M", "result": "Defeated 60%" },
+      { "measure": "CA Prop 21 (Rent Control)", "year": 2020, "total": "$124M", "funders": "Real estate $84M vs AHF $41M", "result": "Defeated 60%" },
+      { "measure": "FL Amendment 4 (Abortion)", "year": 2024, "total": "$121M", "funders": "Floridians Protecting Freedom $110M", "result": "Defeated (57%, needed 60%)" },
+      { "measure": "CA Prop 23 (Dialysis)", "year": 2020, "total": "$99M", "funders": "DaVita $60M, Fresenius $26M", "result": "Defeated" },
+      { "measure": "OH Issue 2 (Drug Pricing)", "year": 2017, "total": "$77M", "funders": "PhRMA $59.1M vs AHF $18.3M", "result": "Defeated 79.5%" }
+    ],
+    "industry_spending": {
+      "gig_economy": {
+        "prop_22_total": "$225M (Yes outspent No 10:1)",
+        "upheld": "CA Supreme Court July 2024"
+      },
+      "tobacco": {
+        "success_rate": "1998-2008: defeated 4 of 5 challenged (80%)",
+        "2006_spending": "$100M+ across multiple states"
+      },
+      "oil_gas": {
+        "co_prop_112_2018": "$41M+ to defeat fracking setbacks",
+        "wa_i1631_2018": "$29.7M to defeat carbon fee"
+      },
+      "pharma": {
+        "ca_prop_61_2016": "$109M+ from PhRMA",
+        "oh_issue_2_2017": "$59.1M from PhRMA (crushed 79.5% No)"
+      },
+      "sports_betting": {
+        "ca_props_26_27_2022": "$463M combined (US record); both defeated"
+      },
+      "real_estate": {
+        "three_cycle_total": "$280M+ across Prop 10, 21, 33",
+        "all_three_defeated": true,
+        "prop_34_defund_opponent": "$29.4M to restrict AHF spending"
+      },
+      "dialysis": {
+        "davita_fresenius_combined": "$204M across Prop 8 and Prop 23",
+        "market_share": "75% of CA clinics"
+      }
+    },
+    "dark_money": {
+      "ca_2012_landmark": "$24.5M funneled through Koch-linked chain; $1M record fine",
+      "dark_money_record": "$1.9B in 2024 federal races"
+    },
+    "signature_gathering": {
+      "cost_per_signature_2016": "$6.93",
+      "cost_per_signature_2024": "$14.87 (120% increase)",
+      "combined_costs_2024": "$172.2M from 53 campaigns",
+      "conclusion": "Process effectively closed to groups without significant funding"
+    },
+    "key_patterns": [
+      "Spending escalating: $1.01B (2016) → $1.32B (2024)",
+      "California = 50-65% of all spending",
+      "Corporate money overwhelmingly favors No side",
+      "Status quo bias + spending = measures very hard to pass when opposed",
+      "Single companies can dominate campaigns (Trulieve 94%)",
+      "Signature gathering commercialized: $14.87/sig, $172M total",
+      "Industries weaponizing process: defeat regulation, preempt it, block competitors, defund opponents"
+    ],
+    "academic_findings": {
+      "status_quo_bias": "5-8 point shift against measures (Dyck & Pearson-Merkowitz 2019)",
+      "opposition_cues": "Decrease support 9-24 percentage points",
+      "asymmetry": "Money more effective at defeating than passing measures"
+    }
+  }
+}

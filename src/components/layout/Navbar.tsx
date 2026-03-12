@@ -38,6 +38,7 @@ const NAV_ITEMS = {
     { label: "Industries", href: "/industry", icon: Factory },
     { label: "Network", href: "/network", icon: Network },
     { label: "Stories", href: "/stories", icon: BookOpen },
+    { label: "Guide", href: "/guide", icon: FileText },
     { label: "Search", href: "/search", icon: Search },
   ],
   research: [

@@ -1,0 +1,98 @@
+{
+  "title": "Money in Judicial Elections and Court Capture",
+  "category": "campaign-finance-research",
+  "number": 21,
+  "sections": {
+    "state_supreme_court_spending": {
+      "2015_16": "~$79M",
+      "2019_20": "~$97M (then record)",
+      "2023_24": "$157.3M (35% more than any prior cycle)",
+      "interest_group_share": "54% of all spending in 2023-24 — first time outside groups outspent candidates",
+      "most_expensive_races": [
+        { "race": "2025 Wisconsin (Crawford v. Schimel)", "total": "$100M+ (some estimates $144.5M incl Musk petition payments)" },
+        { "race": "2023 Wisconsin (Protasiewicz v. Kelly)", "total": "$51M (5x prior state record, 3x prior national record)" },
+        { "race": "2023 Pennsylvania (McCaffery v. Carluccio)", "total": "$27M" },
+        { "race": "2004 Illinois Supreme Court", "total": "$15M (held record for ~20 years)" }
+      ],
+      "costliest_states": ["Wisconsin", "Pennsylvania", "North Carolina", "Montana", "Ohio", "Michigan"]
+    },
+    "dark_money_in_judicial_races": {
+      "rslc_judicial_fairness_initiative": "$29M+ cumulative",
+      "fair_courts_america": "$12M+ in 2023-24 ($9M from Richard Uihlein)",
+      "judicial_crisis_network_concord_fund": {
+        "garland_opposition": "$7M",
+        "gorsuch_support": "$10M",
+        "kavanaugh_support": "$10M+ plus $4.5M additional",
+        "barrett_support": "$10M",
+        "2020_21_revenue": "$48.1M (nearly all from 2 anonymous donors)",
+        "payments_to_leo_firms": "$7.7M to CRC Advisors, $500K to BH Group"
+      },
+      "arabella_network": "$1.5B+ collective revenue in 2024 (Sixteen Thirty Fund, New Venture Fund, etc.)",
+      "americans_for_prosperity_koch": "$3.3M+ in 2025 Wisconsin race"
+    },
+    "federalist_society_leonard_leo": {
+      "trump_judges": "86% of Trump circuit/SCOTUS appointees were Federalist Society members",
+      "scotus_members": "6 of 9 justices are members/affiliates",
+      "leo_network_2014_2020": "$600M+ raised",
+      "leo_network_2005_2021": "$460M+ (excluding Marble Freedom Trust)",
+      "key_donors": {
+        "mercer_family": "$6M to Federalist Society since 2013; $100M total to right-wing groups",
+        "charles_koch": "$10M donation coordinated by Leo; $20M from anonymous donor for Scalia Law School",
+        "schwab_charitable": "$250M+ to 85 Fund (Leo-connected); $141M in one year = 95% of 85 Fund revenue"
+      }
+    },
+    "marble_freedom_trust": {
+      "donor": "Barre Seid (Chicago manufacturing magnate, CEO of Tripp Lite)",
+      "amount": "$1.65B (largest known political advocacy donation in US history)",
+      "mechanism": "Transferred 100% ownership of Tripp Lite to 501(c)(4) before Eaton Corporation acquired it for $1.65B",
+      "tax_avoided": "~$400M in capital gains taxes",
+      "chairman": "Leonard Leo",
+      "disbursements_2022_2023": "$216.8M",
+      "key_recipients": {
+        "schwab_charitable": "$153.7M",
+        "concord_fund": "$55.5M (bringing total to $100.9M)",
+        "donors_trust": "$41M",
+        "knights_of_columbus": "$7.6M"
+      },
+      "net_assets_2022": "$1.04B",
+      "seid_prior_giving": "$775M+ (1996-2018)"
+    },
+    "scotus_confirmation_spending": {
+      "garland_blocked_2016": "$7M JCN opposition",
+      "gorsuch_2017": "$10M JCN support; $17M from single donor",
+      "kavanaugh_2018": "$10M+ JCN support; another $17M from single donor",
+      "barrett_2020": "$10M JCN campaign; Concord Fund raised $48.1M that fiscal year",
+      "jackson_2022": "$1M initial Demand Justice ads; $7.5M projected budget (dwarfed by conservative spending)",
+      "concord_fund_downstream_2021": "$9M to One Nation (McConnell), $4.8M to RAGA, $2.2M to SBA List, $1.9M to Heritage Action"
+    },
+    "recusal_conflicts": {
+      "caperton_v_massey_2009": "Blankenship spent $3M electing Justice Benjamin who then voted to overturn $50M verdict against Blankenship's company; SCOTUS ruled Due Process requires recusal in 'extreme facts'",
+      "wisconsin_protasiewicz_2023": "Dem Party contributed $10M (57% of campaign spending); Republicans demanded recusal from redistricting cases; she declined; court struck down GOP maps"
+    },
+    "corporate_funded_races": {
+      "tort_reform_origins": "ATRA founded 1986 by tobacco, insurance, chemical, auto, pharma industries",
+      "chamber_2000": "$10M across 7 states; $4.4M in Ohio alone",
+      "ohio_2024": "Chamber-affiliated $2.3M for GOP ($1M from Uihlein); Bloomberg-funded $2M for Dems",
+      "energy_sector": "$100M+ annual lobbying; Leo groups campaigning to get SCOTUS to block state climate lawsuits",
+      "impact": "After Chamber flipped Ohio court, state upheld new damages caps in 2007 (had struck them down 1999)"
+    },
+    "academic_evidence": {
+      "kang_shepherd_2011": "Every additional dollar from business = increased probability of voting for business litigants",
+      "kang_shepherd_2014": "Doubling TV ads = 8% increase in judges voting against criminal defendants; post-Citizens United: 7 additional anti-defendant votes per 100 cases",
+      "public_perception": "76% of voters believe contributions influence decisions; 46% of JUDGES acknowledge 'at least a little influence'",
+      "ohio_nyt_2006": "Justices voted for contributors 70% of the time",
+      "georgia_2009": "Demonstrated campaign contributions directly affect judicial decision-making (causal, not just correlation)"
+    },
+    "2023_2026_developments": {
+      "wisconsin_2023": "$51M total; Protasiewicz raised $17.44M (6x previous record); 69+ outside groups spent $29M; flipped court liberal 4-3",
+      "wisconsin_2025": "$100M+ total; Crawford defeated Schimel; Musk spent $18.7M through PACs + $3M to WI GOP + $3M in petition checks; maintained liberal majority",
+      "wisconsin_2026": "Already fundraising: Taylor $3.8M, Lazar $438K",
+      "pennsylvania_2023": "$27M total; Yass funneled $16M through Students First PAC",
+      "pennsylvania_2025": "$18.7M on retention elections (record for judicial retention)",
+      "montana_2024": "$12.7M across two races (state records)",
+      "abortion_ads": "30% of TV ad spots mentioned abortion (up from 3% in 2020)",
+      "national_groups_1M_plus": "Jumped from 1 group (2020) to 5 groups (2023-24)",
+      "trend": "Billionaire proxy battles (Musk, Soros, Yass, Uihlein, Pritzker, Bloomberg) have transformed judicial elections"
+    }
+  }
+}

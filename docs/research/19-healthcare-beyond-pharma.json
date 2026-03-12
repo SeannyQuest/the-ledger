@@ -1,0 +1,91 @@
+{
+  "title": "Healthcare Industry Political Spending Beyond Pharmaceuticals",
+  "category": "campaign-finance-research",
+  "number": 19,
+  "sections": {
+    "health_sector_lobbying": {
+      "rank": "#1 lobbying sector in the US",
+      "2020": "$713.6M (JAMA: pharma $308M, providers $287M, insurers $81M)",
+      "2023": "$739M+",
+      "2024": "$744-757M",
+      "2025": "$868M (record — Medicaid cut battles)",
+      "lobbyists": "1,834+ (3+ per member of Congress)"
+    },
+    "insurance_lobbying": {
+      "bcbs_2024": "$27.15M (100 lobbyists on MA issues)",
+      "ahip_2023": "$13.06M (record); cumulative 1998-2019: $181.8M+",
+      "ahip_secret_aca_war": "$86.2M funneled to US Chamber for anti-ACA campaigns",
+      "unitedhealth_2025": "$9.93M (Jan-Sep, on track for record)",
+      "cigna_2024": "$8.25M",
+      "cvs_aetna_2021": "$9.87M"
+    },
+    "hospital_lobbying": {
+      "aha_2024": "$29M (top-5 lobbying org in US)",
+      "aha_2025": "$32M",
+      "hospitals_nursing_homes_2025": "$115M through Q3 (20% increase)",
+      "fah_revolving_door": "19 of 23 lobbyists had government jobs"
+    },
+    "aca_lobbying": {
+      "2009_lobbyists": "4,525 (eight per member of Congress)",
+      "2009_total_estimated": "$1.1B+",
+      "pharma_daily_rate": "$1.2M/day while Congress in session",
+      "ahip_chamber_secret": "$86.2M funneled while publicly supporting ACA",
+      "post_passage_pivot": "Insurers became supporters (individual mandate = new customers)"
+    },
+    "medicare_advantage": {
+      "overpayments_since_2003": "$600B+ estimated",
+      "projected_next_decade": "$1 trillion",
+      "annual_overpayment": "Up to $140B/year",
+      "unitedhealth_2021_inflation": "$8.7B extra (WSJ)",
+      "lobbyists_2024": "220+ deployed",
+      "better_medicare_alliance_ads": "$13.5M+ in 2023 (incl Super Bowl)",
+      "2023_rate_fight": "1% proposed → 3.2% final after lobbying blitz",
+      "doj_2025": "Criminal + civil investigation into UnitedHealth; FCA vs Aetna, Humana, Elevance"
+    },
+    "surprise_billing": {
+      "pe_dark_money": "$100M+ opposing No Surprises Act",
+      "doctor_patient_unity": "$54M dark money ads (TeamHealth/Blackstone + Envision/KKR)",
+      "envision_bankruptcy": "2023 — revenue model gutted by NSA",
+      "idr_costs": "~$5B passed to patients via premiums"
+    },
+    "pbm_lobbying": {
+      "pcma_2022": "$9M",
+      "pcma_2024": "$17.5-18M (doubled in 2 years)",
+      "big_3_market_share": "~80% (CVS Caremark 34%, Express Scripts 25%, OptumRx 21%)",
+      "ftc_lawsuit": "Sept 2024 — sued all three for insulin price inflation",
+      "reform_passed": "Early 2026"
+    },
+    "medicaid_managed_care": {
+      "total_medicaid_2023": "$880B+ (MCOs receive ~52%)",
+      "beneficiaries_in_managed_care": "66M+ (78%)",
+      "centene_political_spending": "$26.9M+ since 2015",
+      "centene_overbilling_settlements": "$1B+ across 13+ states"
+    },
+    "mergers": {
+      "cvs_aetna_2018": "$70B — vertically integrated insurer-PBM-pharmacy",
+      "cigna_express_scripts_2018": "Created Evernorth PBM",
+      "unitedhealth_change_2022": "Won despite DOJ challenge",
+      "anthem_cigna_blocked": "$3.4M lobbying in single quarter",
+      "vertical_integration": "Three companies process ~80% of prescription drug claims"
+    },
+    "revolving_door": {
+      "cms_exit_rate_to_industry": "53%",
+      "insurance_commissioners_to_industry": "38%",
+      "current_commissioners_from_industry": "24 of 50",
+      "consumer_overpayment": "$27B/year from lax revolving-door regulation",
+      "key_examples": [
+        "Marilyn Tavenner: HCA → CMS → AHIP CEO → LifePoint board ($300K/yr)",
+        "Thomas Scully: FAH CEO → CMS → PE firm Welsh Carson",
+        "Billy Tauzin: House E&C Chair → PhRMA president ($2M+/yr)"
+      ]
+    },
+    "2025_2026_developments": {
+      "unitedhealth_ceo_killing": "Dec 4, 2024; industry pledged prior auth reforms",
+      "doj_investigation": "Criminal (May 2025) + civil; expanded to OptumRx",
+      "congressional_hearings": "Jan 2026; MA plans issued 50M prior auths (up 40% since 2020), costing $35B/yr",
+      "medicaid_cuts": "$1T+ over decade; hospital lobby failed despite $115M spending",
+      "pbm_reform": "Passed early 2026; Express Scripts settled with FTC",
+      "unitedhealth_profit_drop": "$2.3B Q3 2025 (down from $6.1B Q3 2024)"
+    }
+  }
+}

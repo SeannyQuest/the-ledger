@@ -1,0 +1,117 @@
+{
+  "title": "Gun Industry and NRA Political Spending",
+  "category": "campaign-finance-research",
+  "number": 23,
+  "sections": {
+    "nra_spending_by_cycle": {
+      "lobbying": {
+        "2017_peak": "$5.1M",
+        "2022": "$2.5M",
+        "2023": "$2.3M",
+        "2024": "$2.04M",
+        "cumulative_all_gun_rights_1998_2024": "$233.7M"
+      },
+      "outside_spending": {
+        "2012": "~$19M",
+        "2014": "~$27M",
+        "2016": "$54.4M (record; some estimates ~$70M incl field ops)",
+        "2018": "~$10M",
+        "2020": "~$29M",
+        "2022": "~$9,600 (effectively zero)",
+        "2024": "$10.1M"
+      },
+      "state_lobbying_decline": "65% drop from $1.3M (2020) to $458K (2023)",
+      "ila_budget": "~$30M/year, 50+ staff"
+    },
+    "top_congressional_recipients": [
+      { "name": "Mitt Romney (R-UT)", "career_total": "$13.6M" },
+      { "name": "Richard Burr (R-NC)", "career_total": "$7.0M" },
+      { "name": "Roy Blunt (R-MO)", "career_total": "$4.6M" },
+      { "name": "Thom Tillis (R-NC)", "career_total": "$4.4-5.6M" },
+      { "name": "Marco Rubio (R-FL)", "career_total": "$3.3M" },
+      { "name": "Joni Ernst (R-IA)", "career_total": "$3.1-3.7M" },
+      { "name": "Mitch McConnell (R-KY)", "career_total": "$1.3M" },
+      { "name": "Marsha Blackburn (R-TN)", "career_total": "$1.3M" }
+    ],
+    "nssf_trade_association": {
+      "lobbying_2024": "$6.97M (surpasses NRA)",
+      "lobbying_2025": "$7.02M",
+      "pac_2024": "$935K contributions",
+      "election_spending_2024": "$1.1M (failed to fill NRA void)",
+      "comparison": "NSSF outspends NRA on lobbying; NRA outspends on elections"
+    },
+    "gun_control_spending": {
+      "everytown": {
+        "bloomberg_total_investment": "$270M+ career",
+        "2018": "~$30M",
+        "2020": "$60M pledged",
+        "2024": "$45M pledged; Victory Fund raised $23.2M"
+      },
+      "giffords": {
+        "2022": "$14M",
+        "2024": "$14.8M"
+      },
+      "brady": { "2024_pac": "$25K (typically less active)" },
+      "sandy_hook_promise": { "2022_lobbying": "$470K" }
+    },
+    "spending_asymmetry_reversal": {
+      "2016": "Gun control $14K vs NRA $54.4M — ratio 3,886:1",
+      "2018": "Gun control outspent NRA for first time by $2.6M margin",
+      "2019": "Bloomberg outspent NRA in Virginia state elections",
+      "2022": "Both sides ~$13M each",
+      "2024": "Gun control $18.3M outside spending (up from $14K in 2016)",
+      "drivers": ["NRA financial crisis", "Bloomberg $270M+", "Post-Parkland mobilization", "Competing gun rights groups fragmenting pro-gun side"]
+    },
+    "nra_financial_crisis": {
+      "revenue_2016": "$367M",
+      "revenue_2022": "$211M (52% drop adjusted)",
+      "member_dues_2018": "$170M",
+      "member_dues_2022": "$83.3M (59% drop, lowest in 16 years)",
+      "lapierre_spending": {
+        "private_jets": "$11M+ billed to NRA",
+        "bahamas_trips": "$500K+ (8 trips over 3 years)",
+        "vendor_contracts": "$135M authorized to Ackerman McQueen"
+      },
+      "legal_consequences": {
+        "ny_ag_lawsuit": "August 2020 — sought dissolution",
+        "bankruptcy_dismissed": "January 2021 — not filed in good faith",
+        "lapierre_verdict": "February 2024 — liable for $5.4M, must pay $4.35M back",
+        "lapierre_ban": "10-year ban from NRA"
+      },
+      "legal_costs": "~1% of spending (2017) → ~20% (2021-2022)",
+      "members_lost": "1M+"
+    },
+    "russian_money_investigation": {
+      "maria_butina": "Pleaded guilty Dec 2018 to conspiracy as unregistered foreign agent",
+      "senate_report": "'The NRA and Russia: How a Tax-Exempt Organization Became a Foreign Asset' (Sept 2019)",
+      "key_finding": "NRA acted as 'foreign asset' for Russia leading up to 2016",
+      "torshin": "Russian central bank official, NRA lifetime member",
+      "scale": "Documented facilitation of access/influence; no large-scale laundering proven"
+    },
+    "post_shooting_patterns": {
+      "stanford_2026_study": {
+        "pro_gun_pac_increase": "31% after fatal school shooting in competitive districts",
+        "gun_safety_pac_increase": "20% (only emerged post-2018)",
+        "finding": "Both sides now intervene at same scale, making outrage harder to translate to change"
+      },
+      "newtown_2012": "Manchin-Toomey failed 54-46 (needed 60)",
+      "parkland_2018": "Gun control outspent NRA first time; FL raised purchase age to 21",
+      "uvalde_2022": "Bipartisan Safer Communities Act — first federal gun law in 30 years; 15 GOP senators defied NRA",
+      "paradox": "Year after Uvalde: 56% of 93 new state gun laws EXPANDED firearm access"
+    },
+    "state_ballot_measures": {
+      "wa_i1639_2018": "$5.55M supporters vs gun lobby; passed 59.3%",
+      "nv_question1_2016": "NRA spent $6.6M opposing; passed 50.45%",
+      "or_measure114_2022": "$3.1M supporters vs $188K opposition; passed 50.7%",
+      "success_rate": "Background check measures: 86% success rate in statewide referenda"
+    },
+    "2024_election": {
+      "nra_endorsed_trump": "May 2024 in Dallas",
+      "nra_trump_spending": "$184K in outside spending for Trump",
+      "nra_tester_ad_buy": "$2M TV ads against Sen. Jon Tester (MT)",
+      "total_nra_2024": "~$10M (down from $29M 2020, $54M 2016)",
+      "gun_control_total_2024": "$18.3M outside spending",
+      "ballot_measure_wins": "Gun safety prevailed in NV, WA, CA"
+    }
+  }
+}

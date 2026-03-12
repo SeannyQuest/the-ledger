@@ -1,0 +1,90 @@
+{
+  "title": "Gerrymandering, Redistricting, and Political Money",
+  "category": "campaign-finance-research",
+  "number": 17,
+  "sections": {
+    "redistricting_spending_2020": {
+      "ndrc_pac": "$5.8M (2019-2020)",
+      "nrrt_goal": "$35M (no donor disclosure — organized as trust)",
+      "forward_majority": "$100M pledged across dozen states",
+      "state_legislative_candidates": "$800M collectively (2019-2020)",
+      "gop_controlled_seats": 187,
+      "dem_controlled_seats": 75
+    },
+    "redmap": {
+      "total_raised": "$30M (2010)",
+      "redmap_specific": "~$20M",
+      "races_targeted": "107 in 16 states",
+      "top_donors": ["Walmart", "Pfizer", "Devon Energy", "AT&T", "Altria", "Reynolds American", "Koch affiliates"],
+      "hofeller_payment": "$166K from State Government Leadership Foundation",
+      "outcomes": {
+        "chambers_won": 21,
+        "state_seats_won": "680+",
+        "house_districts_controlled": "210 vs 44 Democratic",
+        "2012_result": "Retained House by 33 seats despite 1M+ fewer votes"
+      }
+    },
+    "ndrc": {
+      "founded": "January 2017 by Eric Holder",
+      "raised_2017": "$10.8M (first 6 months)",
+      "raised_2018": "$35M",
+      "strategy": ["Down-ballot investment", "Lawsuits against unfair maps", "Commission ballot measures"],
+      "key_investments": {
+        "north_carolina": "$494K",
+        "wisconsin_supreme_court": "$350K",
+        "texas": "$325K",
+        "virginia": "$1.2M"
+      },
+      "result": "NYT called post-2020 maps 'the fairest in 40 years'"
+    },
+    "dark_money": {
+      "sixteen_thirty_fund": {
+        "wyss_donations": "$245M since 2016",
+        "michigan_vnp": "$6M (of $16.4M total)",
+        "ballot_measures_total": "$130M+ across 25 states",
+        "ohio_2024": "$6M (85% from out of state)"
+      },
+      "conservative": {
+        "protect_my_vote_mi": "$3.3M (90%+ from Michigan Freedom Network, DeVos $500K)",
+        "sglf": "Funded map-drawing without disclosure"
+      }
+    },
+    "litigation_costs": {
+      "post_2020_scope": "30 states, 100+ cases, 38+ pending Section 2 VRA cases",
+      "north_carolina_taxpayer": "$5.6-7M+",
+      "attorney_rates": "$300-$765/hour",
+      "key_cases": {
+        "rucho_v_common_cause_2019": "Partisan gerrymandering non-justiciable in federal courts",
+        "allen_v_milligan_2023": "Upheld Section 2 VRA — ordered 2nd majority-Black AL district",
+        "louisiana_v_callais": "Pending — could gut Section 2, unlock 19+ GOP districts"
+      }
+    },
+    "independent_commissions": {
+      "citizen_commissions": ["AZ", "CA", "CO", "ID", "MI", "MT", "WA"],
+      "total_with_commissions": 21,
+      "michigan_2018_cost": "$16.4M pro / $3.7M anti",
+      "ohio_2024_cost": "$37M pro-commission",
+      "effectiveness": "42% of competitive district decline from gerrymandering"
+    },
+    "technology": {
+      "precision": "Census-block level manipulation",
+      "tools": ["Maptitude for Redistricting", "Esri Redistricting", "Dave's Redistricting App", "PlanScore"],
+      "hofeller": "Pioneer of computer-aided redistricting; 70K+ files published posthumously; proved racial intent in NC maps"
+    },
+    "2024_2026_developments": {
+      "texas_2025": "Trump-urged redraw; 5 Dem seats targeted; SCOTUS stayed unconstitutional ruling 6-3",
+      "california_2025": "Bypassed commission; Prop 50: $215M total, Newsom $120M; voters approved",
+      "missouri_2025": "Special session new maps; targeting Cleaver seat",
+      "florida_2026": "DeSantis special session April 21; up to 5 seats",
+      "virginia_2026": "Dem amendment; referendum April 21; 3-4 Dem seats",
+      "louisiana_v_callais": "If SCOTUS guts Section 2: 19+ additional GOP districts"
+    },
+    "key_dollar_figures": {
+      "redmap_2010": "$30M",
+      "ndrc_2018": "$35M",
+      "california_prop_50": "$215M+",
+      "wisconsin_supreme_court": "$50M+",
+      "state_legislative_2020": "$800M"
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "title": "Labor Union Political Spending in American Politics",
+  "category": "campaign-finance-research",
+  "number": 16,
+  "sections": {
+    "total_spending": {
+      "big_four_combined_2022": "$708.8M (NEA, AFT, AFSCME, SEIU)",
+      "dues_political_spending": "$406.3M from membership dues",
+      "pac_federal_spending": "$157.4M through PACs",
+      "labor_pac_total_2022": "$54.7M to federal candidates",
+      "business_vs_labor_ratio": "16:1 total, 7:1 PAC"
+    },
+    "top_spenders_2024": {
+      "SEIU": { "contributions": "$35.4M", "lobbying": "$940K", "outside": "$12.6M", "pac_raised": "$74M", "pledged_presidential": "$200M" },
+      "NEA": { "contributions": "$22.7M", "lobbying": "$2.78M", "outside": "$1.13M", "advocacy_fund": "$27M" },
+      "IBEW": { "contributions": "$20.8M", "lobbying": "$544K", "outside": "$461K" },
+      "AFT": { "contributions": "$16.5M", "lobbying": "$1.22M", "outside": "$995K" },
+      "UAW": { "contributions": "$6.2M", "lobbying": "$672K", "outside": "$451K", "pac_raised": "$15.3M" },
+      "Teamsters": { "contributions": "$5.25M", "lobbying": "$2.1M", "dem_split": "91.22%" },
+      "AFL_CIO": { "contributions": "$2.88M", "lobbying": "$5.23M", "outside": "$12.2M" }
+    },
+    "party_split": {
+      "overall": "90-95%+ to Democrats",
+      "government_unions_2022": "95.7% to Democrats",
+      "teachers_unions": "94%+ to Democrats since 1990",
+      "firefighters_iaff": "~30% to Republicans (most bipartisan)",
+      "pac_vs_dues": "60% from dues, 40% from PAC contributions"
+    },
+    "citizens_united_impact": {
+      "outside_spending_growth": "$144M (2008) → $4.2B+ (2024) — 28x increase",
+      "major_union_super_pacs": ["NEA Advocacy Fund", "SEIU Political Education and Action Fund", "UAW Education Fund"],
+      "asymmetric_effect": "Corporate sector gained disproportionately more",
+      "union_opposition": "AFL-CIO, CWA oppose Citizens United despite benefiting"
+    },
+    "public_sector_unions": {
+      "teachers": {
+        "school_board_win_rate": "60-71%",
+        "endorsement_boost": "6-8 percentage points",
+        "donations_growth": "$4.3M (2004) → $32M+ (2016)"
+      },
+      "police": {
+        "spending_since_2012": "$30M+ CA, $8M NY, $3M TX",
+        "da_race_influence": "Significant — law enforcement super PACs heavy in DA races"
+      },
+      "firefighters": {
+        "firepac_lifetime": "$12.5M+ to federal candidates",
+        "bipartisan_split": "~30% to Republicans"
+      }
+    },
+    "right_to_work": {
+      "janus_ruling": "June 27, 2018 — mandatory agency fees violate 1st Amendment",
+      "ny_revenue_loss": "~$100M/year in agency fees",
+      "afscme_member_loss": "200,000+ (2017-2022)",
+      "rtw_states": 26,
+      "michigan_repeal": "February 2024 — first reversal in ~60 years",
+      "wage_gap": "RTW workers earn 3.2% less (~$1,670/year)"
+    },
+    "2024_election": {
+      "harris_union_donations": "$54.5M direct",
+      "trump_union_donations": "$211K direct",
+      "teamsters_non_endorsement": "First since 1996; internal poll: Trump 58%, Harris 31%",
+      "teamsters_rnc_speech": "Sean O'Brien — unprecedented for major union leader",
+      "biden_picket_line": "First sitting president (Sept 26, 2023)"
+    },
+    "academic_findings": {
+      "pac_effectiveness": "Limited direct policy impact — negligible vs party control",
+      "endorsement_effectiveness": "6-8 point boost, turnout increase — more effective than money",
+      "local_elections": "Where union money goes furthest — 70% school board win rate",
+      "transparency_asymmetry": "Unions disclose; corporations often don't post-Citizens United"
+    }
+  }
+}
