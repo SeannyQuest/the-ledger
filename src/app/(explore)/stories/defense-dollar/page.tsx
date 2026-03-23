@@ -5,7 +5,7 @@ import type { ScrollytellStep } from "@/components/stories/ScrollytellSection";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "The Defense Dollar — The Ledger",
+  title: "The Defense Dollar | Daonra",
   description:
     "Trace $1 of lobbying spend through the iron triangle. Top defense contractors invested $1.1B in lobbying and received $2.02 trillion in contracts — an 1,800:1 ROI.",
 };
@@ -107,7 +107,7 @@ export default function DefenseDollarStory() {
             <span className="h-1 w-1 rounded-full bg-white/30" />
             <span>11 min read</span>
             <span className="h-1 w-1 rounded-full bg-white/30" />
-            <span>The Ledger Investigations</span>
+            <span>Daonra Investigations</span>
           </div>
         </div>
 
@@ -131,7 +131,7 @@ export default function DefenseDollarStory() {
             The iron triangle is not a conspiracy theory. It is a term from political science
             textbooks, describing the mutually reinforcing relationship between Congress, federal
             agencies, and the industries they regulate. Nowhere is this triangle more visible —
-            or more profitable — than in defense. The Ledger followed a single dollar from a
+            or more profitable — than in defense. Daonra followed a single dollar from a
             contractor&apos;s lobbying budget through the entire system to measure what comes
             back. The answer: $1,800.
           </p>
@@ -170,7 +170,7 @@ export default function DefenseDollarStory() {
               in government contracts. That&apos;s an 180,000% return.&rdquo;
             </p>
             <cite className="mt-6 block font-mono text-sm font-bold uppercase tracking-widest text-muted">
-              The Ledger Analysis, 2001-2021 Data
+              Daonra Analysis, 2001-2021 Data
             </cite>
           </blockquote>
         </div>

@@ -19,7 +19,7 @@ import type { ScrollytellStep } from "@/components/stories/ScrollytellSection";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Corruption & Reform — The Ledger",
+  title: "Corruption & Reform | Daonra",
   description:
     "Chapter 7 of The Field Guide to American Corruption. State-level bribery, foreign influence operations, and the reform movements fighting to reclaim democracy — from NYC's matching funds to overturning Citizens United.",
 };
@@ -133,7 +133,7 @@ export default function CorruptionAndReformPage() {
             <span className="h-1 w-1 rounded-full bg-white/30" />
             <span>22 min read</span>
             <span className="h-1 w-1 rounded-full bg-white/30" />
-            <span>The Ledger Investigations</span>
+            <span>Daonra Investigations</span>
           </div>
         </div>
 
@@ -917,14 +917,14 @@ export default function CorruptionAndReformPage() {
             The corruption described in this chapter is bipartisan and systemic.
             But so is the resistance. From New York City&apos;s 8:1 small-donor
             matching to state-level disclosure laws, reformers are proving that
-            alternatives exist. The Ledger&apos;s interactive tools let you
+            alternatives exist. Daonra&apos;s interactive tools let you
             trace the connections yourself — follow the money flows, calculate
             the return on lobbying investments, and track the trades your
             representatives make while writing the laws that govern your life.
           </p>
           <p className="mx-auto mt-4 max-w-xl text-base text-white/40">
             The system survives on complexity and opacity. Accountability begins
-            when the ledger is open.
+            when you start looking.
           </p>
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link

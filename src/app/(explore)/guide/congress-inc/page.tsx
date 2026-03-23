@@ -17,7 +17,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title:
-    "Congress Inc. — Chapter 4 | The Field Guide to American Corruption — The Ledger",
+    "Congress Inc. | Chapter 4 | The Field Guide to American Corruption | Daonra",
   description:
     "Members of Congress trade stocks on insider information, leave office to become lobbyists, and operate in a system where organized labor is outspent 16 to 1. Chapter 4 of The Field Guide to American Corruption.",
 };

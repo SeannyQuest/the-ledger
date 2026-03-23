@@ -13,7 +13,7 @@ import {
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Investigations — The Ledger",
+  title: "Investigations | Daonra",
   description:
     "Curated investigations tracing the money between political donations, lobbying, and government contracts.",
 };

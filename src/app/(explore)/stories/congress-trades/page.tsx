@@ -5,7 +5,7 @@ import type { ScrollytellStep } from "@/components/stories/ScrollytellSection";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Congress Trades on Insider Info — The Ledger",
+  title: "Congress Trades on Insider Info | Daonra",
   description:
     "95% of Congress owns stocks, and their leaders outperform the market by up to 47% per year. An investigation into congressional trading and the toothless STOCK Act.",
 };
@@ -107,7 +107,7 @@ export default function CongressTradesStory() {
             <span className="h-1 w-1 rounded-full bg-white/30" />
             <span>14 min read</span>
             <span className="h-1 w-1 rounded-full bg-white/30" />
-            <span>The Ledger Investigations</span>
+            <span>Daonra Investigations</span>
           </div>
         </div>
 
@@ -136,7 +136,7 @@ export default function CongressTradesStory() {
           </p>
 
           <p className="mt-8 text-lg leading-relaxed text-ink/70">
-            The Ledger analyzed every financial disclosure filed by sitting members of Congress
+            Daonra analyzed every financial disclosure filed by sitting members of Congress
             from 2020 through 2024. We cross-referenced trade dates with committee hearings,
             classified briefings, and legislative timelines. What we found is a pattern of
             perfectly timed trades, negligible penalties, and a regulatory framework designed
@@ -168,7 +168,7 @@ export default function CongressTradesStory() {
               with information the public won&apos;t see for weeks.&rdquo;
             </p>
             <cite className="mt-6 block font-mono text-sm font-bold uppercase tracking-widest text-muted">
-              The Ledger Analysis, 2020-2024 Data
+              Daonra Analysis, 2020-2024 Data
             </cite>
           </blockquote>
         </div>

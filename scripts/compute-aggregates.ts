@@ -225,7 +225,7 @@ async function updateEntityTotals() {
 }
 
 async function main() {
-  console.log("=== The Ledger — Aggregate Computation ===");
+  console.log("=== Daonra | Aggregate Computation ===");
   await computeAggregates();
   console.log("\n=== Complete ===");
 }

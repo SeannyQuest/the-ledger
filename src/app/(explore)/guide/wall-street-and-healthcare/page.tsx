@@ -19,7 +19,7 @@ import type { ScrollytellStep } from "@/components/stories/ScrollytellSection";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Wall Street & Healthcare — The Ledger",
+  title: "Wall Street & Healthcare | Daonra",
   description:
     "From crypto Super PACs to Medicare Advantage fraud, two industries that capture regulators, gut consumer protections, and privatize public systems. Chapter 3 of The Field Guide to American Corruption.",
 };
@@ -167,7 +167,7 @@ export default function WallStreetAndHealthcarePage() {
             <span className="h-1 w-1 rounded-full bg-white/30" />
             <span>22 min read</span>
             <span className="h-1 w-1 rounded-full bg-white/30" />
-            <span>The Ledger &middot; Field Guide</span>
+            <span>Daonra &middot; Field Guide</span>
           </div>
         </div>
 
@@ -199,7 +199,7 @@ export default function WallStreetAndHealthcarePage() {
           </p>
 
           <p className="mt-8 text-lg leading-relaxed text-ink/70">
-            The Ledger examined twenty years of lobbying disclosures, campaign finance records,
+            Daonra examined twenty years of lobbying disclosures, campaign finance records,
             revolving-door employment data, and regulatory enforcement actions across both
             sectors. We traced money from corporate treasuries through trade associations and
             Super PACs into the campaign accounts of the committee members who write the rules.
@@ -369,7 +369,7 @@ export default function WallStreetAndHealthcarePage() {
               you can gut its implementation.&rdquo;
             </p>
             <cite className="mt-6 block font-mono text-sm font-bold uppercase tracking-widest text-muted">
-              The Ledger Analysis, Senate Lobbying Disclosures 2009-2013
+              Daonra Analysis, Senate Lobbying Disclosures 2009-2013
             </cite>
           </blockquote>
         </div>

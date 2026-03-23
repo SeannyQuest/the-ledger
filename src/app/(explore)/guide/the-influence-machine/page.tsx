@@ -21,7 +21,7 @@ import type { ScrollytellStep } from "@/components/stories/ScrollytellSection";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "The Influence Machine — The Ledger",
+  title: "The Influence Machine | Daonra",
   description:
     "Chapter 10 of The Field Guide to American Corruption. Think tanks, dark money networks, model legislation factories, judicial pipelines, and partisan media infrastructure — how $1 billion+ per year in ideological spending shapes American law without a single vote.",
 };
@@ -147,7 +147,7 @@ export default function TheInfluenceMachinePage() {
             <span className="h-1 w-1 rounded-full bg-white/30" />
             <span>45 min read</span>
             <span className="h-1 w-1 rounded-full bg-white/30" />
-            <span>The Ledger Investigations</span>
+            <span>Daonra Investigations</span>
           </div>
         </div>
 

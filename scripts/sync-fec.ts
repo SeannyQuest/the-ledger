@@ -2,7 +2,7 @@
  * FEC Data Sync Script
  *
  * Syncs candidate, committee, contribution, and disbursement data from the
- * OpenFEC API into the Ledger database.
+ * OpenFEC API into Daonra database.
  *
  * Usage:
  *   npx tsx --tsconfig tsconfig.json scripts/sync-fec.ts

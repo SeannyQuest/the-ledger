@@ -48,7 +48,8 @@ interface LDAFiling {
   filing_year: number;
   filing_period: string;
   filing_period_display: string;
-  filing_date: string;
+  filing_date: string | null;
+  dt_posted: string;
   registrant: {
     id: number;
     name: string;
@@ -84,136 +85,144 @@ async function syncFilings(year: number = new Date().getFullYear()) {
     },
   });
 
-  let page = 1;
   let totalProcessed = 0;
   let totalCreated = 0;
   let totalUpdated = 0;
-  let hasNext = true;
 
   console.log(`\n=== Syncing LDA Filings for ${year} ===`);
 
+  // The Senate LDA API requires specific quarter filing types: Q1, Q2, Q3, Q4
+  const quarters = ["Q1", "Q2", "Q3", "Q4"];
+
   try {
-    while (hasNext) {
-      const url = `${BASE_URL}/filings/?filing_year=${year}&filing_type=Q&page=${page}&page_size=25`;
-      console.log(`  Fetching page ${page}...`);
+    for (const quarter of quarters) {
+      let page = 1;
+      let hasNext = true;
 
-      const res = await fetchWithRetry(url);
-      const data = await res.json();
+      console.log(`\n--- Quarter: ${quarter} ---`);
 
-      const results: LDAFiling[] = data.results ?? [];
-      hasNext = !!data.next;
+      while (hasNext) {
+        const url = `${BASE_URL}/filings/?filing_year=${year}&filing_type=${quarter}&page=${page}&page_size=25`;
+        console.log(`  Fetching page ${page}...`);
 
-      for (const filing of results) {
-        try {
-          // Find or create registrant entity (lobbying firm)
-          const registrantEntity = await findOrCreateEntity(
-            filing.registrant.name,
-            "LOBBYING_FIRM",
-            `lda_registrant_${filing.registrant.id}`
-          );
+        const res = await fetchWithRetry(url);
+        const data = await res.json();
 
-          // Find or create client entity (corporation, union, etc.)
-          const clientEntity = await findOrCreateEntity(
-            filing.client.name,
-            "CORPORATION",
-            `lda_client_${filing.client.id}`
-          );
+        const results: LDAFiling[] = data.results ?? [];
+        hasNext = !!data.next;
 
-          // Parse amount
-          const amount = parseFloat(filing.income ?? filing.expenses ?? "0");
+        for (const filing of results) {
+          try {
+            // Find or create registrant entity (lobbying firm)
+            const registrantEntity = await findOrCreateEntity(
+              filing.registrant.name,
+              "LOBBYING_FIRM",
+              `lda_registrant_${filing.registrant.id}`
+            );
 
-          // Upsert filing
-          const existing = await prisma.lobbyingFiling.findUnique({
-            where: { filingId: filing.filing_uuid },
-          });
+            // Find or create client entity (corporation, union, etc.)
+            const clientEntity = await findOrCreateEntity(
+              filing.client.name,
+              "CORPORATION",
+              `lda_client_${filing.client.id}`
+            );
 
-          if (existing) {
-            await prisma.lobbyingFiling.update({
+            // Parse amount
+            const amount = parseFloat(filing.income ?? filing.expenses ?? "0");
+
+            // Upsert filing
+            const existing = await prisma.lobbyingFiling.findUnique({
               where: { filingId: filing.filing_uuid },
-              data: {
-                amount,
-                lobbyists: filing.lobbying_activities.flatMap((a) =>
-                  a.lobbyists.map((l) => ({
-                    name: `${l.lobbyist.first_name} ${l.lobbyist.last_name}`,
-                    coveredPosition: l.covered_position,
-                  }))
-                ),
-                issues: filing.lobbying_activities.map((a) => ({
-                  code: a.general_issue_code,
-                  display: a.general_issue_code_display,
-                  description: a.description,
-                })),
-              },
             });
-            totalUpdated++;
-          } else {
-            await prisma.lobbyingFiling.create({
-              data: {
-                filingId: filing.filing_uuid,
-                filingType: filing.filing_type,
-                registrantEntityId: registrantEntity.id,
-                clientEntityId: clientEntity.id,
-                amount,
-                filingDate: new Date(filing.filing_date),
-                filingYear: filing.filing_year,
-                filingPeriod: filing.filing_period,
-                lobbyists: filing.lobbying_activities.flatMap((a) =>
-                  a.lobbyists.map((l) => ({
-                    name: `${l.lobbyist.first_name} ${l.lobbyist.last_name}`,
-                    coveredPosition: l.covered_position,
-                  }))
-                ),
-                issues: filing.lobbying_activities.map((a) => ({
-                  code: a.general_issue_code,
-                  display: a.general_issue_code_display,
-                  description: a.description,
-                })),
-              },
-            });
-            totalCreated++;
-          }
 
-          // Create money transaction (client pays lobbying firm)
-          if (amount > 0) {
-            await prisma.moneyTransaction.upsert({
-              where: {
-                dataSource_sourceTransactionId: {
+            if (existing) {
+              await prisma.lobbyingFiling.update({
+                where: { filingId: filing.filing_uuid },
+                data: {
+                  amount,
+                  lobbyists: filing.lobbying_activities.flatMap((a) =>
+                    a.lobbyists.map((l) => ({
+                      name: `${l.lobbyist.first_name} ${l.lobbyist.last_name}`,
+                      coveredPosition: l.covered_position,
+                    }))
+                  ),
+                  issues: filing.lobbying_activities.map((a) => ({
+                    code: a.general_issue_code,
+                    display: a.general_issue_code_display,
+                    description: a.description,
+                  })),
+                },
+              });
+              totalUpdated++;
+            } else {
+              await prisma.lobbyingFiling.create({
+                data: {
+                  filingId: filing.filing_uuid,
+                  filingType: filing.filing_type,
+                  registrantEntityId: registrantEntity.id,
+                  clientEntityId: clientEntity.id,
+                  amount,
+                  filingDate: new Date(filing.dt_posted || filing.filing_date || new Date().toISOString()),
+                  filingYear: filing.filing_year,
+                  filingPeriod: filing.filing_period,
+                  lobbyists: filing.lobbying_activities.flatMap((a) =>
+                    a.lobbyists.map((l) => ({
+                      name: `${l.lobbyist.first_name} ${l.lobbyist.last_name}`,
+                      coveredPosition: l.covered_position,
+                    }))
+                  ),
+                  issues: filing.lobbying_activities.map((a) => ({
+                    code: a.general_issue_code,
+                    display: a.general_issue_code_display,
+                    description: a.description,
+                  })),
+                },
+              });
+              totalCreated++;
+            }
+
+            // Create money transaction (client pays lobbying firm)
+            if (amount > 0) {
+              await prisma.moneyTransaction.upsert({
+                where: {
+                  dataSource_sourceTransactionId: {
+                    dataSource: "SENATE_LDA",
+                    sourceTransactionId: filing.filing_uuid,
+                  },
+                },
+                create: {
+                  sourceEntityId: clientEntity.id,
+                  targetEntityId: registrantEntity.id,
+                  transactionType: "LOBBYING_PAYMENT",
+                  direction: "OUTFLOW",
+                  amount,
+                  transactionDate: new Date(filing.dt_posted || filing.filing_date || new Date().toISOString()),
                   dataSource: "SENATE_LDA",
                   sourceTransactionId: filing.filing_uuid,
+                  sourceName: filing.client.name,
+                  targetName: filing.registrant.name,
                 },
-              },
-              create: {
-                sourceEntityId: clientEntity.id,
-                targetEntityId: registrantEntity.id,
-                transactionType: "LOBBYING_PAYMENT",
-                direction: "OUTFLOW",
-                amount,
-                transactionDate: new Date(filing.filing_date),
-                dataSource: "SENATE_LDA",
-                sourceTransactionId: filing.filing_uuid,
-                sourceName: filing.client.name,
-                targetName: filing.registrant.name,
-              },
-              update: {
-                amount,
-              },
-            });
+                update: {
+                  amount,
+                },
+              });
+            }
+
+            totalProcessed++;
+          } catch (err) {
+            console.error(`  Error processing filing ${filing.filing_uuid}:`, err);
           }
-
-          totalProcessed++;
-        } catch (err) {
-          console.error(`  Error processing filing ${filing.filing_uuid}:`, err);
         }
-      }
 
-      console.log(`  Page ${page}: ${results.length} filings (${totalProcessed} total)`);
-      page++;
-      await sleep(DELAY_MS);
+        console.log(`  Page ${page}: ${results.length} filings (${totalProcessed} total)`);
+        page++;
+        await sleep(DELAY_MS);
 
-      // Safety limit for DEMO purposes
-      if (page > 20) {
-        console.log("  Reached page limit (20 pages), stopping.");
-        break;
+        // Safety limit per quarter for DEMO purposes
+        if (page > 20) {
+          console.log("  Reached page limit (20 pages), stopping this quarter.");
+          break;
+        }
       }
     }
 
@@ -301,7 +310,7 @@ async function main() {
     ? parseInt(args.find((a) => /^\d{4}$/.test(a))!)
     : new Date().getFullYear();
 
-  console.log("=== The Ledger — Senate LDA Lobbying Sync ===");
+  console.log("=== Daonra | Senate LDA Lobbying Sync ===");
   console.log(`Target year: ${year}`);
 
   await syncFilings(year);

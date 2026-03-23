@@ -16,7 +16,7 @@ import {
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "The Field Guide to American Corruption — The Ledger",
+  title: "The Field Guide to American Corruption | Daonra",
   description:
     "A comprehensive, navigable encyclopedia of political money, corporate capture, and systemic corruption in American democracy. 30 dimensions of influence, from dark money to antitrust.",
 };
@@ -203,7 +203,7 @@ export default function GuidePage() {
       <header className="relative border-b-4 border-ink bg-ink text-white">
         <div className="mx-auto max-w-4xl px-4 py-24 lg:px-8 lg:py-32">
           <div className="font-mono text-xs font-bold uppercase tracking-[0.3em] text-accent-light">
-            The Ledger &middot; Reference
+            Daonra &middot; Reference
           </div>
 
           <h1 className="mt-6 font-headline text-5xl font-black leading-[0.95] tracking-tight lg:text-7xl xl:text-8xl">
@@ -230,7 +230,7 @@ export default function GuidePage() {
           <p className="mt-10 max-w-xl text-base leading-relaxed text-white/50">
             Every number cited in this guide is sourced from federal databases,
             court filings, Senate disclosures, and peer-reviewed research. This
-            is not opinion. This is the ledger.
+            is not opinion. This is Daonra.
           </p>
         </div>
 

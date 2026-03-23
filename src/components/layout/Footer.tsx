@@ -8,7 +8,7 @@ export function Footer() {
           {/* Brand */}
           <div>
             <span className="font-headline text-xl font-black tracking-tight text-ink">
-              THE LEDGER
+              DAONRA
             </span>
             <p className="mt-2 text-sm leading-relaxed text-muted">
               Tracking the flow of money in American politics.
@@ -55,7 +55,7 @@ export function Footer() {
         <hr className="thin" />
 
         <div className="flex items-center justify-between text-xs text-muted">
-          <span>&copy; {new Date().getFullYear()} The Ledger. All data from public sources.</span>
+          <span>&copy; {new Date().getFullYear()} Daonra. All data from public sources.</span>
           <span className="font-mono">v0.1.0</span>
         </div>
       </div>

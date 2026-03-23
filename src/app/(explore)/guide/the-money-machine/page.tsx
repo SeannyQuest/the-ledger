@@ -15,7 +15,7 @@ import type { ScrollytellStep } from "@/components/stories/ScrollytellSection";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "The Money Machine — The Ledger",
+  title: "The Money Machine | Daonra",
   description:
     "Chapter 1 of The Field Guide to American Corruption. How $5.08 billion in lobbying, $4.3 billion in dark money, and a hollowed-out campaign finance system concentrate power in the donor class.",
 };
@@ -126,7 +126,7 @@ export default function TheMoneyMachinePage() {
             <span className="h-1 w-1 rounded-full bg-white/30" />
             <span>18 min read</span>
             <span className="h-1 w-1 rounded-full bg-white/30" />
-            <span>The Ledger Investigations</span>
+            <span>Daonra Investigations</span>
           </div>
         </div>
 

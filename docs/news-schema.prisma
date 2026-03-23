@@ -1,0 +1,230 @@
+// =============================================================================
+// Daonra | News Aggregation Schema
+// =============================================================================
+// Add these models to the existing Prisma schema for news aggregation.
+// Last updated: 2026-03-22
+
+// -----------------------------------------------------------------------------
+// Enums
+// -----------------------------------------------------------------------------
+
+enum SourceCategory {
+  PROGRESSIVE_NEWS
+  INVESTIGATIVE
+  LABOR
+  FOREIGN_POLICY
+  ANTI_WAR
+  ENVIRONMENT
+  ECONOMIC_JUSTICE
+  MEDIA_CRITICISM
+  CIVIL_LIBERTIES
+  WORLD_NEWS
+  SOCIALIST
+  NEWSLETTER
+  POLICY
+}
+
+enum SourceType {
+  RSS
+  ATOM
+  API
+  SCRAPE
+}
+
+enum ContentType {
+  ARTICLE
+  INVESTIGATION
+  OPINION
+  VIDEO
+  PODCAST
+  TRANSCRIPT
+  NEWSLETTER
+  DATA_VISUALIZATION
+}
+
+enum CreatorPlatform {
+  YOUTUBE
+  TIKTOK
+  TWITCH
+  PODCAST
+  SUBSTACK
+  INSTAGRAM
+  TWITTER
+  MULTI_PLATFORM
+}
+
+enum FeedStatus {
+  ACTIVE
+  PAUSED
+  ERROR
+  DEPRECATED
+}
+
+// -----------------------------------------------------------------------------
+// News Sources
+// -----------------------------------------------------------------------------
+
+/// A news publication or outlet that provides content via RSS/Atom/API
+model NewsSource {
+  id          String         @id @default(cuid())
+  name        String         /// e.g. "The Intercept"
+  url         String         @unique /// Publication homepage
+  feedUrl     String         @unique /// RSS/Atom feed URL
+  category    SourceCategory /// Primary category
+  categories  SourceCategory[] /// All applicable categories
+  type        SourceType     @default(RSS)
+  contentType ContentType[]  /// Types of content this source produces
+  description String?        /// Brief description of the outlet
+  tier        Int            @default(1) /// Priority tier (1=highest)
+  active      Boolean        @default(true)
+  status      FeedStatus     @default(ACTIVE)
+
+  // Feed polling config
+  pollIntervalMinutes Int    @default(30) /// How often to check the feed
+  lastPolledAt        DateTime?
+  lastErrorAt         DateTime?
+  lastErrorMessage    String?
+  consecutiveErrors   Int      @default(0)
+
+  // Relations
+  articles    NewsArticle[]
+
+  createdAt   DateTime       @default(now())
+  updatedAt   DateTime       @updatedAt
+
+  @@index([category])
+  @@index([active, status])
+  @@index([tier])
+  @@map("news_sources")
+}
+
+// -----------------------------------------------------------------------------
+// News Articles
+// -----------------------------------------------------------------------------
+
+/// An individual article or piece of content from a news source
+model NewsArticle {
+  id           String      @id @default(cuid())
+  title        String
+  url          String      @unique /// Canonical article URL
+  summary      String?     /// Article summary or excerpt (from feed or extracted)
+  content      String?     /// Full article content (if extracted) @db.Text
+  author       String?
+  imageUrl     String?     /// Featured/hero image URL
+  publishedAt  DateTime    /// When the article was published
+  fetchedAt    DateTime    @default(now()) /// When we fetched it
+
+  // Classification
+  categories   String[]    /// e.g. ["labor", "healthcare", "unions"]
+  tags         String[]    /// Freeform tags for fine-grained filtering
+  contentType  ContentType @default(ARTICLE)
+
+  // AI-generated fields (populated async)
+  aiSummary    String?     /// AI-generated summary
+  aiTags       String[]    /// AI-generated topic tags
+  sentiment    Float?      /// Sentiment score (-1 to 1)
+  relevanceScore Float?    /// Relevance to platform mission (0-1)
+
+  // Engagement tracking
+  viewCount    Int         @default(0)
+  shareCount   Int         @default(0)
+  saveCount    Int         @default(0)
+
+  // Source relation
+  sourceId     String
+  source       NewsSource  @relation(fields: [sourceId], references: [id], onDelete: Cascade)
+
+  // Deduplication
+  contentHash  String?     /// Hash for detecting duplicate content across sources
+  guid         String?     /// RSS GUID or unique identifier from feed
+
+  createdAt    DateTime    @default(now())
+  updatedAt    DateTime    @updatedAt
+
+  @@index([publishedAt(sort: Desc)])
+  @@index([sourceId, publishedAt(sort: Desc)])
+  @@index([contentHash])
+  @@index([guid])
+  @@index([categories])
+  @@index([relevanceScore(sort: Desc)])
+  @@map("news_articles")
+}
+
+// -----------------------------------------------------------------------------
+// Content Creators
+// -----------------------------------------------------------------------------
+
+/// A progressive content creator across social platforms
+model ContentCreator {
+  id              String          @id @default(cuid())
+  name            String          /// Display name
+  platform        CreatorPlatform /// Primary platform
+  platforms       CreatorPlatform[] /// All platforms they're active on
+  handle          String          /// Primary handle (e.g. @HasanAbi)
+  url             String          @unique /// Main channel/profile URL
+  subscriberCount Int?            /// Subscriber/follower count (primary platform)
+  description     String?         /// Bio/description
+  focusAreas      String[]        /// e.g. ["anti-war", "labor", "economics"]
+  active          Boolean         @default(true)
+  verified        Boolean         @default(false)
+
+  // Additional platform links
+  youtubeUrl      String?
+  tiktokUrl       String?
+  twitchUrl        String?
+  podcastUrl      String?
+  substackUrl     String?
+  twitterUrl      String?
+  instagramUrl    String?
+
+  // Engagement metrics (updated periodically)
+  lastMetricsUpdate DateTime?
+  monthlyViews      Int?
+  engagementRate    Float?       /// Average engagement rate
+
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+
+  @@index([platform])
+  @@index([focusAreas])
+  @@index([subscriberCount(sort: Desc)])
+  @@map("content_creators")
+}
+
+// -----------------------------------------------------------------------------
+// Feed Sync Log (operational)
+// -----------------------------------------------------------------------------
+
+/// Tracks feed polling history for monitoring and debugging
+model FeedSyncLog {
+  id            String     @id @default(cuid())
+  sourceId      String
+  status        String     /// "success" | "error" | "no_new_content"
+  articlesFound Int        @default(0)
+  articlesNew   Int        @default(0)
+  duration      Int?       /// Sync duration in milliseconds
+  errorMessage  String?
+  syncedAt      DateTime   @default(now())
+
+  @@index([sourceId, syncedAt(sort: Desc)])
+  @@index([status])
+  @@map("feed_sync_logs")
+}
+
+// -----------------------------------------------------------------------------
+// User Article Interactions (for future personalization)
+// -----------------------------------------------------------------------------
+
+/// Tracks user interactions with articles for recommendations
+model ArticleInteraction {
+  id         String   @id @default(cuid())
+  userId     String   /// Reference to User model
+  articleId  String   /// Reference to NewsArticle
+  action     String   /// "view" | "save" | "share" | "hide" | "report"
+  createdAt  DateTime @default(now())
+
+  @@unique([userId, articleId, action])
+  @@index([userId, createdAt(sort: Desc)])
+  @@index([articleId])
+  @@map("article_interactions")
+}

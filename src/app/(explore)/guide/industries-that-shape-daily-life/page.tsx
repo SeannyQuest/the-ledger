@@ -16,7 +16,7 @@ import type { ScrollytellStep } from "@/components/stories/ScrollytellSection";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Industries That Shape Daily Life — The Ledger",
+  title: "Industries That Shape Daily Life | Daonra",
   description:
     "Chapter 8 of The Field Guide to American Corruption. Telecom giants, real estate monopolies, and agribusiness conglomerates spend billions to shape the rules governing your internet, your housing, and your food — and the returns are extraordinary.",
 };
@@ -179,7 +179,7 @@ export default function IndustriesThatShapeDailyLifePage() {
             <span className="h-1 w-1 rounded-full bg-white/30" />
             <span>28 min read</span>
             <span className="h-1 w-1 rounded-full bg-white/30" />
-            <span>The Ledger Investigations</span>
+            <span>Daonra Investigations</span>
           </div>
         </div>
 
@@ -1510,12 +1510,12 @@ export default function IndustriesThatShapeDailyLifePage() {
           <p className="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-white/60">
             Your broadband bill, your rent payment, your grocery receipt — each
             one reflects the lobbying investments documented in this chapter.
-            The Ledger&apos;s tools let you trace the connections from industry
+            Daonra&apos;s tools let you trace the connections from industry
             spending to the policies that set prices in your daily life.
           </p>
           <p className="mx-auto mt-4 max-w-xl text-base text-white/40">
             Monopoly pricing survives on regulatory capture. Accountability
-            begins when the ledger is open.
+            begins when you start looking.
           </p>
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link

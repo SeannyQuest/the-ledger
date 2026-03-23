@@ -22,7 +22,7 @@ import type { ScrollytellStep } from "@/components/stories/ScrollytellSection";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "The Tax Code & Education — The Ledger",
+  title: "The Tax Code & Education | Daonra",
   description:
     "From the TCJA's $1.5 trillion corporate windfall to the $1.84 trillion student debt crisis, how lobbying dollars write the tax code and reshape American education. Chapter 9 of The Field Guide to American Corruption.",
 };
@@ -198,7 +198,7 @@ export default function TheTaxCodeAndEducationPage() {
             <span className="h-1 w-1 rounded-full bg-white/30" />
             <span>35 min read</span>
             <span className="h-1 w-1 rounded-full bg-white/30" />
-            <span>The Ledger &middot; Field Guide</span>
+            <span>Daonra &middot; Field Guide</span>
           </div>
         </div>
 
@@ -242,7 +242,7 @@ export default function TheTaxCodeAndEducationPage() {
           </p>
 
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
-            The Ledger examined two decades of lobbying disclosures, campaign finance records, IRS
+            Daonra examined two decades of lobbying disclosures, campaign finance records, IRS
             enforcement data, student loan servicing contracts, and state-level political spending
             across the tax and education sectors. The data comes from OpenSecrets, the Joint
             Committee on Taxation, the Congressional Budget Office, the Institute on Taxation and

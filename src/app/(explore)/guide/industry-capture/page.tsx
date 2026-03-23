@@ -16,7 +16,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title:
-    "Industry Capture: Pharma, Defense, Fossil Fuel & Big Tech — The Field Guide to American Corruption — The Ledger",
+    "Industry Capture: Pharma, Defense, Fossil Fuel & Big Tech | The Field Guide to American Corruption | Daonra",
   description:
     "Chapter 2: How four industries — pharmaceuticals, defense contractors, fossil fuels, and Big Tech — spend billions to write the rules they are supposed to follow. $452M pharma lobbying, 1,800:1 defense ROI, $20B+ fossil fuel subsidies, $277M tech anti-antitrust spending.",
 };
@@ -109,7 +109,7 @@ export default function IndustryCapturePage() {
             <span className="h-1 w-1 rounded-full bg-white/30" />
             <span>22 min read</span>
             <span className="h-1 w-1 rounded-full bg-white/30" />
-            <span>The Ledger &middot; Field Guide</span>
+            <span>Daonra &middot; Field Guide</span>
           </div>
         </div>
 
@@ -182,7 +182,7 @@ export default function IndustryCapturePage() {
               return of 1,800 to 1.&rdquo;
             </p>
             <cite className="mt-6 block font-mono text-sm font-bold uppercase tracking-widest text-muted">
-              The Ledger Analysis &middot; USASpending.gov &amp; Senate
+              Daonra Analysis &middot; USASpending.gov &amp; Senate
               Disclosure Data
             </cite>
           </blockquote>

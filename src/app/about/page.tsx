@@ -74,7 +74,7 @@ export default function AboutPage() {
       <section className="border-b-4 border-ink bg-paper">
         <div className="mx-auto max-w-3xl px-4 py-24 lg:px-8">
           <div className="font-mono text-xs font-bold uppercase tracking-[0.3em] text-accent">
-            About The Ledger
+            About Daonra
           </div>
           <h1 className="mt-4 font-headline text-5xl font-black tracking-tight text-ink lg:text-6xl">
             Methodology &amp; Data Sources
@@ -92,12 +92,12 @@ export default function AboutPage() {
         <div className="mx-auto max-w-3xl px-4 py-16 lg:px-8">
           <div className="drop-cap">
             <p className="text-lg leading-relaxed text-ink/80">
-              The Ledger exists because no single platform connects the full
+              Daonra exists because no single platform connects the full
               money path in American politics: Corporation donates to PAC, PAC
               funds Candidate, Candidate awards Government Contract back to
-              Corporation. Existing tools — OpenSecrets, FEC.gov, LittleSis,
-              USASpending — each cover one slice but force users to toggle
-              between five websites. We built The Ledger to close that gap.
+              Corporation. Existing tools (OpenSecrets, FEC.gov, LittleSis,
+              USASpending) each cover one slice but force users to toggle
+              between five websites. We built Daonra to close that gap.
             </p>
           </div>
         </div>

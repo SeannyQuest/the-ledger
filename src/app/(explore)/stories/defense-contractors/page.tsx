@@ -5,9 +5,9 @@ import type { ScrollytellStep } from "@/components/stories/ScrollytellSection";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "The Defense Contractor Pipeline — The Ledger",
+  title: "The Defense Contractor Pipeline | Daonra",
   description:
-    "How defense contractors spend millions on lobbying and PAC donations, then receive billions back in government contracts. An investigation by The Ledger.",
+    "How defense contractors spend millions on lobbying and PAC donations, then receive billions back in government contracts. An investigation by Daonra.",
 };
 
 const MONEY_FLOW_STEPS: ScrollytellStep[] = [
@@ -107,7 +107,7 @@ export default function DefenseContractorsStory() {
             <span className="h-1 w-1 rounded-full bg-white/30" />
             <span>12 min read</span>
             <span className="h-1 w-1 rounded-full bg-white/30" />
-            <span>The Ledger Investigations</span>
+            <span>Daonra Investigations</span>
           </div>
         </div>
 
@@ -135,7 +135,7 @@ export default function DefenseContractorsStory() {
           </p>
 
           <p className="mt-8 text-lg leading-relaxed text-ink/70">
-            The Ledger traced the money from corporate treasuries to PAC accounts, through lobbying firms,
+            Daonra traced the money from corporate treasuries to PAC accounts, through lobbying firms,
             into the campaign coffers of Armed Services Committee members, and back out as government contracts.
             What we found is a system so efficient, so bipartisan, and so deeply embedded that it operates
             less like corruption and more like infrastructure.
@@ -167,7 +167,7 @@ export default function DefenseContractorsStory() {
               That&apos;s not lobbying — that&apos;s the best investment in America.&rdquo;
             </p>
             <cite className="mt-6 block font-mono text-sm font-bold uppercase tracking-widest text-muted">
-              The Ledger Analysis, 2022-2024 Data
+              Daonra Analysis, 2022-2024 Data
             </cite>
           </blockquote>
         </div>

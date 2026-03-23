@@ -13,7 +13,7 @@ import type { ScrollytellStep } from "@/components/stories/ScrollytellSection";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Courts, Maps & Ballots — The Ledger",
+  title: "Courts, Maps & Ballots | Daonra",
   description:
     "Chapter 5 of The Field Guide to American Corruption. How $157M in judicial election spending, $30M in redistricting dark money, and $1.32B in ballot measure campaigns buy justice, lock in minority rule, and veto the will of voters.",
 };
@@ -129,7 +129,7 @@ export default function CourtsMapsAndBallotsPage() {
             <span className="h-1 w-1 rounded-full bg-white/30" />
             <span>22 min read</span>
             <span className="h-1 w-1 rounded-full bg-white/30" />
-            <span>The Ledger Investigations</span>
+            <span>Daonra Investigations</span>
           </div>
         </div>
 
@@ -208,7 +208,7 @@ export default function CourtsMapsAndBallotsPage() {
               to admit it.&rdquo;
             </p>
             <cite className="mt-6 block font-mono text-sm font-bold uppercase tracking-widest text-muted">
-              The Ledger Analysis, Judicial Election Data 2015&ndash;2024
+              Daonra Analysis, Judicial Election Data 2015&ndash;2024
             </cite>
           </blockquote>
         </div>

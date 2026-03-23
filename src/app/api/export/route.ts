@@ -16,7 +16,7 @@ export async function GET(request: NextRequest) {
   }
 
   const date = new Date().toISOString().slice(0, 10);
-  const filename = `the-ledger-${type}-${date}.csv`;
+  const filename = `daonra-${type}-${date}.csv`;
 
   let csv: string;
 

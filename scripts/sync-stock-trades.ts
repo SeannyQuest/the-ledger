@@ -1,7 +1,7 @@
 /**
  * Congressional Stock Trading Sync Script
  *
- * Syncs congressional stock trade disclosures into the Ledger database.
+ * Syncs congressional stock trade disclosures into Daonra database.
  *
  * Data sources:
  *   - House Clerk Financial Disclosures XML (filing metadata)

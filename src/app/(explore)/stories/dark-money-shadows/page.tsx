@@ -5,7 +5,7 @@ import type { ScrollytellStep } from "@/components/stories/ScrollytellSection";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "$4.3 Billion in the Shadows — The Ledger",
+  title: "$4.3 Billion in the Shadows | Daonra",
   description:
     "Since Citizens United, $4.3 billion in dark money has flowed through 501(c)(4) nonprofits and shell companies. An investigation into America's anonymous political spending.",
 };
@@ -107,7 +107,7 @@ export default function DarkMoneyShadowsStory() {
             <span className="h-1 w-1 rounded-full bg-white/30" />
             <span>13 min read</span>
             <span className="h-1 w-1 rounded-full bg-white/30" />
-            <span>The Ledger Investigations</span>
+            <span>Daonra Investigations</span>
           </div>
         </div>
 
@@ -137,7 +137,7 @@ export default function DarkMoneyShadowsStory() {
           </p>
 
           <p className="mt-8 text-lg leading-relaxed text-ink/70">
-            The Ledger traced the infrastructure of anonymous political spending — from 501(c)(4)
+            Daonra traced the infrastructure of anonymous political spending — from 501(c)(4)
             nonprofits that hide their donors, to shell companies that funnel millions into
             Super PACs, to the filibustered reforms that would have stopped it. What we found
             is a system so thoroughly entrenched that even 80% public support for transparency
@@ -170,7 +170,7 @@ export default function DarkMoneyShadowsStory() {
               and voters have no idea who&apos;s paying.&rdquo;
             </p>
             <cite className="mt-6 block font-mono text-sm font-bold uppercase tracking-widest text-muted">
-              The Ledger Analysis, 2010-2024 Data
+              Daonra Analysis, 2010-2024 Data
             </cite>
           </blockquote>
         </div>

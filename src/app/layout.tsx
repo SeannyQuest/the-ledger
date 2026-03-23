@@ -24,9 +24,9 @@ const jetbrains = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "The Ledger — Follow the Money in American Politics",
+  title: "Daonra | Follow the Money in American Politics",
   description:
-    "Track campaign finance, lobbying, PAC donations, and government contracts. See how corporations spend money politically and what they get in return.",
+    "For the people. By the people. About the people. Track campaign finance, lobbying, PAC donations, and government contracts. See how corporations spend money politically and what they get in return.",
   keywords: [
     "campaign finance",
     "lobbying",

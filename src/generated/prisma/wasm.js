@@ -575,7 +575,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "/Users/seancasey/the-ledger/src/generated/prisma",
+      "value": "/Users/seancasey/.openclaw/workspace/the-ledger/src/generated/prisma",
       "fromEnvVar": null
     },
     "config": {
@@ -589,12 +589,11 @@ const config = {
       }
     ],
     "previewFeatures": [],
-    "sourceFilePath": "/Users/seancasey/the-ledger/prisma/schema.prisma",
+    "sourceFilePath": "/Users/seancasey/.openclaw/workspace/the-ledger/prisma/schema.prisma",
     "isCustomOutput": true
   },
   "relativeEnvPaths": {
-    "rootEnvPath": null,
-    "schemaEnvPath": "../../../.env"
+    "rootEnvPath": null
   },
   "relativePath": "../../../prisma",
   "clientVersion": "6.19.2",
@@ -603,7 +602,7 @@ const config = {
     "db"
   ],
   "activeProvider": "postgresql",
-  "postinstall": false,
+  "postinstall": true,
   "inlineDatasources": {
     "db": {
       "url": {

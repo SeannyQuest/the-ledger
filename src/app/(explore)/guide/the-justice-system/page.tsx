@@ -14,7 +14,7 @@ import type { ScrollytellStep } from "@/components/stories/ScrollytellSection";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "The Justice System — The Ledger",
+  title: "The Justice System | Daonra",
   description:
     "Chapter 6 of The Field Guide to American Corruption. Private prisons profit from incarceration, the gun lobby blocks reform after every massacre, and corporate monopolies crush competitors while enforcers are starved of funding.",
 };
@@ -127,7 +127,7 @@ export default function TheJusticeSystemPage() {
             <span className="h-1 w-1 rounded-full bg-white/30" />
             <span>24 min read</span>
             <span className="h-1 w-1 rounded-full bg-white/30" />
-            <span>The Ledger Investigations</span>
+            <span>Daonra Investigations</span>
           </div>
         </div>
 
@@ -209,7 +209,7 @@ export default function TheJusticeSystemPage() {
               stays that way.&rdquo;
             </p>
             <cite className="mt-6 block font-mono text-sm font-bold uppercase tracking-widest text-muted">
-              The Ledger Analysis of OpenSecrets, BJS, and SEC Filings
+              Daonra Analysis of OpenSecrets, BJS, and SEC Filings
             </cite>
           </blockquote>
         </div>

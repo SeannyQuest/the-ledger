@@ -52,7 +52,7 @@ export default function ContractsPage() {
       a.href = url;
       a.download =
         res.headers.get("Content-Disposition")?.match(/filename="(.+)"/)?.[1] ??
-        "the-ledger-contractors.csv";
+        "daonra-contractors.csv";
       document.body.appendChild(a);
       a.click();
       a.remove();

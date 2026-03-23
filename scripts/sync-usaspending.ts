@@ -1,7 +1,7 @@
 /**
  * sync-usaspending.ts
  *
- * Syncs federal contract/award data from USASpending.gov into The Ledger.
+ * Syncs federal contract/award data from USASpending.gov into Daonra.
  *
  * Usage:
  *   npx tsx scripts/sync-usaspending.ts

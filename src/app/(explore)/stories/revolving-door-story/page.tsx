@@ -5,7 +5,7 @@ import type { ScrollytellStep } from "@/components/stories/ScrollytellSection";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "The Revolving Door — The Ledger",
+  title: "The Revolving Door | Daonra",
   description:
     "65% of Congress walks through the revolving door into lobbying. An investigation into how cooling-off periods are bypassed and regulatory capture becomes the norm.",
 };
@@ -107,7 +107,7 @@ export default function RevolvingDoorStory() {
             <span className="h-1 w-1 rounded-full bg-white/30" />
             <span>12 min read</span>
             <span className="h-1 w-1 rounded-full bg-white/30" />
-            <span>The Ledger Investigations</span>
+            <span>Daonra Investigations</span>
           </div>
         </div>
 
@@ -138,7 +138,7 @@ export default function RevolvingDoorStory() {
           </p>
 
           <p className="mt-8 text-lg leading-relaxed text-ink/70">
-            The Ledger examined the career trajectories of every member of Congress who left
+            Daonra examined the career trajectories of every member of Congress who left
             office between 2010 and 2024, cross-referencing their post-government employment
             with lobbying registration records and corporate disclosures. We found that the
             revolving door is not a metaphor — it is a business model, and the most profitable

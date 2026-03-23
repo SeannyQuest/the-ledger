@@ -5,7 +5,7 @@ import type { ScrollytellStep } from "@/components/stories/ScrollytellSection";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Pharma's $452 Million Bet — The Ledger",
+  title: "Pharma's $452 Million Bet | Daonra",
   description:
     "The pharmaceutical industry spends more on lobbying than any other sector — $452M in 2025 alone. An investigation into how pharma blocks drug pricing reform.",
 };
@@ -107,7 +107,7 @@ export default function PharmaBetStory() {
             <span className="h-1 w-1 rounded-full bg-white/30" />
             <span>15 min read</span>
             <span className="h-1 w-1 rounded-full bg-white/30" />
-            <span>The Ledger Investigations</span>
+            <span>Daonra Investigations</span>
           </div>
         </div>
 
@@ -137,7 +137,7 @@ export default function PharmaBetStory() {
           </p>
 
           <p className="mt-8 text-lg leading-relaxed text-ink/70">
-            The Ledger analyzed two decades of pharmaceutical lobbying expenditures, campaign
+            Daonra analyzed two decades of pharmaceutical lobbying expenditures, campaign
             contributions, and the legislative outcomes they purchased. We traced the money from
             corporate treasuries through trade associations, into the campaign accounts of key
             committee members, and measured the policy outcomes that followed. The correlation
@@ -170,7 +170,7 @@ export default function PharmaBetStory() {
               in price controls they avoided.&rdquo;
             </p>
             <cite className="mt-6 block font-mono text-sm font-bold uppercase tracking-widest text-muted">
-              The Ledger Analysis, CBO Estimates
+              Daonra Analysis, CBO Estimates
             </cite>
           </blockquote>
         </div>
