@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────
-// The Ledger — Campaign Finance Tracking Platform
+// Daonra | Campaign Finance Tracking Platform
 // Prisma Schema for Neon PostgreSQL
 // ─────────────────────────────────────────────────────────────
 
@@ -330,6 +330,7 @@ model MoneyTransaction {
 
   createdAt DateTime @default(now())
 
+  @@unique([dataSource, sourceTransactionId])
   @@index([sourceEntityId])
   @@index([targetEntityId])
   @@index([transactionType])

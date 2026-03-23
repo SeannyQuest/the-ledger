@@ -336,6 +336,7 @@ model MoneyTransaction {
   @@index([transactionDate])
   @@index([dataSource])
   @@index([electionYear])
+  @@unique([dataSource, sourceTransactionId])
   @@index([sourceTransactionId])
   @@index([stateCode])
   @@map("money_transactions")

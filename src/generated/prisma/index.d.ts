@@ -26351,6 +26351,7 @@ export namespace Prisma {
 
   export type MoneyTransactionWhereUniqueInput = Prisma.AtLeast<{
     id?: string
+    dataSource_sourceTransactionId?: MoneyTransactionDataSourceSourceTransactionIdCompoundUniqueInput
     AND?: MoneyTransactionWhereInput | MoneyTransactionWhereInput[]
     OR?: MoneyTransactionWhereInput[]
     NOT?: MoneyTransactionWhereInput | MoneyTransactionWhereInput[]
@@ -26379,7 +26380,7 @@ export namespace Prisma {
     createdAt?: DateTimeFilter<"MoneyTransaction"> | Date | string
     sourceEntity?: XOR<EntityNullableScalarRelationFilter, EntityWhereInput> | null
     targetEntity?: XOR<EntityNullableScalarRelationFilter, EntityWhereInput> | null
-  }, "id">
+  }, "id" | "dataSource_sourceTransactionId">
 
   export type MoneyTransactionOrderByWithAggregationInput = {
     id?: SortOrder
@@ -30670,6 +30671,11 @@ export namespace Prisma {
     in?: $Enums.ElectionType[] | ListEnumElectionTypeFieldRefInput<$PrismaModel> | null
     notIn?: $Enums.ElectionType[] | ListEnumElectionTypeFieldRefInput<$PrismaModel> | null
     not?: NestedEnumElectionTypeNullableFilter<$PrismaModel> | $Enums.ElectionType | null
+  }
+
+  export type MoneyTransactionDataSourceSourceTransactionIdCompoundUniqueInput = {
+    dataSource: $Enums.DataSource
+    sourceTransactionId: string
   }
 
   export type MoneyTransactionCountOrderByAggregateInput = {

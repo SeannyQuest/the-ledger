@@ -229,7 +229,7 @@ async function syncFilings(year: number = new Date().getFullYear()) {
     await prisma.syncLog.update({
       where: { id: syncLog.id },
       data: {
-        status: "SUCCESS",
+        status: "COMPLETED",
         completedAt: new Date(),
         recordsProcessed: totalProcessed,
         recordsCreated: totalCreated,
