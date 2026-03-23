@@ -24,9 +24,9 @@ const jetbrains = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Daonra | Follow the Money in American Politics",
+  title: "Daonra | Follow the Money. Name What You See.",
   description:
-    "For the people. By the people. About the people. Track campaign finance, lobbying, PAC donations, and government contracts. See how corporations spend money politically and what they get in return.",
+    "The system isn't broken. It's working as designed. Daonra tracks money in politics, exposes who benefits from policy decisions, and shows what's possible when people pay attention.",
   keywords: [
     "campaign finance",
     "lobbying",
@@ -37,6 +37,12 @@ export const metadata: Metadata = {
     "dark money",
     "FEC",
     "money in politics",
+    "class politics",
+    "who benefits",
+    "power vs people",
+    "follow the money",
+    "civic engagement",
+    "corporate capture",
   ],
 };
 

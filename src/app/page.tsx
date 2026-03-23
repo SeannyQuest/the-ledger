@@ -1,13 +1,11 @@
 import Link from "next/link";
 import {
   ArrowRight,
-  BarChart3,
   Landmark,
   Globe,
   Users,
   ClipboardList,
   Compass,
-  Search,
   DollarSign,
 } from "lucide-react";
 import { StatCard } from "@/components/shared/StatCard";
@@ -63,7 +61,7 @@ const PILLARS = [
     icon: DollarSign,
     title: "Follow the Money",
     description:
-      "Track campaign finance, lobbying payments, and government contracts. See who funds whom — and what they get in return.",
+      "Track campaign finance, lobbying payments, and government contracts. See who funds whom — and what they get in return. This is where the story always starts.",
     href: "/money-flow",
     color: "accent",
   },
@@ -71,7 +69,7 @@ const PILLARS = [
     icon: Landmark,
     title: "How Power Works",
     description:
-      "Explainers that demystify government — how bills pass, how gerrymandering works, how local politics shapes your daily life.",
+      "Most people don't know how a bill actually becomes law — and that's not an accident. Explainers that demystify the system so you can't be fooled by it.",
     href: "/how-power-works",
     color: "money-in",
   },
@@ -79,7 +77,7 @@ const PILLARS = [
     icon: Globe,
     title: "What Is Working",
     description:
-      "Solutions from around the world that prove better is possible. Universal healthcare, ranked-choice voting, anti-corruption wins.",
+      "Universal healthcare. Ranked-choice voting. Countries that house their citizens. Proof that better is possible — and that the obstacles are political, not practical.",
     href: "/whats-working",
     color: "money-out",
   },
@@ -87,7 +85,7 @@ const PILLARS = [
     icon: Users,
     title: "The Collaboration Advantage",
     description:
-      "What humans achieve when they work together. From mutual aid networks to open-source governance tools — cooperation wins.",
+      "What humans achieve when they work together. From the ISS to open-source governance — the alternative to oligarchy already exists. We just need to build it.",
     href: "/collaboration",
     color: "entity-pac",
   },
@@ -95,7 +93,7 @@ const PILLARS = [
     icon: ClipboardList,
     title: "Scorecards & Accountability",
     description:
-      "Voting records, stock trades, donor maps, and more. Hold your representatives accountable with the facts.",
+      "Voting records vs. donor lists. Stock trades vs. committee assignments. Your representative's words vs. their votes. The receipts, organized.",
     href: "/scorecards",
     color: "money-neutral",
   },
@@ -103,7 +101,7 @@ const PILLARS = [
     icon: Compass,
     title: "Civic How-To",
     description:
-      "Practical guides: register to vote, contact your reps, attend town halls, run for office. Your step-by-step playbook for participation.",
+      "Register to vote. Contact your reps. Attend a town hall. Run for office. The step-by-step playbook for participation — because democracy isn't a spectator sport.",
     href: "/civics",
     color: "accent",
   },
@@ -119,21 +117,24 @@ export default async function HomePage() {
         <div className="mx-auto max-w-7xl px-4 py-24 lg:px-8 lg:py-32">
           {/* Masthead */}
           <div className="font-mono text-xs font-bold uppercase tracking-[0.3em] text-accent">
-            Transparency &middot; Understanding &middot; Action
+            Follow the Money &middot; Name What You See &middot; Change What
+            You Can
           </div>
 
           {/* Headline */}
           <h1 className="mt-6 max-w-4xl font-headline text-6xl font-black leading-[0.95] tracking-tight text-ink lg:text-8xl xl:text-9xl">
-            Your Guide to How Power Works
+            The System Isn&apos;t Broken.
           </h1>
+          <p className="mt-2 max-w-4xl font-headline text-5xl font-bold leading-[0.95] tracking-tight text-ink/70 lg:text-7xl xl:text-8xl">
+            It&apos;s Working Exactly As Designed.
+          </p>
 
           {/* Subhead */}
-          <p className="mt-6 max-w-2xl text-xl leading-relaxed text-ink/70 lg:text-2xl">
-            Follow the money. Understand the system. See what&apos;s working
-            around the world.{" "}
-            <span className="font-semibold text-ink">
-              Then do something about it.
-            </span>
+          <p className="mt-8 max-w-2xl text-xl leading-relaxed text-ink/70 lg:text-2xl">
+            The culture war is noise. The real story is who benefits and who
+            pays. Daonra follows the money, names what it sees, and shows
+            what&apos;s possible when people stop fighting each other and start
+            paying attention to who&apos;s actually pulling the strings.
           </p>
 
           {/* CTA */}
@@ -142,8 +143,8 @@ export default async function HomePage() {
               href="/money-flow"
               className="inline-flex items-center gap-2 rounded-full bg-ink px-8 py-3.5 text-sm font-bold uppercase tracking-wider text-white transition-colors hover:bg-ink/80"
             >
-              <BarChart3 className="h-4 w-4" />
-              Explore the Platform
+              <DollarSign className="h-4 w-4" />
+              Follow the Money
               <ArrowRight className="h-4 w-4" />
             </Link>
             <Link
@@ -167,6 +168,32 @@ export default async function HomePage() {
             backgroundSize: "60px 60px",
           }}
         />
+      </section>
+
+      {/* The Thesis */}
+      <section className="border-b-4 border-ink bg-ink text-white">
+        <div className="mx-auto max-w-4xl px-4 py-24 text-center lg:px-8">
+          <p className="font-headline text-3xl font-bold leading-snug tracking-tight lg:text-4xl">
+            We&apos;ve been sold a story.
+          </p>
+          <p className="mt-2 font-headline text-3xl font-bold leading-snug tracking-tight text-white/50 lg:text-4xl">
+            Left vs. right. Red vs. blue. Us vs. them.
+          </p>
+
+          <div className="mx-auto mt-10 max-w-3xl space-y-6 text-lg leading-relaxed text-white/70 lg:text-xl">
+            <p>
+              While we fight each other, the same defense contractors get their
+              contracts renewed. The same insurance companies kill the same
+              healthcare bills. The same donor class funds both parties — and
+              writes the rules for both sides.
+            </p>
+            <p className="font-semibold text-white">
+              This isn&apos;t conspiracy. The paperwork is public.
+              <br />
+              We&apos;re just reading it.
+            </p>
+          </div>
+        </div>
       </section>
 
       {/* Transparency Tools — dynamic stats */}
@@ -219,11 +246,11 @@ export default async function HomePage() {
             The Platform
           </div>
           <h2 className="mt-4 max-w-3xl font-headline text-4xl font-black tracking-tight text-ink lg:text-5xl">
-            Six Ways to Engage
+            Six Ways to See Clearly
           </h2>
           <p className="mt-4 max-w-2xl text-lg text-muted">
-            Daonra is built around six pillars — from tracking money in politics
-            to practical tools for getting involved. Start anywhere.
+            From following the money to taking action — every pillar connects
+            back to the same question: who benefits and who pays?
           </p>
 
           <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -248,11 +275,11 @@ export default async function HomePage() {
             The Civic Engagement Framework
           </div>
           <h2 className="mt-4 max-w-3xl font-headline text-4xl font-black tracking-tight lg:text-5xl">
-            From Awareness to Action
+            From Knowing to Doing
           </h2>
           <p className="mt-4 max-w-2xl text-lg text-white/60">
-            Democracy works when people participate. Here&apos;s how Daonra
-            helps you go from informed citizen to active participant.
+            Information without action is just outrage. Here&apos;s how Daonra
+            helps you go from understanding the system to changing it.
           </p>
 
           <div className="mt-16 grid gap-0 md:grid-cols-4">
