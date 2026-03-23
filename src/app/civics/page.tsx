@@ -18,12 +18,26 @@ export default function CivicsPage() {
         </p>
 
         <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {/* Register to Vote — live */}
+          <Link
+            href="/civics/register"
+            className="group rounded-xl border border-border bg-surface p-6 transition-colors hover:border-ink"
+          >
+            <Compass className="h-6 w-6 text-accent" />
+            <h3 className="mt-4 font-headline text-xl font-bold text-ink">
+              Register to Vote
+            </h3>
+            <p className="mt-2 text-sm leading-relaxed text-muted">
+              State-by-state guide to voter registration — deadlines, ID
+              requirements, and how to check your status.
+            </p>
+            <div className="mt-4 inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-accent transition-colors group-hover:text-ink">
+              Get Started <ArrowRight className="h-3.5 w-3.5" />
+            </div>
+          </Link>
+
+          {/* Remaining cards — coming soon */}
           {[
-            {
-              title: "Register to Vote",
-              description:
-                "State-by-state guide to voter registration — deadlines, ID requirements, and how to check your status.",
-            },
             {
               title: "Contact Your Representatives",
               description:
