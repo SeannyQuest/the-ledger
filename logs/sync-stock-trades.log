@@ -1,0 +1,27 @@
+=== Syncing House Clerk PTR Filings (2026) ===
+
+Fetching House Clerk filings from: https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2026FD.xml
+Found 126 PTR filings
+
+  Unmatched: Richard W. Allen (GA12)
+  Unmatched: Richard W. Allen (GA12)
+  Unmatched: Richard W. Allen (GA12)
+  Unmatched: Jake Auchincloss (MA04)
+  Unmatched: Donald Sternoff Beyer (VA08)
+  Unmatched: Donald Sternoff Beyer (VA08)
+  Unmatched: Donald Sternoff Beyer (VA08)
+  Unmatched: Sheri Biggs (SC03)
+  Unmatched: Sheri Biggs (SC03)
+  Unmatched: Sheri Biggs (SC03)
+  Matched: Gilbert Cisneros (CA31)
+  Matched: Gilbert Cisneros (CA31)
+  Matched: Gilbert Cisneros (CA31)
+  Matched: Michael A. Collins (GA10)
+  Matched: Julie Johnson (TX32)
+  Matched: Linda T. Sanchez (CA38)
+
+Results: 6 matched, 120 unmatched out of 126 filings
+
+Note: XML provides filing metadata only. Use --seed to generate trade data, 
+or implement PDF parsing for production trade details.
+EXIT:0

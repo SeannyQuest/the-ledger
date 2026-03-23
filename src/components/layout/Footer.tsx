@@ -11,9 +11,9 @@ export function Footer() {
               DAONRA
             </span>
             <p className="mt-2 text-sm leading-relaxed text-muted">
-              Tracking the flow of money in American politics.
-              Federal, state, and local campaign finance, lobbying,
-              and government contracts — all in one place.
+              Your guide to how power works — and how to take it back.
+              Follow the money, understand the system, and find
+              practical ways to get involved.
             </p>
           </div>
 

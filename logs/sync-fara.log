@@ -1,0 +1,7 @@
+=== Syncing FARA Data ===
+
+Note: FARA efile API access varies. Using seed mode for development.
+Run with --seed to generate demo data.
+
+To fetch real FARA data, use: npx tsx scripts/sync-fara.ts --seed
+EXIT:0

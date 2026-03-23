@@ -2,13 +2,13 @@ import Link from "next/link";
 import {
   ArrowRight,
   BarChart3,
-  Building2,
-  Network,
+  Landmark,
+  Globe,
+  Users,
+  ClipboardList,
+  Compass,
   Search,
-  Calculator,
-  Factory,
-  EyeOff,
-  BookOpen,
+  DollarSign,
 } from "lucide-react";
 import { StatCard } from "@/components/shared/StatCard";
 import { prisma } from "@/lib/prisma";
@@ -58,6 +58,57 @@ async function getStats() {
   };
 }
 
+const PILLARS = [
+  {
+    icon: DollarSign,
+    title: "Follow the Money",
+    description:
+      "Track campaign finance, lobbying payments, and government contracts. See who funds whom — and what they get in return.",
+    href: "/money-flow",
+    color: "accent",
+  },
+  {
+    icon: Landmark,
+    title: "How Power Works",
+    description:
+      "Explainers that demystify government — how bills pass, how gerrymandering works, how local politics shapes your daily life.",
+    href: "/how-power-works",
+    color: "money-in",
+  },
+  {
+    icon: Globe,
+    title: "What Is Working",
+    description:
+      "Solutions from around the world that prove better is possible. Universal healthcare, ranked-choice voting, anti-corruption wins.",
+    href: "/whats-working",
+    color: "money-out",
+  },
+  {
+    icon: Users,
+    title: "The Collaboration Advantage",
+    description:
+      "What humans achieve when they work together. From mutual aid networks to open-source governance tools — cooperation wins.",
+    href: "/collaboration",
+    color: "entity-pac",
+  },
+  {
+    icon: ClipboardList,
+    title: "Scorecards & Accountability",
+    description:
+      "Voting records, stock trades, donor maps, and more. Hold your representatives accountable with the facts.",
+    href: "/scorecards",
+    color: "money-neutral",
+  },
+  {
+    icon: Compass,
+    title: "Civic How-To",
+    description:
+      "Practical guides: register to vote, contact your reps, attend town halls, run for office. Your step-by-step playbook for participation.",
+    href: "/civics",
+    color: "accent",
+  },
+];
+
 export default async function HomePage() {
   const stats = await getStats();
 
@@ -68,19 +119,21 @@ export default async function HomePage() {
         <div className="mx-auto max-w-7xl px-4 py-24 lg:px-8 lg:py-32">
           {/* Masthead */}
           <div className="font-mono text-xs font-bold uppercase tracking-[0.3em] text-accent">
-            Campaign Finance &middot; Lobbying &middot; Government Contracts
+            Transparency &middot; Understanding &middot; Action
           </div>
 
           {/* Headline */}
           <h1 className="mt-6 max-w-4xl font-headline text-6xl font-black leading-[0.95] tracking-tight text-ink lg:text-8xl xl:text-9xl">
-            Follow the Money
+            Your Guide to How Power Works
           </h1>
 
           {/* Subhead */}
           <p className="mt-6 max-w-2xl text-xl leading-relaxed text-ink/70 lg:text-2xl">
-            Corporations donate millions to PACs. PACs fund politicians.
-            Politicians award billions in contracts.{" "}
-            <span className="font-semibold text-ink">See the full circle.</span>
+            Follow the money. Understand the system. See what&apos;s working
+            around the world.{" "}
+            <span className="font-semibold text-ink">
+              Then do something about it.
+            </span>
           </p>
 
           {/* CTA */}
@@ -90,15 +143,15 @@ export default async function HomePage() {
               className="inline-flex items-center gap-2 rounded-full bg-ink px-8 py-3.5 text-sm font-bold uppercase tracking-wider text-white transition-colors hover:bg-ink/80"
             >
               <BarChart3 className="h-4 w-4" />
-              Explore Money Flows
+              Explore the Platform
               <ArrowRight className="h-4 w-4" />
             </Link>
             <Link
-              href="/search"
+              href="/civics"
               className="inline-flex items-center gap-2 rounded-full border-2 border-ink px-8 py-3.5 text-sm font-bold uppercase tracking-wider text-ink transition-colors hover:bg-ink hover:text-white"
             >
-              <Search className="h-4 w-4" />
-              Search Entities
+              <Compass className="h-4 w-4" />
+              Get Involved
             </Link>
           </div>
         </div>
@@ -116,151 +169,121 @@ export default async function HomePage() {
         />
       </section>
 
-      {/* Topline Stats — now dynamic */}
+      {/* Transparency Tools — dynamic stats */}
       <section className="border-b border-border bg-surface">
-        <div className="mx-auto grid max-w-7xl grid-cols-2 gap-8 px-4 py-16 lg:grid-cols-4 lg:px-8">
-          <StatCard
-            label="Contributions Tracked"
-            value={formatCompactMoney(stats.totalContributions)}
-            sublabel="2024 Election Cycle"
-            delay={0}
-          />
-          <StatCard
-            label="Lobbying Spending"
-            value={formatCompactMoney(stats.totalLobbying)}
-            sublabel="Tracked Payments"
-            color="money-out"
-            delay={150}
-          />
-          <StatCard
-            label="Gov. Contracts"
-            value={formatCompactMoney(stats.totalContracts)}
-            sublabel="Federal Awards"
-            color="accent"
-            delay={300}
-          />
-          <StatCard
-            label="Entities Tracked"
-            value={formatCompactNumber(stats.entityCount)}
-            sublabel="Politicians, Corps, PACs"
-            delay={450}
-          />
+        <div className="mx-auto max-w-7xl px-4 py-16 lg:px-8">
+          <div className="mb-8 text-center">
+            <div className="font-mono text-xs font-bold uppercase tracking-[0.3em] text-accent">
+              Transparency Tools
+            </div>
+            <p className="mt-2 text-sm text-muted">
+              Real-time data from official government sources — no paywalls, no
+              editorializing
+            </p>
+          </div>
+          <div className="grid grid-cols-2 gap-8 lg:grid-cols-4">
+            <StatCard
+              label="Contributions Tracked"
+              value={formatCompactMoney(stats.totalContributions)}
+              sublabel="2024 Election Cycle"
+              delay={0}
+            />
+            <StatCard
+              label="Lobbying Spending"
+              value={formatCompactMoney(stats.totalLobbying)}
+              sublabel="Tracked Payments"
+              color="money-out"
+              delay={150}
+            />
+            <StatCard
+              label="Gov. Contracts"
+              value={formatCompactMoney(stats.totalContracts)}
+              sublabel="Federal Awards"
+              color="accent"
+              delay={300}
+            />
+            <StatCard
+              label="Entities Tracked"
+              value={formatCompactNumber(stats.entityCount)}
+              sublabel="Politicians, Corps, PACs"
+              delay={450}
+            />
+          </div>
         </div>
       </section>
 
-      {/* Feature Cards */}
+      {/* Six Pillars */}
       <section className="bg-paper">
         <div className="mx-auto max-w-7xl px-4 py-24 lg:px-8">
           <div className="font-mono text-xs font-bold uppercase tracking-[0.3em] text-accent">
-            What You Can Do
+            The Platform
           </div>
-          <h2 className="mt-4 max-w-2xl font-headline text-4xl font-black tracking-tight text-ink lg:text-5xl">
-            See What They Don&apos;t Want You to See
+          <h2 className="mt-4 max-w-3xl font-headline text-4xl font-black tracking-tight text-ink lg:text-5xl">
+            Six Ways to Engage
           </h2>
+          <p className="mt-4 max-w-2xl text-lg text-muted">
+            Daonra is built around six pillars — from tracking money in politics
+            to practical tools for getting involved. Start anywhere.
+          </p>
 
-          <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-            <FeatureCard
-              icon={<BarChart3 className="h-6 w-6" />}
-              title="Money Flow Maps"
-              description="Interactive Sankey diagrams trace money from corporations through PACs to politicians and back through government contracts."
-              href="/money-flow"
-              color="accent"
-            />
-            <FeatureCard
-              icon={<Calculator className="h-6 w-6" />}
-              title="ROI Calculator"
-              description="How much do corporations spend on politics, and how much do they get back? Search any entity to calculate their return on political investment."
-              href="/roi"
-              color="money-in"
-            />
-            <FeatureCard
-              icon={<Factory className="h-6 w-6" />}
-              title="Industry Dashboard"
-              description="See how entire industries — defense, pharma, tech, oil & gas — leverage political spending. Compare lobbying vs contracts by sector."
-              href="/industry"
-              color="money-out"
-            />
-            <FeatureCard
-              icon={<EyeOff className="h-6 w-6" />}
-              title="Dark Money Tracer"
-              description="Trace anonymous political spending from 501(c)(4) nonprofits through Super PACs to attack ads. See the full chain of dark money."
-              href="/dark-money/trace"
-              color="entity-pac"
-            />
-          </div>
-
-          <div className="mt-8 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-            <FeatureCard
-              icon={<Building2 className="h-6 w-6" />}
-              title="Contract Tracker"
-              description="Which companies get the biggest federal contracts? Cross-reference with their political donations to see the ROI of lobbying."
-              href="/contracts"
-              color="money-neutral"
-            />
-            <FeatureCard
-              icon={<Search className="h-6 w-6" />}
-              title="Entity Profiles"
-              description="Search any politician, corporation, or PAC. See their full financial profile — who funds them, who they fund, and what contracts they got."
-              href="/search"
-              color="accent"
-            />
-            <FeatureCard
-              icon={<Network className="h-6 w-6" />}
-              title="Power Networks"
-              description="Interactive network graphs show corporate structures, board overlaps, PAC connections, and the revolving door between industry and government."
-              href="/network"
-              color="entity-pac"
-            />
-            <FeatureCard
-              icon={<BookOpen className="h-6 w-6" />}
-              title="Investigations"
-              description="Long-form investigations into the defense pipeline, pharma lobbying, congressional insider trading, dark money, and the revolving door."
-              href="/stories"
-              color="money-in"
-            />
+          <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {PILLARS.map((pillar) => (
+              <PillarCard
+                key={pillar.href}
+                icon={<pillar.icon className="h-6 w-6" />}
+                title={pillar.title}
+                description={pillar.description}
+                href={pillar.href}
+                color={pillar.color}
+              />
+            ))}
           </div>
         </div>
       </section>
 
-      {/* The Corruption Loop */}
+      {/* Civic Engagement Framework — replaces corruption loop */}
       <section className="border-y-4 border-ink bg-ink text-white">
         <div className="mx-auto max-w-7xl px-4 py-24 lg:px-8">
           <div className="font-mono text-xs font-bold uppercase tracking-[0.3em] text-accent-light">
-            The Circle of Influence
+            The Civic Engagement Framework
           </div>
           <h2 className="mt-4 max-w-3xl font-headline text-4xl font-black tracking-tight lg:text-5xl">
-            How Money Corrupts the System
+            From Awareness to Action
           </h2>
+          <p className="mt-4 max-w-2xl text-lg text-white/60">
+            Democracy works when people participate. Here&apos;s how Daonra
+            helps you go from informed citizen to active participant.
+          </p>
 
           <div className="mt-16 grid gap-0 md:grid-cols-4">
-            <CorruptionStep
+            <EngagementStep
               step={1}
-              title="Donate"
-              description={`Corporations and wealthy individuals donate to PACs and Super PACs. We're tracking ${formatCompactMoney(stats.totalContributions)} in contributions.`}
+              title="Learn"
+              description="Understand how the system actually works — from campaign finance to how a bill becomes law. Knowledge is the first step."
             />
-            <CorruptionStep
+            <EngagementStep
               step={2}
-              title="Lobby"
-              description={`Lobbying firms are paid ${formatCompactMoney(stats.totalLobbying)} to influence legislation. The same corporations that donate also lobby.`}
+              title="Track"
+              description={`Follow ${formatCompactMoney(stats.totalContributions)} in contributions, ${formatCompactMoney(stats.totalLobbying)} in lobbying, and ${formatCompactMoney(stats.totalContracts)} in contracts. See where the money goes.`}
             />
-            <CorruptionStep
+            <EngagementStep
               step={3}
-              title="Legislate"
-              description="Politicians who receive the money write and vote on laws that affect the donors' industries."
+              title="Connect"
+              description="Find others who care. See what's working around the world. Learn from communities that have already solved these problems."
             />
-            <CorruptionStep
+            <EngagementStep
               step={4}
-              title="Contract"
-              description={`The federal government awards ${formatCompactMoney(stats.totalContracts)} in contracts — often to the same corporations that funded the campaigns.`}
+              title="Act"
+              description="Register to vote. Contact your reps. Attend a town hall. Run for office. Use our step-by-step guides to make your voice heard."
             />
           </div>
 
           <div className="mt-12 text-center">
             <Link
-              href="/money-flow"
+              href="/civics"
               className="inline-flex items-center gap-2 rounded-full border-2 border-white px-8 py-3.5 text-sm font-bold uppercase tracking-wider text-white transition-colors hover:bg-white hover:text-ink"
             >
-              See the Full Circle
+              Start Your Civic Journey
               <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
@@ -275,11 +298,11 @@ export default async function HomePage() {
               100% Public Data
             </div>
             <h2 className="mt-4 font-headline text-3xl font-black tracking-tight text-ink lg:text-4xl">
-              Every Dollar is a Public Record
+              Built on Transparency
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-lg text-muted">
-              All data comes from official government sources. Updated in
-              real-time. No paywalls. No editorializing. Just the numbers.
+              All financial data comes from official government sources. Updated
+              in real-time. No paywalls. No editorializing. Just the facts.
             </p>
           </div>
 
@@ -305,7 +328,7 @@ export default async function HomePage() {
   );
 }
 
-function FeatureCard({
+function PillarCard({
   icon,
   title,
   description,
@@ -326,7 +349,9 @@ function FeatureCard({
       <div className={`inline-flex rounded-lg bg-paper p-3 text-${color}`}>
         {icon}
       </div>
-      <h3 className="mt-4 font-headline text-xl font-bold text-ink">{title}</h3>
+      <h3 className="mt-4 font-headline text-xl font-bold text-ink">
+        {title}
+      </h3>
       <p className="mt-2 text-sm leading-relaxed text-muted">{description}</p>
       <div className="mt-4 flex items-center gap-1 text-xs font-bold uppercase tracking-wider text-accent opacity-0 transition-opacity group-hover:opacity-100">
         Explore <ArrowRight className="h-3 w-3" />
@@ -335,7 +360,7 @@ function FeatureCard({
   );
 }
 
-function CorruptionStep({
+function EngagementStep({
   step,
   title,
   description,

@@ -277,12 +277,12 @@ async function syncFromCongressGov() {
   let billsProcessed = 0;
   let billsCreated = 0;
 
-  // Fetch recent significant bills (limit to manageable set)
-  const billTypes = ["hr", "s"];
+  // Fetch recent significant bills
+  const billTypes = ["hr", "s", "sjres", "hjres", "sconres", "hconres", "sres", "hres"];
   for (const billType of billTypes) {
     try {
       const data = await fetchApi<any>(`/bill/${congress}/${billType}`, {
-        limit: 20,
+        limit: 250,
         sort: "updateDate+desc",
       });
 

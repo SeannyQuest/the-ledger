@@ -22,6 +22,10 @@ import {
   RefreshCw,
   Calculator,
   Factory,
+  Landmark,
+  Users,
+  ClipboardList,
+  Compass,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useMode } from "@/context/ModeContext";
@@ -31,18 +35,23 @@ import { SearchBar } from "./SearchBar";
 const NAV_ITEMS = {
   explore: [
     { label: "Money Map", href: "/money-flow", icon: BarChart3 },
-    { label: "Trades", href: "/trades", icon: TrendingUp },
+    { label: "How Power Works", href: "/how-power-works", icon: Landmark },
+    { label: "What's Working", href: "/whats-working", icon: Globe },
+    { label: "Collaboration", href: "/collaboration", icon: Users },
+    { label: "Scorecards", href: "/scorecards", icon: ClipboardList },
+    { label: "Civics", href: "/civics", icon: Compass },
     { label: "Legislation", href: "/legislation", icon: Scale },
-    { label: "Contracts", href: "/contracts", icon: Building2 },
-    { label: "ROI", href: "/roi", icon: Calculator },
-    { label: "Industries", href: "/industry", icon: Factory },
-    { label: "Network", href: "/network", icon: Network },
+    { label: "Trades", href: "/trades", icon: TrendingUp },
     { label: "Stories", href: "/stories", icon: BookOpen },
-    { label: "Guide", href: "/guide", icon: FileText },
     { label: "Search", href: "/search", icon: Search },
   ],
   research: [
     { label: "Money Flow", href: "/money-flow", icon: BarChart3 },
+    { label: "How Power Works", href: "/how-power-works", icon: Landmark },
+    { label: "What's Working", href: "/whats-working", icon: Globe },
+    { label: "Collaboration", href: "/collaboration", icon: Users },
+    { label: "Scorecards", href: "/scorecards", icon: ClipboardList },
+    { label: "Civics", href: "/civics", icon: Compass },
     { label: "Trades", href: "/trades", icon: TrendingUp },
     { label: "Legislation", href: "/legislation", icon: Scale },
     { label: "ROI", href: "/roi", icon: Calculator },
