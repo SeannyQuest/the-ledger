@@ -208,7 +208,7 @@ Deprioritize:
 For each story, return a JSON array. Each element must have:
 - index: the story's index in the input array
 - score: 1-10 (10 = must surface, 1 = skip)
-- whyItMatters: 1-2 sentences in Daonra voice. Direct, fact-first, no hysteria, no em dashes. Tell the reader exactly why this affects their life or matters to power dynamics.
+- whyItMatters: 1-2 sentences summarizing what the article is actually about. Plain, factual, no editorializing. Just tell the reader what happened.
 - category: "power-money" | "conflicts" | "environment" | "labor" | "abroad" | "accountability"
 - keepStory: true if score >= 5
 

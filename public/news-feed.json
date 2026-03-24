@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-24T02:54:28.863Z",
+  "lastUpdated": "2026-03-24T03:04:41.486Z",
   "mode": "full",
   "bannerStory": {
     "id": "3bf371b4efaf6b05",
@@ -9,7 +9,7 @@
     "category": "abroad",
     "publishedAt": "2026-03-23T22:18:03.000Z",
     "score": 10,
-    "whyItMatters": "The White House reportedly considering a US-backed leader for Iran represents a direct attempt at foreign interference, undermining national sovereignty and potentially escalating regional tensions."
+    "whyItMatters": "A report suggests the White House is considering Iran's parliament speaker Ghalibaf as a potential US-backed leader for the country."
   },
   "stories": [
     {
@@ -20,7 +20,17 @@
       "category": "conflicts",
       "publishedAt": "2026-03-23T21:43:55.000Z",
       "score": 10,
-      "whyItMatters": "An Israeli strike killing a medic in an ambulance in south Lebanon constitutes a potential war crime, directly impacting civilian safety and escalating conflict."
+      "whyItMatters": "An Israeli strike in south Lebanon killed a medic during an attack on an ambulance."
+    },
+    {
+      "id": "50f074b9b4dcf295",
+      "title": "Air strike hits Iraqi militia base south of Baghdad injuring four",
+      "url": "https://www.middleeasteye.net/live-blog/live-blog-update/air-strike-hits-iraqi-militia-base-south-baghdad-injuring-four",
+      "source": "Middle East Eye",
+      "category": "conflicts",
+      "publishedAt": "2026-03-23T23:13:33.000Z",
+      "score": 9,
+      "whyItMatters": "An air strike targeted an Iraqi militia base south of Baghdad, resulting in four injuries."
     },
     {
       "id": "4cc05086834b6ac9",
@@ -30,17 +40,7 @@
       "category": "conflicts",
       "publishedAt": "2026-03-23T22:24:01.000Z",
       "score": 9,
-      "whyItMatters": "Reports of explosions over Tehran signal a significant escalation in regional tensions, increasing the risk of wider conflict and instability."
-    },
-    {
-      "id": "70e45efacd7b6ba7",
-      "title": "Israeli fighter jets strike southern suburbs of Beirut",
-      "url": "https://www.middleeasteye.net/live-blog/live-blog-update/israeli-fighter-jets-strike-southern-suburbs-beirut",
-      "source": "Middle East Eye",
-      "category": "conflicts",
-      "publishedAt": "2026-03-23T20:17:03.000Z",
-      "score": 9,
-      "whyItMatters": "Israeli fighter jet strikes on Beirut's southern suburbs mark a significant escalation of conflict, increasing civilian risk and regional instability."
+      "whyItMatters": "Explosions were reported over Tehran, indicating potential security incidents or conflict escalation."
     },
     {
       "id": "a80fdb71013988a2",
@@ -49,18 +49,8 @@
       "source": "Declassified UK",
       "category": "abroad",
       "publishedAt": "2026-03-23T14:18:06.000Z",
-      "score": 8,
-      "whyItMatters": "Declassified UK documents reveal the UK viewed Israel as a primary obstacle to curbing Iran's nuclear ambitions, exposing historical geopolitical framings and potential Western biases."
-    },
-    {
-      "id": "b60034138bd6b916",
-      "title": "Israel's second-largest airline moves its operations to Jordan and Egypt",
-      "url": "https://www.middleeasteye.net/news/israels-second-largest-airline-moves-its-operations-jordan-and-egypt",
-      "source": "Middle East Eye",
-      "category": "conflicts",
-      "publishedAt": "2026-03-23T20:59:30.000Z",
-      "score": 7,
-      "whyItMatters": "Israel's second-largest airline relocating operations to Jordan and Egypt indicates significant economic disruption and regional instability caused by ongoing conflicts."
+      "score": 9,
+      "whyItMatters": "Declassified information reveals that the UK considered Israel to be the primary obstacle in efforts to curb Iran's nuclear ambitions."
     },
     {
       "id": "00c1ea2394b23bf0",
@@ -69,8 +59,18 @@
       "source": "Declassified UK",
       "category": "accountability",
       "publishedAt": "2026-03-23T09:00:00.000Z",
+      "score": 8,
+      "whyItMatters": "Internal police guidance regarding the chanting of 'death to the IDF' has been revealed."
+    },
+    {
+      "id": "b60034138bd6b916",
+      "title": "Israel's second-largest airline moves its operations to Jordan and Egypt",
+      "url": "https://www.middleeasteye.net/news/israels-second-largest-airline-moves-its-operations-jordan-and-egypt",
+      "source": "Middle East Eye",
+      "category": "abroad",
+      "publishedAt": "2026-03-23T20:59:30.000Z",
       "score": 7,
-      "whyItMatters": "Internal police guidance on chanting 'death to the IDF' reveals how state power manages public dissent and freedom of speech regarding international conflicts."
+      "whyItMatters": "Israel's second-largest airline has relocated its operations to Jordan and Egypt."
     }
   ]
 }
