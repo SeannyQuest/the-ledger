@@ -1,4 +1,4 @@
-import { Compass, ArrowRight } from "lucide-react";
+import { Compass, ArrowRight, Vote } from "lucide-react";
 import Link from "next/link";
 
 export default function CivicsPage() {
@@ -17,7 +17,25 @@ export default function CivicsPage() {
           office — we&apos;ve got you covered.
         </p>
 
-        <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        {/* Elections banner */}
+        <Link
+          href="/elections"
+          className="group mt-16 flex items-center gap-5 rounded-xl border-2 border-accent/30 bg-surface p-6 transition-colors hover:border-accent"
+        >
+          <Vote className="h-8 w-8 shrink-0 text-accent" />
+          <div className="flex-1">
+            <h3 className="font-headline text-xl font-bold text-ink">
+              Upcoming Elections
+            </h3>
+            <p className="mt-1 text-sm leading-relaxed text-muted">
+              See what is on your ballot in 2026. Primaries, generals, and
+              special elections.
+            </p>
+          </div>
+          <ArrowRight className="h-5 w-5 shrink-0 text-accent transition-transform group-hover:translate-x-1" />
+        </Link>
+
+        <div className="mt-8 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {/* Register to Vote — live */}
           <Link
             href="/civics/register"
