@@ -90,13 +90,26 @@ export default function CivicsPage() {
             </div>
           </Link>
 
+          {/* Run for Local Office — live */}
+          <Link
+            href="/civics/run-for-office"
+            className="group rounded-xl border border-border bg-surface p-6 transition-colors hover:border-ink"
+          >
+            <Compass className="h-6 w-6 text-accent" />
+            <h3 className="mt-4 font-headline text-xl font-bold text-ink">
+              Run for Local Office
+            </h3>
+            <p className="mt-2 text-sm leading-relaxed text-muted">
+              A practical guide to running for school board, city council, or
+              county commission — from filing to fundraising.
+            </p>
+            <div className="mt-4 inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-accent transition-colors group-hover:text-ink">
+              Get Started <ArrowRight className="h-3.5 w-3.5" />
+            </div>
+          </Link>
+
           {/* Remaining cards — coming soon */}
           {[
-            {
-              title: "Run for Local Office",
-              description:
-                "A practical guide to running for school board, city council, or county commission — from filing to fundraising.",
-            },
             {
               title: "Start a Petition",
               description:
