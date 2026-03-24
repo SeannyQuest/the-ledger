@@ -2,6 +2,7 @@
 
 # dependencies
 /node_modules
+agents/news-agent/node_modules
 /.pnp
 .pnp.*
 .yarn/*
