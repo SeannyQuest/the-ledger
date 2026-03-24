@@ -72,13 +72,26 @@ export default function CivicsPage() {
             </div>
           </Link>
 
+          {/* Attend a Town Hall — live */}
+          <Link
+            href="/civics/town-halls"
+            className="group rounded-xl border border-border bg-surface p-6 transition-colors hover:border-ink"
+          >
+            <Compass className="h-6 w-6 text-accent" />
+            <h3 className="mt-4 font-headline text-xl font-bold text-ink">
+              Attend a Town Hall
+            </h3>
+            <p className="mt-2 text-sm leading-relaxed text-muted">
+              How to find upcoming town halls, what to expect, and how to ask
+              questions that get real answers.
+            </p>
+            <div className="mt-4 inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-accent transition-colors group-hover:text-ink">
+              Get Started <ArrowRight className="h-3.5 w-3.5" />
+            </div>
+          </Link>
+
           {/* Remaining cards — coming soon */}
           {[
-            {
-              title: "Attend a Town Hall",
-              description:
-                "How to find upcoming town halls, what to expect, and how to ask questions that get real answers.",
-            },
             {
               title: "Run for Local Office",
               description:
