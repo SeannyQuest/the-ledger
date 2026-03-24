@@ -36,13 +36,26 @@ export default function CivicsPage() {
             </div>
           </Link>
 
+          {/* Contact Your Representatives — live */}
+          <Link
+            href="/civics/contact"
+            className="group rounded-xl border border-border bg-surface p-6 transition-colors hover:border-ink"
+          >
+            <Compass className="h-6 w-6 text-accent" />
+            <h3 className="mt-4 font-headline text-xl font-bold text-ink">
+              Contact Your Representatives
+            </h3>
+            <p className="mt-2 text-sm leading-relaxed text-muted">
+              Find your reps at every level. Templates for calls, emails, and
+              letters that actually get read.
+            </p>
+            <div className="mt-4 inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-accent transition-colors group-hover:text-ink">
+              Get Started <ArrowRight className="h-3.5 w-3.5" />
+            </div>
+          </Link>
+
           {/* Remaining cards — coming soon */}
           {[
-            {
-              title: "Contact Your Representatives",
-              description:
-                "Find your reps at every level. Templates for calls, emails, and letters that actually get read.",
-            },
             {
               title: "Attend a Town Hall",
               description:
