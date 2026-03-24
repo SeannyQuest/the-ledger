@@ -1,5 +1,4 @@
 import { XMLParser } from "fast-xml-parser";
-import Anthropic from "@anthropic-ai/sdk";
 import { createHash } from "crypto";
 import { readFileSync, writeFileSync, existsSync } from "fs";
 import { fileURLToPath } from "url";
@@ -48,16 +47,14 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const OUTPUT_PATH = resolve(__dirname, "../../public/news-feed.json");
 
-const apiKey = process.env.ANTHROPIC_API_KEY;
+const apiKey = process.env.GOOGLE_AI_API_KEY;
 if (!apiKey) {
   console.error(
-    "ERROR: ANTHROPIC_API_KEY is not set.\n" +
-      "Set it in your shell environment or create agents/news-agent/.env with ANTHROPIC_API_KEY=sk-..."
+    "ERROR: GOOGLE_AI_API_KEY is not set.\n" +
+      "Set it in your shell environment or add GOOGLE_AI_API_KEY=your-key to .env.local"
   );
   process.exit(1);
 }
-
-const anthropic = new Anthropic({ apiKey });
 
 const args = process.argv.slice(2);
 const modeArg = args.find((a) => a.startsWith("--mode="));
@@ -213,7 +210,7 @@ For each story, return a JSON array. Each element must have:
 - score: 1-10 (10 = must surface, 1 = skip)
 - whyItMatters: 1-2 sentences in Daonra voice. Direct, fact-first, no hysteria, no em dashes. Tell the reader exactly why this affects their life or matters to power dynamics.
 - category: "power-money" | "conflicts" | "environment" | "labor" | "abroad" | "accountability"
-- keepStory: true if score >= 6
+- keepStory: true if score >= 5
 
 Return ONLY a JSON array, no other text.`;
 
@@ -224,6 +221,23 @@ type LLMResult = {
   category: string;
   keepStory: boolean;
 };
+
+async function geminiScore(storyList: string, batchSize: number): Promise<string> {
+  const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`;
+  const body = {
+    system_instruction: { parts: [{ text: SYSTEM_PROMPT }] },
+    contents: [{ parts: [{ text: `Score these ${batchSize} stories:\n\n${storyList}` }] }],
+    generationConfig: { temperature: 0.2, maxOutputTokens: 2048 },
+  };
+  const res = await fetch(url, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(body),
+  });
+  const data: any = await res.json();
+  if (data.error) throw new Error(data.error.message);
+  return data.candidates?.[0]?.content?.parts?.[0]?.text || "";
+}
 
 async function scoreStories(items: RawItem[]): Promise<LLMResult[]> {
   const batches: RawItem[][] = [];
@@ -240,33 +254,21 @@ async function scoreStories(items: RawItem[]): Promise<LLMResult[]> {
     const storyList = batch
       .map(
         (item, i) =>
-          `[${i}] "${item.title}" (${item.source}) — ${(item.description || "").slice(0, 200)}`
+          `[${i}] "${item.title}" (${item.source}) — ${(typeof item.description === "string" ? item.description : "").slice(0, 200)}`
       )
       .join("\n");
 
     try {
-      const response = await anthropic.messages.create({
-        model: "claude-haiku-4-5-20251001",
-        max_tokens: 2048,
-        system: SYSTEM_PROMPT,
-        messages: [
-          {
-            role: "user",
-            content: `Score these ${batch.length} stories:\n\n${storyList}`,
-          },
-        ],
-      });
-
-      const text =
-        response.content[0].type === "text" ? response.content[0].text : "";
+      const text = await geminiScore(storyList, batch.length);
 
       // Extract JSON from response (handle markdown code blocks)
       const jsonMatch = text.match(/\[[\s\S]*\]/);
       if (jsonMatch) {
         const results: LLMResult[] = JSON.parse(jsonMatch[0]);
-        // Re-index to global offset
         for (const r of results) {
           r.index = r.index + offset;
+          // Derive keepStory from score — don't trust LLM's boolean
+          r.keepStory = r.score >= 5;
           allResults.push(r);
         }
       }
