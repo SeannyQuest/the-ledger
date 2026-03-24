@@ -26,6 +26,7 @@ import {
   Users,
   ClipboardList,
   Compass,
+  Newspaper,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useMode } from "@/context/ModeContext";
@@ -42,6 +43,7 @@ const NAV_ITEMS = {
     { label: "Civics", href: "/civics", icon: Compass },
     { label: "Legislation", href: "/legislation", icon: Scale },
     { label: "Trades", href: "/trades", icon: TrendingUp },
+    { label: "News", href: "/news", icon: Newspaper },
     { label: "Stories", href: "/stories", icon: BookOpen },
     { label: "Search", href: "/search", icon: Search },
   ],
@@ -53,6 +55,7 @@ const NAV_ITEMS = {
     { label: "Scorecards", href: "/scorecards", icon: ClipboardList },
     { label: "Civics", href: "/civics", icon: Compass },
     { label: "Trades", href: "/trades", icon: TrendingUp },
+    { label: "News", href: "/news", icon: Newspaper },
     { label: "Legislation", href: "/legislation", icon: Scale },
     { label: "ROI", href: "/roi", icon: Calculator },
     { label: "Industries", href: "/industry", icon: Factory },
