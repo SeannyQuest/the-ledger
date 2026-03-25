@@ -40,7 +40,11 @@ interface FlaggedTrade {
 }
 
 export async function GET() {
+  // Cap to 2 most recent years — alerts are by definition about recent activity
+  const cutoff = new Date(new Date().getFullYear() - 2, 0, 1);
+
   const trades = await prisma.congressionalTrade.findMany({
+    where: { txDate: { gte: cutoff } },
     include: {
       entity: {
         select: {
@@ -173,7 +177,8 @@ export async function GET() {
 
   // Sort by severity: most flags first, then by delay days desc
   flaggedTrades.sort((a, b) => {
-    if (b.flags.length !== a.flags.length) return b.flags.length - a.flags.length;
+    if (b.flags.length !== a.flags.length)
+      return b.flags.length - a.flags.length;
     return b.delayDays - a.delayDays;
   });
 
@@ -186,9 +191,7 @@ export async function GET() {
         )
       : 0;
   const largestTrade =
-    totalFlagged > 0
-      ? Math.max(...flaggedTrades.map((t) => t.amountHigh))
-      : 0;
+    totalFlagged > 0 ? Math.max(...flaggedTrades.map((t) => t.amountHigh)) : 0;
 
   const lateDisclosureCount = flaggedTrades.filter((t) =>
     t.flags.includes("LATE_DISCLOSURE"),

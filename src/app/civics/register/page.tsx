@@ -1,4 +1,11 @@
+import type { Metadata } from "next";
 import VoterRegistration from "@/components/civics/VoterRegistration";
+
+export const metadata: Metadata = {
+  title: "Register to Vote | Daonra",
+  description:
+    "Check your voter registration status, find your polling place, and register to vote in all 50 states.",
+};
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 

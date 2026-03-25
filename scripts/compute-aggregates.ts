@@ -119,7 +119,9 @@ async function computeAggregates() {
 
       upserted++;
       if (upserted % 100 === 0) {
-        console.log(`  Upserted ${upserted}/${aggregates.length} aggregates...`);
+        console.log(
+          `  Upserted ${upserted}/${aggregates.length} aggregates...`,
+        );
       }
     }
 
@@ -130,7 +132,7 @@ async function computeAggregates() {
     await prisma.syncLog.update({
       where: { id: syncLog.id },
       data: {
-        status: "SUCCESS",
+        status: "COMPLETED",
         completedAt: new Date(),
         recordsProcessed: aggregates.length,
         recordsCreated: upserted,
@@ -187,7 +189,7 @@ async function updateEntityTotals() {
       SELECT source_entity_id as entity_id, SUM(amount) as total
       FROM money_transactions
       WHERE source_entity_id IS NOT NULL
-        AND transaction_type IN ('CONTRIBUTION', 'STATE_CONTRIBUTION')
+        AND transaction_type IN ('INDIVIDUAL_CONTRIBUTION', 'PAC_CONTRIBUTION', 'PARTY_CONTRIBUTION', 'CANDIDATE_CONTRIBUTION', 'CORPORATE_CONTRIBUTION')
       GROUP BY source_entity_id
     ) sub
     WHERE e.id = sub.entity_id

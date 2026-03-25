@@ -1,5 +1,12 @@
+import type { Metadata } from "next";
 import { ClipboardList, ArrowRight } from "lucide-react";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Scorecards | Daonra",
+  description:
+    "Hold power accountable. Voting records, stock trade tracking, donor maps, attendance scores, and promise tracking for every member of Congress.",
+};
 
 export default function ScorecardsPage() {
   return (
@@ -13,7 +20,8 @@ export default function ScorecardsPage() {
         </h1>
         <p className="mt-6 max-w-2xl text-xl leading-relaxed text-ink/70">
           Voting records, stock trades, donor maps, and attendance scores. See
-          how your representatives actually perform — not just what they promise.
+          how your representatives actually perform — not just what they
+          promise.
         </p>
 
         <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">

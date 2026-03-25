@@ -11,8 +11,11 @@ import { prisma } from "@/lib/prisma";
  * - Summary stats
  */
 export async function GET() {
-  // Get all trades with entity info
+  // Cap to 3 most recent years to avoid unbounded table scans at scale
+  const cutoff = new Date(new Date().getFullYear() - 3, 0, 1);
+
   const trades = await prisma.congressionalTrade.findMany({
+    where: { txDate: { gte: cutoff } },
     include: {
       entity: {
         select: {
@@ -25,6 +28,7 @@ export async function GET() {
         },
       },
     },
+    orderBy: { txDate: "desc" },
   });
 
   if (trades.length === 0) {

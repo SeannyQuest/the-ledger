@@ -1,13 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import {
-  Loader2,
-  ArrowRight,
-  RefreshCw,
-  Clock,
-  Briefcase,
-} from "lucide-react";
+import { Loader2, ArrowRight, RefreshCw, Clock, Briefcase } from "lucide-react";
 import { ENTITY_COLORS } from "@/lib/constants";
 import { cn, formatNumber } from "@/lib/utils";
 import Link from "next/link";
@@ -145,8 +139,8 @@ export default function RevolvingDoorPage() {
           </h1>
           <p className="mt-4 max-w-xl text-lg text-muted">
             Government officials leave for lobbying firms and corporations, then
-            return to government. Track the revolving door between public service
-            and private interest.
+            return to government. Track the revolving door between public
+            service and private interest.
           </p>
         </div>
 
@@ -340,32 +334,33 @@ export default function RevolvingDoorPage() {
         {!loading && data && view === "timeline" && (
           <div className="space-y-10">
             {/* Top Industries sidebar */}
-            {data.stats.topIndustries && data.stats.topIndustries.length > 0 && (
-              <div className="rounded-lg border border-border bg-surface p-5">
-                <h3 className="font-headline text-lg font-bold text-ink">
-                  Top Destination Industries
-                </h3>
-                <p className="mt-1 text-xs text-muted">
-                  Where government officials go when they leave public service
-                </p>
-                <div className="mt-4 flex flex-wrap gap-2">
-                  {data.stats.topIndustries.map((ind) => (
-                    <div
-                      key={ind.industry}
-                      className="flex items-center gap-2 rounded-md border border-border bg-paper px-3 py-1.5"
-                    >
-                      <Briefcase className="h-3 w-3 text-muted" />
-                      <span className="text-xs font-medium text-ink">
-                        {ind.industry}
-                      </span>
-                      <span className="font-mono text-[10px] font-bold text-accent">
-                        {formatNumber(ind.count)}
-                      </span>
-                    </div>
-                  ))}
+            {data.stats.topIndustries &&
+              data.stats.topIndustries.length > 0 && (
+                <div className="rounded-lg border border-border bg-surface p-5">
+                  <h3 className="font-headline text-lg font-bold text-ink">
+                    Top Destination Industries
+                  </h3>
+                  <p className="mt-1 text-xs text-muted">
+                    Where government officials go when they leave public service
+                  </p>
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {data.stats.topIndustries.map((ind) => (
+                      <div
+                        key={ind.industry}
+                        className="flex items-center gap-2 rounded-md border border-border bg-paper px-3 py-1.5"
+                      >
+                        <Briefcase className="h-3 w-3 text-muted" />
+                        <span className="text-xs font-medium text-ink">
+                          {ind.industry}
+                        </span>
+                        <span className="font-mono text-[10px] font-bold text-accent">
+                          {formatNumber(ind.count)}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-              </div>
-            )}
+              )}
 
             {/* Timeline legend */}
             <div className="flex items-center gap-6">
@@ -451,11 +446,12 @@ export default function RevolvingDoorPage() {
       {/* Methodology */}
       <div className="mt-12 rounded-lg border border-border bg-surface/50 px-4 py-3">
         <p className="font-mono text-xs text-muted">
-          Revolving door data is derived from entity relationship records in The
-          Ledger. Cross-sector transitions are identified when employment or board
-          membership links connect government entities (politicians, agencies)
-          with private entities (corporations, lobbying firms). Timelines show
-          the full career path of individuals who have moved between sectors.
+          Revolving door data is derived from entity relationship records in
+          Daonra. Cross-sector transitions are identified when employment or
+          board membership links connect government entities (politicians,
+          agencies) with private entities (corporations, lobbying firms).
+          Timelines show the full career path of individuals who have moved
+          between sectors.
         </p>
       </div>
     </div>
@@ -524,7 +520,9 @@ function CareerTimeline({ timeline }: { timeline: PersonTimeline }) {
 
                   {/* Role */}
                   {pos.role && (
-                    <span className="mt-0.5 text-xs text-muted">{pos.role}</span>
+                    <span className="mt-0.5 text-xs text-muted">
+                      {pos.role}
+                    </span>
                   )}
 
                   {/* Industry */}

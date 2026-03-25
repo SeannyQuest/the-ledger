@@ -1,5 +1,12 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, ExternalLink } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Run for Office | Daonra",
+  description:
+    "A practical guide to running for local, state, and federal office. Requirements, deadlines, fundraising rules, and resources for first-time candidates.",
+};
 
 export default function RunForOfficePage() {
   return (
@@ -35,10 +42,10 @@ export default function RunForOfficePage() {
               how your tax dollars get spent.
             </p>
             <p>
-              Water boards, utility districts, and port authorities run essential
-              infrastructure with almost no public attention. Billions of dollars
-              flow through these bodies annually. Most voters cannot name a
-              single member.
+              Water boards, utility districts, and port authorities run
+              essential infrastructure with almost no public attention. Billions
+              of dollars flow through these bodies annually. Most voters cannot
+              name a single member.
             </p>
             <p>
               State legislature seats in many states pay $0 and require no prior

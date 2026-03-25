@@ -37,6 +37,14 @@ const MONTHS = [
   { label: "Oct", value: "10" },
 ];
 
+const today = new Date();
+today.setHours(0, 0, 0, 0);
+
+function isPast(iso: string): boolean {
+  if (!iso) return false;
+  return new Date(iso + "T12:00:00") < today;
+}
+
 export default function PrimaryCalendar() {
   const [filter, setFilter] = useState("all");
 
@@ -70,34 +78,48 @@ export default function PrimaryCalendar() {
 
       {/* Grid */}
       <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-        {filtered.map((s) => (
-          <div
-            key={s.abbr}
-            className="rounded-xl border border-border bg-surface p-5 transition-colors hover:border-ink/30"
-          >
-            <div className="flex items-start justify-between gap-2">
-              <h3 className="font-headline text-lg font-bold text-ink">
-                {s.state}
-              </h3>
-              <span className="shrink-0 font-mono text-xs font-bold text-muted">
-                {s.abbr}
-              </span>
-            </div>
-            <p className="mt-2 text-sm font-medium text-ink/70">
-              {formatPrimaryDate(s.primaryDate)}
-            </p>
-            <span
-              className={`mt-3 inline-block rounded-full px-2.5 py-0.5 font-mono text-xs font-bold uppercase tracking-wider ${TYPE_STYLES[s.primaryType]}`}
+        {filtered.map((s) => {
+          const past = isPast(s.primaryDate);
+          return (
+            <div
+              key={s.abbr}
+              className={`rounded-xl border p-5 transition-colors ${
+                past
+                  ? "border-border/50 bg-surface/40 opacity-60"
+                  : "border-border bg-surface hover:border-ink/30"
+              }`}
             >
-              {TYPE_LABELS[s.primaryType]}
-            </span>
-            {s.notes && (
-              <p className="mt-2 text-xs leading-relaxed text-muted">
-                {s.notes}
+              <div className="flex items-start justify-between gap-2">
+                <h3 className="font-headline text-lg font-bold text-ink">
+                  {s.state}
+                </h3>
+                <span className="shrink-0 font-mono text-xs font-bold text-muted">
+                  {s.abbr}
+                </span>
+              </div>
+              <p className="mt-2 text-sm font-medium text-ink/70">
+                {formatPrimaryDate(s.primaryDate)}
               </p>
-            )}
-          </div>
-        ))}
+              <div className="mt-3 flex flex-wrap gap-2">
+                <span
+                  className={`inline-block rounded-full px-2.5 py-0.5 font-mono text-xs font-bold uppercase tracking-wider ${TYPE_STYLES[s.primaryType]}`}
+                >
+                  {TYPE_LABELS[s.primaryType]}
+                </span>
+                {past && (
+                  <span className="inline-block rounded-full bg-muted/20 px-2.5 py-0.5 font-mono text-xs font-bold uppercase tracking-wider text-muted">
+                    Completed
+                  </span>
+                )}
+              </div>
+              {s.notes && (
+                <p className="mt-2 text-xs leading-relaxed text-muted">
+                  {s.notes}
+                </p>
+              )}
+            </div>
+          );
+        })}
       </div>
 
       {filtered.length === 0 && (

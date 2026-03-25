@@ -1,5 +1,12 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, ExternalLink } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Town Halls | Daonra",
+  description:
+    "Find upcoming town halls with your elected officials. Show up, ask questions, and hold your representatives accountable.",
+};
 
 export default function TownHallsPage() {
   return (
@@ -133,9 +140,7 @@ export default function TownHallsPage() {
             </li>
             <li className="flex items-start gap-3">
               <span className="mt-0.5 font-bold text-accent">&bull;</span>
-              <span>
-                They can get heated. That is normal and legal.
-              </span>
+              <span>They can get heated. That is normal and legal.</span>
             </li>
           </ul>
         </div>
@@ -153,8 +158,8 @@ export default function TownHallsPage() {
             <li className="flex items-start gap-3">
               <span className="mt-0.5 font-bold text-accent">&bull;</span>
               <span>
-                <strong className="text-ink">One issue per question.</strong>{" "}
-                Do not combine three things into one ask.
+                <strong className="text-ink">One issue per question.</strong> Do
+                not combine three things into one ask.
               </span>
             </li>
             <li className="flex items-start gap-3">
@@ -187,8 +192,7 @@ export default function TownHallsPage() {
               <span>
                 <strong className="text-ink">If they dodge,</strong> you can
                 politely follow up once: &ldquo;I just want to make sure I
-                understand your position. Are you a yes or a no on
-                this?&rdquo;
+                understand your position. Are you a yes or a no on this?&rdquo;
               </span>
             </li>
           </ul>
@@ -249,8 +253,8 @@ export default function TownHallsPage() {
             <li className="flex items-start gap-3">
               <span className="mt-0.5 font-bold text-accent">&bull;</span>
               <span>
-                <strong className="text-ink">Document the absence.</strong>{" "}
-                Town Hall Project tracks this. Media outlets cover patterns of
+                <strong className="text-ink">Document the absence.</strong> Town
+                Hall Project tracks this. Media outlets cover patterns of
                 avoidance.
               </span>
             </li>
@@ -293,7 +297,9 @@ export default function TownHallsPage() {
             <li className="flex items-start gap-3">
               <span className="mt-0.5 font-bold text-accent">&bull;</span>
               <span>
-                <strong className="text-ink">You have a right to be there.</strong>{" "}
+                <strong className="text-ink">
+                  You have a right to be there.
+                </strong>{" "}
                 These are public events paid for with public money.
               </span>
             </li>
@@ -307,14 +313,18 @@ export default function TownHallsPage() {
             <li className="flex items-start gap-3">
               <span className="mt-0.5 font-bold text-accent">&bull;</span>
               <span>
-                <strong className="text-ink">Let others ask questions too.</strong>{" "}
+                <strong className="text-ink">
+                  Let others ask questions too.
+                </strong>{" "}
                 You are not the only constituent in the room.
               </span>
             </li>
             <li className="flex items-start gap-3">
               <span className="mt-0.5 font-bold text-accent">&bull;</span>
               <span>
-                <strong className="text-ink">Recording is generally legal</strong>{" "}
+                <strong className="text-ink">
+                  Recording is generally legal
+                </strong>{" "}
                 in public meetings. Know your state&apos;s rules on recording
                 consent.
               </span>

@@ -27,7 +27,7 @@ async function fetchSummary(title: string): Promise<WikiSummary | null> {
   const encoded = encodeURIComponent(title.replace(/ /g, "_"));
   try {
     const res = await fetch(`${WIKI_API}/page/summary/${encoded}`, {
-      headers: { "User-Agent": "TheLedger/1.0 (campaign-finance-tracker)" },
+      headers: { "User-Agent": "Daonra/1.0 (campaign-finance-tracker)" },
       next: { revalidate: 86400 }, // Cache for 24h
     });
     if (!res.ok) return null;
@@ -48,7 +48,7 @@ async function searchWikipedia(query: string): Promise<string | null> {
     const res = await fetch(
       `https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=${encoded}&srlimit=3&format=json`,
       {
-        headers: { "User-Agent": "TheLedger/1.0 (campaign-finance-tracker)" },
+        headers: { "User-Agent": "Daonra/1.0 (campaign-finance-tracker)" },
         next: { revalidate: 86400 },
       },
     );
@@ -68,7 +68,12 @@ async function searchWikipedia(query: string): Promise<string | null> {
 function buildSearchQueries(
   name: string,
   entityType: string,
-  meta: { state?: string | null; party?: string | null; office?: string | null; industry?: string | null },
+  meta: {
+    state?: string | null;
+    party?: string | null;
+    office?: string | null;
+    industry?: string | null;
+  },
 ): string[] {
   const queries: string[] = [];
   const type = entityType.toUpperCase();

@@ -2,6 +2,8 @@ import { readFileSync, existsSync } from "fs";
 import { resolve } from "path";
 import { NewsPage } from "@/components/news/NewsPage";
 
+export const dynamic = "force-dynamic";
+
 export const metadata = {
   title: "News | Daonra",
   description:

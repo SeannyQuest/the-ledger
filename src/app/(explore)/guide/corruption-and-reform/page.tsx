@@ -187,8 +187,8 @@ export default function CorruptionAndReformPage() {
             The question this chapter confronts is the one that has haunted
             every page of this guide: if 75-80% of Americans want reform, and
             every major democracy on Earth has stricter rules than we do, why
-            can&apos;t we fix this? The answer, as with everything else in The
-            Ledger, follows the money.
+            can&apos;t we fix this? The answer, as with everything else in
+            Daonra, follows the money.
           </p>
         </div>
       </section>
@@ -917,9 +917,9 @@ export default function CorruptionAndReformPage() {
             The corruption described in this chapter is bipartisan and systemic.
             But so is the resistance. From New York City&apos;s 8:1 small-donor
             matching to state-level disclosure laws, reformers are proving that
-            alternatives exist. Daonra&apos;s interactive tools let you
-            trace the connections yourself — follow the money flows, calculate
-            the return on lobbying investments, and track the trades your
+            alternatives exist. Daonra&apos;s interactive tools let you trace
+            the connections yourself — follow the money flows, calculate the
+            return on lobbying investments, and track the trades your
             representatives make while writing the laws that govern your life.
           </p>
           <p className="mx-auto mt-4 max-w-xl text-base text-white/40">

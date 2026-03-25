@@ -1,4 +1,11 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Daonra | Follow the Money. Name What You See.",
+  description:
+    "Track money in politics, congressional stock trades, lobbying, and government contracts. Daonra makes power transparent.",
+};
 import {
   ArrowRight,
   Landmark,
@@ -117,8 +124,8 @@ export default async function HomePage() {
         <div className="mx-auto max-w-7xl px-4 py-24 lg:px-8 lg:py-32">
           {/* Masthead */}
           <div className="font-mono text-xs font-bold uppercase tracking-[0.3em] text-accent">
-            Follow the Money &middot; Name What You See &middot; Change What
-            You Can
+            Follow the Money &middot; Name What You See &middot; Change What You
+            Can
           </div>
 
           {/* Headline */}
@@ -376,9 +383,7 @@ function PillarCard({
       <div className={`inline-flex rounded-lg bg-paper p-3 text-${color}`}>
         {icon}
       </div>
-      <h3 className="mt-4 font-headline text-xl font-bold text-ink">
-        {title}
-      </h3>
+      <h3 className="mt-4 font-headline text-xl font-bold text-ink">{title}</h3>
       <p className="mt-2 text-sm leading-relaxed text-muted">{description}</p>
       <div className="mt-4 flex items-center gap-1 text-xs font-bold uppercase tracking-wider text-accent opacity-0 transition-opacity group-hover:opacity-100">
         Explore <ArrowRight className="h-3 w-3" />

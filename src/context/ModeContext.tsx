@@ -1,6 +1,13 @@
 "use client";
 
-import { createContext, useContext, useState, useCallback, useEffect, type ReactNode } from "react";
+import {
+  createContext,
+  useContext,
+  useState,
+  useCallback,
+  useEffect,
+  type ReactNode,
+} from "react";
 import type { AppMode } from "@/types";
 
 interface ModeContextValue {
@@ -17,7 +24,7 @@ export function ModeProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     const stored = document.cookie
       .split("; ")
-      .find((row) => row.startsWith("ledger-mode="))
+      .find((row) => row.startsWith("daonra-mode="))
       ?.split("=")[1];
     if (stored === "explore" || stored === "research") {
       setModeState(stored);
@@ -26,7 +33,7 @@ export function ModeProvider({ children }: { children: ReactNode }) {
 
   const setMode = useCallback((newMode: AppMode) => {
     setModeState(newMode);
-    document.cookie = `ledger-mode=${newMode};path=/;max-age=${60 * 60 * 24 * 365}`;
+    document.cookie = `daonra-mode=${newMode};path=/;max-age=${60 * 60 * 24 * 365}`;
   }, []);
 
   const toggleMode = useCallback(() => {

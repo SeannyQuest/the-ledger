@@ -740,20 +740,8 @@ function VotingTab({
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`/api/legislation?sponsorId=${entityId}&limit=100`)
+    fetch(`/api/votes?entityId=${entityId}&limit=100`)
       .then((r) => r.json())
-      .then((data) => {
-        // Also fetch votes cast by this entity
-        return fetch(`/api/entity/${entityId}/votes`)
-          .then((r) => {
-            if (!r.ok) throw new Error();
-            return r.json();
-          })
-          .catch(() => {
-            // If no dedicated votes endpoint, show sponsored bills
-            return { votes: [] };
-          });
-      })
       .then((data) => setVotes(data.votes ?? []))
       .catch(() => {})
       .finally(() => setLoading(false));

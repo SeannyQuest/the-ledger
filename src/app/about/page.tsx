@@ -1,4 +1,11 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Methodology & Data Sources | Daonra",
+  description:
+    "How Daonra tracks money in politics. Data sources include FEC, OpenSecrets, USASpending, Congress.gov, and SEC disclosures.",
+};
 import {
   Database,
   Shield,
@@ -92,9 +99,9 @@ export default function AboutPage() {
         <div className="mx-auto max-w-3xl px-4 py-16 lg:px-8">
           <div className="drop-cap">
             <p className="text-lg leading-relaxed text-ink/80">
-              Daonra exists because no single platform connects the full
-              money path in American politics: Corporation donates to PAC, PAC
-              funds Candidate, Candidate awards Government Contract back to
+              Daonra exists because no single platform connects the full money
+              path in American politics: Corporation donates to PAC, PAC funds
+              Candidate, Candidate awards Government Contract back to
               Corporation. Existing tools (OpenSecrets, FEC.gov, LittleSis,
               USASpending) each cover one slice but force users to toggle
               between five websites. We built Daonra to close that gap.
@@ -236,11 +243,13 @@ export default function AboutPage() {
                   significant delays.
                 </p>
                 <p>
-                  <strong className="text-ink">Entity Resolution Errors.</strong>{" "}
+                  <strong className="text-ink">
+                    Entity Resolution Errors.
+                  </strong>{" "}
                   Despite best efforts, some entities may be incorrectly merged
-                  or remain unlinked. Contributions from &ldquo;John Smith&rdquo;
-                  in different states may be different people, or the same person
-                  filing under variations of their name.
+                  or remain unlinked. Contributions from &ldquo;John
+                  Smith&rdquo; in different states may be different people, or
+                  the same person filing under variations of their name.
                 </p>
               </div>
             </div>
@@ -276,8 +285,8 @@ export default function AboutPage() {
                 </p>
                 <p>
                   <strong className="text-ink">Free and open.</strong> This
-                  platform is free to use. All source data is publicly available.
-                  We believe sunlight is the best disinfectant.
+                  platform is free to use. All source data is publicly
+                  available. We believe sunlight is the best disinfectant.
                 </p>
               </div>
             </div>

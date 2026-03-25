@@ -1,5 +1,12 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, CalendarDays, Vote, Landmark } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Elections | Daonra",
+  description:
+    "Know what's on your ballot. Primary calendars, election board lookup, notable 2026 races, and voter registration resources.",
+};
 import PrimaryCalendar from "@/components/elections/PrimaryCalendar";
 import ElectionBoardFinder from "@/components/elections/ElectionBoardFinder";
 import { notableRaces, type Race } from "@/lib/elections-data";
@@ -55,7 +62,7 @@ async function getUpcomingElections(): Promise<CivicElection[]> {
   try {
     const res = await fetch(
       `https://www.googleapis.com/civicinfo/v2/elections?key=${apiKey}`,
-      { next: { revalidate: 3600 } }
+      { next: { revalidate: 3600 } },
     );
     if (!res.ok) return [];
     const data = await res.json();
@@ -122,8 +129,8 @@ export default async function ElectionsPage() {
           ) : (
             <div className="mt-10 rounded-xl border border-border bg-surface p-8 text-center">
               <p className="text-sm text-muted">
-                Check back soon — upcoming elections will appear here as they are
-                confirmed.
+                Check back soon — upcoming elections will appear here as they
+                are confirmed.
               </p>
             </div>
           )}

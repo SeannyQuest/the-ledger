@@ -26,42 +26,31 @@ export async function GET(request: NextRequest) {
     prisma.nonprofitFiling.count({ where: where as any }),
   ]);
 
-  // Aggregate by organization (latest filing per org)
-  const orgMap = new Map<
-    string,
-    {
-      ein: string;
-      name: string;
-      latestRevenue: number;
-      latestExpenses: number;
-      latestPolitical: number;
-      latestAssets: number;
-      filingYears: number[];
-    }
-  >();
-
-  const allFilings = await prisma.nonprofitFiling.findMany({
-    orderBy: { filingYear: "desc" },
+  // Top 20 orgs by total political spend — computed in DB, no full table scan
+  const topOrgsRaw = await prisma.nonprofitFiling.groupBy({
+    by: ["ein", "organizationName"],
+    _sum: {
+      politicalExpenses: true,
+      totalRevenue: true,
+      totalExpenses: true,
+      totalAssets: true,
+    },
+    _max: { filingYear: true },
+    _count: { filingYear: true },
+    orderBy: { _sum: { politicalExpenses: "desc" } },
+    take: 20,
   });
 
-  for (const f of allFilings) {
-    if (!orgMap.has(f.ein)) {
-      orgMap.set(f.ein, {
-        ein: f.ein,
-        name: f.organizationName,
-        latestRevenue: Number(f.totalRevenue ?? 0),
-        latestExpenses: Number(f.totalExpenses ?? 0),
-        latestPolitical: Number(f.politicalExpenses ?? 0),
-        latestAssets: Number(f.totalAssets ?? 0),
-        filingYears: [],
-      });
-    }
-    orgMap.get(f.ein)!.filingYears.push(f.filingYear);
-  }
-
-  const topOrgs = [...orgMap.values()]
-    .sort((a, b) => b.latestPolitical - a.latestPolitical)
-    .slice(0, 20);
+  const topOrgs = topOrgsRaw.map((r) => ({
+    ein: r.ein,
+    name: r.organizationName,
+    latestRevenue: Number(r._sum.totalRevenue ?? 0),
+    latestExpenses: Number(r._sum.totalExpenses ?? 0),
+    latestPolitical: Number(r._sum.politicalExpenses ?? 0),
+    latestAssets: Number(r._sum.totalAssets ?? 0),
+    filingYears: r._count.filingYear,
+    latestYear: r._max.filingYear,
+  }));
 
   // Year breakdown
   const yearBreakdown = await prisma.nonprofitFiling.groupBy({
@@ -75,12 +64,12 @@ export async function GET(request: NextRequest) {
     orderBy: { filingYear: "desc" },
   });
 
-  // Stats
-  const totalPoliticalSpend = allFilings.reduce(
-    (sum, f) => sum + Number(f.politicalExpenses ?? 0),
+  // Stats — derived from the yearBreakdown groupBy already in memory
+  const totalPoliticalSpend = yearBreakdown.reduce(
+    (sum, y) => sum + Number(y._sum.politicalExpenses ?? 0),
     0,
   );
-  const uniqueOrgs = orgMap.size;
+  const uniqueOrgs = topOrgsRaw.length;
 
   return NextResponse.json({
     filings: filings.map((f) => ({

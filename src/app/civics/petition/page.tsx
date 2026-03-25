@@ -1,5 +1,12 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, ExternalLink } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Petitions & Organizing | Daonra",
+  description:
+    "How to write effective petitions, organize your community, and pressure elected officials into action.",
+};
 
 export default function PetitionPage() {
   return (
@@ -80,8 +87,8 @@ export default function PetitionPage() {
               </p>
               <p className="mt-3 text-sm leading-relaxed text-ink/70">
                 Search &ldquo;[your state] ballot initiative petition
-                requirements&rdquo; or check Ballotpedia for your
-                state&apos;s rules.
+                requirements&rdquo; or check Ballotpedia for your state&apos;s
+                rules.
               </p>
               <a
                 href="https://ballotpedia.org/Initiative"
@@ -122,11 +129,10 @@ export default function PetitionPage() {
                 01
               </span>
               <span>
-                <strong className="text-ink">Be specific.</strong>{" "}
-                &ldquo;We want the city council to approve the affordable
-                housing zoning variance at 5th and Main&rdquo; beats &ldquo;We
-                want more affordable housing.&rdquo; One ask. One target. One
-                deadline.
+                <strong className="text-ink">Be specific.</strong> &ldquo;We
+                want the city council to approve the affordable housing zoning
+                variance at 5th and Main&rdquo; beats &ldquo;We want more
+                affordable housing.&rdquo; One ask. One target. One deadline.
               </span>
             </li>
             <li className="flex items-start gap-3">
@@ -231,9 +237,7 @@ export default function PetitionPage() {
               </p>
               <p>We ask that you [restate the specific ask clearly].</p>
               <p>Signed,</p>
-              <p className="text-ink/60">
-                [Name] | [Address/ZIP] | [Date]
-              </p>
+              <p className="text-ink/60">[Name] | [Address/ZIP] | [Date]</p>
             </div>
           </div>
           <p className="mt-4 text-sm leading-relaxed text-ink/70">
@@ -249,8 +253,8 @@ export default function PetitionPage() {
           </h2>
           <p className="mt-4 text-sm leading-relaxed text-ink/70">
             If you are pursuing a ballot initiative, these will help. Note that
-            ballot initiatives typically require a paid petition drive at
-            scale. Budget for it if going that route.
+            ballot initiatives typically require a paid petition drive at scale.
+            Budget for it if going that route.
           </p>
           <div className="mt-8 grid gap-6 md:grid-cols-2">
             <div className="rounded-xl border border-border bg-surface p-6">
@@ -277,8 +281,8 @@ export default function PetitionPage() {
                 Represent.Us
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-ink/70">
-                Runs anti-corruption ballot initiatives across the country.
-                Good model for how to organize a statewide petition drive.
+                Runs anti-corruption ballot initiatives across the country. Good
+                model for how to organize a statewide petition drive.
               </p>
               <a
                 href="https://represent.us"
@@ -322,8 +326,7 @@ export default function PetitionPage() {
                 Action Network
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-ink/70">
-                Better for organizing. Free for nonprofits. Stronger data
-                tools.
+                Better for organizing. Free for nonprofits. Stronger data tools.
               </p>
               <a
                 href="https://actionnetwork.org"
@@ -341,8 +344,7 @@ export default function PetitionPage() {
                 Google Forms
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-ink/70">
-                Simple. You own all the data. No algorithm deciding who sees
-                it.
+                Simple. You own all the data. No algorithm deciding who sees it.
               </p>
               <a
                 href="https://forms.google.com"

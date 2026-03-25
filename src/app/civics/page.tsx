@@ -1,5 +1,12 @@
+import type { Metadata } from "next";
 import { Compass, ArrowRight, Vote } from "lucide-react";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Civic Action | Daonra",
+  description:
+    "Your playbook for participation. Register to vote, contact your representatives, find town halls, start petitions, and run for office.",
+};
 
 export default function CivicsPage() {
   return (
