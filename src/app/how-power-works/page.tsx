@@ -23,7 +23,7 @@ const TOPICS = [
       "The real process — committees, amendments, filibusters, reconciliation, and the gaps between civics class and reality.",
     href: "/how-power-works/bill-to-law",
     icon: BookOpen,
-    live: false,
+    live: true,
   },
   {
     title: "Gerrymandering Explained",
@@ -31,7 +31,7 @@ const TOPICS = [
       "How district lines get drawn, who draws them, and why your vote might matter less than you think.",
     href: "/how-power-works/gerrymandering",
     icon: Map,
-    live: false,
+    live: true,
   },
   {
     title: "The Federal Budget",
@@ -55,7 +55,7 @@ const TOPICS = [
       "City councils, school boards, zoning commissions — the local bodies that affect your daily life the most.",
     href: "/how-power-works/local-government",
     icon: Users,
-    live: false,
+    live: true,
   },
   {
     title: "The Electoral System",
@@ -63,7 +63,7 @@ const TOPICS = [
       "Electoral college, primaries, caucuses, and why some votes count more than others.",
     href: "/how-power-works/electoral-system",
     icon: Vote,
-    live: false,
+    live: true,
   },
 ];
 
