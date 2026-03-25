@@ -443,15 +443,16 @@ export default function DarkMoneyTracePage() {
                       Known Grant Recipients
                     </div>
                     <div className="mt-1.5 flex flex-wrap gap-1.5">
-                      {traceData.source.grantRecipients.slice(0, 8).map((g, i) => (
-                        <span
-                          key={i}
-                          className="rounded bg-border/20 px-2 py-0.5 font-mono text-[10px] text-muted"
-                        >
-                          {g.name} &middot;{" "}
-                          {formatCompactMoney(g.amount)}
-                        </span>
-                      ))}
+                      {traceData.source.grantRecipients
+                        .slice(0, 8)
+                        .map((g, i) => (
+                          <span
+                            key={i}
+                            className="rounded bg-border/20 px-2 py-0.5 font-mono text-[10px] text-muted"
+                          >
+                            {g.name} &middot; {formatCompactMoney(g.amount)}
+                          </span>
+                        ))}
                     </div>
                   </div>
                 )}
@@ -482,14 +483,10 @@ export default function DarkMoneyTracePage() {
                         >
                           <div className="flex-1">
                             <div className="flex items-center gap-2">
-                              <EntityTypeBadge
-                                type={intermediary.entityType}
-                              />
+                              <EntityTypeBadge type={intermediary.entityType} />
                               <span className="font-mono text-[10px] text-muted">
                                 {intermediary.transactionCount} transfer
-                                {intermediary.transactionCount !== 1
-                                  ? "s"
-                                  : ""}
+                                {intermediary.transactionCount !== 1 ? "s" : ""}
                               </span>
                             </div>
                             <h4 className="mt-1.5 font-headline text-lg font-bold text-ink">
@@ -577,7 +574,7 @@ export default function DarkMoneyTracePage() {
               {traceData.finalRecipients.length > 0 && (
                 <div className="w-full max-w-2xl rounded-xl border border-border bg-surface p-5 shadow-sm">
                   <div className="font-mono text-[10px] font-bold uppercase tracking-wider text-muted">
-                    Final Recipients &mdash; Election Spending
+                    Final Recipients: Election Spending
                   </div>
                   <div className="mt-4 space-y-2">
                     {traceData.finalRecipients.map((recipient, i) => {
@@ -630,9 +627,9 @@ export default function DarkMoneyTracePage() {
                   <div className="mt-8 w-full max-w-2xl rounded-lg border border-border bg-surface/50 p-6 text-center">
                     <AlertTriangle className="mx-auto h-8 w-8 text-muted/40" />
                     <p className="mt-3 text-sm text-muted">
-                      No downstream money flow chain found for this entity.
-                      This organization may route money through channels not
-                      yet tracked, or may primarily engage in direct political
+                      No downstream money flow chain found for this entity. This
+                      organization may route money through channels not yet
+                      tracked, or may primarily engage in direct political
                       spending.
                     </p>
                   </div>
@@ -665,7 +662,9 @@ export default function DarkMoneyTracePage() {
           {topOrgsLoading && (
             <div className="mt-8 flex items-center gap-3 text-muted">
               <Loader2 className="h-5 w-5 animate-spin" />
-              <span className="font-mono text-sm">Loading organizations...</span>
+              <span className="font-mono text-sm">
+                Loading organizations...
+              </span>
             </div>
           )}
 
@@ -766,8 +765,8 @@ export default function DarkMoneyTracePage() {
                 </span>
               </div>
               <p className="mt-1 font-mono text-[10px] text-muted">
-                Tax-exempt &ldquo;social welfare&rdquo; org &mdash; donor
-                identities are hidden
+                Tax-exempt &ldquo;social welfare&rdquo; org: donor identities
+                are hidden
               </p>
             </div>
 
@@ -782,8 +781,8 @@ export default function DarkMoneyTracePage() {
                 </span>
               </div>
               <p className="mt-1 font-mono text-[10px] text-muted">
-                Can spend unlimited amounts on elections &mdash; must report
-                spending but not original donors
+                Can spend unlimited amounts on elections; must report spending
+                but not original donors
               </p>
             </div>
 

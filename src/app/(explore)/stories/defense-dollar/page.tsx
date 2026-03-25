@@ -7,42 +7,42 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "The Defense Dollar | Daonra",
   description:
-    "Trace $1 of lobbying spend through the iron triangle. Top defense contractors invested $1.1B in lobbying and received $2.02 trillion in contracts — an 1,800:1 ROI.",
+    "Trace $1 of lobbying spend through the iron triangle. Top defense contractors invested $1.1B in lobbying and received $2.02 trillion in contracts, an 1,800:1 ROI.",
 };
 
 const SCROLLYTELL_STEPS: ScrollytellStep[] = [
   {
     id: "dollar",
     title: "The Dollar",
-    body: "Take a single dollar from a defense contractor's treasury and follow it through the iron triangle — the self-reinforcing loop between Congress, the Pentagon, and the defense industry. That dollar will pass through lobbying firms, campaign accounts, procurement offices, and executive suites before circling back, multiplied by a factor most investors can only dream of. This is the most efficient money machine in American government.",
+    body: "Take a single dollar from a defense contractor's treasury and follow it through the iron triangle, the self-reinforcing loop between Congress, the Pentagon, and the defense industry. That dollar will pass through lobbying firms, campaign accounts, procurement offices, and executive suites before circling back, multiplied by a factor most investors can only dream of. This is the most efficient money machine in American government.",
     stat: { value: "$1", label: "Trace a Single Dollar", color: "accent" },
     highlightColor: "#d97706",
   },
   {
     id: "investment",
     title: "The Investment",
-    body: "From 2001 to 2021, the top five defense contractors — Lockheed Martin, Raytheon, Northrop Grumman, Boeing, and General Dynamics — spent a combined $1.1 billion on lobbying. This figure includes only registered lobbying expenditures; it does not account for campaign contributions, dark money spending, or the unregistered 'strategic consulting' that supplements formal lobbying. The real number is almost certainly higher.",
+    body: "From 2001 to 2021, the top five defense contractors (Lockheed Martin, Raytheon, Northrop Grumman, Boeing, and General Dynamics) spent a combined $1.1 billion on lobbying. This figure includes only registered lobbying expenditures; it does not account for campaign contributions, dark money spending, or the unregistered 'strategic consulting' that supplements formal lobbying. The real number is almost certainly higher.",
     stat: { value: "$1.1B", label: "Lobbying Spend (2001-2021)", color: "money-in" },
     highlightColor: "#1a7a3a",
   },
   {
     id: "machine",
     title: "The Machine",
-    body: "The defense lobbying operation is a daily affair. At peak, the top five contractors employed 904 registered lobbyists simultaneously — spending an average of $381,000 per day on influence operations. The F-35 fighter jet program alone has suppliers in 45+ states, ensuring that nearly every member of Congress has a constituent whose job depends on the program's continuation. This isn't just lobbying — it's economic entrenchment by design.",
+    body: "The defense lobbying operation is a daily affair. At peak, the top five contractors employed 904 registered lobbyists simultaneously, spending an average of $381,000 per day on influence operations. The F-35 fighter jet program alone has suppliers in 45+ states, ensuring that nearly every member of Congress has a constituent whose job depends on the program's continuation. This isn't just lobbying. It's economic entrenchment by design.",
     stat: { value: "$381K", label: "Spent Per Day on Lobbying", color: "accent" },
     highlightColor: "#d97706",
   },
   {
     id: "payoff",
     title: "The Payoff",
-    body: "During the same 2001-2021 period, these five companies received approximately $2.02 trillion in Department of Defense contracts. That is a return of roughly $1,800 for every $1 spent on lobbying — an 180,000% return on investment. No stock, no bond, no real estate play in history has produced returns even remotely comparable. The defense dollar doesn't just circulate through the system. It multiplies.",
+    body: "During the same 2001-2021 period, these five companies received approximately $2.02 trillion in Department of Defense contracts. That is a return of roughly $1,800 for every $1 spent on lobbying, an 180,000% return on investment. No stock, no bond, no real estate play in history has produced returns even remotely comparable. The defense dollar doesn't just circulate through the system. It multiplies.",
     stat: { value: "1,800x", label: "Return on Lobbying Dollar", color: "#c41d1d" },
     highlightColor: "#c41d1d",
   },
   {
     id: "circle",
     title: "The Circle",
-    body: "The iron triangle closes when people move through the same revolving door as the money. Pentagon officials retire into executive positions at defense contractors. Defense industry executives take senior Pentagon appointments overseeing procurement. Lobbyists shuttle between K Street and government service. The circle is unbroken — the same individuals who award contracts later profit from them, and the same individuals who profit from contracts later award them.",
+    body: "The iron triangle closes when people move through the same revolving door as the money. Pentagon officials retire into executive positions at defense contractors. Defense industry executives take senior Pentagon appointments overseeing procurement. Lobbyists shuttle between K Street and government service. The circle is unbroken: the same individuals who award contracts later profit from them, and the same individuals who profit from contracts later award them.",
     stat: { value: "360°", label: "The Iron Triangle Completes", color: "#c41d1d" },
     highlightColor: "#c41d1d",
   },
@@ -98,7 +98,7 @@ export default function DefenseDollarStory() {
           </h1>
 
           <p className="mt-6 max-w-2xl text-xl leading-relaxed text-white/70 lg:text-2xl">
-            For every $1 of lobbying, defense contractors received $1,800 in government contracts —{" "}
+            For every $1 of lobbying, defense contractors received $1,800 in government contracts,{" "}
             <span className="font-semibold text-white">that&apos;s an 180,000% return</span>.
           </p>
 
@@ -130,8 +130,7 @@ export default function DefenseDollarStory() {
           <p className="drop-cap text-xl leading-relaxed text-ink/80 lg:text-2xl lg:leading-relaxed">
             The iron triangle is not a conspiracy theory. It is a term from political science
             textbooks, describing the mutually reinforcing relationship between Congress, federal
-            agencies, and the industries they regulate. Nowhere is this triangle more visible —
-            or more profitable — than in defense. Daonra followed a single dollar from a
+            agencies, and the industries they regulate. Nowhere is this triangle more visible, or more profitable, than in defense. Daonra followed a single dollar from a
             contractor&apos;s lobbying budget through the entire system to measure what comes
             back. The answer: $1,800.
           </p>
@@ -141,7 +140,7 @@ export default function DefenseDollarStory() {
             Department of Defense contract awards for the five largest defense contractors.
             The data paints a picture of a system so efficient that it makes every other form
             of investment look primitive. The defense dollar doesn&apos;t just flow through
-            Washington — it multiplies, circulates, and entrenches itself.
+            Washington. It multiplies, circulates, and entrenches itself.
           </p>
 
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
@@ -155,7 +154,7 @@ export default function DefenseDollarStory() {
       {/* Scrollytelling section */}
       <ScrollytellSection
         headline="Follow the Defense Dollar"
-        subhead="Five steps trace a single lobbying dollar through the iron triangle — and measure what comes back."
+        subhead="Five steps trace a single lobbying dollar through the iron triangle and measure what comes back."
         steps={SCROLLYTELL_STEPS}
         bgColor="bg-ink"
         textColor="text-white"
@@ -188,7 +187,7 @@ export default function DefenseDollarStory() {
             protected. Lockheed Martin deliberately distributed its supply chain across 45 states
             and over 1,500 suppliers, ensuring that canceling or reducing the program would
             eliminate jobs in nearly every congressional district. This is not a manufacturing
-            decision — it is a political strategy.
+            decision. It is a political strategy.
           </p>
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
             The same entrenchment pattern repeats across every major defense program. Shipbuilding
@@ -228,7 +227,7 @@ export default function DefenseDollarStory() {
             lobbied for them. Those contractors then use their profits to fund more lobbying.
             The cycle accelerates with each turn, and the numbers grow larger with each
             defense authorization. Breaking the triangle would require Congress to vote
-            against its own constituents&apos; economic interests — and that almost never happens.
+            against its own constituents&apos; economic interests, and that almost never happens.
           </p>
         </div>
       </section>

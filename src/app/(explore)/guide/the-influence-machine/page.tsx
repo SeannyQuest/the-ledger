@@ -23,7 +23,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "The Influence Machine | Daonra",
   description:
-    "Chapter 10 of The Field Guide to American Corruption. Think tanks, dark money networks, model legislation factories, judicial pipelines, and partisan media infrastructure — how $1 billion+ per year in ideological spending shapes American law without a single vote.",
+    "Chapter 10 of The Field Guide to American Corruption. Think tanks, dark money networks, model legislation factories, judicial pipelines, and partisan media infrastructure: how $1 billion+ per year in ideological spending shapes American law without a single vote.",
 };
 
 const SCROLLYTELL_STEPS: ScrollytellStep[] = [
@@ -134,7 +134,7 @@ export default function TheInfluenceMachinePage() {
 
           <p className="mt-6 max-w-2xl text-xl leading-relaxed text-white/70 lg:text-2xl">
             Think tanks, dark money networks, model legislation factories, and
-            judicial pipelines &mdash; how{" "}
+            judicial pipelines: how{" "}
             <span className="font-semibold text-white">
               a billion dollars a year
             </span>{" "}
@@ -182,17 +182,17 @@ export default function TheInfluenceMachinePage() {
             tank networks exceed $700 million. Dark money spending hit a record
             $1.9 billion in the 2024 federal election cycle, roughly double the
             2020 total. And the organizations that connect donors to policy
-            outcomes &mdash; ALEC, the Federalist Society, DonorsTrust, the
-            Arabella Advisors network &mdash; have grown into a permanent
+            outcomes: ALEC, the Federalist Society, DonorsTrust, and the
+            Arabella Advisors network have grown into a permanent
             infrastructure for manufacturing governance outside the democratic
             process.
           </p>
 
           <p className="mt-8 text-lg leading-relaxed text-ink/70">
             This chapter maps the complete machine. It follows the money from its
-            origins in the personal fortunes of a handful of families &mdash; the
-            Kochs, the Scaifes, the Bradleys, the Coors, the Seid estate
-            &mdash; through the think tanks that translate wealth into
+            origins in the personal fortunes of a handful of families (the
+            Kochs, the Scaifes, the Bradleys, the Coors, the Seid estate)
+            through the think tanks that translate wealth into
             intellectual frameworks, the organizations that convert those
             frameworks into model legislation, the networks that place
             ideologically sympathetic judges on the federal bench, and the media
@@ -206,8 +206,8 @@ export default function TheInfluenceMachinePage() {
 
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
             What emerges is not a conspiracy. It is something more durable: an
-            industrial process &mdash; methodical, well-funded, and operating
-            across every level of American governance &mdash; in which policy is
+            industrial process, methodical, well-funded, and operating
+            across every level of American governance, in which policy is
             manufactured, judges are cultivated, legislation is templated, and
             the public is presented with a finished product it had no role in
             shaping. This is the influence machine.
@@ -278,8 +278,8 @@ export default function TheInfluenceMachinePage() {
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
             Founded in 1973, the Heritage Foundation is the most politically
             consequential think tank in America. Its 2024 revenue reached $133.9
-            million &mdash; a 33% increase over the prior year&apos;s $101
-            million &mdash; with 96.37% of that funding coming from
+            million, a 33% increase over the prior year&apos;s $101
+            million, with 96.37% of that funding coming from
             organizational donors and just 3.63% from individuals. The donor
             families whose money sustains Heritage read like a roster of
             American industrial wealth: the Coors family, the Koch family, the
@@ -308,7 +308,7 @@ export default function TheInfluenceMachinePage() {
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
             Project 2025, the modern sequel, operates on a larger scale. The
             initiative brought together more than 100 coalition partner
-            organizations and 280+ named contributors &mdash; the New York Times
+            organizations and 280+ named contributors. The New York Times
             traced 307 contributors, 182 of whom had direct ties to the Trump
             administration. The advisory groups behind Project 2025 received
             $120 million or more from billionaire families since 2020, funneled
@@ -318,7 +318,7 @@ export default function TheInfluenceMachinePage() {
             document is a comprehensive governance blueprint: detailed plans for
             every federal agency, staffing recommendations, regulatory rollback
             timelines, and executive order templates. It is, in effect, a
-            government-in-waiting &mdash; fully staffed, fully funded, and ready
+            government-in-waiting, fully staffed, fully funded, and ready
             to deploy on day one of a friendly administration.
           </p>
 
@@ -329,7 +329,7 @@ export default function TheInfluenceMachinePage() {
             Cuts and Jobs Act, driven deregulation agendas across multiple
             administrations, influenced immigration enforcement policy, and set
             defense spending priorities. Its total expenses in 2024 reached
-            $142.2 million &mdash; exceeding even its record revenue &mdash;
+            $142.2 million (exceeding even its record revenue),
             reflecting an organization that is spending aggressively to
             translate its policy vision into governance reality.
           </p>
@@ -393,7 +393,7 @@ export default function TheInfluenceMachinePage() {
             ecosystem. Unlike Heritage, which functions as a policy arm of the
             Republican Party, Cato maintains a commitment to ideological
             libertarianism that occasionally puts it at odds with party
-            orthodoxy &mdash; supporting immigration reform, opposing the war on
+            orthodoxy, supporting immigration reform, opposing the war on
             drugs, and criticizing corporate welfare. This ideological
             independence has made Cato both more intellectually credible and
             less operationally powerful than Heritage. It produces the ideas
@@ -417,7 +417,7 @@ export default function TheInfluenceMachinePage() {
             DonorsTrust and Donors Capital Fund ($5 million+), the Sarah Scaife
             Foundation ($1.7 million+), the Bradley Foundation ($480,000), and
             the Coors Foundation ($425,000). The donor overlap with Heritage is
-            not coincidental &mdash; it is structural. The same families fund
+            not coincidental. It is structural. The same families fund
             multiple nodes in the same network, ensuring that the intellectual
             output is coordinated even when the organizations are nominally
             independent.
@@ -432,7 +432,7 @@ export default function TheInfluenceMachinePage() {
             from 2013 to 2021), the Claude R. Lambe Foundation ($2.075 million
             from 2001 to 2012), and Stand Together Fellowships ($445,520).
             Manhattan Institute specializes in urban policy, education reform,
-            energy policy, and legal reform &mdash; translating national
+            energy policy, and legal reform, translating national
             conservative frameworks into policy recommendations targeted at
             cities and states.
           </p>
@@ -461,7 +461,7 @@ export default function TheInfluenceMachinePage() {
             </div>
             <div className="mt-2 text-sm text-muted">
               Heritage $134M + Cato $71M + AEI $68M + Hoover $75M + Manhattan
-              $27M &mdash; funded substantially by the same overlapping network
+              $27M, funded substantially by the same overlapping network
               of donor families
             </div>
           </div>
@@ -493,8 +493,8 @@ export default function TheInfluenceMachinePage() {
             debates, with significant funding from foundations, labor unions, and
             individual philanthropists. The result is an ecosystem that
             produces rigorous policy research but lacks the operational
-            discipline &mdash; the ALEC-to-statehouse pipeline, the Federalist
-            Society judicial conveyor belt &mdash; that gives conservative
+            discipline (the ALEC-to-statehouse pipeline, the Federalist
+            Society judicial conveyor belt) that gives conservative
             infrastructure its outsized legislative impact.
           </p>
 
@@ -522,7 +522,7 @@ export default function TheInfluenceMachinePage() {
             Zuckerberg Initiative, the Bill &amp; Melinda Gates Foundation, the
             William and Flora Hewlett Foundation, the Sandler Foundation, Silicon
             Valley Community Foundation, and the Wellspring Philanthropic Fund
-            &mdash; all at the $1 million+ level. Corporate donors in 2024
+            , all at the $1 million+ level. Corporate donors in 2024
             included Google, Apple, and NBC Universal. CAP focuses on health care
             policy, economic opportunity, climate and energy, immigration,
             education, and national security. It has served as a talent pipeline
@@ -547,7 +547,7 @@ export default function TheInfluenceMachinePage() {
             policy, and global development generally align with establishment
             Democratic thinking. Its scholars have staffed administrations of
             both parties, and its research is cited by policymakers across the
-            ideological spectrum &mdash; a credibility advantage that the more
+            ideological spectrum, a credibility advantage that the more
             explicitly partisan think tanks on both sides do not enjoy.
           </p>
 
@@ -563,7 +563,7 @@ export default function TheInfluenceMachinePage() {
             million in program and project grants, $34.3 million in contract
             amounts earned, $2 million in general support, $7.1 million in
             investment return, and $1.3 million in interest and other income.
-            Federal government revenue accounts for 32.1% of its budget &mdash;
+            Federal government revenue accounts for 32.1% of its budget.
             making it significantly more dependent on government contracts than
             its conservative counterparts, which draw almost exclusively from
             private donors. Urban Institute focuses on housing and communities,
@@ -573,7 +573,7 @@ export default function TheInfluenceMachinePage() {
 
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
             The Economic Policy Institute, founded in 1986, operates on a $13.3
-            million budget with strong ties to organized labor &mdash;
+            million budget with strong ties to organized labor.
             union-funded research on minimum wage, trade policy, and worker
             protections forms its core output. The Roosevelt Institute, founded
             in 1987 and headquartered in New York City, reported $13.2 million
@@ -629,12 +629,12 @@ export default function TheInfluenceMachinePage() {
               While progressive think tanks collectively approach $300 million in
               annual budgets, they lack the operational infrastructure that gives
               conservative organizations their disproportionate legislative
-              impact. There is no progressive equivalent to ALEC &mdash; no
+              impact. There is no progressive equivalent to ALEC,
               factory producing 1,000 model bills per year for state
-              legislatures. There is no progressive Federalist Society &mdash;
+              legislatures. There is no progressive Federalist Society.
               no systematic pipeline placing ideologically sympathetic judges
               across the federal bench. There is no progressive State Policy
-              Network &mdash; no coordinated network of 64 state-level policy
+              Network, no coordinated network of 64 state-level policy
               organizations pushing a unified legislative agenda. The
               progressive ecosystem produces research. The conservative
               ecosystem produces law.
@@ -659,19 +659,19 @@ export default function TheInfluenceMachinePage() {
           </h2>
 
           <p className="mt-8 text-lg leading-relaxed text-ink/70">
-            Dark money &mdash; political spending by organizations that do not
-            disclose their donors &mdash; hit a record $1.9 billion in the 2024
+            Dark money (political spending by organizations that do not
+            disclose their donors) hit a record $1.9 billion in the 2024
             federal election cycle, roughly doubling the $1 billion spent in
             2020. Since Citizens United in 2010, the cumulative total has
             surpassed $4.3 billion in disclosed dark money on federal elections
-            alone &mdash; and the Brennan Center for Justice notes that this
-            figure &ldquo;necessarily &mdash; and perhaps substantially &mdash;
+            alone, and the Brennan Center for Justice notes that this
+            figure &ldquo;necessarily (and perhaps substantially)
             underestimates the true scale.&rdquo; Both parties have built
             industrial-scale dark money operations. In 2024, $1.2 billion in
             dark money benefited Democrats while $664 million benefited
-            Republicans. But the infrastructure behind the money &mdash; the
+            Republicans. But the infrastructure behind the money,
             permanent organizations, the donor networks, the institutional
-            memory &mdash; is where the real power lies.
+            memory, is where the real power lies.
           </p>
 
           {/* Koch Network */}
@@ -690,19 +690,19 @@ export default function TheInfluenceMachinePage() {
             individual cycle spending ranging from under $100 million in 2008 to
             $407 million in 2012, to $700-900 million in 2016 (depending on
             counting methodology), to a $400 million announced budget for the
-            2018 midterms &mdash; a 60% increase over the 2016 cycle.
+            2018 midterms, a 60% increase over the 2016 cycle.
           </p>
 
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
             The network&apos;s institutional centerpiece is Americans for
             Prosperity, a 501(c)(4) advocacy nonprofit with $112 million in
             2022 revenue. Its affiliated super PAC, AFP Action, spent $157
-            million in the 2024 federal elections &mdash; tripling its 2020
-            level &mdash; with two-thirds going to House and Senate races. The
+            million in the 2024 federal elections, tripling its 2020
+            level, with two-thirds going to House and Senate races. The
             funding trail reveals the network&apos;s internal mechanics: Koch
             Industries contributed $40 million in two donations (May 2023 and
-            July 2024), and the Stand Together Chamber of Commerce &mdash; a
-            Koch-controlled entity &mdash; served as a dark money conduit for
+            July 2024), and the Stand Together Chamber of Commerce (a
+            Koch-controlled entity) served as a dark money conduit for
             an additional $43 million to AFP Action. The money moves from
             Koch Industries to Stand Together to AFP Action, with each transfer
             adding a layer of legal distance between the source and the
@@ -779,7 +779,7 @@ export default function TheInfluenceMachinePage() {
 
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
             In 2022 alone, DonorsTrust distributed $242 million in grant
-            recommendations to more than 1,100 unique charities &mdash; a 21%
+            recommendations to more than 1,100 unique charities, a 21%
             increase over the $190 million distributed in 2021. The recipient
             categories read like a directory of conservative infrastructure:
             Heritage Foundation, AEI, Cato Institute, Manhattan Institute,
@@ -810,7 +810,7 @@ export default function TheInfluenceMachinePage() {
             manufacturing magnate, donated 100% of his shares in Tripp Lite to
             Leo&apos;s Marble Freedom Trust. The shares were sold to
             Ireland-based Eaton Corporation, generating approximately $1.6
-            billion &mdash; the largest known donation to a political advocacy
+            billion, the largest known donation to a political advocacy
             group in United States history. By structuring the gift as a
             charitable donation of appreciated stock, Seid avoided an estimated
             $400 million in capital gains taxes.
@@ -818,7 +818,7 @@ export default function TheInfluenceMachinePage() {
 
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
             Marble Freedom Trust is structured as a trust rather than a
-            corporation &mdash; a legal distinction that allows it to avoid
+            corporation, a legal distinction that allows it to avoid
             public disclosure of its name, directors, and address. It has
             already distributed hundreds of millions: $141.5 million to the 85
             Fund, $100.9 million cumulative to the Concord Fund (formerly the
@@ -828,7 +828,7 @@ export default function TheInfluenceMachinePage() {
             Financial Times in September 2024 that he planned to devote $1
             billion to &ldquo;crush liberal dominance&rdquo; in news and
             entertainment. A CREW investigation found that Leo-tied nonprofits
-            paid his own businesses $90 million over six years &mdash; raising
+            paid his own businesses $90 million over six years, raising
             significant self-dealing concerns about the governance of the
             network.
           </p>
@@ -839,8 +839,8 @@ export default function TheInfluenceMachinePage() {
           </h3>
 
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
-            Arabella Advisors &mdash; recently rebranded as Sunflower Services
-            &mdash; manages the largest liberal dark money network in America.
+            Arabella Advisors (recently rebranded as Sunflower Services)
+            manages the largest liberal dark money network in America.
             The for-profit LLC, headquartered in Washington, D.C., advises
             left-leaning donors and nonprofits about where to give money and
             manages five dark money nonprofits whose combined revenue reached
@@ -856,7 +856,7 @@ export default function TheInfluenceMachinePage() {
             fiscal sponsor for charitable projects and pop-up organizations.
             The Sixteen Thirty Fund (501(c)(4)) is the political advocacy arm,
             described by The Atlantic as &ldquo;the indisputable heavyweight of
-            Democratic dark money&rdquo; &mdash; it was the second-largest
+            Democratic dark money&rdquo;, it was the second-largest
             super PAC donor in 2020, giving $61 million. The Hopewell Fund and
             Windward Fund, both 501(c)(3) organizations, sponsor charitable and
             environmental projects respectively. The North Fund (501(c)(4))
@@ -866,7 +866,7 @@ export default function TheInfluenceMachinePage() {
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
             The fiscal sponsorship model is the key to the network&apos;s power
             and opacity. Arabella&apos;s nonprofits serve as fiscal sponsors for
-            hundreds of temporary advocacy organizations &mdash; &ldquo;pop-up
+            hundreds of temporary advocacy organizations, &ldquo;pop-up
             groups&rdquo; that appear to be independent but operate under the
             financial and legal umbrella of the parent nonprofits. These groups
             receive tax-exempt status, payroll, and financial infrastructure
@@ -883,7 +883,7 @@ export default function TheInfluenceMachinePage() {
             million over sixteen years, making it one of the earliest and
             largest funders. These figures represent the fraction that has been
             traced. The vast majority of the network&apos;s $1.51 billion in
-            2024 revenue remains completely anonymous &mdash; by design.
+            2024 revenue remains completely anonymous, by design.
           </p>
 
           {/* Dark money overview stats */}
@@ -925,7 +925,7 @@ export default function TheInfluenceMachinePage() {
               entertainment.&rdquo;
             </p>
             <cite className="mt-4 block font-mono text-sm font-bold uppercase tracking-widest text-muted">
-              Leonard Leo, Financial Times interview, September 2024 &mdash;
+              Leonard Leo, Financial Times interview, September 2024 -
               announcing plans to deploy $1 billion from the Barre Seid
               donation
             </cite>
@@ -958,22 +958,22 @@ export default function TheInfluenceMachinePage() {
             corporate and legislative members tells the story: corporations pay
             $7,000 to $25,000 or more for membership, while legislators pay a
             nominal $100 in annual dues. ALEC claims nearly one-quarter of all
-            state legislators as members &mdash; the Center for Media and
-            Democracy recorded 897 members in early 2020 &mdash; and counts
+            state legislators as members (the Center for Media and
+            Democracy recorded 897 members in early 2020) and counts
             nearly 300 corporate, foundation, and private-sector members.
           </p>
 
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
             The operational model is unprecedented in American governance.
             Corporations and legislators sit as equals on ALEC task forces
-            organized by policy area &mdash; tax, energy, education, criminal
-            justice &mdash; and jointly vote on model legislation that
+            organized by policy area (tax, energy, education, criminal
+            justice) and jointly vote on model legislation that
             legislators then introduce verbatim in their home states. ALEC
             provides template bills, talking points, and legislative strategy.
             The corporations fund the process and shape the language. The result
             is approximately 1,000 ALEC model bills introduced in state
-            legislatures each year, with roughly 20% &mdash; approximately 200
-            bills &mdash; enacted into law. Between 2010 and 2018, 2,900 ALEC
+            legislatures each year, with roughly 20% (approximately 200
+            bills) enacted into law. Between 2010 and 2018, 2,900 ALEC
             bills were introduced in all 50 states and Congress, with more than
             600 becoming law.
           </p>
@@ -1002,7 +1002,7 @@ export default function TheInfluenceMachinePage() {
             million through 2016), ExxonMobil (long-standing major funder), and
             multiple pharmaceutical companies on its Private Enterprise Board.
             The organization also operates a &ldquo;scholarship&rdquo; program
-            that funds legislators&apos; travel to ALEC conferences &mdash;
+            that funds legislators&apos; travel to ALEC conferences.
             effectively paying lawmakers to attend events where they receive
             pre-written legislation from corporate sponsors.
           </p>
@@ -1051,7 +1051,7 @@ export default function TheInfluenceMachinePage() {
             <p className="mt-4 text-lg leading-relaxed text-ink/70">
               In February 2012, 17-year-old Trayvon Martin was shot and killed in
               Sanford, Florida, by George Zimmerman, who invoked Florida&apos;s
-              Stand Your Ground law &mdash; a law based on an ALEC model bill.
+              Stand Your Ground law, a law based on an ALEC model bill.
               The resulting public outcry triggered the most significant
               corporate exodus in ALEC&apos;s history. Twenty-five corporations
               dropped their ALEC membership, along with four major nonprofits
@@ -1060,17 +1060,17 @@ export default function TheInfluenceMachinePage() {
               Mars, Walmart, Amazon, General Electric, and Intuit. The Bill
               &amp; Melinda Gates Foundation also departed. In total, more than
               60 corporations abandoned ALEC, costing the organization $1.4
-              million in income by June 2013 &mdash; a budget hole exceeding
+              million in income by June 2013, a budget hole exceeding
               one-third of projected income.
             </p>
             <p className="mt-4 text-lg leading-relaxed text-ink/70">
               ALEC&apos;s response was revealing. The organization launched the
-              &ldquo;Prodigal Son Project&rdquo; &mdash; an internal campaign to
+              &ldquo;Prodigal Son Project&rdquo;, an internal campaign to
               identify 40+ lapsed corporate members and recruit them back. The
               project acknowledged that corporate participation was essential to
               ALEC&apos;s financial survival and legislative influence. The
               exodus demonstrated that ALEC&apos;s power depends on corporate
-              willingness to be publicly associated with its agenda &mdash; and
+              willingness to be publicly associated with its agenda, and
               that sustained public pressure can disrupt the model legislation
               pipeline, at least temporarily.
             </p>
@@ -1087,7 +1087,7 @@ export default function TheInfluenceMachinePage() {
             across all 50 states, with more than 150 total member organizations
             including non-state-specific affiliates. SPN&apos;s own annual
             revenue is approximately $24 million, but the combined revenue of
-            its member organizations reached $188 million in 2024 &mdash; up
+            its member organizations reached $188 million in 2024, up
             from $152 million in 2022 and $120 million in 2019. The network
             serves as the state-level implementation arm of the conservative
             policy infrastructure, translating national priorities into
@@ -1157,7 +1157,7 @@ export default function TheInfluenceMachinePage() {
             to fill not only Supreme Court vacancies but hundreds of district
             and circuit court appointments. The result is a federal judiciary
             that has been systematically reshaped by a single organization over
-            four decades &mdash; an achievement that will outlast any
+            four decades, an achievement that will outlast any
             presidential administration by a generation or more.
           </p>
 
@@ -1167,10 +1167,10 @@ export default function TheInfluenceMachinePage() {
             Foundation ($543,000), the Templeton Foundation ($423,000), and 47
             separate foundations contributing a combined $4 million. These
             figures represent only the traceable fraction. The organization
-            shapes administrative law doctrine &mdash; including the successful
+            shapes administrative law doctrine, including the successful
             campaign to overturn Chevron deference, which had required courts to
             defer to federal agency interpretations of ambiguous statutes
-            &mdash; the revival of the non-delegation doctrine, and the
+            , the revival of the non-delegation doctrine, and the
             expansion of originalist legal theory throughout the judiciary.
             Student chapters train the next generation of conservative legal
             thinkers. Faculty divisions embed conservative legal theory in law
@@ -1227,11 +1227,11 @@ export default function TheInfluenceMachinePage() {
             case is the Koch network&apos;s investment in George Mason
             University and the Mercatus Center. Koch family foundations have
             contributed $30 million or more directly to GMU, with $46.5 million
-            going to the GMU Foundation since 2005 &mdash; the bulk directed to
+            going to the GMU Foundation since 2005, the bulk directed to
             the Economics department and the Law and Economics Center. Released
             donor agreements revealed that Koch Foundation endowed funds for
             professor salaries with two of five hiring committee members chosen
-            by the donors &mdash; effectively giving donors veto power over
+            by the donors, effectively giving donors veto power over
             academic appointments.
           </p>
 
@@ -1239,7 +1239,7 @@ export default function TheInfluenceMachinePage() {
             The Mercatus Center, originally founded as the Center for the Study
             of Market Processes at Rutgers University before moving to GMU in
             the mid-1980s, operates a private email server for
-            @mercatus.gmu.edu addresses &mdash; bypassing Virginia&apos;s
+            @mercatus.gmu.edu addresses, bypassing Virginia&apos;s
             Freedom of Information Act requirements. The co-founder of UnKoch
             My Campus described the arrangement: &ldquo;Mercatus&apos;s ties to
             the university allow the organization to essentially launder its
@@ -1249,7 +1249,7 @@ export default function TheInfluenceMachinePage() {
             Deregulation research produced at Mercatus is cited in congressional
             testimony. Cost-benefit analysis frameworks developed there are used
             to oppose environmental regulations. The center functions as an
-            academic laundering operation &mdash; taking policy positions
+            academic laundering operation, taking policy positions
             predetermined by donor interests and clothing them in the authority
             of a university.
           </p>
@@ -1258,7 +1258,7 @@ export default function TheInfluenceMachinePage() {
             The pattern extends across industries. The fossil fuel industry has
             donated tens to hundreds of millions to universities, sat on
             governing boards, sponsored scholarships, and built pro-fossil-fuel
-            programming &mdash; yet only 7 peer-reviewed studies out of 14,000
+            programming, yet only 7 peer-reviewed studies out of 14,000
             papers on conflicts of interest have scrutinized fossil fuel
             industry influence in academia. The tobacco industry pioneered the
             model, with Philip Morris offering $1 billion for research funding
@@ -1267,8 +1267,8 @@ export default function TheInfluenceMachinePage() {
             studies are systematically more likely to report favorable results
             than independently funded studies. Koch-funded economics programs
             now operate at 300+ universities nationwide. The university system
-            &mdash; the institution that society trusts to produce independent
-            knowledge &mdash; has been co-opted as a credentialing service for
+            The university (the institution that society trusts to produce independent
+            knowledge) has been co-opted as a credentialing service for
             donor-driven policy agendas.
           </p>
         </div>
@@ -1312,7 +1312,7 @@ export default function TheInfluenceMachinePage() {
             stations, making it the largest owner of stations affiliated with
             Fox, NBC, CBS, and ABC. Its 2024 annual revenue reached $3.55
             billion, with political ad revenue alone hitting a record $405
-            million &mdash; a 16% increase over 2020. Sinclair is widely
+            million, a 16% increase over 2020. Sinclair is widely
             regarded as politically conservative: 80% of its PAC donations went
             to Republicans in the 2017-2018 cycle. The company has required its
             local anchors to read identical scripts promoting conservative
@@ -1343,13 +1343,13 @@ export default function TheInfluenceMachinePage() {
 
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
             The largest conservative pink slime operation is Metric Media, which
-            runs more than 1,000 local news sites across all 50 states &mdash;
+            runs more than 1,000 local news sites across all 50 states.
             many of them publishing AI-generated content at industrial scale.
             Star News Digital Media operates 12 additional conservative-leaning
             local outlets. On the progressive side, The American Independent
             (a 501(c)(4)) pushes Democratic voter mobilization, and Courier
             Newsroom operates 10 media outlets branded as a &ldquo;pro-democracy
-            news network&rdquo; &mdash; progressive news sites designed to look
+            news network&rdquo;: progressive news sites designed to look
             like independent local journalism. The partisan breakdown is
             striking: eight primary organizations run these networks (four
             conservative, four progressive), but the majority of sites were
@@ -1369,7 +1369,7 @@ export default function TheInfluenceMachinePage() {
             in the United States since 2005, creating vast news deserts where no
             professional journalists cover local government, school boards,
             zoning decisions, or police conduct. The void left by their absence
-            is being filled &mdash; algorithmically and deliberately &mdash; by
+            is being filled, algorithmically and deliberately, by
             partisan operations designed to look like the local news they
             replaced. Communities that lost their local newspaper are now more
             likely to encounter AI-generated partisan content than actual
@@ -1382,8 +1382,8 @@ export default function TheInfluenceMachinePage() {
             process. As advertising revenue migrated to digital platforms,
             newspapers lost the economic foundation that sustained independent
             reporting. The organizations that benefit from reduced public
-            scrutiny &mdash; corporations, political operatives, dark money
-            networks &mdash; moved into the vacuum with content designed to
+            scrutiny: corporations, political operatives, dark money
+            networks, moved into the vacuum with content designed to
             advance their interests. The result is an information environment in
             which American citizens are simultaneously underinformed about local
             governance and overexposed to nationally coordinated partisan
@@ -1505,7 +1505,7 @@ export default function TheInfluenceMachinePage() {
           <p className="mt-8 text-lg leading-relaxed text-ink/70">
             The influence machine does not operate as a collection of
             independent organizations. It operates as an integrated system
-            &mdash; a policy pipeline with seven identifiable stages, each
+            : a policy pipeline with seven identifiable stages, each
             funded by the same small network of donors, each reinforcing the
             others, and each producing outputs that feed into the next stage.
             Understanding the pipeline as a whole reveals something that
@@ -1526,9 +1526,9 @@ export default function TheInfluenceMachinePage() {
                 </h4>
                 <p className="mt-1 text-sm leading-relaxed text-ink/60">
                   Koch-funded programs at 300+ universities and the Mercatus
-                  Center produce intellectual frameworks &mdash; cost-benefit
+                  Center produce intellectual frameworks (cost-benefit
                   analyses, deregulation studies, free-market economics research
-                  &mdash; that provide the scholarly foundation for
+                  ) that provide the scholarly foundation for
                   predetermined policy outcomes.
                 </p>
               </div>
@@ -1545,7 +1545,7 @@ export default function TheInfluenceMachinePage() {
                   Heritage ($134M), Cato ($71M), and AEI ($68M) translate
                   academic research into specific policy proposals, white
                   papers, legislative language, and personnel recommendations
-                  &mdash; the 2,000 proposals in Mandate for Leadership, the
+                  : the 2,000 proposals in Mandate for Leadership, the
                   900 pages of Project 2025.
                 </p>
               </div>
@@ -1576,8 +1576,8 @@ export default function TheInfluenceMachinePage() {
                   State Legislative Introduction
                 </h4>
                 <p className="mt-1 text-sm leading-relaxed text-ink/60">
-                  State legislators &mdash; one-quarter of whom are ALEC
-                  members &mdash; introduce model bills verbatim in their home
+                  State legislators (one-quarter of whom are ALEC
+                  members) introduce model bills verbatim in their home
                   states. SPN&apos;s 64 state think tanks provide localized
                   research to support national templates.
                 </p>
@@ -1593,8 +1593,8 @@ export default function TheInfluenceMachinePage() {
                 </h4>
                 <p className="mt-1 text-sm leading-relaxed text-ink/60">
                   The Federalist Society pipeline places sympathetic judges
-                  &mdash; 6 of 9 Supreme Court justices, hundreds of district
-                  and circuit court judges &mdash; who uphold the legislation
+                  (6 of 9 Supreme Court justices, hundreds of district
+                  and circuit court judges) who uphold the legislation
                   when challenged. Leo&apos;s $600M+ network funds
                   confirmation battles.
                 </p>
@@ -1661,15 +1661,15 @@ export default function TheInfluenceMachinePage() {
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
             This donor overlap is not incidental. It is the organizing principle
             of the influence machine. A relatively small number of families
-            &mdash; perhaps two or three dozen on the conservative side, a
-            similar number on the progressive side &mdash; fund the think tanks
+            (perhaps two or three dozen on the conservative side, a
+            similar number on the progressive side) fund the think tanks
             that produce the ideas, the organizations that convert ideas into
             legislation, the networks that place judges who uphold the
             legislation, the media that provides public support, and the dark
             money vehicles that anonymize the entire operation. The system is
             integrated. The funding is coordinated. And the democratic process
-            &mdash; the part where citizens deliberate, organize, and hold
-            representatives accountable &mdash; is bypassed at every stage.
+            , the part where citizens deliberate, organize, and hold
+            representatives accountable, is bypassed at every stage.
           </p>
         </div>
       </section>
@@ -1767,7 +1767,7 @@ export default function TheInfluenceMachinePage() {
           <p className="mx-auto mt-4 max-w-xl text-lg text-white/60">
             Ten chapters. Hundreds of data points. Billions of dollars traced.
             The Field Guide to American Corruption is a living document
-            &mdash; explore the interactive tools to follow the money yourself,
+            : explore the interactive tools to follow the money yourself,
             or revisit any chapter.
           </p>
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">

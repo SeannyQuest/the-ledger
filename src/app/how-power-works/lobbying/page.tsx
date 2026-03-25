@@ -33,7 +33,7 @@ import {
 export const metadata: Metadata = {
   title: "How Lobbying Works | Daonra",
   description:
-    "A clear, nonpartisan guide to lobbying in America — what lobbyists do, who pays them, how they shape policy, and what reform would look like.",
+    "A clear, nonpartisan guide to lobbying in America: what lobbyists do, who pays them, how they shape policy, and what reform would look like.",
 };
 
 export default function LobbyingPage() {
@@ -113,8 +113,8 @@ export default function LobbyingPage() {
             keep your time just under the threshold, and you are legally not a
             lobbyist at all. You don&rsquo;t have to register. You don&rsquo;t
             have to disclose. You can draft the bill, coach the senator, and
-            attend the fundraiser &mdash; and none of it will appear in any
-            public database.
+            attend the fundraiser, and none of it will appear in any public
+            database.
           </p>
 
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
@@ -123,8 +123,8 @@ export default function LobbyingPage() {
             definition tight. Former members of Congress and senior executive
             branch officials routinely move into consulting and &ldquo;strategic
             advisory&rdquo; roles at firms that do not register their work as
-            lobbying &mdash; because the work is structured to stay just outside
-            the legal definition while accomplishing the same thing.
+            lobbying, because the work is structured to stay just outside the
+            legal definition while accomplishing the same thing.
           </p>
 
           <div className="mt-10 rounded-xl border-l-4 border-accent bg-surface px-6 py-6">
@@ -191,9 +191,9 @@ export default function LobbyingPage() {
 
           <p className="mt-4 text-lg leading-relaxed text-ink/70">
             The most valuable thing a lobbyist can sell is not information or
-            persuasive writing. It is access &mdash; the ability to get a phone
-            call returned, to get a meeting on the calendar, to be in the room.
-            That access is almost always purchased with the same currency: prior
+            persuasive writing. It is access: the ability to get a phone call
+            returned, to get a meeting on the calendar, to be in the room. That
+            access is almost always purchased with the same currency: prior
             government service. When a senator&rsquo;s chief of staff leaves to
             become a lobbyist for a pharmaceutical company, they bring with them
             a private cell number and fifteen years of relationships that no
@@ -203,13 +203,13 @@ export default function LobbyingPage() {
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
             The Center for Responsive Politics estimates that between 60 and 70
             percent of registered federal lobbyists are former government
-            officials &mdash; former members of Congress, former senior
-            staffers, former agency heads. The pipeline runs in both directions.
-            Industry hires ex-government for access; government hires
-            ex-industry for expertise that, by design, it no longer cultivates
-            in-house. The result is a single permanent class of people who cycle
-            between writing the rules and profiting from them, regardless of
-            which party holds power.
+            officials, former members of Congress, former senior staffers,
+            former agency heads. The pipeline runs in both directions. Industry
+            hires ex-government for access; government hires ex-industry for
+            expertise that, by design, it no longer cultivates in-house. The
+            result is a single permanent class of people who cycle between
+            writing the rules and profiting from them, regardless of which party
+            holds power.
           </p>
 
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
@@ -218,10 +218,10 @@ export default function LobbyingPage() {
             House members face a one-year ban; senior executive branch officials
             have a two-year ban on lobbying their former agency. These
             restrictions are real but narrow. They cover direct lobbying contact
-            &mdash; not briefing colleagues who will make that contact, not
-            preparing strategy, not attending fundraisers for the officials you
-            used to work for. The cooling-off period is a formality. The
-            revolving door keeps spinning.
+            Not briefing colleagues who will make that contact, not preparing
+            strategy, not attending fundraisers for the officials you used to
+            work for. The cooling-off period is a formality. The revolving door
+            keeps spinning.
           </p>
 
           <div className="mt-10 flex items-start gap-4 rounded-xl border border-border bg-surface p-6">
@@ -238,9 +238,8 @@ export default function LobbyingPage() {
                   $400,000 or more per year
                 </span>{" "}
                 over staffers who stay in government. The premium disappears
-                almost entirely if their former boss leaves office &mdash;
-                confirming that what they are selling is not expertise, but
-                access.
+                almost entirely if their former boss leaves office, confirming
+                that what they are selling is not expertise, but access.
               </p>
               <Link
                 href="/revolving-door"
@@ -394,9 +393,8 @@ export default function LobbyingPage() {
               Direct lobbying is what most people picture: a lobbyist walking
               into a congressional office and making a case. The reality is more
               granular and more effective. The most consequential lobbying
-              happens not in formal meetings but in the drafting process &mdash;
-              at the staff level, where the actual text of legislation gets
-              written.
+              happens not in formal meetings but in the drafting process, at the
+              staff level, where the actual text of legislation gets written.
             </p>
             <p className="mt-5 text-lg leading-relaxed text-ink/70">
               Congressional offices are perpetually understaffed. A Senate
@@ -421,12 +419,12 @@ export default function LobbyingPage() {
                 The bill creating Medicare Part D was drafted with direct
                 participation from the pharmaceutical and insurance industries.
                 It contained an explicit prohibition on federal drug price
-                negotiation &mdash; a provision worth hundreds of billions to
-                the industry. The principal lobbyist on the bill was Billy
-                Tauzin, then chairman of the House committee that wrote it.
-                Within months of passage, Tauzin left Congress to become
-                president of PhRMA at a reported salary of $2 million per year.
-                The no-negotiation clause remained law for 19 years.
+                negotiation, a provision worth hundreds of billions to the
+                industry. The principal lobbyist on the bill was Billy Tauzin,
+                then chairman of the House committee that wrote it. Within
+                months of passage, Tauzin left Congress to become president of
+                PhRMA at a reported salary of $2 million per year. The
+                no-negotiation clause remained law for 19 years.
               </p>
             </div>
           </div>
@@ -446,22 +444,22 @@ export default function LobbyingPage() {
               Manufacturing Public Pressure
             </h3>
             <p className="mt-6 text-lg leading-relaxed text-ink/70">
-              When direct lobbying isn&rsquo;t enough &mdash; or when a member
-              needs political cover &mdash; the industry manufactures it. Trade
-              associations run digital advertising in a senator&rsquo;s home
-              state, generate constituent calls and emails, fund local business
-              groups to hold press conferences, and commission polls showing
-              &ldquo;small business owners support&rdquo; the legislation. The
-              senator votes with the industry and cites constituent pressure.
-              The constituent pressure was purchased.
+              When direct lobbying isn&rsquo;t enough, or when a member needs
+              political cover, the industry manufactures it. Trade associations
+              run digital advertising in a senator&rsquo;s home state, generate
+              constituent calls and emails, fund local business groups to hold
+              press conferences, and commission polls showing &ldquo;small
+              business owners support&rdquo; the legislation. The senator votes
+              with the industry and cites constituent pressure. The constituent
+              pressure was purchased.
             </p>
             <p className="mt-5 text-lg leading-relaxed text-ink/70">
               Critically, indirect lobbying does not have to be disclosed under
               the LDA. The U.S. Chamber disclosed approximately $67 million in
-              direct lobbying in 2023, but its total political spending &mdash;
-              including issue advertising and public affairs campaigns &mdash;
-              is estimated to be several multiples of that. The public record
-              shows the tip of the iceberg.
+              direct lobbying in 2023, but its total political spending,
+              including issue advertising and public affairs campaigns, is
+              estimated to be several multiples of that. The public record shows
+              the tip of the iceberg.
             </p>
             <div className="mt-8 flex items-start gap-4 rounded-xl border border-border bg-surface p-6">
               <Eye className="mt-1 h-5 w-5 shrink-0 text-muted" />
@@ -510,13 +508,13 @@ export default function LobbyingPage() {
             <p className="mt-6 text-lg leading-relaxed text-ink/70">
               Campaign contributions are not bribery. The Supreme Court has said
               so repeatedly, most consequentially in Citizens United (2010) and
-              McCutcheon (2014). What money purchases is not a vote &mdash; it
-              is access and attention, which are worth more. Members of Congress
-              spend an estimated 30 to 70 percent of their working hours on
-              fundraising. The people who helped fill their campaign coffers get
-              first claim on their time. A lobbyist who has raised $50,000 for a
-              senator gets a returned call. A constituent without that
-              relationship gets a form letter.
+              McCutcheon (2014). What money purchases is not a vote. is access
+              and attention, which are worth more. Members of Congress spend an
+              estimated 30 to 70 percent of their working hours on fundraising.
+              The people who helped fill their campaign coffers get first claim
+              on their time. A lobbyist who has raised $50,000 for a senator
+              gets a returned call. A constituent without that relationship gets
+              a form letter.
             </p>
             <div className="mt-8 rounded-xl border-l-4 border-ink bg-ink px-6 py-6 text-white">
               <p className="font-mono text-xs font-bold uppercase tracking-widest text-white/40">
@@ -566,7 +564,7 @@ export default function LobbyingPage() {
                         {item.label}
                       </span>
                       <span className="ml-2 text-sm text-white/50">
-                        &mdash; {item.detail}
+                        : {item.detail}
                       </span>
                     </div>
                   </div>
@@ -590,8 +588,8 @@ export default function LobbyingPage() {
               The Personnel Is the Policy
             </h3>
             <p className="mt-6 text-lg leading-relaxed text-ink/70">
-              The revolving door is not merely a metaphor for access &mdash; it
-              is an organizational mechanism that structurally embeds industry
+              The revolving door is not merely a metaphor for access. is an
+              organizational mechanism that structurally embeds industry
               preference into government. When a regulator leaves the FDA to
               become a vice president at a pharmaceutical company, they carry
               knowledge of exactly which arguments will be persuasive, which
@@ -633,7 +631,7 @@ export default function LobbyingPage() {
             Industry by Industry
           </h2>
           <p className="mt-3 max-w-2xl text-lg leading-relaxed text-muted">
-            Five sectors. Five distinct playbooks. One identical outcome — the
+            Five sectors. Five distinct playbooks. One identical outcome: the
             industry writes the rules it lives under.
           </p>
 
@@ -665,8 +663,8 @@ export default function LobbyingPage() {
               </div>
 
               <p className="mt-5 text-sm leading-relaxed text-ink/70">
-                The largest lobbying sector in America — by a wide margin.
-                Pharma outspends oil and gas and defense{" "}
+                The largest lobbying sector in America, by a wide margin. Pharma
+                outspends oil and gas and defense{" "}
                 <span className="font-semibold text-ink">combined</span>. The
                 spending buys specific outcomes.
               </p>
@@ -686,7 +684,7 @@ export default function LobbyingPage() {
                   {
                     target: "IRA drug pricing (2022)",
                     result:
-                      "545 pharma lobbyists descended on the relevant committees — a 20:1 ratio. The bill passed but limited to 10 drugs in year one.",
+                      "545 pharma lobbyists descended on the relevant committees at a 20:1 ratio. The bill passed but was limited to 10 drugs in year one.",
                   },
                 ].map((item) => (
                   <li
@@ -741,7 +739,7 @@ export default function LobbyingPage() {
 
               <p className="mt-5 text-sm leading-relaxed text-ink/70">
                 The financial sector spent over $700 million lobbying Congress
-                in the five years after the 2008 crash — the crisis its own
+                in the five years after the 2008 crash, the very crisis its own
                 deregulation had triggered. It emerged with most of its power
                 intact.
               </p>
@@ -751,7 +749,7 @@ export default function LobbyingPage() {
                   {
                     target: "Dodd-Frank rollbacks",
                     result:
-                      "The 2018 Economic Growth Act exempted banks under $250B from stress tests — signed two years before Signature Bank and SVB collapsed under identical conditions.",
+                      "The 2018 Economic Growth Act exempted banks under $250B from stress tests. It was signed two years before Signature Bank and SVB collapsed under identical conditions.",
                   },
                   {
                     target: "CFPB",
@@ -761,7 +759,7 @@ export default function LobbyingPage() {
                   {
                     target: "Crypto regulation",
                     result:
-                      "The crypto industry spent $119M on the 2024 election cycle alone — the largest single-sector political investment relative to its size in that cycle.",
+                      "The crypto industry spent $119M on the 2024 election cycle alone, making it the largest single-sector political investment relative to its size in that cycle.",
                   },
                 ].map((item) => (
                   <li
@@ -826,7 +824,7 @@ export default function LobbyingPage() {
                   {
                     target: "Budget guarantees",
                     result:
-                      "The defense budget has grown every year since 2001 regardless of party control. In FY2024 it hit $886B — larger than the next 10 countries combined.",
+                      "The defense budget has grown every year since 2001 regardless of party control. In FY2024 it hit $886B, larger than the next 10 countries combined.",
                   },
                   {
                     target: "No-bid contracts",
@@ -836,7 +834,7 @@ export default function LobbyingPage() {
                   {
                     target: "Geographic capture (F-35)",
                     result:
-                      "The F-35 has suppliers in 45+ states — by design, not manufacturing efficiency. Cutting it means cutting jobs in 90% of congressional districts.",
+                      "The F-35 has suppliers in 45+ states, by design, not manufacturing efficiency. Cutting it means cutting jobs in 90% of congressional districts.",
                   },
                 ].map((item) => (
                   <li
@@ -856,7 +854,7 @@ export default function LobbyingPage() {
                   Bottom line
                 </div>
                 <p className="mt-1 text-sm font-semibold text-ink">
-                  904 registered defense lobbyists in 2023 — more than one per
+                  904 registered defense lobbyists in 2023, more than one per
                   congressional district. Roughly $381,000 per day, every day,
                   including weekends.
                 </p>
@@ -892,8 +890,8 @@ export default function LobbyingPage() {
               <p className="mt-5 text-sm leading-relaxed text-ink/70">
                 A decade ago, Silicon Valley barely registered in Washington.
                 Now Google, Meta, Amazon, Apple, and Microsoft are five of the
-                largest lobbying operations in the country — and AI is making
-                the arms race accelerate further.
+                largest lobbying operations in the country, and AI is making the
+                arms race accelerate further.
               </p>
 
               <ul className="mt-5 space-y-3">
@@ -901,7 +899,7 @@ export default function LobbyingPage() {
                   {
                     target: "Antitrust reform (2021–2023)",
                     result:
-                      "Six bipartisan bills threatened to break up dominant platforms. Tech spent $277M to kill them — outspending reform supporters 6:1. None reached a floor vote.",
+                      "Six bipartisan bills threatened to break up dominant platforms. Tech spent $277M to kill them, outspending reform supporters 6:1. None reached a floor vote.",
                   },
                   {
                     target: "Section 230",
@@ -938,7 +936,7 @@ export default function LobbyingPage() {
               </div>
             </div>
 
-            {/* Oil & Gas — full width */}
+            {/* Oil & Gas - full width */}
             <div className="md:col-span-2 rounded-2xl border border-border bg-paper p-8">
               <div className="flex flex-wrap items-start justify-between gap-6">
                 <div className="flex items-center gap-3">
@@ -976,10 +974,10 @@ export default function LobbyingPage() {
 
               <p className="mt-5 text-sm leading-relaxed text-ink/70 md:max-w-xl">
                 Oil and gas companies receive more than $20 billion per year in
-                federal subsidies — tax breaks, royalty deferrals, and
-                regulatory carveouts that have survived every administration for
-                decades. The industry spends $100–150M annually to protect them.
-                The return is roughly 150:1, every single year.
+                federal subsidies: tax breaks, royalty deferrals, and regulatory
+                carveouts that have survived every administration for decades.
+                The industry spends $100–150M annually to protect them. The
+                return is roughly 150:1, every single year.
               </p>
 
               <div className="mt-6 grid gap-4 sm:grid-cols-3">
@@ -987,7 +985,7 @@ export default function LobbyingPage() {
                   {
                     target: "Subsidies",
                     result:
-                      "$20B+ annually — intangible drilling deductions, percentage depletion allowances, and offshore royalty deferrals that have existed since 1916.",
+                      "$20B+ annually: intangible drilling deductions, percentage depletion allowances, and offshore royalty deferrals that have existed since 1916.",
                   },
                   {
                     target: "Pipeline approvals",
@@ -1019,11 +1017,11 @@ export default function LobbyingPage() {
                 <p className="text-sm leading-relaxed">
                   <span className="font-bold">In 2018</span>, Colorado&rsquo;s
                   Prop 112 would have required fracking setbacks from homes and
-                  schools. Industry spent $41M to defeat it — in a single state
+                  schools. Industry spent $41M to defeat it in a single state
                   ballot race. The same year, Washington&rsquo;s I-1631 carbon
                   fee was killed after $29.7M in industry spending. Both
                   contests were over before election day. Money of that scale
-                  does not compete — it cancels.
+                  does not compete. It cancels.
                 </p>
               </div>
             </div>
@@ -1109,7 +1107,7 @@ export default function LobbyingPage() {
                     </div>
                   </div>
                   <p className="mt-3 text-sm leading-relaxed text-white/70">
-                    A Medicare prescription drug benefit — but with one explicit
+                    A Medicare prescription drug benefit, but with one explicit
                     carve-out: a prohibition on Medicare negotiating drug
                     prices. The VA negotiates. Medicaid negotiates. The NHS
                     negotiates. Pharma wanted Medicare, the largest single drug
@@ -1128,7 +1126,7 @@ export default function LobbyingPage() {
                   <p className="mt-3 text-sm leading-relaxed text-white/70">
                     PhRMA and the broader pharmaceutical sector deployed more
                     than $100M in lobbying during the 2001–2003 cycle. Their key
-                    asset was not money — it was a person. Billy Tauzin (R-LA),
+                    asset was not money. It was a person. Billy Tauzin (R-LA),
                     chair of House Energy and Commerce, shepherded the bill. He
                     retired in 2004 and became president of PhRMA at a salary
                     exceeding $2M/year.
@@ -1148,7 +1146,7 @@ export default function LobbyingPage() {
                     and pharmacies and PDP sponsors.&rdquo; One sentence,
                     enacted as written. The prohibition held for 19 years. CBO
                     estimated the cost at $220B+ over 10 years. The IRA
-                    partially reversed it in 2022 — after pharma filed 9+
+                    partially reversed it in 2022, after pharma filed 9+
                     lawsuits to block that too.
                   </p>
                 </div>
@@ -1196,7 +1194,7 @@ export default function LobbyingPage() {
                     {
                       year: "2022",
                       event:
-                        "The Inflation Reduction Act grants Medicare limited negotiation authority — 10 drugs in year one. Pharma files 9+ lawsuits to block it.",
+                        "The Inflation Reduction Act grants Medicare limited negotiation authority, starting with 10 drugs in year one. Pharma filed 9+ lawsuits to block it.",
                     },
                   ].map((item, i, arr) => (
                     <div key={item.year} className="flex gap-4">
@@ -1256,7 +1254,7 @@ export default function LobbyingPage() {
                     </div>
                   </div>
                   <p className="mt-3 text-sm leading-relaxed text-white/70">
-                    The repeal of Glass-Steagall — the Depression-era law
+                    The repeal of Glass-Steagall, the Depression-era law
                     separating commercial and investment banking. And then: zero
                     regulatory oversight of derivatives, the instruments that
                     would become the mechanism of the 2008 collapse. Two wins,
@@ -1275,7 +1273,7 @@ export default function LobbyingPage() {
                     Citigroup alone spent $100M lobbying for Glass-Steagall
                     repeal in the 1990s. The financial sector invested $2.7B in
                     lobbying and $1.7B in campaign contributions between 1998
-                    and 2008. The key architects — Gramm, Leach, Bliley — all
+                    and 2008. The key architects (Gramm, Leach, Bliley) all
                     moved to financial sector roles after leaving office.
                   </p>
                 </div>
@@ -1310,7 +1308,7 @@ export default function LobbyingPage() {
                     {
                       year: "1998",
                       event:
-                        "Citicorp and Travelers Group merge — technically illegal under Glass-Steagall. They do it anyway and lobby to change the law retroactively.",
+                        "Citicorp and Travelers Group merge, technically illegal under Glass-Steagall. They do it anyway and lobby to change the law retroactively.",
                     },
                     {
                       year: "1999",
@@ -1410,7 +1408,7 @@ export default function LobbyingPage() {
                   <p className="mt-3 text-sm leading-relaxed text-white/70">
                     Time. The FDA&rsquo;s premarket review required JUUL to
                     prove its products were &ldquo;appropriate for the
-                    protection of public health&rdquo; — a standard it could not
+                    protection of public health,&rdquo; a standard it could not
                     meet given the youth addiction crisis its own marketing had
                     created. JUUL needed the review delayed, weakened, or
                     indefinitely stalled while remaining on shelves.
@@ -1425,7 +1423,7 @@ export default function LobbyingPage() {
                     </div>
                   </div>
                   <p className="mt-3 text-sm leading-relaxed text-white/70">
-                    JUUL spent $47.5M on lobbying between 2018 and 2022 — an
+                    JUUL spent $47.5M on lobbying between 2018 and 2022, an
                     extraordinary figure for a consumer product company with no
                     prior Washington presence. It hired 15+ lobbying firms,
                     cultivated relationships through community investment
@@ -1444,7 +1442,7 @@ export default function LobbyingPage() {
                   </div>
                   <p className="mt-3 text-sm leading-relaxed text-white/70">
                     Three years of delay. The FDA&rsquo;s denial order came in
-                    June 2022 — and was immediately stayed by federal court at
+                    June 2022 and was immediately stayed by federal court at
                     JUUL&rsquo;s request. A Senate investigation found FDA staff
                     had been improperly pressured to slow the review. During
                     those three years, JUUL remained the best-selling
@@ -1480,7 +1478,7 @@ export default function LobbyingPage() {
                     {
                       year: "2020",
                       event:
-                        "PMTA deadline extended again. JUUL submits its application — 125,000 pages. Internal documents later show executives discussed youth usage rates as a market consideration.",
+                        "PMTA deadline extended again. JUUL submits its application, all 125,000 pages. Internal documents later show executives discussed youth usage rates as a market consideration.",
                     },
                     {
                       year: "Jun 2022",
@@ -1540,13 +1538,13 @@ export default function LobbyingPage() {
                   href: "/lobbying",
                   label: "Lobbying data",
                   description:
-                    "Search live Senate LDA disclosures — who filed, who paid, what issues.",
+                    "Search live Senate LDA disclosures: who filed, who paid, what issues.",
                 },
                 {
                   href: "/revolving-door",
                   label: "Revolving door",
                   description:
-                    "Track government officials who moved to industry — and back.",
+                    "Track government officials who moved to industry, and back.",
                 },
                 {
                   href: "/dark-money",
@@ -1591,7 +1589,7 @@ export default function LobbyingPage() {
 
           <p className="mt-8 text-lg leading-relaxed text-ink/70">
             The lobbying reform story is not one of failure alone. There have
-            been genuine wins — modest, contested, and frequently circumvented,
+            been genuine wins, modest, contested, and frequently circumvented,
             but real. The problem is not that reformers have produced nothing.
             The problem is that every law with teeth has been defanged by the
             industry it was meant to constrain, often before the ink was dry.
@@ -1601,19 +1599,19 @@ export default function LobbyingPage() {
             The Lobbying Disclosure Act of 1995, updated by the Honest
             Leadership and Open Government Act of 2007, forms the backbone of
             federal lobbying regulation. The HLOGA tightened cooling-off periods
-            for revolving door officials — former Senators must wait two years
-            before lobbying their former colleagues, House members one year —
-            and banned lobbyists from buying meals or gifts for members of
-            Congress. It increased disclosure frequency from semi-annual to
-            quarterly and required lobbyists to disclose campaign bundling
-            activities. These were meaningful steps. They also created an
-            immediate workaround: shadow lobbying.
+            for revolving door officials: former Senators must wait two years
+            before lobbying their former colleagues, House members one year, and
+            banned lobbyists from buying meals or gifts for members of Congress.
+            It increased disclosure frequency from semi-annual to quarterly and
+            required lobbyists to disclose campaign bundling activities. These
+            were meaningful steps. They also created an immediate workaround:
+            shadow lobbying.
           </p>
 
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
-            Shadow lobbying is the practice of doing everything a lobbyist does
-            — advising clients on strategy, drafting legislative language,
-            building relationships with congressional staff — while carefully
+            Shadow lobbying is the practice of doing everything a lobbyist does:
+            advising clients on strategy, drafting legislative language,
+            building relationships with congressional staff, while carefully
             staying below the threshold that triggers registration. Under the
             LDA, a person must register only if they spend 20% or more of their
             time lobbying a single client. That 20% rule is not an oversight. It
@@ -1629,7 +1627,7 @@ export default function LobbyingPage() {
           <div className="my-12 space-y-4 border-l-4 border-accent pl-6">
             <div>
               <div className="font-mono text-xs font-bold uppercase tracking-widest text-accent">
-                2007 &mdash; HLOGA
+                2007: HLOGA
               </div>
               <div className="mt-1 text-base font-semibold text-ink">
                 Cooling-off periods, gift ban, quarterly disclosure, bundling
@@ -1642,7 +1640,7 @@ export default function LobbyingPage() {
             </div>
             <div>
               <div className="font-mono text-xs font-bold uppercase tracking-widest text-accent">
-                2012 &mdash; STOCK Act
+                2012: STOCK Act
               </div>
               <div className="mt-1 text-base font-semibold text-ink">
                 Banned congressional insider trading; required online disclosure
@@ -1655,10 +1653,10 @@ export default function LobbyingPage() {
             </div>
             <div>
               <div className="font-mono text-xs font-bold uppercase tracking-widest text-accent">
-                State level &mdash; Maine &amp; Arizona
+                State level: Maine &amp; Arizona
               </div>
               <div className="mt-1 text-base font-semibold text-ink">
-                Clean Elections public financing &mdash; candidates qualify by
+                Clean Elections public financing, where candidates qualify by
                 raising small contributions
               </div>
               <div className="mt-0.5 text-sm text-muted">
@@ -1668,7 +1666,7 @@ export default function LobbyingPage() {
             </div>
             <div>
               <div className="font-mono text-xs font-bold uppercase tracking-widest text-accent">
-                State level &mdash; Montana
+                State level: Montana
               </div>
               <div className="mt-1 text-base font-semibold text-ink">
                 Among strongest state anti-corruption laws; strict lobbying
@@ -1681,7 +1679,7 @@ export default function LobbyingPage() {
             </div>
             <div>
               <div className="font-mono text-xs font-bold uppercase tracking-widest text-accent">
-                Current &mdash; ETHICS Act &amp; Lobbying Transparency Bills
+                Current: ETHICS Act &amp; Lobbying Transparency Bills
               </div>
               <div className="mt-1 text-base font-semibold text-ink">
                 Expand LDA coverage, close the 20% loophole, require shadow
@@ -1700,7 +1698,7 @@ export default function LobbyingPage() {
             investigation into congressional insider trading, it banned members
             and staff from trading on non-public legislative information and
             required disclosure of trades within 45 days. The bill passed 417-2
-            in the House — a near-unanimous mandate. Eight months later, in a
+            in the House, a near-unanimous mandate. Eight months later, in a
             voice vote on a Friday afternoon with no press present, Congress
             quietly amended the law to remove the online disclosure requirement
             for thousands of congressional staffers. The principle survived. The
@@ -1743,13 +1741,13 @@ export default function LobbyingPage() {
             spent, mandate real-time disclosure of meetings between lobbyists
             and congressional offices, and extend cooling-off periods to five
             years for senior executive branch officials. Issue One&apos;s
-            ReFormers Caucus &mdash; a group of more than 200 former members of
-            Congress &mdash; has endorsed the framework. None of it has passed.
-            The obstacle is not persuasion. It is interest. The members of
-            Congress who would need to vote for stricter lobbying rules are the
-            same members whose campaigns are funded by the industries that
-            employ lobbyists. The answer, as with everything else in Daonra,
-            follows the money.
+            ReFormers Caucus (a group of more than 200 former members of
+            Congress) has endorsed the framework. None of it has passed. The
+            obstacle is not persuasion. It is interest. The members of Congress
+            who would need to vote for stricter lobbying rules are the same
+            members whose campaigns are funded by the industries that employ
+            lobbyists. The answer, as with everything else in Daonra, follows
+            the money.
           </p>
         </div>
       </section>
@@ -1770,9 +1768,9 @@ export default function LobbyingPage() {
           <p className="mt-8 text-lg leading-relaxed text-ink/70">
             The system is not a black box. Every disclosed lobbying contract,
             every campaign contribution, every revolving door hire is a public
-            record &mdash; if you know where to look. Most people never look,
-            which is part of how the system sustains itself. Transparency only
-            works if someone is watching. Here is how to start.
+            record, if you know where to look. Most people never look, which is
+            part of how the system sustains itself. Transparency only works if
+            someone is watching. Here is how to start.
           </p>
 
           {/* Action cards */}
@@ -1819,8 +1817,8 @@ export default function LobbyingPage() {
                     to federal candidates. Daonra aggregates that data by
                     industry sector, so you can see whether your
                     representative&apos;s top funders are pharmaceutical
-                    companies, defense contractors, or financial firms &mdash;
-                    and cross-reference against their committee assignments and
+                    companies, defense contractors, or financial firms, then
+                    cross-reference against their committee assignments and
                     voting record. The connection between donor and vote is not
                     always causal. But it is always worth knowing.
                   </p>
@@ -1883,7 +1881,7 @@ export default function LobbyingPage() {
                 </div>
                 <div>
                   <h3 className="font-headline text-lg font-black text-ink">
-                    Contact your reps &mdash; specifically about lobbying reform
+                    Contact your reps, specifically about lobbying reform
                   </h3>
                   <p className="mt-2 text-sm leading-relaxed text-ink/60">
                     Generic constituent contact is noise. Specific, informed
@@ -1915,15 +1913,14 @@ export default function LobbyingPage() {
             <p className="mt-3 text-sm leading-relaxed text-ink/60">
               Reform is not a single-issue movement, and these organizations
               approach it from different angles. None of them are substitutes
-              for political pressure &mdash; they are infrastructure for it.
+              for political pressure. They are infrastructure for it.
             </p>
 
             <div className="mt-6 space-y-3">
               <div className="flex items-start gap-4 rounded-lg border border-border bg-paper px-5 py-4">
                 <div className="mt-0.5 h-2 w-2 shrink-0 rounded-full bg-accent" />
                 <div>
-                  <span className="font-semibold text-ink">Represent.Us</span>
-                  <span className="mx-2 text-muted">&mdash;</span>
+                  <span className="font-semibold text-ink">Represent.Us</span>-
                   <span className="text-sm text-ink/60">
                     Cross-partisan anti-corruption coalition. Focuses on
                     state-level ballot initiatives and the American
@@ -1935,11 +1932,10 @@ export default function LobbyingPage() {
               <div className="flex items-start gap-4 rounded-lg border border-border bg-paper px-5 py-4">
                 <div className="mt-0.5 h-2 w-2 shrink-0 rounded-full bg-accent" />
                 <div>
-                  <span className="font-semibold text-ink">Issue One</span>
-                  <span className="mx-2 text-muted">&mdash;</span>
+                  <span className="font-semibold text-ink">Issue One</span>-
                   <span className="text-sm text-ink/60">
-                    Runs the ReFormers Caucus &mdash; over 200 former members of
-                    Congress, cabinet officials, and governors. Focuses on
+                    Runs the ReFormers Caucus (over 200 former members of
+                    Congress, cabinet officials, and governors). Focuses on
                     federal lobbying disclosure reform and small-donor matching.
                     Unusually effective at working across party lines.
                   </span>
@@ -1948,8 +1944,7 @@ export default function LobbyingPage() {
               <div className="flex items-start gap-4 rounded-lg border border-border bg-paper px-5 py-4">
                 <div className="mt-0.5 h-2 w-2 shrink-0 rounded-full bg-accent" />
                 <div>
-                  <span className="font-semibold text-ink">Democracy 21</span>
-                  <span className="mx-2 text-muted">&mdash;</span>
+                  <span className="font-semibold text-ink">Democracy 21</span>-
                   <span className="text-sm text-ink/60">
                     Campaign finance specialists. Tracks FEC enforcement,
                     litigates dark money cases, and publishes model lobbying and
@@ -1964,19 +1959,18 @@ export default function LobbyingPage() {
           <div className="mt-14 rounded-xl border-l-4 border-accent bg-paper px-6 py-8">
             <p className="text-lg font-semibold leading-relaxed text-ink">
               The lobbying industry spent $5.08 billion last year. It employs
-              more registered lobbyists than there are members of Congress
-              &mdash; and that count excludes the shadow lobbyists who never
-              register. The asymmetry is real and it is steep.
+              more registered lobbyists than there are members of Congress, and
+              that count excludes the shadow lobbyists who never register. The
+              asymmetry is real and it is steep.
             </p>
             <p className="mt-4 text-lg leading-relaxed text-ink/70">
               But every disclosure law that passed did so because organized
               citizens made the political cost of inaction higher than the cost
               of reform. Every state-level clean election program exists because
               voters put it on the ballot themselves. The system is not
-              impervious to pressure. It is designed to resist it &mdash; and it
-              has been moved before, and can be moved again. What it cannot
-              survive is an informed, persistent public that refuses to look
-              away.
+              impervious to pressure. It is designed to resist it, and it has
+              been moved before and can be moved again. What it cannot survive
+              is an informed, persistent public that refuses to look away.
             </p>
           </div>
 

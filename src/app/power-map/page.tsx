@@ -293,8 +293,8 @@ export default function PowerMapPage() {
                             className="h-3 w-3 shrink-0 rounded-full"
                             style={{
                               backgroundColor: pol.party
-                                ? PARTY_COLORS[pol.party.toLowerCase()] ??
-                                  "#6b7280"
+                                ? (PARTY_COLORS[pol.party.toLowerCase()] ??
+                                  "#6b7280")
                                 : "#6b7280",
                             }}
                           />
@@ -311,8 +311,8 @@ export default function PowerMapPage() {
                             </div>
                             {pol.votes.total > 0 && (
                               <div className="mt-1 font-mono text-[10px] text-muted">
-                                {pol.votes.total} votes tracked · {pol.votes.yea}{" "}
-                                yea · {pol.votes.nay} nay
+                                {pol.votes.total} votes tracked ·{" "}
+                                {pol.votes.yea} yea · {pol.votes.nay} nay
                               </div>
                             )}
                           </div>
@@ -383,8 +383,9 @@ export default function PowerMapPage() {
       <div className="mt-12 rounded-lg border border-border bg-surface/50 px-4 py-3">
         <p className="font-mono text-xs text-muted">
           This analysis connects campaign finance data with congressional voting
-          records. Correlation does not imply causation — donations and votes may
-          align for many reasons including shared ideology and constituent interests.
+          records. Correlation does not imply causation; donations and votes may
+          align for many reasons including shared ideology and constituent
+          interests.
         </p>
       </div>
     </div>

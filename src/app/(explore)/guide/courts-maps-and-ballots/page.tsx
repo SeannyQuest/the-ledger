@@ -159,23 +159,23 @@ export default function CourtsMapsAndBallotsPage() {
             2023&ndash;24, outside interest groups outspent judicial candidates
             for the first time in history. A single state supreme court race in
             Wisconsin attracted more than $100 million. And in the 2024 cycle,
-            corporations spent a record $1.32 billion on ballot measures &mdash;
+            corporations spent a record $1.32 billion on ballot measures,
             deploying war chests that dwarf entire congressional campaigns to
             defeat policies that voters overwhelmingly support.
           </p>
 
           <p className="mt-8 text-lg leading-relaxed text-ink/70">
             This chapter documents three interconnected systems of capture.
-            First, how dark money networks &mdash; led by Leonard Leo&apos;s
-            $600 million judicial empire &mdash; have reshaped the federal and
-            state judiciary from the Supreme Court down. Second, how precision
+            First, how dark money networks (led by Leonard Leo&apos;s $600
+            million judicial empire) have reshaped the federal and state
+            judiciary from the Supreme Court down. Second, how precision
             gerrymandering, pioneered by operatives like Thomas Hofeller and
             funded by $30 million in corporate donations, locked in a decade of
-            minority rule after 2010. And third, how the ballot measure &mdash;
-            originally designed as a tool of direct democracy &mdash; has been
-            co-opted by industries that spend hundreds of millions to veto the
-            public will on drug prices, rent control, gig worker protections,
-            and healthcare regulation.
+            minority rule after 2010. And third, how the ballot measure,
+            originally designed as a tool of direct democracy, has been co-opted
+            by industries that spend hundreds of millions to veto the public
+            will on drug prices, rent control, gig worker protections, and
+            healthcare regulation.
           </p>
 
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
@@ -191,7 +191,7 @@ export default function CourtsMapsAndBallotsPage() {
       {/* Scrollytelling section */}
       <ScrollytellSection
         headline="How Money Buys Justice at Every Level"
-        subhead="From Supreme Court nominations to state judicial elections to gerrymandered maps to corporate ballot measure campaigns &mdash; trace the money through every layer of American democracy."
+        subhead="From Supreme Court nominations to state judicial elections to gerrymandered maps to corporate ballot measure campaigns: trace the money through every layer of American democracy."
         steps={SCROLLYTELL_STEPS}
         bgColor="bg-ink"
         textColor="text-white"
@@ -202,10 +202,10 @@ export default function CourtsMapsAndBallotsPage() {
         <div className="mx-auto max-w-4xl px-4 py-20 lg:px-8">
           <blockquote className="text-center">
             <p className="font-headline text-3xl font-black leading-tight tracking-tight text-ink lg:text-4xl">
-              &ldquo;Not only is justice blind &mdash; she has been bought.
-              Forty-six percent of state judges say campaign contributions
-              influence their decisions. The other fifty-four percent declined
-              to admit it.&rdquo;
+              &ldquo;Not only is justice blind; she has been bought. Forty-six
+              percent of state judges say campaign contributions influence their
+              decisions. The other fifty-four percent declined to admit
+              it.&rdquo;
             </p>
             <cite className="mt-6 block font-mono text-sm font-bold uppercase tracking-widest text-muted">
               Daonra Analysis, Judicial Election Data 2015&ndash;2024
@@ -229,22 +229,21 @@ export default function CourtsMapsAndBallotsPage() {
 
           <p className="mt-8 text-lg leading-relaxed text-ink/70">
             The United States is one of the few countries in the world where
-            judges are elected &mdash; and the consequences of that design
-            choice have become catastrophic. Spending on state supreme court
-            elections has surged from $79 million in 2015&ndash;16 to $97
-            million in 2019&ndash;20 to $157.3 million in 2023&ndash;24, a
-            doubling in less than a decade. But the most alarming shift is not
-            the total &mdash; it is who is spending it. In 2023&ndash;24,
-            interest groups accounted for 54% of all judicial election spending,
-            the first time outside organizations outspent the candidates
-            themselves. The bench is no longer elected by voters. It is
-            purchased by interests.
+            judges are elected, and the consequences of that design choice have
+            become catastrophic. Spending on state supreme court elections has
+            surged from $79 million in 2015&ndash;16 to $97 million in
+            2019&ndash;20 to $157.3 million in 2023&ndash;24, a doubling in less
+            than a decade. But the most alarming shift is not the total: it is
+            who is spending it. In 2023&ndash;24, interest groups accounted for
+            54% of all judicial election spending, the first time outside
+            organizations outspent the candidates themselves. The bench is no
+            longer elected by voters. It is purchased by interests.
           </p>
 
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
             The numbers from individual races are staggering. The 2025 Wisconsin
             Supreme Court election between Susan Crawford and Brad Schimel
-            attracted over $100 million in spending &mdash; some estimates
+            attracted over $100 million in spending, with some estimates
             reaching $144.5 million when Elon Musk&apos;s petition signature
             payments are included. This followed the 2023 Wisconsin race between
             Janet Protasiewicz and Daniel Kelly, which cost $51 million and
@@ -291,14 +290,14 @@ export default function CourtsMapsAndBallotsPage() {
             Supreme Court appointees are Federalist Society members. Six of nine
             sitting Supreme Court justices. The network&apos;s financial
             architecture is designed for opacity. The Marble Freedom Trust
-            received a $1.65 billion donation from Barre Seid &mdash; the
-            largest known political advocacy donation in U.S. history &mdash;
-            structured to avoid approximately $400 million in capital gains
-            taxes. The Judicial Crisis Network, now operating as the Concord
-            Fund, spent $7 million blocking Merrick Garland&apos;s nomination
-            and $10 million each to confirm Neil Gorsuch, Brett Kavanaugh, and
-            Amy Coney Barrett. Its $48.1 million in annual revenue comes from
-            nearly all from two donors whose identities remain undisclosed.
+            received a $1.65 billion donation from Barre Seid, the largest known
+            political advocacy donation in U.S. history, structured to avoid
+            approximately $400 million in capital gains taxes. The Judicial
+            Crisis Network, now operating as the Concord Fund, spent $7 million
+            blocking Merrick Garland&apos;s nomination and $10 million each to
+            confirm Neil Gorsuch, Brett Kavanaugh, and Amy Coney Barrett. Its
+            $48.1 million in annual revenue comes from nearly all from two
+            donors whose identities remain undisclosed.
           </p>
 
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
@@ -311,9 +310,9 @@ export default function CourtsMapsAndBallotsPage() {
             million electing a single West Virginia justice who then cast the
             deciding vote to overturn a $50 million verdict against
             Blankenship&apos;s company. The U.S. Supreme Court ruled 5&ndash;4
-            that this violated due process &mdash; but set the recusal standard
-            so high that it has produced almost no subsequent disqualifications.
-            The message to donors was clear: the investment works.
+            that this violated due process, but set the recusal standard so high
+            that it has produced almost no subsequent disqualifications. The
+            message to donors was clear: the investment works.
           </p>
         </div>
       </section>
@@ -336,9 +335,9 @@ export default function CourtsMapsAndBallotsPage() {
             maps. In most states, the politicians who benefit from the maps are
             the same ones drawing them. The result is a system in which elected
             officials choose their voters rather than the reverse. In 2010, the
-            Republican State Leadership Committee executed REDMAP &mdash; the
-            Redistricting Majority Project &mdash; a $30 million campaign to
-            flip state legislatures in time for the redistricting cycle. The
+            Republican State Leadership Committee executed REDMAP (the
+            Redistricting Majority Project), a $30 million campaign to flip
+            state legislatures in time for the redistricting cycle. The
             investment yielded 21 flipped chambers and over 680 state
             legislative seats. Two years later, Republicans retained the U.S.
             House of Representatives by 33 seats despite receiving more than one
@@ -348,16 +347,16 @@ export default function CourtsMapsAndBallotsPage() {
 
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
             The corporate donors behind REDMAP included Walmart, Pfizer, Devon
-            Energy, AT&amp;T, Altria, and Koch-affiliated organizations &mdash;
+            Energy, AT&amp;T, Altria, and Koch-affiliated organizations,
             companies with direct financial interests in the regulatory outcomes
             that the gerrymandered legislatures would control. Democrats
             responded in 2017, when former Attorney General Eric Holder founded
             the National Democratic Redistricting Committee, which raised $35
             million by 2018. The result, according to The New York Times, was
             &ldquo;the fairest maps in 40 years.&rdquo; But a decade of
-            legislation passed under gerrymandered maps &mdash; from voter ID
-            laws to regulatory rollbacks to judicial appointments &mdash; cannot
-            be un-legislated by redrawing lines.
+            legislation passed under gerrymandered maps, from voter ID laws to
+            regulatory rollbacks to judicial appointments, cannot be
+            un-legislated by redrawing lines.
           </p>
 
           {/* Inline stat callout grid */}
@@ -394,15 +393,15 @@ export default function CourtsMapsAndBallotsPage() {
             Republican Party&apos;s chief redistricting strategist for two
             decades, pioneered the use of granular demographic and voter data to
             draw maps with surgical efficiency. After his death in 2018,
-            investigators discovered over 70,000 files on his hard drives
-            &mdash; and they proved that racial demographics had been used as a
-            primary criterion in drawing congressional districts. In Rucho v.
-            Common Cause (2019), the Supreme Court ruled 5&ndash;4 that partisan
-            gerrymandering claims are non-justiciable in federal courts,
-            effectively removing the only federal check on the practice. Chief
-            Justice Roberts acknowledged that &ldquo;excessive partisanship in
-            districting leads to results that reasonably seem unjust&rdquo; but
-            concluded the courts could not fix it.
+            investigators discovered over 70,000 files on his hard drives and
+            proved that racial demographics had been used as a primary criterion
+            in drawing congressional districts. In Rucho v. Common Cause (2019),
+            the Supreme Court ruled 5&ndash;4 that partisan gerrymandering
+            claims are non-justiciable in federal courts, effectively removing
+            the only federal check on the practice. Chief Justice Roberts
+            acknowledged that &ldquo;excessive partisanship in districting leads
+            to results that reasonably seem unjust&rdquo; but concluded the
+            courts could not fix it.
           </p>
 
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
@@ -414,7 +413,7 @@ export default function CourtsMapsAndBallotsPage() {
             attracted $215 million in total spending, with Governor Newsom alone
             contributing $120 million. In Texas, a Trump-urged redistricting
             plan targeting five Democratic seats was stayed by the Supreme Court
-            6&ndash;3 in 2025 &mdash; a rare intervention that underscored the
+            6&ndash;3 in 2025, a rare intervention that underscored the
             extremity of the gerrymander. The competitive district has become an
             endangered species: 42% of the decline in competitive House races is
             attributable to gerrymandering. When politicians draw their own
@@ -437,29 +436,29 @@ export default function CourtsMapsAndBallotsPage() {
           </h2>
 
           <p className="mt-8 text-lg leading-relaxed text-ink/70">
-            The ballot initiative was designed as a safety valve &mdash; a way
-            for citizens to bypass captured legislatures and enact policy
-            directly. It has been co-opted into a corporate weapon. Total
-            spending on ballot measures has climbed from $1.01 billion in 2016
-            to $1.19 billion in 2018 to $1.24 billion in 2020 to $1.10 billion
-            in 2022 to a record $1.32 billion in 2024. The money does not come
-            from grassroots donors. It comes from industries facing regulation
-            &mdash; and they spend whatever it takes to kill measures that
-            threaten their bottom line.
+            The ballot initiative was designed as a safety valve: a way for
+            citizens to bypass captured legislatures and enact policy directly.
+            It has been co-opted into a corporate weapon. Total spending on
+            ballot measures has climbed from $1.01 billion in 2016 to $1.19
+            billion in 2018 to $1.24 billion in 2020 to $1.10 billion in 2022 to
+            a record $1.32 billion in 2024. The money does not come from
+            grassroots donors. It comes from industries facing regulation, and
+            they spend whatever it takes to kill measures that threaten their
+            bottom line.
           </p>
 
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
             The most expensive ballot measures in American history tell the
             story. California&apos;s Proposition 27 on sports betting attracted
             $407 million and was defeated. Proposition 22, the gig economy
-            measure, cost $225 million &mdash; Uber contributed $59.5 million,
-            DoorDash $52 million, Lyft $49 million &mdash; and it passed,
-            exempting app-based drivers from labor protections. Florida&apos;s
-            Amendment 3 on marijuana legalization drew $187 million and was
-            defeated. California&apos;s Proposition 33 on rent control attracted
-            $175 million and was defeated. In each case, the industry side
-            outspent its opponents by margins of 3:1 or greater. The ballot
-            measure is no longer a tool of direct democracy. It is an auction.
+            measure, cost $225 million (Uber contributed $59.5 million, DoorDash
+            $52 million, Lyft $49 million) and it passed, exempting app-based
+            drivers from labor protections. Florida&apos;s Amendment 3 on
+            marijuana legalization drew $187 million and was defeated.
+            California&apos;s Proposition 33 on rent control attracted $175
+            million and was defeated. In each case, the industry side outspent
+            its opponents by margins of 3:1 or greater. The ballot measure is no
+            longer a tool of direct democracy. It is an auction.
           </p>
 
           {/* Inline stat callout grid */}
@@ -495,19 +494,19 @@ export default function CourtsMapsAndBallotsPage() {
             companies spent $109 million to defeat California&apos;s Proposition
             61, which would have capped state drug prices at the level paid by
             the Veterans Administration. In Ohio, pharma deployed $59.1 million
-            to crush Issue 2 &mdash; and succeeded by a margin of 79.5%. The
-            dialysis industry has invested $204 million across Propositions 8
-            and 23 to block clinic staffing and regulation requirements. The
-            real estate industry has spent over $280 million across three rent
-            control ballot measures in California &mdash; all three were
-            defeated. The pattern is consistent: concentrated corporate money
-            overwhelms diffuse public support.
+            to crush Issue 2 and succeeded by a margin of 79.5%. The dialysis
+            industry has invested $204 million across Propositions 8 and 23 to
+            block clinic staffing and regulation requirements. The real estate
+            industry has spent over $280 million across three rent control
+            ballot measures in California; all three were defeated. The pattern
+            is consistent: concentrated corporate money overwhelms diffuse
+            public support.
           </p>
 
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
             Even the mechanics of ballot access have been monetized. The cost of
             gathering a single valid signature has climbed from $6.93 in 2016 to
-            $14.87 in 2024 &mdash; a 120% increase. Total spending on signature
+            $14.87 in 2024, a 120% increase. Total spending on signature
             gathering reached $172 million in the 2024 cycle. California alone
             accounts for 50&ndash;65% of all ballot measure spending nationally,
             making the state&apos;s initiative process a de facto proving ground

@@ -541,7 +541,7 @@ function CareerTimeline({ timeline }: { timeline: PersonTimeline }) {
                     )}
                     {pos.startDate && (pos.endDate || pos.isActive) && (
                       <span className="font-mono text-[10px] text-muted/40">
-                        &mdash;
+                        –
                       </span>
                     )}
                     {pos.isActive ? (

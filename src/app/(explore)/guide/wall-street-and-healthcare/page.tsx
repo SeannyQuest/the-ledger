@@ -32,42 +32,42 @@ const SCROLLYTELL_STEPS: ScrollytellStep[] = [
   {
     id: "premiums",
     title: "The Premium Extraction",
-    body: "It starts with the money Americans have no choice but to pay. Health insurance premiums have risen 47% over the past decade while wages grew 27%. Medicare Advantage plans — 52% of all Medicare enrollment — overcharge the federal government by an estimated $600 billion since 2003. The money flows in one direction: out of paychecks, out of the Treasury, and into corporate balance sheets. UnitedHealth posted $2.3 billion in profit in Q3 2025 alone.",
+    body: "It starts with the money Americans have no choice but to pay. Health insurance premiums have risen 47% over the past decade while wages grew 27%. Medicare Advantage plans (52% of all Medicare enrollment) overcharge the federal government by an estimated $600 billion since 2003. The money flows in one direction: out of paychecks, out of the Treasury, and into corporate balance sheets. UnitedHealth posted $2.3 billion in profit in Q3 2025 alone.",
     stat: { value: "$600B+", label: "Medicare Advantage Overpayments Since 2003", color: "#c41d1d" },
     highlightColor: "#c41d1d",
   },
   {
     id: "lobby",
     title: "The Lobbying Wall",
-    body: "Those profits fund the lobbying apparatus that prevents reform. The health sector spent $868 million on federal lobbying in 2025 — an all-time record, driven by Medicaid cut battles. The financial sector added another $711 million. Combined, these two industries deployed more than $1.5 billion in a single year to shape the laws that govern them. The American Hospital Association alone spent $32 million. Blue Cross Blue Shield retained 100 lobbyists just for Medicare Advantage.",
+    body: "Those profits fund the lobbying apparatus that prevents reform. The health sector spent $868 million on federal lobbying in 2025, an all-time record driven by Medicaid cut battles. The financial sector added another $711 million. Combined, these two industries deployed more than $1.5 billion in a single year to shape the laws that govern them. The American Hospital Association alone spent $32 million. Blue Cross Blue Shield retained 100 lobbyists just for Medicare Advantage.",
     stat: { value: "$1.58B", label: "Combined Lobbying (2025)", color: "accent" },
     highlightColor: "#d97706",
   },
   {
     id: "block",
     title: "The Reform Kill",
-    body: "The lobbying works. When Congress considered the No Surprises Act, the private-equity-owned physician staffing industry funneled $54 million through a dark money front called Doctor Patient Unity to gut the bill. When the Dodd-Frank Act threatened Wall Street, banks deployed 3,000 lobbyists — six for every member of Congress — and spent $27.3 million in just three months. After Dodd-Frank passed anyway, the industry spent $55 million, then $61 million, then $61 million again on implementation lobbying. The spending after the law exceeded the spending to block it.",
+    body: "The lobbying works. When Congress considered the No Surprises Act, the private-equity-owned physician staffing industry funneled $54 million through a dark money front called Doctor Patient Unity to gut the bill. When the Dodd-Frank Act threatened Wall Street, banks deployed 3,000 lobbyists (six for every member of Congress) and spent $27.3 million in just three months. After Dodd-Frank passed anyway, the industry spent $55 million, then $61 million, then $61 million again on implementation lobbying. The spending after the law exceeded the spending to block it.",
     stat: { value: "3,000", label: "Lobbyists Deployed Against Dodd-Frank", color: "#c41d1d" },
     highlightColor: "#c41d1d",
   },
   {
     id: "capture",
     title: "The Regulatory Capture",
-    body: "When lobbying alone is not enough, both industries place their own people inside the agencies meant to police them. At the SEC, 419 former employees filed 1,949 disclosure statements — and research shows regulators are 44.7% less likely to enforce against banks that lobby. At CMS, 53% of departing officials leave for the health industry. Twenty-four of fifty state insurance commissioners came from the industry they regulate. The referees are former players.",
+    body: "When lobbying alone is not enough, both industries place their own people inside the agencies meant to police them. At the SEC, 419 former employees filed 1,949 disclosure statements, and research shows regulators are 44.7% less likely to enforce against banks that lobby. At CMS, 53% of departing officials leave for the health industry. Twenty-four of fifty state insurance commissioners came from the industry they regulate. The referees are former players.",
     stat: { value: "44.7%", label: "Enforcement Reduction at Lobbying Banks", color: "money-out" },
     highlightColor: "#c41d1d",
   },
   {
     id: "profits",
     title: "The Payout",
-    body: "The captured regulators look the other way, and the profits flow. Private equity firms save $2 billion per year through the carried interest loophole — Senator Sinema took $500,000 from PE firms, then demanded a $14 billion closure of the loophole be removed from the Inflation Reduction Act. The three largest PBMs control 80% of the pharmacy market; the FTC has sued all three for inflating insulin prices. The cycle completes: profits fund lobbying, lobbying blocks reform, blocked reform protects profits.",
+    body: "The captured regulators look the other way, and the profits flow. Private equity firms save $2 billion per year through the carried interest loophole. Senator Sinema took $500,000 from PE firms, then demanded a $14 billion closure of the loophole be removed from the Inflation Reduction Act. The three largest PBMs control 80% of the pharmacy market; the FTC has sued all three for inflating insulin prices. The cycle completes: profits fund lobbying, lobbying blocks reform, blocked reform protects profits.",
     stat: { value: "$2B/yr", label: "Carried Interest Loophole Savings", color: "money-in" },
     highlightColor: "#1a7a3a",
   },
   {
     id: "cycle",
     title: "The Cycle Repeats",
-    body: "Crypto showed how fast the playbook scales. Industry lobbying surged 1,386% in six years — from $2.72 million in 2017 to $40.42 million in 2023. Fairshake PAC raised $195 million and achieved a 91% win rate in 2024, accounting for nearly half of all corporate political dollars that cycle. They targeted and defeated progressive members Katie Porter, Jamaal Bowman, and Cori Bush. Wall Street learned this playbook decades ago. Healthcare perfected it. Crypto is running it at startup speed.",
+    body: "Crypto showed how fast the playbook scales. Industry lobbying surged 1,386% in six years, from $2.72 million in 2017 to $40.42 million in 2023. Fairshake PAC raised $195 million and achieved a 91% win rate in 2024, accounting for nearly half of all corporate political dollars that cycle. They targeted and defeated progressive members Katie Porter, Jamaal Bowman, and Cori Bush. Wall Street learned this playbook decades ago. Healthcare perfected it. Crypto is running it at startup speed.",
     stat: { value: "1,386%", label: "Crypto Lobbying Increase (2017-2023)", color: "accent" },
     highlightColor: "#d97706",
   },
@@ -194,7 +194,7 @@ export default function WallStreetAndHealthcarePage() {
             Both spend hundreds of millions per year on federal lobbying. Both rotate their
             executives through the agencies that regulate them. Both have perfected the art of
             blocking reform after a crisis, then resuming the behavior that caused it. In 2025,
-            these two sectors spent a combined $1.58 billion on lobbying — more than the GDP of
+            these two sectors spent a combined $1.58 billion on lobbying, more than the GDP of
             a dozen sovereign nations.
           </p>
 
@@ -209,8 +209,8 @@ export default function WallStreetAndHealthcarePage() {
           </p>
 
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
-            This chapter covers the financial industry — from the 2008 crisis through crypto&apos;s
-            rise — and the broader healthcare sector beyond pharmaceuticals: insurers, hospitals,
+            This chapter covers the financial industry (from the 2008 crisis through crypto&apos;s
+            rise) and the broader healthcare sector beyond pharmaceuticals: insurers, hospitals,
             pharmacy benefit managers, and the managed care companies that now control more than
             half of Medicare. The data comes from Senate lobbying disclosures, FEC filings,
             OpenSecrets, CMS records, and federal enforcement databases.
@@ -229,7 +229,7 @@ export default function WallStreetAndHealthcarePage() {
           </h2>
 
           <p className="mt-8 text-lg leading-relaxed text-ink/70">
-            The FIRE sector — finance, insurance, and real estate — spent $636.4 million on
+            The FIRE sector (finance, insurance, and real estate) spent $636.4 million on
             federal lobbying in 2024 and $711 million in 2025. Securities and investment firms
             alone accounted for $195 million, a 26% increase in a single year. JPMorgan led
             individual corporate spenders at $8.05 million, followed by Goldman Sachs at
@@ -245,7 +245,7 @@ export default function WallStreetAndHealthcarePage() {
             $2.7 billion on lobbying and over $1 billion in campaign contributions. Companies
             that received $295 billion in TARP bailout funds had collectively spent $114 million
             on lobbying in the years prior. The investment in political influence paid for itself
-            many times over — first in the deregulation that enabled the crisis, then in the
+            many times over, first in the deregulation that enabled the crisis, then in the
             bailout that cushioned its consequences.
           </p>
 
@@ -256,7 +256,7 @@ export default function WallStreetAndHealthcarePage() {
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
             The Dodd-Frank Act of 2010 was supposed to prevent the next crisis. The financial
             industry treated it as a lobbying opportunity. During the legislative fight, banks
-            deployed 3,000 lobbyists — six for every member of Congress — and spent $27.3 million
+            deployed 3,000 lobbyists (six for every member of Congress) and spent $27.3 million
             in just three months. When the bill passed anyway, the industry simply shifted its
             spending to the rulemaking process. In the three years after passage, annual lobbying
             exceeded the pre-passage totals: $55 million, then $61 million, then $61 million
@@ -268,7 +268,7 @@ export default function WallStreetAndHealthcarePage() {
             rollback that raised the &ldquo;too-big-to-fail&rdquo; threshold from $50 billion to
             $250 billion in assets. Among the most aggressive advocates was Greg Becker, CEO of
             Silicon Valley Bank, who personally lobbied for the higher threshold. Five years later,
-            SVB collapsed — the second-largest bank failure in American history — at exactly the
+            SVB collapsed (the second-largest bank failure in American history) at exactly the
             asset level that would have kept it under enhanced federal supervision had the
             threshold not been raised.
           </p>
@@ -282,7 +282,7 @@ export default function WallStreetAndHealthcarePage() {
             watchdog for ordinary Americans against predatory financial practices. The industry
             targeted it immediately. The U.S. Chamber of Commerce spent $30 million campaigning
             to restructure the agency. When Mick Mulvaney was appointed acting director in 2017,
-            he requested a $0 budget from Congress — literally asking for no money to operate the
+            he requested a $0 budget from Congress, literally asking for no money to operate the
             agency he led. In February 2025, OMB Director Russell Vought ordered the CFPB to
             cease all supervisory work entirely. The estimated cost to consumers of the weakened
             oversight exceeds $15 billion.
@@ -294,7 +294,7 @@ export default function WallStreetAndHealthcarePage() {
 
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
             The cryptocurrency industry has replicated Wall Street&apos;s playbook at unprecedented
-            speed. Lobbying spending increased 1,386% in six years — from $2.72 million in 2017
+            speed. Lobbying spending increased 1,386% in six years, from $2.72 million in 2017
             to $40.42 million in 2023. But lobbying was only the beginning. Fairshake, the
             industry&apos;s Super PAC, raised $195 million for the 2024 cycle and achieved a 91% win
             rate, accounting for nearly half of all corporate political dollars spent that year.
@@ -331,7 +331,7 @@ export default function WallStreetAndHealthcarePage() {
 
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
             The SEC&apos;s revolving door is among the most active in government. A total of 419
-            former employees filed 1,949 post-employment disclosure statements — and academic
+            former employees filed 1,949 post-employment disclosure statements, and academic
             research has documented that regulators are 44.7% less likely to bring enforcement
             actions against banks that maintain active lobbying operations. The message to
             would-be enforcers is unmistakable: these companies will be your future employers.
@@ -340,11 +340,11 @@ export default function WallStreetAndHealthcarePage() {
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
             Private equity has leveraged this dynamic to protect its most lucrative advantage.
             The industry spent $625 million on political influence in 2020 alone, primarily
-            to preserve the carried interest loophole — a tax provision that allows fund managers
+            to preserve the carried interest loophole, a tax provision that allows fund managers
             to pay capital gains rates on what is effectively labor income, saving the industry
             an estimated $2 billion per year. When the Inflation Reduction Act threatened to
-            close the loophole, Senator Kyrsten Sinema — who had received $500,000 from
-            private equity donors — demanded its removal from the bill. The $14 billion closure
+            close the loophole, Senator Kyrsten Sinema (who had received $500,000 from
+            private equity donors) demanded its removal from the bill. The $14 billion closure
             provision was stripped. The loophole remains.
           </p>
         </div>
@@ -353,7 +353,7 @@ export default function WallStreetAndHealthcarePage() {
       {/* ── Scrollytelling section ── */}
       <ScrollytellSection
         headline="The Money Loop"
-        subhead="Six steps reveal how profits become lobbying, lobbying blocks reform, and blocked reform protects profits — in both Wall Street and healthcare."
+        subhead="Six steps reveal how profits become lobbying, lobbying blocks reform, and blocked reform protects profits: in both Wall Street and healthcare."
         steps={SCROLLYTELL_STEPS}
         bgColor="bg-ink"
         textColor="text-white"
@@ -387,8 +387,8 @@ export default function WallStreetAndHealthcarePage() {
 
           <p className="mt-8 text-lg leading-relaxed text-ink/70">
             The pharmaceutical industry gets the headlines, but it is only one piece of the
-            health sector&apos;s political machine. The broader healthcare industry — insurers,
-            hospitals, managed care organizations, and pharmacy benefit managers — is the
+            health sector&apos;s political machine. The broader healthcare industry (insurers,
+            hospitals, managed care organizations, and pharmacy benefit managers) is the
             single largest lobbying sector in the United States. In 2025, total health sector
             lobbying hit $868 million, a record driven by the fight over proposed Medicaid cuts.
             More than 1,834 registered lobbyists worked the sector that year.
@@ -402,7 +402,7 @@ export default function WallStreetAndHealthcarePage() {
             Health insurers have built one of the most sophisticated influence operations in
             Washington. Blue Cross Blue Shield spent $27.15 million on lobbying and deployed
             100 lobbyists focused specifically on Medicare Advantage. AHIP, the insurance
-            industry trade group, spent a record $13.06 million — and that figure does not
+            industry trade group, spent a record $13.06 million, and that figure does not
             include the $86.2 million AHIP secretly funneled to the U.S. Chamber of Commerce
             to fund anti-Affordable Care Act advertising campaigns. UnitedHealth Group spent
             $9.93 million in registered lobbying while posting billions in quarterly profit.
@@ -423,7 +423,7 @@ export default function WallStreetAndHealthcarePage() {
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
             Medicare Advantage is the crown jewel of healthcare industry capture. Private
             insurers receive per-enrollee payments from the federal government to manage care
-            for Medicare beneficiaries — and they have systematically inflated those payments
+            for Medicare beneficiaries, and they have systematically inflated those payments
             through a practice known as upcoding, in which patients are diagnosed with more
             severe conditions than they actually have. Since 2003, overpayments have exceeded
             $600 billion. Projections show they will surpass $1 trillion over the next decade.
@@ -432,8 +432,8 @@ export default function WallStreetAndHealthcarePage() {
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
             To protect this revenue stream, the industry deployed more than 220 lobbyists
             focused on Medicare Advantage policy. UnitedHealth alone received an estimated
-            $8.7 billion in excess payments. The Better Medicare Alliance — an industry-funded
-            advocacy group — spent over $13.5 million on advertising campaigns promoting
+            $8.7 billion in excess payments. The Better Medicare Alliance (an industry-funded
+            advocacy group) spent over $13.5 million on advertising campaigns promoting
             Medicare Advantage to seniors and lawmakers. The message is always the same:
             beneficiaries love the program. The overpayments are never mentioned.
           </p>
@@ -465,8 +465,8 @@ export default function WallStreetAndHealthcarePage() {
           </h3>
 
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
-            Pharmacy benefit managers — the middlemen who negotiate drug prices between
-            manufacturers and insurers — have become one of the most concentrated and opaque
+            Pharmacy benefit managers (the middlemen who negotiate drug prices between
+            manufacturers and insurers) have become one of the most concentrated and opaque
             forces in healthcare. The three largest PBMs control 80% of the market. PCMA, their
             trade group, doubled its lobbying to $17.5-18 million as the Federal Trade Commission
             brought suit against all three for inflating insulin prices. The FTC&apos;s complaint
@@ -475,8 +475,8 @@ export default function WallStreetAndHealthcarePage() {
           </p>
 
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
-            When Congress moved to ban surprise medical billing — the practice of charging
-            patients out-of-network rates for emergency care — the private equity firms that
+            When Congress moved to ban surprise medical billing (the practice of charging
+            patients out-of-network rates for emergency care), the private equity firms that
             own physician staffing companies deployed more than $100 million in dark money to
             weaken the legislation. A front group called Doctor Patient Unity spent $54 million
             on advertising without disclosing that its sole funders were TeamHealth and Envision
@@ -492,10 +492,10 @@ export default function WallStreetAndHealthcarePage() {
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
             No company better illustrates the scale of healthcare industry power than
             UnitedHealth Group. In December 2024, the killing of its insurance unit CEO
-            became a cultural flashpoint — a reflection of public fury at an industry that
+            became a cultural flashpoint, a reflection of public fury at an industry that
             denies claims, inflates costs, and spends billions on political influence. By 2025,
             the Department of Justice had opened both criminal and civil investigations into the
-            company. UnitedHealth posted $2.3 billion in Q3 2025 profit — down from $6.1 billion
+            company. UnitedHealth posted $2.3 billion in Q3 2025 profit, down from $6.1 billion
             in the prior year, reflecting legal costs and increased regulatory scrutiny.
           </p>
 
@@ -504,9 +504,9 @@ export default function WallStreetAndHealthcarePage() {
           </h3>
 
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
-            The revolving door in healthcare is not a side effect. It is the mechanism. At CMS —
+            The revolving door in healthcare is not a side effect. It is the mechanism. At CMS,
             the agency that administers Medicare and Medicaid, overseeing more than $1.5 trillion
-            in annual spending — 53% of departing officials leave for positions in the health
+            in annual spending, 53% of departing officials leave for positions in the health
             industry. Twenty-four of fifty state insurance commissioners came from the industry
             they were appointed to regulate. The estimated consumer cost of this structural
             capture is $27 billion per year in overpayments, denied claims, and unenforced
@@ -514,8 +514,8 @@ export default function WallStreetAndHealthcarePage() {
           </p>
 
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
-            Medicaid managed care — the outsourcing of state Medicaid programs to private
-            insurers — represents the latest frontier. The program now exceeds $880 billion,
+            Medicaid managed care (the outsourcing of state Medicaid programs to private
+            insurers) represents the latest frontier. The program now exceeds $880 billion,
             with managed care organizations handling 52% of enrollment. Centene, the largest
             Medicaid MCO, has spent $26.9 million on political activity while settling
             overbilling claims in more than thirteen states for a cumulative total exceeding

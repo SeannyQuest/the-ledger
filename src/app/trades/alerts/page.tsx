@@ -70,7 +70,8 @@ const FLAG_CONFIG: Record<
     label: "Clustered Trading",
     color: "text-yellow-700",
     bgColor: "bg-yellow-100",
-    description: "Multiple representatives traded the same ticker within 7 days",
+    description:
+      "Multiple representatives traded the same ticker within 7 days",
   },
 };
 
@@ -110,8 +111,8 @@ export default function TradeAlertsPage() {
         </h1>
         <p className="mt-4 max-w-xl text-lg text-muted">
           Trades flagged for late disclosure, unusually large amounts, or
-          suspicious timing patterns. These are not accusations of wrongdoing
-          &mdash; they are data points that warrant scrutiny.
+          suspicious timing patterns. These are not accusations of wrongdoing;
+          they are data points that warrant scrutiny.
         </p>
         <div className="mt-3">
           <Link
@@ -202,7 +203,9 @@ export default function TradeAlertsPage() {
               </label>
               <select
                 value={flagFilter}
-                onChange={(e) => setFlagFilter(e.target.value as FlagReason | "")}
+                onChange={(e) =>
+                  setFlagFilter(e.target.value as FlagReason | "")
+                }
                 className="rounded border border-border bg-surface px-2 py-1 font-mono text-xs text-ink"
               >
                 <option value="">All Flags</option>
@@ -268,8 +271,8 @@ export default function TradeAlertsPage() {
                               className="h-2 w-2 shrink-0 rounded-full"
                               style={{
                                 backgroundColor: trade.party
-                                  ? PARTY_COLORS[trade.party.toLowerCase()] ??
-                                    "#6b7280"
+                                  ? (PARTY_COLORS[trade.party.toLowerCase()] ??
+                                    "#6b7280")
                                   : "#6b7280",
                               }}
                             />

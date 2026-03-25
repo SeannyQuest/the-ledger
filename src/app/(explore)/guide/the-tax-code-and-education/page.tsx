@@ -35,49 +35,49 @@ const SCROLLYTELL_STEPS: ScrollytellStep[] = [
   {
     id: "tcja-windfall",
     title: "The $1.5 Trillion Rewrite",
-    body: "In Q4 2017, lobbying filings on tax issues surged to 4,673 &mdash; a 56% spike above the quarterly norm. The Business Roundtable quadrupled its spending to $17.3 million in a single quarter. When the Tax Cuts and Jobs Act was signed on December 22, 2017, it slashed the corporate rate from 35% to 21% and added $1.456 trillion to the national debt over a decade. The top 1% received 47.6% of the benefits. The bottom 40% received less than 2%.",
+    body: "In Q4 2017, lobbying filings on tax issues surged to 4,673, a 56% spike above the quarterly norm. The Business Roundtable quadrupled its spending to $17.3 million in a single quarter. When the Tax Cuts and Jobs Act was signed on December 22, 2017, it slashed the corporate rate from 35% to 21% and added $1.456 trillion to the national debt over a decade. The top 1% received 47.6% of the benefits. The bottom 40% received less than 2%.",
     stat: { value: "$1.5T", label: "Added to the Deficit Over a Decade", color: "#c41d1d" },
     highlightColor: "#c41d1d",
   },
   {
     id: "buybacks-over-workers",
     title: "Buybacks Over Bonuses",
-    body: "Corporate America promised the TCJA would unleash investment and worker pay. Instead, S&P 500 companies spent $806 billion on stock buybacks in 2018 &mdash; a 55% jump. By February 2018, companies had spent $171 billion on buybacks versus just $6 billion on worker bonuses. Only 20% of incremental cash went to capital expenditure or R&D. The rest went back to shareholders. Ninety-one Fortune 500 companies paid zero federal income tax that year.",
+    body: "Corporate America promised the TCJA would unleash investment and worker pay. Instead, S&P 500 companies spent $806 billion on stock buybacks in 2018, a 55% jump. By February 2018, companies had spent $171 billion on buybacks versus just $6 billion on worker bonuses. Only 20% of incremental cash went to capital expenditure or R&D. The rest went back to shareholders. Ninety-one Fortune 500 companies paid zero federal income tax that year.",
     stat: { value: "$806B", label: "Stock Buybacks in 2018", color: "#c41d1d" },
     highlightColor: "#c41d1d",
   },
   {
     id: "lobbying-roi",
     title: "The 22,000% Return",
-    body: "In 2004, ninety-three firms spent $282.7 million lobbying for a repatriation tax holiday and saved $62.5 billion collectively &mdash; a 22,000% return on investment. Every dollar spent on lobbying returned $220 in tax savings. The Sunlight Foundation found that companies lobbying more on taxes consistently pay lower effective rates. The TCJA proved the formula scales: 47% of all federal lobbyists now work on tax issues.",
+    body: "In 2004, ninety-three firms spent $282.7 million lobbying for a repatriation tax holiday and saved $62.5 billion collectively, a 22,000% return on investment. Every dollar spent on lobbying returned $220 in tax savings. The Sunlight Foundation found that companies lobbying more on taxes consistently pay lower effective rates. The TCJA proved the formula scales: 47% of all federal lobbyists now work on tax issues.",
     stat: { value: "22,000%", label: "Lobbying ROI on 2004 Tax Holiday", color: "#d97706" },
     highlightColor: "#d97706",
   },
   {
     id: "irs-gutted",
     title: "Defunding the Referee",
-    body: "Congress cut the IRS enforcement budget 23% in real terms after 2010. The audit rate for millionaires collapsed 80%. EITC claimants &mdash; the working poor &mdash; became nearly as likely to be audited as the top 1%. When the Inflation Reduction Act invested $80 billion to rebuild enforcement, the CBO projected it would recover $204 billion. Republicans clawed back $41.8 billion within three years, killing the program before it could work.",
+    body: "Congress cut the IRS enforcement budget 23% in real terms after 2010. The audit rate for millionaires collapsed 80%. EITC claimants (the working poor) became nearly as likely to be audited as the top 1%. When the Inflation Reduction Act invested $80 billion to rebuild enforcement, the CBO projected it would recover $204 billion. Republicans clawed back $41.8 billion within three years, killing the program before it could work.",
     stat: { value: "$41.8B", label: "IRS Funding Clawed Back", color: "#c41d1d" },
     highlightColor: "#c41d1d",
   },
   {
     id: "student-debt",
     title: "The $1.84 Trillion Anchor",
-    body: "Student loan debt now stands at $1.84 trillion, owed by 45.8 million Americans. Loan servicers like Navient and MOHELA spent over $50 million lobbying Congress since 2008 to protect their revenue streams. When Biden attempted broad forgiveness, the Supreme Court blocked it in a 6-3 ruling &mdash; with standing based on MOHELA&apos;s potential revenue loss. The servicer industry collected $1.1 billion in DOE payments while borrowers drowned.",
+    body: "Student loan debt now stands at $1.84 trillion, owed by 45.8 million Americans. Loan servicers like Navient and MOHELA spent over $50 million lobbying Congress since 2008 to protect their revenue streams. When Biden attempted broad forgiveness, the Supreme Court blocked it in a 6-3 ruling, with standing based on MOHELA&apos;s potential revenue loss. The servicer industry collected $1.1 billion in DOE payments while borrowers drowned.",
     stat: { value: "$1.84T", label: "Total Student Loan Debt", color: "#c41d1d" },
     highlightColor: "#c41d1d",
   },
   {
     id: "voucher-wave",
     title: "The Privatization Wave",
-    body: "In 2021, zero states had universal school voucher programs. By 2025, thirteen did. The American Federation for Children &mdash; founded by Betsy DeVos &mdash; spent $9 million on state elections in 2022, winning 277 of 368 races and defeating 40 incumbents. Jeff Yass contributed $7 million to the AFC Victory Fund alone. In Colorado, pro-voucher forces outspent opponents 158-to-1. The Heritage Foundation authored the blueprint in Project 2025, then its author was hired into the DOE to execute it.",
+    body: "In 2021, zero states had universal school voucher programs. By 2025, thirteen did. The American Federation for Children (founded by Betsy DeVos) spent $9 million on state elections in 2022, winning 277 of 368 races and defeating 40 incumbents. Jeff Yass contributed $7 million to the AFC Victory Fund alone. In Colorado, pro-voucher forces outspent opponents 158-to-1. The Heritage Foundation authored the blueprint in Project 2025, then its author was hired into the DOE to execute it.",
     stat: { value: "0 → 13", label: "Universal Voucher States (2021-2025)", color: "#d97706" },
     highlightColor: "#d97706",
   },
   {
     id: "doe-dismantled",
     title: "Dismantling From Within",
-    body: "The Department of Education lost approximately 1,700 employees &mdash; nearly half its workforce &mdash; under the Trump administration. At least 240 Office for Civil Rights attorneys were laid off. DOGE cut dozens of IES research contracts worth $900 million. Lindsey Burke spent 17 years at the Heritage Foundation writing the chapter calling for the DOE&apos;s elimination, then was hired as Deputy Chief of Staff for Policy and Programs to implement it. The revolving door does not just spin &mdash; it swings open and stays.",
+    body: "The Department of Education lost approximately 1,700 employees, nearly half its workforce, under the Trump administration. At least 240 Office for Civil Rights attorneys were laid off. DOGE cut dozens of IES research contracts worth $900 million. Lindsey Burke spent 17 years at the Heritage Foundation writing the chapter calling for the DOE&apos;s elimination, then was hired as Deputy Chief of Staff for Policy and Programs to implement it. The revolving door does not just spin. It swings open and stays.",
     stat: { value: "~50%", label: "DOE Workforce Cut", color: "#c41d1d" },
     highlightColor: "#c41d1d",
   },
@@ -220,19 +220,19 @@ export default function TheTaxCodeAndEducationPage() {
         <div className="mx-auto max-w-3xl px-4 py-16 lg:px-8 lg:py-24">
           <p className="drop-cap text-xl leading-relaxed text-ink/80 lg:text-2xl lg:leading-relaxed">
             The American tax code is 6,871 pages long. It is not written by Congress. It is
-            written by the 6,107 lobbyists who filed on tax issues in 2024 &mdash; 47% of every
+            written by the 6,107 lobbyists who filed on tax issues in 2024, 47% of every
             federal lobbyist in Washington. Their clients spent $4.4 billion on lobbying that
             year, a record, and the return on that investment dwarfs anything on Wall Street:
             22,000% on a single tax holiday. The code they produce is a shadow spending program
-            worth $2.2 trillion in annual tax expenditures &mdash; more than Social Security,
+            worth $2.2 trillion in annual tax expenditures, more than Social Security,
             more than Medicare, more than defense. The difference is that no one votes on it,
             no one reviews it annually, and the benefits flow overwhelmingly upward.
           </p>
 
           <p className="mt-8 text-lg leading-relaxed text-ink/70">
             Education operates under the same gravitational pull. The $1.84 trillion student debt
-            crisis is not an accident but a product of sustained industry lobbying &mdash; over $50
-            million since 2008 from loan servicers alone &mdash; that has blocked every attempt at
+            crisis is not an accident but a product of sustained industry lobbying, over $50
+            million since 2008 from loan servicers alone, that has blocked every attempt at
             comprehensive reform. The for-profit college sector mounted a $12.5 million lobbying
             surge to kill Obama-era accountability rules, then watched its champion, Betsy DeVos,
             rescind them entirely. School choice advocates backed by the DeVos, Walton, and Koch
@@ -269,12 +269,12 @@ export default function TheTaxCodeAndEducationPage() {
 
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
             The Tax Cuts and Jobs Act, signed December 22, 2017, was the largest overhaul of the
-            U.S. tax code in thirty years. Its centerpiece &mdash; slashing the corporate rate from
-            35% to 21% &mdash; was the product of the most intense corporate lobbying campaign in
+            U.S. tax code in thirty years. Its centerpiece, slashing the corporate rate from
+            35% to 21%, was the product of the most intense corporate lobbying campaign in
             modern history. In a typical quarter, approximately 3,000 lobbying filings mention
             taxation. In Q4 2017, that number surged to 4,673. The Business Roundtable, a coalition
             of 200 CEOs from the largest American corporations, spent $17.3 million in that single
-            quarter &mdash; nearly quadruple its prior spending. The U.S. Chamber of Commerce, the
+            quarter, nearly quadruple its prior spending. The U.S. Chamber of Commerce, the
             National Association of Realtors, and the Business Roundtable combined to spend more than
             $56 million in Q4 2017 alone. Even the Beer Institute increased its lobbying budget by
             $390,000 to $1.3 million in that quarter, fighting for an excise tax cut.
@@ -288,7 +288,7 @@ export default function TheTaxCodeAndEducationPage() {
             distributed precisely as the lobbying investment predicted: 47.6% to 62.6% of total
             benefits went to the top 1%, depending on the analytical model used. The top 0.1% of
             households received an average tax cut of $193,380. The middle 20% received $930. The
-            bottom 40% received less than 2% of total benefits &mdash; a gap of roughly $60,000
+            bottom 40% received less than 2% of total benefits, a gap of roughly $60,000
             versus $500 between the top 1% and the bottom 60%.
           </p>
 
@@ -322,10 +322,10 @@ export default function TheTaxCodeAndEducationPage() {
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
             The TCJA&apos;s proponents promised a tidal wave of business investment, wage growth, and
             job creation. The data told a different story. In 2018, S&amp;P 500 companies executed
-            $806 billion in stock buybacks &mdash; a 55% increase over 2017. Across all public
+            $806 billion in stock buybacks, a 55% increase over 2017. Across all public
             companies, buybacks approached $1 trillion. The fifteen largest corporate cash holders
             tripled their buyback spending from $86 billion in 2017 to $231 billion in 2018. By
-            February 2018 &mdash; barely two months after the law was signed &mdash; companies had
+            February 2018, barely two months after the law was signed, companies had
             announced $171 billion in buybacks versus just $6 billion in worker bonuses. For every
             dollar that went to employees, twenty-eight dollars went to shareholders.
           </p>
@@ -347,10 +347,10 @@ export default function TheTaxCodeAndEducationPage() {
 
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
             Despite a statutory corporate tax rate of 21%, hundreds of major corporations pay far
-            less &mdash; or nothing at all. In 2018, ninety-one profitable Fortune 500 companies
+            less, or nothing at all. In 2018, ninety-one profitable Fortune 500 companies
             paid zero federal income tax on their combined profits. The list included Amazon,
             Chevron, Halliburton, and IBM. In 2020, fifty-five profitable corporations paid $0 on
-            $40 billion in combined pretax income &mdash; income that would have generated $8.5
+            $40 billion in combined pretax income, income that would have generated $8.5
             billion at the statutory rate. Instead, those companies received $3.5 billion in tax
             rebates, draining a net $12 billion from the Treasury. Twenty-six companies sustained
             a zero effective rate across the entire three-year period from 2018 to 2020.
@@ -363,7 +363,7 @@ export default function TheTaxCodeAndEducationPage() {
             income across three years and paid nothing on balance. Salesforce earned $2.7 billion
             in 2021 and paid zero. AT&amp;T and Charter Communications each earned more than $1
             billion in 2021 and paid zero. The average effective rate for 379 profitable Fortune 500
-            companies in 2018 was 11.3% &mdash; slightly more than half the 21% statutory rate. For
+            companies in 2018 was 11.3%, slightly more than half the 21% statutory rate. For
             the period 2018&ndash;2021, 95 companies averaged an effective rate below 10%, up from
             56 companies in the pre-TCJA period of 2013&ndash;2016. The GAO found that 34% of
             large, profitable corporations pay zero federal income tax in any given year.
@@ -409,7 +409,7 @@ export default function TheTaxCodeAndEducationPage() {
             The carried interest loophole allows private equity and hedge fund managers to pay the
             20% capital gains rate instead of the 37% ordinary income rate on their management
             fees. Despite bipartisan criticism from Obama, Trump, Clinton, Sanders, and Biden, the
-            loophole has survived every reform attempt &mdash; a testament to the financial
+            loophole has survived every reform attempt, a testament to the financial
             industry&apos;s raw lobbying power. The loophole costs the federal government between
             $2 billion and $18 billion per year, depending on methodology. The CBO estimated in
             2017 that closing it would raise $14 billion over a decade.
@@ -433,7 +433,7 @@ export default function TheTaxCodeAndEducationPage() {
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
             The private equity industry&apos;s investment in political influence is staggering.
             In the 2020 election cycle, the securities and investment sector spent $625 million
-            on combined political activity &mdash; $547 million in campaign contributions and the
+            on combined political activity: $547 million in campaign contributions and the
             rest in lobbying. Citadel led individual firms at $67 million, followed by Blackstone
             at $43 million and Susquehanna International at $30 million. During the TCJA debate,
             Blackstone, Carlyle, and KKR combined to give $1.31 million to Republican lawmakers
@@ -454,7 +454,7 @@ export default function TheTaxCodeAndEducationPage() {
             sheltered from the then-35% corporate rate. They maintained 9,755 subsidiaries in
             tax haven jurisdictions. The taxes avoided on those holdings totaled an estimated $752
             billion. The Netherlands, Ireland, and Bermuda alone accounted for 35% of all overseas
-            profits reported by U.S. multinationals &mdash; despite containing less than 0.3% of
+            profits reported by U.S. multinationals, despite containing less than 0.3% of
             the world&apos;s population. The annual revenue lost to offshore profit shifting is
             approximately $150 billion per year in federal and state revenue combined.
           </p>
@@ -462,9 +462,9 @@ export default function TheTaxCodeAndEducationPage() {
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
             Apple&apos;s arrangement with Ireland became the defining case study. Between 2004 and
             2014, Apple routed &euro;110.8 billion in non-U.S. profits through Irish subsidiaries,
-            paying an effective tax rate as low as 0.005% &mdash; despite Ireland&apos;s statutory
+            paying an effective tax rate as low as 0.005%, despite Ireland&apos;s statutory
             rate of 12.5%. In 2016, the European Commission ordered Apple to pay &euro;13 billion
-            plus interest in unpaid Irish taxes &mdash; the largest corporate tax fine in history.
+            plus interest in unpaid Irish taxes, the largest corporate tax fine in history.
             Apple&apos;s response, revealed in the Paradise Papers, was to move its intellectual
             property holdings to Jersey in the Channel Islands. Google deployed a parallel scheme
             known as the &ldquo;Double Irish with Dutch Sandwich,&rdquo; routing $23 billion through
@@ -473,8 +473,8 @@ export default function TheTaxCodeAndEducationPage() {
           </p>
 
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
-            Corporate inversions &mdash; reincorporating in a low-tax jurisdiction while maintaining
-            U.S. operations &mdash; arrived in two waves. The first, from 1996 to 2004, involved
+            Corporate inversions (reincorporating in a low-tax jurisdiction while maintaining
+            U.S. operations) arrived in two waves. The first, from 1996 to 2004, involved
             &ldquo;naked inversions&rdquo; to Caribbean havens and was partially closed by
             legislation. The second wave, from 2012 to 2016, targeted Ireland and the United
             Kingdom through mergers with real foreign companies. The largest completed inversion
@@ -509,8 +509,8 @@ export default function TheTaxCodeAndEducationPage() {
             where the money is. The overall individual audit rate dropped from 0.89% in 2010 to
             0.29% in 2019. Millionaires became 80% less likely to be audited between 2011 and
             2018. Audit rates for returns reporting more than $5 million in income fell 66% over
-            the same period. Meanwhile, Earned Income Tax Credit claimants &mdash; among the
-            lowest-income filers &mdash; were audited at a rate of 0.78%, nearly three times the
+            the same period. Meanwhile, Earned Income Tax Credit claimants, among the
+            lowest-income filers, were audited at a rate of 0.78%, nearly three times the
             overall rate. The working poor became about as likely to face an IRS audit as someone
             in the top 1%.
           </p>
@@ -519,11 +519,11 @@ export default function TheTaxCodeAndEducationPage() {
             The disparity is structural. Auditing complex corporate and billionaire returns requires
             specialized expertise that the IRS can no longer retain. Experienced agents leave for
             private-sector tax practices that pay multiples of government salaries. What remains is
-            the capacity for simple &ldquo;correspondence audits&rdquo; &mdash; automated checks
+            the capacity for simple &ldquo;correspondence audits&rdquo;, automated checks
             on straightforward returns filed by low-income workers claiming the EITC. The total
             revenue shortfall from reduced enforcement since 2011 exceeds $95 billion in cumulative
-            collections. The Treasury estimates the annual tax gap &mdash; the difference between
-            what is owed and what is collected &mdash; at $600 billion. Stanford University
+            collections. The Treasury estimates the annual tax gap, the difference between
+            what is owed and what is collected, at $600 billion. Stanford University
             researchers estimate that noncompliance by the richest 1% alone costs $175 billion
             per year.
           </p>
@@ -531,12 +531,12 @@ export default function TheTaxCodeAndEducationPage() {
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
             The Inflation Reduction Act of August 2022 attempted to reverse the damage with $80
             billion in mandatory IRS funding over ten years. The CBO projected the investment would
-            generate $204 billion in additional revenue &mdash; a return of $2.55 for every $1
+            generate $204 billion in additional revenue, a return of $2.55 for every $1
             spent. The Republican response was swift and systematic. The first bill of the 118th
             Congress, H.R. 23, proposed rescinding the entire $80 billion. The Fiscal Responsibility
             Act of 2023 immediately rescinded $1.4 billion and agreed to claw back $20 billion more.
             Subsequent appropriations rescissions in FY2024 and FY2025 stripped an additional $40.4
-            billion. In total, approximately $41.8 billion &mdash; 52% of the original investment &mdash;
+            billion. In total, approximately $41.8 billion (52% of the original investment)
             was clawed back within three years. The enforcement boost that was designed to last a
             decade was effectively killed before it could demonstrate results. The primary
             beneficiaries of the defunding are the corporations and wealthy individuals whose complex
@@ -551,7 +551,7 @@ export default function TheTaxCodeAndEducationPage() {
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
             In most developed nations, the government files taxes for its citizens using data it
             already possesses. In the United States, a $14 billion industry exists to perform this
-            service &mdash; and that industry has spent over two decades ensuring the government
+            service, and that industry has spent over two decades ensuring the government
             never competes with it. Since the launch of the IRS Free File Program in 2003, Intuit
             (maker of TurboTax) and H&amp;R Block have spent a combined $93 million lobbying
             against free government-provided tax filing. Intuit alone has spent $47.2 million.
@@ -565,9 +565,9 @@ export default function TheTaxCodeAndEducationPage() {
             developing its own free system. The FTC subsequently found that Intuit had engaged in
             deceptive practices with its &ldquo;free&rdquo; TurboTax advertising. Intuit&apos;s
             lobbying spending has only accelerated: nearly $3.8 million in 2023 and nearly $4
-            million in 2024 &mdash; both company records. When the IRS launched its Direct File
-            pilot in thirteen states on January 29, 2024 &mdash; the first time taxpayers could
-            file online directly with the IRS for free, funded by the Inflation Reduction Act &mdash;
+            million in 2024, both company records. When the IRS launched its Direct File
+            pilot in thirteen states on January 29, 2024 (the first time taxpayers could
+            file online directly with the IRS for free, funded by the Inflation Reduction Act),
             the tax prep industry mounted an intense opposition campaign. The Trump administration
             ended the Direct File program in 2025.
           </p>
@@ -583,7 +583,7 @@ export default function TheTaxCodeAndEducationPage() {
             &ldquo;inheritance tax&rdquo; again. Instead, they should call it the &ldquo;death
             tax.&rdquo; It was one of the most effective framing operations in modern political
             history. The rebranding shifted public perception from a tax on wealthy estates
-            &mdash; affecting roughly two in every 1,000 decedents &mdash; to a universal tax
+            (affecting roughly two in every 1,000 decedents) to a universal tax
             on death itself. Support for repeal surged despite the fact that the overwhelming
             majority of Americans would never owe a penny.
           </p>
@@ -623,12 +623,12 @@ export default function TheTaxCodeAndEducationPage() {
           </p>
 
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
-            The SALT deduction cap &mdash; set at $10,000 by the TCJA &mdash; added another
+            The SALT deduction cap (set at $10,000 by the TCJA) added another
             dimension to state tax competition. The One Big Beautiful Bill Act raised the cap to
             $40,000, phasing down to $10,000 for incomes over $500,000. Full repeal would cut
             taxes by more than $140,000 for the top 0.1%, with 75% of the benefit flowing to
-            households earning above $430,000. The SALT caucus &mdash; a bipartisan coalition of
-            representatives from high-tax states including New York, New Jersey, and California &mdash;
+            households earning above $430,000. The SALT caucus, a bipartisan coalition of
+            representatives from high-tax states including New York, New Jersey, and California,
             has made SALT relief a precondition for supporting any tax legislation, creating a
             dynamic in which the wealthiest households in the wealthiest states hold the entire tax
             code hostage.
@@ -640,10 +640,10 @@ export default function TheTaxCodeAndEducationPage() {
           </h3>
 
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
-            Tax expenditures &mdash; the credits, deductions, exemptions, and exclusions embedded
-            in the code &mdash; totaled $1.9 trillion in 2024 and are projected to reach $2.2
+            Tax expenditures (the credits, deductions, exemptions, and exclusions embedded
+            in the code) totaled $1.9 trillion in 2024 and are projected to reach $2.2
             trillion in 2025. That figure exceeds the federal spending on Social Security, Medicare,
-            or national defense &mdash; any single line item in the discretionary or mandatory
+            or national defense: any single line item in the discretionary or mandatory
             budget. Yet unlike direct spending, tax expenditures face no annual appropriations
             review. They reduce revenue rather than appropriate funds, making them less visible
             to the public and less subject to democratic oversight. Individual tax breaks account
@@ -652,7 +652,7 @@ export default function TheTaxCodeAndEducationPage() {
           </p>
 
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
-            The overall tax gap &mdash; the difference between taxes owed and taxes paid &mdash;
+            The overall tax gap, the difference between taxes owed and taxes paid,
             stands at $600 billion annually by Treasury estimates. The IRS projects $540 billion
             per year for tax years 2017 through 2019. The corporate tax gap alone is at least $32
             billion per year by IRS estimates, though this figure is widely considered a significant
@@ -661,7 +661,7 @@ export default function TheTaxCodeAndEducationPage() {
             Institute concluded that the TCJA &ldquo;overwhelmingly benefited the rich and
             corporations while overlooking working families.&rdquo; The 2025 extension battle
             confirmed the trajectory: the One Big Beautiful Bill Act made TCJA&apos;s individual
-            provisions permanent, restored 100% bonus depreciation, and raised the SALT cap &mdash;
+            provisions permanent, restored 100% bonus depreciation, and raised the SALT cap.
             at a projected cost of $4 trillion over the 2025&ndash;2034 budget window.
           </p>
         </div>
@@ -682,7 +682,7 @@ export default function TheTaxCodeAndEducationPage() {
           <blockquote className="text-center">
             <p className="font-headline text-3xl font-black leading-tight tracking-tight text-ink lg:text-4xl">
               &ldquo;Ninety-three firms spent $282.7 million lobbying for a tax holiday
-              and saved $62.5 billion &mdash; a 22,000% return. Every dollar spent
+              and saved $62.5 billion, a 22,000% return. Every dollar spent
               returned $220 in tax savings.&rdquo;
             </p>
             <cite className="mt-6 block font-mono text-sm font-bold uppercase tracking-widest text-muted">
@@ -709,7 +709,7 @@ export default function TheTaxCodeAndEducationPage() {
 
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
             Federal student loan debt stood at $1.69 trillion as of September 2025. Including
-            private loans, the total reached $1.84 trillion &mdash; owed by 45.8 million
+            private loans, the total reached $1.84 trillion, owed by 45.8 million
             borrowers carrying an average balance of $39,547. The debt grew $54 billion in 2025
             alone, with quarterly year-over-year growth averaging 2.94%. Federal loans account
             for more than 90% of all student debt. This is not a market failure. It is a system
@@ -729,8 +729,8 @@ export default function TheTaxCodeAndEducationPage() {
 
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
             The Biden administration&apos;s attempt at broad student loan forgiveness illustrates
-            the industry&apos;s defensive power. The initial plan &mdash; up to $20,000 in
-            forgiveness per borrower under the HEROES Act &mdash; was struck down by the Supreme
+            the industry&apos;s defensive power. The initial plan (up to $20,000 in
+            forgiveness per borrower under the HEROES Act) was struck down by the Supreme
             Court in <em>Biden v. Nebraska</em> on June 30, 2023, in a 6-3 ruling that invoked the
             &ldquo;major questions doctrine.&rdquo; The basis for Missouri&apos;s standing was
             MOHELA&apos;s potential revenue loss if forgiven loans exited its servicing portfolio.
@@ -738,7 +738,7 @@ export default function TheTaxCodeAndEducationPage() {
             for 45 million borrowers. A second attempt in September 2024 was pre-emptively blocked
             by seven Republican-led states within two days. In total, the Biden administration
             forgave approximately $175 billion for 4.76 million borrowers through targeted programs
-            &mdash; roughly 9.5% of total federal student debt &mdash; through mechanisms the
+            (roughly 9.5% of total federal student debt) through mechanisms the
             servicer lobby could not easily challenge: Public Service Loan Forgiveness corrections,
             income-driven repayment adjustments, and borrower defense discharges. Over fifty members
             of Congress called on the Department of Education to consider terminating MOHELA&apos;s
@@ -778,7 +778,7 @@ export default function TheTaxCodeAndEducationPage() {
             &ldquo;gainful employment&rdquo; rules that would have tied federal student aid
             eligibility to debt-to-income outcomes for graduates. Before the rules were proposed,
             the industry spent $2.8 million on lobbying in 2009. By 2010, spending nearly tripled
-            to $7.57 million. In 2011, it peaked at $12.5 million &mdash; deployed through 37
+            to $7.57 million. In 2011, it peaked at $12.5 million, deployed through 37
             lobbying firms that fielded 158 lobbyists, 71% of whom had prior government experience
             and twelve of whom were former members of Congress. The Association of Private Sector
             Colleges and Universities (now Career Education Colleges and Universities) hired former
@@ -790,7 +790,7 @@ export default function TheTaxCodeAndEducationPage() {
             The institutions at the center of this lobbying effort were, in many cases, running
             fraudulent operations. Corinthian Colleges closed in 2015 after being denied access
             to federal funds following investigations into systematic fraud. The result was $5.8
-            billion in loan discharges for 560,000 borrowers &mdash; the single largest student
+            billion in loan discharges for 560,000 borrowers, the single largest student
             loan discharge in history at the time. ITT Tech closed in September 2016 under similar
             circumstances, generating $3.9 billion in discharges for 208,000 borrowers. DeVry
             University, which had spent $720,000 on lobbying in 2011 (through lobbyist Heather
@@ -807,7 +807,7 @@ export default function TheTaxCodeAndEducationPage() {
             new gainful employment regulations in October 2023. Under the second Trump
             administration, reporting deadlines were delayed and implementation remains uncertain.
             The rule has been proposed, implemented, rescinded, re-proposed, and re-implemented
-            across three administrations &mdash; a sixteen-year regulatory saga driven entirely
+            across three administrations, a sixteen-year regulatory saga driven entirely
             by the oscillation of industry lobbying power.
           </p>
 
@@ -819,14 +819,13 @@ export default function TheTaxCodeAndEducationPage() {
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
             The school choice movement experienced the fastest policy diffusion in modern education
             history between 2021 and 2025. In 2021, zero states had universal school voucher or
-            Education Savings Account programs. By the end of 2025, thirteen did. Five states &mdash;
-            Arkansas, Florida, Iowa, Ohio, and Utah &mdash; enacted universal programs in 2023
+            Education Savings Account programs. By the end of 2025, thirteen did. Five states (Arkansas, Florida, Iowa, Ohio, and Utah) enacted universal programs in 2023
             alone. Florida&apos;s HB 1 made 3.2 million K-12 students immediately eligible. Iowa
             set the per-student amount at $7,598. Four more states followed in 2024: Alabama,
             Georgia, Louisiana, and Wyoming. In 2025, Texas created a $1 billion ESA program at
             $10,000 per student, Tennessee enacted a $7,000 ESA, and Wyoming removed its remaining
             income restrictions. Participation grew from approximately 584,000 students in
-            2023&ndash;2024 to 805,000 in 2024&ndash;2025 &mdash; a 40% increase in a single year.
+            2023&ndash;2024 to 805,000 in 2024&ndash;2025, a 40% increase in a single year.
           </p>
 
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
@@ -846,8 +845,8 @@ export default function TheTaxCodeAndEducationPage() {
             federal lobbying in 2023, deployed seventeen lobbyists, and received nearly $80 million
             in funding primarily from Koch Industries. AFP conducts door-knocking, literature
             distribution, and phone banking for pro-voucher candidates. The Heritage Foundation&apos;s
-            Project 2025 education chapter &mdash; authored by Lindsey Burke, who subsequently became
-            DOE Deputy Chief of Staff for Policy and Programs &mdash; identifies school vouchers as a
+            Project 2025 education chapter (authored by Lindsey Burke, who subsequently became
+            DOE Deputy Chief of Staff for Policy and Programs) identifies school vouchers as a
             key conservative litmus test and proposes establishing a federal voucher program. Heritage
             President Kevin Roberts has called vouchers a &ldquo;non-negotiable&rdquo; priority.
           </p>
@@ -861,7 +860,7 @@ export default function TheTaxCodeAndEducationPage() {
             advocacy groups including Colorado Succeeds, the Colorado League of Charter Schools,
             and Transform Education Now. Democrats for Education Reform, a PAC encouraging
             Democratic Party support for charter schools, has been sustained by Walton family
-            funding for over a decade &mdash; though the organization&apos;s footprint has
+            funding for over a decade, though the organization&apos;s footprint has
             contracted from nineteen state chapters to four by 2025, and its staff from thirteen
             to four.
           </p>
@@ -911,14 +910,14 @@ export default function TheTaxCodeAndEducationPage() {
             million and disbursed $29.4 million, including $2.5 million to Future Forward USA
             Action, $1.5 million to the House Majority PAC, and $1.5 million to the Senate
             Majority PAC. The NEA&apos;s total political footprint in 2024 was approximately
-            $169 million &mdash; encompassing contributions, political activities, lobbying ($2.78
+            $169 million, encompassing contributions, political activities, lobbying ($2.78
             million), and $128 million in grants to other organizations. In 2025, the NEA spent
             $51.7 million on political activities and lobbying alone.
           </p>
 
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
             The American Federation of Teachers, with approximately 1.7 million members,
-            contributed over $16 million to federal candidates in the 2024 cycle &mdash; 99.9%
+            contributed over $16 million to federal candidates in the 2024 cycle, 99.9%
             to Democrats. Its PAC raised $12 million for Democratic candidates. The AFT spent
             $38 million or more on political activities and lobbying in 2024 and $46.9 million in
             the 2022&ndash;2023 cycle. Combined, the two unions spent over $96.9 million on
@@ -931,14 +930,14 @@ export default function TheTaxCodeAndEducationPage() {
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
             The unions&apos; dominance in school board elections is measurable. Union-endorsed
             candidates have historically won 60% to 71% of contested school board races. In 2025,
-            84% of incumbents seeking re-election won &mdash; the highest rate since 2022. Both
+            84% of incumbents seeking re-election won, the highest rate since 2022. Both
             the NEA and AFT actively campaign against charter expansion and voucher programs at
             every level of government. The asymmetry in the education spending fight is stark:
             the voucher movement is funded by a handful of billionaire families spending tens of
             millions per cycle; the union movement is funded by millions of individual dues-paying
             members contributing smaller amounts across a much broader base. Both sides spend
             heavily. But in state-level charter and voucher battles, the billionaire-funded
-            organizations routinely outspend their opponents by margins of 100-to-1 or more &mdash;
+            organizations routinely outspend their opponents by margins of 100-to-1 or more.
             as Colorado&apos;s 158-to-1 ratio in 2024 demonstrated.
           </p>
 
@@ -950,17 +949,17 @@ export default function TheTaxCodeAndEducationPage() {
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
             The Trump administration has pursued the most aggressive effort in history to dismantle
             the Department of Education. An executive order signed in March 2025 initiated the
-            process. Approximately 1,700 employees have been cut &mdash; nearly 50% of the
+            process. Approximately 1,700 employees have been cut, nearly 50% of the
             workforce relative to Inauguration Day. At least 240 Office for Civil Rights employees
             were laid off, most of them attorneys investigating discrimination complaints. DOGE
             cut dozens of IES research contracts worth roughly $900 million. Six interagency
-            agreements transferred programs &mdash; including Title I, the largest federal K-12
-            funding stream &mdash; to other agencies, with the Department of Labor absorbing
+            agreements transferred programs (including Title I, the largest federal K-12
+            funding stream) to other agencies, with the Department of Labor absorbing
             several major programs.
           </p>
 
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
-            The FY2026 budget proposal cuts $12 billion from the Department of Education &mdash;
+            The FY2026 budget proposal cuts $12 billion from the Department of Education.
             a 15.3% reduction. Eighteen ESSA programs would be consolidated into a single block
             grant with $4.5 billion fewer dollars, a 70% cut. All federal funding for language
             instruction for English learners would be eliminated. IDEA funding for students with
@@ -974,7 +973,7 @@ export default function TheTaxCodeAndEducationPage() {
             The revolving door is the mechanism. Lindsey Burke spent seventeen years at the Heritage
             Foundation, where she directed the Center for Education Policy and co-authored the
             Project 2025 chapter proposing the DOE&apos;s dismantlement. She was then hired as the
-            DOE&apos;s Deputy Chief of Staff for Policy and Programs &mdash; the official responsible
+            DOE&apos;s Deputy Chief of Staff for Policy and Programs, the official responsible
             for implementing the very plan she had authored. During the first Trump term, Education
             Secretary Betsy DeVos staffed the DOE with former for-profit college executives who
             then rolled back regulations on their former industry. In 2024, 403 clients lobbied
@@ -992,7 +991,7 @@ export default function TheTaxCodeAndEducationPage() {
             CEO, David Coleman, was paid $2.5 million in 2020; its president, Jeremy Singer,
             received $1.4 million. The organization consistently surpasses $50 million in annual
             profits. It spent nearly $18 million on employee travel in 2023. It is the only
-            organization in the United States that distributes the PSAT, SAT, and AP exams &mdash;
+            organization in the United States that distributes the PSAT, SAT, and AP exams,
             a de facto monopoly over the standardized testing pipeline that shapes college
             admissions for millions of students annually.
           </p>
@@ -1001,8 +1000,8 @@ export default function TheTaxCodeAndEducationPage() {
             The College Board has deployed lobbyists to block competitors from entering the college
             entrance exam market. The Columbia Undergraduate Law Review has published a case for
             Sherman Act Section 2 enforcement against the College Board&apos;s monopoly position.
-            The organization&apos;s federal lobbying is modest in absolute terms &mdash; $124,832
-            in 2024 &mdash; but its market power renders aggressive lobbying unnecessary. The
+            The organization&apos;s federal lobbying is modest in absolute terms: $124,832
+            in 2024, but its market power renders aggressive lobbying unnecessary. The
             monopoly is self-sustaining: colleges require SAT or ACT scores, high schools
             administer AP exams to boost their rankings, and the College Board collects fees at
             every stage while maintaining its tax-exempt status.
@@ -1016,7 +1015,7 @@ export default function TheTaxCodeAndEducationPage() {
             Major research universities dramatically ramped up federal lobbying in 2025 in response
             to the Trump administration&apos;s escalating attacks on higher education. Total
             lobbying by Association of American Universities member institutions rose from $28.1
-            million in 2024 to more than $37 million in 2025 &mdash; a 31% increase. The
+            million in 2024 to more than $37 million in 2025, a 31% increase. The
             University of California system led all institutions at $2.775 million. The University
             of Washington spent $1.341 million; the University of Florida, $1.334 million; the
             University of Pennsylvania, $1.32 million; Indiana University, $1.314 million. Yale
@@ -1024,7 +1023,7 @@ export default function TheTaxCodeAndEducationPage() {
           </p>
 
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
-            Harvard&apos;s lobbying surge was the most dramatic &mdash; and the most instructive
+            Harvard&apos;s lobbying surge was the most dramatic, and the most instructive
             about the dynamics of political spending under threat. Harvard spent nearly $1 million
             on federal lobbying in 2025, its highest total in more than two decades. In Q1 2025,
             the university spent $230,000, including $90,000 to Ballard Partners, a firm with
@@ -1042,7 +1041,7 @@ export default function TheTaxCodeAndEducationPage() {
             Beautiful Bill Act raised that rate to as high as 8% for institutions with the largest
             endowments. For Harvard, the increase could cost more than $200 million per year. The
             institutions at the highest rate include Harvard, Yale, Princeton, Stanford, and MIT.
-            The tax is explicitly punitive &mdash; a financial weapon deployed against universities
+            The tax is explicitly punitive, a financial weapon deployed against universities
             the administration viewed as ideologically hostile.
           </p>
 
@@ -1067,7 +1066,7 @@ export default function TheTaxCodeAndEducationPage() {
 
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
             Head Start, the federal early childhood program serving low-income families, received
-            $12.3 billion in FY2024 funding and $12.36 billion in FY2026 &mdash; modest increases
+            $12.3 billion in FY2024 funding and $12.36 billion in FY2026, modest increases
             that did not keep pace with inflation. Project 2025 had proposed eliminating Head Start
             entirely. The National Head Start Association mounted a grassroots defense: 300,000
             letters to Congress, 50,000 petition signatures, rallies nationwide, and direct visits

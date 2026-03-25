@@ -39,7 +39,12 @@ interface Trail {
 }
 
 interface PipelineData {
-  stages: { sources: number; intermediaries: number; recipients: number; contracts: number };
+  stages: {
+    sources: number;
+    intermediaries: number;
+    recipients: number;
+    contracts: number;
+  };
   stageFlows: Record<string, number>;
   topEntities: Record<string, StageEntity[]>;
   trails: Trail[];
@@ -74,10 +79,34 @@ type SortDir = "asc" | "desc";
 /* ── Stage config ──────────────────────────────── */
 
 const STAGES = [
-  { key: "sources", label: "Sources", sub: "Corporations & Individuals", color: "#0a0a0a", icon: Building2 },
-  { key: "intermediaries", label: "Intermediaries", sub: "PACs & Lobbying Firms", color: "#9333ea", icon: Users },
-  { key: "recipients", label: "Politicians", sub: "Candidates & Committees", color: "#2563eb", icon: Landmark },
-  { key: "contracts", label: "Contracts", sub: "Federal Awards → Back to Corps", color: "#059669", icon: FileText },
+  {
+    key: "sources",
+    label: "Sources",
+    sub: "Corporations & Individuals",
+    color: "#0a0a0a",
+    icon: Building2,
+  },
+  {
+    key: "intermediaries",
+    label: "Intermediaries",
+    sub: "PACs & Lobbying Firms",
+    color: "#9333ea",
+    icon: Users,
+  },
+  {
+    key: "recipients",
+    label: "Politicians",
+    sub: "Candidates & Committees",
+    color: "#2563eb",
+    icon: Landmark,
+  },
+  {
+    key: "contracts",
+    label: "Contracts",
+    sub: "Federal Awards → Back to Corps",
+    color: "#059669",
+    icon: FileText,
+  },
 ] as const;
 
 const FLOW_TYPE_LABELS: Record<string, string> = {
@@ -195,7 +224,7 @@ export default function MoneyFlowPage() {
           The Money Pipeline
         </h1>
         <p className="mt-4 max-w-xl text-lg text-muted">
-          How money flows from corporations through PACs to politicians — and
+          How money flows from corporations through PACs to politicians, and
           back again through government contracts.
         </p>
       </div>
@@ -236,7 +265,9 @@ export default function MoneyFlowPage() {
         <div className="flex h-96 items-center justify-center">
           <div className="flex items-center gap-3 text-muted">
             <Loader2 className="h-5 w-5 animate-spin" />
-            <span className="font-mono text-sm">Loading money flow data...</span>
+            <span className="font-mono text-sm">
+              Loading money flow data...
+            </span>
           </div>
         </div>
       )}
@@ -308,13 +339,39 @@ export default function MoneyFlowPage() {
                     <th className="pb-2 pr-2 text-left font-mono text-[10px] font-bold uppercase text-muted">
                       #
                     </th>
-                    <SortHeader label="Source" sortKey="source" current={sortKey} dir={sortDir} onSort={toggleSort} />
+                    <SortHeader
+                      label="Source"
+                      sortKey="source"
+                      current={sortKey}
+                      dir={sortDir}
+                      onSort={toggleSort}
+                    />
                     <th className="pb-2 px-2 text-center font-mono text-[10px] font-bold uppercase text-muted">
                       Type
                     </th>
-                    <SortHeader label="Target" sortKey="target" current={sortKey} dir={sortDir} onSort={toggleSort} />
-                    <SortHeader label="Amount" sortKey="amount" current={sortKey} dir={sortDir} onSort={toggleSort} align="right" />
-                    <SortHeader label="Txns" sortKey="transactions" current={sortKey} dir={sortDir} onSort={toggleSort} align="right" />
+                    <SortHeader
+                      label="Target"
+                      sortKey="target"
+                      current={sortKey}
+                      dir={sortDir}
+                      onSort={toggleSort}
+                    />
+                    <SortHeader
+                      label="Amount"
+                      sortKey="amount"
+                      current={sortKey}
+                      dir={sortDir}
+                      onSort={toggleSort}
+                      align="right"
+                    />
+                    <SortHeader
+                      label="Txns"
+                      sortKey="transactions"
+                      current={sortKey}
+                      dir={sortDir}
+                      onSort={toggleSort}
+                      align="right"
+                    />
                   </tr>
                 </thead>
                 <tbody>
@@ -428,7 +485,9 @@ function AggregateFlow({ pipeline }: { pipeline: PipelineData }) {
   const flowAmounts = [
     getFlow("sources", "intermediaries") || getFlow("sources", "recipients"),
     getFlow("intermediaries", "recipients"),
-    getFlow("recipients", "contracts") || getFlow("intermediaries", "contracts") || getFlow("sources", "contracts"),
+    getFlow("recipients", "contracts") ||
+      getFlow("intermediaries", "contracts") ||
+      getFlow("sources", "contracts"),
   ];
 
   // Calculate widths proportional to amounts
@@ -500,8 +559,10 @@ function AggregateFlow({ pipeline }: { pipeline: PipelineData }) {
                             className="h-1.5 w-1.5 shrink-0 rounded-full"
                             style={{
                               backgroundColor: e.party
-                                ? PARTY_COLORS[e.party.toLowerCase()] ?? stage.color
-                                : ENTITY_COLORS[e.type as EntityType] ?? stage.color,
+                                ? (PARTY_COLORS[e.party.toLowerCase()] ??
+                                  stage.color)
+                                : (ENTITY_COLORS[e.type as EntityType] ??
+                                  stage.color),
                             }}
                           />
                           <span className="truncate text-xs text-ink">
@@ -582,7 +643,8 @@ function AggregateFlow({ pipeline }: { pipeline: PipelineData }) {
                           className="h-1.5 w-1.5 shrink-0 rounded-full"
                           style={{
                             backgroundColor:
-                              ENTITY_COLORS[e.type as EntityType] ?? stage.color,
+                              ENTITY_COLORS[e.type as EntityType] ??
+                              stage.color,
                           }}
                         />
                         <span className="truncate text-xs text-ink">
@@ -718,7 +780,7 @@ function TrailCard({ trail }: { trail: Trail }) {
                     ENTITY_COLORS[step.type as EntityType] ?? "#6b7280",
                   backgroundColor:
                     i === 0 || i === trail.steps.length - 1
-                      ? ENTITY_COLORS[step.type as EntityType] ?? "#6b7280"
+                      ? (ENTITY_COLORS[step.type as EntityType] ?? "#6b7280")
                       : "transparent",
                 }}
               />

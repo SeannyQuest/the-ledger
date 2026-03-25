@@ -87,7 +87,7 @@ export default async function ElectionsPage() {
           Know What Is on Your Ballot
         </h1>
         <p className="mt-6 max-w-2xl text-xl leading-relaxed text-ink/70">
-          Primaries, generals, and special elections — all in one place. Find
+          Primaries, generals, and special elections, all in one place. Find
           your polling place, check your registration, and never miss a vote.
         </p>
       </div>
@@ -129,8 +129,8 @@ export default async function ElectionsPage() {
           ) : (
             <div className="mt-10 rounded-xl border border-border bg-surface p-8 text-center">
               <p className="text-sm text-muted">
-                Check back soon — upcoming elections will appear here as they
-                are confirmed.
+                Check back soon. Upcoming elections will appear here as they are
+                confirmed.
               </p>
             </div>
           )}

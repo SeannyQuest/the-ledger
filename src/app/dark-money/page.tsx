@@ -34,7 +34,11 @@ interface Filing {
   totalExpenses: number;
   totalAssets: number;
   politicalExpenses: number;
-  grantRecipients: Array<{ name: string; amount: number; purpose: string }> | null;
+  grantRecipients: Array<{
+    name: string;
+    amount: number;
+    purpose: string;
+  }> | null;
   formType: string;
   filingYear: number;
   pdfUrl: string | null;
@@ -68,9 +72,7 @@ export default function DarkMoneyPage() {
       .finally(() => setLoading(false));
   }, []);
 
-  const selectedOrgFilings = data?.filings.filter(
-    (f) => f.ein === selectedOrg,
-  );
+  const selectedOrgFilings = data?.filings.filter((f) => f.ein === selectedOrg);
 
   return (
     <div className="mx-auto max-w-[1400px] px-4 py-16 lg:px-8">
@@ -83,9 +85,9 @@ export default function DarkMoneyPage() {
           Dark Money
         </h1>
         <p className="mt-4 max-w-xl text-lg text-muted">
-          501(c)(4) &ldquo;social welfare&rdquo; organizations spend hundreds
-          of millions on politics without disclosing their donors. Track their
-          IRS 990 filings.
+          501(c)(4) &ldquo;social welfare&rdquo; organizations spend hundreds of
+          millions on politics without disclosing their donors. Track their IRS
+          990 filings.
         </p>
       </div>
 
@@ -127,7 +129,9 @@ export default function DarkMoneyPage() {
           <div className="flex h-96 items-center justify-center">
             <div className="flex items-center gap-3 text-muted">
               <Loader2 className="h-5 w-5 animate-spin" />
-              <span className="font-mono text-sm">Loading dark money data...</span>
+              <span className="font-mono text-sm">
+                Loading dark money data...
+              </span>
             </div>
           </div>
         )}
@@ -158,7 +162,10 @@ export default function DarkMoneyPage() {
                         (y.politicalExpenses / maxSpend) * 200,
                       );
                       return (
-                        <div key={y.year} className="flex flex-col items-center gap-2">
+                        <div
+                          key={y.year}
+                          className="flex flex-col items-center gap-2"
+                        >
                           <span className="font-mono text-[10px] text-muted">
                             {formatCompactMoney(y.politicalExpenses)}
                           </span>
@@ -245,95 +252,100 @@ export default function DarkMoneyPage() {
             </div>
 
             {/* Selected org detail */}
-            {selectedOrg && selectedOrgFilings && selectedOrgFilings.length > 0 && (
-              <div className="mt-8 rounded-lg border border-ink/20 bg-surface p-6">
-                <h3 className="font-headline text-lg font-bold text-ink">
-                  {selectedOrgFilings[0].organizationName} — IRS 990 Filings
-                </h3>
+            {selectedOrg &&
+              selectedOrgFilings &&
+              selectedOrgFilings.length > 0 && (
+                <div className="mt-8 rounded-lg border border-ink/20 bg-surface p-6">
+                  <h3 className="font-headline text-lg font-bold text-ink">
+                    {selectedOrgFilings[0].organizationName}: IRS 990 Filings
+                  </h3>
 
-                <div className="mt-4 space-y-4">
-                  {selectedOrgFilings.map((f) => (
-                    <div
-                      key={f.id}
-                      className="rounded-md border border-border bg-paper p-4"
-                    >
-                      <div className="flex items-center justify-between">
-                        <span className="font-mono text-sm font-bold text-ink">
-                          Tax Year {f.filingYear}
-                        </span>
-                        {f.pdfUrl && (
-                          <a
-                            href={f.pdfUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="font-mono text-[10px] text-accent underline underline-offset-2"
-                          >
-                            View 990
-                          </a>
-                        )}
-                      </div>
+                  <div className="mt-4 space-y-4">
+                    {selectedOrgFilings.map((f) => (
+                      <div
+                        key={f.id}
+                        className="rounded-md border border-border bg-paper p-4"
+                      >
+                        <div className="flex items-center justify-between">
+                          <span className="font-mono text-sm font-bold text-ink">
+                            Tax Year {f.filingYear}
+                          </span>
+                          {f.pdfUrl && (
+                            <a
+                              href={f.pdfUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="font-mono text-[10px] text-accent underline underline-offset-2"
+                            >
+                              View 990
+                            </a>
+                          )}
+                        </div>
 
-                      <div className="mt-3 grid grid-cols-2 gap-4 sm:grid-cols-4">
-                        <div>
-                          <div className="font-mono text-[10px] uppercase text-muted">
-                            Revenue
-                          </div>
-                          <div className="font-mono text-sm font-bold text-ink">
-                            {formatCompactMoney(f.totalRevenue)}
-                          </div>
-                        </div>
-                        <div>
-                          <div className="font-mono text-[10px] uppercase text-muted">
-                            Expenses
-                          </div>
-                          <div className="font-mono text-sm font-bold text-ink">
-                            {formatCompactMoney(f.totalExpenses)}
-                          </div>
-                        </div>
-                        <div>
-                          <div className="font-mono text-[10px] uppercase text-muted">
-                            Assets
-                          </div>
-                          <div className="font-mono text-sm font-bold text-ink">
-                            {formatCompactMoney(f.totalAssets)}
-                          </div>
-                        </div>
-                        <div>
-                          <div className="font-mono text-[10px] uppercase text-muted">
-                            Political
-                          </div>
-                          <div className="font-mono text-sm font-bold text-accent">
-                            {formatCompactMoney(f.politicalExpenses)}
-                          </div>
-                        </div>
-                      </div>
-
-                      {f.grantRecipients &&
-                        Array.isArray(f.grantRecipients) &&
-                        f.grantRecipients.length > 0 && (
-                          <div className="mt-3 border-t border-border/50 pt-3">
+                        <div className="mt-3 grid grid-cols-2 gap-4 sm:grid-cols-4">
+                          <div>
                             <div className="font-mono text-[10px] uppercase text-muted">
-                              Grant Recipients
+                              Revenue
                             </div>
-                            <div className="mt-1.5 flex flex-wrap gap-2">
-                              {(f.grantRecipients as Array<{ name: string; amount: number }>).map(
-                                (g, i) => (
+                            <div className="font-mono text-sm font-bold text-ink">
+                              {formatCompactMoney(f.totalRevenue)}
+                            </div>
+                          </div>
+                          <div>
+                            <div className="font-mono text-[10px] uppercase text-muted">
+                              Expenses
+                            </div>
+                            <div className="font-mono text-sm font-bold text-ink">
+                              {formatCompactMoney(f.totalExpenses)}
+                            </div>
+                          </div>
+                          <div>
+                            <div className="font-mono text-[10px] uppercase text-muted">
+                              Assets
+                            </div>
+                            <div className="font-mono text-sm font-bold text-ink">
+                              {formatCompactMoney(f.totalAssets)}
+                            </div>
+                          </div>
+                          <div>
+                            <div className="font-mono text-[10px] uppercase text-muted">
+                              Political
+                            </div>
+                            <div className="font-mono text-sm font-bold text-accent">
+                              {formatCompactMoney(f.politicalExpenses)}
+                            </div>
+                          </div>
+                        </div>
+
+                        {f.grantRecipients &&
+                          Array.isArray(f.grantRecipients) &&
+                          f.grantRecipients.length > 0 && (
+                            <div className="mt-3 border-t border-border/50 pt-3">
+                              <div className="font-mono text-[10px] uppercase text-muted">
+                                Grant Recipients
+                              </div>
+                              <div className="mt-1.5 flex flex-wrap gap-2">
+                                {(
+                                  f.grantRecipients as Array<{
+                                    name: string;
+                                    amount: number;
+                                  }>
+                                ).map((g, i) => (
                                   <span
                                     key={i}
                                     className="rounded bg-border/20 px-2 py-0.5 font-mono text-[10px] text-muted"
                                   >
                                     {g.name} · {formatCompactMoney(g.amount)}
                                   </span>
-                                ),
-                              )}
+                                ))}
+                              </div>
                             </div>
-                          </div>
-                        )}
-                    </div>
-                  ))}
+                          )}
+                      </div>
+                    ))}
+                  </div>
                 </div>
-              </div>
-            )}
+              )}
           </>
         )}
       </div>
@@ -342,9 +354,9 @@ export default function DarkMoneyPage() {
       <div className="mt-12 rounded-lg border border-border bg-surface/50 px-4 py-3">
         <p className="font-mono text-xs text-muted">
           Data sourced from ProPublica Nonprofit Explorer (IRS 990 filings).
-          501(c)(4) organizations are not required to disclose their donors. Political
-          expenditure figures come from self-reported IRS filings and may understate
-          actual political activity.
+          501(c)(4) organizations are not required to disclose their donors.
+          Political expenditure figures come from self-reported IRS filings and
+          may understate actual political activity.
         </p>
       </div>
     </div>

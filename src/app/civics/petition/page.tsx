@@ -40,7 +40,7 @@ export default function PetitionPage() {
             <li className="flex items-start gap-3">
               <span className="mt-0.5 font-bold text-accent">&bull;</span>
               <span>
-                <strong className="text-ink">The target is local</strong> — a
+                <strong className="text-ink">The target is local</strong>: a
                 mayor, school board, city council.
               </span>
             </li>
@@ -82,7 +82,7 @@ export default function PetitionPage() {
               <p className="mt-2 text-sm leading-relaxed text-ink/70">
                 Collects signatures to put a measure directly on the ballot,
                 bypassing the legislature. Available in about 26 states.
-                Requirements vary widely — some need 5% of registered voters,
+                Requirements vary widely. Some need 5% of registered voters,
                 some need 8%. High effort but high impact.
               </p>
               <p className="mt-3 text-sm leading-relaxed text-ink/70">
@@ -232,7 +232,7 @@ export default function PetitionPage() {
                 [target] to [specific action] by [date if applicable].
               </p>
               <p className="text-ink/60">
-                [1-2 sentences of context — why this matters, what the problem
+                [1-2 sentences of context: why this matters, what the problem
                 is]
               </p>
               <p>We ask that you [restate the specific ask clearly].</p>

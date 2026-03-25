@@ -21,7 +21,7 @@ export default function ElectoralSystemPage() {
           </h1>
           <p className="mt-4 text-lg leading-relaxed text-white/70 max-w-2xl">
             The rules that govern American elections weren't handed down from
-            nature. They were designed — and they shape who holds power, whose
+            nature. They were designed, and they shape who holds power, whose
             votes matter, and who gets to vote at all.
           </p>
 
@@ -66,7 +66,7 @@ export default function ElectoralSystemPage() {
             The system produces significant malapportionment. Wyoming has about
             192,000 people per electoral vote; California has about 718,000. A
             Wyoming voter carries nearly four times the presidential weight of a
-            California voter — not because of any constitutional principle, but
+            California voter, not because of any constitutional principle, but
             as an artifact of small states always receiving a minimum of 3
             electors.
           </p>
@@ -75,7 +75,7 @@ export default function ElectoralSystemPage() {
             {[
               {
                 fact: "Winner-Take-All",
-                body: "48 states award all their electors to the plurality winner. Maine and Nebraska use congressional-district allocation — the only exceptions.",
+                body: "48 states award all their electors to the plurality winner. Maine and Nebraska use congressional-district allocation, the only exceptions.",
               },
               {
                 fact: "Faithless Electors",
@@ -87,7 +87,7 @@ export default function ElectoralSystemPage() {
               },
               {
                 fact: "Contested Contingent",
-                body: "If no candidate reaches 270, the House chooses the president — with each state delegation casting one vote. The Senate separately elects the VP.",
+                body: "If no candidate reaches 270, the House chooses the president, with each state delegation casting one vote. The Senate separately elects the VP.",
               },
               {
                 fact: "Swing State Premium",
@@ -120,9 +120,9 @@ export default function ElectoralSystemPage() {
           <p className="text-ink/80 leading-relaxed mb-6">
             Primaries are elections within a party to select its nominee. Before
             1968, party bosses largely controlled nominations through brokered
-            conventions. The chaotic 1968 Democratic convention — marked by
+            conventions. The chaotic 1968 Democratic convention, marked by
             protest, police violence, and Hubert Humphrey winning despite not
-            entering a single primary — triggered the McGovern-Fraser reforms,
+            entering a single primary, which triggered the McGovern-Fraser reforms,
             which required delegates to reflect primary and caucus results.
           </p>
           <p className="text-ink/80 leading-relaxed mb-8">
@@ -190,8 +190,8 @@ export default function ElectoralSystemPage() {
               Superdelegates and the 2016–2020 Reforms
             </h3>
             <p className="text-sm leading-relaxed text-ink/70">
-              Democratic "superdelegates" — party officials and elected
-              representatives who are automatic convention delegates — were
+              Democratic "superdelegates" (party officials and elected
+              representatives who are automatic convention delegates) were
               created after the 1968 reforms to give the party establishment
               some counterweight. In 2018, after Bernie Sanders supporters
               argued superdelegates distorted the 2016 race, the Democrats
@@ -215,7 +215,7 @@ export default function ElectoralSystemPage() {
           <p className="text-ink/80 leading-relaxed mb-6">
             Structural features of the American electoral system systematically
             amplify the political power of some Americans while diluting others.
-            These are not accidental — they reflect specific choices about
+            These are not accidental. They reflect specific choices about
             representation, often made at the founding or during periods of
             acute political conflict.
           </p>
@@ -353,7 +353,7 @@ export default function ElectoralSystemPage() {
             Campaign Finance
           </h2>
           <p className="text-ink/80 leading-relaxed mb-8">
-            American elections cost extraordinary amounts of money — the 2020
+            American elections cost extraordinary amounts of money. The 2020
             election cycle cost an estimated $14 billion, nearly double 2016.
             The rules governing who can spend what, on what, and with what
             transparency have been shaped by decades of legislation and Supreme
@@ -366,13 +366,13 @@ export default function ElectoralSystemPage() {
             {[
               {
                 year: "1971 / 1974",
-                title: "FECA — The Foundation",
+                title: "FECA: The Foundation",
                 body: "The Federal Election Campaign Act created the first comprehensive disclosure requirements and spending limits. The 1974 amendments after Watergate added hard contribution limits and created the FEC.",
               },
               {
                 year: "1976",
                 title: "Buckley v. Valeo",
-                body: "The Supreme Court equated money with speech. It upheld limits on contributions to candidates but struck down limits on independent expenditures — the ruling that opened the door to everything that followed.",
+                body: "The Supreme Court equated money with speech. It upheld limits on contributions to candidates but struck down limits on independent expenditures, the ruling that opened the door to everything that followed.",
               },
               {
                 year: "2002",
@@ -382,7 +382,7 @@ export default function ElectoralSystemPage() {
               {
                 year: "2010",
                 title: "Citizens United",
-                body: "The Supreme Court ruled corporations and unions can spend unlimited funds on independent political expenditures. Combined with SpeechNow.org v. FEC the same year, Citizens United enabled Super PACs — committees that can raise and spend unlimited amounts as long as they don't coordinate with campaigns.",
+                body: "The Supreme Court ruled corporations and unions can spend unlimited funds on independent political expenditures. Combined with SpeechNow.org v. FEC the same year, Citizens United enabled Super PACs, which are committees that can raise and spend unlimited amounts as long as they don't coordinate with campaigns.",
               },
             ].map((item) => (
               <div key={item.year} className="flex gap-6">
@@ -413,7 +413,7 @@ export default function ElectoralSystemPage() {
               funds and spend on elections while keeping funders anonymous.
               Dark money spending exceeded $1 billion in the 2020 cycle,
               according to OpenSecrets. Both parties use dark money vehicles,
-              but the lack of disclosure is itself the issue — voters cannot
+              but the lack of disclosure is itself the issue: voters cannot
               evaluate who is trying to influence their vote.
             </p>
           </div>
@@ -431,7 +431,7 @@ export default function ElectoralSystemPage() {
           </h2>
           <p className="text-ink/80 leading-relaxed mb-8">
             U.S. elections are administered by approximately 8,000 separate
-            jurisdictions — counties, cities, townships — each with its own
+            jurisdictions (counties, cities, townships), each with its own
             equipment, procedures, and personnel. There is no federal election
             authority. The result is a patchwork system where the experience of
             voting, the reliability of equipment, and the speed of results
@@ -492,8 +492,8 @@ export default function ElectoralSystemPage() {
           <p className="text-ink/80 leading-relaxed">
             The January 6, 2021 attack on the Capitol, and the preceding
             pressure campaign on state election officials to reverse results,
-            highlighted how election certification — the formal acceptance of
-            results — is itself a political process with human decision-makers
+            highlighted how election certification, the formal acceptance of
+            results, is itself a political process with human decision-makers
             who can be pressured or intimidated.
           </p>
         </div>
@@ -511,7 +511,7 @@ export default function ElectoralSystemPage() {
           <p className="text-ink/80 leading-relaxed mb-8">
             The debates around electoral reform involve real trade-offs about
             representation, accountability, and political stability. These are
-            the most widely discussed proposals — each with genuine arguments
+            the most widely discussed proposals, each with genuine arguments
             on both sides.
           </p>
 
@@ -583,7 +583,7 @@ export default function ElectoralSystemPage() {
               },
               {
                 name: "OpenSecrets",
-                desc: "Campaign finance tracking — who is spending what, where the money comes from.",
+                desc: "Campaign finance tracking: who is spending what, where the money comes from.",
               },
               {
                 name: "NCSL Voting Laws",
@@ -612,14 +612,14 @@ export default function ElectoralSystemPage() {
               The System Is Not Neutral
             </h3>
             <p className="text-white/80 leading-relaxed">
-              Every feature of the American electoral system — the Electoral
+              Every feature of the American electoral system (the Electoral
               College, winner-take-all allocation, the primary structure, voter
-              registration requirements, campaign finance rules — reflects a
+              registration requirements, campaign finance rules) reflects a
               political choice made at a specific historical moment by people
               with specific interests. None of it was inevitable, and all of it
               can be changed. Understanding the system as designed, rather than
               natural, is the first step toward evaluating whether it serves
-              democratic principles — and what alternatives might look like.
+              democratic principles, and what alternatives might look like.
             </p>
           </div>
         </div>

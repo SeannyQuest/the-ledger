@@ -14,35 +14,35 @@ const MONEY_FLOW_STEPS: ScrollytellStep[] = [
   {
     id: "donation",
     title: "The Donation",
-    body: "The top five defense contractors — Lockheed Martin, Raytheon, Northrop Grumman, Boeing, and General Dynamics — collectively funneled $67 million into political action committees and direct campaign contributions during the 2022-2024 election cycles. These donations were split roughly 55/45 between Republican and Democratic candidates, ensuring access regardless of which party holds power.",
+    body: "The top five defense contractors (Lockheed Martin, Raytheon, Northrop Grumman, Boeing, and General Dynamics) collectively funneled $67 million into political action committees and direct campaign contributions during the 2022-2024 election cycles. These donations were split roughly 55/45 between Republican and Democratic candidates, ensuring access regardless of which party holds power.",
     stat: { value: "$67M", label: "PAC & Campaign Donations", color: "money-in" },
     highlightColor: "#1a7a3a",
   },
   {
     id: "lobby",
     title: "The Lobby",
-    body: "Simultaneously, these same five corporations spent $142 million on lobbying firms with direct access to congressional leadership and key committee members. Lobbying disclosures show over 740 individual lobbyists employed — many of them former Pentagon officials, congressional staffers, or retired military officers who walked through the revolving door.",
+    body: "Simultaneously, these same five corporations spent $142 million on lobbying firms with direct access to congressional leadership and key committee members. Lobbying disclosures show over 740 individual lobbyists employed, many of them former Pentagon officials, congressional staffers, or retired military officers who walked through the revolving door.",
     stat: { value: "$142M", label: "Lobbying Expenditures", color: "accent" },
     highlightColor: "#d97706",
   },
   {
     id: "legislation",
     title: "The Legislation",
-    body: "Of the 51 members sitting on the House and Senate Armed Services Committees, 48 received direct contributions from defense contractor PACs. These committee members draft and approve the National Defense Authorization Act — the legislation that determines how hundreds of billions of defense dollars are allocated each year.",
+    body: "Of the 51 members sitting on the House and Senate Armed Services Committees, 48 received direct contributions from defense contractor PACs. These committee members draft and approve the National Defense Authorization Act, the legislation that determines how hundreds of billions of defense dollars are allocated each year.",
     stat: { value: "48/51", label: "Committee Members Funded", color: "entity-politician" },
     highlightColor: "#2563eb",
   },
   {
     id: "contract",
     title: "The Contract",
-    body: "In the same period, the Department of Defense awarded $178 billion in contracts to these five companies. From F-35 fighter jets to missile defense systems to IT infrastructure — the contracts span every branch of the military and represent the largest concentration of federal procurement spending in any single industry.",
+    body: "In the same period, the Department of Defense awarded $178 billion in contracts to these five companies. From F-35 fighter jets to missile defense systems to IT infrastructure, the contracts span every branch of the military and represent the largest concentration of federal procurement spending in any single industry.",
     stat: { value: "$178B", label: "Defense Contracts Awarded", color: "money-out" },
     highlightColor: "#c41d1d",
   },
   {
     id: "roi",
     title: "The Return on Investment",
-    body: "For every $1 these corporations spent on political donations and lobbying, they received approximately $850 back in government contracts. That is an 85,000% return on investment. No stock market play, no venture capital bet, no real estate deal comes close. This is the most reliable investment in America — and it is perfectly legal.",
+    body: "For every $1 these corporations spent on political donations and lobbying, they received approximately $850 back in government contracts. That is an 85,000% return on investment. No stock market play, no venture capital bet, no real estate deal comes close. This is the most reliable investment in America, and it is perfectly legal.",
     stat: { value: "$850", label: "Returned Per $1 Spent", color: "#c41d1d" },
     highlightColor: "#c41d1d",
   },
@@ -98,7 +98,7 @@ export default function DefenseContractorsStory() {
           </h1>
 
           <p className="mt-6 max-w-2xl text-xl leading-relaxed text-white/70 lg:text-2xl">
-            How America&apos;s top five defense contractors spend millions on lobbying and campaign donations — then receive{" "}
+            How America&apos;s top five defense contractors spend millions on lobbying and campaign donations, then receive{" "}
             <span className="font-semibold text-white">billions back in government contracts</span>.
           </p>
 
@@ -164,7 +164,7 @@ export default function DefenseContractorsStory() {
           <blockquote className="text-center">
             <p className="font-headline text-3xl font-black leading-tight tracking-tight text-ink lg:text-4xl">
               &ldquo;For every dollar spent on political influence, defense contractors saw $850 return in government contracts.
-              That&apos;s not lobbying — that&apos;s the best investment in America.&rdquo;
+              That&apos;s not lobbying. That&apos;s the best investment in America.&rdquo;
             </p>
             <cite className="mt-6 block font-mono text-sm font-bold uppercase tracking-widest text-muted">
               Daonra Analysis, 2022-2024 Data
@@ -180,7 +180,7 @@ export default function DefenseContractorsStory() {
             The Revolving Door
           </h2>
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
-            The pipeline doesn&apos;t just flow through money — it flows through people. Of the 740 lobbyists
+            The pipeline doesn&apos;t just flow through money. It flows through people. Of the 740 lobbyists
             employed by the top five defense contractors, our analysis found that 312 previously held positions
             in the Department of Defense, congressional offices, or military leadership. These individuals carry
             with them relationships, institutional knowledge, and direct access to decision-makers.
@@ -188,7 +188,7 @@ export default function DefenseContractorsStory() {
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
             The pattern is consistent: a senior Pentagon official retires, takes a position at a lobbying firm
             retained by a defense contractor, and uses their connections to influence procurement decisions.
-            When the administration changes, the revolving door spins again — this time with industry executives
+            When the administration changes, the revolving door spins again, this time with industry executives
             taking government positions where they oversee the very contracts their former employers compete for.
           </p>
 
@@ -218,7 +218,7 @@ export default function DefenseContractorsStory() {
             This isn&apos;t a partisan issue. Defense contractor PACs split their donations almost evenly
             between parties. The donations track committee assignments, not ideology. A freshman representative
             assigned to the Armed Services Committee will see their defense contractor donations spike within
-            the first quarter — regardless of whether they wear a red or blue tie.
+            the first quarter, regardless of whether they wear a red or blue tie.
           </p>
         </div>
       </section>

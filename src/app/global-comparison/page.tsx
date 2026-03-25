@@ -32,14 +32,14 @@ const COUNTRIES: Country[] = [
       "Direct contributions banned, but unlimited donations to Super PACs for independent expenditures (Citizens United, 2010)",
     publicFunding: "none",
     publicFundingDetail:
-      "Presidential Election Campaign Fund exists but is effectively defunct — no candidate has used it since 2012",
+      "Presidential Election Campaign Fund exists but is effectively defunct; no candidate has used it since 2012",
     spendingLimits: false,
     spendingDetail:
       "None for candidates declining public funding (all of them). Super PACs can spend without limit.",
     foreignBan: true,
     disclosureStrength: "moderate",
     disclosureDetail:
-      'Contributions over $200 disclosed to FEC. However, "dark money" via 501(c) nonprofits is not disclosed — $1.9B in dark money in 2024 federal races.',
+      'Contributions over $200 disclosed to FEC. However, "dark money" via 501(c) nonprofits is not disclosed; $1.9B in dark money flowed through those channels in 2024 federal races.',
     uniqueFeature:
       "Only major democracy with virtually no spending limits and massive private financing via Super PACs",
   },
@@ -61,7 +61,7 @@ const COUNTRIES: Country[] = [
     disclosureDetail:
       'Donations over £11,180 must be reported. 2025 "know your donor" rules require enhanced checks. Max fines raised to £500,000.',
     uniqueFeature:
-      "Regulates spending rather than donations — no donation cap, but strict spending caps",
+      "Regulates spending rather than donations: no donation cap, but strict spending caps",
   },
   {
     name: "Canada",
@@ -81,7 +81,7 @@ const COUNTRIES: Country[] = [
     disclosureDetail:
       "Donors of $200+ must be named. Annual financial returns required.",
     uniqueFeature:
-      "One of the strictest among Anglo democracies — complete ban on corporate and union donations",
+      "One of the strictest among Anglo democracies: complete ban on corporate and union donations",
   },
   {
     name: "France",
@@ -101,7 +101,7 @@ const COUNTRIES: Country[] = [
     disclosureDetail:
       "All campaign accounts audited by the National Commission for Campaign Accounts (CNCCFP).",
     uniqueFeature:
-      "Corporate ban + spending limits + generous public reimbursement — one of the most regulated systems globally",
+      "Corporate ban + spending limits + generous public reimbursement: one of the most regulated systems globally",
   },
   {
     name: "Germany",
@@ -128,7 +128,7 @@ const COUNTRIES: Country[] = [
     individualLimits: "¥1.5M (~$10,000)/year total",
     corporateDonations: "limited",
     corporateDetail:
-      "Allowed to parties only — not individual candidates. Companies receiving government subsidies cannot contribute. ¥500,000/company cap.",
+      "Allowed to parties only, not individual candidates. Companies receiving government subsidies cannot contribute. ¥500,000/company cap.",
     publicFunding: "heavy",
     publicFundingDetail:
       "~¥250 per person in Japan's population (~$300M total), distributed to parties by Diet seats",
@@ -178,7 +178,7 @@ const COUNTRIES: Country[] = [
     foreignBan: true,
     disclosureStrength: "weak",
     disclosureDetail:
-      'Donations above ₹20,000 (~$240) must be reported. Below that classified as "unknown income" — a major transparency gap.',
+      'Donations above ₹20,000 (~$240) must be reported. Below that classified as "unknown income," a major transparency gap.',
     uniqueFeature:
       "Electoral Bonds scheme ($1.9B anonymous corporate donations) struck down as unconstitutional by Supreme Court in February 2024",
   },
@@ -219,7 +219,7 @@ const COUNTRIES: Country[] = [
     disclosureDetail:
       "Contributions over ₩1.2M require real-name verified methods (check, credit card, bank transfer).",
     uniqueFeature:
-      "Real-name financial verification is unusually strict. Many officials have lost seats for campaign finance violations — enforcement is notably robust.",
+      "Real-name financial verification is unusually strict. Many officials have lost seats for campaign finance violations; enforcement is notably robust.",
   },
   {
     name: "Sweden",
@@ -248,7 +248,7 @@ const COUNTRIES: Country[] = [
       "0.5% of the spending ceiling for previous presidential election",
     corporateDonations: "banned",
     corporateDetail:
-      "Complete ban — no corporation, domestic or foreign, may donate. Religious organizations also banned.",
+      "Complete ban: no corporation, domestic or foreign, may donate. Religious organizations also banned.",
     publicFunding: "heavy",
     publicFundingDetail:
       "Dominant source. 70% allocated by vote share; 30% split equally among registered parties. INE administers.",
@@ -299,7 +299,7 @@ export default function GlobalComparisonPage() {
         </h1>
         <p className="mt-4 max-w-2xl text-lg text-muted">
           How does American campaign finance compare? Twelve major democracies,
-          side by side — from donation limits to dark money, from public funding
+          side by side: from donation limits to dark money, from public funding
           to corporate bans.
         </p>
       </div>
@@ -353,12 +353,9 @@ export default function GlobalComparisonPage() {
         </div>
         <div className="rounded-lg border border-border bg-surface p-4">
           <div className="font-mono text-3xl font-black text-accent">
-            {COUNTRIES.filter((c) => c.foreignBan).length}/
-            {COUNTRIES.length}
+            {COUNTRIES.filter((c) => c.foreignBan).length}/{COUNTRIES.length}
           </div>
-          <div className="mt-1 text-sm text-muted">
-            ban foreign donations
-          </div>
+          <div className="mt-1 text-sm text-muted">ban foreign donations</div>
         </div>
       </div>
 
@@ -391,10 +388,18 @@ export default function GlobalComparisonPage() {
 
       {/* Comparison grid */}
       <div className="mt-8">
-        {dimension === "overview" && <OverviewGrid countries={COUNTRIES} expandedCountry={expandedCountry} setExpandedCountry={setExpandedCountry} />}
+        {dimension === "overview" && (
+          <OverviewGrid
+            countries={COUNTRIES}
+            expandedCountry={expandedCountry}
+            setExpandedCountry={setExpandedCountry}
+          />
+        )}
         {dimension === "corporate" && <CorporateView countries={COUNTRIES} />}
         {dimension === "spending" && <SpendingView countries={COUNTRIES} />}
-        {dimension === "publicFunding" && <PublicFundingView countries={COUNTRIES} />}
+        {dimension === "publicFunding" && (
+          <PublicFundingView countries={COUNTRIES} />
+        )}
         {dimension === "disclosure" && <DisclosureView countries={COUNTRIES} />}
       </div>
 
@@ -543,9 +548,7 @@ function OverviewGrid({
         return (
           <div key={c.name}>
             <button
-              onClick={() =>
-                setExpandedCountry(isExpanded ? null : c.name)
-              }
+              onClick={() => setExpandedCountry(isExpanded ? null : c.name)}
               className={cn(
                 "flex w-full flex-col gap-2 rounded-lg border px-4 py-3 text-left transition-colors lg:flex-row lg:items-center lg:gap-3",
                 isExpanded
@@ -866,13 +869,7 @@ function StatusBadge({
   );
 }
 
-function DetailBlock({
-  label,
-  content,
-}: {
-  label: string;
-  content: string;
-}) {
+function DetailBlock({ label, content }: { label: string; content: string }) {
   return (
     <div>
       <div className="font-mono text-[10px] font-bold uppercase tracking-wider text-muted">

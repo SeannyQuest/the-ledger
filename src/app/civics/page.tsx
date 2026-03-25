@@ -21,7 +21,7 @@ export default function CivicsPage() {
         <p className="mt-6 max-w-2xl text-xl leading-relaxed text-ink/70">
           Step-by-step guides for every level of civic engagement. Whether
           you&apos;re voting for the first time or thinking about running for
-          office — we&apos;ve got you covered.
+          office. We&apos;ve got you covered.
         </p>
 
         {/* Elections banner */}
@@ -53,7 +53,7 @@ export default function CivicsPage() {
               Register to Vote
             </h3>
             <p className="mt-2 text-sm leading-relaxed text-muted">
-              State-by-state guide to voter registration — deadlines, ID
+              State-by-state guide to voter registration: deadlines, ID
               requirements, and how to check your status.
             </p>
             <div className="mt-4 inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-accent transition-colors group-hover:text-ink">
@@ -108,7 +108,7 @@ export default function CivicsPage() {
             </h3>
             <p className="mt-2 text-sm leading-relaxed text-muted">
               A practical guide to running for school board, city council, or
-              county commission — from filing to fundraising.
+              county commission, from filing to fundraising.
             </p>
             <div className="mt-4 inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-accent transition-colors group-hover:text-ink">
               Get Started <ArrowRight className="h-3.5 w-3.5" />
@@ -138,7 +138,7 @@ export default function CivicsPage() {
             {
               title: "FOIA Requests",
               description:
-                "How to file Freedom of Information Act requests — templates, tips, and what to do when agencies don't respond.",
+                "How to file Freedom of Information Act requests, with templates, tips, and what to do when agencies don't respond.",
             },
           ].map((item) => (
             <div

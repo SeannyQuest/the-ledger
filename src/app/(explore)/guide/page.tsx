@@ -55,7 +55,7 @@ const CHAPTERS: Chapter[] = [
     slug: "industry-capture",
     title: "Industry Capture",
     subtitle:
-      "Pharma, defense, fossil fuel, and tech — the four industries that spend billions to write the rules they are supposed to follow.",
+      "Pharma, defense, fossil fuel, and tech: the four industries that spend billions to write the rules they are supposed to follow.",
     icon: Factory,
     stat: "$452M",
     statLabel: "Pharma lobbying per year",
@@ -134,7 +134,7 @@ const CHAPTERS: Chapter[] = [
     slug: "corruption-and-reform",
     title: "Corruption & Reform",
     subtitle:
-      "State-level bribery, foreign influence operations, and the reform movements fighting to reclaim democracy — from NYC's matching funds to overturning Citizens United.",
+      "State-level bribery, foreign influence operations, and the reform movements fighting to reclaim democracy, from NYC's matching funds to overturning Citizens United.",
     icon: Flag,
     stat: "$682M",
     statLabel: "Peak reform philanthropy (2020)",
@@ -149,7 +149,7 @@ const CHAPTERS: Chapter[] = [
     slug: "industries-that-shape-daily-life",
     title: "Industries That Shape Daily Life",
     subtitle:
-      "Telecom giants capture the FCC, real estate lobbies kill rent control, and agribusiness monopolies fix beef prices — the industries that control what you eat, where you live, and what you pay for internet.",
+      "Telecom giants capture the FCC, real estate lobbies kill rent control, and agribusiness monopolies fix beef prices: the industries that control what you eat, where you live, and what you pay for internet.",
     icon: Wheat,
     stat: "$572M",
     statLabel: "ISP lobbying since 2017",
@@ -165,7 +165,7 @@ const CHAPTERS: Chapter[] = [
     slug: "the-tax-code-and-education",
     title: "The Tax Code & Education",
     subtitle:
-      "91 Fortune 500 companies paid zero federal tax while Intuit spent $93 million killing free filing — and billionaire families spent over $1 billion reshaping American schools in their image.",
+      "91 Fortune 500 companies paid zero federal tax while Intuit spent $93 million killing free filing, and billionaire families spent over $1 billion reshaping American schools in their image.",
     icon: Receipt,
     stat: "$1.456T",
     statLabel: "TCJA cost over a decade",
@@ -214,7 +214,7 @@ export default function GuidePage() {
 
           <p className="mt-6 max-w-2xl text-xl leading-relaxed text-white/70 lg:text-2xl">
             A comprehensive encyclopedia of how money buys power in the United
-            States — from the lobbying firms on K Street to the courtrooms where
+            States, from the lobbying firms on K Street to the courtrooms where
             judges are elected, the prisons run for profit, and the regulators
             captured by the industries they oversee.
           </p>
@@ -371,7 +371,7 @@ export default function GuidePage() {
             <p>
               Every dollar figure in this guide is sourced. Where estimates
               conflict, we note the range and cite the methodology. Where data
-              is incomplete — as it often is with dark money — we say so
+              is incomplete (as it often is with dark money), we say so
               explicitly rather than filling gaps with speculation.
             </p>
             <p>

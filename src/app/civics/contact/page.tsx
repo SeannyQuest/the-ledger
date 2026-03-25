@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ContactReps } from "@/components/civics/ContactReps";
 
 export const metadata = {
-  title: "Contact Your Representatives — Daonra",
+  title: "Contact Your Representatives | Daonra",
   description:
     "Find your senators and representatives by ZIP code. Phone scripts, email templates, and tips that actually work.",
 };

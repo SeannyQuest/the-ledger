@@ -5,13 +5,12 @@ import { ChevronRight } from "lucide-react";
 export const metadata: Metadata = {
   title: "What's Working | Daonra",
   description:
-    "Proof that better is possible. Ranked-choice voting, anti-corruption wins, universal healthcare models, participatory budgeting, campaign finance reform, and open government — documented cases of democracy being fixed.",
+    "Proof that better is possible. Ranked-choice voting, anti-corruption wins, universal healthcare models, participatory budgeting, campaign finance reform, and open government: documented cases of democracy being fixed.",
 };
 
 export default function WhatsWorkingPage() {
   return (
     <article className="bg-paper">
-
       {/* ── HERO ── */}
       <div className="bg-ink text-white">
         <div className="mx-auto max-w-5xl px-6 py-16 md:py-24">
@@ -28,10 +27,10 @@ export default function WhatsWorkingPage() {
           </h1>
 
           <p className="mb-14 mt-6 max-w-2xl text-lg leading-relaxed text-white/70 md:text-xl">
-            The U.S. isn&apos;t broken beyond repair. Around the world, democracies
-            have solved the exact problems we face — corruption, polarization,
-            money in politics, broken elections. This page documents what
-            actually worked.
+            The U.S. isn&apos;t broken beyond repair. Around the world,
+            democracies have solved the exact problems we face: corruption,
+            polarization, money in politics, broken elections. This page
+            documents what actually worked.
           </p>
 
           <div className="grid grid-cols-2 gap-8 border-t border-white/10 pt-10 md:grid-cols-4">
@@ -106,17 +105,17 @@ export default function WhatsWorkingPage() {
             <li className="flex gap-3">
               <span className="mt-0.5 shrink-0 font-bold text-accent">›</span>
               <span className="leading-relaxed text-ink">
-                <strong>Maine (2016):</strong> First U.S. state to adopt RCV
-                for federal races. Rep. Jared Golden won the 2018 congressional
-                race despite not being anyone&apos;s first choice outright —
-                broad second-choice support carried him to a majority victory.
+                <strong>Maine (2016):</strong> First U.S. state to adopt RCV for
+                federal races. Rep. Jared Golden won the 2018 congressional race
+                despite not being anyone&apos;s first choice outright. Broad
+                second-choice support carried him to a majority victory.
               </span>
             </li>
             <li className="flex gap-3">
               <span className="mt-0.5 shrink-0 font-bold text-accent">›</span>
               <span className="leading-relaxed text-ink">
                 <strong>Alaska (2020, used 2022):</strong> Brought Mary Peltola
-                (D) and Lisa Murkowski (R) to Congress — both with documented
+                (D) and Lisa Murkowski (R) to Congress, both with documented
                 bipartisan support, both prevailing over same-party challengers
                 in a competitive field.
               </span>
@@ -125,7 +124,7 @@ export default function WhatsWorkingPage() {
               <span className="mt-0.5 shrink-0 font-bold text-accent">›</span>
               <span className="leading-relaxed text-ink">
                 <strong>Australia (since 1918):</strong> Has used preferential
-                voting — the equivalent of RCV — for over a century. Coalition
+                voting, the equivalent of RCV, for over a century. Coalition
                 building is structurally incentivized; outcomes consistently
                 skew more moderate than single-round systems.
               </span>
@@ -147,14 +146,14 @@ export default function WhatsWorkingPage() {
             <li className="flex gap-3">
               <span className="font-bold text-accent">›</span>
               <span className="text-ink">
-                Eliminates the spoiler effect — third-party and independent
+                Eliminates the spoiler effect. Third-party and independent
                 candidates can run without splitting the vote.
               </span>
             </li>
             <li className="flex gap-3">
               <span className="font-bold text-accent">›</span>
               <span className="text-ink">
-                Reduces negative campaigning — candidates want their
+                Reduces negative campaigning, because candidates want their
                 opponents&apos; supporters&apos; second-choice votes.
               </span>
             </li>
@@ -184,8 +183,8 @@ export default function WhatsWorkingPage() {
 
           <div className="mb-6 border-l-4 border-accent pl-5">
             <p className="leading-relaxed text-ink">
-              All voters — regardless of party registration — participate in
-              the same primary. The top 2 finishers (or top 4 in Alaska&apos;s
+              All voters, regardless of party registration, participate in the
+              same primary. The top 2 finishers (or top 4 in Alaska&apos;s
               model) advance to the general election.
             </p>
           </div>
@@ -221,9 +220,8 @@ export default function WhatsWorkingPage() {
             <li className="flex gap-3">
               <span className="font-bold text-accent">›</span>
               <span className="text-ink">
-                Reduces the outsized influence of primary voters — who tend to
-                be more ideologically extreme — over the final electoral
-                outcome.
+                Reduces the outsized influence of primary voters (who tend to be
+                more ideologically extreme) over the final electoral outcome.
               </span>
             </li>
             <li className="flex gap-3">
@@ -245,8 +243,8 @@ export default function WhatsWorkingPage() {
           <div className="mb-6 border-l-4 border-accent pl-5">
             <p className="leading-relaxed text-ink">
               Citizens are automatically registered to vote when they interact
-              with government agencies — DMV, social services, etc. — unless
-              they explicitly opt out.
+              with government agencies (DMV, social services, etc.) unless they
+              explicitly opt out.
             </p>
           </div>
 
@@ -266,10 +264,10 @@ export default function WhatsWorkingPage() {
             <li className="flex gap-3">
               <span className="mt-0.5 shrink-0 font-bold text-accent">›</span>
               <span className="leading-relaxed text-ink">
-                <strong>21+ U.S. states</strong> have since adopted AVR.
-                Canada, Australia, and most of Europe have had equivalent
-                systems for decades — treating voter registration as a
-                government function, not a citizen burden.
+                <strong>21+ U.S. states</strong> have since adopted AVR. Canada,
+                Australia, and most of Europe have had equivalent systems for
+                decades, treating voter registration as a government function,
+                not a citizen burden.
               </span>
             </li>
           </ul>
@@ -281,16 +279,15 @@ export default function WhatsWorkingPage() {
             <li className="flex gap-3">
               <span className="font-bold text-accent">›</span>
               <span className="text-ink">
-                Removes administrative barriers to voting that have
-                historically suppressed registration among low-income and
-                mobile populations.
+                Removes administrative barriers to voting that have historically
+                suppressed registration among low-income and mobile populations.
               </span>
             </li>
             <li className="flex gap-3">
               <span className="font-bold text-accent">›</span>
               <span className="text-ink">
-                Registration rates increase 5–10 percentage points in the
-                first election cycle after adoption.
+                Registration rates increase 5–10 percentage points in the first
+                election cycle after adoption.
               </span>
             </li>
           </ul>
@@ -316,30 +313,28 @@ export default function WhatsWorkingPage() {
             {/* South Korea */}
             <div className="flex flex-col rounded-xl border border-border bg-paper p-6">
               <div className="mb-2 font-mono text-xs font-bold uppercase tracking-wider text-muted">
-                South Korea — 2002
+                South Korea, 2002
               </div>
               <h3 className="mb-3 font-headline text-xl font-black text-ink">
                 Independent Anti-Corruption Agency
               </h3>
               <div className="flex-1 space-y-3 leading-relaxed text-ink">
                 <p>
-                  <strong>Problem:</strong> Pervasive bribery across
-                  government, business, and the judiciary — among the worst
-                  in the OECD.
+                  <strong>Problem:</strong> Pervasive bribery across government,
+                  business, and the judiciary, among the worst in the OECD.
                 </p>
                 <p>
                   <strong>Solution:</strong> Created the Korea Independent
-                  Commission Against Corruption (KICAC), later merged into
-                  the Anti-Corruption and Civil Rights Commission (ACRC).
-                  The body was insulated from executive control, with
-                  mandatory financial disclosure and real prosecutorial
-                  backup.
+                  Commission Against Corruption (KICAC), later merged into the
+                  Anti-Corruption and Civil Rights Commission (ACRC). The body
+                  was insulated from executive control, with mandatory financial
+                  disclosure and real prosecutorial backup.
                 </p>
                 <p>
-                  <strong>Outcome:</strong> Within 15 years, South Korea
-                  moved from one of the most corrupt democracies in the OECD
-                  to a middling one. In 2017, President Park Geun-hye was
-                  impeached and imprisoned for corruption. The system worked.
+                  <strong>Outcome:</strong> Within 15 years, South Korea moved
+                  from one of the most corrupt democracies in the OECD to a
+                  middling one. In 2017, President Park Geun-hye was impeached
+                  and imprisoned for corruption. The system worked.
                 </p>
               </div>
               <div className="mt-5 border-t border-border pt-4">
@@ -347,8 +342,7 @@ export default function WhatsWorkingPage() {
                   Key Factor:
                 </span>
                 <span className="ml-2 font-mono text-xs text-muted">
-                  Institutional independence + citizen whistleblower
-                  protections
+                  Institutional independence + citizen whistleblower protections
                 </span>
               </div>
             </div>
@@ -356,7 +350,7 @@ export default function WhatsWorkingPage() {
             {/* Georgia */}
             <div className="flex flex-col rounded-xl border border-border bg-paper p-6">
               <div className="mb-2 font-mono text-xs font-bold uppercase tracking-wider text-muted">
-                Georgia (the country) — 2004–2012
+                Georgia (the country), 2004 to 2012
               </div>
               <h3 className="mb-3 font-headline text-xl font-black text-ink">
                 Anti-Corruption Push After the Rose Revolution
@@ -368,19 +362,18 @@ export default function WhatsWorkingPage() {
                   shakedown operation from top to bottom.
                 </p>
                 <p>
-                  <strong>Solution:</strong> Saakashvili&apos;s government
-                  fired the entire 15,000-person traffic police force in a
-                  single day and rebuilt it with new training and wages high
-                  enough to make bribery unattractive. Customs corruption
-                  was dismantled. Licenses and permits moved online, removing
-                  human gatekeepers.
+                  <strong>Solution:</strong> Saakashvili&apos;s government fired
+                  the entire 15,000-person traffic police force in a single day
+                  and rebuilt it with new training and wages high enough to make
+                  bribery unattractive. Customs corruption was dismantled.
+                  Licenses and permits moved online, removing human gatekeepers.
                 </p>
                 <p>
                   <strong>Outcome:</strong> Transparency International&apos;s
                   Corruption Perceptions Index: Georgia went from{" "}
                   <strong>124th in 2003</strong> to{" "}
-                  <strong>50th by 2012</strong>. Police bribery was
-                  essentially eliminated.
+                  <strong>50th by 2012</strong>. Police bribery was essentially
+                  eliminated.
                 </p>
               </div>
               <div className="mt-5 border-t border-border pt-4">
@@ -388,8 +381,8 @@ export default function WhatsWorkingPage() {
                   Key Factor:
                 </span>
                 <span className="ml-2 font-mono text-xs text-muted">
-                  Removing human gatekeepers + wages high enough to make
-                  bribery unattractive
+                  Removing human gatekeepers + wages high enough to make bribery
+                  unattractive
                 </span>
               </div>
             </div>
@@ -397,32 +390,32 @@ export default function WhatsWorkingPage() {
             {/* Iceland */}
             <div className="flex flex-col rounded-xl border border-border bg-paper p-6">
               <div className="mb-2 font-mono text-xs font-bold uppercase tracking-wider text-muted">
-                Iceland — 2008–2012
+                Iceland, 2008 to 2012
               </div>
               <h3 className="mb-3 font-headline text-xl font-black text-ink">
                 Crowdsourced Constitution After Banking Collapse
               </h3>
               <div className="flex-1 space-y-3 leading-relaxed text-ink">
                 <p>
-                  <strong>Problem:</strong> After the 2008 banking collapse —
-                  all three of Iceland&apos;s major banks failed — public fury
-                  at a system captured by financial and political elites.
+                  <strong>Problem:</strong> After the 2008 banking collapse, all
+                  three of Iceland&apos;s major banks failed and public fury at
+                  a system captured by financial and political elites.
                 </p>
                 <p>
                   <strong>Solution:</strong> A citizens&apos; assembly of 950
                   randomly selected people set national values. A 25-person
-                  Constitutional Council — elected from 522 ordinary citizen
-                  candidates — drafted a new constitution openly via weekly
-                  public posts, Facebook/Twitter participation, and 3,600
-                  public comments incorporated into the text.
+                  Constitutional Council (elected from 522 ordinary citizen
+                  candidates) drafted a new constitution openly via weekly
+                  public posts, Facebook/Twitter participation, and 3,600 public
+                  comments incorporated into the text.
                 </p>
                 <p>
-                  <strong>Outcome:</strong> The document passed a referendum
-                  by a two-thirds majority. It included explicit limits on
+                  <strong>Outcome:</strong> The document passed a referendum by
+                  a two-thirds majority. It included explicit limits on
                   corporate money in politics, environmental rights, and media
-                  ownership caps. Parliament did not ultimately ratify it —
-                  but the process demonstrated participatory democracy at
-                  scale is operationally possible.
+                  ownership caps. Parliament did not ultimately ratify it, but
+                  the process demonstrated participatory democracy at scale is
+                  operationally possible.
                 </p>
               </div>
               <div className="mt-5 border-t border-border pt-4">
@@ -430,8 +423,7 @@ export default function WhatsWorkingPage() {
                   Key Factor:
                 </span>
                 <span className="ml-2 font-mono text-xs text-muted">
-                  Radical transparency + random selection to break elite
-                  capture
+                  Radical transparency + random selection to break elite capture
                 </span>
               </div>
             </div>
@@ -439,7 +431,7 @@ export default function WhatsWorkingPage() {
             {/* New Zealand */}
             <div className="flex flex-col rounded-xl border border-border bg-paper p-6">
               <div className="mb-2 font-mono text-xs font-bold uppercase tracking-wider text-muted">
-                New Zealand — Electoral Finance Act
+                New Zealand: Electoral Finance Act
               </div>
               <h3 className="mb-3 font-headline text-xl font-black text-ink">
                 Disclosure That Changed Political Culture
@@ -447,22 +439,21 @@ export default function WhatsWorkingPage() {
               <div className="flex-1 space-y-3 leading-relaxed text-ink">
                 <p>
                   <strong>Problem:</strong> Secret and anonymous money flowing
-                  into elections — donations untraceable, influence
+                  into elections, with donations untraceable and influence
                   unaccountable.
                 </p>
                 <p>
-                  <strong>Solution:</strong> The Electoral Finance Act
-                  requires real-time public disclosure of all donations over
-                  NZ$1,500. Hard spending limits on campaigns. An Independent
-                  Electoral Commission with genuine enforcement authority.
+                  <strong>Solution:</strong> The Electoral Finance Act requires
+                  real-time public disclosure of all donations over NZ$1,500.
+                  Hard spending limits on campaigns. An Independent Electoral
+                  Commission with genuine enforcement authority.
                 </p>
                 <p>
                   <strong>Outcome:</strong> New Zealand consistently ranks in
-                  the{" "}
-                  <strong>top 5 least corrupt countries globally</strong> on
+                  the <strong>top 5 least corrupt countries globally</strong> on
                   Transparency International&apos;s index. Donation disclosure
-                  shifted the culture around political money — the expectation
-                  of secrecy evaporated.
+                  shifted the culture around political money, and the
+                  expectation of secrecy evaporated.
                 </p>
               </div>
               <div className="mt-5 border-t border-border pt-4">
@@ -470,7 +461,7 @@ export default function WhatsWorkingPage() {
                   Key Factor:
                 </span>
                 <span className="ml-2 font-mono text-xs text-muted">
-                  Transparency alone — no public financing required, just
+                  Transparency alone, with no public financing required, just
                   disclosure
                 </span>
               </div>
@@ -491,17 +482,23 @@ export default function WhatsWorkingPage() {
           </h2>
           <p className="mb-10 mt-5 max-w-3xl text-lg leading-relaxed text-muted">
             Every other wealthy democracy provides healthcare to all its
-            citizens. They do it in different ways — and at lower cost than the
-            U.S. pays for partial coverage.
+            citizens. They do it in different ways, at lower cost than the U.S.
+            pays for partial coverage.
           </p>
 
           {/* Stat box */}
           <div className="mb-12 grid grid-cols-2 gap-6 rounded-xl bg-ink p-6 text-white md:grid-cols-4">
             {[
-              { value: "~18%", label: "U.S. healthcare spending as share of GDP" },
+              {
+                value: "~18%",
+                label: "U.S. healthcare spending as share of GDP",
+              },
               { value: "~11%", label: "Comparable country average" },
               { value: "~26M", label: "Uninsured Americans (~8%)" },
-              { value: "26th", label: "U.S. life expectancy rank among 36 OECD nations" },
+              {
+                value: "26th",
+                label: "U.S. life expectancy rank among 36 OECD nations",
+              },
             ].map((s) => (
               <div key={s.label}>
                 <div className="font-mono text-2xl font-bold text-accent-light">
@@ -518,7 +515,7 @@ export default function WhatsWorkingPage() {
               Model 1
             </div>
             <h3 className="mb-4 font-headline text-xl font-bold text-ink">
-              Single-Payer / National Health Service — Canada &amp; UK
+              Single-Payer / National Health Service: Canada &amp; UK
             </h3>
             <div className="mb-6 grid gap-6 md:grid-cols-2">
               <div>
@@ -543,8 +540,7 @@ export default function WhatsWorkingPage() {
                 <p className="text-xs leading-relaxed text-muted">
                   <span className="font-semibold text-ink">Tradeoff:</span>{" "}
                   Longer wait times for elective procedures. Private
-                  supplementary insurance covers extras (dental, vision,
-                  drugs).
+                  supplementary insurance covers extras (dental, vision, drugs).
                 </p>
               </div>
               <div>
@@ -589,7 +585,7 @@ export default function WhatsWorkingPage() {
               Model 2
             </div>
             <h3 className="mb-4 font-headline text-xl font-bold text-ink">
-              Multi-Payer with Strong Regulation — Germany &amp; Switzerland
+              Multi-Payer with Strong Regulation: Germany &amp; Switzerland
             </h3>
             <div className="mb-4 grid gap-6 md:grid-cols-2">
               <div>
@@ -621,9 +617,9 @@ export default function WhatsWorkingPage() {
               <div>
                 <div className="mb-2 font-semibold text-ink">Switzerland</div>
                 <p className="mb-3 text-sm leading-relaxed text-muted">
-                  Mandatory private insurance, heavily subsidized for
-                  low-income residents. Nonprofit required for basic coverage.
-                  All insurers must offer the same basic benefits package.
+                  Mandatory private insurance, heavily subsidized for low-income
+                  residents. Nonprofit required for basic coverage. All insurers
+                  must offer the same basic benefits package.
                 </p>
                 <div className="flex flex-wrap gap-3">
                   <div className="rounded-lg bg-paper px-3 py-2 text-center">
@@ -695,10 +691,10 @@ export default function WhatsWorkingPage() {
               {[
                 "Every system above has: mandatory participation, regulated pricing, and nonprofit administration of core coverage.",
                 "The U.S. already has elements of all three: Medicare/Medicaid, the ACA marketplace, and employer coverage.",
-                "The missing ingredient is not the model — it's universality combined with administrative simplification.",
+                "The missing ingredient is not the model. It's universality combined with administrative simplification.",
               ].map((item) => (
                 <li key={item} className="flex gap-2">
-                  <span className="mt-0.5 font-bold text-accent">—</span>
+                  <span className="mt-0.5 font-bold text-accent">•</span>
                   <span>{item}</span>
                 </li>
               ))}
@@ -719,8 +715,8 @@ export default function WhatsWorkingPage() {
           </h2>
           <p className="mb-14 mt-5 max-w-3xl text-lg leading-relaxed text-muted">
             Beyond elections, democracies are finding new ways to make
-            collective decisions that are more representative, more deliberative,
-            and more resistant to capture.
+            collective decisions that are more representative, more
+            deliberative, and more resistant to capture.
           </p>
 
           {/* A. Participatory Budgeting */}
@@ -735,8 +731,8 @@ export default function WhatsWorkingPage() {
             </div>
 
             <p className="mb-6 text-sm leading-relaxed text-muted">
-              Residents directly vote on how a portion of public money is
-              spent. Not advisory — binding decisions on real allocations.
+              Residents directly vote on how a portion of public money is spent.
+              Not advisory: binding decisions on real allocations.
             </p>
 
             <div className="space-y-4">
@@ -771,8 +767,8 @@ export default function WhatsWorkingPage() {
                   </div>
                 </div>
                 <p className="text-sm leading-relaxed text-muted">
-                  Allocates €100M/year — roughly 5% of the investment budget —
-                  to resident-submitted projects. Over 100,000 Parisians vote
+                  Allocates €100M/year (roughly 5% of the investment budget) to
+                  resident-submitted projects. Over 100,000 Parisians vote
                   annually, online and in-person.
                 </p>
               </div>
@@ -797,8 +793,8 @@ export default function WhatsWorkingPage() {
                 <span className="font-semibold text-ink">
                   What makes it work:
                 </span>{" "}
-                real money, real decisions, ward-level implementation.
-                City-wide votes are too abstract — neighborhood scale creates
+                real money, real decisions, ward-level implementation. City-wide
+                votes are too abstract. Neighborhood scale creates
                 accountability.
               </p>
             </div>
@@ -816,8 +812,8 @@ export default function WhatsWorkingPage() {
             </div>
 
             <p className="mb-6 text-sm leading-relaxed text-muted">
-              A randomly selected group of ordinary citizens — like jury duty —
-              is given expert testimony, time to deliberate, and asked to make
+              A randomly selected group of ordinary citizens (like jury duty) is
+              given expert testimony, time to deliberate, and asked to make
               policy recommendations on difficult or politically deadlocked
               issues.
             </p>
@@ -826,18 +822,18 @@ export default function WhatsWorkingPage() {
               <div className="rounded-xl border border-border bg-paper p-6">
                 <div className="mb-2 flex items-start justify-between gap-4">
                   <div className="font-semibold text-ink">
-                    Ireland — Citizens&apos; Assembly on Abortion
+                    Ireland, Citizens&apos; Assembly on Abortion
                   </div>
                   <div className="whitespace-nowrap font-mono text-xs text-muted">
                     2016–2018
                   </div>
                 </div>
                 <p className="mb-3 text-sm leading-relaxed text-muted">
-                  99 randomly selected citizens deliberated for 18 months.
-                  Their recommendations formed the basis of a referendum that
-                  passed with 66% of the vote — ending a 35-year political
-                  deadlock. The same assembly process was used for same-sex
-                  marriage (2015) and climate policy.
+                  99 randomly selected citizens deliberated for 18 months. Their
+                  recommendations formed the basis of a referendum that passed
+                  with 66% of the vote, ending a 35-year political deadlock. The
+                  same assembly process was used for same-sex marriage (2015)
+                  and climate policy.
                 </p>
                 <div className="border-l-4 border-accent pl-5">
                   <p className="font-medium text-ink">
@@ -850,7 +846,7 @@ export default function WhatsWorkingPage() {
               <div className="rounded-xl border border-border bg-paper p-6">
                 <div className="mb-2 flex items-start justify-between gap-4">
                   <div className="font-semibold text-ink">
-                    France — Convention Citoyenne pour le Climat
+                    France: Convention Citoyenne pour le Climat
                   </div>
                   <div className="whitespace-nowrap font-mono text-xs text-muted">
                     2019–2020
@@ -866,7 +862,7 @@ export default function WhatsWorkingPage() {
               <div className="rounded-xl border border-border bg-paper p-6">
                 <div className="mb-2 flex items-start justify-between gap-4">
                   <div className="font-semibold text-ink">
-                    UK — Climate Assembly UK
+                    UK: Climate Assembly UK
                   </div>
                   <div className="whitespace-nowrap font-mono text-xs text-muted">
                     2020
@@ -882,10 +878,10 @@ export default function WhatsWorkingPage() {
             <div className="mt-5 border-l-4 border-accent pl-5">
               <p className="text-sm text-muted">
                 <span className="font-semibold text-ink">Why it works:</span>{" "}
-                random selection breaks partisan capture. Ordinary people,
-                given time and real information, make thoughtful,
-                evidence-based decisions. &ldquo;Mini-publics&rdquo; are a
-                more accurate mirror of the population than elected bodies.
+                random selection breaks partisan capture. Ordinary people, given
+                time and real information, make thoughtful, evidence-based
+                decisions. &ldquo;Mini-publics&rdquo; are a more accurate mirror
+                of the population than elected bodies.
               </p>
             </div>
           </div>
@@ -904,7 +900,7 @@ export default function WhatsWorkingPage() {
             <p className="mb-6 text-sm leading-relaxed text-muted">
               Most established democracies use proportional representation (PR)
               rather than winner-take-all districts. Parties receive seats
-              proportional to their vote share — a party that wins 30% of votes
+              proportional to their vote share. A party that wins 30% of votes
               gets roughly 30% of seats.
             </p>
 
@@ -916,8 +912,8 @@ export default function WhatsWorkingPage() {
                 {[
                   "Voter turnout is typically 10–15 percentage points higher than in U.S. elections.",
                   "PR systems elect roughly twice as many women as winner-take-all systems.",
-                  "Smaller parties get represented — public opinion is reflected more accurately across the spectrum.",
-                  "Less extreme policy swings between governments — coalition dynamics create continuity.",
+                  "Smaller parties get represented, so public opinion is reflected more accurately across the spectrum.",
+                  "Less extreme policy swings between governments, because coalition dynamics create continuity.",
                 ].map((item) => (
                   <div key={item} className="flex items-start gap-3">
                     <div className="mt-0.5 w-6 shrink-0 font-mono text-sm font-bold text-accent">
@@ -959,11 +955,11 @@ export default function WhatsWorkingPage() {
 
             <div className="border-l-4 border-border pl-5">
               <p className="text-sm text-muted">
-                <span className="font-semibold text-ink">Tradeoff:</span> PR
-                can require coalition governments, which can be unstable.
+                <span className="font-semibold text-ink">Tradeoff:</span> PR can
+                require coalition governments, which can be unstable.
                 Israel&apos;s highly fragmented PR system is a cautionary
-                example — too low a threshold for representation creates
-                chronic instability.
+                example: too low a threshold for representation creates chronic
+                instability.
               </p>
             </div>
           </div>
@@ -975,7 +971,7 @@ export default function WhatsWorkingPage() {
                 D
               </div>
               <h3 className="font-headline text-2xl font-bold text-ink">
-                Online Democracy — Estonia
+                Online Democracy: Estonia
               </h3>
             </div>
 
@@ -983,8 +979,7 @@ export default function WhatsWorkingPage() {
               Estonia has built the most advanced digital government in the
               world. 99% of government services are available online, 24/7, via
               a single digital identity. Built after independence from the USSR
-              in 1991 — starting from scratch with no legacy systems to
-              retrofit.
+              in 1991, starting from scratch with no legacy systems to retrofit.
             </p>
 
             <div className="mb-6 grid gap-4 md:grid-cols-2">
@@ -994,13 +989,12 @@ export default function WhatsWorkingPage() {
                 </div>
                 <p className="mb-3 text-xs leading-relaxed text-muted">
                   Online voting since 2005. In 2023, 51% of all votes were cast
-                  online. Zero verified cases of fraud in 18 years of
-                  operation.
+                  online. Zero verified cases of fraud in 18 years of operation.
                 </p>
                 <div className="border-l-4 border-accent pl-4">
                   <p className="text-xs text-ink">
                     Security model: voters can change their vote multiple times
-                    before the deadline — eliminating coercion. The vote is
+                    before the deadline, eliminating coercion. The vote is
                     cryptographically separated from identity before counting.
                   </p>
                 </div>
@@ -1012,16 +1006,16 @@ export default function WhatsWorkingPage() {
                 </div>
                 <p className="mb-3 text-xs leading-relaxed text-muted">
                   X-Road is the data exchange layer that lets all government
-                  agencies share data securely — without centralized storage.
-                  No single point of failure or surveillance.
+                  agencies share data securely, without centralized storage. No
+                  single point of failure or surveillance.
                 </p>
                 <div className="mb-2 mt-3 text-sm font-semibold text-ink">
                   e-Residency
                 </div>
                 <p className="text-xs leading-relaxed text-muted">
-                  Non-Estonians can obtain a digital identity to run
-                  businesses, sign documents, and access EU digital services —
-                  from anywhere in the world.
+                  Non-Estonians can obtain a digital identity to run businesses,
+                  sign documents, and access EU digital services, from anywhere
+                  in the world.
                 </p>
               </div>
             </div>
@@ -1032,7 +1026,7 @@ export default function WhatsWorkingPage() {
                   What the U.S. can learn:
                 </span>{" "}
                 building digital government infrastructure requires political
-                will and sustained investment — not exotic technology. The
+                will and sustained investment, not exotic technology. The
                 barrier is institutional, not technical.
               </p>
             </div>
@@ -1072,7 +1066,7 @@ export default function WhatsWorkingPage() {
               <ul className="list-inside list-disc space-y-1 text-sm text-muted">
                 <li>
                   Candidates using the system raised a higher share of their
-                  money from within their own district — not large outside
+                  money from within their own district, not large outside
                   donors.
                 </li>
                 <li>
@@ -1092,7 +1086,7 @@ export default function WhatsWorkingPage() {
             </p>
             <div className="rounded-r border-l-4 border-accent bg-surface py-3 pl-5">
               <p className="mb-1 text-sm font-medium text-ink">
-                Connecticut CEP — Outcomes Since 2008
+                Connecticut CEP: Outcomes Since 2008
               </p>
               <ul className="list-inside list-disc space-y-1 text-sm text-muted">
                 <li>
@@ -1117,10 +1111,10 @@ export default function WhatsWorkingPage() {
               B. Maine Clean Elections Act
             </h3>
             <p className="mb-4 leading-relaxed text-muted">
-              Passed by citizen initiative in 1996, Maine&apos;s Clean
-              Elections Act provides full public funding to qualifying
-              candidates who collect small donations from constituents to
-              demonstrate viability.
+              Passed by citizen initiative in 1996, Maine&apos;s Clean Elections
+              Act provides full public funding to qualifying candidates who
+              collect small donations from constituents to demonstrate
+              viability.
             </p>
             <div className="rounded-r border-l-4 border-accent bg-surface py-3 pl-5">
               <ul className="list-inside list-disc space-y-1 text-sm text-muted">
@@ -1130,7 +1124,7 @@ export default function WhatsWorkingPage() {
                 </li>
                 <li>
                   Participants are significantly more likely to come from
-                  working-class backgrounds — not career politicians or wealthy
+                  working-class backgrounds, not career politicians or wealthy
                   self-funders.
                 </li>
                 <li>
@@ -1149,8 +1143,8 @@ export default function WhatsWorkingPage() {
             <p className="mb-4 leading-relaxed text-muted">
               In 2017, Seattle launched a direct-access experiment: every
               registered voter receives four $25 &ldquo;Democracy
-              Vouchers&rdquo; — funded by a property tax levy — to donate to
-              local campaigns of their choice.
+              Vouchers,&rdquo; funded by a property tax levy, to donate to local
+              campaigns of their choice.
             </p>
             <div className="rounded-r border-l-4 border-accent bg-surface py-3 pl-5">
               <p className="mb-1 text-sm font-medium text-ink">Results</p>
@@ -1167,7 +1161,7 @@ export default function WhatsWorkingPage() {
               </ul>
               <p className="mt-3 text-sm italic text-muted">
                 The lesson: the barrier to small-donor participation is not
-                desire — it&apos;s access to disposable income.
+                desire. It&apos;s access to disposable income.
               </p>
             </div>
           </div>
@@ -1185,9 +1179,9 @@ export default function WhatsWorkingPage() {
                 <p className="text-sm leading-relaxed text-muted">
                   Partial public funding tied to vote share and small-donor
                   fundraising. Corporate donations to parties are banned.
-                  Result: parties must maintain broad membership bases to
-                  access public funds, keeping them structurally connected to
-                  ordinary voters.
+                  Result: parties must maintain broad membership bases to access
+                  public funds, keeping them structurally connected to ordinary
+                  voters.
                 </p>
               </div>
               <div className="rounded-lg border border-border bg-surface p-5">
@@ -1215,14 +1209,12 @@ export default function WhatsWorkingPage() {
                 dependence on large donors.
               </li>
               <li>
-                Disclosure requirements so voters know who is funding
-                campaigns.
+                Disclosure requirements so voters know who is funding campaigns.
               </li>
               <li>
-                Spending limits or caps where legally permissible — harder in
-                the U.S. after{" "}
-                <span className="italic">Buckley v. Valeo</span>, but still
-                available at the state and local level.
+                Spending limits or caps where legally permissible (harder in the
+                U.S. after <span className="italic">Buckley v. Valeo</span>, but
+                still available at the state and local level).
               </li>
             </ul>
             <p className="mt-4 font-mono text-xs text-white/50">
@@ -1254,7 +1246,7 @@ export default function WhatsWorkingPage() {
             </h3>
             <p className="mb-4 leading-relaxed text-muted">
               Estonia&apos;s X-Road system does more than move data efficiently
-              — it creates a complete audit trail. Every time a government
+              : it creates a complete audit trail. Every time a government
               official accesses a citizen&apos;s data, a log entry is created
               that the citizen can view. You can see exactly who looked at your
               file and why.
@@ -1262,9 +1254,11 @@ export default function WhatsWorkingPage() {
             <div className="rounded-r border-l-4 border-accent bg-paper py-3 pl-5">
               <ul className="list-inside list-disc space-y-1 text-sm text-muted">
                 <li>
-                  <span className="font-medium text-ink">Data minimization:</span>{" "}
+                  <span className="font-medium text-ink">
+                    Data minimization:
+                  </span>{" "}
                   agencies can only see what they need for their specific
-                  function — no browsing.
+                  function. No browsing.
                 </li>
                 <li>
                   <span className="font-medium text-ink">
@@ -1288,7 +1282,7 @@ export default function WhatsWorkingPage() {
           {/* B: Open Contracting */}
           <div className="mb-12">
             <h3 className="mb-4 font-headline text-xl font-bold text-ink">
-              B. Open Contracting — Slovakia and Ukraine
+              B. Open Contracting: Slovakia and Ukraine
             </h3>
             <div className="mb-6">
               <p className="mb-2 font-mono text-xs uppercase tracking-widest text-accent">
@@ -1302,8 +1296,8 @@ export default function WhatsWorkingPage() {
               <div className="rounded-r border-l-4 border-accent bg-paper py-3 pl-5">
                 <ul className="list-inside list-disc space-y-1 text-sm text-muted">
                   <li>
-                    Average contract prices dropped 10–15% immediately —
-                    vendors knew they&apos;d be compared publicly.
+                    Average contract prices dropped 10–15% immediately; vendors
+                    knew they&apos;d be compared publicly.
                   </li>
                   <li>
                     Bid rigging became significantly harder to execute without
@@ -1314,10 +1308,10 @@ export default function WhatsWorkingPage() {
             </div>
             <div>
               <p className="mb-2 font-mono text-xs uppercase tracking-widest text-accent">
-                Ukraine — ProZorro
+                Ukraine: ProZorro
               </p>
               <p className="mb-3 leading-relaxed text-muted">
-                In 2016, Ukraine launched ProZorro — an open procurement system
+                In 2016, Ukraine launched ProZorro, an open procurement system
                 requiring all government purchases above a threshold to go
                 through a competitive online process with all bids publicly
                 visible.
@@ -1346,8 +1340,8 @@ export default function WhatsWorkingPage() {
             <p className="mb-4 leading-relaxed text-muted">
               The U.S. Freedom of Information Act (1966) is among the oldest
               such laws in the world, but it has significant structural
-              weaknesses: slow response times, widespread use of exemptions,
-              and litigation routinely required to force compliance.
+              weaknesses: slow response times, widespread use of exemptions, and
+              litigation routinely required to force compliance.
             </p>
             <div className="mb-5 rounded-lg border border-border bg-paper p-5">
               <p className="mb-2 font-mono text-xs uppercase tracking-widest text-accent">
@@ -1415,7 +1409,7 @@ export default function WhatsWorkingPage() {
                     U.S. (Corporate Transparency Act, 2021):
                   </span>{" "}
                   Small companies must report beneficial ownership to FinCEN.
-                  The data is not yet fully public — a significant gap compared
+                  The data is not yet fully public, a significant gap compared
                   to the UK and EU models.
                 </li>
               </ul>
@@ -1430,7 +1424,7 @@ export default function WhatsWorkingPage() {
             <p className="leading-relaxed text-muted">
               Transparency is not anti-government. The countries with the most
               open governments also consistently rank highest in public trust in
-              government. The relationship runs in that direction — not the
+              government. The relationship runs in that direction, not the
               reverse.
             </p>
           </div>
@@ -1451,25 +1445,25 @@ export default function WhatsWorkingPage() {
           <p className="text-base leading-relaxed text-muted">
             Every example on this page shares a common thread: the problem was
             designed in. It was also designed out. The countries that fixed
-            corruption built institutions that made corruption expensive —
-            costly to execute, easy to detect, hard to hide. The ones that
-            improved democracy built systems that made participation easy and
-            political capture hard. None of it happened through good intentions
-            alone. It happened through structural change.
+            corruption built institutions that made corruption expensive: costly
+            to execute, easy to detect, hard to hide. The ones that improved
+            democracy built systems that made participation easy and political
+            capture hard. None of it happened through good intentions alone. It
+            happened through structural change.
           </p>
           <p className="text-base leading-relaxed text-muted">
             The U.S. has the raw materials. Maine&apos;s public financing law.
             Alaska&apos;s ranked-choice voting. Seattle&apos;s Democracy
             Vouchers. New York City&apos;s small-donor matching program.
             Hundreds of participatory budgeting programs running in cities from
-            Boston to Oakland. The pieces exist — they are not theoretical,
-            they are operating. What&apos;s missing is scale, and the political
-            will to scale them from experiments into infrastructure.
+            Boston to Oakland. The pieces exist. They are not theoretical, they
+            are operating. What&apos;s missing is scale, and the political will
+            to scale them from experiments into infrastructure.
           </p>
           <p className="text-base leading-relaxed text-muted">
             This is not a partisan argument. Ranked-choice voting has been
             adopted in red states and blue states. Anti-corruption reform has
-            historically attracted coalitions across party lines — from
+            historically attracted coalitions across party lines, from
             progressive activists to libertarian watchdog groups. The frame of
             &ldquo;what works&rdquo; is more durable than left vs. right.
             Systems that reduce capture and expand participation tend to benefit
@@ -1558,7 +1552,7 @@ export default function WhatsWorkingPage() {
               </h3>
               <p className="flex-1 text-sm leading-relaxed text-muted">
                 The organizations below work on systemic reform across these
-                issue areas. All are nonpartisan or cross-partisan — you
+                issue areas. All are nonpartisan or cross-partisan, so you
                 don&apos;t have to agree on everything to work on structural
                 fixes together.
               </p>

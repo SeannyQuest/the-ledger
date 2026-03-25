@@ -11,9 +11,9 @@ export function Footer() {
               DAONRA
             </span>
             <p className="mt-2 text-sm leading-relaxed text-muted">
-              Your guide to how power works — and how to take it back.
-              Follow the money, understand the system, and find
-              practical ways to get involved.
+              Your guide to how power works and how to take it back. Follow the
+              money, understand the system, and find practical ways to get
+              involved.
             </p>
           </div>
 
@@ -39,7 +39,10 @@ export function Footer() {
             </h3>
             <ul className="mt-3 space-y-1.5 text-sm">
               <li>
-                <Link href="/about" className="text-ink underline-offset-2 hover:underline">
+                <Link
+                  href="/about"
+                  className="text-ink underline-offset-2 hover:underline"
+                >
                   Methodology & Data Sources
                 </Link>
               </li>
@@ -55,7 +58,10 @@ export function Footer() {
         <hr className="thin" />
 
         <div className="flex items-center justify-between text-xs text-muted">
-          <span>&copy; {new Date().getFullYear()} Daonra. All data from public sources.</span>
+          <span>
+            &copy; {new Date().getFullYear()} Daonra. All data from public
+            sources.
+          </span>
           <span className="font-mono">v0.1.0</span>
         </div>
       </div>

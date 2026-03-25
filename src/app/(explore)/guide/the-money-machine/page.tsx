@@ -24,7 +24,7 @@ const SCROLLYTELL_STEPS: ScrollytellStep[] = [
   {
     id: "the-donor",
     title: "The Donor Writes a Check",
-    body: "It begins with a check — or, more precisely, a wire transfer. A pharmaceutical executive, a hedge fund manager, or a fossil fuel billionaire decides to influence an election. If they donate directly to a candidate, their name appears in FEC filings. But there is another way. They write a check to a 501(c)(4) nonprofit — a 'social welfare' organization that, under IRS rules, can engage in political activity while keeping its donor list completely secret. The money enters the system. The name does not.",
+    body: "It begins with a check, or, more precisely, a wire transfer. A pharmaceutical executive, a hedge fund manager, or a fossil fuel billionaire decides to influence an election. If they donate directly to a candidate, their name appears in FEC filings. But there is another way. They write a check to a 501(c)(4) nonprofit, a 'social welfare' organization that, under IRS rules, can engage in political activity while keeping its donor list completely secret. The money enters the system. The name does not.",
     stat: {
       value: "$4.3B",
       label: "Dark Money Since Citizens United",
@@ -35,7 +35,7 @@ const SCROLLYTELL_STEPS: ScrollytellStep[] = [
   {
     id: "the-nonprofit",
     title: "The 501(c)(4) Launders the Source",
-    body: "The nonprofit is the washing machine of American politics. Under current law, a 501(c)(4) can devote up to 49.9% of its budget to political activity — attack ads, voter mobilization, issue campaigns — without disclosing a single donor. The remaining 50.1% funds 'social welfare' activities that are often indistinguishable from political messaging. In the 2024 cycle, shell companies and nonprofits funneled $1.3 billion to Super PACs — more than the prior two cycles combined. The IRS, burned by the Tea Party scrutiny scandal, has largely stopped enforcing the rules.",
+    body: "The nonprofit is the washing machine of American politics. Under current law, a 501(c)(4) can devote up to 49.9% of its budget to political activity (attack ads, voter mobilization, issue campaigns) without disclosing a single donor. The remaining 50.1% funds 'social welfare' activities that are often indistinguishable from political messaging. In the 2024 cycle, shell companies and nonprofits funneled $1.3 billion to Super PACs, more than the prior two cycles combined. The IRS, burned by the Tea Party scrutiny scandal, has largely stopped enforcing the rules.",
     stat: {
       value: "$1.3B",
       label: "Shell Company Donations (2024)",
@@ -46,7 +46,7 @@ const SCROLLYTELL_STEPS: ScrollytellStep[] = [
   {
     id: "the-superpac",
     title: "The Super PAC Deploys the Weapon",
-    body: "The money flows from the nonprofit into a Super PAC — a political committee that can raise and spend unlimited sums, as long as it does not 'coordinate' with a candidate. In practice, coordination is a legal fiction. Super PACs are run by former campaign staffers, share consultants with official campaigns, and time their ad buys to complement candidate messaging. Outside spending exploded from $338 million in 2008 to over $4.5 billion in 2024. Timothy Mellon alone gave $150 million to Trump-aligned Super PACs. Fairshake, the crypto industry Super PAC, spent $195 million and won 91% of its races.",
+    body: "The money flows from the nonprofit into a Super PAC, a political committee that can raise and spend unlimited sums, as long as it does not 'coordinate' with a candidate. In practice, coordination is a legal fiction. Super PACs are run by former campaign staffers, share consultants with official campaigns, and time their ad buys to complement candidate messaging. Outside spending exploded from $338 million in 2008 to over $4.5 billion in 2024. Timothy Mellon alone gave $150 million to Trump-aligned Super PACs. Fairshake, the crypto industry Super PAC, spent $195 million and won 91% of its races.",
     stat: {
       value: "$4.5B+",
       label: "Outside Spending (2024)",
@@ -68,7 +68,7 @@ const SCROLLYTELL_STEPS: ScrollytellStep[] = [
   {
     id: "the-election",
     title: "The Election Is Decided",
-    body: "The candidate wins. The top 100 donors contributed more than all small donors combined. The winner now holds office knowing exactly who funded their victory — even if the public does not. The FEC, deadlocked 3-3 along partisan lines, cannot investigate coordination. It cannot update disclosure rules. It cannot enforce the laws already on the books. The agency tasked with policing campaign finance has been deliberately broken.",
+    body: "The candidate wins. The top 100 donors contributed more than all small donors combined. The winner now holds office knowing exactly who funded their victory, even if the public does not. The FEC, deadlocked 3-3 along partisan lines, cannot investigate coordination. It cannot update disclosure rules. It cannot enforce the laws already on the books. The agency tasked with policing campaign finance has been deliberately broken.",
     stat: {
       value: "3-3",
       label: "FEC Partisan Deadlock",
@@ -79,7 +79,7 @@ const SCROLLYTELL_STEPS: ScrollytellStep[] = [
   {
     id: "the-payback",
     title: "The Policy Payback",
-    body: "The winner takes office and the donors collect. A single lobbying campaign can yield returns of up to 22,000% — the Sunlight Foundation documented corporations spending $1 million on lobbying and receiving $220 million in tax breaks. In 2025, total US lobbying hit a record $5.08 billion, up 11% from the prior year. The pharmaceutical industry alone spent $452 million and deployed 1,834 lobbyists — more than three for every member of Congress. The cycle is complete. The donor writes another check.",
+    body: "The winner takes office and the donors collect. A single lobbying campaign can yield returns of up to 22,000%. The Sunlight Foundation documented corporations spending $1 million on lobbying and receiving $220 million in tax breaks. In 2025, total US lobbying hit a record $5.08 billion, up 11% from the prior year. The pharmaceutical industry alone spent $452 million and deployed 1,834 lobbyists, more than three for every member of Congress. The cycle is complete. The donor writes another check.",
     stat: {
       value: "22,000%",
       label: "Maximum Lobbying ROI",
@@ -152,7 +152,7 @@ export default function TheMoneyMachinePage() {
             year&apos;s record of $4.4 billion, and part of a roughly $37
             billion stream that has flowed through Washington since 2015. That
             number represents only the money that is disclosed. Alongside it
-            runs a parallel river — $4.3 billion in dark money since Citizens
+            runs a parallel river: $4.3 billion in dark money since Citizens
             United, funneled through 501(c)(4) nonprofits and shell companies
             that exist for the sole purpose of hiding who is paying for American
             elections. Together, they form the machinery of a system in which
@@ -169,7 +169,7 @@ export default function TheMoneyMachinePage() {
             independent impacts on U.S. government policy, while average
             citizens and mass-based interest groups have little or no
             independent influence. The Money Machine is the infrastructure that
-            makes this possible — the lobbying firms, the dark money networks,
+            makes this possible: the lobbying firms, the dark money networks,
             the Super PACs, the mega-donors, and the deliberately broken
             regulators who ensure the system perpetuates itself.
           </p>
@@ -187,7 +187,7 @@ export default function TheMoneyMachinePage() {
       {/* Scrollytelling section */}
       <ScrollytellSection
         headline="Anatomy of the Money Machine"
-        subhead="Trace the lifecycle of a political dollar — from donor to nonprofit to Super PAC to attack ad to election to policy payback."
+        subhead="Trace the lifecycle of a political dollar, from donor to nonprofit to Super PAC to attack ad to election to policy payback."
         steps={SCROLLYTELL_STEPS}
         bgColor="bg-ink"
         textColor="text-white"
@@ -226,20 +226,20 @@ export default function TheMoneyMachinePage() {
 
           <p className="mt-8 text-lg leading-relaxed text-ink/70">
             The $5.08 billion spent on federal lobbying in 2025 is not an
-            anomaly — it is an acceleration. Lobbying spending has increased
+            anomaly. It is an acceleration. Lobbying spending has increased
             every year for more than a decade, climbing from $3.2 billion in
             2015 to $4.4 billion in 2024 before shattering the record again. The
             money buys access, and access buys outcomes. The pharmaceutical
             industry leads all sectors at $452 million per year, followed by
             insurance at roughly $175 million, technology at approximately $170
             million, oil and gas at around $150 million, and defense contractors
-            at $139 million. These are not donations — they are investments, and
+            at $139 million. These are not donations. They are investments, and
             the returns are staggering.
           </p>
 
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
             The Sunlight Foundation documented lobbying returns on investment as
-            high as 22,000% — a corporation spends $1 million on K Street and
+            high as 22,000%, when a corporation spends $1 million on K Street and
             receives $220 million in favorable legislation, tax carve-outs, or
             regulatory exemptions. The health sector alone employs 1,834
             registered lobbyists, more than three for every member of Congress.
@@ -280,7 +280,7 @@ export default function TheMoneyMachinePage() {
           <p className="text-lg leading-relaxed text-ink/70">
             The genius of the lobbying system is its legal invisibility.
             Lobbying is protected speech. Disclosure requirements exist but are
-            designed to be searched, not read — buried in databases that few
+            designed to be searched, not read, buried in databases that few
             voters will ever access. The result is a shadow legislature where
             the real negotiations happen in conference rooms on K Street, and
             the votes on Capitol Hill merely ratify decisions that were made
@@ -305,8 +305,8 @@ export default function TheMoneyMachinePage() {
           </h2>
 
           <p className="mt-8 text-lg leading-relaxed text-ink/70">
-            Dark money — political spending by organizations that do not
-            disclose their donors — reached a record $1.9 billion in the 2024
+            Dark money, meaning political spending by organizations that do not
+            disclose their donors, reached a record $1.9 billion in the 2024
             election cycle. Since the Citizens United decision in 2010, the
             cumulative total has surpassed $4.3 billion. The architecture is
             elegant in its cynicism. A corporation or wealthy individual donates
@@ -320,7 +320,7 @@ export default function TheMoneyMachinePage() {
 
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
             The 2024 cycle marked an inflection point: shell companies and
-            nonprofits gave $1.3 billion to Super PACs — more than the prior two
+            nonprofits gave $1.3 billion to Super PACs, more than the prior two
             cycles combined. These entities are incorporated weeks before an
             election, donate millions from undisclosed sources, and dissolve
             before anyone can investigate. The FEC lacks the resources and, in
@@ -331,14 +331,14 @@ export default function TheMoneyMachinePage() {
             Americans for Prosperity, the Koch network&apos;s flagship, has
             deployed $398 million in total political spending. Majority Forward,
             aligned with Senate Democrats, spends roughly $29 million per cycle.
-            Dark money is bipartisan — both sides have built industrial-scale
+            Dark money is bipartisan. Both sides have built industrial-scale
             machines to hide who is buying American elections.
           </p>
 
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
-            The DISCLOSE Act — which would require any organization spending
+            The DISCLOSE Act, which would require any organization spending
             more than $10,000 on elections to reveal donors giving above that
-            threshold — has been introduced in every Congress since 2010. It has
+            threshold, has been introduced in every Congress since 2010. It has
             been filibustered every single time. Polls consistently show that
             75-80% of Americans support mandatory donor disclosure, including
             majorities of both parties. In fifteen years, not a single
@@ -367,7 +367,7 @@ export default function TheMoneyMachinePage() {
             story of accelerating oligarchy. In 2008, outside groups spent $338
             million on federal elections. By 2012, the first presidential cycle
             after Citizens United, that number had quadrupled to $1.3 billion.
-            By 2024, it surpassed $4.5 billion. The growth is not organic — it
+            By 2024, it surpassed $4.5 billion. The growth is not organic.
             is the predictable result of a legal framework that treats political
             spending as protected speech and places no meaningful limits on how
             much a single individual or corporation can spend to influence an
@@ -378,7 +378,7 @@ export default function TheMoneyMachinePage() {
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
             The scale of individual donations now defies comprehension. Timothy
             Mellon, heir to the Mellon banking fortune, gave more than $150
-            million to Trump-aligned Super PACs in the 2024 cycle alone — a
+            million to Trump-aligned Super PACs in the 2024 cycle alone,
             single individual writing checks larger than the entire campaign
             budgets of most Senate candidates. Fairshake, the cryptocurrency
             industry&apos;s Super PAC, raised $195 million in its first cycle
@@ -421,7 +421,7 @@ export default function TheMoneyMachinePage() {
             Republican and three Democratic commissioners, the agency cannot
             agree on enforcement actions, cannot update regulations, and cannot
             investigate coordination between Super PACs and campaigns. The
-            deadlock is not a bug — it is the intended outcome of a confirmation
+            deadlock is not a bug. It is the intended outcome of a confirmation
             process that ensures no party ever has a working majority on the
             commission. The cop on the beat has been handcuffed to a desk.
           </p>
@@ -456,7 +456,7 @@ export default function TheMoneyMachinePage() {
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
             The numbers tell the story with brutal clarity. Outside spending
             went from $338 million in 2008 to $1.3 billion in 2012 to $4.5
-            billion in 2024 — a thirteen-fold increase in fourteen years. The
+            billion in 2024, a thirteen-fold increase in fourteen years. The
             top 0.01% of donors now provide approximately 40% of all political
             contributions. The cost of winning a House seat has climbed to
             roughly $2.5 million; a Senate seat runs $15-30 million; and a
@@ -467,13 +467,13 @@ export default function TheMoneyMachinePage() {
           </p>
 
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
-            Polls consistently show that 75-80% of Americans — across party
-            lines — support overturning Citizens United. Yet no federal reform
+            Polls consistently show that 75-80% of Americans, across party
+            lines, support overturning Citizens United. Yet no federal reform
             has passed. Constitutional amendments require a two-thirds vote in
             both chambers and ratification by three-quarters of state
             legislatures. The beneficiaries of the current system are the ones
             who would need to vote to change it. The decision did not just open
-            a door to unlimited money in politics — it demolished the wall and
+            a door to unlimited money in politics. It demolished the wall and
             then made the wall&apos;s reconstruction structurally impossible.
           </p>
         </div>
@@ -494,8 +494,8 @@ export default function TheMoneyMachinePage() {
 
           <p className="mt-8 text-lg leading-relaxed text-ink/70">
             The people who fund American elections are not representative of the
-            people who vote in them. The donor class — the roughly 0.01% of the
-            population that provides 40% of all political contributions — is
+            people who vote in them. The donor class, the roughly 0.01% of the
+            population that provides 40% of all political contributions, is
             overwhelmingly white, overwhelmingly male, and overwhelmingly
             wealthy. They are concentrated in a handful of zip codes in New
             York, San Francisco, Los Angeles, and the suburbs of Washington,
@@ -513,7 +513,7 @@ export default function TheMoneyMachinePage() {
             elites diverge from those of the general public, the elites&apos;
             preferred policy outcome is adopted at a vastly higher rate. The
             average citizen&apos;s influence on policy is statistically
-            indistinguishable from zero. This is not a conspiracy theory — it is
+            indistinguishable from zero. This is not a conspiracy theory. It is
             a peer-reviewed finding published in{" "}
             <em>Perspectives on Politics</em>, one of the discipline&apos;s
             leading journals, and it has been cited over 7,000 times.
@@ -551,8 +551,8 @@ export default function TheMoneyMachinePage() {
             The cost of running for office ensures that the donor class remains
             the gatekeeper. A viable House campaign requires approximately $2.5
             million. A competitive Senate race demands $15-30 million or more.
-            Candidates without access to wealthy networks — candidates who look
-            like, earn like, and think like the majority of Americans — are
+            Candidates without access to wealthy networks (candidates who look
+            like, earn like, and think like the majority of Americans) are
             filtered out before they reach the ballot. The result is a
             legislature that is richer, whiter, and more male than the country
             it governs, elected by a process that structurally privileges the

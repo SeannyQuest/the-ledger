@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Local Government 101 | How Power Works | Daonra",
   description:
-    "City councils, school boards, zoning commissions — the local bodies that shape your daily life more than Congress ever will.",
+    "City councils, school boards, zoning commissions: the local bodies that shape your daily life more than Congress ever will.",
 };
 
 export default function LocalGovernmentPage() {
@@ -58,8 +58,8 @@ export default function LocalGovernmentPage() {
           <p className="text-ink/80 leading-relaxed mb-6">
             Below the state level, government fractures into thousands of
             overlapping jurisdictions. You are simultaneously governed by your
-            county, your municipality (if you live in one), your school district,
-            and possibly one or more special districts — all at once.
+            county, your municipality (if you live in one), your school
+            district, and possibly one or more special districts, all at once.
           </p>
 
           <div className="overflow-x-auto mb-8">
@@ -120,12 +120,11 @@ export default function LocalGovernmentPage() {
 
           <p className="text-ink/80 leading-relaxed">
             Many Americans are surprised to learn they live in a city{" "}
-            <em>and</em> a county{" "}
-            <em>and</em> a school district{" "}
-            <em>and</em> a water district — each with separate elected boards,
-            separate budgets, and separate election cycles. In California alone,
-            there are over 1,000 special districts operating essentially
-            invisibly to most residents.
+            <em>and</em> a county <em>and</em> a school district <em>and</em> a
+            water district, each with separate elected boards, separate budgets,
+            and separate election cycles. In California alone, there are over
+            1,000 special districts operating essentially invisibly to most
+            residents.
           </p>
         </div>
       </section>
@@ -144,7 +143,7 @@ export default function LocalGovernmentPage() {
             each governed by an elected school board. These boards control
             curriculum, discipline policy, staff hiring and firing, and
             multi-hundred-million-dollar budgets. Voter turnout in school board
-            elections typically runs between 5% and 15% — meaning a handful of
+            elections typically runs between 5% and 15%, meaning a handful of
             organized voters can swing the result.
           </p>
 
@@ -154,16 +153,16 @@ export default function LocalGovernmentPage() {
               will never run for."
             </p>
             <p className="text-sm text-muted">
-              — Common observation among education policy advocates
+              - Common observation among education policy advocates
             </p>
           </div>
 
           <p className="text-ink/80 leading-relaxed mb-4">
-            School boards set property tax levies, negotiate union contracts, and
-            approve textbooks. In many states, they can hire and fire the
+            School boards set property tax levies, negotiate union contracts,
+            and approve textbooks. In many states, they can hire and fire the
             superintendent without public notice. Between 2020 and 2022, school
             boards became flashpoints for national political battles over mask
-            mandates, critical race theory, and book bans — demonstrating that
+            mandates, critical race theory, and book bans, demonstrating that
             these obscure local offices carry outsized national significance.
           </p>
 
@@ -179,11 +178,11 @@ export default function LocalGovernmentPage() {
               },
               {
                 title: "Personnel Decisions",
-                body: "The board hires the superintendent, who runs day-to-day operations. In practice, a board–superintendent power struggle is one of the most common sources of district dysfunction.",
+                body: "The board hires the superintendent, who runs day-to-day operations. In practice, a board-superintendent power struggle is one of the most common sources of district dysfunction.",
               },
               {
                 title: "Low Turnout = High Leverage",
-                body: "Because turnout is so low, organized groups — teachers' unions, parent organizations, political activists — can dominate elections with relatively few votes.",
+                body: "Because turnout is so low, organized groups (teachers' unions, parent organizations, political activists) can dominate elections with relatively few votes.",
               },
             ].map((card) => (
               <div
@@ -193,7 +192,9 @@ export default function LocalGovernmentPage() {
                 <h3 className="font-headline text-base font-bold text-ink mb-2">
                   {card.title}
                 </h3>
-                <p className="text-sm leading-relaxed text-ink/70">{card.body}</p>
+                <p className="text-sm leading-relaxed text-ink/70">
+                  {card.body}
+                </p>
               </div>
             ))}
           </div>
@@ -212,18 +213,19 @@ export default function LocalGovernmentPage() {
           <p className="text-ink/80 leading-relaxed mb-6">
             Zoning is a city or county's legal division of its land into zones
             that specify what can be built where. Most American cities use
-            "Euclidean zoning" — named after a 1926 Supreme Court case — that
+            "Euclidean zoning," named after a 1926 Supreme Court case, that
             separates residential, commercial, and industrial uses and within
             residential zones further specifies density (single-family only,
             apartments allowed, etc.).
           </p>
           <p className="text-ink/80 leading-relaxed mb-8">
-            Because local zoning boards and city councils control what gets built,
-            they have enormous indirect power over housing prices, neighborhood
-            demographics, and regional economic growth. Existing homeowners —
-            who vote at higher rates than renters — often use the public comment
-            process and CEQA-style environmental review requirements to block
-            new housing, a dynamic critics call NIMBYism (Not In My Back Yard).
+            Because local zoning boards and city councils control what gets
+            built, they have enormous indirect power over housing prices,
+            neighborhood demographics, and regional economic growth. Existing
+            homeowners, who vote at higher rates than renters, often use the
+            public comment process and CEQA-style environmental review
+            requirements to block new housing, a dynamic critics call NIMBYism
+            (Not In My Back Yard).
           </p>
 
           <h3 className="font-headline text-xl font-bold text-ink mb-4">
@@ -244,7 +246,7 @@ export default function LocalGovernmentPage() {
               {
                 num: "3",
                 title: "City Council Vote",
-                body: "The elected council approves or denies. They can add conditions — lower density, design changes, community benefits agreements — or reject entirely.",
+                body: "The elected council approves or denies. They can add conditions (lower density, design changes, community benefits agreements) or reject entirely.",
               },
               {
                 num: "4",
@@ -272,13 +274,14 @@ export default function LocalGovernmentPage() {
             </h3>
             <p className="text-sm leading-relaxed text-white/80">
               Starting around 2019, a growing "YIMBY" (Yes In My Back Yard)
-              movement began pushing state legislatures to override local zoning.
-              California's SB 9 (2021) legalized duplexes on single-family lots
-              statewide. Oregon banned single-family-only zoning in cities over
-              10,000. Minneapolis eliminated single-family zoning citywide in
-              2018. These reforms represent a fundamental shift: state
-              governments overruling local governments on housing — a power
-              struggle with enormous consequences for affordability and density.
+              movement began pushing state legislatures to override local
+              zoning. California's SB 9 (2021) legalized duplexes on
+              single-family lots statewide. Oregon banned single-family-only
+              zoning in cities over 10,000. Minneapolis eliminated single-family
+              zoning citywide in 2018. These reforms represent a fundamental
+              shift: state governments overruling local governments on housing,
+              a power struggle with enormous consequences for affordability and
+              density.
             </p>
           </div>
         </div>
@@ -294,11 +297,11 @@ export default function LocalGovernmentPage() {
             Local Budgets and the Property Tax
           </h2>
           <p className="text-ink/80 leading-relaxed mb-6">
-            Local governments raise money primarily through property taxes — a
+            Local governments raise money primarily through property taxes, a
             levy on the assessed value of real estate. The rate is expressed in
-            "mills": one mill equals $1 of tax per $1,000 of assessed value.
-            A home assessed at $300,000 in a jurisdiction with a 20-mill rate
-            owes $6,000 per year ($300,000 × 0.020).
+            "mills": one mill equals $1 of tax per $1,000 of assessed value. A
+            home assessed at $300,000 in a jurisdiction with a 20-mill rate owes
+            $6,000 per year ($300,000 × 0.020).
           </p>
 
           <div className="rounded-xl border border-border bg-paper p-6 mb-8">
@@ -336,16 +339,16 @@ export default function LocalGovernmentPage() {
             city creates a TIF district, it freezes the property tax base at
             current levels. As development in the district increases assessed
             values, the "increment" (the additional tax revenue above the frozen
-            baseline) goes to a special fund — not to schools or the county —
-            to pay for infrastructure within the district.
+            baseline) goes to a special fund, not to schools or the county, to
+            pay for infrastructure within the district.
           </p>
           <p className="text-ink/80 leading-relaxed">
             Critics argue TIFs effectively defund schools and other services for
             years or decades by diverting revenue that would otherwise flow to
             general funds. Supporters say they finance development that wouldn't
             happen otherwise. Chicago has used TIF districts so extensively that
-            reformers have labeled the system a "shadow budget" — billions of
-            dollars largely outside the normal appropriations process.
+            reformers have labeled the system a "shadow budget," with billions
+            of dollars largely outside the normal appropriations process.
           </p>
         </div>
       </section>
@@ -361,10 +364,10 @@ export default function LocalGovernmentPage() {
           </h2>
           <p className="text-ink/80 leading-relaxed mb-8">
             Special districts are single-purpose local governments. There are
-            approximately 38,000 of them across the United States — more than
-            any other type of local government. Most operate with almost no
-            public attention, collecting fees or taxes and providing a single
-            service. Their elections often have turnout below 5%.
+            approximately 38,000 of them across the United States, more than any
+            other type of local government. Most operate with almost no public
+            attention, collecting fees or taxes and providing a single service.
+            Their elections often have turnout below 5%.
           </p>
 
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 mb-8">
@@ -397,7 +400,7 @@ export default function LocalGovernmentPage() {
               {
                 type: "Utility Districts",
                 count: "~14,000+",
-                note: "Electric, gas, stormwater, irrigation — often serving rural areas or new subdivisions.",
+                note: "Electric, gas, stormwater, irrigation, often serving rural areas or new subdivisions.",
               },
             ].map((d) => (
               <div
@@ -419,7 +422,7 @@ export default function LocalGovernmentPage() {
               their elections are held on off-cycle dates, they represent
               perhaps the clearest example of how low participation leads to
               unaccountable government. A water district board can raise your
-              rates, incur decades of debt, or mismanage public infrastructure —
+              rates, incur decades of debt, or mismanage public infrastructure,
               and most residents will never know it happened.
             </p>
           </div>
@@ -438,11 +441,11 @@ export default function LocalGovernmentPage() {
           <p className="text-ink/80 leading-relaxed mb-8">
             The math of local elections is dramatically different from national
             ones. A school board seat in a mid-size city might be decided by
-            2,000–5,000 votes. A city council race in a small town might be
-            won by 300. A single organized neighborhood association can
-            dominate a planning commission hearing. This is not a bug —
-            it's a structural feature that makes local government uniquely
-            accessible to individual participation.
+            2,000 to 5,000 votes. A city council race in a small town might be
+            won by 300. A single organized neighborhood association can dominate
+            a planning commission hearing. This is not a bug. It is a structural
+            feature that makes local government uniquely accessible to
+            individual participation.
           </p>
 
           <div className="grid gap-4 sm:grid-cols-2 mb-8">
@@ -461,7 +464,7 @@ export default function LocalGovernmentPage() {
               },
               {
                 title: "Track the Budget",
-                body: "Most local governments post their budgets and meeting agendas online. Budget hearings — where priorities are actually set — are open to the public and poorly attended.",
+                body: "Most local governments post their budgets and meeting agendas online. Budget hearings, where priorities are actually set, are open to the public and poorly attended.",
               },
             ].map((card) => (
               <div
@@ -471,7 +474,9 @@ export default function LocalGovernmentPage() {
                 <h3 className="font-headline text-base font-bold text-white mb-2">
                   {card.title}
                 </h3>
-                <p className="text-sm leading-relaxed text-white/70">{card.body}</p>
+                <p className="text-sm leading-relaxed text-white/70">
+                  {card.body}
+                </p>
               </div>
             ))}
           </div>
@@ -503,7 +508,7 @@ export default function LocalGovernmentPage() {
               {
                 name: "Vote411",
                 url: "vote411.org",
-                desc: "League of Women Voters voter guide — covers local candidates alongside federal.",
+                desc: "League of Women Voters voter guide, covering local candidates alongside federal.",
               },
               {
                 name: "OpenGov",
@@ -523,7 +528,7 @@ export default function LocalGovernmentPage() {
               {
                 name: "Open Meetings Laws",
                 url: "state law",
-                desc: "Every state requires public notice and open access to most government meetings — know your rights.",
+                desc: "Every state requires public notice and open access to most government meetings. Know your rights.",
               },
             ].map((r) => (
               <div
@@ -545,11 +550,11 @@ export default function LocalGovernmentPage() {
               Local Government Is Where It Starts
             </h3>
             <p className="text-white/80 leading-relaxed">
-              Most significant changes in American public life — from civil
-              rights to environmental protection to education reform — began at
+              Most significant changes in American public life, from civil
+              rights to environmental protection to education reform, began at
               the local level before spreading upward. The school board in your
-              district, the planning commission in your city, the water board
-              in your county: these are not consolation prizes. They are the
+              district, the planning commission in your city, the water board in
+              your county: these are not consolation prizes. They are the
               foundation. The people who show up govern.
             </p>
           </div>

@@ -38,19 +38,62 @@ const legislators = legislatorData as Record<string, StateLegislators>;
 // --- State abbreviation to full name ---
 
 const stateNames: Record<string, string> = {
-  AL: "Alabama", AK: "Alaska", AZ: "Arizona", AR: "Arkansas", CA: "California",
-  CO: "Colorado", CT: "Connecticut", DE: "Delaware", FL: "Florida", GA: "Georgia",
-  HI: "Hawaii", ID: "Idaho", IL: "Illinois", IN: "Indiana", IA: "Iowa",
-  KS: "Kansas", KY: "Kentucky", LA: "Louisiana", ME: "Maine", MD: "Maryland",
-  MA: "Massachusetts", MI: "Michigan", MN: "Minnesota", MS: "Mississippi",
-  MO: "Missouri", MT: "Montana", NE: "Nebraska", NV: "Nevada", NH: "New Hampshire",
-  NJ: "New Jersey", NM: "New Mexico", NY: "New York", NC: "North Carolina",
-  ND: "North Dakota", OH: "Ohio", OK: "Oklahoma", OR: "Oregon", PA: "Pennsylvania",
-  RI: "Rhode Island", SC: "South Carolina", SD: "South Dakota", TN: "Tennessee",
-  TX: "Texas", UT: "Utah", VT: "Vermont", VA: "Virginia", WA: "Washington",
-  WV: "West Virginia", WI: "Wisconsin", WY: "Wyoming", DC: "District of Columbia",
-  AS: "American Samoa", GU: "Guam", MP: "Northern Mariana Islands",
-  PR: "Puerto Rico", VI: "U.S. Virgin Islands",
+  AL: "Alabama",
+  AK: "Alaska",
+  AZ: "Arizona",
+  AR: "Arkansas",
+  CA: "California",
+  CO: "Colorado",
+  CT: "Connecticut",
+  DE: "Delaware",
+  FL: "Florida",
+  GA: "Georgia",
+  HI: "Hawaii",
+  ID: "Idaho",
+  IL: "Illinois",
+  IN: "Indiana",
+  IA: "Iowa",
+  KS: "Kansas",
+  KY: "Kentucky",
+  LA: "Louisiana",
+  ME: "Maine",
+  MD: "Maryland",
+  MA: "Massachusetts",
+  MI: "Michigan",
+  MN: "Minnesota",
+  MS: "Mississippi",
+  MO: "Missouri",
+  MT: "Montana",
+  NE: "Nebraska",
+  NV: "Nevada",
+  NH: "New Hampshire",
+  NJ: "New Jersey",
+  NM: "New Mexico",
+  NY: "New York",
+  NC: "North Carolina",
+  ND: "North Dakota",
+  OH: "Ohio",
+  OK: "Oklahoma",
+  OR: "Oregon",
+  PA: "Pennsylvania",
+  RI: "Rhode Island",
+  SC: "South Carolina",
+  SD: "South Dakota",
+  TN: "Tennessee",
+  TX: "Texas",
+  UT: "Utah",
+  VT: "Vermont",
+  VA: "Virginia",
+  WA: "Washington",
+  WV: "West Virginia",
+  WI: "Wisconsin",
+  WY: "Wyoming",
+  DC: "District of Columbia",
+  AS: "American Samoa",
+  GU: "Guam",
+  MP: "Northern Mariana Islands",
+  PR: "Puerto Rico",
+  VI: "U.S. Virgin Islands",
 };
 
 // --- Party badge ---
@@ -99,7 +142,7 @@ function MemberCard({ member }: { member: Member }) {
               {stateNames[member.state] || member.state}
               {member.type === "rep" &&
                 member.district !== undefined &&
-                ` \u2014 District ${member.district}`}
+                `, District ${member.district}`}
             </span>
           </div>
         </div>
@@ -216,7 +259,7 @@ function ContactTemplates() {
             </div>
             <p className="mt-2 text-xs text-muted">
               You&apos;ll almost always speak to a staffer, not the member.
-              That&apos;s normal — staffers tally every call.
+              That&apos;s normal. Staffers tally every call.
             </p>
           </div>
 
@@ -284,7 +327,7 @@ function ContactTemplates() {
               </p>
             </div>
             <p className="mt-2 text-xs text-muted">
-              Include your address — offices filter out non-constituents. Be
+              Include your address, as offices filter out non-constituents. Be
               specific about the bill or issue.
             </p>
           </div>
@@ -466,8 +509,8 @@ export function ContactReps() {
 
           {results.multiDistrict && (
             <p className="mt-3 text-center text-sm text-muted">
-              Your ZIP code spans multiple congressional districts — we&apos;re
-              showing all representatives for your area.
+              Your ZIP code spans multiple congressional districts, so
+              we&apos;re showing all representatives for your area.
             </p>
           )}
 
@@ -489,7 +532,8 @@ export function ContactReps() {
           {results.representatives.length > 0 && (
             <div className="mt-8">
               <h3 className="font-mono text-xs font-bold uppercase tracking-[0.3em] text-muted">
-                Your Representative{results.representatives.length > 1 ? "s" : ""}
+                Your Representative
+                {results.representatives.length > 1 ? "s" : ""}
               </h3>
               <div className="mt-4 grid gap-4 md:grid-cols-2">
                 {results.representatives.map((r) => (

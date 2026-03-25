@@ -68,7 +68,7 @@ const PILLARS = [
     icon: DollarSign,
     title: "Follow the Money",
     description:
-      "Track campaign finance, lobbying payments, and government contracts. See who funds whom — and what they get in return. This is where the story always starts.",
+      "Track campaign finance, lobbying payments, and government contracts. See who funds whom, and what they get in return. This is where the story always starts.",
     href: "/money-flow",
     color: "accent",
   },
@@ -76,7 +76,7 @@ const PILLARS = [
     icon: Landmark,
     title: "How Power Works",
     description:
-      "Most people don't know how a bill actually becomes law — and that's not an accident. Explainers that demystify the system so you can't be fooled by it.",
+      "Most people don't know how a bill actually becomes law. That's not an accident. Explainers that demystify the system so you can't be fooled by it.",
     href: "/how-power-works",
     color: "money-in",
   },
@@ -84,7 +84,7 @@ const PILLARS = [
     icon: Globe,
     title: "What Is Working",
     description:
-      "Universal healthcare. Ranked-choice voting. Countries that house their citizens. Proof that better is possible — and that the obstacles are political, not practical.",
+      "Universal healthcare. Ranked-choice voting. Countries that house their citizens. Proof that better is possible, and that the obstacles are political, not practical.",
     href: "/whats-working",
     color: "money-out",
   },
@@ -92,7 +92,7 @@ const PILLARS = [
     icon: Users,
     title: "The Collaboration Advantage",
     description:
-      "What humans achieve when they work together. From the ISS to open-source governance — the alternative to oligarchy already exists. We just need to build it.",
+      "What humans achieve when they work together. From the ISS to open-source governance: the alternative to oligarchy already exists. We just need to build it.",
     href: "/collaboration",
     color: "entity-pac",
   },
@@ -108,7 +108,7 @@ const PILLARS = [
     icon: Compass,
     title: "Civic How-To",
     description:
-      "Register to vote. Contact your reps. Attend a town hall. Run for office. The step-by-step playbook for participation — because democracy isn't a spectator sport.",
+      "Register to vote. Contact your reps. Attend a town hall. Run for office. The step-by-step playbook for participation, because democracy isn't a spectator sport.",
     href: "/civics",
     color: "accent",
   },
@@ -191,7 +191,7 @@ export default async function HomePage() {
             <p>
               While we fight each other, the same defense contractors get their
               contracts renewed. The same insurance companies kill the same
-              healthcare bills. The same donor class funds both parties — and
+              healthcare bills. The same donor class funds both parties, and
               writes the rules for both sides.
             </p>
             <p className="font-semibold text-white">
@@ -211,7 +211,7 @@ export default async function HomePage() {
               Transparency Tools
             </div>
             <p className="mt-2 text-sm text-muted">
-              Real-time data from official government sources — no paywalls, no
+              Real-time data from official government sources. No paywalls, no
               editorializing
             </p>
           </div>
@@ -256,7 +256,7 @@ export default async function HomePage() {
             Six Ways to See Clearly
           </h2>
           <p className="mt-4 max-w-2xl text-lg text-muted">
-            From following the money to taking action — every pillar connects
+            From following the money to taking action, every pillar connects
             back to the same question: who benefits and who pays?
           </p>
 
@@ -293,7 +293,7 @@ export default async function HomePage() {
             <EngagementStep
               step={1}
               title="Learn"
-              description="Understand how the system actually works — from campaign finance to how a bill becomes law. Knowledge is the first step."
+              description="Understand how the system actually works, from campaign finance to how a bill becomes law. Knowledge is the first step."
             />
             <EngagementStep
               step={2}

@@ -5,7 +5,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 export const metadata: Metadata = {
   title: "How a Bill Becomes Law | Daonra",
   description:
-    "The real legislative process — committees, filibusters, reconciliation, conference reports, and the gap between civics class and how Congress actually works.",
+    "The real legislative process: committees, filibusters, reconciliation, conference reports, and the gap between civics class and how Congress actually works.",
 };
 
 export default function BillToLawPage() {
@@ -31,10 +31,10 @@ export default function BillToLawPage() {
             How a Bill Becomes Law
           </h1>
           <p className="mt-6 max-w-2xl text-xl leading-relaxed text-white/70 lg:text-2xl">
-            Your civics textbook got it wrong &mdash; or at least incomplete.
-            Most bills never receive a vote. The real action happens behind
-            closed doors in committees, and the process is engineered as much
-            to <em>block</em> legislation as to pass it.
+            Your civics textbook got it wrong, or at least incomplete. Most
+            bills never receive a vote. The real action happens behind closed
+            doors in committees, and the process is engineered as much to{" "}
+            <em>block</em> legislation as to pass it.
           </p>
           <div className="mt-8 flex items-center gap-6 text-sm text-white/50">
             <span>Daonra Explainers</span>
@@ -105,44 +105,43 @@ export default function BillToLawPage() {
             <p className="text-lg leading-relaxed text-ink/70">
               The civics class version goes like this: a citizen has an idea,
               contacts their representative, and a bill gets written. It&rsquo;s
-              technically true that any member of Congress can introduce a bill
-              &mdash; but that framing is deeply misleading about where
-              legislation actually originates.
+              technically true that any member of Congress can introduce a bill,
+              but that framing is deeply misleading about where legislation
+              actually originates.
             </p>
             <p className="text-lg leading-relaxed text-ink/70">
               In practice, the authorship of major legislation is far more
-              distributed &mdash; and far more corporate. Lobbyists and industry
-              groups draft statutory language and shop it to sympathetic members.
-              The Office of Management and Budget sends &ldquo;administration
+              distributed, and far more corporate. Lobbyists and industry groups
+              draft statutory language and shop it to sympathetic members. The
+              Office of Management and Budget sends &ldquo;administration
               priority&rdquo; legislation to Capitol Hill each session. Senior
               committee staff, many with decades of subject-matter expertise,
-              shape the technical language that members themselves rarely read in
-              full. Think tanks publish model bills that get introduced nearly
-              verbatim.
+              shape the technical language that members themselves rarely read
+              in full. Think tanks publish model bills that get introduced
+              nearly verbatim.
             </p>
             <p className="text-lg leading-relaxed text-ink/70">
               A 2014 study of major legislation found that roughly 40% was
               drafted primarily by outside groups. The member who
-              &ldquo;introduces&rdquo; the bill is often simply the carrier
-              &mdash; the trusted ally with the right committee assignment and
-              the political will to absorb whatever backlash follows.
+              &ldquo;introduces&rdquo; the bill is often simply the carrier, the
+              trusted ally with the right committee assignment and the political
+              will to absorb whatever backlash follows.
             </p>
             <p className="text-lg leading-relaxed text-ink/70">
-              This is why lobbying firms obsessively cultivate relationships with
-              specific members. The access isn&rsquo;t just about influence
-              &mdash; it&rsquo;s about finding someone willing to put their name
-              on the bill and defend it through the gauntlet of the legislative
-              process.
+              This is why lobbying firms obsessively cultivate relationships
+              with specific members. The access isn&rsquo;t just about
+              influence. It&rsquo;s about finding someone willing to put their
+              name on the bill and defend it through the gauntlet of the
+              legislative process.
             </p>
             <p className="text-lg leading-relaxed text-ink/70">
-              Two structural patterns are worth understanding.
-              &ldquo;Companion bills&rdquo; are introduced simultaneously in
-              both the House and Senate &mdash; a strategy to accelerate the
-              process since both chambers can begin committee work in parallel.
-              More cynical is the &ldquo;message bill&rdquo;: legislation
-              introduced with no expectation of passage, designed purely to
-              force opponents onto the record voting against something popular
-              with constituents.
+              Two structural patterns are worth understanding. &ldquo;Companion
+              bills&rdquo; are introduced simultaneously in both the House and
+              Senate, a strategy to accelerate the process since both chambers
+              can begin committee work in parallel. More cynical is the
+              &ldquo;message bill&rdquo;: legislation introduced with no
+              expectation of passage, designed purely to force opponents onto
+              the record voting against something popular with constituents.
             </p>
           </div>
 
@@ -164,9 +163,9 @@ export default function BillToLawPage() {
               </div>
               <p className="mt-3 text-sm leading-relaxed text-ink/70">
                 The OMB transmits the administration&rsquo;s legislative agenda
-                to Capitol Hill each Congress &mdash; often dozens of fully
-                drafted bills. When the White House and Congress share a party,
-                much of the majority&rsquo;s workload is simply advancing these
+                to Capitol Hill each Congress, often dozens of fully drafted
+                bills. When the White House and Congress share a party, much of
+                the majority&rsquo;s workload is simply advancing these
                 proposals.
               </p>
             </div>
@@ -186,11 +185,11 @@ export default function BillToLawPage() {
                 Think Tanks
               </div>
               <p className="mt-3 text-sm leading-relaxed text-ink/70">
-                Organizations across the ideological spectrum &mdash; Heritage
-                Foundation, Brookings, Center for American Progress &mdash;
-                publish &ldquo;model legislation&rdquo; that enters the
-                congressional pipeline with minimal modification. The pipeline
-                from policy paper to introduced bill can be remarkably short.
+                Organizations across the ideological spectrum (Heritage
+                Foundation, Brookings, Center for American Progress) publish
+                &ldquo;model legislation&rdquo; that enters the congressional
+                pipeline with minimal modification. The pipeline from policy
+                paper to introduced bill can be remarkably short.
               </p>
             </div>
           </div>
@@ -210,8 +209,8 @@ export default function BillToLawPage() {
           <div className="mt-10 space-y-6">
             <p className="text-lg leading-relaxed text-ink/70">
               The House and Senate each have 20 standing committees, each with
-              jurisdiction over specific policy domains &mdash; Agriculture,
-              Armed Services, Finance, Judiciary, and so on. When a bill is
+              jurisdiction over specific policy domains (Agriculture, Armed
+              Services, Finance, Judiciary, and so on). When a bill is
               introduced, the Speaker of the House or the Senate&rsquo;s
               presiding officer refers it to the relevant committee. For major
               legislation touching multiple policy areas, it may be referred to
@@ -222,9 +221,9 @@ export default function BillToLawPage() {
               The committee chair&rsquo;s power in this system is nearly
               absolute. They set the agenda. They decide which bills receive
               hearings and which are filed away and forgotten. They control the
-              scheduling of markup sessions. A chair who opposes a bill &mdash;
-              or who simply owes a favor to an industry that opposes it &mdash;
-              can kill it without any member ever casting a vote.
+              scheduling of markup sessions. A chair who opposes a bill, or who
+              simply owes a favor to an industry that opposes it, can kill it
+              without any member ever casting a vote.
             </p>
             <p className="text-lg leading-relaxed text-ink/70">
               There is a procedural escape valve: the discharge petition. If 218
@@ -232,17 +231,17 @@ export default function BillToLawPage() {
               committee and onto the floor. In theory, this prevents any single
               chair from indefinitely blocking popular legislation. In practice,
               it has been used successfully only about 25 times in congressional
-              history &mdash; members are deeply reluctant to cross their own
+              history, and members are deeply reluctant to cross their own
               leadership this way.
             </p>
             <p className="text-lg leading-relaxed text-ink/70">
-              Most bills are referred first to a subcommittee &mdash; a smaller
-              body focused on a narrower slice of the committee&rsquo;s
-              jurisdiction. This adds another gate. The subcommittee holds
-              hearings, invites expert witnesses, and builds a public record. If
-              it clears the subcommittee, the full committee then conducts a
-              &ldquo;markup&rdquo; &mdash; a line-by-line amendment process
-              that can stretch over days or weeks. A favorable committee vote
+              Most bills are referred first to a subcommittee, a smaller body
+              focused on a narrower slice of the committee&rsquo;s jurisdiction.
+              This adds another gate. The subcommittee holds hearings, invites
+              expert witnesses, and builds a public record. If it clears the
+              subcommittee, the full committee then conducts a
+              &ldquo;markup,&rdquo; a line-by-line amendment process that can
+              stretch over days or weeks. A favorable committee vote
               &ldquo;reports&rdquo; the bill to the full chamber. The other 90%
               simply die here, unscheduled, unvoted on, unnoticed.
             </p>
@@ -259,7 +258,7 @@ export default function BillToLawPage() {
               <p className="mt-3 text-sm leading-relaxed text-ink/70">
                 The Speaker or presiding officer assigns the bill to relevant
                 committee(s). Major legislation frequently receives multiple
-                referrals, requiring each committee to act &mdash; a significant
+                referrals, requiring each committee to act, a significant
                 barrier to passage.
               </p>
             </div>
@@ -287,8 +286,8 @@ export default function BillToLawPage() {
               <p className="mt-3 text-sm leading-relaxed text-ink/70">
                 The full committee amends the bill section by section, often
                 over multiple sessions. A majority vote to &ldquo;report&rdquo;
-                the bill sends it to the chamber floor &mdash; a milestone fewer
-                than one in ten bills ever reach.
+                the bill sends it to the chamber floor, a milestone fewer than
+                one in ten bills ever reach.
               </p>
             </div>
           </div>
@@ -323,10 +322,10 @@ export default function BillToLawPage() {
               </p>
               <ul className="mt-4 space-y-3">
                 {[
-                  "Before any bill reaches the House floor, it must get a \u201crule\u201d from the Rules Committee \u2014 a special resolution setting the terms of debate.",
+                  "Before any bill reaches the House floor, it must get a \u201crule\u201d from the Rules Committee, a special resolution setting the terms of debate.",
                   "The rule determines: how long debate lasts (usually 1\u20134 hours), whether amendments are allowed (open, closed, or structured rules), and the order in which amendments can be offered.",
-                  "A \u201cclosed rule\u201d means no amendments at all \u2014 the bill is voted on as-is from committee.",
-                  "The Rules Committee has 13 members \u2014 historically 9 majority, 4 minority \u2014 and is considered an arm of the Speaker.",
+                  "A \u201cclosed rule\u201d means no amendments at all, so the bill is voted on as-is from committee.",
+                  "The Rules Committee has 13 members (historically 9 majority, 4 minority) and is considered an arm of the Speaker.",
                 ].map((item, i) => (
                   <li key={i} className="flex gap-3 text-ink/70">
                     <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
@@ -354,7 +353,7 @@ export default function BillToLawPage() {
               <ul className="mt-4 space-y-3">
                 {[
                   "The Senate has no equivalent of the Rules Committee for most legislation.",
-                  "Bills reach the floor by \u201cunanimous consent\u201d (a single senator can object) or through a formal motion to proceed \u2014 which itself can be filibustered.",
+                  "Bills reach the floor by \u201cunanimous consent\u201d (a single senator can object) or through a formal motion to proceed, which itself can be filibustered.",
                   "Every senator has the right to offer unlimited amendments unless limited by unanimous consent agreements.",
                   "A \u201chotline\u201d system: leadership circulates bills to all Senate offices; if no one objects within a set window, they pass by UC.",
                 ].map((item, i) => (
@@ -436,8 +435,8 @@ export default function BillToLawPage() {
           <ul className="mt-10 space-y-4">
             {[
               "The word \u201cfilibuster\u201d comes from Dutch/Spanish for pirate; first used in the Senate in 1837.",
-              "The original filibuster required actually talking \u2014 Strom Thurmond spoke for 24 hours 18 minutes against the Civil Rights Act of 1957, the longest in history.",
-              "The modern filibuster: since the 1970s, senators don\u2019t have to speak \u2014 they simply signal their intent to filibuster, and floor time moves on. This is why the Senate can filibuster dozens of bills simultaneously.",
+              "The original filibuster required actually talking. Strom Thurmond spoke for 24 hours 18 minutes against the Civil Rights Act of 1957, the longest in history.",
+              "The modern filibuster: since the 1970s, senators don\u2019t have to speak. They simply signal their intent to filibuster, and floor time moves on. This is why the Senate can filibuster dozens of bills simultaneously.",
               "Used roughly 1,000 times since 1917; dramatically increased after the 1970s rules change; record highs in recent decades.",
             ].map((item, i) => (
               <li key={i} className="flex gap-3 text-ink/70">
@@ -467,24 +466,24 @@ export default function BillToLawPage() {
                   <span>
                     <span className="font-semibold text-ink">2013:</span> Senate
                     Democrats changed rules for most executive and judicial
-                    nominees to require only 51 votes &mdash; Harry Reid&rsquo;s
-                    nuclear option.
+                    nominees to require only 51 votes, known as Harry
+                    Reid&rsquo;s nuclear option.
                   </span>
                 </li>
                 <li className="flex gap-3 text-ink/70">
                   <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
                   <span>
                     <span className="font-semibold text-ink">2017:</span> Senate
-                    Republicans extended this to Supreme Court nominees &mdash;
-                    Mitch McConnell&rsquo;s nuclear option.
+                    Republicans extended this to Supreme Court nominees, known
+                    as Mitch McConnell&rsquo;s nuclear option.
                   </span>
                 </li>
                 <li className="flex gap-3 text-ink/70">
                   <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
                   <span>
-                    The legislative filibuster still requires 60 votes &mdash;
-                    neither party has eliminated it for regular legislation as of
-                    2025.
+                    The legislative filibuster still requires 60 votes, and
+                    neither party has eliminated it for regular legislation as
+                    of 2025.
                   </span>
                 </li>
               </ul>
@@ -492,7 +491,7 @@ export default function BillToLawPage() {
 
             <div>
               <h3 className="font-headline text-xl font-bold text-ink">
-                Budget Reconciliation &mdash; The Workaround
+                Budget Reconciliation: The Workaround
               </h3>
               <ul className="mt-4 space-y-3">
                 <li className="flex gap-3 text-ink/70">
@@ -560,13 +559,13 @@ export default function BillToLawPage() {
             </p>
             <p className="text-lg leading-relaxed text-ink/70">
               Three methods exist. The first is{" "}
-              <span className="font-semibold text-ink">ping-pong</span> &mdash;
+              <span className="font-semibold text-ink">ping-pong</span>, where
               one chamber amends the other&rsquo;s bill and sends it back, and
               this continues until both agree. The second is a{" "}
               <span className="font-semibold text-ink">
                 conference committee
               </span>{" "}
-              &mdash; a formal negotiation between members appointed from both
+              , a formal negotiation between members appointed from both
               chambers. The third, and simplest, is when one chamber simply
               adopts the other&rsquo;s text unchanged.
             </p>
@@ -580,20 +579,20 @@ export default function BillToLawPage() {
               <p>
                 Historically, conference committees were the primary mechanism
                 for resolving differences. &ldquo;Conferees&rdquo; are appointed
-                by leadership &mdash; typically senior members of the committees
-                that handled the legislation.
+                by leadership, typically senior members of the committees that
+                handled the legislation.
               </p>
               <p>
                 Conference meetings are technically open to the public, and
                 C-SPAN has covered them since 1975, but they were historically
                 held in secret. Critically, the resulting conference report
-                cannot be amended &mdash; both chambers must vote it up or down
-                as a whole.
+                cannot be amended. Both chambers must vote it up or down as a
+                whole.
               </p>
               <p>
                 Conference committees have declined sharply in recent decades.
-                The 2017 Tax Cuts and Jobs Act had no formal conference committee
-                &mdash; House and Senate Republican leadership negotiated
+                The 2017 Tax Cuts and Jobs Act had no formal conference
+                committee. House and Senate Republican leadership negotiated
                 directly and privately.
               </p>
             </div>
@@ -606,7 +605,7 @@ export default function BillToLawPage() {
             <ul className="mt-4 space-y-3">
               {[
                 "The most controversial provisions are often stripped out or softened to secure enough votes in both chambers.",
-                "Riders get added \u2014 provisions entirely unrelated to the bill\u2019s stated subject matter.",
+                "Riders get added, provisions entirely unrelated to the bill\u2019s stated subject matter.",
                 "Earmarks (now formally banned but still occurring informally) get inserted to win specific members\u2019 support.",
                 "This is where lobbyists swarm in the final days, working to protect or kill specific provisions before the text is locked.",
               ].map((item, i) => (
@@ -632,16 +631,16 @@ export default function BillToLawPage() {
                 {
                   step: "Step 2",
                   title: "Senate Passes Amended Version",
-                  desc: "The Senate passes its own version, changing 47 provisions \u2014 the two texts are now incompatible.",
+                  desc: "The Senate passes its own version, changing 47 provisions, and the two texts are now incompatible.",
                 },
                 {
                   step: "Step 3",
-                  title: "Conferees Appointed \u2014 Weeks of Negotiation",
+                  title: "Conferees Appointed: Weeks of Negotiation",
                   desc: "Appointed members from both chambers meet, negotiate, and draft a unified conference report.",
                 },
                 {
                   step: "Step 4",
-                  title: "Conference Report Filed \u2014 Both Chambers Vote",
+                  title: "Conference Report Filed: Both Chambers Vote",
                   desc: "The report cannot be amended. Both chambers vote it up or down. Identical text is sent to the President.",
                 },
               ].map(({ step, title, desc }, i, arr) => (
@@ -679,7 +678,7 @@ export default function BillToLawPage() {
           <p className="mt-10 text-lg leading-relaxed text-ink/70">
             Once Congress passes identical text in both chambers, the
             Constitution gives the President ten days (excluding Sundays) to
-            act. That window produces four distinct outcomes &mdash; each with
+            act. That window produces four distinct outcomes, each with
             different political and legal consequences.
           </p>
 
@@ -690,7 +689,7 @@ export default function BillToLawPage() {
                 option: "Option 1",
                 title: "Sign",
                 body: "The President signs the bill and it becomes law immediately. This is the most common outcome.",
-                note: "Presidents may attach a signing statement \u2014 a written document interpreting the law\u2019s meaning or signaling intent not to enforce provisions they consider unconstitutional. Courts have given these statements limited deference.",
+                note: "Presidents may attach a signing statement, a written document interpreting the law\u2019s meaning or signaling intent not to enforce provisions they consider unconstitutional. Courts have given these statements limited deference.",
               },
               {
                 color: "bg-red-500",
@@ -703,13 +702,13 @@ export default function BillToLawPage() {
                 color: "bg-yellow-400",
                 option: "Option 3",
                 title: "Pocket Veto",
-                body: "If Congress adjourns within ten days of sending a bill to the President, and the President takes no action, the bill dies \u2014 it has been \u201cpocketed.\u201d",
+                body: "If Congress adjourns within ten days of sending a bill to the President, and the President takes no action, the bill dies. It has been \u201cpocketed.\u201d",
                 note: "Unlike a standard veto, a pocket veto cannot be overridden because Congress is no longer in session to hold an override vote.",
               },
               {
                 color: "bg-muted/40",
                 option: "Option 4",
-                title: "Unsigned \u2014 Becomes Law",
+                title: "Unsigned, Becomes Law",
                 body: "If Congress remains in session and the President does nothing for ten days, the bill becomes law without the President\u2019s signature.",
                 note: "Used to signal disapproval of a bill without triggering an override fight that the President might lose, or that would force members of his own party to take an uncomfortable vote.",
               },
@@ -744,9 +743,9 @@ export default function BillToLawPage() {
             <div className="mt-6 space-y-4 text-ink/70">
               <p className="text-lg leading-relaxed">
                 When legislation stalls or fails in Congress, presidents
-                increasingly turn to executive orders &mdash; directives issued
-                under claimed constitutional or statutory authority that carry
-                the force of law without requiring congressional approval.
+                increasingly turn to executive orders, directives issued under
+                claimed constitutional or statutory authority that carry the
+                force of law without requiring congressional approval.
               </p>
               <p className="text-lg leading-relaxed">
                 Executive orders can be reversed by a future president with a
@@ -755,14 +754,14 @@ export default function BillToLawPage() {
                 EO 9066 authorized the internment of Japanese Americans; Harry
                 Truman&rsquo;s EO 9981 desegregated the U.S. military in 1948;
                 Barack Obama&rsquo;s DACA order protected hundreds of thousands
-                of undocumented immigrants brought to the U.S. as children
-                &mdash; and was subsequently rescinded by President Trump.
+                of undocumented immigrants brought to the U.S. as children, and
+                was subsequently rescinded by President Trump.
               </p>
               <p className="text-lg leading-relaxed">
                 Executive orders are not a substitute for legislation. Courts
                 can and do strike them down when a president exceeds
-                constitutional or statutory authority &mdash; and without
-                congressional backing, they remain vulnerable to the next
+                constitutional or statutory authority, and without congressional
+                backing, they remain vulnerable to the next
                 administration&rsquo;s pen.
               </p>
             </div>
@@ -787,8 +786,8 @@ export default function BillToLawPage() {
               </h3>
               <p className="mt-4 text-lg leading-relaxed text-ink/70">
                 Congress is supposed to pass 12 annual appropriations bills by
-                October 1 &mdash; the start of the federal fiscal year. The last
-                time all 12 passed on time was 1997. In the nearly three decades
+                October 1, the start of the federal fiscal year. The last time
+                all 12 passed on time was 1997. In the nearly three decades
                 since, Congress has relied on a rotating set of workarounds.
               </p>
               <div className="mt-6 space-y-3">
@@ -799,7 +798,7 @@ export default function BillToLawPage() {
                   },
                   {
                     label: "Omnibus Bills",
-                    desc: "Massive spending packages that bundle all 12 appropriations bills into one vote. Members often receive thousands of pages hours before the vote. The alternative \u2014 shutting down government \u2014 creates enormous pressure to vote yes.",
+                    desc: "Massive spending packages that bundle all 12 appropriations bills into one vote. Members often receive thousands of pages hours before the vote. The alternative, shutting down the government, creates enormous pressure to vote yes.",
                   },
                   {
                     label: "Anomalies",
@@ -856,14 +855,14 @@ export default function BillToLawPage() {
                     </div>
                     <div>
                       <div className="font-headline text-base font-bold text-ink">
-                        35-Day Shutdown &mdash; Longest in U.S. History
+                        35-Day Shutdown: Longest in U.S. History
                       </div>
                       <p className="mt-1 text-sm leading-relaxed text-muted">
                         A dispute over border wall funding produced the longest
                         government shutdown on record. Roughly 800,000 federal
                         workers were furloughed or required to work without pay.
-                        Federal contractors &mdash; who received no back pay
-                        &mdash; bore some of the deepest financial damage.
+                        Federal contractors, who received no back pay, bore some
+                        of the deepest financial damage.
                       </p>
                     </div>
                   </div>
@@ -915,15 +914,15 @@ export default function BillToLawPage() {
               </h3>
               <p className="mt-4 text-lg leading-relaxed text-ink/70">
                 Certain bills carry so much political weight that they are
-                functionally guaranteed to pass &mdash; the debt ceiling, the
-                NDAA, the farm bill. The consequences of failure are too severe
-                or too visible to allow.
+                functionally guaranteed to pass: the debt ceiling, the NDAA, the
+                farm bill. The consequences of failure are too severe or too
+                visible to allow.
               </p>
               <p className="mt-4 text-lg leading-relaxed text-ink/70">
                 This creates a predictable dynamic: unrelated legislation gets
-                attached. Reforms that could never survive standalone floor votes
-                &mdash; and riders designed to slip through without scrutiny
-                &mdash; often become law this way rather than through anything
+                attached. Reforms that could never survive standalone floor
+                votes, along with riders designed to slip through without
+                scrutiny, often become law this way rather than through anything
                 resembling regular order.
               </p>
             </div>
@@ -937,12 +936,11 @@ export default function BillToLawPage() {
               The Legislative Calendar Reality
             </div>
             <p className="mt-4 leading-relaxed text-white/80">
-              A two-year Congress &mdash; 435 House members, 100 senators, 1
-              President &mdash; will consider roughly 10,000&ndash;15,000 bills.
-              About 300&ndash;500 will become law. Most governance happens not
-              through legislation but through regulation, executive action, and
-              agency discretion &mdash; processes largely invisible to the
-              public.
+              A two-year Congress (435 House members, 100 senators, 1 President)
+              will consider roughly 10,000 to 15,000 bills. About 300 to 500
+              will become law. Most governance happens not through legislation
+              but through regulation, executive action, and agency discretion,
+              processes largely invisible to the public.
             </p>
           </div>
         </div>
@@ -963,7 +961,7 @@ export default function BillToLawPage() {
             Procedures compound on procedures; procedural votes obscure
             substantive ones; markups happen in rooms most people will never
             enter. But more information is publicly available than most people
-            realize &mdash; if you know where to look.
+            realize, if you know where to look.
           </p>
 
           <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -991,7 +989,7 @@ export default function BillToLawPage() {
                 label: "Direct Engagement",
                 items: [
                   "Calls are more effective than emails; showing up to district offices is most effective",
-                  "Staff tally constituent contacts \u2014 volume matters, especially on close votes",
+                  "Staff tally constituent contacts, and volume matters, especially on close votes",
                   "Best timing: during committee markup, before a floor vote, or before a conference report",
                 ],
               },
@@ -1017,7 +1015,10 @@ export default function BillToLawPage() {
                 </div>
                 <ul className="mt-4 space-y-2">
                   {items.map((item) => (
-                    <li key={item} className="flex items-start gap-2 text-sm text-muted">
+                    <li
+                      key={item}
+                      className="flex items-start gap-2 text-sm text-muted"
+                    >
                       <span className="mt-1 shrink-0 text-accent">&bull;</span>
                       {item}
                     </li>
@@ -1078,7 +1079,10 @@ export default function BillToLawPage() {
                       "The official enrollment of a bill\u2019s final text after it passes one chamber, before transmission to the other.",
                     ],
                   ].map(([term, def], i) => (
-                    <tr key={term} className={i % 2 === 0 ? "bg-paper" : "bg-surface"}>
+                    <tr
+                      key={term}
+                      className={i % 2 === 0 ? "bg-paper" : "bg-surface"}
+                    >
                       <td className="whitespace-nowrap px-5 py-4 align-top font-mono text-xs font-bold text-ink">
                         {term}
                       </td>

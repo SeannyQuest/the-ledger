@@ -18,14 +18,14 @@ export const metadata: Metadata = {
   title:
     "Industry Capture: Pharma, Defense, Fossil Fuel & Big Tech | The Field Guide to American Corruption | Daonra",
   description:
-    "Chapter 2: How four industries — pharmaceuticals, defense contractors, fossil fuels, and Big Tech — spend billions to write the rules they are supposed to follow. $452M pharma lobbying, 1,800:1 defense ROI, $20B+ fossil fuel subsidies, $277M tech anti-antitrust spending.",
+    "Chapter 2: How four industries (pharmaceuticals, defense contractors, fossil fuels, and Big Tech) spend billions to write the rules they are supposed to follow. $452M pharma lobbying, 1,800:1 defense ROI, $20B+ fossil fuel subsidies, $277M tech anti-antitrust spending.",
 };
 
 const SCROLLYTELL_STEPS: ScrollytellStep[] = [
   {
     id: "lobby",
     title: "The Industry Lobbies",
-    body: "It begins with money. Every year, the four capture industries pour more than $700 million into federal lobbying alone. Pharmaceutical companies deploy $452 million. Defense contractors spend $139 million. Oil and gas firms contribute $100-150 million. Big Tech adds $65 million and rising. These are not campaign donations or PR budgets. This is direct, targeted spending on the people who write laws — and it is disclosed because the law requires it. What it buys is not disclosed at all.",
+    body: "It begins with money. Every year, the four capture industries pour more than $700 million into federal lobbying alone. Pharmaceutical companies deploy $452 million. Defense contractors spend $139 million. Oil and gas firms contribute $100-150 million. Big Tech adds $65 million and rising. These are not campaign donations or PR budgets. This is direct, targeted spending on the people who write laws, and it is disclosed because the law requires it. What it buys is not disclosed at all.",
     stat: {
       value: "$700M+",
       label: "Combined Annual Lobbying",
@@ -36,7 +36,7 @@ const SCROLLYTELL_STEPS: ScrollytellStep[] = [
   {
     id: "write",
     title: "The Industry Writes Regulations",
-    body: "Lobbyists do not merely influence legislation. They draft it. Industry-written amendments appear verbatim in committee markups. Trade associations submit model regulatory language to agencies tasked with oversight. When the Inflation Reduction Act threatened pharma pricing, 545 lobbyists — 20 for every member of the relevant committees — descended on Capitol Hill to rewrite the bill from the inside. When Congress considered antitrust reform for Big Tech, the industry spent $277 million over two years to kill it — outspending reform supporters six to one.",
+    body: "Lobbyists do not merely influence legislation. They draft it. Industry-written amendments appear verbatim in committee markups. Trade associations submit model regulatory language to agencies tasked with oversight. When the Inflation Reduction Act threatened pharma pricing, 545 lobbyists (20 for every member of the relevant committees) descended on Capitol Hill to rewrite the bill from the inside. When Congress considered antitrust reform for Big Tech, the industry spent $277 million over two years to kill it, outspending reform supporters six to one.",
     stat: {
       value: "6:1",
       label: "Industry vs. Reform Spending",
@@ -69,7 +69,7 @@ const SCROLLYTELL_STEPS: ScrollytellStep[] = [
   {
     id: "profit",
     title: "The Industry Profits",
-    body: "The returns are not speculative. The top five defense contractors invested $1.1 billion in lobbying from 2001 to 2021 and received $2.02 trillion in federal contracts — a return of 1,800 to 1. Fossil fuel companies receive over $20 billion per year in federal subsidies despite record profits. Pharma\u2019s $4 million annual dark money investment protected $8 billion in annual revenue by blocking Medicare negotiation. Americans pay two to three times more for drugs than citizens of any other developed nation. The capture is complete. The profits are permanent — until the cycle is broken.",
+    body: "The returns are not speculative. The top five defense contractors invested $1.1 billion in lobbying from 2001 to 2021 and received $2.02 trillion in federal contracts, a return of 1,800 to 1. Fossil fuel companies receive over $20 billion per year in federal subsidies despite record profits. Pharma\u2019s $4 million annual dark money investment protected $8 billion in annual revenue by blocking Medicare negotiation. Americans pay two to three times more for drugs than citizens of any other developed nation. The capture is complete. The profits are permanent, until the cycle is broken.",
     stat: {
       value: "1,800:1",
       label: "Defense Lobbying ROI",
@@ -97,7 +97,7 @@ export default function IndustryCapturePage() {
           </h1>
 
           <p className="mt-6 max-w-2xl text-xl leading-relaxed text-white/70 lg:text-2xl">
-            Pharma, defense, fossil fuel, and Big Tech — the four industries
+            Pharma, defense, fossil fuel, and Big Tech: the four industries
             that spend billions to write the rules they are supposed to follow.{" "}
             <span className="font-semibold text-white">
               This is how regulated becomes regulator.
@@ -137,8 +137,8 @@ export default function IndustryCapturePage() {
             suitcases of cash. It operates through legal lobbying, legitimate
             campaign contributions, and a revolving door that moves talent
             between government offices and corporate boardrooms with metronomic
-            regularity. In four industries — pharmaceuticals, defense, fossil
-            fuels, and technology — the capture is so complete that the line
+            regularity. In four industries (pharmaceuticals, defense, fossil
+            fuels, and technology) the capture is so complete that the line
             between public servant and private interest has effectively
             dissolved.
           </p>
@@ -149,7 +149,7 @@ export default function IndustryCapturePage() {
             impose. The data is drawn from Senate lobbying disclosures, FEC
             filings, USASpending.gov, state campaign finance databases, and
             congressional records. Every figure cited is sourced. The pattern is
-            always the same — invest in politics, write the rules, hire the
+            always the same: invest in politics, write the rules, hire the
             regulators, block reform, and profit.
           </p>
 
@@ -166,7 +166,7 @@ export default function IndustryCapturePage() {
       {/* ── Scrollytelling: The Capture Cycle ── */}
       <ScrollytellSection
         headline="The Capture Cycle"
-        subhead="Five steps show how industries transform lobbying dollars into regulatory control — and why the cycle is so difficult to break."
+        subhead="Five steps show how industries transform lobbying dollars into regulatory control, and why the cycle is so difficult to break."
         steps={SCROLLYTELL_STEPS}
         bgColor="bg-ink"
         textColor="text-white"
@@ -202,13 +202,13 @@ export default function IndustryCapturePage() {
             Pharmaceutical Lobbying
           </h2>
           <p className="mt-2 text-lg text-muted">
-            The largest lobbying sector in America — and the most effective.
+            The largest lobbying sector in America, and the most effective.
           </p>
 
           <p className="mt-8 text-lg leading-relaxed text-ink/70">
             The pharmaceutical industry is the single most prolific lobbying
             force in American politics. In 2025, the sector spent $451.8 million
-            on federal lobbying — more than any other industry, more than oil
+            on federal lobbying, more than any other industry, more than oil
             and gas and defense combined. PhRMA, the industry&apos;s primary
             trade association, spent $31.7 million in 2024 alone, maintaining a
             permanent operation of hundreds of registered lobbyists who
@@ -217,8 +217,8 @@ export default function IndustryCapturePage() {
 
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
             For more than two decades, this apparatus achieved something
-            remarkable: it blocked Medicare — the largest single drug purchaser
-            in the United States, covering 65 million Americans — from
+            remarkable: it blocked Medicare (the largest single drug purchaser
+            in the United States, covering 65 million Americans) from
             negotiating prescription drug prices. Every other major government
             buyer negotiates. The VA negotiates. Medicaid negotiates. The
             British NHS negotiates. Medicare was prohibited from doing so by
@@ -259,7 +259,7 @@ export default function IndustryCapturePage() {
             When the Inflation Reduction Act of 2022 finally introduced limited
             Medicare drug price negotiation, the pharmaceutical industry&apos;s
             response was immediate and overwhelming. It deployed 545 registered
-            lobbyists to Capitol Hill — a ratio of roughly 20 lobbyists for
+            lobbyists to Capitol Hill, a ratio of roughly 20 lobbyists for
             every member of the relevant committees. It filed nine or more
             lawsuits challenging the program&apos;s constitutionality. The bill
             passed, but in dramatically weakened form: only ten drugs in the
@@ -283,7 +283,7 @@ export default function IndustryCapturePage() {
             costs $10 in Canada costs $300 here. Cancer treatments priced at
             $50,000 abroad sell for $150,000 domestically. The pharmaceutical
             industry argues that high prices fund innovation. But over half of
-            transformative drug research is funded by the NIH — with taxpayer
+            transformative drug research is funded by the NIH, with taxpayer
             money. The public pays twice: once for the research, and again at
             the pharmacy counter.
           </p>
@@ -303,14 +303,14 @@ export default function IndustryCapturePage() {
             Defense Contractors
           </h2>
           <p className="mt-2 text-lg text-muted">
-            An 1,800-to-1 return on political investment — the most profitable
+            An 1,800-to-1 return on political investment, the most profitable
             bet in Washington.
           </p>
 
           <p className="mt-8 text-lg leading-relaxed text-ink/70">
             The numbers are difficult to process at human scale. From 2001 to
-            2021, the top five defense contractors — Lockheed Martin, Boeing,
-            Raytheon, General Dynamics, and Northrop Grumman — spent a combined
+            2021, the top five defense contractors (Lockheed Martin, Boeing,
+            Raytheon, General Dynamics, and Northrop Grumman) spent a combined
             $1.1 billion on federal lobbying. In return, they received $2.02
             trillion in federal contracts. That is a return of 1,800 to 1. No
             venture capital fund, no hedge fund, no stock market in history has
@@ -350,7 +350,7 @@ export default function IndustryCapturePage() {
           <p className="text-lg leading-relaxed text-ink/70">
             In 2023, Lockheed Martin alone spent $14.1 million on federal
             lobbying. The defense sector as a whole deployed 904 registered
-            lobbyists and spent $139 million — roughly $381,000 per day, every
+            lobbyists and spent $139 million, roughly $381,000 per day, every
             day of the year, including weekends and holidays. These lobbyists
             are not strangers to the Pentagon. Many of them worked there. The
             revolving door between the Department of Defense and defense
@@ -369,7 +369,7 @@ export default function IndustryCapturePage() {
             district. The program is designed to be impossible to cancel, not
             because it is indispensable to national security, but because its
             economic tendrils reach into nearly every congressional
-            constituency. Bipartisan support is not earned — it is engineered.
+            constituency. Bipartisan support is not earned. It is engineered.
           </p>
         </div>
       </section>
@@ -397,7 +397,7 @@ export default function IndustryCapturePage() {
             gas companies spend between $100 million and $150 million per year
             on federal lobbying. In return, the industry receives more than $20
             billion annually in federal subsidies, tax breaks, and preferential
-            regulatory treatment — subsidies that persist through Democratic and
+            regulatory treatment: subsidies that persist through Democratic and
             Republican administrations alike, through oil booms and climate
             emergencies, through record-breaking profits and catastrophic
             spills.
@@ -448,7 +448,7 @@ export default function IndustryCapturePage() {
             The industry&apos;s most effective weapon is the ballot measure
             campaign. In 2018, Colorado&apos;s Proposition 112 would have
             required fracking setbacks from homes and schools. The oil and gas
-            industry spent $41 million to defeat it — in a state ballot measure.
+            industry spent $41 million to defeat it, in a state ballot measure.
             The same year, Washington state&apos;s Initiative 1631, which would
             have imposed a carbon fee, was defeated after the industry poured
             $29.7 million into opposition advertising. In both cases, the
@@ -522,7 +522,7 @@ export default function IndustryCapturePage() {
             self-preferencing, the technology industry responded with the
             largest defensive lobbying campaign in its history. Over two years,
             tech companies and their trade associations spent $277 million to
-            kill antitrust reform — outspending reform supporters by a ratio of
+            kill antitrust reform, outspending reform supporters by a ratio of
             six to one. Amazon alone spent $16 million in the first nine months
             of 2022, a record pace for a single company. The bills never reached
             a floor vote.
@@ -537,7 +537,7 @@ export default function IndustryCapturePage() {
             &ldquo;competitiveness,&rdquo; and ensure that any regulation that
             emerges codifies the advantages of incumbents. Meanwhile,
             TikTok&apos;s parent company ByteDance spent a record $10.4 million
-            on lobbying in 2024 as it fought a potential ban — a reminder that
+            on lobbying in 2024 as it fought a potential ban, a reminder that
             even companies under existential regulatory threat find lobbying
             more cost-effective than compliance.
           </p>
@@ -577,8 +577,8 @@ export default function IndustryCapturePage() {
             follow an identical pattern of political capture. First, they invest
             in lobbying at a scale that dwarfs any opposing force. Second, they
             hire former regulators and lawmakers who understand the system from
-            the inside. Third, they distribute economic benefits — jobs,
-            contracts, research grants — across enough congressional districts
+            the inside. Third, they distribute economic benefits (jobs,
+            contracts, research grants) across enough congressional districts
             to make opposition politically painful. Fourth, when reform
             movements gather momentum, they deploy overwhelming resources to
             dilute, delay, or destroy legislation before it reaches a vote.
@@ -591,9 +591,9 @@ export default function IndustryCapturePage() {
             making a rational investment with a clear return. The millions of
             Americans who pay inflated prices have no comparable mechanism for
             collective action. A defense contractor that maintains suppliers in
-            45 states is not inefficient — it is building a political firewall.
+            45 states is not inefficient. It is building a political firewall.
             A fossil fuel company that spends $41 million to defeat a ballot
-            measure is not wasting money — it is protecting $20 billion in
+            measure is not wasting money. It is protecting $20 billion in
             annual subsidies.
           </p>
 
@@ -716,7 +716,7 @@ export default function IndustryCapturePage() {
           </h2>
           <p className="mx-auto mt-4 max-w-lg text-lg text-white/60">
             Industry capture is not a historical phenomenon. It is happening now
-            — in AI regulation, defense budgets, drug pricing, and energy
+            : in AI regulation, defense budgets, drug pricing, and energy
             policy. Explore the full field guide or follow the money.
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">

@@ -21,14 +21,14 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Corruption & Reform | Daonra",
   description:
-    "Chapter 7 of The Field Guide to American Corruption. State-level bribery, foreign influence operations, and the reform movements fighting to reclaim democracy — from NYC's matching funds to overturning Citizens United.",
+    "Chapter 7 of The Field Guide to American Corruption. State-level bribery, foreign influence operations, and the reform movements fighting to reclaim democracy, from NYC's matching funds to overturning Citizens United.",
 };
 
 const SCROLLYTELL_STEPS: ScrollytellStep[] = [
   {
     id: "citizens-united",
     title: "Citizens United Opens the Floodgates",
-    body: "On January 21, 2010, the Supreme Court rules 5-4 in Citizens United v. FEC that corporations and unions can spend unlimited sums on elections. Justice Kennedy writes that independent expenditures &lsquo;do not give rise to corruption or the appearance of corruption.&rsquo; Outside spending immediately quadruples from $338 million in 2008 to $1.3 billion in 2012. The modern era of unlimited money in politics begins — and with it, a cascade of failed federal reforms that continues to this day.",
+    body: "On January 21, 2010, the Supreme Court rules 5-4 in Citizens United v. FEC that corporations and unions can spend unlimited sums on elections. Justice Kennedy writes that independent expenditures &lsquo;do not give rise to corruption or the appearance of corruption.&rsquo; Outside spending immediately quadruples from $338 million in 2008 to $1.3 billion in 2012. The modern era of unlimited money in politics begins, and with it, a cascade of failed federal reforms that continues to this day.",
     stat: {
       value: "$338M→$4.5B",
       label: "Outside Spending 2008 → 2024",
@@ -39,7 +39,7 @@ const SCROLLYTELL_STEPS: ScrollytellStep[] = [
   {
     id: "federal-failures",
     title: "Every Federal Reform Dies",
-    body: "The DISCLOSE Act, which would require organizations spending more than $10,000 on elections to reveal their donors, is introduced in every Congress since 2010. It is filibustered every single time. HR1, the For the People Act — the most comprehensive democracy reform bill in a generation — passes the House in 2021 and dies in the Senate. The Freedom to Vote Act meets the same fate. The FEC remains deadlocked 3-3 by design, unable to enforce existing law. The IRS stops policing 501(c)(4) political activity. Zero successful federal reforms pass in fifteen years.",
+    body: "The DISCLOSE Act, which would require organizations spending more than $10,000 on elections to reveal their donors, is introduced in every Congress since 2010. It is filibustered every single time. HR1, the For the People Act (the most comprehensive democracy reform bill in a generation) passes the House in 2021 and dies in the Senate. The Freedom to Vote Act meets the same fate. The FEC remains deadlocked 3-3 by design, unable to enforce existing law. The IRS stops policing 501(c)(4) political activity. Zero successful federal reforms pass in fifteen years.",
     stat: {
       value: "0",
       label: "Successful Federal Reforms Since 2010",
@@ -50,7 +50,7 @@ const SCROLLYTELL_STEPS: ScrollytellStep[] = [
   {
     id: "state-corruption",
     title: "The States: Corruption Without Guardrails",
-    body: "While federal reformers hit a wall, state-level corruption operates with even less oversight. Many states impose no contribution limits whatsoever — pay-to-play is legal and open. In Ohio, FirstEnergy spends $60 million in the largest state bribery scandal in American history, securing HB6 — a billion-dollar utility bailout. Speaker Larry Householder is convicted. ALEC, the American Legislative Exchange Council, operates a system where corporations co-write model legislation alongside state legislators, with corporate representatives holding equal votes. State lobbying and dark money remain even less tracked than federal spending.",
+    body: "While federal reformers hit a wall, state-level corruption operates with even less oversight. Many states impose no contribution limits whatsoever. Pay-to-play is legal and open. In Ohio, FirstEnergy spends $60 million in the largest state bribery scandal in American history, securing HB6, a billion-dollar utility bailout. Speaker Larry Householder is convicted. ALEC, the American Legislative Exchange Council, operates a system where corporations co-write model legislation alongside state legislators, with corporate representatives holding equal votes. State lobbying and dark money remain even less tracked than federal spending.",
     stat: {
       value: "$60M",
       label: "FirstEnergy Bribery (Ohio HB6)",
@@ -61,7 +61,7 @@ const SCROLLYTELL_STEPS: ScrollytellStep[] = [
   {
     id: "foreign-influence",
     title: "Foreign Governments Buy Access",
-    body: "Under the Foreign Agents Registration Act, Saudi Arabia, the UAE, Japan, South Korea, and Israel are among the top foreign spenders on American lobbying. But FARA enforcement is skeletal — the DOJ assigns roughly 30 staff to police foreign influence across the entire country. Unregistered agents far exceed registered ones. Paul Manafort is convicted for unregistered work for Ukraine. Michael Flynn pleads guilty for Turkey, then is pardoned. The NRA is described as a &lsquo;foreign asset&rsquo; in a Senate report. Maria Butina is convicted as a Russian agent. Multiple Chinese influence prosecutions follow since 2020.",
+    body: "Under the Foreign Agents Registration Act, Saudi Arabia, the UAE, Japan, South Korea, and Israel are among the top foreign spenders on American lobbying. But FARA enforcement is skeletal: the DOJ assigns roughly 30 staff to police foreign influence across the entire country. Unregistered agents far exceed registered ones. Paul Manafort is convicted for unregistered work for Ukraine. Michael Flynn pleads guilty for Turkey, then is pardoned. The NRA is described as a &lsquo;foreign asset&rsquo; in a Senate report. Maria Butina is convicted as a Russian agent. Multiple Chinese influence prosecutions follow since 2020.",
     stat: {
       value: "~30",
       label: "DOJ Staff Policing Foreign Influence",
@@ -72,7 +72,7 @@ const SCROLLYTELL_STEPS: ScrollytellStep[] = [
   {
     id: "state-success",
     title: "The States That Got It Right",
-    body: "Where federal reform has failed, a handful of states and cities have built working alternatives. New York City implements 8:1 small-donor matching — a $175 contribution becomes $1,575 in public funds — dramatically diversifying the donor pool. Seattle distributes $100 in Democracy Vouchers to every resident, increasing participation and empowering non-wealthy donors. Maine and Arizona run Clean Elections public financing. Michigan passes an independent redistricting commission backed by a $16.4 million campaign. Alaska adopts ranked-choice voting with open primaries. These experiments prove the system can be fixed.",
+    body: "Where federal reform has failed, a handful of states and cities have built working alternatives. New York City implements 8:1 small-donor matching, where a $175 contribution becomes $1,575 in public funds, dramatically diversifying the donor pool. Seattle distributes $100 in Democracy Vouchers to every resident, increasing participation and empowering non-wealthy donors. Maine and Arizona run Clean Elections public financing. Michigan passes an independent redistricting commission backed by a $16.4 million campaign. Alaska adopts ranked-choice voting with open primaries. These experiments prove the system can be fixed.",
     stat: {
       value: "8:1",
       label: "NYC Small-Donor Match Ratio",
@@ -83,7 +83,7 @@ const SCROLLYTELL_STEPS: ScrollytellStep[] = [
   {
     id: "the-question",
     title: "What Would It Take?",
-    body: "Seventy-five to eighty percent of Americans — across party lines — support overturning Citizens United. Seventy-six percent believe campaign contributions influence judicial decisions. Academic evidence shows economic elites dominate policymaking while average citizens have approximately zero influence. Corporate lobbying returns reach 6,000 to 22,000 percent. Every major democracy on Earth has stricter campaign finance rules than the United States. The UK caps national election spending at roughly $30 million. Canada imposes strict contribution limits and short campaign periods. The evidence is overwhelming. The question is not whether the system is broken. The question is whether the people who benefit from the breakage will ever allow it to be repaired.",
+    body: "Seventy-five to eighty percent of Americans, across party lines, support overturning Citizens United. Seventy-six percent believe campaign contributions influence judicial decisions. Academic evidence shows economic elites dominate policymaking while average citizens have approximately zero influence. Corporate lobbying returns reach 6,000 to 22,000 percent. Every major democracy on Earth has stricter campaign finance rules than the United States. The UK caps national election spending at roughly $30 million. Canada imposes strict contribution limits and short campaign periods. The evidence is overwhelming. The question is not whether the system is broken. The question is whether the people who benefit from the breakage will ever allow it to be repaired.",
     stat: {
       value: "75-80%",
       label: "Support Overturning Citizens United",
@@ -121,7 +121,7 @@ export default function CorruptionAndReformPage() {
 
           <p className="mt-6 max-w-2xl text-xl leading-relaxed text-white/70 lg:text-2xl">
             State-level bribery, foreign influence operations, and the reform
-            movements fighting to reclaim democracy — from{" "}
+            movements fighting to reclaim democracy, from{" "}
             <span className="font-semibold text-white">
               NYC&apos;s matching funds
             </span>{" "}
@@ -162,7 +162,7 @@ export default function CorruptionAndReformPage() {
             judges are elected by the corporations that appear before them, and
             the justice system that incarcerates for profit. Every one of these
             systems is legal. Every one of them is documented. And every attempt
-            to reform them at the federal level has failed — not once, not
+            to reform them at the federal level has failed, not once, not
             occasionally, but every single time, without exception, for fifteen
             consecutive years.
           </p>
@@ -170,7 +170,7 @@ export default function CorruptionAndReformPage() {
           <p className="mt-8 text-lg leading-relaxed text-ink/70">
             This final chapter examines the architecture of that failure. At the
             state level, corruption often operates without even the pretense of
-            guardrails — many states impose no contribution limits, and dark
+            guardrails: many states impose no contribution limits, and dark
             money flows with even less transparency than in Washington. Foreign
             governments spend millions purchasing access through a registration
             system policed by roughly 30 federal employees. But this chapter
@@ -179,7 +179,7 @@ export default function CorruptionAndReformPage() {
             Seattle&apos;s Democracy Vouchers. Alaska&apos;s ranked-choice
             voting. Michigan&apos;s independent redistricting commission. These
             are not theoretical proposals. They are functioning systems, and
-            they prove that the machinery of corruption can be dismantled — if
+            they prove that the machinery of corruption can be dismantled, if
             the political will exists to do it.
           </p>
 
@@ -236,7 +236,7 @@ export default function CorruptionAndReformPage() {
             If the federal system is a machine for converting money into policy,
             state government is often the same machine with the safety guards
             removed. Many states impose no limits on campaign contributions
-            whatsoever. In these jurisdictions, pay-to-play is not a scandal —
+            whatsoever. In these jurisdictions, pay-to-play is not a scandal.
             it is the operating system. A developer writes a six-figure check to
             a governor, and the zoning board approves a project the following
             month. A utility company funds a legislative caucus, and a
@@ -247,7 +247,7 @@ export default function CorruptionAndReformPage() {
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
             The Ohio HB6 scandal stands as the definitive case study.
             FirstEnergy, facing the closure of two uncompetitive nuclear plants,
-            spent $60 million to secure passage of House Bill 6 — a
+            spent $60 million to secure passage of House Bill 6,
             billion-dollar ratepayer bailout disguised as clean energy
             legislation. The money flowed through a web of dark money groups to
             Ohio House Speaker Larry Householder, who used it to elect allies,
@@ -260,14 +260,14 @@ export default function CorruptionAndReformPage() {
           </p>
 
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
-            ALEC — the American Legislative Exchange Council — operates a
+            ALEC (the American Legislative Exchange Council) operates a
             parallel system that is technically legal. The organization convenes
             corporate representatives and state legislators in the same room to
             co-write &ldquo;model legislation.&rdquo; In these sessions,
             corporate members historically held equal voting power with elected
-            officials. The resulting bills — covering everything from
+            officials. The resulting bills, covering everything from
             environmental deregulation to stand-your-ground laws to
-            pharmaceutical protections — are then introduced in statehouses
+            pharmaceutical protections, are then introduced in statehouses
             across the country, often word-for-word. It is a factory for
             corporate-drafted law, and it operates in plain sight because no
             state law prohibits it.
@@ -306,13 +306,13 @@ export default function CorruptionAndReformPage() {
             multi-million dollar affairs in which corporate and ideological
             donors effectively select the judges who will rule on cases
             affecting their interests. State lobbying varies wildly in
-            transparency — some states have zero disclosure requirements. And
+            transparency: some states have zero disclosure requirements. And
             state-level dark money is even less tracked than federal: many
             states still do not require electronic filing of campaign finance
             reports, meaning that spending data is scattered across paper forms
             in county clerk offices, effectively invisible to public scrutiny.
             The result is a system where corruption is not just possible but
-            structurally encouraged — where the cost of influence is lowest and
+            structurally encouraged, where the cost of influence is lowest and
             the oversight is thinnest.
           </p>
         </div>
@@ -333,7 +333,7 @@ export default function CorruptionAndReformPage() {
 
           <p className="mt-8 text-lg leading-relaxed text-ink/70">
             The Foreign Agents Registration Act was enacted in 1938 to counter
-            Nazi propaganda. Today it is the primary — and largely ineffective —
+            Nazi propaganda. Today it is the primary (and largely ineffective)
             mechanism for tracking foreign government influence in American
             politics. Top foreign spenders include Saudi Arabia, the United Arab
             Emirates, Japan, South Korea, and Israel, all of which maintain
@@ -353,7 +353,7 @@ export default function CorruptionAndReformPage() {
             of unregistered lobbying on behalf of Ukrainian interests, funneling
             tens of millions through offshore accounts. Michael Flynn, a sitting
             National Security Advisor, pleaded guilty to acting as an
-            unregistered agent of Turkey — then was pardoned. Tom Barrack, a
+            unregistered agent of Turkey, then was pardoned. Tom Barrack, a
             close ally of President Trump, was charged with acting as an
             unregistered agent of the UAE but acquitted.
           </p>
@@ -367,7 +367,7 @@ export default function CorruptionAndReformPage() {
             Russian agent, having infiltrated NRA circles and established
             back-channel contacts with political figures. Chinese influence
             operations have prompted growing concern and multiple prosecutions
-            since 2020. Allied nations — Japan, South Korea, and Israel — spend
+            since 2020. Allied nations (Japan, South Korea, and Israel) spend
             heavily on defense cooperation lobbying, a practice that is entirely
             legal but raises the fundamental question of who American foreign
             policy is designed to serve.
@@ -419,11 +419,11 @@ export default function CorruptionAndReformPage() {
           <p className="mt-8 text-lg leading-relaxed text-ink/70">
             Since Citizens United, the federal government has not enacted a
             single significant campaign finance or anti-corruption reform. This
-            is not for lack of trying — it is for lack of a system that allows
+            is not for lack of trying. It is for lack of a system that allows
             the beneficiaries of corruption to vote against their own interests.
             The DISCLOSE Act has been introduced in every Congress since 2010
-            and filibustered every time. HR1, the For the People Act — covering
-            voter access, redistricting, campaign finance, and ethics — passed
+            and filibustered every time. HR1, the For the People Act (covering
+            voter access, redistricting, campaign finance, and ethics) passed
             the House in 2021 with zero Republican votes and died in the Senate.
             The Freedom to Vote Act, a compromise version, met the same fate.
           </p>
@@ -434,7 +434,7 @@ export default function CorruptionAndReformPage() {
             finance, is deadlocked 3-3 along partisan lines by design. The
             commission cannot agree on enforcement actions, cannot update
             regulations, and cannot investigate coordination between Super PACs
-            and campaigns. It has been structurally incapacitated — not by
+            and campaigns. It has been structurally incapacitated, not by
             accident, but by a confirmation process that ensures no party ever
             holds a working majority. The Internal Revenue Service, which
             theoretically polices the boundary between &ldquo;social
@@ -451,7 +451,7 @@ export default function CorruptionAndReformPage() {
                 2010, 2012, 2014, 2016, 2018, 2020, 2022, 2024
               </div>
               <div className="mt-1 text-base font-semibold text-ink">
-                DISCLOSE Act &mdash; filibustered every session
+                DISCLOSE Act: filibustered every session
               </div>
             </div>
             <div>
@@ -459,7 +459,7 @@ export default function CorruptionAndReformPage() {
                 2021
               </div>
               <div className="mt-1 text-base font-semibold text-ink">
-                HR1 / For the People Act &mdash; passed House, died in Senate
+                HR1 / For the People Act: passed House, died in Senate
               </div>
             </div>
             <div>
@@ -467,7 +467,7 @@ export default function CorruptionAndReformPage() {
                 2022
               </div>
               <div className="mt-1 text-base font-semibold text-ink">
-                Freedom to Vote Act &mdash; filibustered
+                Freedom to Vote Act: filibustered
               </div>
             </div>
             <div>
@@ -475,7 +475,7 @@ export default function CorruptionAndReformPage() {
                 Ongoing
               </div>
               <div className="mt-1 text-base font-semibold text-ink">
-                FEC deadlocked 3-3 &mdash; cannot enforce
+                FEC deadlocked 3-3, cannot enforce
               </div>
             </div>
             <div>
@@ -483,7 +483,7 @@ export default function CorruptionAndReformPage() {
                 Ongoing
               </div>
               <div className="mt-1 text-base font-semibold text-ink">
-                IRS &mdash; stopped enforcing 501(c)(4) political limits
+                IRS: stopped enforcing 501(c)(4) political limits
               </div>
             </div>
           </div>
@@ -517,7 +517,7 @@ export default function CorruptionAndReformPage() {
           <p className="mt-8 text-lg leading-relaxed text-ink/70">
             The federal landscape is bleak, but it is not the entire story. A
             handful of states and cities have built functioning alternatives to
-            the broken campaign finance system — experiments that demonstrate,
+            the broken campaign finance system, experiments that demonstrate,
             with data, that reform is not only possible but effective. These
             programs have diversified donor pools, increased civic
             participation, and reduced the influence of mega-donors. They are
@@ -527,7 +527,7 @@ export default function CorruptionAndReformPage() {
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
             New York City&apos;s small-donor matching program is the gold
             standard. Under the system, contributions of up to $175 are matched
-            at an 8:1 ratio with public funds — meaning a $175 donation becomes
+            at an 8:1 ratio with public funds, meaning a $175 donation becomes
             $1,575 in a candidate&apos;s account. The effect is transformative.
             Candidates can fund competitive campaigns by raising small
             contributions from their own constituents rather than courting
@@ -539,8 +539,8 @@ export default function CorruptionAndReformPage() {
 
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
             Seattle&apos;s Democracy Vouchers program takes a different
-            approach. Every Seattle resident receives $100 in vouchers — four
-            $25 certificates — that they can assign to qualifying candidates.
+            approach. Every Seattle resident receives $100 in vouchers (four
+            $25 certificates) that they can assign to qualifying candidates.
             The program, funded by a modest property tax, has increased
             participation among low-income residents and people of color, and
             has expanded the pool of viable candidates to include people without
@@ -609,7 +609,7 @@ export default function CorruptionAndReformPage() {
             they continue to operate and have enabled candidates without wealthy
             connections to run competitive campaigns. Taken together, these
             state and local experiments constitute a blueprint for what national
-            reform could look like — if the federal government were capable of
+            reform could look like, if the federal government were capable of
             acting.
           </p>
         </div>
@@ -630,7 +630,7 @@ export default function CorruptionAndReformPage() {
 
           <p className="mt-8 text-lg leading-relaxed text-ink/70">
             Every major democracy on Earth has stricter campaign finance rules
-            than the United States. This is not an exaggeration — it is a
+            than the United States. This is not an exaggeration. It is a
             statement of comparative fact that should inform every debate about
             whether reform is &ldquo;feasible.&rdquo; Other nations have decided
             that unlimited political spending is incompatible with democratic
@@ -698,7 +698,7 @@ export default function CorruptionAndReformPage() {
 
           <p className="text-lg leading-relaxed text-ink/70">
             The comparison is not subtle. The United Kingdom caps total national
-            election spending at roughly $30 million — less than the budget of a
+            election spending at roughly $30 million, less than the budget of a
             single competitive U.S. Senate race. Canada bans corporate and union
             donations outright and enforces short, tightly regulated campaign
             periods. France provides equal free airtime to all candidates and
@@ -706,7 +706,7 @@ export default function CorruptionAndReformPage() {
             political parties and requires full transparency for donations above
             &euro;10,000. These are not authoritarian states suppressing
             political speech. They are functioning democracies that have
-            concluded — correctly, by the evidence — that unlimited money in
+            concluded (correctly, by the evidence) that unlimited money in
             politics is corrosive to democratic governance.
           </p>
         </div>
@@ -729,7 +729,7 @@ export default function CorruptionAndReformPage() {
             The organizations fighting to reform the system operate at a scale
             that is impressive on its own terms and microscopic relative to the
             forces they oppose. The reform landscape spans the ideological
-            spectrum — a fact that both demonstrates the breadth of concern
+            spectrum, a fact that both demonstrates the breadth of concern
             about systemic corruption and illustrates the unusual coalitions
             that have, on rare occasions, broken through.
           </p>
@@ -742,7 +742,7 @@ export default function CorruptionAndReformPage() {
             sites through its Safety and Justice Challenge. The Ford
             Foundation&apos;s Justice and Mobility Fund exceeded $250 million.
             The ACLU operates with a $383 million annual budget (2024) and
-            foundation assets of $785.6 million. These are substantial sums —
+            foundation assets of $785.6 million. These are substantial sums.
             but they are dwarfed by the $5.08 billion spent annually on lobbying
             alone, to say nothing of the billions in campaign spending and dark
             money.
@@ -750,7 +750,7 @@ export default function CorruptionAndReformPage() {
 
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
             The most instructive case study in reform coalition-building is the
-            First Step Act of 2018, which passed the Senate 87-12 — a landslide
+            First Step Act of 2018, which passed the Senate 87-12, a landslide
             in an era of partisan paralysis. The coalition was extraordinary:
             the ACLU joined with the Koch network. FreedomWorks partnered with
             the Fraternal Order of Police. Heritage Action aligned with Van
@@ -759,9 +759,9 @@ export default function CorruptionAndReformPage() {
             Industries, had already demonstrated the model in Texas, where $241
             million in alternative sentencing investments saved the state $4
             billion and enabled the closure of 11 prisons. The coalition proved
-            that when left and right identify a shared interest in reform — in
+            that when left and right identify a shared interest in reform, in
             this case, reducing incarceration costs and addressing
-            over-sentencing — the system can move.
+            over-sentencing, the system can move.
           </p>
 
           {/* Reform org grid */}
@@ -918,7 +918,7 @@ export default function CorruptionAndReformPage() {
             But so is the resistance. From New York City&apos;s 8:1 small-donor
             matching to state-level disclosure laws, reformers are proving that
             alternatives exist. Daonra&apos;s interactive tools let you trace
-            the connections yourself — follow the money flows, calculate the
+            the connections yourself: follow the money flows, calculate the
             return on lobbying investments, and track the trades your
             representatives make while writing the laws that govern your life.
           </p>

@@ -18,14 +18,14 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Industries That Shape Daily Life | Daonra",
   description:
-    "Chapter 8 of The Field Guide to American Corruption. Telecom giants, real estate monopolies, and agribusiness conglomerates spend billions to shape the rules governing your internet, your housing, and your food — and the returns are extraordinary.",
+    "Chapter 8 of The Field Guide to American Corruption. Telecom giants, real estate monopolies, and agribusiness conglomerates spend billions to shape the rules governing your internet, your housing, and your food, and the returns are extraordinary.",
 };
 
 const SCROLLYTELL_STEPS: ScrollytellStep[] = [
   {
     id: "telecom-lobbying",
     title: "The $1.84 Billion Telecom Machine",
-    body: "Since 1998, the telecommunications industry has spent $1.84 billion on federal lobbying alone — making it the 12th largest lobbying sector in America. In the 116th Congress, the top 15 ISPs and trade associations spent $234 million at a rate of $320,000 per day. Comcast, AT&T, Verizon, and Charter combine for $50 million annually in federal lobbying — roughly 0.01% of their combined revenue — generating billions in regulatory advantages. For every single public comment filed on net neutrality, ISPs spent $100 on lobbying.",
+    body: "Since 1998, the telecommunications industry has spent $1.84 billion on federal lobbying, making it the 12th largest lobbying sector in America. In the 116th Congress, the top 15 ISPs and trade associations spent $234 million at a rate of $320,000 per day. Comcast, AT&T, Verizon, and Charter combine for $50 million annually in federal lobbying, roughly 0.01% of their combined revenue, generating billions in regulatory advantages. For every single public comment filed on net neutrality, ISPs spent $100 on lobbying.",
     stat: {
       value: "$1.84B",
       label: "Telecom Lobbying Since 1998",
@@ -36,7 +36,7 @@ const SCROLLYTELL_STEPS: ScrollytellStep[] = [
   {
     id: "net-neutrality-killed",
     title: "Net Neutrality: Killed, Revived, Killed Again",
-    body: "From 2008 to 2017, Comcast, AT&T, Verizon, and NCTA spent $572 million lobbying the FCC on broadband regulation. In 2017, FCC Chairman Ajit Pai — a former Verizon attorney — repealed net neutrality over the objections of millions. The FCC restored it in 2024, but the Sixth Circuit struck it down in January 2025, citing the Supreme Court&rsquo;s Loper Bright decision. Pai then became CEO of CTIA, the wireless industry&rsquo;s top lobbying group, completing the revolving door from regulator to private equity to industry lobbyist-in-chief.",
+    body: "From 2008 to 2017, Comcast, AT&T, Verizon, and NCTA spent $572 million lobbying the FCC on broadband regulation. In 2017, FCC Chairman Ajit Pai (a former Verizon attorney) repealed net neutrality over the objections of millions. The FCC restored it in 2024, but the Sixth Circuit struck it down in January 2025, citing the Supreme Court&rsquo;s Loper Bright decision. Pai then became CEO of CTIA, the wireless industry&rsquo;s top lobbying group, completing the revolving door from regulator to private equity to industry lobbyist-in-chief.",
     stat: {
       value: "$572M",
       label: "ISP Lobbying to Kill Net Neutrality",
@@ -47,7 +47,7 @@ const SCROLLYTELL_STEPS: ScrollytellStep[] = [
   {
     id: "nar-dominance",
     title: "The Most Powerful Lobby in America",
-    body: "The National Association of Realtors spent $86.4 million on lobbying in 2024 — more than any other organization in the country, surpassing even the U.S. Chamber of Commerce. NAR has spent $850 million or more on lobbying since 1998. Every one of its 1.5 million members pays $156 in mandatory annual dues, 35% of which — $55 per person — is classified as nondeductible lobbying expense. Members cannot opt out. The largest political machine in real estate is funded by a mandatory tax on the people who sell your home.",
+    body: "The National Association of Realtors spent $86.4 million on lobbying in 2024, more than any other organization in the country, surpassing even the U.S. Chamber of Commerce. NAR has spent $850 million or more on lobbying since 1998. Every one of its 1.5 million members pays $156 in mandatory annual dues, 35% of which ($55 per person) is classified as nondeductible lobbying expense. Members cannot opt out. The largest political machine in real estate is funded by a mandatory tax on the people who sell your home.",
     stat: {
       value: "$86.4M",
       label: "NAR Lobbying in 2024 (#1 in America)",
@@ -58,7 +58,7 @@ const SCROLLYTELL_STEPS: ScrollytellStep[] = [
   {
     id: "rent-control-crushed",
     title: "$280 Million to Block Rent Control",
-    body: "Across three California ballot cycles — Propositions 10 (2018), 21 (2020), and 33 (2024) — the real estate industry spent $280 million or more to defeat rent control measures. All three lost with approximately 59% opposition. The California Apartment Association alone has spent $226 million defending the Costa-Hawkins Rental Housing Act since 2018. Blackstone contributed over $7 million to defeat Props 10 and 21, using pools of investor capital that included California public employee pension funds — public workers&rsquo; retirement money deployed to block rent protections for the public.",
+    body: "Across three California ballot cycles (Propositions 10 (2018), 21 (2020), and 33 (2024)), the real estate industry spent $280 million or more to defeat rent control measures. All three lost with approximately 59% opposition. The California Apartment Association alone has spent $226 million defending the Costa-Hawkins Rental Housing Act since 2018. Blackstone contributed over $7 million to defeat Props 10 and 21, using pools of investor capital that included California public employee pension funds, specifically public workers&rsquo; retirement money deployed to block rent protections for the public.",
     stat: {
       value: "$280M+",
       label: "Spent to Kill CA Rent Control (3 Cycles)",
@@ -69,7 +69,7 @@ const SCROLLYTELL_STEPS: ScrollytellStep[] = [
   {
     id: "farm-bill-capture",
     title: "The Farm Bill: $523 Million in Lobbying",
-    body: "Between 2019 and 2023, agribusiness groups reported $523 million in federal lobbying on Farm Bill issues. Industry outspent public interest groups 4 to 1 — $400 million from pharmaceutical, manufacturing, and big agriculture versus $95 million from nonprofits, labor unions, and tribal nations. The 2025 budget reconciliation cut $186.5 billion in federal nutrition spending over 10 years, despite the fact that SNAP accounts for 81% of Farm Bill mandatory spending and feeds tens of millions of Americans.",
+    body: "Between 2019 and 2023, agribusiness groups reported $523 million in federal lobbying on Farm Bill issues. Industry outspent public interest groups 4 to 1: $400 million from pharmaceutical, manufacturing, and big agriculture versus $95 million from nonprofits, labor unions, and tribal nations. The 2025 budget reconciliation cut $186.5 billion in federal nutrition spending over 10 years, despite the fact that SNAP accounts for 81% of Farm Bill mandatory spending and feeds tens of millions of Americans.",
     stat: {
       value: "$523M",
       label: "Farm Bill Lobbying (2019-2023)",
@@ -80,7 +80,7 @@ const SCROLLYTELL_STEPS: ScrollytellStep[] = [
   {
     id: "beef-monopoly",
     title: "Four Companies, 80% of Your Beef",
-    body: "JBS, Tyson Foods, Cargill, and National Beef Packing control approximately 80-85% of the U.S. beef market. They have paid $140 million or more in price-fixing settlements — JBS $52.5 million, Tyson $55 million, Cargill $32.5 million — with estimated total consumer damages of $1.9 billion. JBS donated $5 million to Trump&rsquo;s 2025 inaugural committee — five times what Meta or Amazon gave — and began trading on the NYSE six months later, with SEC listing approved within two days of Trump appointee Paul Atkins becoming SEC Chair. The Batista brothers who founded JBS had previously confessed to bribing 1,900 Brazilian politicians.",
+    body: "JBS, Tyson Foods, Cargill, and National Beef Packing control approximately 80-85% of the U.S. beef market. They have paid $140 million or more in price-fixing settlements (JBS $52.5 million, Tyson $55 million, Cargill $32.5 million), with estimated total consumer damages of $1.9 billion. JBS donated $5 million to Trump&rsquo;s 2025 inaugural committee (five times what Meta or Amazon gave) and began trading on the NYSE six months later, with SEC listing approved within two days of Trump appointee Paul Atkins becoming SEC Chair. The Batista brothers who founded JBS had previously confessed to bribing 1,900 Brazilian politicians.",
     stat: {
       value: "80-85%",
       label: "Beef Market Controlled by Big Four",
@@ -132,7 +132,7 @@ export default function IndustriesThatShapeDailyLifePage() {
             conglomerates spend billions to shape the rules governing your{" "}
             <span className="font-semibold text-white">internet</span>, your{" "}
             <span className="font-semibold text-white">housing</span>, and your{" "}
-            <span className="font-semibold text-white">food</span> — and the
+            <span className="font-semibold text-white">food</span>, and the
             returns are extraordinary.
           </p>
 
@@ -201,7 +201,7 @@ export default function IndustriesThatShapeDailyLifePage() {
         <div className="mx-auto max-w-3xl px-4 py-16 lg:px-8 lg:py-24">
           <p className="drop-cap text-xl leading-relaxed text-ink/80 lg:text-2xl lg:leading-relaxed">
             The preceding chapters of this guide have documented the machinery
-            of American corruption in its most visible forms — the lobbying
+            of American corruption in its most visible forms: the lobbying
             industrial complex, the dark money pipeline, the revolving door
             between Congress and K Street, the industries that write their own
             regulations. But the most consequential lobbying in America does not
@@ -209,7 +209,7 @@ export default function IndustriesThatShapeDailyLifePage() {
             mundane regulatory processes that determine how much you pay for
             internet service, whether your rent can be capped, and what
             chemicals are permitted on the food you feed your children. Three
-            industries — telecommunications, real estate, and agriculture —
+            industries (telecommunications, real estate, and agriculture)
             collectively spend more than a billion dollars per election cycle to
             shape the rules that govern the most basic conditions of daily life
             in the United States.
@@ -219,7 +219,7 @@ export default function IndustriesThatShapeDailyLifePage() {
             This chapter examines how that money translates into policy. In
             telecommunications, a handful of ISPs have spent $1.84 billion since
             1998 to eliminate competition, kill net neutrality, and capture the
-            agencies that regulate them — while 50 million Americans have one or
+            agencies that regulate them, while 50 million Americans have one or
             zero choices for high-speed broadband. In real estate, the National
             Association of Realtors has spent $850 million on lobbying to become
             the single most powerful organization in Washington, while private
@@ -238,7 +238,7 @@ export default function IndustriesThatShapeDailyLifePage() {
             apparatus to prevent competition, suppress consumer protections, and
             entrench the monopoly. The dollar figures are staggering. The
             returns on investment are even more so. And the costs are borne by
-            the same people who have the least power to change the system — the
+            the same people who have the least power to change the system,
             consumers who pay inflated prices for broadband, the renters who
             cannot afford housing, and the farmers and farmworkers crushed
             between monopoly buyers and monopoly sellers.
@@ -249,7 +249,7 @@ export default function IndustriesThatShapeDailyLifePage() {
       {/* Scrollytelling section */}
       <ScrollytellSection
         headline="From Your Router to Your Refrigerator"
-        subhead="How telecom, real estate, and agriculture lobbying shape the cost and quality of daily life in America — one regulatory capture at a time."
+        subhead="How telecom, real estate, and agriculture lobbying shape the cost and quality of daily life in America, one regulatory capture at a time."
         steps={SCROLLYTELL_STEPS}
         bgColor="bg-ink"
         textColor="text-white"
@@ -264,7 +264,7 @@ export default function IndustriesThatShapeDailyLifePage() {
               problem&hellip; Large corporate ownership is a red herring.&rdquo;
             </p>
             <cite className="mt-6 block font-mono text-sm font-bold uppercase tracking-widest text-muted">
-              Realtor.com Senior Economist — Responding to Trump&apos;s
+              Realtor.com Senior Economist, responding to Trump&apos;s
               Executive Order on Institutional Homebuyers, Jan. 2026
             </cite>
           </blockquote>
@@ -295,8 +295,8 @@ export default function IndustriesThatShapeDailyLifePage() {
             The American broadband market is a study in engineered scarcity.
             Most Americans have one or two choices for high-speed internet
             service. Approximately 50 million have zero or one option. Prices
-            are among the highest in the developed world — $75 to $85 per month
-            on average — in a market where meaningful competition has been
+            are among the highest in the developed world ($75 to $85 per month
+            on average) in a market where meaningful competition has been
             systematically eliminated through decades of mergers, regulatory
             capture, and legislative preemption. The companies that provide your
             internet access have spent $1.84 billion lobbying the federal
@@ -308,7 +308,7 @@ export default function IndustriesThatShapeDailyLifePage() {
             The scale of the spending is both consistent and enormous. In 2023,
             the telecom services sector spent $117.6 million on federal
             lobbying. In 2024, the figure was $108.1 million. The broader
-            communications and electronics sector — including tech companies —
+            communications and electronics sector (including tech companies)
             totaled $585.7 million. At the company level, Comcast spent $13.9
             million in 2024 and has consistently spent $13-14 million annually
             for at least five years. AT&amp;T spent $12.05 million. Verizon
@@ -362,7 +362,7 @@ export default function IndustriesThatShapeDailyLifePage() {
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
             The Federal Communications Commission is the textbook case of
             regulatory capture through personnel. The revolving door between the
-            agency and the industries it regulates is not a bug — it is a
+            agency and the industries it regulates is not a bug. It is a
             feature that has been refined over decades. Michael Powell served as
             FCC Chairman under George W. Bush from 2001 to 2005; he has been
             President and CEO of NCTA, the cable industry&apos;s trade
@@ -381,12 +381,12 @@ export default function IndustriesThatShapeDailyLifePage() {
             Ajit Pai&apos;s. Pai served as an attorney at Jenner &amp; Block,
             where his clients included Securus, a prison phone company. He was
             appointed FCC Chairman by Trump in January 2017. Within a year, he
-            repealed net neutrality — a move the telecom industry had spent $572
+            repealed net neutrality, a move the telecom industry had spent $572
             million lobbying for over the preceding decade. He also dropped
             prison phone rate limits that had benefited his former client
             Securus. After leaving the FCC in January 2021, Pai became a partner
             at Searchlight Capital Partners, a private equity firm. And on April
-            1, 2025, he became President and CEO of CTIA — the wireless
+            1, 2025, he became President and CEO of CTIA, the wireless
             industry&apos;s top lobbying organization, the same group that spent
             $17.3 million on lobbying in 2024 and ranked as the 9th largest
             lobbying spender in America. The trajectory is frictionless:
@@ -398,7 +398,7 @@ export default function IndustriesThatShapeDailyLifePage() {
             alignments. Before the FCC, Carr was an attorney at Wiley Rein LLP,
             where his clients included Viacom, AOL Time Warner, and Bell
             telephone companies. He authored the FCC chapter of Project 2025,
-            calling for regulating tech companies and ending Section 230 —
+            calling for regulating tech companies and ending Section 230.
             making him the first FCC chairman to have written a policy blueprint
             for the agency he now leads. He was designated chair by Trump on
             January 20, 2025.
@@ -411,7 +411,7 @@ export default function IndustriesThatShapeDailyLifePage() {
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
             The history of net neutrality in America is the history of industry
             money overwhelming public interest. In 2015, the FCC under Chairman
-            Tom Wheeler — himself a former NCTA president and CTIA CEO —
+            Tom Wheeler (himself a former NCTA president and CTIA CEO)
             reclassified broadband as a Title II telecommunications service,
             establishing enforceable net neutrality rules. Wheeler was a rare
             case of a revolving-door appointee who acted against industry
@@ -424,7 +424,7 @@ export default function IndustriesThatShapeDailyLifePage() {
             2008 and 2017, Comcast, AT&amp;T, Verizon, and NCTA spent $572
             million lobbying the FCC on broadband regulation. In 2017 alone, the
             telecom industry spent $110 million supporting net neutrality
-            repeal, while proponents could muster only $39 million in defense —
+            repeal, while proponents could muster only $39 million in defense.
             a nearly 3:1 spending disadvantage. A MapLight analysis found that
             for every single public comment filed on net neutrality, ISPs spent
             $100 on lobbying. On December 14, 2017, Pai&apos;s FCC voted to
@@ -437,12 +437,11 @@ export default function IndustriesThatShapeDailyLifePage() {
             net neutrality, issuing the &ldquo;Safeguarding and Securing the
             Open Internet&rdquo; order on May 7, 2024, effective July 22, 2024.
             But the Sixth Circuit stayed the rule on August 1, 2024, citing the
-            Supreme Court&apos;s Loper Bright decision — which had overturned
+            Supreme Court&apos;s Loper Bright decision, which had overturned
             Chevron deference just weeks earlier. On January 2, 2025, the Sixth
             Circuit unanimously struck down the 2024 order entirely, holding
             that broadband is an &ldquo;information service&rdquo; and the FCC
-            had exceeded its statutory authority. The Loper Bright decision —
-            the first major application of which killed net neutrality — has
+            had exceeded its statutory authority. The Loper Bright decision (the first major application of which killed net neutrality) has
             effectively made FCC reclassification impossible without new
             legislation from Congress. Net neutrality is dead, and the industry
             that killed it spent $572 million to do it.
@@ -455,7 +454,7 @@ export default function IndustriesThatShapeDailyLifePage() {
                 February 2015
               </div>
               <div className="mt-1 text-base font-semibold text-ink">
-                FCC reclassifies broadband as Title II &mdash; net neutrality
+                FCC reclassifies broadband as Title II: net neutrality
                 established
               </div>
             </div>
@@ -464,7 +463,7 @@ export default function IndustriesThatShapeDailyLifePage() {
                 December 2017
               </div>
               <div className="mt-1 text-base font-semibold text-ink">
-                Pai FCC repeals net neutrality &mdash; $110M in industry
+                Pai FCC repeals net neutrality, $110M in industry
                 lobbying
               </div>
             </div>
@@ -481,7 +480,7 @@ export default function IndustriesThatShapeDailyLifePage() {
                 August 2024
               </div>
               <div className="mt-1 text-base font-semibold text-ink">
-                Sixth Circuit stays restoration &mdash; cites Loper Bright
+                Sixth Circuit stays restoration, cites Loper Bright
               </div>
             </div>
             <div>
@@ -489,7 +488,7 @@ export default function IndustriesThatShapeDailyLifePage() {
                 January 2, 2025
               </div>
               <div className="mt-1 text-base font-semibold text-ink">
-                Sixth Circuit kills net neutrality entirely &mdash; unanimously
+                Sixth Circuit kills net neutrality entirely, unanimously
               </div>
             </div>
           </div>
@@ -499,9 +498,9 @@ export default function IndustriesThatShapeDailyLifePage() {
           </h3>
 
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
-            The Broadband Equity, Access, and Deployment (BEAD) program — $42.45
+            The Broadband Equity, Access, and Deployment (BEAD) program ($42.45
             billion authorized under the 2021 Infrastructure Investment and Jobs
-            Act — represents the largest federal investment in broadband
+            Act) represents the largest federal investment in broadband
             infrastructure in American history. Its stated purpose is to bridge
             the digital divide. Its actual trajectory is a case study in how
             incumbents capture public funds. The industry spent $117 million in
@@ -510,7 +509,7 @@ export default function IndustriesThatShapeDailyLifePage() {
             Comcast, Charter, and Verizon lobbied aggressively against rules
             requiring lower prices for low-income customers in exchange for BEAD
             funding. They lobbied against NTIA&apos;s prioritization of fiber,
-            pushing instead for satellite and fixed wireless eligibility —
+            pushing instead for satellite and fixed wireless eligibility.
             technologies they already control. In June 2025, NTIA rescinded its
             previous guidance and gave states 90 days to integrate new
             requirements, effectively resetting the process to favor industry
@@ -518,21 +517,21 @@ export default function IndustriesThatShapeDailyLifePage() {
           </p>
 
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
-            Meanwhile, the Affordable Connectivity Program — which provided $30
-            per month broadband subsidies to 23 million households — expired on
+            Meanwhile, the Affordable Connectivity Program (which provided $30
+            per month broadband subsidies to 23 million households) expired on
             June 1, 2024, after Congress failed to extend its $14.2 billion in
             funding. Twenty-three million households lost their broadband
             subsidy overnight. The telecom industry publicly supported extension
             while privately lobbying against the price and access requirements
             that would have accompanied it. The industry&apos;s preferred
             solution was to let the subsidy expire and capture the
-            infrastructure money instead — a strategy that appears to be
+            infrastructure money instead, a strategy that appears to be
             working.
           </p>
 
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
             Sixteen states still ban or restrict community-owned broadband
-            networks — down from 19 at peak. These restrictions were seeded by
+            networks, down from 19 at peak. These restrictions were seeded by
             ALEC&apos;s &ldquo;Municipal Telecommunications Private Industry
             Safeguards Act,&rdquo; a model bill designed to block local
             governments from building public broadband. Iterations passed in 19
@@ -540,7 +539,7 @@ export default function IndustriesThatShapeDailyLifePage() {
             identical to the ALEC model. The town of Wilson, North Carolina,
             built a successful municipal fiber network and was specifically
             targeted by the resulting legislation. The FCC attempted to preempt
-            these state laws in 2015 but failed — courts ruled the agency lacks
+            these state laws in 2015 but failed: courts ruled the agency lacks
             authority to reallocate power between states and municipalities. The
             result: in states with these restrictions, municipalities cannot
             apply for federal BEAD grants, meaning the communities with the
@@ -558,8 +557,8 @@ export default function IndustriesThatShapeDailyLifePage() {
             any communications business to compete in any market.&rdquo; Its
             actual effect was the most dramatic consolidation in media history.
             The Act eliminated the national ownership cap on commercial radio
-            stations. Clear Channel — whose founder Lowry Mays personally
-            lobbied Senator Bob Dole to insert the deregulation provision — grew
+            stations. Clear Channel (whose founder Lowry Mays personally
+            lobbied Senator Bob Dole to insert the deregulation provision) grew
             from 40 stations to 1,240, a 30-fold increase that was previously
             illegal. The number of radio station owners dropped from 5,100 to
             3,800 within five years. Clear Channel later rebranded as
@@ -576,26 +575,26 @@ export default function IndustriesThatShapeDailyLifePage() {
             anchors to read scripted &ldquo;must-run&rdquo; segments and
             benefited from Trump-era FCC relaxation of ownership rules. In
             November 2025, Sinclair announced a hostile takeover of Scripps,
-            spending $800,000 on lobbying that year — four times its 2023 level
-            — focused on FCC ownership rules. Nexstar, the largest TV station
-            owner, spent $3.2 million on lobbying in 2025 — ten times its
-            2018-2023 annual average — while pursuing a $6.2 billion acquisition
+            spending $800,000 on lobbying that year, four times its 2023 level,
+            focused on FCC ownership rules. Nexstar, the largest TV station
+            owner, spent $3.2 million on lobbying in 2025, ten times its
+            2018-2023 annual average, while pursuing a $6.2 billion acquisition
             of Tegna. The company hired Jeff Miller, Trump&apos;s second
             inaugural committee finance chair, as a lobbyist for $510,000.
           </p>
 
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
             The casualties of consolidation are measured in deserts. As of 2025,
-            213 U.S. counties have no local news source whatsoever — up from 206
+            213 U.S. counties have no local news source whatsoever, up from 206
             the prior year. Another 1,524 counties have only one remaining news
             source. Fifty million Americans have limited or no access to local
             news. Almost 40% of all local newspapers have vanished. More than
-            270,000 newspaper jobs have been eliminated since 2005 — a 75%
+            270,000 newspaper jobs have been eliminated since 2005, a 75%
             decline. One hundred thirty-six newspapers closed in the most recent
             year, a pace of more than two per week. Three hundred digital
             startups have launched in the past five years, but fewer than 10%
-            serve rural counties. Local journalism — the foundation of
-            democratic accountability — is being hollowed out while the
+            serve rural counties. Local journalism (the foundation of
+            democratic accountability) is being hollowed out while the
             companies that replaced it spend millions on lobbying to consolidate
             further.
           </p>
@@ -643,19 +642,19 @@ export default function IndustriesThatShapeDailyLifePage() {
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
             The battle over Section 230 of the Communications Decency Act
             reveals a rare fissure in the corporate lobbying consensus. The
-            telecom industry generally supports Section 230 reform — Brendan
-            Carr&apos;s Project 2025 chapter called for ending it — because
+            telecom industry generally supports Section 230 reform (Brendan
+            Carr&apos;s Project 2025 chapter called for ending it) because
             telecoms want tech platforms held to the same regulatory standards
             they face. The tech industry spends enormous sums to preserve
             Section 230 protections: Big Tech spent $85.6 million on lobbying in
             2024, up from $68 million in 2023. Meta alone spent a record $24.4
-            million — a 27% increase. Amazon spent $17.6 million. Google spent
+            million, a 27% increase. Amazon spent $17.6 million. Google spent
             $12.1 million. ByteDance spent a record $10.4 million. From 2020 to
             2024, Meta, Alphabet, Microsoft, ByteDance, X, and Snap combined for
             $260 million in lobbying while publicly claiming to support reform.
             No Section 230 reform bill has become law despite dozens being
             introduced. The Graham-Durbin bill would sunset Section 230 on
-            January 1, 2027, unless Congress enacts a replacement — but the same
+            January 1, 2027, unless Congress enacts a replacement, but the same
             lobbying forces that have killed every previous bill remain fully
             deployed.
           </p>
@@ -666,17 +665,16 @@ export default function IndustriesThatShapeDailyLifePage() {
 
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
             The merger machine has reshaped the media and telecom landscape into
-            an oligopoly. The Comcast-NBCUniversal merger in 2011 — a $30
-            billion deal — was approved with 150 behavioral conditions, but
+            an oligopoly. The Comcast-NBCUniversal merger in 2011 (a $30
+            billion deal) was approved with 150 behavioral conditions, but
             Commissioner Baker&apos;s move to Comcast four months later cast a
-            shadow over the process. The AT&amp;T-Time Warner merger in 2018 —
-            $108.7 billion including debt — was challenged by the DOJ under
+            shadow over the process. The AT&amp;T-Time Warner merger in 2018 ($108.7 billion including debt) was challenged by the DOJ under
             circumstances that many on Wall Street attributed to Trump&apos;s
             personal animus toward CNN. AT&amp;T won without restrictions. The
             T-Mobile-Sprint merger in 2020, valued at $26.5 billion, was
             preceded by $17.2 million in lobbying and $195,000 in T-Mobile
             executive spending at Trump&apos;s D.C. hotel during the merger
-            review. The Disney-Fox acquisition in 2019 — $71.3 billion — saw
+            review. The Disney-Fox acquisition in 2019 ($71.3 billion) saw
             Trump congratulate Rupert Murdoch while simultaneously attacking the
             AT&amp;T-Time Warner deal over CNN. The pattern: mergers succeed
             when the political relationships are right, regardless of the
@@ -703,13 +701,13 @@ export default function IndustriesThatShapeDailyLifePage() {
           <p className="mt-8 text-lg leading-relaxed text-ink/70">
             The National Association of Realtors is not merely the largest
             lobbying organization in the real estate industry. It is the single
-            largest lobbying organization in America — period. In 2024, NAR
+            largest lobbying organization in America, period. In 2024, NAR
             spent $86.4 million on federal lobbying, surpassing the U.S. Chamber
             of Commerce ($76.3 million) and every other organization in the
             country. It was not the first time: NAR held the top spot in 2020
             and 2022 as well. Since 1998, NAR has spent $850 million or more on
             cumulative lobbying. Its total political spending in the 2024 cycle
-            — including lobbying, direct contributions, and outside spending —
+            (including lobbying, direct contributions, and outside spending)
             reached $122.7 million. It operates one of the largest trade
             association PACs in the country (RPAC, founded 1969), which raised
             $19.8 million in the 2023-2024 cycle. Its congressional fund raised
@@ -720,8 +718,8 @@ export default function IndustriesThatShapeDailyLifePage() {
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
             The funding mechanism is both simple and coercive. NAR has 1.5
             million members, each of whom pays $156 in mandatory annual dues.
-            Thirty-five percent of those dues — $55 per member, totaling $86.1
-            million — is classified as nondeductible because it funds lobbying
+            Thirty-five percent of those dues ($55 per member, totaling $86.1
+            million) is classified as nondeductible because it funds lobbying
             and political activity. Members cannot opt out. The largest lobbying
             operation in America is funded by a mandatory assessment on real
             estate agents, many of whom earn modest incomes. Seventy percent of
@@ -770,13 +768,13 @@ export default function IndustriesThatShapeDailyLifePage() {
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
             In March 2024, NAR agreed to a $418 million antitrust settlement
             over allegations that it had conspired to inflate broker commissions
-            — a practice that had cost home sellers billions. The settlement,
+            , a practice that had cost home sellers billions. The settlement,
             finalized in November 2024, prohibited offers of broker compensation
             on the MLS and required buyers to sign written agreements outlining
             agent services and compensation. NAR&apos;s response was not
-            contrition — it was a lobbying surge. In Q3 2024, the period between
+            contrition. It was a lobbying surge. In Q3 2024, the period between
             the settlement and the final ruling, NAR spent $47.9 million on
-            lobbying — nearly matching some full-year totals. The Department of
+            lobbying, nearly matching some full-year totals. The Department of
             Justice successfully appealed to reopen its investigation into NAR
             in April 2024, reserving the right to take future action. NAR
             responded by deploying even more money to shape the implementation
@@ -792,8 +790,8 @@ export default function IndustriesThatShapeDailyLifePage() {
             wars, and the real estate industry has won every engagement through
             sheer financial force. Proposition 10 in 2018 sought to repeal the
             Costa-Hawkins Rental Housing Act, which prohibits local rent control
-            on newer housing. The opposition spent $77.3 million — led by
-            Blackstone Group, Essex Property Trust, and Equity Residential —
+            on newer housing. The opposition spent $77.3 million (led by
+            Blackstone Group, Essex Property Trust, and Equity Residential),
             against $26.2 million in support. The measure lost 59% to 41%.
             Proposition 21 in 2020, a scaled-back version allowing rent control
             on housing 15 years or older, saw opposition spending reach $83.6
@@ -808,7 +806,7 @@ export default function IndustriesThatShapeDailyLifePage() {
 
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
             The California Apartment Association has spent $226 million
-            defending Costa-Hawkins since 2018 — including $131 million in the
+            defending Costa-Hawkins since 2018, including $131 million in the
             2024 cycle alone. Three hundred fifty-five corporate and smaller
             landlords contributed $135.9 million to CAA&apos;s Issues Committee
             in 2023-2024. The industry&apos;s rent control opposition extends
@@ -816,7 +814,7 @@ export default function IndustriesThatShapeDailyLifePage() {
             2024, and the landlord lobby launched the multimillion-dollar
             &ldquo;More Housing Now!&rdquo; super PAC in Oregon to oppose rent
             control legislation. The real estate industry has spent $280 million
-            across three California ballot cycles alone — all three measures
+            across three California ballot cycles alone, all three measures
             defeated with virtually identical margins. The voters of California
             have been given a choice between rent relief and the most expensive
             opposition campaign in ballot measure history, and the money has won
@@ -829,15 +827,15 @@ export default function IndustriesThatShapeDailyLifePage() {
 
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
             In 2012, Blackstone founded Invitation Homes and began purchasing
-            foreclosed single-family homes during the post-2008 crisis — roughly
+            foreclosed single-family homes during the post-2008 crisis, roughly
             50,000 homes for approximately $10 billion, with an average $25,000
             per home in renovations. In 2017, Invitation Homes received a
             landmark 10-year, $1 billion loan from Wells Fargo guaranteed by
-            Fannie Mae — the first government-backed securitization for
+            Fannie Mae, the first government-backed securitization for
             institutional single-family rentals. The federal government was now
             backing Wall Street&apos;s purchase of the family home. Blackstone
             divested its stake in November 2019, earning approximately $7
-            billion in profit — more than doubling its investment. It has since
+            billion in profit, more than doubling its investment. It has since
             re-entered the market, acquiring Tricon Residential&apos;s 61,964
             homes to become the third-largest single-family rental operator.
             Invitation Homes now controls 85,000 rental homes across 16 markets
@@ -848,8 +846,8 @@ export default function IndustriesThatShapeDailyLifePage() {
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
             Blackstone&apos;s political spending in the 2024 cycle totaled $48.6
             million in contributions plus $3.85 million in lobbying. Its
-            anti-rent-control spending — $7 million or more to defeat
-            California&apos;s Propositions 10 and 21 — came from pools of
+            anti-rent-control spending ($7 million or more to defeat
+            California&apos;s Propositions 10 and 21) came from pools of
             investor capital that included California public employee pension
             funds and University of California endowments. A UN Special
             Rapporteur wrote to Blackstone&apos;s CEO stating that the company
@@ -871,7 +869,7 @@ export default function IndustriesThatShapeDailyLifePage() {
             institutional investors. Blackstone and Invitation Homes shares
             dropped immediately. But the order directed the Treasury Secretary
             to define &ldquo;large institutional investor&rdquo; within 30 days
-            and HUD to issue guidance within 60 — leaving the definition, and
+            and HUD to issue guidance within 60, leaving the definition, and
             therefore the enforcement, to an administration that received $48.6
             million from Blackstone in the preceding election cycle. Senate
             Democrats introduced competing legislation, but the structural
@@ -921,8 +919,8 @@ export default function IndustriesThatShapeDailyLifePage() {
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
             Before the 2008 financial crisis, the mortgage industry built a
             bribery operation so brazen it was given a name. Countrywide
-            Financial&apos;s &ldquo;Friends of Angelo&rdquo; program — named for
-            CEO Angelo Mozilo — operated from 1991 to 2008, processing
+            Financial&apos;s &ldquo;Friends of Angelo&rdquo; program (named for
+            CEO Angelo Mozilo) operated from 1991 to 2008, processing
             approximately 17,979 preferential loans to politicians and officials
             who regulated the mortgage industry. Benefits included 0.5
             percentage point rate reductions, waived junk fees averaging $350 to
@@ -953,7 +951,7 @@ export default function IndustriesThatShapeDailyLifePage() {
             securitization issues adopted significantly riskier lending
             strategies, and delinquency rates in 2008 were significantly higher
             in areas where lobbying lenders had expanded fastest. The financial
-            industry then spent $2 billion or more fighting Dodd-Frank — $1
+            industry then spent $2 billion or more fighting Dodd-Frank, including $1
             billion to defeat it, $1 billion to weaken it after passage.
           </p>
 
@@ -965,7 +963,7 @@ export default function IndustriesThatShapeDailyLifePage() {
             The housing affordability crisis is reinforced at the local level by
             a web of zoning restrictions defended by homeowner lobbying and
             NIMBY activism. Single-family-exclusive zoning benefits existing
-            homeowners by restricting supply and inflating property values —
+            homeowners by restricting supply and inflating property values.
             creating a constituency with a direct financial interest in blocking
             affordable housing. In Michigan, 1,300 local government officials
             representing 6.2 million residents signed a letter opposing
@@ -973,9 +971,9 @@ export default function IndustriesThatShapeDailyLifePage() {
             strip local planning control. Local governments themselves spend
             millions annually through taxpayer-funded lobbying to defeat
             property tax and zoning reforms. The National Association of Home
-            Builders actually supports zoning reform — advocating for
+            Builders actually supports zoning reform, advocating for
             higher-density developments and statewide preemption of exclusionary
-            local zoning — placing it in rare disagreement with local government
+            local zoning, placing it in rare disagreement with local government
             lobbies and some homeowner associations.
           </p>
 
@@ -1021,9 +1019,9 @@ export default function IndustriesThatShapeDailyLifePage() {
             69% of its farms receive no subsidy payments. The top 10% of
             recipients collect 74% of all commodity subsidies. Four companies
             control 80% of the beef market. Three companies control 70% of
-            agrochemicals and 60% of commercial seeds. The Farm Bill — the
+            agrochemicals and 60% of commercial seeds. The Farm Bill, the
             single largest piece of recurring legislation in American
-            governance, reauthorized every five years — is shaped by $523
+            governance reauthorized every five years, is shaped by $523
             million in industry lobbying while public interest groups are
             outspent 4 to 1. The system was not designed to feed people. It was
             designed to concentrate profit, and it functions precisely as
@@ -1032,8 +1030,8 @@ export default function IndustriesThatShapeDailyLifePage() {
 
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
             Agribusiness lobbying has grown steadily and is now at record
-            levels. In 2023, the sector spent $178 million on federal lobbying —
-            a new record — with 1,300 or more registered lobbyists. This marked
+            levels. In 2023, the sector spent $178 million on federal lobbying,
+            a new record, with 1,300 or more registered lobbyists. This marked
             a 22% increase from the $145 million spent in 2019. The agribusiness
             sector contributed $124 million in campaign contributions during the
             2024 election cycle. The top Farm Bill lobbyists from 2019 to 2023
@@ -1101,9 +1099,9 @@ export default function IndustriesThatShapeDailyLifePage() {
 
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
             JBS&apos;s political influence operation is a masterclass in
-            transactional corruption. The company — whose founders, the Batista
+            transactional corruption. The company (whose founders, the Batista
             brothers, confessed in 2017 to bribing 1,900 Brazilian politicians
-            and paid a $27 million U.S. anti-corruption settlement in 2020 —
+            and paid a $27 million U.S. anti-corruption settlement in 2020)
             donated $5 million to Trump&apos;s 2025 inaugural committee through
             its subsidiary Pilgrim&apos;s Pride. The donation was five times
             what Meta or Amazon contributed, making it the single largest
@@ -1148,7 +1146,7 @@ export default function IndustriesThatShapeDailyLifePage() {
             or more on lobbying with 49 lobbyists across 13 firms, up from $8.47
             million in 2024 and $7.45 million in 2023. The company is seeking
             Farm Bill language that would create federal preemption to block
-            state failure-to-warn lawsuits — effectively making it illegal for
+            state failure-to-warn lawsuits, effectively making it illegal for
             states to require cancer warnings on products that have produced
             $2.1 billion jury verdicts.
           </p>
@@ -1159,7 +1157,7 @@ export default function IndustriesThatShapeDailyLifePage() {
             Idaho, Iowa, and Missouri for similar legislation in 2024, paying
             $123,250 in Iowa alone in 2025. Trump invoked the Defense Production
             Act to promote domestic glyphosate production, potentially granting
-            manufacturer immunity — described by industry observers as a
+            manufacturer immunity, described by industry observers as a
             &ldquo;watershed moment&rdquo; for pesticides. The FTC has
             separately sued Syngenta and Corteva for an illegal pay-to-block
             scheme using loyalty programs that required distributors to source
@@ -1216,7 +1214,7 @@ export default function IndustriesThatShapeDailyLifePage() {
             The Farm Bill is the most consequential piece of recurring
             legislation in American government, and its internal politics reveal
             whose interests the system actually serves. Approximately 81% of
-            Farm Bill mandatory spending goes to the Nutrition title — primarily
+            Farm Bill mandatory spending goes to the Nutrition title, primarily
             SNAP (food stamps), which cost roughly $100 billion in 2024 and
             accounts for about 50% of the entire USDA budget and 70% of all
             federal food assistance spending. SNAP feeds tens of millions of
@@ -1237,7 +1235,7 @@ export default function IndustriesThatShapeDailyLifePage() {
             of all commodity subsidies. Sixty-nine percent of U.S. farms receive
             nothing. The concentration at the top is extraordinary: 10,249
             recipients received farm subsidies every single year for 39
-            consecutive years (1985-2023), collecting $11.18 billion — an
+            consecutive years (1985-2023), collecting $11.18 billion, an
             average of $1.09 million each. The top 10 individuals collected $9
             to $20 million each over that period. Corn alone accounted for $3.2
             billion in subsidies in 2024, or 30.5% of all subsidy payments.
@@ -1245,8 +1243,7 @@ export default function IndustriesThatShapeDailyLifePage() {
 
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
             The sugar program stands as the most politically protected subsidy
-            in American agriculture. It costs taxpayers zero on paper —
-            operating as a loan program — but costs consumers $3.5 billion or
+            in American agriculture. It costs taxpayers zero on paper (operating as a loan program) but costs consumers $3.5 billion or
             more annually through artificially inflated prices. The Fanjul
             brothers, Alfonso and Jose &ldquo;Pepe&rdquo; Fanjul, own the
             world&apos;s largest cane sugar refiner (Domino, Florida Crystals
@@ -1268,7 +1265,7 @@ export default function IndustriesThatShapeDailyLifePage() {
 
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
             Trump&apos;s trade wars have cost American agriculture billions in
-            lost exports — and the bailouts have disproportionately enriched the
+            lost exports, and the bailouts have disproportionately enriched the
             largest operations. The Market Facilitation Program (MFP), created
             to compensate farmers for lost exports from Chinese tariff
             retaliation, distributed $23-28 billion from 2018 to 2020. The top
@@ -1277,7 +1274,7 @@ export default function IndustriesThatShapeDailyLifePage() {
             total payments. Farm subsidy payments ballooned from $4 billion in
             2017 to more than $20 billion in 2020. In December 2025, the Trump
             administration announced an additional $12 billion in
-            &ldquo;one-time bridge payments&rdquo; — bringing the total trade
+            &ldquo;one-time bridge payments&rdquo;, bringing the total trade
             war bailout to $35-40 billion.
           </p>
 
@@ -1341,22 +1338,22 @@ export default function IndustriesThatShapeDailyLifePage() {
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
             The chemical contamination of the American food supply is being
             defended by the same lobbying apparatus that protects every other
-            form of agricultural monopoly. PFAS — &ldquo;forever
+            form of agricultural monopoly. PFAS (&ldquo;forever
             chemicals&rdquo; linked to cancer, heart damage, hormone disruption,
             liver and thyroid problems, immune suppression, reproductive issues,
-            and abnormal fetal development — are the subject of intense industry
+            and abnormal fetal development) are the subject of intense industry
             lobbying to prevent regulation. The American Chemistry Council spent
             $600,000 on PFAS lobbying in 2024 alone. Under Trump, the EPA
             chemical regulation office is staffed by former industry lobbyists,
             and the agency has proposed five PFAS-based pesticides for
-            registration in less than a year — two already finalized — for use
+            registration in less than a year (two already finalized) for use
             on tomatoes, peas, lettuce, and other food crops. Five hundred pages
             of FOIA documents detail industry efforts to gut federal PFAS
             regulations.
           </p>
 
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
-            Ag-gag laws — state laws criminalizing undercover filming on farms —
+            Ag-gag laws (state laws criminalizing undercover filming on farms)
             represent the industry&apos;s effort to prevent the public from
             seeing how its food is produced. Multiple states have enacted these
             laws, including Iowa, Utah, North Carolina, Kansas, Montana, and
@@ -1379,16 +1376,16 @@ export default function IndustriesThatShapeDailyLifePage() {
             lobbying spending. Coca-Cola spent $4.93 million on lobbying in
             2024. McDonald&apos;s spent $2.95 million. The American Beverage
             Association doubled its spending to $1.7 million in the first half
-            of 2025. A new industry front group — Americans for Ingredient
-            Transparency, backed by Coca-Cola, Kraft Heinz, and Nestl&eacute; —
+            of 2025. A new industry front group (Americans for Ingredient
+            Transparency, backed by Coca-Cola, Kraft Heinz, and Nestl&eacute;)
             is pushing for national labeling preemption laws that would override
             state food safety regulations. The industry argues that MAHA
             regulations will raise food prices, betting that affordability
             concerns will override health concerns. Major food and beverage
             lobbying groups have sued states over food safety regulations. The
             USDA announced the first-ever added sugar limits in school meals in
-            2024 — breakfast cereals capped at 6 grams per dry ounce, yogurt at
-            2 grams per ounce, flavored milk at 10 grams per 8 fluid ounces —
+            2024 (breakfast cereals capped at 6 grams per dry ounce, yogurt at
+            2 grams per ounce, flavored milk at 10 grams per 8 fluid ounces),
             with gradual implementation from Fall 2025 through Fall 2027. The
             food industry claimed the standards were too severe and would cause
             food waste while spending millions to water them down.
@@ -1397,7 +1394,7 @@ export default function IndustriesThatShapeDailyLifePage() {
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
             Farmworker protections remain a regulatory blind spot.
             Farmworkers&apos; toxic chemical exposure does not fall under OSHA
-            jurisdiction like virtually all other American workers — an
+            jurisdiction like virtually all other American workers, an
             exclusion the agricultural industry actively lobbies to maintain.
             CropLife America, the American Farm Bureau, and allied organizations
             lobby against enhanced pesticide and worker safety regulations. OSHA
@@ -1412,7 +1409,7 @@ export default function IndustriesThatShapeDailyLifePage() {
             ecosystem of $64.9 million and 681 lobbyists. The industry&apos;s
             influence was historically amplified by Iowa&apos;s
             first-in-the-nation caucus status, with nine or more presidential
-            candidates visiting ethanol factories in 2016 — though Iowa&apos;s
+            candidates visiting ethanol factories in 2016, though Iowa&apos;s
             loss of the Democratic first primary to South Carolina has
             diminished this leverage.
           </p>
@@ -1508,7 +1505,7 @@ export default function IndustriesThatShapeDailyLifePage() {
             Follow the Money That Shapes Your Life
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-white/60">
-            Your broadband bill, your rent payment, your grocery receipt — each
+            Your broadband bill, your rent payment, your grocery receipt: each
             one reflects the lobbying investments documented in this chapter.
             Daonra&apos;s tools let you trace the connections from industry
             spending to the policies that set prices in your daily life.

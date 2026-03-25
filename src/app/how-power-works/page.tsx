@@ -20,7 +20,7 @@ const TOPICS = [
   {
     title: "How a Bill Becomes Law",
     description:
-      "The real process — committees, amendments, filibusters, reconciliation, and the gaps between civics class and reality.",
+      "The real process: committees, amendments, filibusters, reconciliation, and the gaps between civics class and reality.",
     href: "/how-power-works/bill-to-law",
     icon: BookOpen,
     live: true,
@@ -36,7 +36,7 @@ const TOPICS = [
   {
     title: "The Federal Budget",
     description:
-      "Where your tax dollars go — discretionary vs. mandatory spending, the debt ceiling, and who decides.",
+      "Where your tax dollars go: discretionary vs. mandatory spending, the debt ceiling, and who decides.",
     href: "/how-power-works/federal-budget",
     icon: DollarSign,
     live: true,
@@ -52,7 +52,7 @@ const TOPICS = [
   {
     title: "Local Government 101",
     description:
-      "City councils, school boards, zoning commissions — the local bodies that affect your daily life the most.",
+      "City councils, school boards, zoning commissions: the local bodies that affect your daily life the most.",
     href: "/how-power-works/local-government",
     icon: Users,
     live: true,
@@ -78,7 +78,7 @@ export default function HowPowerWorksPage() {
           Demystifying Government
         </h1>
         <p className="mt-6 max-w-2xl text-xl leading-relaxed text-ink/70">
-          Clear, nonpartisan explainers on how the system actually works — from
+          Clear, nonpartisan explainers on how the system actually works, from
           how a bill becomes law to how gerrymandering shapes elections. No
           jargon, no spin.
         </p>

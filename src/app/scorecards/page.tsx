@@ -20,8 +20,7 @@ export default function ScorecardsPage() {
         </h1>
         <p className="mt-6 max-w-2xl text-xl leading-relaxed text-ink/70">
           Voting records, stock trades, donor maps, and attendance scores. See
-          how your representatives actually perform — not just what they
-          promise.
+          how your representatives actually perform, not just what they promise.
         </p>
 
         <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -34,12 +33,12 @@ export default function ScorecardsPage() {
             {
               title: "Stock Trade Tracker",
               description:
-                "Congressional stock trades disclosed under the STOCK Act. See who's trading what — and whether it aligns with their committee work.",
+                "Congressional stock trades disclosed under the STOCK Act. See who's trading what, and whether it aligns with their committee work.",
             },
             {
               title: "Donor Maps",
               description:
-                "Interactive maps showing who funds your representatives — by industry, geography, and amount.",
+                "Interactive maps showing who funds your representatives, broken down by industry, geography, and amount.",
             },
             {
               title: "Attendance Scores",
@@ -49,12 +48,12 @@ export default function ScorecardsPage() {
             {
               title: "Promise Tracker",
               description:
-                "Campaign promises vs. legislative action. See which representatives follow through — and which don't.",
+                "Campaign promises vs. legislative action. See which representatives follow through, and which don't.",
             },
             {
               title: "Comparison Tool",
               description:
-                "Compare any two legislators side by side — voting records, donors, trades, and more.",
+                "Compare any two legislators side by side: voting records, donors, trades, and more.",
             },
           ].map((item) => (
             <div

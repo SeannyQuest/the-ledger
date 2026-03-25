@@ -14,35 +14,35 @@ const SCROLLYTELL_STEPS: ScrollytellStep[] = [
   {
     id: "trend",
     title: "The Trend",
-    body: "In the 1970s, roughly 25% of departing members of Congress went on to become lobbyists. By 2019, that number had surged to 65%, according to Public Citizen. The revolving door didn't open gradually — it was ripped off its hinges. As lobbying became more lucrative and legislative experience more valuable to corporations, the pipeline from public service to private influence became the default career path on Capitol Hill.",
+    body: "In the 1970s, roughly 25% of departing members of Congress went on to become lobbyists. By 2019, that number had surged to 65%, according to Public Citizen. The revolving door didn't open gradually. It was ripped off its hinges. As lobbying became more lucrative and legislative experience more valuable to corporations, the pipeline from public service to private influence became the default career path on Capitol Hill.",
     stat: { value: "65%", label: "Of Congress Becomes Lobbyists", color: "#c41d1d" },
     highlightColor: "#c41d1d",
   },
   {
     id: "bypass",
     title: "The Bypass",
-    body: "Federal law imposes a one-year 'cooling-off period' for House members and a two-year period for Senators before they can register as lobbyists. In practice, former officials simply become 'strategic consultants' or 'senior advisors' at lobbying firms — performing exactly the same work without formally registering. This shadow lobbying is perfectly legal, widely practiced, and makes the cooling-off period essentially meaningless.",
+    body: "Federal law imposes a one-year 'cooling-off period' for House members and a two-year period for Senators before they can register as lobbyists. In practice, former officials simply become 'strategic consultants' or 'senior advisors' at lobbying firms, performing exactly the same work without formally registering. This shadow lobbying is perfectly legal, widely practiced, and makes the cooling-off period essentially meaningless.",
     stat: { value: "1-2yr", label: "Cooling-Off Period (Easily Bypassed)", color: "accent" },
     highlightColor: "#d97706",
   },
   {
     id: "revenue",
     title: "The Revenue",
-    body: "Research shows a direct correlation between a lobbyist's revenue and their former boss's committee assignments. A former staffer from the Senate Finance Committee commands dramatically higher fees than one from a less powerful committee. The value isn't expertise — it's access. When a former chief of staff calls their old boss's office, the call gets returned. When an outsider calls, it doesn't.",
+    body: "Research shows a direct correlation between a lobbyist's revenue and their former boss's committee assignments. A former staffer from the Senate Finance Committee commands dramatically higher fees than one from a less powerful committee. The value isn't expertise. It's access. When a former chief of staff calls their old boss's office, the call gets returned. When an outsider calls, it doesn't.",
     stat: { value: "$$$", label: "Revenue Tied to Former Boss's Committee", color: "money-in" },
     highlightColor: "#1a7a3a",
   },
   {
     id: "network",
     title: "The Network",
-    body: "Former officials don't just carry Rolodexes — they carry institutional knowledge. They know which staffers draft which provisions. They know when a bill is about to move. They know who owes whom a favor. This network effect means that the revolving door doesn't just benefit individuals — it creates an entire ecosystem where private interests have better intelligence about government than the public does.",
+    body: "Former officials don't just carry Rolodexes. They carry institutional knowledge. They know which staffers draft which provisions. They know when a bill is about to move. They know who owes whom a favor. This network effect means that the revolving door doesn't just benefit individuals. It creates an entire ecosystem where private interests have better intelligence about government than the public does.",
     stat: { value: "740+", label: "Former Officials as Lobbyists (Defense Alone)", color: "accent" },
     highlightColor: "#d97706",
   },
   {
     id: "system",
     title: "The System",
-    body: "The end result is regulatory capture — the phenomenon where the industries being regulated effectively control their regulators. Former Pentagon officials oversee defense budgets, then leave to work for defense contractors. Former FDA officials approve drugs, then join the pharmaceutical companies whose products they reviewed. Former SEC commissioners write financial regulations, then defend Wall Street firms against those same rules. The fox doesn't just guard the henhouse — it designed it.",
+    body: "The end result is regulatory capture: the phenomenon where the industries being regulated effectively control their regulators. Former Pentagon officials oversee defense budgets, then leave to work for defense contractors. Former FDA officials approve drugs, then join the pharmaceutical companies whose products they reviewed. Former SEC commissioners write financial regulations, then defend Wall Street firms against those same rules. The fox doesn't just guard the henhouse. It designed it.",
     stat: { value: "100%", label: "Regulatory Capture Cycle", color: "#c41d1d" },
     highlightColor: "#c41d1d",
   },
@@ -98,8 +98,8 @@ export default function RevolvingDoorStory() {
           </h1>
 
           <p className="mt-6 max-w-2xl text-xl leading-relaxed text-white/70 lg:text-2xl">
-            65% of Congress walks through the revolving door into lobbying —{" "}
-            <span className="font-semibold text-white">the cooling-off period is fiction</span>.
+            65% of Congress walks through the revolving door into lobbying,{" "}
+            <span className="font-semibold text-white">and the cooling-off period is fiction</span>.
           </p>
 
           <div className="mt-8 flex items-center gap-6 text-sm text-white/50">
@@ -131,8 +131,7 @@ export default function RevolvingDoorStory() {
             There is a door on K Street that never stops spinning. Every term, members of Congress
             leave office and walk directly into lobbying firms, trading their public trust for
             private paydays. They bring with them relationships, institutional knowledge, and
-            access that no amount of money can buy on the open market. The cooling-off period —
-            the thin ethical guardrail meant to prevent this — is routinely circumvented through
+            access that no amount of money can buy on the open market. The cooling-off period, the thin ethical guardrail meant to prevent this, is routinely circumvented through
             &ldquo;strategic consulting&rdquo; arrangements that perform exactly the same function
             as lobbying without the registration requirement.
           </p>
@@ -141,7 +140,7 @@ export default function RevolvingDoorStory() {
             Daonra examined the career trajectories of every member of Congress who left
             office between 2010 and 2024, cross-referencing their post-government employment
             with lobbying registration records and corporate disclosures. We found that the
-            revolving door is not a metaphor — it is a business model, and the most profitable
+            revolving door is not a metaphor. It is a business model, and the most profitable
             one in Washington.
           </p>
 
@@ -156,7 +155,7 @@ export default function RevolvingDoorStory() {
       {/* Scrollytelling section */}
       <ScrollytellSection
         headline="Through the Revolving Door"
-        subhead="Five steps trace the path from public service to private influence — and back again."
+        subhead="Five steps trace the path from public service to private influence, and back again."
         steps={SCROLLYTELL_STEPS}
         bgColor="bg-ink"
         textColor="text-white"
@@ -184,10 +183,10 @@ export default function RevolvingDoorStory() {
             Regulatory Capture in Action
           </h2>
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
-            The revolving door doesn&apos;t just create conflicts of interest — it creates a
+            The revolving door doesn&apos;t just create conflicts of interest. It creates a
             fundamental power imbalance between regulated industries and the public. When a
             former four-star general joins a defense contractor&apos;s board, their former
-            subordinates — now running procurement — face an impossible dynamic. When a former
+            subordinates (now running procurement) face an impossible dynamic. When a former
             FDA division director joins a pharmaceutical company, their former colleagues at the
             agency understand the implicit career incentive: be industry-friendly, and the door
             opens for you too.
@@ -197,7 +196,7 @@ export default function RevolvingDoorStory() {
             need to corrupt individual officials. The system itself aligns incentives: be
             favorable to industry during your government tenure, and be rewarded with a
             lucrative private-sector career afterward. The result is regulation that serves
-            the regulated — not the public.
+            the regulated, not the public.
           </p>
 
           {/* Inline stat callout */}
@@ -223,8 +222,8 @@ export default function RevolvingDoorStory() {
           </div>
 
           <p className="text-lg leading-relaxed text-ink/70">
-            Reform proposals — lifetime lobbying bans, longer cooling-off periods, expanded
-            definitions of lobbying activity — are introduced regularly and go nowhere. The
+            Reform proposals (lifetime lobbying bans, longer cooling-off periods, expanded
+            definitions of lobbying activity) are introduced regularly and go nowhere. The
             people who would need to vote for reform are the same people who benefit from
             the current system. The revolving door is self-protecting: the very officials who
             could close it have the most to lose from doing so.

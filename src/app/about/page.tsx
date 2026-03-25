@@ -125,7 +125,7 @@ export default function AboutPage() {
             <HowItWorksStep
               icon={<GitMerge className="h-5 w-5" />}
               title="2. Resolve"
-              description='The same entity appears under different names across sources. "Google LLC" in FEC filings, "Alphabet Inc" in SEC filings, "GOOGLE LLC" in lobbying disclosures — all the same entity. We use exact ID matching, normalized name matching, and contextual signals to unify records.'
+              description='The same entity appears under different names across sources. "Google LLC" in FEC filings, "Alphabet Inc" in SEC filings, "GOOGLE LLC" in lobbying disclosures. All the same entity. We use exact ID matching, normalized name matching, and contextual signals to unify records.'
             />
             <HowItWorksStep
               icon={<BarChart3 className="h-5 w-5" />}

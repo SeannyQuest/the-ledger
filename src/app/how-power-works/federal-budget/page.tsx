@@ -25,7 +25,7 @@ import {
 export const metadata: Metadata = {
   title: "The Federal Budget Explained | Daonra",
   description:
-    "Where your $6.1 trillion in federal taxes actually goes — mandatory vs. discretionary spending, the debt ceiling, and who really decides.",
+    "Where your $6.1 trillion in federal taxes actually goes: mandatory vs. discretionary spending, the debt ceiling, and who really decides.",
 };
 
 export default function FederalBudgetPage() {
@@ -48,7 +48,7 @@ export default function FederalBudgetPage() {
           <p className="mt-6 max-w-2xl text-xl leading-relaxed text-white/70">
             The U.S. government spends roughly{" "}
             <span className="font-bold text-white">$6.1 trillion</span> per year
-            — more than the GDP of every country except the U.S. itself. Almost
+            , more than the GDP of every country except the U.S. itself. Almost
             two-thirds of it is on autopilot. Here is how it works.
           </p>
 
@@ -75,8 +75,7 @@ export default function FederalBudgetPage() {
 
       {/* ── Body ── */}
       <div className="mx-auto max-w-4xl px-4 py-20 lg:px-8">
-
-        {/* Part I — Two Buckets */}
+        {/* Part I: Two Buckets */}
         <section>
           <div className="font-mono text-xs font-bold uppercase tracking-[0.3em] text-accent">
             Part I
@@ -87,7 +86,7 @@ export default function FederalBudgetPage() {
           <p className="mt-5 text-base leading-relaxed text-ink/70">
             The federal budget is divided into two fundamentally different
             categories. Understanding this split is the single most important
-            thing you can know about government spending — because most of the
+            thing you can know about government spending, because most of the
             political battles you see on the news are only about one of them.
           </p>
 
@@ -107,7 +106,7 @@ export default function FederalBudgetPage() {
                 Spending required by existing law. Congress does not vote on
                 this every year. It flows automatically based on who qualifies
                 under the law. To change it, Congress must change the underlying
-                statute — a much higher political bar.
+                statute, a much higher political bar.
               </p>
               <ul className="mt-4 space-y-2 text-sm text-ink/80">
                 {[
@@ -132,7 +131,7 @@ export default function FederalBudgetPage() {
                   <li key={item.program} className="flex items-start gap-2">
                     <span className="mt-0.5 font-bold text-accent">›</span>
                     <span>
-                      <strong className="text-ink">{item.program}</strong> —{" "}
+                      <strong className="text-ink">{item.program}</strong>:{" "}
                       {item.pct}
                     </span>
                   </li>
@@ -168,12 +167,15 @@ export default function FederalBudgetPage() {
                     program: "Education, housing, transportation, research",
                     pct: "Included in non-defense",
                   },
-                  { program: "Veterans' health (VA)", pct: "Included in non-defense" },
+                  {
+                    program: "Veterans' health (VA)",
+                    pct: "Included in non-defense",
+                  },
                 ].map((item) => (
                   <li key={item.program} className="flex items-start gap-2">
                     <span className="mt-0.5 font-bold text-ink/40">›</span>
                     <span>
-                      <strong className="text-ink">{item.program}</strong> —{" "}
+                      <strong className="text-ink">{item.program}</strong>:{" "}
                       {item.pct}
                     </span>
                   </li>
@@ -185,15 +187,15 @@ export default function FederalBudgetPage() {
           <div className="mt-8 rounded-xl border-l-4 border-accent bg-accent/5 p-5">
             <p className="text-sm font-medium leading-relaxed text-ink/80">
               <strong className="text-ink">The key insight:</strong> When
-              politicians fight over the budget, they are typically fighting over
-              the 28% that is discretionary. The other 67%+ is legally
+              politicians fight over the budget, they are typically fighting
+              over the 28% that is discretionary. The other 67%+ is legally
               automatic. Cutting Social Security or Medicare requires passing a
               new law, not just losing a budget vote.
             </p>
           </div>
         </section>
 
-        {/* Part II — Where It Goes */}
+        {/* Part II: Where It Goes */}
         <section className="mt-20">
           <div className="font-mono text-xs font-bold uppercase tracking-[0.3em] text-accent">
             Part II
@@ -215,8 +217,7 @@ export default function FederalBudgetPage() {
                 pct: "24%",
                 color: "text-blue-600",
                 bg: "bg-blue-50",
-                note:
-                  "Monthly payments to 67 million retired and disabled Americans and their dependents. Funded by payroll taxes, not general revenue — though the trust fund is drawing down.",
+                note: "Monthly payments to 67 million retired and disabled Americans and their dependents. Funded by payroll taxes, not general revenue, though the trust fund is drawing down.",
               },
               {
                 icon: Heart,
@@ -225,8 +226,7 @@ export default function FederalBudgetPage() {
                 pct: "14%",
                 color: "text-rose-600",
                 bg: "bg-rose-50",
-                note:
-                  "Health coverage for 67 million people over 65 or with qualifying disabilities. Split into Part A (hospital), Part B (outpatient), Part C (Medicare Advantage), and Part D (drugs).",
+                note: "Health coverage for 67 million people over 65 or with qualifying disabilities. Split into Part A (hospital), Part B (outpatient), Part C (Medicare Advantage), and Part D (drugs).",
               },
               {
                 icon: Heart,
@@ -235,8 +235,7 @@ export default function FederalBudgetPage() {
                 pct: "10%",
                 color: "text-pink-600",
                 bg: "bg-pink-50",
-                note:
-                  "Health coverage for 90 million low-income adults, children, pregnant women, elderly, and people with disabilities. Joint federal-state program — feds pay 50-75% depending on the state.",
+                note: "Health coverage for 90 million low-income adults, children, pregnant women, elderly, and people with disabilities. Joint federal-state program. Feds pay 50-75% depending on the state.",
               },
               {
                 icon: TrendingUp,
@@ -245,8 +244,7 @@ export default function FederalBudgetPage() {
                 pct: "14%",
                 color: "text-orange-600",
                 bg: "bg-orange-50",
-                note:
-                  "Interest payments on the $34+ trillion national debt. This is now the fastest-growing line item in the federal budget. It exceeded defense spending for the first time in FY2024.",
+                note: "Interest payments on the $34+ trillion national debt. This is now the fastest-growing line item in the federal budget. It exceeded defense spending for the first time in FY2024.",
               },
               {
                 icon: Shield,
@@ -255,8 +253,7 @@ export default function FederalBudgetPage() {
                 pct: "14%",
                 color: "text-slate-600",
                 bg: "bg-slate-50",
-                note:
-                  "The Department of Defense base budget, nuclear weapons (DOE), and military construction. Does not include Veterans Affairs, intelligence agencies, or military retirement (counted elsewhere).",
+                note: "The Department of Defense base budget, nuclear weapons (DOE), and military construction. Does not include Veterans Affairs, intelligence agencies, or military retirement (counted elsewhere).",
               },
               {
                 icon: Building2,
@@ -265,8 +262,7 @@ export default function FederalBudgetPage() {
                 pct: "14%",
                 color: "text-green-600",
                 bg: "bg-green-50",
-                note:
-                  "Everything else Congress funds annually: education, housing, transportation, NASA, EPA, FDA, NIH research, foreign aid, federal law enforcement, and more. This is the entire domestic agenda.",
+                note: "Everything else Congress funds annually: education, housing, transportation, NASA, EPA, FDA, NIH research, foreign aid, federal law enforcement, and more. This is the entire domestic agenda.",
               },
               {
                 icon: Users,
@@ -275,8 +271,7 @@ export default function FederalBudgetPage() {
                 pct: "9%",
                 color: "text-purple-600",
                 bg: "bg-purple-50",
-                note:
-                  "Supplemental Nutrition Assistance Program (SNAP/food stamps), TANF (welfare), veterans' compensation, federal employee retirement, Earned Income Tax Credit, and other mandatory programs.",
+                note: "Supplemental Nutrition Assistance Program (SNAP/food stamps), TANF (welfare), veterans' compensation, federal employee retirement, Earned Income Tax Credit, and other mandatory programs.",
               },
             ].map((item) => {
               const Icon = item.icon;
@@ -314,7 +309,7 @@ export default function FederalBudgetPage() {
           </div>
         </section>
 
-        {/* Part III — How the Budget Is Made */}
+        {/* Part III: How the Budget Is Made */}
         <section className="mt-20">
           <div className="font-mono text-xs font-bold uppercase tracking-[0.3em] text-accent">
             Part III
@@ -340,14 +335,14 @@ export default function FederalBudgetPage() {
                 title: "President Submits a Budget Request",
                 timing: "First Monday in February",
                 detail:
-                  "The Office of Management and Budget (OMB) compiles a detailed budget proposal on behalf of the President. It is a political statement as much as a financial one — it lists priorities, not law. Congress is not required to follow it. The President's budget often arrives late.",
+                  "The Office of Management and Budget (OMB) compiles a detailed budget proposal on behalf of the President. It is a political statement as much as a financial one: it lists priorities, not law. Congress is not required to follow it. The President's budget often arrives late.",
               },
               {
                 step: "2",
                 title: "Congressional Budget Committees Write a Resolution",
                 timing: "April 15 deadline (rarely met)",
                 detail:
-                  "The House and Senate Budget Committees each draft a 'budget resolution' setting overall spending caps and targets. This is not a law — the President cannot veto it. It is a framework. When the two chambers agree, it passes as a concurrent resolution.",
+                  "The House and Senate Budget Committees each draft a 'budget resolution' setting overall spending caps and targets. This is not a law, and the President cannot veto it. It is a framework. When the two chambers agree, it passes as a concurrent resolution.",
               },
               {
                 step: "3",
@@ -368,7 +363,7 @@ export default function FederalBudgetPage() {
                 title: "President Signs (or Vetoes)",
                 timing: "Before or just after October 1",
                 detail:
-                  "If all 12 bills are signed, the government is funded. If not — which is the norm — Congress passes a Continuing Resolution (CR) to keep the government open at prior funding levels while negotiations continue.",
+                  "If all 12 bills are signed, the government is funded. If not, which is the norm, Congress passes a Continuing Resolution (CR) to keep the government open at prior funding levels while negotiations continue.",
               },
             ].map((s) => (
               <li key={s.step} className="flex items-start gap-5">
@@ -397,9 +392,9 @@ export default function FederalBudgetPage() {
             B. The Reality: CRs, Omnibuses, and Shutdowns
           </h3>
           <p className="mt-4 text-sm leading-relaxed text-ink/70">
-            Congress has passed all 12 appropriations bills on time exactly
-            four times since 1977. That is not a typo. The normal operating
-            mode of the federal government is some combination of:
+            Congress has passed all 12 appropriations bills on time exactly four
+            times since 1977. That is not a typo. The normal operating mode of
+            the federal government is some combination of:
           </p>
 
           <div className="mt-6 grid gap-4 md:grid-cols-3">
@@ -407,12 +402,12 @@ export default function FederalBudgetPage() {
               {
                 icon: RefreshCw,
                 title: "Continuing Resolution (CR)",
-                desc: "A stopgap measure that keeps the government funded at prior-year levels while Congress fails to pass the real budget. CRs can last a week or a full year. They freeze programs in place — no new initiatives, no new hiring, no contract adjustments.",
+                desc: "A stopgap measure that keeps the government funded at prior-year levels while Congress fails to pass the real budget. CRs can last a week or a full year. They freeze programs in place, with no new initiatives, no new hiring, no contract adjustments.",
               },
               {
                 icon: FileText,
                 title: "Omnibus Bill",
-                desc: "When Congress bundles all 12 unfinished appropriations bills into one massive package — sometimes 4,000+ pages long — and passes it hours before a deadline. Few members have read it. Riders (unrelated provisions) get tucked in. This has become the standard operating procedure.",
+                desc: "When Congress bundles all 12 unfinished appropriations bills into one massive package (sometimes 4,000+ pages long) and passes it hours before a deadline. Few members have read it. Riders (unrelated provisions) get tucked in. This has become the standard operating procedure.",
               },
               {
                 icon: AlertTriangle,
@@ -449,10 +444,10 @@ export default function FederalBudgetPage() {
           <p className="mt-3 text-sm leading-relaxed text-ink/70">
             Normal legislation in the Senate requires 60 votes to overcome a
             filibuster. Budget reconciliation bills can pass with a simple
-            majority — 51 votes. The catch: reconciliation can only be used
+            majority of 51 votes. The catch: reconciliation can only be used
             once per year, only for provisions that directly change spending,
-            revenues, or the debt limit, and cannot add to the long-term
-            deficit (the Byrd Rule).
+            revenues, or the debt limit, and cannot add to the long-term deficit
+            (the Byrd Rule).
           </p>
           <div className="mt-5 rounded-xl border border-border bg-surface p-5">
             <h4 className="font-headline text-base font-bold text-ink">
@@ -476,7 +471,7 @@ export default function FederalBudgetPage() {
           </div>
         </section>
 
-        {/* Part IV — The Debt Ceiling */}
+        {/* Part IV: The Debt Ceiling */}
         <section className="mt-20">
           <div className="font-mono text-xs font-bold uppercase tracking-[0.3em] text-accent">
             Part IV
@@ -485,8 +480,8 @@ export default function FederalBudgetPage() {
             The Debt Ceiling
           </h2>
           <p className="mt-5 text-base leading-relaxed text-ink/70">
-            The debt ceiling is one of the most misunderstood concepts in American
-            politics. Here is what it actually is and why it matters.
+            The debt ceiling is one of the most misunderstood concepts in
+            American politics. Here is what it actually is and why it matters.
           </p>
 
           <div className="mt-8 space-y-6 text-sm leading-relaxed text-ink/80">
@@ -497,11 +492,10 @@ export default function FederalBudgetPage() {
               <p className="mt-3">
                 The debt ceiling is a legal limit on how much the federal
                 government can borrow to pay bills it has already incurred.
-                Raising it does not authorize new spending — it allows the
-                Treasury to pay obligations Congress already voted for.
-                Refusing to raise the debt ceiling is like buying a car, having
-                the bill sent home, and then refusing to pay the credit card
-                statement.
+                Raising it does not authorize new spending. It allows the
+                Treasury to pay obligations Congress already voted for. Refusing
+                to raise the debt ceiling is like buying a car, having the bill
+                sent home, and then refusing to pay the credit card statement.
               </p>
             </div>
 
@@ -512,7 +506,7 @@ export default function FederalBudgetPage() {
               <p className="mt-3">
                 The U.S. national debt exceeded $34 trillion in 2024. The debt
                 ceiling has been raised, revised, or suspended 78 times since
-                1960. It has been raised under every President — Republican and
+                1960. It has been raised under every President, Republican and
                 Democrat alike.
               </p>
             </div>
@@ -522,7 +516,7 @@ export default function FederalBudgetPage() {
                 Why It Is Used as a Bargaining Chip
               </h3>
               <p className="mt-3">
-                Defaulting on U.S. debt would be catastrophic — triggering a
+                Defaulting on U.S. debt would be catastrophic, triggering a
                 global financial crisis, spiking interest rates, and wiping out
                 the economic foundation of the dollar as the world's reserve
                 currency. This is precisely why threatening not to raise it has
@@ -538,11 +532,12 @@ export default function FederalBudgetPage() {
               </h3>
               <p className="mt-3">
                 When the debt ceiling is hit, the Treasury Secretary can take
-                "extraordinary measures" — accounting maneuvers that delay
-                default for weeks or months. These include suspending reinvestment
-                in federal employee pension funds, halting new state and local
-                government series securities, and similar financial engineering.
-                They buy time; they do not solve the problem.
+                "extraordinary measures," accounting maneuvers that delay
+                default for weeks or months. These include suspending
+                reinvestment in federal employee pension funds, halting new
+                state and local government series securities, and similar
+                financial engineering. They buy time; they do not solve the
+                problem.
               </p>
             </div>
           </div>
@@ -553,12 +548,12 @@ export default function FederalBudgetPage() {
               bargaining chip.&rdquo;
             </p>
             <cite className="mt-2 block font-mono text-xs text-muted not-italic">
-              — Treasury Secretary Janet Yellen, 2023
+              - Treasury Secretary Janet Yellen, 2023
             </cite>
           </blockquote>
         </section>
 
-        {/* Part V — Deficit vs Debt */}
+        {/* Part V: Deficit vs Debt */}
         <section className="mt-20">
           <div className="font-mono text-xs font-bold uppercase tracking-[0.3em] text-accent">
             Part V
@@ -567,7 +562,7 @@ export default function FederalBudgetPage() {
             Deficit vs. Debt: The Difference That Matters
           </h2>
           <p className="mt-5 text-base leading-relaxed text-ink/70">
-            These two terms are routinely confused — including by politicians.
+            These two terms are routinely confused, including by politicians.
           </p>
 
           <div className="mt-8 grid gap-6 md:grid-cols-2">
@@ -579,11 +574,10 @@ export default function FederalBudgetPage() {
                 ~$1.7 trillion (FY2023)
               </div>
               <p className="mt-3 text-sm leading-relaxed text-ink/70">
-                The{" "}
-                <strong className="text-ink">annual shortfall</strong> — how
+                The <strong className="text-ink">annual shortfall</strong>: how
                 much more the government spent than it collected in taxes in a
-                single year. The deficit can go up or down year to year based
-                on economic conditions, tax policy, and spending decisions.
+                single year. The deficit can go up or down year to year based on
+                economic conditions, tax policy, and spending decisions.
               </p>
               <p className="mt-3 text-sm leading-relaxed text-ink/70">
                 Think of it as your household spending $5,000 more than you
@@ -599,12 +593,11 @@ export default function FederalBudgetPage() {
                 $34+ trillion
               </div>
               <p className="mt-3 text-sm leading-relaxed text-ink/70">
-                The{" "}
-                <strong className="text-ink">accumulated total</strong> of all
-                past deficits minus surpluses. Every year the government runs a
-                deficit, it adds to the debt by borrowing (issuing Treasury
-                bonds). The national debt has grown in almost every year since
-                World War II.
+                The <strong className="text-ink">accumulated total</strong> of
+                all past deficits minus surpluses. Every year the government
+                runs a deficit, it adds to the debt by borrowing (issuing
+                Treasury bonds). The national debt has grown in almost every
+                year since World War II.
               </p>
               <p className="mt-3 text-sm leading-relaxed text-ink/70">
                 Think of it as your household's total outstanding credit card
@@ -638,7 +631,7 @@ export default function FederalBudgetPage() {
                 <li key={item.holder} className="flex items-start gap-2">
                   <span className="mt-0.5 font-bold text-accent">›</span>
                   <span>
-                    <strong className="text-ink">{item.holder}</strong> —{" "}
+                    <strong className="text-ink">{item.holder}</strong>:{" "}
                     {item.pct}
                     <span className="ml-1 text-muted">({item.note})</span>
                   </span>
@@ -648,7 +641,7 @@ export default function FederalBudgetPage() {
           </div>
         </section>
 
-        {/* Part VI — Who Decides */}
+        {/* Part VI: Who Decides */}
         <section className="mt-20">
           <div className="font-mono text-xs font-bold uppercase tracking-[0.3em] text-accent">
             Part VI
@@ -657,7 +650,7 @@ export default function FederalBudgetPage() {
             Who Actually Decides
           </h2>
           <p className="mt-5 text-base leading-relaxed text-ink/70">
-            Budget decisions involve more actors than most people realize — and
+            Budget decisions involve more actors than most people realize, and
             real power is concentrated in fewer hands than the official process
             suggests.
           </p>
@@ -667,37 +660,37 @@ export default function FederalBudgetPage() {
               {
                 icon: Building2,
                 actor: "The Appropriations Committees",
-                power: "Highest — on discretionary spending",
+                power: "Highest, on discretionary spending",
                 detail:
                   "The most important committees in Congress for day-to-day spending. The 12 subcommittees on each side control the funding for every federal department and agency. Members of these committees are highly sought by lobbyists. They can add or strip specific line items, defund programs, and attach policy riders to funding bills.",
               },
               {
                 icon: Landmark,
                 actor: "The Budget Committees",
-                power: "Medium — sets the framework",
+                power: "Medium, sets the framework",
                 detail:
                   "Write the budget resolution that sets overall spending targets. Less powerful than Appropriations but important for setting the fiscal contours of a given year.",
               },
               {
                 icon: Users,
                 actor: "Leadership (Speaker, Majority Leader, Whips)",
-                power: "High — controls the floor schedule",
+                power: "High, controls the floor schedule",
                 detail:
                   "Leadership decides what comes to the floor for a vote and when. They can block budget bills they don't want members to vote on, or fast-track deals reached in private. Most budget agreements happen in leadership-to-leadership negotiations, not public committee hearings.",
               },
               {
                 icon: Building2,
                 actor: "The President and OMB",
-                power: "Medium — proposes, does not dispose",
+                power: "Medium, proposes, does not dispose",
                 detail:
-                  "The President submits a budget request but cannot spend money Congress hasn't appropriated. However, the White House has significant leverage through veto threats, executive orders, and impoundment (delaying or refusing to spend appropriated funds — though impoundment is heavily restricted by the 1974 Budget Act).",
+                  "The President submits a budget request but cannot spend money Congress hasn't appropriated. However, the White House has significant leverage through veto threats, executive orders, and impoundment (delaying or refusing to spend appropriated funds, though impoundment is heavily restricted by the 1974 Budget Act).",
               },
               {
                 icon: BarChart3,
                 actor: "The Congressional Budget Office (CBO)",
-                power: "Structural — the scorekeeper",
+                power: "Structural, the scorekeeper",
                 detail:
-                  "The nonpartisan referee. CBO 'scores' legislation — telling Congress what it will cost and how it affects the deficit. Bills that CBO says cost too much often die or get restructured. Politicians fight to influence CBO scoring assumptions. Its rulings are not binding, but they shape the entire debate.",
+                  "The nonpartisan referee. CBO 'scores' legislation, telling Congress what it will cost and how it affects the deficit. Bills that CBO says cost too much often die or get restructured. Politicians fight to influence CBO scoring assumptions. Its rulings are not binding, but they shape the entire debate.",
               },
             ].map((item) => {
               const Icon = item.icon;
@@ -728,7 +721,7 @@ export default function FederalBudgetPage() {
           </div>
         </section>
 
-        {/* Part VII — Why Interest Is the Sleeper Issue */}
+        {/* Part VII: Why Interest Is the Sleeper Issue */}
         <section className="mt-20">
           <div className="font-mono text-xs font-bold uppercase tracking-[0.3em] text-accent">
             Part VII
@@ -737,8 +730,8 @@ export default function FederalBudgetPage() {
             Interest: The Sleeper Issue
           </h2>
           <p className="mt-5 text-base leading-relaxed text-ink/70">
-            The fastest-growing line item in the federal budget is one almost
-            no one talks about: interest on the national debt.
+            The fastest-growing line item in the federal budget is one almost no
+            one talks about: interest on the national debt.
           </p>
 
           <div className="mt-8 grid gap-5 sm:grid-cols-3">
@@ -775,21 +768,21 @@ export default function FederalBudgetPage() {
           </div>
 
           <p className="mt-6 text-sm leading-relaxed text-ink/70">
-            Interest payments are mandatory — you cannot cut them without
+            Interest payments are mandatory. You cannot cut them without
             defaulting on U.S. debt. As interest rates rose from near-zero in
             2021 to over 5% in 2023, the cost of servicing existing debt
             exploded. The CBO projects interest payments will exceed $1 trillion
-            annually by 2026 and continue rising — crowding out funding for
+            annually by 2026 and continue rising, crowding out funding for
             everything else.
           </p>
           <p className="mt-3 text-sm leading-relaxed text-ink/70">
             Interest on the debt is now the second-largest line item in the
             federal budget, behind only Social Security. Unlike Social Security,
-            it provides nothing to anyone — it is the price of past decisions.
+            it provides nothing to anyone. It is the price of past decisions.
           </p>
         </section>
 
-        {/* Part VIII — What You Can Do */}
+        {/* Part VIII: What You Can Do */}
         <section className="mt-20">
           <div className="font-mono text-xs font-bold uppercase tracking-[0.3em] text-accent">
             Part VIII
@@ -808,14 +801,14 @@ export default function FederalBudgetPage() {
               {
                 icon: BarChart3,
                 title: "Follow the actual spending",
-                desc: "USASpending.gov is the government's official database. You can see exactly where federal money goes — by agency, contractor, location, and program.",
+                desc: "USASpending.gov is the government's official database. You can see exactly where federal money goes, by agency, contractor, location, and program.",
                 href: "https://www.usaspending.gov",
                 external: true,
               },
               {
                 icon: FileText,
                 title: "Read the CBO baseline",
-                desc: "The Congressional Budget Office publishes an updated Budget and Economic Outlook every January and August. It is dense but authoritative — and free.",
+                desc: "The Congressional Budget Office publishes an updated Budget and Economic Outlook every January and August. It is dense but authoritative, and free.",
                 href: "https://www.cbo.gov/topics/budget",
                 external: true,
               },

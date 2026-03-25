@@ -166,7 +166,7 @@ export default function CongressIncPage() {
             in which business outspends labor by a ratio of sixteen to one. The
             STOCK Act was supposed to fix the trading. Cooling-off periods were
             supposed to close the revolving door. Neither has worked. The system
-            is not broken&nbsp;&mdash;&nbsp;it is functioning exactly as its
+            is not broken: it is functioning exactly as its
             beneficiaries designed it.
           </p>
 
@@ -181,8 +181,8 @@ export default function CongressIncPage() {
 
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
             The data is public. The pattern is undeniable. And the
-            consequences&nbsp;&mdash;&nbsp;for everyone outside the
-            Capitol&nbsp;&mdash;&nbsp;are measured in trillions.
+            consequences (for everyone outside the
+            Capitol) are measured in trillions.
           </p>
         </div>
       </section>
@@ -230,7 +230,7 @@ export default function CongressIncPage() {
 
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
             Ninety-five percent of Congress owns individual stocks. This is not,
-            in itself, unusual&nbsp;&mdash;&nbsp;but Congress is not a usual
+            in itself, unusual, but Congress is not a usual
             workplace. Members sit on committees that oversee the industries
             they invest in. They receive classified national security briefings,
             preview unreleased economic data, and negotiate legislation that
@@ -241,12 +241,12 @@ export default function CongressIncPage() {
             In 2024, Representative Josh Gottheimer of New Jersey was the most
             active congressional trader: 526 trades totaling roughly $91 million
             in volume, all while sitting on the Financial Services
-            Committee&nbsp;&mdash;&nbsp;the body that writes the rules for the
+            Committee, the body that writes the rules for the
             banks and asset managers he was trading. Across the aisle and across
             the chamber, the pattern repeats. Democrats averaged returns of 31%,
             Republicans 26%, against the S&amp;P 500&apos;s 24.9%. Congressional
-            leaders&nbsp;&mdash;&nbsp;Speakers, Majority Leaders, committee
-            chairs&nbsp;&mdash;&nbsp;outperformed rank-and-file members by as
+            leaders (Speakers, Majority Leaders, committee
+            chairs) outperformed rank-and-file members by as
             much as 47% per year.
           </p>
 
@@ -294,7 +294,7 @@ export default function CongressIncPage() {
             In late 2022, then-Speaker Nancy Pelosi&apos;s husband purchased
             approximately $1.8 million in NVIDIA call options. Weeks later,
             Congress began advancing the CHIPS and Science
-            Act&nbsp;&mdash;&nbsp; legislation that would funnel $52 billion in
+            Act, legislation that would funnel $52 billion in
             subsidies to semiconductor manufacturers. NVIDIA&apos;s stock
             surged. After a stock split, the position represented roughly 50,000
             shares and gains exceeding $5 million. Pelosi&apos;s office
@@ -310,7 +310,7 @@ export default function CongressIncPage() {
             Committee, where he receives classified briefings on military
             operations, defense procurement, and national security threats. He
             also accumulated 132 separate STOCK Act
-            violations&nbsp;&mdash;&nbsp; late or missing disclosures of trades
+            violations, late or missing disclosures of trades
             in defense contractors and other stocks directly relevant to his
             committee work. The penalty for each violation: $200, waivable upon
             request. Total referrals to the Department of Justice: zero. Total
@@ -348,7 +348,7 @@ export default function CongressIncPage() {
 
           <p className="text-lg leading-relaxed text-ink/70">
             Both parties have introduced legislation to ban congressional stock
-            trading&nbsp;&mdash;&nbsp;the TRUST in Congress Act, the Ban
+            trading: the TRUST in Congress Act, the Ban
             Congressional Stock Trading Act, and similar proposals appear in
             every recent session. None have reached a floor vote. The system
             works exactly as designed: for the people inside it.
@@ -375,7 +375,7 @@ export default function CongressIncPage() {
             2012, the rate had doubled to 50&ndash;60%. A 2019 study by Public
             Citizen found that 65% of members who left Congress walked straight
             through the revolving door into lobbying or &ldquo;strategic
-            consulting&rdquo;&nbsp;&mdash;&nbsp;the latter a euphemism for
+            consulting&rdquo;, the latter a euphemism for
             shadow lobbying that skirts registration requirements.
           </p>
 
@@ -431,8 +431,8 @@ export default function CongressIncPage() {
             figures. Billy Tauzin chaired the House Energy and Commerce
             Committee, helped pass the Medicare Modernization Act that
             prohibited the government from negotiating drug prices, then left
-            Congress to become president of PhRMA&nbsp;&mdash;&nbsp;the
-            pharmaceutical industry&apos;s top lobbying group&nbsp;&mdash;&nbsp;
+            Congress to become president of PhRMA (the
+            pharmaceutical industry&apos;s top lobbying group),
             at more than $2 million per year.
           </p>
 
@@ -500,7 +500,7 @@ export default function CongressIncPage() {
             <p className="font-headline text-3xl font-black leading-tight tracking-tight text-ink lg:text-4xl">
               &ldquo;In the 1970s, 25% of departing members became lobbyists.
               Today, 65% do. The cooling-off period is bypassed through
-              &lsquo;strategic consulting&rsquo;&nbsp;&mdash;&nbsp;shadow
+              &lsquo;strategic consulting&rsquo;, shadow
               lobbying in all but name.&rdquo;
             </p>
             <cite className="mt-6 block font-mono text-sm font-bold uppercase tracking-widest text-muted">
@@ -525,9 +525,9 @@ export default function CongressIncPage() {
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
             Organized labor is often cited as the counterbalance to corporate
             political spending. The numbers tell a different story. In 2022, the
-            four largest public-sector and service unions&nbsp;&mdash;&nbsp;the
+            four largest public-sector and service unions (the
             National Education Association, the American Federation of Teachers,
-            AFSCME, and SEIU&nbsp;&mdash;&nbsp;spent a combined $708.8 million
+            AFSCME, and SEIU) spent a combined $708.8 million
             on political activities. That sounds enormous until you compare it
             to the other side of the ledger: business outspends labor 16 to 1 in
             total political expenditures, and 7 to 1 in PAC contributions alone.
@@ -584,9 +584,9 @@ export default function CongressIncPage() {
           <p className="mt-4 text-lg leading-relaxed text-ink/70">
             The 2010 <em>Citizens United</em> decision is often described as
             affecting corporations and unions equally. In practice, the impact
-            was asymmetric. The corporate sector&nbsp;&mdash;&nbsp;with vastly
+            was asymmetric. The corporate sector (with vastly
             more capital and fewer internal approval
-            requirements&nbsp;&mdash;&nbsp; gained disproportionately more from
+            requirements) gained disproportionately more from
             the deregulation of independent expenditures. Unions, which must
             fund political activities through separate PACs and cannot use dues
             without member authorization, saw a comparatively modest increase in
@@ -604,8 +604,7 @@ export default function CongressIncPage() {
             fee-paying members. New York&apos;s public-sector unions lost an
             estimated $100 million per year in revenue. Across the country, 26
             states had already enacted right-to-work laws that produced similar
-            effects: workers in RTW states earn 3.2% less&nbsp;&mdash;&nbsp;
-            roughly $1,670 per year&nbsp;&mdash;&nbsp;than their counterparts in
+            effects: workers in RTW states earn 3.2% less (roughly $1,670 per year) than their counterparts in
             states with union security agreements.
           </p>
 
@@ -614,7 +613,7 @@ export default function CongressIncPage() {
             Michigan became the first state in roughly 60 years to repeal its
             right-to-work law. And despite the spending disadvantage, academic
             research consistently finds that a union endorsement boosts a
-            candidate by 6 to 8 percentage points&nbsp;&mdash;&nbsp;a larger
+            candidate by 6 to 8 percentage points, a larger
             effect than campaign contributions alone. In school board races,
             union-endorsed candidates win 60&ndash;71% of the time.
           </p>
@@ -663,14 +662,14 @@ export default function CongressIncPage() {
             labor. SEIU contributed $35.4 million directly and pledged $200
             million for the presidential race. Vice President Harris received
             $54.5 million from union sources. Former President Trump received
-            $211,000&nbsp;&mdash;&nbsp;a ratio of roughly 258 to 1.
+            $211,000, a ratio of roughly 258 to 1.
           </p>
 
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
             But the Teamsters broke ranks in a way that hadn&apos;t happened
             since 1996: they declined to endorse either candidate. Sean
             O&apos;Brien, the Teamsters&apos; president, spoke at the Republican
-            National Convention&nbsp;&mdash;&nbsp;an unprecedented act for a
+            National Convention, an unprecedented act for a
             major union leader. The non-endorsement reflected a deeper tension
             within labor between white-collar public-sector unions that are
             overwhelmingly Democratic and blue-collar private- sector unions

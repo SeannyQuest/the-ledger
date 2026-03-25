@@ -43,7 +43,8 @@ export default function LeaderboardsPage() {
         if (trades.topTraders?.length > 0) {
           leaderboards.push({
             title: "Top Stock Traders",
-            subtitle: "Members of Congress with highest estimated trading volume",
+            subtitle:
+              "Members of Congress with highest estimated trading volume",
             entries: trades.topTraders.slice(0, 10).map((t: any) => ({
               entityId: t.entityId,
               name: t.name,
@@ -60,13 +61,16 @@ export default function LeaderboardsPage() {
         if (pipeline.topEntities?.sources?.length > 0) {
           leaderboards.push({
             title: "Top Donors",
-            subtitle: "Corporations and individuals with largest political spending",
-            entries: pipeline.topEntities.sources.slice(0, 10).map((e: any) => ({
-              entityId: e.id,
-              name: e.name,
-              entityType: e.type,
-              amount: e.amount,
-            })),
+            subtitle:
+              "Corporations and individuals with largest political spending",
+            entries: pipeline.topEntities.sources
+              .slice(0, 10)
+              .map((e: any) => ({
+                entityId: e.id,
+                name: e.name,
+                entityType: e.type,
+                amount: e.amount,
+              })),
           });
         }
 
@@ -74,15 +78,18 @@ export default function LeaderboardsPage() {
         if (pipeline.topEntities?.recipients?.length > 0) {
           leaderboards.push({
             title: "Top Recipients",
-            subtitle: "Politicians who received the most campaign contributions",
-            entries: pipeline.topEntities.recipients.slice(0, 10).map((e: any) => ({
-              entityId: e.id,
-              name: e.name,
-              entityType: e.type,
-              party: e.party,
-              state: e.state,
-              amount: e.amount,
-            })),
+            subtitle:
+              "Politicians who received the most campaign contributions",
+            entries: pipeline.topEntities.recipients
+              .slice(0, 10)
+              .map((e: any) => ({
+                entityId: e.id,
+                name: e.name,
+                entityType: e.type,
+                party: e.party,
+                state: e.state,
+                amount: e.amount,
+              })),
           });
         }
 
@@ -91,12 +98,14 @@ export default function LeaderboardsPage() {
           leaderboards.push({
             title: "Top Gov. Contractors",
             subtitle: "Entities receiving the most federal contract dollars",
-            entries: pipeline.topEntities.contracts.slice(0, 10).map((e: any) => ({
-              entityId: e.id,
-              name: e.name,
-              entityType: e.type,
-              amount: e.amount,
-            })),
+            entries: pipeline.topEntities.contracts
+              .slice(0, 10)
+              .map((e: any) => ({
+                entityId: e.id,
+                name: e.name,
+                entityType: e.type,
+                amount: e.amount,
+              })),
           });
         }
 
@@ -104,13 +113,16 @@ export default function LeaderboardsPage() {
         if (pipeline.topEntities?.intermediaries?.length > 0) {
           leaderboards.push({
             title: "Top PACs & Intermediaries",
-            subtitle: "PACs, Super PACs, and lobbying firms moving the most money",
-            entries: pipeline.topEntities.intermediaries.slice(0, 10).map((e: any) => ({
-              entityId: e.id,
-              name: e.name,
-              entityType: e.type,
-              amount: e.amount,
-            })),
+            subtitle:
+              "PACs, Super PACs, and lobbying firms moving the most money",
+            entries: pipeline.topEntities.intermediaries
+              .slice(0, 10)
+              .map((e: any) => ({
+                entityId: e.id,
+                name: e.name,
+                entityType: e.type,
+                amount: e.amount,
+              })),
           });
         }
 
@@ -121,7 +133,7 @@ export default function LeaderboardsPage() {
             subtitle: "Stocks most frequently bought and sold by Congress",
             entries: trades.topTickers.slice(0, 10).map((t: any) => ({
               entityId: "", // No entity page for tickers
-              name: `${t.ticker} — ${t.assetName}`,
+              name: `${t.ticker}: ${t.assetName}`,
               entityType: "corporation",
               amount: t.estimatedVolume,
               detail: `${t.tradeCount} trades by ${t.uniqueTraders} members`,
@@ -189,8 +201,8 @@ function LeaderboardCard({ section }: { section: LeaderboardSection }) {
         {section.entries.map((entry, i) => {
           const barWidth = Math.max(5, (entry.amount / maxAmount) * 100);
           const color = entry.party
-            ? PARTY_COLORS[entry.party.toLowerCase()] ?? "#6b7280"
-            : ENTITY_COLORS[entry.entityType as EntityType] ?? "#6b7280";
+            ? (PARTY_COLORS[entry.party.toLowerCase()] ?? "#6b7280")
+            : (ENTITY_COLORS[entry.entityType as EntityType] ?? "#6b7280");
 
           const content = (
             <div className="group flex items-center gap-3 rounded-lg border border-border bg-surface px-4 py-2.5 transition-colors hover:border-ink/20">

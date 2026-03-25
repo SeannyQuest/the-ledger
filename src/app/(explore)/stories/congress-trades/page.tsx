@@ -14,35 +14,35 @@ const SCROLLYTELL_STEPS: ScrollytellStep[] = [
   {
     id: "access",
     title: "The Access",
-    body: "Ninety-five percent of Congress owns individual stocks. Members sit on committees that oversee industries they invest in — Armed Services, Energy and Commerce, Financial Services. They receive classified briefings, preview unreleased economic data, and negotiate legislation that will move markets. This isn't theoretical access. It's a structural advantage no hedge fund can match.",
+    body: "Ninety-five percent of Congress owns individual stocks. Members sit on committees that oversee industries they invest in: Armed Services, Energy and Commerce, Financial Services. They receive classified briefings, preview unreleased economic data, and negotiate legislation that will move markets. This isn't theoretical access. It's a structural advantage no hedge fund can match.",
     stat: { value: "95%", label: "Of Congress Owns Stocks", color: "accent" },
     highlightColor: "#d97706",
   },
   {
     id: "trade",
     title: "The Trade",
-    body: "In 2024, Representative Josh Gottheimer of New Jersey executed 526 individual stock trades with a combined volume of roughly $91 million. He sits on the Financial Services Committee — the body that writes the rules for the same banks and asset managers he trades in. He is not alone. Dozens of members trade hundreds of times per year in the very sectors they regulate.",
+    body: "In 2024, Representative Josh Gottheimer of New Jersey executed 526 individual stock trades with a combined volume of roughly $91 million. He sits on the Financial Services Committee, the body that writes the rules for the same banks and asset managers he trades in. He is not alone. Dozens of members trade hundreds of times per year in the very sectors they regulate.",
     stat: { value: "526", label: "Trades by Top Trader (2024)", color: "money-in" },
     highlightColor: "#1a7a3a",
   },
   {
     id: "outperformance",
     title: "The Outperformance",
-    body: "Academic research and public filings reveal that congressional leaders — Speakers, Majority Leaders, committee chairs — outperform the S&P 500 by as much as 47% annually. Rank-and-file members show smaller but still statistically significant outperformance. The pattern holds across parties, chambers, and market conditions. The only common variable is access to non-public information.",
+    body: "Academic research and public filings reveal that congressional leaders (Speakers, Majority Leaders, committee chairs) outperform the S&P 500 by as much as 47% annually. Rank-and-file members show smaller but still statistically significant outperformance. The pattern holds across parties, chambers, and market conditions. The only common variable is access to non-public information.",
     stat: { value: "47%", label: "Annual Outperformance by Leaders", color: "#c41d1d" },
     highlightColor: "#c41d1d",
   },
   {
     id: "example",
     title: "The Example",
-    body: "In late 2022, Speaker Nancy Pelosi's husband purchased $1.8 million in NVIDIA call options. Weeks later, Congress began advancing the CHIPS Act — legislation that would funnel $52 billion in subsidies to semiconductor manufacturers. NVIDIA's stock surged. The position grew to over $5 million in gains. Pelosi's office maintained the trades were made independently. The timing spoke for itself.",
+    body: "In late 2022, Speaker Nancy Pelosi's husband purchased $1.8 million in NVIDIA call options. Weeks later, Congress began advancing the CHIPS Act, legislation that would funnel $52 billion in subsidies to semiconductor manufacturers. NVIDIA's stock surged. The position grew to over $5 million in gains. Pelosi's office maintained the trades were made independently. The timing spoke for itself.",
     stat: { value: "$5M+", label: "Gain on NVDA Options", color: "money-in" },
     highlightColor: "#1a7a3a",
   },
   {
     id: "penalty",
     title: "The Penalty",
-    body: "The STOCK Act, passed in 2012 with bipartisan fanfare, was supposed to end congressional insider trading. The penalty for failing to disclose a trade on time: $200. Senator Tommy Tuberville accumulated 132 separate violations while sitting on the Armed Services Committee — trades in defense stocks while receiving classified military briefings. Total consequences: zero referrals, zero investigations, zero charges. Ever.",
+    body: "The STOCK Act, passed in 2012 with bipartisan fanfare, was supposed to end congressional insider trading. The penalty for failing to disclose a trade on time: $200. Senator Tommy Tuberville accumulated 132 separate violations while sitting on the Armed Services Committee, trades in defense stocks while receiving classified military briefings. Total consequences: zero referrals, zero investigations, zero charges. Ever.",
     stat: { value: "$200", label: "Maximum STOCK Act Fine", color: "accent" },
     highlightColor: "#d97706",
   },
@@ -98,7 +98,7 @@ export default function CongressTradesStory() {
           </h1>
 
           <p className="mt-6 max-w-2xl text-xl leading-relaxed text-white/70 lg:text-2xl">
-            Members of Congress outperform Wall Street&apos;s best hedge funds —{" "}
+            Members of Congress outperform Wall Street&apos;s best hedge funds,{" "}
             <span className="font-semibold text-white">armed with information the public won&apos;t see for weeks</span>.
           </p>
 
@@ -130,7 +130,7 @@ export default function CongressTradesStory() {
           <p className="drop-cap text-xl leading-relaxed text-ink/80 lg:text-2xl lg:leading-relaxed">
             Every weekday, the men and women who write America&apos;s laws also trade its stocks.
             They sit in classified briefings, negotiate bills that will reshape entire industries,
-            and then buy or sell shares in the companies affected — often within days of a market-moving vote.
+            and then buy or sell shares in the companies affected, often within days of a market-moving vote.
             The practice is technically restricted by the STOCK Act of 2012. In reality, the law
             has no teeth, and everyone on Capitol Hill knows it.
           </p>
@@ -153,7 +153,7 @@ export default function CongressTradesStory() {
       {/* Scrollytelling section */}
       <ScrollytellSection
         headline="Inside the Trades"
-        subhead="Five steps show how congressional access turns into market advantage — with virtually zero accountability."
+        subhead="Five steps show how congressional access turns into market advantage, with virtually zero accountability."
         steps={SCROLLYTELL_STEPS}
         bgColor="bg-ink"
         textColor="text-white"
@@ -164,7 +164,7 @@ export default function CongressTradesStory() {
         <div className="mx-auto max-w-4xl px-4 py-20 lg:px-8">
           <blockquote className="text-center">
             <p className="font-headline text-3xl font-black leading-tight tracking-tight text-ink lg:text-4xl">
-              &ldquo;Congressional leaders outperform Wall Street&apos;s best hedge funds — armed
+              &ldquo;Congressional leaders outperform Wall Street&apos;s best hedge funds,
               with information the public won&apos;t see for weeks.&rdquo;
             </p>
             <cite className="mt-6 block font-mono text-sm font-bold uppercase tracking-widest text-muted">
@@ -185,7 +185,7 @@ export default function CongressTradesStory() {
             It required members of Congress to disclose stock trades within 45 days and prohibited
             them from using non-public information for personal financial gain. It was hailed as
             a landmark ethics reform. Within a year, Congress quietly gutted its most powerful
-            provision — a searchable public database of disclosures — with a voice vote and
+            provision (a searchable public database of disclosures) with a voice vote and
             virtually no media coverage.
           </p>
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
@@ -220,9 +220,8 @@ export default function CongressTradesStory() {
 
           <p className="text-lg leading-relaxed text-ink/70">
             Reform efforts have stalled repeatedly. The TRUST in Congress Act, the Ban Congressional
-            Stock Trading Act, and similar proposals have been introduced in every recent session —
-            and none have reached a floor vote. Both parties talk about reform during campaign season.
-            Neither moves on it once in power. The system works exactly as designed — for the people inside it.
+            Stock Trading Act, and similar proposals have been introduced in every recent session, and none have reached a floor vote. Both parties talk about reform during campaign season.
+            Neither moves on it once in power. The system works exactly as designed, for the people inside it.
           </p>
         </div>
       </section>

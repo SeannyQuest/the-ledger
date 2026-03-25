@@ -23,7 +23,7 @@ const SCROLLYTELL_STEPS: ScrollytellStep[] = [
   {
     id: "the-donation",
     title: "The Private Prison Donates",
-    body: "GEO Group and CoreCivic together spent $2.78 million on Trump\u2019s 2024 campaign and related entities, plus $1 million more to Trump\u2019s inaugural committee. They deployed $3.15 million in combined lobbying. The money flows to the politicians who control the contracts \u2014 and the sentencing laws that fill the beds.",
+    body: "GEO Group and CoreCivic together spent $2.78 million on Trump\u2019s 2024 campaign and related entities, plus $1 million more to Trump\u2019s inaugural committee. They deployed $3.15 million in combined lobbying. The money flows to the politicians who control the contracts and the sentencing laws that fill the beds.",
     stat: {
       value: "$2.78M",
       label: "Private Prison Companies to Trump 2024",
@@ -34,7 +34,7 @@ const SCROLLYTELL_STEPS: ScrollytellStep[] = [
   {
     id: "the-politician",
     title: "The Politician Wins & Toughens Sentencing",
-    body: "ALEC\u2019s Criminal Justice Task Force \u2014 co-chaired by CCA (now CoreCivic) \u2014 drafted model bills for Truth in Sentencing, Habitual Offender laws, Mandatory Minimums, and Stand Your Ground. These bills were introduced in statehouses nationwide. More convictions, longer sentences, fewer alternatives to incarceration. The pipeline from donation to legislation is direct and documented.",
+    body: "ALEC\u2019s Criminal Justice Task Force (co-chaired by CCA, now CoreCivic) drafted model bills for Truth in Sentencing, Habitual Offender laws, Mandatory Minimums, and Stand Your Ground. These bills were introduced in statehouses nationwide. More convictions, longer sentences, fewer alternatives to incarceration. The pipeline from donation to legislation is direct and documented.",
     stat: {
       value: "4",
       label: "Model Bills Drafted to Fill Beds",
@@ -45,7 +45,7 @@ const SCROLLYTELL_STEPS: ScrollytellStep[] = [
   {
     id: "the-contracts",
     title: "The Contracts Multiply",
-    body: "Immigration detention is now 90.8% privatized \u2014 up from 81% just years earlier. ICE issued a $45 billion solicitation over two years. GEO Group secured a $1 billion no-bid, 15-year contract for the Delaney Hall facility alone. The federal government has become the private prison industry\u2019s largest customer, and the invoices are paid with taxpayer money.",
+    body: "Immigration detention is now 90.8% privatized, up from 81% just years earlier. ICE issued a $45 billion solicitation over two years. GEO Group secured a $1 billion no-bid, 15-year contract for the Delaney Hall facility alone. The federal government has become the private prison industry\u2019s largest customer, and the invoices are paid with taxpayer money.",
     stat: {
       value: "90.8%",
       label: "Of Immigration Detention Is Private",
@@ -56,7 +56,7 @@ const SCROLLYTELL_STEPS: ScrollytellStep[] = [
   {
     id: "the-revenue",
     title: "The Company Profits",
-    body: "GEO Group derives $1.05 billion from ICE contracts alone \u2014 43.9% of its total revenue. CoreCivic earns $552 million from ICE, or 30% of its revenue. When Biden signed an executive order limiting private prisons, GEO stock dropped 12.33%. When Trump won in 2024, GEO surged 41% in a single trading session. The stock market prices the relationship between policy and profit in real time.",
+    body: "GEO Group derives $1.05 billion from ICE contracts alone (43.9% of its total revenue). CoreCivic earns $552 million from ICE, or 30% of its revenue. When Biden signed an executive order limiting private prisons, GEO stock dropped 12.33%. When Trump won in 2024, GEO surged 41% in a single trading session. The stock market prices the relationship between policy and profit in real time.",
     stat: {
       value: "$1.05B",
       label: "GEO Group ICE Revenue (43.9% of Total)",
@@ -67,7 +67,7 @@ const SCROLLYTELL_STEPS: ScrollytellStep[] = [
   {
     id: "the-expansion",
     title: "The System Expands",
-    body: "The justice-industrial complex extends far beyond prison walls. For-profit probation companies charge offenders $30\u201360 per month \u2014 extracting roughly $40 million per year in Georgia alone with almost no transparency. Electronic monitoring is a $2.35 billion market growing to $3.42 billion by 2031. BI Incorporated, one of the largest ankle-monitor providers, is owned by GEO Group. The company profits whether you are inside the walls or outside them.",
+    body: "The justice-industrial complex extends far beyond prison walls. For-profit probation companies charge offenders $30\u201360 per month, extracting roughly $40 million per year in Georgia alone with almost no transparency. Electronic monitoring is a $2.35 billion market growing to $3.42 billion by 2031. BI Incorporated, one of the largest ankle-monitor providers, is owned by GEO Group. The company profits whether you are inside the walls or outside them.",
     stat: {
       value: "$2.35B",
       label: "Electronic Monitoring Market (2026)",
@@ -149,19 +149,19 @@ export default function TheJusticeSystemPage() {
         <div className="mx-auto max-w-3xl px-4 py-16 lg:px-8 lg:py-24">
           <p className="drop-cap text-xl leading-relaxed text-ink/80 lg:text-2xl lg:leading-relaxed">
             The American justice system is not broken. It is functioning
-            precisely as designed &mdash; by the corporations that profit from
-            it. GEO Group and CoreCivic, the two largest private prison
-            operators in the United States, poured $2.78 million into Donald
-            Trump&apos;s 2024 campaign and related entities, then added another
-            $1 million to his inaugural committee. In return, ICE issued a $45
-            billion solicitation for detention services over two years, and
-            immigration detention is now 90.8% privatized. The gun industry
-            spent decades blocking every attempt at federal firearms legislation
-            while the NRA funneled Russian money and its CEO looted $11 million
-            in private jets. And as corporate monopolies tighten their grip on
-            everything from beef to broadband, the agencies tasked with
-            enforcing antitrust law operate on a budget that amounts to a
-            rounding error next to the profits they are supposed to police.
+            precisely as designed, by the corporations that profit from it. GEO
+            Group and CoreCivic, the two largest private prison operators in the
+            United States, poured $2.78 million into Donald Trump&apos;s 2024
+            campaign and related entities, then added another $1 million to his
+            inaugural committee. In return, ICE issued a $45 billion
+            solicitation for detention services over two years, and immigration
+            detention is now 90.8% privatized. The gun industry spent decades
+            blocking every attempt at federal firearms legislation while the NRA
+            funneled Russian money and its CEO looted $11 million in private
+            jets. And as corporate monopolies tighten their grip on everything
+            from beef to broadband, the agencies tasked with enforcing antitrust
+            law operate on a budget that amounts to a rounding error next to the
+            profits they are supposed to police.
           </p>
 
           <p className="mt-8 text-lg leading-relaxed text-ink/70">
@@ -180,12 +180,11 @@ export default function TheJusticeSystemPage() {
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
             What makes the justice system uniquely corrosive is that the stakes
             are not abstract. When a pharmaceutical company captures its
-            regulator, the harm is diffuse &mdash; higher drug prices spread
-            across millions of consumers. When a private prison company captures
-            its regulator, the harm is a human being in a cage, generating $95
-            per night in revenue for shareholders. The distance between money
-            and suffering is shorter here than anywhere else in American
-            politics.
+            regulator, the harm is diffuse: higher drug prices spread across
+            millions of consumers. When a private prison company captures its
+            regulator, the harm is a human being in a cage, generating $95 per
+            night in revenue for shareholders. The distance between money and
+            suffering is shorter here than anywhere else in American politics.
           </p>
         </div>
       </section>
@@ -235,7 +234,7 @@ export default function TheJusticeSystemPage() {
             lobbying. CoreCivic added $785,000 in contributions and $1.77
             million in lobbying. Both companies contributed $500,000 each to
             Trump&apos;s 2025 inaugural committee. These are not donations to a
-            cause &mdash; they are investments in a business model that requires
+            cause. They are investments in a business model that requires
             government policy to fill beds with human beings.
           </p>
 
@@ -247,9 +246,9 @@ export default function TheJusticeSystemPage() {
             day. The market understood what the political contribution data
             already showed: the value of these companies is inseparable from the
             policies of the politicians they fund. GEO subsequently erased all
-            gains and fell 60% from its post-election high &mdash; a reminder
-            that even in captured markets, the stock price is not the same as
-            the contract.
+            gains and fell 60% from its post-election high, a reminder that even
+            in captured markets, the stock price is not the same as the
+            contract.
           </p>
 
           {/* Inline stat callout grid */}
@@ -290,15 +289,15 @@ export default function TheJusticeSystemPage() {
 
           <p className="text-lg leading-relaxed text-ink/70">
             The architecture of influence extends beyond campaign checks. The
-            American Legislative Exchange Council &mdash; ALEC &mdash; provided
-            the legislative machinery. CCA (now CoreCivic) co-chaired
-            ALEC&apos;s Criminal Justice Task Force, which produced model bills
-            for Truth in Sentencing laws, Habitual Offender statutes, Mandatory
-            Minimum sentences, and Stand Your Ground provisions. These bills
-            were introduced in statehouses across the country, often
-            word-for-word. Each one increased the number of people incarcerated
-            and the length of their sentences &mdash; and each one increased
-            revenue for the companies that housed them.
+            American Legislative Exchange Council (ALEC) provided the
+            legislative machinery. CCA (now CoreCivic) co-chaired ALEC&apos;s
+            Criminal Justice Task Force, which produced model bills for Truth in
+            Sentencing laws, Habitual Offender statutes, Mandatory Minimum
+            sentences, and Stand Your Ground provisions. These bills were
+            introduced in statehouses across the country, often word-for-word.
+            Each one increased the number of people incarcerated and the length
+            of their sentences, and each one increased revenue for the companies
+            that housed them.
           </p>
 
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
@@ -314,14 +313,13 @@ export default function TheJusticeSystemPage() {
 
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
             Immigration detention has become the fastest-growing segment of the
-            private prison industry. ICE detention is now 90.8% privatized
-            &mdash; up from 81% just years earlier. GEO Group derives $1.05
-            billion from ICE contracts, representing 43.9% of its total revenue.
-            CoreCivic earns $552 million from ICE, or 30% of its revenue. The
-            Delaney Hall contract alone &mdash; $1 billion, no-bid, fifteen
-            years &mdash; illustrates how far the industry has moved beyond the
-            competitive procurement process that is supposed to protect
-            taxpayers.
+            private prison industry. ICE detention is now 90.8% privatized, up
+            from 81% just years earlier. GEO Group derives $1.05 billion from
+            ICE contracts, representing 43.9% of its total revenue. CoreCivic
+            earns $552 million from ICE, or 30% of its revenue. The Delaney Hall
+            contract alone ($1 billion, no-bid, fifteen years) illustrates how
+            far the industry has moved beyond the competitive procurement
+            process that is supposed to protect taxpayers.
           </p>
         </div>
       </section>
@@ -347,7 +345,7 @@ export default function TheJusticeSystemPage() {
             &ldquo;offender-funded&rdquo; model, charging probationers
             $30&ndash;60 per month for the privilege of being supervised. In
             Georgia alone, these companies extract roughly $40 million per year
-            from probationers &mdash; people who are disproportionately poor and
+            from probationers, people who are disproportionately poor and
             disproportionately Black. The industry operates with almost no
             transparency: no standardized reporting, no meaningful oversight,
             and no accountability when people are jailed for failing to pay fees
@@ -395,32 +393,32 @@ export default function TheJusticeSystemPage() {
 
           <p className="text-lg leading-relaxed text-ink/70">
             The bail bond industry collects $1.65 billion per year from
-            defendants and their families &mdash; overwhelmingly from low-income
+            defendants and their families, overwhelmingly from low-income
             communities. When California passed Proposition 25 in 2020 to
             eliminate cash bail, the bail bond industry spent more than $6
-            million to defeat it at the ballot box &mdash; and won. The
-            industry&apos;s argument was that bail reform would endanger public
-            safety. New Jersey&apos;s experience tells a different story: after
-            virtually eliminating cash bail, pretrial jail populations dropped
-            20% and crime rates decreased. The reform worked. The industry
-            simply ensured it would not spread.
+            million to defeat it at the ballot box, and won. The industry&apos;s
+            argument was that bail reform would endanger public safety. New
+            Jersey&apos;s experience tells a different story: after virtually
+            eliminating cash bail, pretrial jail populations dropped 20% and
+            crime rates decreased. The reform worked. The industry simply
+            ensured it would not spread.
           </p>
 
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
             The total cost of mass incarceration in the United States is $445
-            billion annually &mdash; a figure that includes not only the direct
-            costs of operating prisons and jails but the economic losses from
-            removing millions of working-age adults from their families and
-            communities. Reform philanthropy peaked at $682 million in 2020,
-            driven by the racial justice movement, then collapsed to $341
-            million in 2021 before partially recovering to roughly $500 million
-            in 2023. The First Step Act of 2018 &mdash; which passed the Senate
-            87&ndash;12 with an improbable coalition of the ACLU, the Koch
-            network, the Fraternal Order of Police, Kim Kardashian, and Van
-            Jones &mdash; demonstrated that bipartisan criminal justice reform
-            is possible. Koch&apos;s Right on Crime initiative in Texas saved $4
-            billion, closed 11 prisons, and drove crime to its lowest level
-            since the 1960s. The precedent exists. The political will does not.
+            billion annually, a figure that includes not only the direct costs
+            of operating prisons and jails but the economic losses from removing
+            millions of working-age adults from their families and communities.
+            Reform philanthropy peaked at $682 million in 2020, driven by the
+            racial justice movement, then collapsed to $341 million in 2021
+            before partially recovering to roughly $500 million in 2023. The
+            First Step Act of 2018, which passed the Senate 87&ndash;12 with an
+            improbable coalition of the ACLU, the Koch network, the Fraternal
+            Order of Police, Kim Kardashian, and Van Jones, demonstrated that
+            bipartisan criminal justice reform is possible. Koch&apos;s Right on
+            Crime initiative in Texas saved $4 billion, closed 11 prisons, and
+            drove crime to its lowest level since the 1960s. The precedent
+            exists. The political will does not.
           </p>
         </div>
       </section>
@@ -441,21 +439,21 @@ export default function TheJusticeSystemPage() {
           <p className="mt-8 text-lg leading-relaxed text-ink/70">
             The National Rifle Association&apos;s political spending tells the
             story of an organization in free fall. In 2016, the NRA spent $54.4
-            million on outside political spending &mdash; a record that made it
-            one of the most powerful forces in American elections. By 2020, that
-            number had dropped to $29 million. In 2022, it collapsed to
-            approximately $9,600 &mdash; effectively zero. The NRA partially
-            recovered to $10.1 million in 2024, but the trajectory is
-            unmistakable: the organization that once defined American gun policy
-            has been hollowed out by financial mismanagement, legal liability,
-            and the emergence of a counter-lobby that now outspends it.
+            million on outside political spending, a record that made it one of
+            the most powerful forces in American elections. By 2020, that number
+            had dropped to $29 million. In 2022, it collapsed to approximately
+            $9,600 (effectively zero). The NRA partially recovered to $10.1
+            million in 2024, but the trajectory is unmistakable: the
+            organization that once defined American gun policy has been hollowed
+            out by financial mismanagement, legal liability, and the emergence
+            of a counter-lobby that now outspends it.
           </p>
 
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
             The financial crisis is structural. NRA revenue fell from $367
-            million in 2016 to $211 million in 2022 &mdash; a 52% drop over six
-            years. Member dues, the organization&apos;s lifeblood, collapsed
-            from $170 million to $83.3 million, a 59% decline. The cause is not
+            million in 2016 to $211 million in 2022, a 52% drop over six years.
+            Member dues, the organization&apos;s lifeblood, collapsed from $170
+            million to $83.3 million, a 59% decline. The cause is not
             mysterious. Wayne LaPierre, the NRA&apos;s longtime CEO, spent more
             than $11 million on private jets, over $500,000 on trips to the
             Bahamas on a vendor&apos;s yacht, and authorized $135 million in
@@ -514,8 +512,8 @@ export default function TheJusticeSystemPage() {
             career to Everytown for Gun Safety, and pledged $45 million for the
             2024 cycle alone. A Stanford study found that pro-gun PAC
             fundraising increases 31% after school shootings, while gun safety
-            organizations see a 20% increase &mdash; but both sides now operate
-            at roughly the same financial scale.
+            organizations see a 20% increase, but both sides now operate at
+            roughly the same financial scale.
           </p>
 
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
@@ -529,10 +527,10 @@ export default function TheJusticeSystemPage() {
             Safer Communities Act became the first federal gun law in 30 years.
             Even so, 56% of the 93 new state-level gun laws passed that year{" "}
             <em>expanded</em> firearms access rather than restricting it. The
-            NSSF &mdash; the National Shooting Sports Foundation, the gun
-            industry&apos;s trade association &mdash; now spends $6.97 million
-            on lobbying per year, surpassing the NRA. The torch has passed from
-            the membership organization to the industry trade group.
+            NSSF (the National Shooting Sports Foundation, the gun
+            industry&apos;s trade association) now spends $6.97 million on
+            lobbying per year, surpassing the NRA. The torch has passed from the
+            membership organization to the industry trade group.
           </p>
         </div>
       </section>
@@ -554,7 +552,7 @@ export default function TheJusticeSystemPage() {
             The federal government has declared Google an illegal monopoly. It
             has found the company liable in its ad tech business. It is
             prosecuting Apple, Amazon, and Meta. Live Nation settled for $280
-            million &mdash; and 26 state attorneys general rejected the deal as
+            million, and 26 state attorneys general rejected the deal as
             inadequate. These are the largest antitrust actions in a generation,
             and they are unfolding against an industry that has spent $277
             million over two years lobbying to kill the reform bills that would
@@ -566,18 +564,17 @@ export default function TheJusticeSystemPage() {
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
             The enforcement agencies are fighting with both hands tied. The
             Federal Trade Commission operates on a budget of approximately $430
-            million &mdash; while the five largest technology companies alone
-            generated over $400 billion in profits. The FTC&apos;s funding is
-            roughly one-third of its 20th-century levels when adjusted for
-            inflation and caseload. The Trump administration&apos;s FY2026
-            budget proposed cutting the FTC to $385 million &mdash; a 10%
-            reduction for an agency already operating at a fraction of its
-            historical capacity. Lina Khan&apos;s tenure as FTC Chair saw more
-            than 38 merger challenges, including victories in Nvidia-Arm and
-            Kroger-Albertsons and losses in Microsoft-Activision and
-            Meta-Within. The record demonstrated that vigorous enforcement is
-            possible &mdash; and that the resources to sustain it are
-            deliberately withheld.
+            million, while the five largest technology companies alone generated
+            over $400 billion in profits. The FTC&apos;s funding is roughly
+            one-third of its 20th-century levels when adjusted for inflation and
+            caseload. The Trump administration&apos;s FY2026 budget proposed
+            cutting the FTC to $385 million, a 10% reduction for an agency
+            already operating at a fraction of its historical capacity. Lina
+            Khan&apos;s tenure as FTC Chair saw more than 38 merger challenges,
+            including victories in Nvidia-Arm and Kroger-Albertsons and losses
+            in Microsoft-Activision and Meta-Within. The record demonstrated
+            that vigorous enforcement is possible, and that the resources to
+            sustain it are deliberately withheld.
           </p>
 
           {/* Inline stat callout grid */}
@@ -623,8 +620,8 @@ export default function TheJusticeSystemPage() {
             30% of veterinary practices. SCI, the largest funeral home
             conglomerate, charges a 42% premium over independent operators. The
             DOJ is prosecuting RealPage for algorithmic rent-fixing. In
-            agriculture, four companies control 80% of beef processing &mdash;
-            Tyson and Cargill settled for $87.5 million after a price-fixing
+            agriculture, four companies control 80% of beef processing: Tyson
+            and Cargill settled for $87.5 million after a price-fixing
             investigation. Three companies control 70% of agrochemicals and 60%
             of seeds.
           </p>

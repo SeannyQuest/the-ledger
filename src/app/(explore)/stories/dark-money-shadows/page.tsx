@@ -14,35 +14,35 @@ const SCROLLYTELL_STEPS: ScrollytellStep[] = [
   {
     id: "loophole",
     title: "The Loophole",
-    body: "Under IRS rules, 501(c)(4) 'social welfare' nonprofits can spend up to 49.9% of their budget on political activity — without disclosing a single donor. These organizations were originally designed for civic groups and neighborhood associations. Today they are the preferred vehicle for billionaires, corporations, and foreign-connected entities to spend unlimited sums on American elections while remaining completely anonymous.",
+    body: "Under IRS rules, 501(c)(4) 'social welfare' nonprofits can spend up to 49.9% of their budget on political activity, without disclosing a single donor. These organizations were originally designed for civic groups and neighborhood associations. Today they are the preferred vehicle for billionaires, corporations, and foreign-connected entities to spend unlimited sums on American elections while remaining completely anonymous.",
     stat: { value: "49.9%", label: "Political Spending Allowed (No Disclosure)", color: "accent" },
     highlightColor: "#d97706",
   },
   {
     id: "explosion",
     title: "The Explosion",
-    body: "In 2008, outside political spending totaled $338 million. Then came Citizens United v. FEC in January 2010, which ruled that corporations and unions could spend unlimited amounts on elections. By 2012, outside spending had quadrupled. By 2024, it surpassed $4.5 billion. The decision didn't just open a door — it demolished the wall between private wealth and public elections.",
+    body: "In 2008, outside political spending totaled $338 million. Then came Citizens United v. FEC in January 2010, which ruled that corporations and unions could spend unlimited amounts on elections. By 2012, outside spending had quadrupled. By 2024, it surpassed $4.5 billion. The decision didn't just open a door. It demolished the wall between private wealth and public elections.",
     stat: { value: "$4.5B+", label: "Outside Spending (2024)", color: "#c41d1d" },
     highlightColor: "#c41d1d",
   },
   {
     id: "shell-game",
     title: "The Shell Game",
-    body: "In the 2024 cycle alone, Super PACs received $1.3 billion from shell companies — LLCs and holding companies with no employees, no public presence, and no discernible business purpose beyond funneling political money. These entities are created weeks before an election, donate millions, and then dissolve. The FEC lacks the resources and, in many cases, the legal authority to trace the true source of the funds.",
+    body: "In the 2024 cycle alone, Super PACs received $1.3 billion from shell companies: LLCs and holding companies with no employees, no public presence, and no discernible business purpose beyond funneling political money. These entities are created weeks before an election, donate millions, and then dissolve. The FEC lacks the resources and, in many cases, the legal authority to trace the true source of the funds.",
     stat: { value: "$1.3B", label: "From Shell Companies (2024)", color: "money-out" },
     highlightColor: "#c41d1d",
   },
   {
     id: "players",
     title: "The Players",
-    body: "Crossroads GPS, co-founded by Karl Rove, spent $349 million across multiple cycles without ever disclosing its donors. Americans for Prosperity, funded by the Koch network, deployed $398 million in total political spending. Majority Forward, aligned with Senate Democrats, spent over $200 million. Dark money is not a partisan phenomenon — both sides have built industrial-scale operations to hide who's paying for American elections.",
+    body: "Crossroads GPS, co-founded by Karl Rove, spent $349 million across multiple cycles without ever disclosing its donors. Americans for Prosperity, funded by the Koch network, deployed $398 million in total political spending. Majority Forward, aligned with Senate Democrats, spent over $200 million. Dark money is not a partisan phenomenon. Both sides have built industrial-scale operations to hide who's paying for American elections.",
     stat: { value: "$349M", label: "Crossroads GPS (Undisclosed Donors)", color: "accent" },
     highlightColor: "#d97706",
   },
   {
     id: "failed-reform",
     title: "The Failed Reform",
-    body: "The DISCLOSE Act — which would require dark money groups to reveal donors giving more than $10,000 — has been introduced in every Congress since 2010. It has been filibustered every single time. Polls consistently show 75-80% of Americans support mandatory donor disclosure, including majorities of both parties. Yet in fifteen years, not a single transparency reform has passed. The system protects itself.",
+    body: "The DISCLOSE Act, which would require dark money groups to reveal donors giving more than $10,000, has been introduced in every Congress since 2010. It has been filibustered every single time. Polls consistently show 75-80% of Americans support mandatory donor disclosure, including majorities of both parties. Yet in fifteen years, not a single transparency reform has passed. The system protects itself.",
     stat: { value: "0", label: "Reforms Passed Since Citizens United", color: "#c41d1d" },
     highlightColor: "#c41d1d",
   },
@@ -98,7 +98,7 @@ export default function DarkMoneyShadowsStory() {
           </h1>
 
           <p className="mt-6 max-w-2xl text-xl leading-relaxed text-white/70 lg:text-2xl">
-            Since Citizens United, billions in anonymous money have reshaped American elections —{" "}
+            Since Citizens United, billions in anonymous money have reshaped American elections,{" "}
             <span className="font-semibold text-white">and voters have no idea who&apos;s paying</span>.
           </p>
 
@@ -131,13 +131,12 @@ export default function DarkMoneyShadowsStory() {
             On January 21, 2010, the Supreme Court ruled in Citizens United v. FEC that
             corporations and unions had a First Amendment right to spend unlimited sums on
             political campaigns. The majority opinion argued that transparency requirements
-            would prevent corruption. Fifteen years later, the transparency never came — but
-            the money did. Over $4.3 billion in dark money has flowed through the shadows of
+            would prevent corruption. Fifteen years later, the transparency never came. The money did. Over $4.3 billion in dark money has flowed through the shadows of
             American democracy since that decision.
           </p>
 
           <p className="mt-8 text-lg leading-relaxed text-ink/70">
-            Daonra traced the infrastructure of anonymous political spending — from 501(c)(4)
+            Daonra traced the infrastructure of anonymous political spending, from 501(c)(4)
             nonprofits that hide their donors, to shell companies that funnel millions into
             Super PACs, to the filibustered reforms that would have stopped it. What we found
             is a system so thoroughly entrenched that even 80% public support for transparency
@@ -166,7 +165,7 @@ export default function DarkMoneyShadowsStory() {
         <div className="mx-auto max-w-4xl px-4 py-20 lg:px-8">
           <blockquote className="text-center">
             <p className="font-headline text-3xl font-black leading-tight tracking-tight text-ink lg:text-4xl">
-              &ldquo;$4.3 billion has flowed through the shadows since Citizens United —
+              &ldquo;$4.3 billion has flowed through the shadows since Citizens United,
               and voters have no idea who&apos;s paying.&rdquo;
             </p>
             <cite className="mt-6 block font-mono text-sm font-bold uppercase tracking-widest text-muted">
@@ -194,7 +193,7 @@ export default function DarkMoneyShadowsStory() {
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
             The result is a system where a single billionaire can create a 501(c)(4) nonprofit,
             donate $50 million to it anonymously, and that nonprofit can then fund attack ads,
-            issue campaigns, and voter mobilization efforts — all without a single public record
+            issue campaigns, and voter mobilization efforts, all without a single public record
             connecting the donor to the spending. The money is legal. The anonymity is by design.
           </p>
 
@@ -223,7 +222,7 @@ export default function DarkMoneyShadowsStory() {
           <p className="text-lg leading-relaxed text-ink/70">
             Dark money is not a glitch in the system. It is the system. Both parties use it,
             both parties benefit from it, and neither has the incentive to dismantle it. The
-            DISCLOSE Act has become a perennial prop — introduced for the press release, then
+            DISCLOSE Act has become a perennial prop, introduced for the press release, then
             quietly allowed to die. Meanwhile, the money flows, the donors stay hidden, and
             the voters are left guessing who is really paying for their democracy.
           </p>
